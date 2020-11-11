@@ -1,0 +1,117 @@
+---
+layout: post
+title:  "cevizlab"
+date:   2020-09-27 07:07:07 +0300
+categories: cevizlab
+---
+
+![cevizlab Logo](/assets/img/cevizlab-logo.png "cevizlab Logo")
+
+📱: Lü lü lü lü lü... Lü lü lü lü lü... Bip!
+
+☣: Aralık Sonu Ocakbaşı, buyrun.
+
+☢: Nuri, vazgeç şu telefonu her açışında saçmalık icad etmekten...
+   Üsküdar'a gel!
+
+☣: Naapcaz? Kimler var?
+
+☢: Çay, muhabbet, Vatan, Millet, Sakarya...
+
+☣: Gene mi [Tekalif-i Milliye](https://tr.wikipedia.org/wiki/Tek%C3%A2lif-i_Milliye)?
+   Hem otuz senedir konuşuyoruz oğlum, durum ortada.
+   Ömer Abi'yi zengin etmekten başka bir işe yaramadı!
+   Bilgisayarları alın gelin de accik işe yarar şeyler yapalım.
+   Ben semaveri yakarım.
+
+☢: Doğru diyon. Tamam.
+
+📱: Bip!
+
+---
+
+### We have liftoff! 🚀
+
+[cevizlab®](/cevizlab/) olarak isimlendirdiğim tarikatımı kurmam hemen hemen
+böyle başladı. Çoğunlukla hafta sonları gerçekleşen buluşmalara katılan aslan
+parçalarından o hafta edindikleri tecrübelerden, okuyup yazdıklarından
+bahsetmelerini istedim. Böylece, buluşmada kaç kişi varsa, o kadar hafta
+fazladan tecrübe edinmiş oluyorduk. Aslında tam olarak "kişi sayısı - 1"
+hafta... Kendimiz zaten kendi kendimizin geçen haftasını bizatihi tecrübe
+ediyoruz.
+
+![Eflatun Akademi](/assets/img/eflatun-akademi.png "Eflatun Akademi")
+
+Kapıda [Eflatun Efendi](https://tr.wikipedia.org/wiki/Platon)'nin
+[Akademia](https://tr.wikipedia.org/wiki/Akademi)'sı gibi "[ἀγεωμέτρητος
+μηδεὶς εἰσίτω](https://en.wikipedia.org/wiki/List_of_Greek_phrases)" yazdığı
+düşünülmesin zira yok. O kadar yetkin insanlar değiliz. Altı üstü kendince
+eğlenen `n` insan... Yeri gelmişken bahsetmeden geçmeyeyim zira "malumat
+istifçisi" olmak bunu gerektirir. Martin Heidegger, Şey Nedir? kitabında
+diyormuş ki "Aslında bu cümle 'Matematik bilmeyen giremez!' demek değil,
+'Bildiklerini düşündükleri şeyleri dahi yeniden öğrenmeye hazır ve meraklı
+olanlar girebilir' demek!". Daha ayrıntılı okumak isteyenler için kaynak
+burada:
+[Tık!](https://seyler.eksisozluk.com/platon-unlu-geometri-bilmeyen-giremez-uyarisiyla-aslinda-ne-anlatmak-istiyordu)
+
+Etimoloji sen ne güzel bir şeysin. Hoşsohbet bir kökenbilimci olsa, nefes
+almadan dinlerim.
+
+---
+
+### Peki neyiz?
+
+Özetle [cevizlab®](/cevizlab/): İnsan yaşamını doğrudan etkileme gayesi
+taşıyan bir hayal, sanat, fikir, bilim, teknoloji ve ürün geliştirme merkezi;
+yetkin bilinçlerin ilgi alanı kısıtlaması olmaksızın birlikte çalışabileceği
+disiplinler arası açık inovasyon çatısı.
+
+Çalışmak istediğin konu tamamen merakına kalmış. Eksiklik hissettiğin
+konularda tarikattaki füturdaşlarının yapması gereken; vizyonunu
+genişletmeleri, kendileri eksikse işine yarayacak bilgi kaynakları veya
+insanlar bulmaları. Açık inovasyon kökenli her şey makbul. Yaptığın çalışmayı
+ve ilerlemeyi dönem dönem anlatmak ve belli bir sürede tamamlayıp yazıp
+çizerek insanların faydasına sunmak şart. Son tarihsiz, ucu ormanda çaba
+istemezük...
+
+Özetle, üzerinde çalışırken saatlerin nasıl geçtiğini anlamadığın, hatta yemek
+yemeyi dahi unuttuğun ve sana yaşam enerjisi veren bir hayat gayen varsa,
+mekandan ve yaştan bağımsız bizden birisin.
+
+![Kevin Flynn](/assets/img/kevin-flynn-01.png "Kevin Flynn")
+
+> The Grid...
+> A digital frontier...
+> I tried to picture, clusters of information, as they move through the computer...
+> What did they look like?
+> Ships? Motorcycles?
+> Were the circuits like freeways?
+> I kept dreaming of a world, I thought I would never see...
+> And then...
+> One day...
+> I got in...
+>> Kevin Flynn
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/4-J4duzP8Ng" frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+picture-in-picture" allowfullscreen></iframe>
+
+---
+
+### [muucit®](/muucit/)
+
+Bir gün oldukça hoşuma giden bir nesneyle tanıştım ve işler biraz ilerledi.
+Böylece [muucit®](/muucit/), [cevizlab®](/cevizlab/) tarikatının ilk işi oldu.
+Hikayesi bu linkte: [Tık!](http://nuriacar.com/muucit/2020/09/29/muucit.html)
+
+---
+
+### Hmmm.. 🤔
+
+Fakat [cevizlab®](/cevizlab/)'ı bir süredir Siber Sanatlar'a yoğunlaştırma
+düşüncesindeyim. Haliyle bu blogdaki herhangi bir şey gibi bu yazı da
+okunduktan sonra kendini yok etmese de dönem dönem kendini güncelleyebilir.
+
+> Sonra vay ben duymadım, yok ben işitmedim demeyin...
+>> Belediye
