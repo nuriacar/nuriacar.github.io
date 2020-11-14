@@ -35,7 +35,8 @@ Hatırlatmakta fayda var: π = 3, elektrik hep var!
 
 Sonrası? [Bilinmeze Yolculuk!](https://www.youtube.com/watch?v=o3KN1bktV2U)
 
-Shell we begin? T - 34, 21, 13, 8, 5, 3, 2, 1, 1, 0 . . . . . We have liftoff!
+Shell we begin? T - 34, 21, 13, 8, 5, 3, 2, 1, 1, 0 . . . . . [We have
+liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
 [Nuri ACAR](http://nuriacar.com)
 
@@ -70,7 +71,8 @@ yet. It is useful to remind: Assume π equals 3 and power always on!
 
 Next? [Into Darkness!](Https://www.youtube.com/watch?v=o3KN1bktV2U)
 
-Shell we begin? T - 34, 21, 13, 8, 5, 3, 2, 1, 1, 0. . . . . We have liftoff!
+Shell we begin? T - 34, 21, 13, 8, 5, 3, 2, 1, 1, 0. . . . . [We have
+liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
 [Nuri ACAR](http://nuriacar.com)
 
@@ -80,9 +82,9 @@ Shell we begin? T - 34, 21, 13, 8, 5, 3, 2, 1, 1, 0. . . . . We have liftoff!
 
 + [ 11/2018 - ... ] [ [Uni. of Helsinki & Aalto, Finland, Computer Science, MOOC](https://mooc.fi/en) ]
 
-  + Introduction to Cyber Security, F-Secure
+  + [Introduction to Cyber Security, F-Secure](https://cybersecuritybase.mooc.fi/)
 
-  + Elements of Artifical Intelligence, Reaktor
+  + [Elements of Artifical Intelligence, Reaktor](https://www.elementsofai.com/)
 
 + [ 9/2020 - ... ] [ [International Akhmet Yassawi Uni., Computer Engineering](https://www.ayu.edu.tr/) ]
 

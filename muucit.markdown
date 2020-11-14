@@ -6,15 +6,15 @@ permalink: /muucit/
 
 ![muucit Logo](/assets/img/muucit-logo.png "muucit Logo")
 
-[![Nebula](/assets/img/nebula-banner-01.png "Nebula")](/magaza-store/)
+[![Nebula](/assets/img/nebula-banner-01.png "Nebula")](/store/)
 
-[![QB 15](/assets/img/qb-15-banner-01.png "qb 15")](/magaza-store/)
+[![QB 15](/assets/img/qb-15-banner-01.png "qb 15")](/store/)
 
-[![QB 50](/assets/img/qb-50-banner-01.png "qb 50")](/magaza-store/)
+[![QB 50](/assets/img/qb-50-banner-01.png "qb 50")](/store/)
 
 [![Instagram Icon](/assets/img/instagram-icon.png "Instagram")](https://www.instagram.com/muucit/)
 [![Youtube Icon](/assets/img/youtube-icon.png "Youtube")](https://www.youtube.com/channel/UCzAo3peHOsI10nQeO_nmg6Q)
-[![Cart Icon](/assets/img/cart-icon.png "Shopier")](/magaza-store/)
+[![Cart Icon](/assets/img/cart-icon.png "Shopier")](/store/)
 
 ---
 
@@ -43,8 +43,8 @@ yok. Hayal gücünün bir sınırı olmadığı gibi...
 
 Nesnelerim, bilincinde yepyeni yıldız sistemlerinin doğuşuna sebep olacak
 [füzyon](https://tr.wikipedia.org/wiki/N%C3%BCkleer_f%C3%BCzyon) tepkimeleri
-oluştursun isterim. Doğacak yıldızlarının kalbinden çıkan enerjiye muhtaç pek
-çok gezegen seni bekliyor!
+oluştursunlar isterim. Doğacak yıldızlarının kalbinden çıkan enerjiye muhtaç
+pek çok gezegen seni bekliyor!
 
 ---
 
@@ -82,4 +82,15 @@ need of energy from the hearts of the stars to be born are waiting for you!
 
 ### [muucit](/muucit/2020/09/28/muucit.html)
 
+Böyle Başladı muucit®: Herkes ve Hiç Kimse İçin Bir Yazı
+
+Thus Start muucit®: A Blog Post for All and None
+
 ### [Tetris & Nebula](/muucit/2020/09/29/tetris-nebula.html)
+
+Bir monomino nelere dönüşebilir diye uykularınız kaçıyorsa eğer doğru
+yerdesiniz. İşte size huzurlu bir uyku uyutacak nevi şahsına münhasır bir
+yazı...
+
+If you are drowsy about what a monomino can turn into, you are in the right
+place. Here is a peculiar writing for peaceful sleep...
