@@ -43,7 +43,7 @@ dersi](https://www.elementsofai.com/) aldım; dersi alırken notlar da aldım.
 
 [![Reaktor](/assets/img/reaktor-logo.png "Reaktor")](https://www.reaktor.com/)
 
-Bu kısmı yazarken tuhaf bir şey farkettim:
+Bu kısmı yazarken bir şey farkettim:
 [F-Secure](https://www.f-secure.com/en) sitesine Türkiye'den ulaşılamıyor.
 Tuhaf. Neden acaba? Öğrenirsem yazarım.
 
@@ -58,4 +58,4 @@ Kanun](https://www.mevzuat.gov.tr/MevzuatMetin/1.3.677.pdf)! Kurduğum tarikat
 sandığın gibi değil. Açıklayabilirim...
 
 Dear [Law No. 677](https://www.mevzuat.gov.tr/MevzuatMetin/1.3.677.pdf)! My
-movement is not what you think. I can explain...
+cult I founded is not a cult like you think. I can explain...

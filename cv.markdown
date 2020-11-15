@@ -4,11 +4,13 @@ title: cv
 permalink: /cv/
 ---
 
+### [Linkedin](https://www.linkedin.com/in/acarnuri/)
+
 ---
 
 ### TR [ ENG ⇣ ]
 
-Bir zamanlar dijital sanatçıydım. Fakat öncesi gayet analog...
+Ben bir siber sanatçıyım.
 
 Ortaokul, lise ve üniversite eğitimim devam ederken aynı zamanda Klasik Türk
 Müziği eğitimi de aldım. Üniversite günlerinde ise işin içine bilgisayar
@@ -31,7 +33,7 @@ bilgisayar, bir text editörü ve Python'la yapılabilecekler hayal gücünüze 
 azminize kalmış. Sonu yok! Belki vardır ama ben henüz oraya varmadım.
 Hatırlatmakta fayda var: π = 3, elektrik hep var!
 
-... ve siber sanatlara evrildim.
+...ve siber sanatlara evrildim.
 
 Sonrası? [Bilinmeze Yolculuk!](https://www.youtube.com/watch?v=o3KN1bktV2U)
 
@@ -44,13 +46,13 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
 ### ENG
 
-I was once a digital artist. But before was analog ...
+I am a cyber artist.
 
 While my secondary school, high school and university education continues, at
 the same time I also studied Classical Turkish Music. At university, I met
 computer. What a wonderful thing. As long as power on, there is no end! I
 evolved to digital. For motion pictures, TV series, cartoons, advertisements,
-documentaries, reality shows, mobile games / apps, live streams and studio
+documentaries, reality shows, mobile games/apps, live streams and studio
 albums; I did 3d animation, vfx, video editing, script writing, sound effects
 design, sound editing, musical compositions and audio engineering.
 
@@ -67,7 +69,7 @@ with an ordinary computer, a text editor and Python is up to your imagination
 and perseverance. There is no end! Maybe there is, but I haven't reached there
 yet. It is useful to remind: Assume π equals 3 and power always on!
 
-... and I evolved into the cyber arts.
+...and I evolved into the cyber arts.
 
 Next? [Into Darkness!](Https://www.youtube.com/watch?v=o3KN1bktV2U)
 
@@ -88,7 +90,7 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
 + [ 9/2020 - ... ] [ [International Akhmet Yassawi Uni., Computer Engineering](https://www.ayu.edu.tr/) ]
 
-+ [ 9/2007 - 1/2014 ] [ [Anadolu Uni., Bussiness Management](https://www.anadolu.edu.tr/) ]
++ [ 9/2007 - 1/2015 ] [ [Anadolu Uni., Bussiness Management](https://www.anadolu.edu.tr/) ]
 
 + [ 9/2004 - 12/2014 (Quit) ] [ [Istanbul Uni., Mechanical Engineering](https://makinemuhendislik.istanbulc.edu.tr/) ]
 
@@ -170,9 +172,9 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
   
   [ Entrepreneur ]
   
-  + cevizlab: Cyber Arts
+  + cevizlab: [Cyber Arts](https://instagram.com/cevizlab)
   
-  + muucit: Mathematic and Art Toys, Puzzles, Objects
+  + muucit: [Mathematic and Art Toys, Puzzles, Objects](https://instagram.com/muucit)
 
 + [ 10/2019 - 12/2019 ] [ Freelance ] [ [StemistLab](http://stemistbox.com) ]
 
@@ -191,7 +193,7 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
 + [ 7/2014 - 9/2014 ] [ Freelance ] [ Fethi Gemuhluoğlu Documentary ]
 
-  [ Soundtrack Composer, Performer, Recording Engineer ]
+  [ Artist, Soundtrack Composer, Performer, Recording Engineer ]
 
   [Soundtrack Album](https://www.youtube.com/playlist?list=PLjGoAmqsQhdIEyRTlREPwL9v4Te9CtjgB)
 
@@ -203,7 +205,7 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
 + [ 2014 ] [ [SIR, N01 Album](https://www.youtube.com/playlist?list=PLjGoAmqsQhdJ39LkXn9mk9Qkum1l50CZd) ]
 
-  [ Composer, Performer, Recording Engineer ]
+  [ Artist, Composer, Performer, Recording Engineer ]
 
 + [ 7/2013 - 5/2014 ] [ Animaj Productions ]
 
@@ -217,16 +219,15 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
 + [ 5/2013 - 7/2013 ] [ Freelance ] [ Atasoy Müftüoğlu Documentary ]
 
-  [ Soundtrack Composer, Performer, Recording Engineer ]
+  [ Artist, Soundtrack Composer, Performer, Recording Engineer ]
 
   [Soundtrack Album](https://www.youtube.com/playlist?list=PLjGoAmqsQhdLbpT82poAOwGqvOBp5l4h1)
 
 + [ 9/2012 - 5/2013 ] [ Bilgikum Morpsy Entertainment ]
 
-  [ Supervisor, Sound Effects Designer, Composer ]
+  [ Supervisor, Scriptwriter, 3D Animator, Sound Effects Designer ]
 
-  Turkish Airlines & Anadolu JET multiplatform game design, scripting, sound
-  design and supervisory.
+  Turkish Airlines & Anadolu JET multiplatform game design, scriptwriting, 3D animation, sound design and supervisory.
 
   + [Turkish Airlines Demo](https://vimeo.com/64551313)
   
@@ -234,17 +235,17 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
 + [ 3/2012 - 8/2012 ] [ Paradox Production ]
 
-  [ 3D Animator, VFX Artist ]
+  [ Motion Graphic Artist, 3D Animator ]
 
   Graniser Ceramic advertisement shooting and post production.
 
 + [ 3/2012 - 6/2012 ] [ Freelance ] [ [3D Akademi](https://3dakademi.com/) ]
 
-  [ Autodesk Maya Instructor]
+  [ Autodesk Maya Instructor ]
 
 + [ 2/2012 - 4/2012 ] [ Freelance ] [ Unity Production & Procter&Gamble ]
 
-  [ Rigger & 3D Animator ]
+  [ Rigger, 3D Animator ]
 
   [Procter & Gamble, Prima Olympics & Fetus](https://vimeo.com/42186155)
 
@@ -252,19 +253,19 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
   [ Supervizor, Composer, 3D Animator ]
   
-  Cem Yılmaz, Ata Demirer and Mercedes mobile game and application design.
+  Cem Yılmaz, Ata Demirer and Mercedes mobile game and application.
 
 + [ 2011 ] [ [SIR, Amesia Newborn Album](https://www.youtube.com/playlist?list=PLjGoAmqsQhdImnpbthirSQf1TQWaxmpLX) ]
 
-  [ Composer, Performer, Recording Engineer ]
+  [ Artist, Composer, Performer, Recording Engineer ]
 
 + [ 9/2010 - 6/2011 ] [ DYM / TMC Productions ]
 
-  [3D Animator]
+  [ 3D Animator ]
   
-  Endless War & Little Skateboarders 3D cartoon animations.
+  Endless War 3D cartoon.
 
-+ [ 4/2010 - 6/2010 ] [ Freelance ] [ [Bilge Adam Akademi](https://www.bilgeadam.com/) ]
++ [ 4/2010 - 6/2010 ] [ Freelance ] [ [Bilge Adam ](https://www.bilgeadam.com/) ]
 
   [ Adobe After Effects Instructor ]
 
@@ -274,7 +275,7 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
   [Quadruped Animations](https://vimeo.com/10827289)
 
-+ [ 1/2010 - 8/2010 ] [ [Digiflame Productions](http://www.digiflame.com/) ]
++ [ 1/2010 - 8/2010 ] [ [Digiflame](http://www.digiflame.com/) ]
   
   [ 3D Animator ]
 

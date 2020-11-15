@@ -7,10 +7,10 @@ title: blog
 permalink: /blog/
 ---
 
----
+-- Ne vereyim abime?
 
-## Ne Vereyim Abime? Ne Vereceksin Bana?
+-- Ne vereceksin bana?
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/V-xdyCAS610" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+-- ⇣
 
 ---
