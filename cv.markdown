@@ -31,7 +31,7 @@ programlarının kendi script dillerinin yanında Python modülleri de var. Bu;
 işleri kolaylaştıran, otomatize eden harika bir özellik. Sıradan bir
 bilgisayar, bir text editörü ve Python'la yapılabilecekler hayal gücünüze ve
 azminize kalmış. Sonu yok! Belki vardır ama ben henüz oraya varmadım.
-Hatırlatmakta fayda var: π = 3, elektrik hep var!
+Hatırlatmakta fayda var: π ≅ 3, elektrik hep var!
 
 ...ve siber sanatlara evrildim.
 
@@ -67,11 +67,11 @@ effects programs have Python modules as well as their own scripting languages.
 It is a great feature that makes things easier and automates. What you can do
 with an ordinary computer, a text editor and Python is up to your imagination
 and perseverance. There is no end! Maybe there is, but I haven't reached there
-yet. It is useful to remind: Assume π equals 3 and power always on!
+yet. It is useful to remind: Assume π ≅ 3 and power always on!
 
 ...and I evolved into the cyber arts.
 
-Next? [Into Darkness!](Https://www.youtube.com/watch?v=o3KN1bktV2U)
+Next? [Into Darkness!](https://www.youtube.com/watch?v=o3KN1bktV2U)
 
 Shell we begin? T - 34, 21, 13, 8, 5, 3, 2, 1, 1, 0. . . . . [We have
 liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
@@ -150,7 +150,7 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 + Programs:
   + CGI & Video:
     + Autodesk: Maya, 3dsMax
-    + Adobe AfterEffects, Photoshop
+    + Adobe: After Effects, Photoshop
     + Editshare: Lightworks
     + Sony: Vegas
     + Blender Foundation: Blender
@@ -304,4 +304,3 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 ### 4. Extra
 
 + Active Driver (B, D1 Licenses)
-
