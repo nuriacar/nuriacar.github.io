@@ -4,9 +4,9 @@ title: Q
 permalink: /q/
 ---
 
-Yalnızca burada değil, sitede genelinde bazı bulmacalar yer alıyor. Lütfen çözdükçe bana mail atın.
-
-There are some puzzles not only here, throughout the site.  Please e-mail me as you solve it.
+> Well, I'll hazard I can do more damage on my laptop, sitting in my pyjamas
+> before my first cup of Earl Grey than you can do in a year in the field.
+>> ☣
 
 ---
 

@@ -4,6 +4,9 @@ title: cv
 permalink: /cv/
 ---
 
+## ☣
+{: style="text-align: center;"}
+
 ### [Linkedin](https://www.linkedin.com/in/acarnuri/)
 
 ---

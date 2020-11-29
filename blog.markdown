@@ -13,4 +13,5 @@ permalink: /blog/
 
 -- ⇣
 
----
+# ☣
+{: style="text-align: center;"}

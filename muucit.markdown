@@ -15,6 +15,7 @@ permalink: /muucit/
 [![Instagram Icon](/assets/img/instagram-icon.png "Instagram")](https://www.instagram.com/muucit/)
 [![Youtube Icon](/assets/img/youtube-icon.png "Youtube")](https://www.youtube.com/channel/UCzAo3peHOsI10nQeO_nmg6Q)
 [![Cart Icon](/assets/img/cart-icon.png "Shopier")](/store/)
+{: style="text-align: center;"}
 
 ---
 

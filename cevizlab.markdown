@@ -11,6 +11,7 @@ permalink: /cevizlab/
 [![Instagram Icon](/assets/img/instagram-icon.png "Instagram")](https://www.instagram.com/cevizlab/)
 [![Youtube Icon](/assets/img/youtube-icon.png "Youtube")](https://www.youtube.com/channel/UCdr-_dvdG8W1piZWRUUMWrw)
 [![Cart Icon](/assets/img/cart-icon.png "Shopier")](/store/)
+{: style="text-align: center;"}
 
 ---
 
@@ -20,32 +21,31 @@ permalink: /cevizlab/
 
 [cevizlab®](/cevizlab/) is a cyber arts reactor. milion!
 
----
+## ☣
+{: style="text-align: center;"}
 
-#### [Yapay Zeka Temelleri (Elements of AI)](https://www.elementsofai.com/)
+[![Elements of AI](/assets/img/elements-of-ai.png "Elements of AI")](https://course.elementsofai.com/)
 
-Şu an hazırlamakta olduğum makale serisi Yapay Zeka üzerine; altı kısımdan
-oluşan, temel düzey, çok kıymetli bir içerik.
-[Finlandiya](https://finland.fi/) [Helsinki
-Üniversitesi](https://www.helsinki.fi/en), [Aalto
-Üniversitesi](https://www.aalto.fi/en), [Reaktor](https://www.reaktor.com/),
-[F-Secure](https://www.f-secure.com/en)... vs. gibi pek çok kurumun ortaklaşa
-kurduğu çevrimiçi [Kitlesel Online Açık Eğitim
-Sistemi](https://www.mooc.fi/en) üzerinden yaklaşık bir ay sürede [bu
-dersi](https://www.elementsofai.com/) aldım; dersi alırken notlar da aldım.
-İşte o notlar yakında burada...
+[![Helsinki Üniversitesi](/assets/img/helsinki-uni-logo-mini.png "Helsinki Üniversitesi")](https://www.helsinki.fi/en)
+[![Reaktor](/assets/img/reaktor-logo-mini.png "Reaktor")](https://www.reaktor.com/)
+[![mooc.fi](/assets/img/mooc-fi-logo-mini.png "mooc.fi")](https://mooc.fi/en)
+{: style="text-align: center;"}
 
-[![Helsinki Üniversitesi](/assets/img/helsinki-uni-logo.png "Helsinki
-Üniversitesi")](https://www.helsinki.fi/en)
+2018'de [Finlandiya Helsinki Üniversitesi](https://helsinki.fi/en), bazı
+Bilgisayar Bilimleri derslerini [mooc.fi](http://mooc.fi/en) üzerinden erişime
+açtı. Ben de görür görmez kaydoldum ve eğitimler sisteme yüklendikçe buradaki
+dersleri almaya koyuldum. Kaydolduğum ilk eğitim
+[Reaktor](https://reaktor.com) işbirliği ile hazırlanan [Yapay Zeka
+Temelleri](https://course.elementsofai.com/) eğitimiydi. Yapabildiğim kadar
+tercüme ettim. Kısa süre önce de tekrardan gözden geçirip yayınlama kararı
+aldım. Şimdilik 1. bölüm var lakin zamanla tüm bölümler yüklenmiş olur.
 
-[![Aalto Üniversitesi](/assets/img/aalto-uni-logo.png "Aalto
-Üniversitesi")](https://www.aalto.fi/en)
+[Ey benim paşalarım, beylerim, ağalarım; şu şehr-i Konstantıniyye cengindeki
+silah arkadaşlarım!..](https://tr.wikipedia.org/wiki/II._Mehmed) Biz bize
+kaldık madem, afterparty başlasın...
 
-[![Reaktor](/assets/img/reaktor-logo.png "Reaktor")](https://www.reaktor.com/)
-
-Bu kısmı yazarken bir şey farkettim:
-[F-Secure](https://www.f-secure.com/en) sitesine Türkiye'den ulaşılamıyor.
-Tuhaf. Neden acaba? Öğrenirsem yazarım.
+[![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
+{: style="text-align: center;"}
 
 ---
 
