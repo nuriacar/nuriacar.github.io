@@ -234,19 +234,19 @@ durum beni ziyadesiyle şaşırtıyor.
 
 ## SIR Blog ⇣
 
-### [Üsküdarda Yağmur Var](/muucit/2020/09/30/uskudarda-yagmur-var.html)
+### [Üsküdarda Yağmur Var](/sir/2020/09/30/uskudarda-yagmur-var.html)
 
 Uşşak Beste
 
 Uşşak Composition
 
-### [Naif Hediye](/muucit/2020/10/01/naif-hediye.html)
+### [Naif Hediye](/sir/2020/10/01/naif-hediye.html)
 
 Hicaz Beste
 
 Hicaz Composition
 
-### [Her Umut Ziyan](/muucit/2020/10/02/her-umut-ziyan.html)
+### [Her Umut Ziyan](/sir/2020/10/02/her-umut-ziyan.html)
 
 Aranje yapan hem yetenekli hem eğlenceli bir arkadaşım var.
 [Eren](https://soundcloud.com/erenduranoglu). Bir enstrümantal beste yapmış.
@@ -258,13 +258,13 @@ I have a talented and funny friend who is an arrenger.
 composition. He said "Would you write lyrics on this?" These words came out.
 Maybe we'll record some day.
 
-### [Dingin Ruhun Sesinin Nüvesi](/muucit/2020/10/03/dingin-ruhun-sesinin-nuvesi.html)
+### [Dingin Ruhun Sesinin Nüvesi](/sir/2020/10/03/dingin-ruhun-sesinin-nuvesi.html)
 
 Kürdili-Hicazkar Beste
 
 Kürdili-Hicazkar Composition
 
-### [Dingin Okyanus](/muucit/2020/10/04/dingin-okyanus.html)
+### [Dingin Okyanus](/sir/2020/10/04/dingin-okyanus.html)
 
 Antonis Apergis bestesi Mavra mou Matia üzerine Türkçe aranjman yazdım.
 Şarkının aslını Areti Ketime söylüyor.
