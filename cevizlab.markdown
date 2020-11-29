@@ -38,7 +38,8 @@ dersleri almaya koyuldum. Kaydolduğum ilk eğitim
 [Reaktor](https://reaktor.com) işbirliği ile hazırlanan [Yapay Zeka
 Temelleri](https://course.elementsofai.com/) eğitimiydi. Yapabildiğim kadar
 tercüme ettim. Kısa süre önce de tekrardan gözden geçirip yayınlama kararı
-aldım. Şimdilik 1. bölüm var lakin zamanla tüm bölümler yüklenmiş olur.
+aldım. Altı bölüm olacak lakin şimdilik yalnızca ilk bölüm var. Zamanla tüm
+bölümler yüklenmiş olur.
 
 [Ey benim paşalarım, beylerim, ağalarım; şu şehr-i Konstantıniyye cengindeki
 silah arkadaşlarım!..](https://tr.wikipedia.org/wiki/II._Mehmed) Biz bize
@@ -59,3 +60,9 @@ sandığın gibi değil. Açıklayabilirim...
 
 Dear [Law No. 677](https://www.mevzuat.gov.tr/MevzuatMetin/1.3.677.pdf)! My
 cult I founded is not a cult like you think. I can explain...
+
+### [Yapay Zeka 101 [ 1. Bölüm ]](/ai/2020/10/05/yapay-zeka-101-1.html)
+
+"Şiddetle başlayan hazlar, şiddetle son bulurlar." Shakespeare
+
+"These violent delights have violent ends." Shakespeare
