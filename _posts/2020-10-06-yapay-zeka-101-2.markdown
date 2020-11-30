@@ -737,20 +737,19 @@ oyunun -1 değerinden de anlaşılabilir.
 > bir yönteme sahipmişiz gibi görünebilir. Ne yazık ki, Yapay Zeka'yı gerçek
 > dünya problemlerine uygulamak istediğimizde işler daha da karmaşıklaşıyor.
 > Temel olarak, orta derecede karmaşık bir gerçek dünya senaryosunda bile
-> durumların sayısı giderek artmaktadır ve kapsamlı bir araştırma ("kaba
-> kuvvet") veya hatta akıllı buluşsal yöntemler kullanarak bir çözüm
-> bulamıyoruz.
+> durumların sayısı giderek artmaktadır ve kapsamlı bir arama ("kaba kuvvet")
+> veya hatta akıllı buluşsal yöntemler kullanarak bir çözüm bulamıyoruz.
 >
 > Dahası, bir eylemi seçerken bizi bir durumdan diğerine götüren geçişler
-> deterministik değildir. Bu, yapmayı seçtiğimiz her şeyin sonucu her zaman
-> tam olarak belirleyemeyeceği anlamına gelir, çünkü bizim kontrolümüz
-> dışında kalan ve genellikle bizim için bilinmeyen faktörler vardır.
+> deterministik değildir. Bu, yapmayı seçtiğimiz her şeyin sonucunun her zaman
+> tam olarak belirlenemeyeceği anlamına gelir, çünkü bizim kontrolümüz dışında
+> kalan ve genellikle bizim için bilinmeyen faktörler vardır.
 >
 > Yukarıda tartıştığımız algoritmalar, örneğin zar atma veya rasgele bir
 > desteden kartların seçimindeki rasgelelik gibi, bazı rasgelelerin işlenmesi
 > için adapte edilebilir. Bu, belirsizlik ve olasılık kavramını tanıtmamız
 > gerektiği anlamına gelir. Yalnızca bu sayede basit bulmacalar ve oyunlar
-> yerine gerçek dünyadaki Yapay Zeka'ya yaklaşmaya başlayabiliriz. Bu Bölüm
+> yerine gerçek dünyadaki Yapay Zeka'ya yaklaşmaya başlayabiliriz. Bu, Bölüm
 > 3'ün konusudur.
 
 ---
