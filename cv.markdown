@@ -95,6 +95,7 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
     is only one for now! I will add other chapters over time.
 
     [![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
+    [![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
     {: style="text-align: center;"}
 
 + [ 9/2020 - ... ] [ [International Akhmet Yassawi Uni., Computer Engineering](https://www.ayu.edu.tr/) ]

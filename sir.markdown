@@ -12,6 +12,8 @@ permalink: /sir/
 
 ---
 
+## Ses... Deneme... Prova... 1, 2, 3... A... Çh...
+
 Her ne olduysa bilgisayar yüzünden oldu. Ciddiyim!
 
 + CPU: 400 MHz Intel® Centrino® Mobile Intel® Pentium® M 725 (Dothan 1.6 GHz)
@@ -35,8 +37,6 @@ diyorum zira çocukluğumun seslerini farkında olmadan bir yerlerde kaybetmişi
 Yetmemiş, kaybettiğimi bile kaybetmişim. Çok geçmeden Mızraplı Tanbur ve
 bilgisayarımda sentezlediğim seslerle NewAge yapmaya koyuldum.
 
----
-
 ### Amesia Newborn
 
 Bir süre sonra Amesia Newborn albümüm ortaya çıktı.
@@ -50,8 +50,6 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Bu albümün kaydedildiği zamanlar, TRT yarışmaları ve belgeselleri için müzik
 bestelediğim zamanlar. Fakat onlar nedense bende yoklar. Sahi neden yoklar?
-
----
 
 ### Atasoy Müftüoğlu Belgeseli
 
@@ -89,8 +87,6 @@ Hepsi bir yana, ne ka güzel insanlarla tanıştım anlatamam.
 Ayrıca, sayfanın devamında göreceğiniz Fethi Gemuhluoğlu Belgeseli de yukarıda
 bahsettiğim Edirne Dörtlüsü'nün işi.
 
----
-
 ### Özer Arkun, Yanni & Victor Espinola
 
 Bu mix, Kaos Teorisi ve diğer pek çok faydalı şey gibi istemsizce var oldu.
@@ -109,8 +105,6 @@ aynı anda çalması ile doğdu.
 src="https://www.youtube.com/embed/yqLMW6AMfa4" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
 picture-in-picture" allowfullscreen></iframe>
-
----
 
 ### UK2911 - Uzay Kuvvetleri 2911
 
@@ -176,8 +170,6 @@ src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdL0_yY5aNM_P2pj8u
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
----
-
 ### SIR N[01]
 
 ![N[01] Album](/assets/img/n01.jpg "N[01] Album")
@@ -196,8 +188,6 @@ albüm değil. Zaten anlatabilsem müzik yapmazdım.
 src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdJ39LkXn9mk9Qkum1l50CZd"
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
----
 
 ### Fethi Gemuhluoğlu Belgeseli
 
@@ -218,8 +208,6 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 > Son sözüm: Nefesler pâyende ola. Demler, safâlar müzdâd ola. Kulûb-ı âşıkan
 > küşâde ola... Bana hakkınızı helâl ediniz.
 >> İrfan Fethi Gemuhluoğlu
-
----
 
 ### Eee?
 

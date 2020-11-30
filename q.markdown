@@ -10,36 +10,26 @@ permalink: /q/
 
 ---
 
-### 00001
+### 001
 
-![Q 00001](/assets/img/na-00001.jpg "Q 00001")
+![Q 001](/assets/img/q001.jpg "Q 001")
 
----
+### 002
 
-### 00002
+![Q 002](/assets/img/q002.jpg "Q 002")
 
-![Q 00002](/assets/img/na-00002.jpg "Q 00002")
+### 003
 
----
+![Q 003](/assets/img/q003.jpg "Q 003")
 
-### 00003
+### 004
 
-![Q 00003](/assets/img/na-00003.jpg "Q 00003")
+![Q 004](/assets/img/q004.jpg "Q 004")
 
----
+### 005
 
-### 00004
+![Q 005](/assets/img/q005.jpg "Q 005")
 
-![Q 00004](/assets/img/na-00004.jpg "Q 00004")
+### 006
 
----
-
-### 00005
-
-![Q 00005](/assets/img/na-00005.jpg "Q 00005")
-
----
-
-### 00006
-
-![Q 00006](/assets/img/na-00006.jpg "Q 00006")
+![Q 006](/assets/img/q006.jpg "Q 006")
