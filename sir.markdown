@@ -4,7 +4,7 @@ title: sır
 permalink: /sir/
 ---
 
-![SIR Logo](/assets/img/sir-logo.png "SIR Logo")
+![SIR Logo](/assets/img/sir-logo.jpg "SIR Logo")
 
 [![Youtube Icon](/assets/img/youtube-icon.png "Youtube")](https://www.youtube.com/user/sirnewage/playlists)
 [![SoundCloud Icon](/assets/img/soundcloud-icon.png "SoundCloud")](https://soundcloud.com/sirnewage/albums)
@@ -41,7 +41,7 @@ bilgisayarımda sentezlediğim seslerle NewAge yapmaya koyuldum.
 
 Bir süre sonra Amesia Newborn albümüm ortaya çıktı.
 
-![Amesia Newborn Album](/assets/img/amesia-newborn.png "Amesia Newborn Album")
+![Amesia Newborn Album](/assets/img/amesia-newborn.jpg "Amesia Newborn Album")
 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdImnpbthirSQf1TQWaxmpLX"
@@ -75,7 +75,7 @@ bir durumdu. Nasıl bir soğuksa tenor-bariton insanı Veysel Dalsaldı'ya, Tim
 Foust'a, Avi Kaplan'a dönüştürüyor. Ah be testosteron, ne güzel abimizsin.
 Saygılar.
 
-![Atasoy Müftüoğlu Belgesel Soundtrack Album](/assets/img/atasoy-muftuoglu-belgeseli-1.png "Atasoy Müftüoğlu Belgesel Soundtrack Album")
+![Atasoy Müftüoğlu Belgesel Soundtrack Album](/assets/img/atasoy-muftuoglu-belgeseli-1.jpg "Atasoy Müftüoğlu Belgesel Soundtrack Album")
 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdLbpT82poAOwGqvOBp5l4h1"
@@ -84,7 +84,7 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Hepsi bir yana, ne ka güzel insanlarla tanıştım anlatamam.
 
-![Atasoy Müftüoğlu Belgesel Soundtrack Album](/assets/img/atasoy-muftuoglu-belgeseli-2.png "Atasoy Müftüoğlu Belgesel Soundtrack Album")
+![Atasoy Müftüoğlu Belgesel Soundtrack Album](/assets/img/atasoy-muftuoglu-belgeseli-2.jpg "Atasoy Müftüoğlu Belgesel Soundtrack Album")
 
 Ayrıca, sayfanın devamında göreceğiniz Fethi Gemuhluoğlu Belgeseli de yukarıda
 bahsettiğim Edirne Dörtlüsü'nün işi.
@@ -114,7 +114,7 @@ picture-in-picture" allowfullscreen></iframe>
 
 ### UK2911 - Uzay Kuvvetleri 2911
 
-![Uzay Kuvvetleri 2911 Murat Kaptan](/assets/img/uk2911-murat-kaptan.png "Uzay Kuvvetleri 2911 Murat Kaptan")
+![Uzay Kuvvetleri 2911 Murat Kaptan](/assets/img/uk2911-murat-kaptan.jpg "Uzay Kuvvetleri 2911 Murat Kaptan")
 
 Not: İsterseniz "Uzayopoulos Kuvvetleridis 2911" diyerek tereddütsüz
 Yunanistan'a iteleyebilir, bu başlığı okumadan bir sonrakine atlayabilirsiniz.
@@ -180,7 +180,7 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### SIR N[01]
 
-![N[01] Album](/assets/img/n01.png "N[01] Album")
+![N[01] Album](/assets/img/n01.jpg "N[01] Album")
 
 Neden albüm kapağında bir Siyam kedisi var? Çünkü o zamanlar bir Siyam kedisi
 ile arkadaş olup, ona 'Siyami' diye seslenmeyi düşünüyordum. Sanıyorum bu

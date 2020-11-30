@@ -7,7 +7,7 @@ layout: page
 
 ![Pegi +18](/assets/img/pegi18-logo.png "Pegi +18 lakin sandığınız gibi değil! :) Pegi +18, but not what you think! :)")
 
-![Harold X](/assets/img/harold-finch-01.png "Harold X")
+![Harold X](/assets/img/harold-finch-01.jpg "Harold X")
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HU7Ga7qTLDU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

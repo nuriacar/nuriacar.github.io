@@ -29,7 +29,7 @@ Peki ne yapmak gerek? Özeti boşverin, kitabı okuyun.
 
 [Nuri ACAR](http://nuriacar.com)
 
-![Sıfırdan Bire](/assets/img/sifirdan-bire.png)
+![Sıfırdan Bire](/assets/img/sifirdan-bire.jpg)
 
 ---
 

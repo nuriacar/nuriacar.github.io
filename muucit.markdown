@@ -6,11 +6,11 @@ permalink: /muucit/
 
 ![muucit Logo](/assets/img/muucit-logo.png "muucit Logo")
 
-[![Nebula](/assets/img/nebula-banner-01.png "Nebula")](/store/)
+[![Nebula](/assets/img/nebula-banner-01.jpg "Nebula")](/store/)
 
-[![QB 15](/assets/img/qb-15-banner-01.png "qb 15")](/store/)
+[![QB 15](/assets/img/qb-15-banner-01.jpg "qb 15")](/store/)
 
-[![QB 50](/assets/img/qb-50-banner-01.png "qb 50")](/store/)
+[![QB 50](/assets/img/qb-50-banner-01.jpg "qb 50")](/store/)
 
 [![Instagram Icon](/assets/img/instagram-icon.png "Instagram")](https://www.instagram.com/muucit/)
 [![Youtube Icon](/assets/img/youtube-icon.png "Youtube")](https://www.youtube.com/channel/UCzAo3peHOsI10nQeO_nmg6Q)

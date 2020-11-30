@@ -14,7 +14,7 @@ okunması iyi olur.
 
 [Nuri ACAR](http://nuriacar.com)
 
-![Yalın Startup](/assets/img/yalin-startup.png)
+![Yalın Startup](/assets/img/yalin-startup.jpg)
 
 ---
 

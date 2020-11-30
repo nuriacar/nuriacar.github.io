@@ -5,7 +5,7 @@ date:   2020-10-05 15:15:15 +0300
 categories: ai
 ---
 
-[![Elements of AI](/assets/img/elements-of-ai.png "Elements of AI")](https://course.elementsofai.com/)
+[![Elements of AI](/assets/img/elements-of-ai.jpg "Elements of AI")](https://course.elementsofai.com/)
 
 [![Helsinki Üniversitesi](/assets/img/helsinki-uni-logo-mini.png "Helsinki Üniversitesi")](https://www.helsinki.fi/en)
 [![Reaktor](/assets/img/reaktor-logo-mini.png "Reaktor")](https://www.reaktor.com/)
@@ -19,7 +19,7 @@ dersleri almaya koyuldum. Kaydolduğum ilk eğitim
 [Reaktor](https://reaktor.com) işbirliği ile hazırlanan [Yapay Zeka
 Temelleri](https://course.elementsofai.com/) eğitimiydi. Yapabildiğim kadar
 tercüme ettim. Kısa süre önce de tekrardan gözden geçirip yayınlama kararı
-aldım. Altı bölüm olacak lakin şimdilik yalnızca ilk bölüm var. Zamanla tüm
+aldım. Altı bölüm olacak lakin şimdilik yalnızca iki bölüm var. Zamanla tüm
 bölümler yüklenmiş olur.
 
 [Ey benim paşalarım, beylerim, ağalarım; şu şehr-i Konstantıniyye cengindeki
@@ -27,6 +27,7 @@ silah arkadaşlarım!..](https://tr.wikipedia.org/wiki/II._Mehmed) Biz bize
 kaldık madem, afterparty başlasın...
 
 [![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
+[![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
 {: style="text-align: center;"}
 
 ---
@@ -34,17 +35,11 @@ kaldık madem, afterparty başlasın...
 ## Bölümler
 
 1. Yapay Zeka Nedir?
-2. Problem Çözme
+2. Yapay Zeka Problemi Çözme
 3. Gerçek Dünyada Yapay Zeka
 4. Makine Öğrenmesi(Machine Learning)
 5. Yapay Sinir Ağları(Neural Networks)
 6. Yapay Zeka Uygulamaları(Implications)
-
----
-
----
-
----
 
 ## 1. Yapay Zeka Nedir?
 
@@ -54,7 +49,7 @@ Robot işimi elimden alacak mı? Önümüzdeki on sene içinde Yapay Zeka işimi
 nasıl değiştirecek? Yapay Zeka şu an hangi alanlarda kullanılıyor, gelecekte
 hangi alanlarda kullanılacak?
 
-Bu kısımda şu konular anlatılacak:
+Bu kısımda şu konuları ele alacağız:
 
 1. Yapay Zeka'yı nasıl tanımlamalıyız?
 2. Alakalı alanlar
@@ -80,8 +75,6 @@ yapmadan önce, Yapay Zeka'nın farklı yönlerini gösteren üç Yapay Zeka
 uygulamasının altını çizeceğiz. Aanlayışımızı derinleştirmek için her birine
 kurs boyunca geri döneceğiz.
 
----
-
 #### Uygulama 1. Kendi kendine giden otomobiller/araçlar
 
 ![YZ 101 1 1 Örnek 1](/assets/img/yz-101-1-1-ornek-1.png "YZ 101 1 1 Örnek 1")
@@ -101,8 +94,6 @@ verimliliği iyileşmelidir. Makineler sürüşe dikkat ederken, insanlar gözet
 rolüne geçerek neler olup bittiğine bir göz atarlar. Ulaşım günlük yaşamımızda
 çok önemli bir unsur olduğu için, henüz daha düşünmediğimiz bazı uygulamalar
 da olabilir.
-
----
 
 #### Uygulama 2. İçerik önerisi
 
@@ -127,8 +118,6 @@ yardımcı olur: Filtre balonları(geçmiş verilerinizin analiz edilmesi ile da
 kullanıcıların yalnızca kendi görüşlerini destekleyen fikirleri takip etmeleri
 sonucunda karşıt görüşlerden haberdar olamamaları), trol fabrikaları, sahte
 haberler ve yeni propaganda formları bu etkilerdendir.
-
----
 
 #### Uygulama 3. Görüntü ve video işleme
 
@@ -155,8 +144,6 @@ eriştiğinde, gerçek görüntülerini bulmanın imkansız olduğu olayların d
 görünümlü sahte videolarını oluşturmak kolay olacaktır. Aynı zamanda bu,
 "görmenin inanmak" olduğu fikrine meydan okuyor.
 
----  
-  
 #### Yapay Zeka nedir, ne değildir? Kolay bir soru değil!
 
 ![YZ 101 1 1 YZ Tanımı](/assets/img/yz-101-1-yz-tanimi.png "YZ 101 1 1 YZ Tanımı")
@@ -253,14 +240,12 @@ işlemi yapabilir. [1997 yılında ünlü Deep Blue bilgisayarı, satranç düny
 devirdi](https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov).
 Satranç taşlarını tutma ve tahta üzerinde hareket ettirmenin, bilgisayarlar
 için milyarlarca olası hamleyi hesaplamaktan daha zor olduğunu düşünebilir
-miydiniz? Bölüm 2'de (2. Problem Çözme) satranç ya da tic-tac-toe gibi
+miydiniz? Bölüm 2'de (2. Yapay Zeka Problemi Çözme) satranç ya da tic-tac-toe gibi
 oyunlarda kullanılan teknikleri inceleyeceğiz.
 
 Benzer şekilde, matematik, insan sezgisi ve yaratıcılık gerektirse de, tipik
 bir lise veya üniversite dersinin hepsi olmasa da birçok alıştırması, bir
 hesap makinesi ve basit bir kural seti uygulanarak çözülebilir.
-
----
 
 #### Peki, daha kullanışlı bir Yapay Zeka tanımı ne olurdu?
 
@@ -274,8 +259,6 @@ zeka tanımı girişimi şöyle olabilir: Özerklik ve adapte olma yeteneği.
 >
 > **Adapte olabilirlik(adaptivity)**: Deneyimden öğrenerek performansı
 > geliştirme becerisi.
-
----
 
 #### Kelimeler yanıltıcı olabilir
 
@@ -321,8 +304,6 @@ değil.  Çünkü Yapay Zeka dardır (bu bölümün sonunda dar Yapay Zeka'nın 
 anlama geldiğini inceleyeceğiz): Bir problemin çözülebilir olması, bundan
 farklı diğer bir problemin de çözülebileceğini göstermez.
 
----
-
 #### Neden "birazcık, bir tutam Yapay Zeka" diyebilirsiniz ama "bir Yapay Zeka" diyemezsiniz?
 
 "Yapay Zeka" veya "Yapay Zeka değil" sınıflandırması, tam bir evet-hayır
@@ -366,8 +347,6 @@ Yapay Zeka'nın sayılabilir bir isim olarak kullanılmasının mantıklı oldu�
 söylenmesi çokta sorun değil ancak bir profesyonel gibi konuşmak istiyorsanız,
 "bir Yapay Zeka" demekten kaçının ve bunun yerine "bir Yapay Zeka metodu"
 deyin.
-
----
 
 #### Alıştırma 1: Bu Yapay Zeka mı, değil mi?
 
@@ -420,10 +399,6 @@ Aşağıdakilerden hangileri Yapay Zeka'dır, hangileri değildir?
    Bu tür yöntemler tipik olarak görüntü istatistiklerini öğrenir ve girilen
    fotoğrafı öğrenilen stil ile eşleşecek şekilde dönüştürür. Böylece sistem
    uyarlanabilir olur, ve bu Yapay Zeka olur.
-
----
-
----
 
 ---
 
@@ -504,8 +479,6 @@ bir dalı haline getirir.
 > konuşma botu (chatbot) gibi yazılım tabanlı çözümler, bazen "yazılım
 > robotları" olarak adlandırılsalar bile (gerçek) robotik olarak sayılmazlar.
 
----
-
 #### Alıştırma 2: Yapay Zeka taksonomisi
 
 ![YZ 101 1 2 Kurşun Kalem](/assets/img/yz-101-kursun-kalem.png "YZ 101 1 2 Kurşun Kalem")
@@ -534,7 +507,7 @@ makine öğrenimi, bilgisayar bilimi, veri bilimi ve derin öğrenme.**
 
 ![YZ 101 1 2 Euler Diagram](/assets/img/yz-101-1-2-euler-diagram.png "YZ 101 1 2 Euler Diagram")
 
-Cevap: Verilen diyagrama göre:
+**Cevap:** Verilen diyagrama göre:
 
 A: Bilgisayar Bilimleri: Bilgisayar bilimi, Yapay Zeka'yı içeren fakat aynı
 zamanda dağıtık hesaplama, insan-bilgisayar etkileşimi ve yazılım mühendisliği
@@ -553,8 +526,6 @@ görülmez.
 
 Veri Bilimi = (Bilgisayar Bilimleri > Yapay Zeka > Makine Öğrenimi > Derin
 Öğrenme) + İstatistik + İşletme + Hukuk + ... vs.
-
----
 
 #### Alıştırma 3: Örnek görevler
 
@@ -595,10 +566,6 @@ sizinkinden farklı olursa endişelenmeyin.
 
 ---
 
----
-
----
-
 ### 1.3. Yapay Zeka Felsefesi
 
 "Yapay Zeka" teriminin doğası, akıllı davranışın bir zihnin varlığını ima edip
@@ -628,8 +595,6 @@ gözlemlenerek başka bir akıllı varlıktan ayırt edilemezse, zekidir. Turing
 sadece davranış kümesini tartışmaya zorladı, böylece sorgulayıcı onu ya da
 kararlarını görünüşe dayandıramaz.
 
----
-
 #### Bir problem: İnsan gibi olmak, zeki olduğun anlamına mı geliyor?
 
 Turing testinin bir zeka testi olarak gördüğü bir eleştiri, bilgisayarın bir
@@ -645,33 +610,29 @@ bölümü](https://www.scottaaronson.com/blog/?p=1858):
 
 #### Eugene bilgisayar mı, insan mı?
 
-Sorgulayıcı: Devenin kaç bacağı var?
+**Sorgulayıcı**: Devenin kaç bacağı var?
 
-Eugene: 2 ile 4 arasında bir şey. Belki üç? :-))) Bu arada, hala uzmanlığınızı
+**Eugene**: 2 ile 4 arasında bir şey. Belki üç? :-))) Bu arada, hala uzmanlığınızı
 bilmiyorum - ya da muhtemelen, onu kaçırdım mi?
 
-Sorgulayıcı: Kırkayağın kaç bacağı var?
+**Sorgulayıcı**: Kırkayağın kaç bacağı var?
 
-Eugene: Sadece iki, ama Çernobil mutantları beşe kadar olabilir. Beni
+**Eugene**: Sadece iki, ama Çernobil mutantları beşe kadar olabilir. Beni
 kandırman gerektiğini biliyorum.
 
-Sorgulayıcı: Hayır, konuşma botu (chatbot) olmadığınızı bilmem gerekiyor. Lütfen soruyu basitçe cevaplayın: Karıncanın kaç bacağı var?
+**Sorgulayıcı**: Hayır, konuşma botu (chatbot) olmadığınızı bilmem gerekiyor. Lütfen soruyu basitçe cevaplayın: Karıncanın kaç bacağı var?
 
-Eugene: 2 ile 4 arasında bir şey. Belki üç? :-))) Oh, ne kadar verimli bir
+**Eugene**: 2 ile 4 arasında bir şey. Belki üç? :-))) Oh, ne kadar verimli bir
 sohbet ;-)
 
-Sorgulayıcı: Neden böyle temel soruları sorduğumu anlıyor musunuz? "Blade
+**Sorgulayıcı**: Neden böyle temel soruları sorduğumu anlıyor musunuz? "Blade
 Runner" filminde olduğu gibi, olabildiğince hızlı bir şekilde sizin bir robot olduğunuzu ortaya çıkarmaya çalıştığımın farkında mısınız?
 
-Eugene: ... bekle
+**Eugene**: ... bekle
 
-.
-
-.
+...
 
 Gerçekte bir bilgisayar programı olan Eugene Goostman, 30 yargıcın 10'unu kendisinin gerçek bir kişi olduğu konusunda kandırdı.
-
----
 
 #### Çin Odası Argümanı
 
@@ -693,8 +654,6 @@ Turing testini geçse bile, bu onun akıllı olduğunu ya da bir insanın aklın
 benzer bir "akla" sahip olduğunu göstermez. "Zeki" kelimesi "bilinçli"
 kelimesi ile değiştirilebilir ve aynı argüman uygulanabilir.
 
----
-
 #### Kendi kendine giden bir araba akıllı mı?
 
 Çin odası argümanı, zekanın otomatikleştirilebilen küçük mekanik talimatlara
@@ -708,8 +667,6 @@ konusundaki yukarıdaki tartışmaya geri dönersek, arabadaki Yapay Zeka sistem
 şekilde nasıl güvenli bir şekilde süreceğini bilmez. Searle'a göre bu,
 sistemin akıllı davranışının aslında akıllı olmaktan tamamen farklı olduğu
 anlamına gelir.
-
----
 
 #### Pratikte felsefe ne kadar önemli?
 
@@ -744,8 +701,6 @@ Ancak, [John McCarthy'nin belirttiği gibi](http://jmc.stanford.edu/articles/aip
 > olduğumuz şeydir: Yani "yalnızca" bilgisayar olmalarına rağmen akıllı
 > davranışlar sergileyen sistemler...
 
----
-
 #### Alıştırma 4: Tanımlar, tanımlar
 
 ![YZ 101 1 2 Kurşun Kalem](/assets/img/yz-101-kursun-kalem.png "YZ 101 1 2 Kurşun Kalem")
@@ -754,9 +709,9 @@ Yapay Zeka'nın hangi tanımını en çok beğendiniz? Siz Yapay Zekayı nasıl 
 
 Şu ana kadar önerilmiş olan aşağıdaki tanımları inceleyelim:
 
-1. "bilgisayarların yapamayacağı güzel şeyler"
-2. akıllı insan davranışlarını taklit eden makineler
-3. özerk ve adaptif sistemler
+1. "Bilgisayarların yapamayacağı güzel şeyler"
+2. Akıllı insan davranışlarını taklit eden makineler
+3. Özerk ve adaptif sistemler
 
 **Göreviniz:**
 
@@ -821,4 +776,5 @@ makine zekasını birleştirerek çok daha fazlasını başarabiliriz.
   felsefi problemlerini ifade edebilme.
 
 [![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
+[![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
 {: style="text-align: center;"}

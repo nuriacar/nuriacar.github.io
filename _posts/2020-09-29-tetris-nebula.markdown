@@ -56,7 +56,7 @@ birbirinin aynısı kareyi yanyana getirip kenarlarından birleştirerek farklı
 
 #### 2. [Tetris](https://tr.wikipedia.org/wiki/Tetris) oyunu ile [polyomino](https://mathworld.wolfram.com/Polyomino.html)ların benzerliğinizi bulunuz? (25 Puan)
 
-![Tetris 1984 Electronica 60](/assets/img/tetris-1984.png "Tetris 1984 Electronica 60")
+![Tetris 1984 Electronica 60](/assets/img/tetris-1984.jpg "Tetris 1984 Electronica 60")
 
 Dünyanın en çok oynanan oyunu olan
 [Tetris](https://tr.wikipedia.org/wiki/Tetris),
@@ -95,7 +95,7 @@ picture-in-picture" allowfullscreen></iframe>
 
 #### 3. [Tetris](https://tr.wikipedia.org/wiki/Tetris) ile [Nebula](/store/) arasındaki benzerliği bulunuz? (25 Puan)
 
-[![Nebula](/assets/img/nebula-banner-01.png "Nebula")](/store/)
+[![Nebula](/assets/img/nebula-banner-01.jpg "Nebula")](/store/)
 
 [Tetris](https://tr.wikipedia.org/wiki/Tetris), 4'lü
 [polyomino](https://mathworld.wolfram.com/Polyomino.html)nun (tetromino)
@@ -107,7 +107,7 @@ sınırlandırılmış türevidir.
 > Sonra vay ben duymadım, yok ben işitmedim demeyin...
 >> [Belediye](https://tr.wikipedia.org/wiki/Vizontele)
 
-![Agent Smith](/assets/img/agent-smith-01.png "Agent Smith")
+![Agent Smith](/assets/img/agent-smith-01.jpg "Agent Smith")
 
 An itibariyle; kahramanım [Agent
 Smith](https://tr.wikipedia.org/wiki/Ajan_Smith)'in ayakkabısına giren taş
@@ -178,7 +178,7 @@ equal/same squares from the edges with each other.
 
 #### 2. Find the similarity of the [Tetris](https://en.wikipedia.org/wiki/Tetris) game with the [polyomino](https://mathworld.wolfram.com/Polyomino.html)? (25 Points)
 
-![Tetris 1984 Electronica 60](/assets/img/tetris-1984.png "Tetris 1984 Electronica 60")
+![Tetris 1984 Electronica 60](/assets/img/tetris-1984.jpg "Tetris 1984 Electronica 60")
 
 [Tetris](https://en.wikipedia.org/wiki/Tetris), the most played game in the
 world, is the most well known example of polyominoes. It was derived from
@@ -214,7 +214,7 @@ picture-in-picture" allowfullscreen></iframe>
 
 #### 3. Find the similarity between [Tetris](https://en.wikipedia.org/wiki/Tetris) and [Nebula](/store/)? (25 Points)
 
-[![Nebula](/assets/img/nebula-banner-01.png "Nebula")](/store/)
+[![Nebula](/assets/img/nebula-banner-01.jpg "Nebula")](/store/)
 
 [Tetris](https://en.wikipedia.org/wiki/Tetris), derivative of 4-membered
 [polyomino](https://mathworld.wolfram.com/Polyomino.html) (tetromino).
@@ -226,7 +226,7 @@ and limited by the connecting element.
 > Then don't say: Oh, I didn't hear, oh, I didn't learn...
 >> [Municipality](https://en.wikipedia.org/wiki/Vizontele)
 
-![Agent Smith](/assets/img/agent-smith-01.png "Agent Smith")
+![Agent Smith](/assets/img/agent-smith-01.jpg "Agent Smith")
 
 As of now; I assume you're experiencing the enlightenment of the machine
 collaborator [Neo](https://en.wikipedia.org/wiki/Neo_(The_Matrix)), who plays

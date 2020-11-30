@@ -5,7 +5,7 @@ date:   2020-10-04 14:14:14 +0300
 categories: sir
 ---
 
-![SIR Areti Ketime](/assets/img/sir-areti-ketime.png)
+![SIR Areti Ketime](/assets/img/sir-areti-ketime.jpg)
 
 Antonis Apergis bestesi Mavra mou Matia üzerine Türkçe aranjman yazdım.
 Şarkının aslını Areti Ketime söylüyor.
