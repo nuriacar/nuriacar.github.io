@@ -95,7 +95,7 @@ picture-in-picture" allowfullscreen></iframe>
 
 #### 3. [Tetris](https://tr.wikipedia.org/wiki/Tetris) ile [Nebula](/store/) arasındaki benzerliği bulunuz? (25 Puan)
 
-[![Nebula](/assets/img/nebula-banner-01.jpg "Nebula")](/store/)
+[![Nebula](/assets/img/nebula-afis-01.jpg "Nebula")](/store/)
 
 [Tetris](https://tr.wikipedia.org/wiki/Tetris), 4'lü
 [polyomino](https://mathworld.wolfram.com/Polyomino.html)nun (tetromino)
@@ -214,7 +214,7 @@ picture-in-picture" allowfullscreen></iframe>
 
 #### 3. Find the similarity between [Tetris](https://en.wikipedia.org/wiki/Tetris) and [Nebula](/store/)? (25 Points)
 
-[![Nebula](/assets/img/nebula-banner-01.jpg "Nebula")](/store/)
+[![Nebula](/assets/img/nebula-afis-01.jpg "Nebula")](/store/)
 
 [Tetris](https://en.wikipedia.org/wiki/Tetris), derivative of 4-membered
 [polyomino](https://mathworld.wolfram.com/Polyomino.html) (tetromino).

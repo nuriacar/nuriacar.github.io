@@ -1,0 +1,882 @@
+---
+layout: post
+title:  Yapay Zeka 101 [ 3. Bölüm ]
+date:   2020-10-07 17:17:17 +0300
+categories: ai
+---
+
+[![Elements of Yapay Zeka](/assets/img/elements-of-ai.jpg "Elements of Yapay Zeka")](https://course.elementsofai.com/)
+
+[![Helsinki Üniversitesi](/assets/img/helsinki-uni-logo-mini.png "Helsinki Üniversitesi")](https://www.helsinki.fi/en)
+[![Reaktor](/assets/img/reaktor-logo-mini.png "Reaktor")](https://www.reaktor.com/)
+[![mooc.fi](/assets/img/mooc-fi-logo-mini.png "mooc.fi")](https://mooc.fi/en)
+{: style="text-align: center;"}
+
+2018'de [Finlandiya Helsinki Üniversitesi](https://helsinki.fi/en), bazı
+Bilgisayar Bilimleri derslerini [mooc.fi](http://mooc.fi/en) üzerinden erişime
+açtı. Ben de görür görmez kaydoldum ve eğitimler sisteme yüklendikçe buradaki
+dersleri almaya koyuldum. Kaydolduğum ilk eğitim
+[Reaktor](https://reaktor.com) işbirliği ile hazırlanan [Yapay Zeka
+Temelleri](https://course.elementsofai.com/) eğitimiydi. Yapabildiğim kadar
+tercüme ettim. Kısa süre önce de tekrardan gözden geçirip yayınlama kararı
+aldım. Toplamda altı bölüm olacak. Zamanla tüm bölümler yüklenmiş olur.
+
+[Ey benim paşalarım, beylerim, ağalarım; şu şehr-i Konstantıniyye cengindeki
+silah arkadaşlarım!..](https://tr.wikipedia.org/wiki/II._Mehmed) Biz bize
+kaldık madem, afterparty başlasın...
+
+[![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
+[![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
+[![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
+{: style="text-align: center;"}
+
+---
+
+## Bölümler
+
+1. Yapay Zeka Nedir?
+2. Yapay Zeka Problemi Çözme
+3. Gerçek Dünyada Yapay Zeka
+4. Makine Öğrenmesi(Machine Learning)
+5. Yapay Sinir Ağları(Neural Networks)
+6. Yapay Zeka Uygulamaları(Implications)
+
+## 3. Gerçek Dünyada Yapay Zeka
+
+![YZ 101 3 Afiş](/assets/img/yz-101-3-afis.png "YZ 101 3 Afiş")
+
+Modern Yapay Zeka yöntemlerinin gerçek dünyada işe yaramasının nedenlerinden
+biri, 1960-1980 arası iyi eski moda yöntemlerin çoğunun aksine, belirsizlikle
+başa çıkma becerisidir.
+
+Bu kısımda şu konuları ele alacağız:
+
+1. Olasılıklar Oranı (Odds) ve Olasılıklar (Probabilties)
+2. Bayes kuralı (teoremi, formülü)
+3. Naif Bayes sınıflandırması
+
+---
+
+### 3.1. Olasılıklar Oranı (Odds) ve Olasılıklar (Probabilties)
+
+Bir önceki bölümde, örneğin satranç gibi oyunlarda olduğu gibi, mükemmel bir
+bilginin olduğu arama ve arama uygulamalarını ele aldık. Ancak, gerçek
+dünyadaki şeyler nadiren çok net bir şekilde birbirinden ayrılıyor.
+
+Mükemmel bilgi yerine, eksik bilgiden kasten aldatmaya kadar pek çok
+bilinmeyen olasılık vardır.
+
+Örneğin kendi kendini süren bir araba aldınız. A'dan B'ye giderken tüm
+yasalara uyan verimli ve güvenli bir sürüş elde edebilirsiniz. Fakat trafik,
+belki de ilerideki bir kaza yüzünden beklenenden daha kötü olursa?  Ani kötü
+hava? Sokakta zıplayan bir top ya da doğrudan aracın kamerasına uçan bir çöp
+parçası gibi rastgele olaylar olsa?
+
+![YZ 101 3 1 Kendi Kendini Süren Araba](/assets/img/yz-101-3-1-kendi-suren-araba.png "YZ 101 3 1 Kendi Kendini Süren Araba")
+
+Kendi kendini süren bir aracın, nerede olduğunu ve etrafında ne olduğunu
+tespit etmek için sonar/lidar benzeri sensör ve kameraları kullanması gerekir.
+Bu sensörler asla mükemmel değildir çünkü sensörlerdeki veriler her zaman
+"gürültü" olarak adlandırılan bazı hata ve yanlışlıkları içerir. Bir sensör,
+yolun ileride sola döndüğünü algılıyorken, başka bir sensör ters yöne işaret
+edebilir. Bu, en ufak bir gürültü durumunda bile aracı her zaman durdurmadan
+çözülmelidir.
+
+#### Olasılık
+
+Modern Yapay Zeka yöntemlerinin gerçek dünyada işe yaramasının nedenlerinden
+biri, 1960-1980 arası iyi eski moda yöntemlerin çoğunun aksine, belirsizlikle
+başa çıkma becerisidir.
+
+> **Not**
+>
+> **Belirsizlikle baş etme tarihi**
+>
+> Yapay Zeka tarihi, belirsiz ve kesin olmayan bilgileri ele almak için
+> birbiriyle yarışan çeşitli paradigmalar gördü. Örneğin, bulanık mantığı
+> duymuş olabilirsiniz. Bulanık mantık, bir süre, belirsiz ve kesin olmayan
+> bilgileri ele almak için en iyi yaklaşım olduğu iddiasındaydı ve kirliliği
+> algılayabilen (sadece kirli veya temiz değil, derece olarak) ve programını
+> buna göre ayarlayabilen çamaşır makineleri gibi birçok müşteri uygulamasında
+> kullanıldı.
+>
+> Ancak, olasılık (probability), belirsizlik altında mantık yürütme için en
+> iyi yaklaşım olarak ortaya çıkmıştır ve hemen hemen tüm mevcut Yapay Zeka
+> uygulamaları, olasılığı (probability) bir dereceye kadar kullanmaktadır.
+
+![YZ 101 3 1 Poker](/assets/img/yz-101-3-1-poker.png "YZ 101 3 1 Poker")
+
+#### Olasılık (Probability) neden önemlidir?
+
+Muhtemelen en çok oyunlarda olasılık (probability) uygulamalarına aşinayız:
+Pokerde aynı türden üç tane (three of a kind) elde etme şansı nedir (yaklaşık
+47'de 1), piyangoda kazanma şansı nedir (çok küçük) vb. Ancak, daha da
+önemlisi, olasılık (probability) günlük yaşamdaki riskleri ölçmek ve
+karşılaştırmak için de kullanılabilir: Hız sınırını aşarsanız arabanızı çarpma
+ihtimaliniz nedir? Önümüzdeki beş yıl içinde ipoteğinizin faiz oranlarının
+yüzde beş puan artması ihtimali nedir? Yapay zekanın, röntgen görüntülerinde
+kırık kemiklerin tespit edilmesi ihtimali veya bir restoranda bekleme
+listeleri gibi belirli görevleri otomatikleştirme ihtimali nedir?
+
+> **Not**
+>
+> **Olasılıkla (Probability) ilgili anahtar ders**
+>
+> Olasılık (probability) ilgili çıkarmanızı istediğimiz en önemli ders,
+> olasılık (probability) hesabı değildir. Bunun yerine, belirsizliği, en
+> azından prensipte, ölçülebilen bir şey olarak düşünme yeteneğidir. Bu,
+> belirsizlik hakkında sanki bir sayımış gibi konuşabileceğimiz anlamına
+> gelir: Sayılar karşılaştırılabilir ("bu şey ondan daha olası mıdır?") ve
+> genellikle ölçülebilirler.
+>
+> Bunu varsaysak bile, olasılıkları (probabilities) ölçmek zordur: Sonuca
+> varmak için genellikle bir fenomen hakkında birçok gözleme ihtiyacımız
+> vardır. Bununla birlikte, sistematik olarak veri toplayarak, olasılığa
+> (probability) dayalı ifadeleri eleştirel olarak değerlendirebiliriz ve
+> sayılarımız bazen doğru veya yanlış olabilir. Başka bir deyişle, temel ders,
+> belirsizliğin rasyonel düşünme ve tartışmanın kapsamı dışında olmadığı ve
+> olasılığın (probability) tam da bunu yapmanın sistematik bir yolunu sağlıyor
+> olmasıdır.
+
+Belirsizliğin ölçülebilmesi gerçeği, örneğin aşılama veya diğer kamu
+politikaları ile ilgili kararlarda son derece önemlidir. Pazara girmeden önce
+herhangi bir aşı klinik olarak test edilir, böylece faydaları ve riskleri
+ölçülür. Riskler hiçbir zaman en ince ayrıntısına kadar bilinmemektedir ancak
+büyüklükleri genellikle yeterince bilinir ki faydaların risklerden daha ağır
+basıp basmadığı tartışılabilir.
+
+> **Not**
+>
+> **Belirsizliği ölçmek neden önemlidir?**
+>
+> Belirsizliği nicelleştirilemeyen veya ölçülemeyen bir şey olarak düşünürsek,
+> belirsizlik yönü rasyonel tartışmalara engel olabilir. Örneğin, bir aşının
+> zararlı bir yan etkiye neden olup olmayacağını tam olarak bilmediğimiz için,
+> kullanımının çok tehlikeli olduğunu iddia edebiliriz. Ancak bu, aşının
+> ortadan kaldıracağı, yaşamı tehdit eden bir hastalığı görmezden gelmemize
+> neden olabilir. Çoğu durumda, yararlar ve riskler, birinin diğerinden daha
+> önemli olduğunu açıkça görmek için yeterli kesinlikte bilinir.
+
+Yukarıdaki ders birçok günlük senaryoda ve profesyonel olarak yararlıdır:
+Örneğin, tıp doktorları, bir mahkemede yargıçlar veya yatırımcılar belirsiz
+bilgileri işlemeli ve bunlara dayanarak rasyonel kararlar vermelidir. Bu bir
+Yapay Zeka kursu olduğundan, belirsiz muhakemeyi otomatikleştirmek için
+olasılığın (probability) nasıl kullanılabileceğini tartışacağız.
+Kullanacağımız örnekler arasında tıbbi teşhis (genellikle tamamen
+otomatikleştirmek istediğimiz bir görev olmasa da) ve sahte e-posta
+iletilerini ("spam") belirleme yer alır.
+
+#### Alıştırma 8: Olasılıksal (Probabilistic) tahminler
+
+Bu alıştırma için, yukarıdaki tartışmadaki kilit noktaları hatırlayın:
+Olasılık (probability) ölçülebilir (bir sayı olarak ifade edilir) ve doğru
+veya yanlış olabilir. Ancak, tek bir gözleme dayalı olarak belirli bir sayının
+doğru mu yanlış mı olduğuna dair bir sonuca varmanın genellikle mümkün
+olmadığını da unutmayın.
+
+Aşağıdaki dört olasılığa (probability) dayalı tahminleri ve sonuçları düşünün.
+Tahminlerin doğruluğu ile ilgili sonuca göre, ne sonuca varabiliriz? Tahmin
+tarafından verilen olasılığın (probability) gerçekten doğru olasılık
+(probability) olduğu ("doğru"yu seçin), tahmin tarafından verilen olasılığın
+(probability) yanlış olduğu ("yanlış"ı seçin), yoksa hiçbir şekilde sonuca
+varamaz mıyız ("sonuçlandırılamaz"ı seçin)?
+
+1. Hava tahmini yarın %90 olasılıkla (probability) yağmur yağacağını söylüyor,
+   ancak gün tamamen güneşli ve yağmur yok.
+
+   **Cevap:** Yalnızca tek bir olaya dayanarak hava tahmininin yanlış olduğu
+   sonucuna varamayız. Tahmin, %90 olasılıkla (probability) yağmur yağacağını
+   söyledi, bu da %10 olasılıkla (probability) veya 10 günde bir yağmur
+   yağmayacağı anlamına geliyor. Söz konusu günün 10 olayda 1 olması son
+   derece makul. %90 olasılığının doğru olduğu sonucuna varmak da yanlış olur
+   çünkü aynı argümanla,%80 yağmur ihtimalinin de doğru olduğu, ve her
+   ikisinin aynı anda doğru olamayacağı sonucuna varabiliriz.
+
+2. Hava durumu tahmini yarın %0 olasılıkla (probability) yağmur yağacağını
+   söylüyor ancak gün yağmurlu.
+
+   **Cevap:** Hava tahmini yanlıştı çünkü %0 olasılık (probability) kesinlikle
+   yağmur yağmaması gerektiği anlamına geliyor. Ama yağdı.
+
+3. Bir hava durumu tahmincisini uzun süre izlediğinizi varsayalım. Yalnızca
+   tahminin %80 yağmur ihtimali verdiği günleri dikkate alın. Uzun vadede,
+   ortalama olarak her beş günün üçünde yağmur yağdığını görüyorsunuz.
+
+   **Cevap:** Hava tahminleri %80 yağmur olasılığını öngörüyorlarsa yanlıştır
+   ve uzun vadede yalnızca tüm zamanın %60'ında (beşte üçü) yağar. (Bu sonuca
+   varmak için doğruluğunu uzun süre takip etmemiz gerektiğine dikkat edin.
+   "Uzun vadede" bu anlama geliyor.) Pratikte, hava durumu tahmincileri sadece
+   güvende olmak için aslında bu tür "yanlış" tahminler sunma eğilimindedir:
+   Hava tahmin edilenden daha kötü olduğunda insanlar genellikle hayal
+   kırıklığına uğrarlar, ancak tahmin edilenden daha iyi çıktığında hoş bir
+   şekilde şaşırırlar.
+
+4. Amerika Birleşik Devletleri 2016 başkanlık seçiminde, tanınmış bir siyasi
+   tahmin blogu olan Five-Thirty-Eight, Clinton'a %71.4, Trump'a %28.6 kazanma
+   şansı verdi. Ancak tahminin aksine Donald Trump, Amerika Birleşik
+   Devletleri'nin 45. başkanı seçildi.
+
+   **Cevap:** Yanlış (veya doğru) olduğu sonucuna varılamaz. Bazen beklenmedik
+   şeyler olur.  Bir önceki maddeyi göz önünde bulundurarak, sonucu tahmin
+   etmek için yeterli bilgi yoksa, örneğin Trump için %90 veya %100 şans
+   tahmin etmek aslında yanlış olurdu. Başka bir deyişle, belki de Trump'ın
+   zaferi, %28.6 olasılıkla (probability) nadir (veya ender) bir olay yaşadı.
+   Sonuçta, dört vakada birden fazla, bu tür olayların gerçekleşmesi
+   bekleniyor.
+
+#### Olasılıklar Oranı (Odds)
+
+Muhtemelen belirsizliği temsil etmenin en kolay yolu olasılıklar oranıdır
+(odds). Daha fazla bilgi mevcut olduğunda inandıklarımızı güncellemeyi
+özellikle kolaylaştırırlar (bir sonraki bölümde buna geri döneceğiz).
+
+Daha fazla ilerlemeden önce, oranlar (veya kesirler) üzerinde temel
+manipülasyonlar yapmakta rahat olmanızı sağlamalıyız. Muhtemelen
+hatırladığınız gibi, kesirler 3/4 veya 21/365 gibi sayılardır. Bu tür sayıları
+çarpmamız veya bölmemiz gerekecek, bu yüzden bu hesaplama işlemlerini yeniden
+hatırlamanız gerekir. Kendinizden emin değilseniz, bu bilgilerinizi
+yenilemeniz gerekir. Hızlı bir hatırlatmaya ihtiyaç duyanlar için kompakt bir
+sunum: [Wikibooks: Multiplying
+Fractions](https://en.wikibooks.org/wiki/Arithmetic/Multiplying_Fractions).
+Temel işlemlerin bir başka eğlenceli animasyon sunumu: [Math is Fun: Using
+Rational
+Numbers](https://www.mathsisfun.com/algebra/rational-numbers-operations.html).
+Gerekirse favori kaynağınıza danışmaktan çekinmeyin.
+
+Oranlar derken, 3:1 (üçe bir) gibi bir ifadeyi kastediyoruz; bu, sonuçların
+her üç durumu için, örneğin bir bahsi kazanmak için, zıt sonucun yani birinin
+bahsi kazanmama durumu olmasını beklediğimiz anlamına gelir. (Kumar
+terimlerinde, oranlar genellikle bahisçilerin bakış açısından verilir, bu
+nedenle 3:1 genellikle kazanma şansınızın 1:3 olduğu anlamına gelir.) Aynı
+şeyi ifade etmenin diğer yolu da kazanma şansının 3/4 (dörtte üç) olduğunu
+söylemek olacaktır. Bunlar, yalnızca tam sayıları içerdikleri için doğal
+frekanslar olarak adlandırılır. Tam sayılarla, örneğin, üçünün kahverengi
+gözleri olan dört kişiyi hayal etmek kolaydır. Ya da üç günü yağmur yağan dört
+gün (Helsinki'deyseniz).
+
+> **Not**
+>
+> **Olasılıklar Oranı (Odds)**
+>
+> Olasılık teorisinde ve istatistikte bir olayın lehine olan olasılıklar oranı
+> (odds), p / (1 − p) 'dir, burada p bu olayın olasılığıdır. Bu olayın
+> aleyhine olan olasılıklar oranı (odds) da (1 − p) / p 'dir.
+>
+> Örneğin, haftanın rastgele bir gününü seçerken, pazar gününü seçmenin
+> olasılıklar oranı (odds) 1/6'dır, 1/7 değil. Pazar gününü seçmenizin
+> aleyhine olan olasılıklar oranı (odds) 6/1'dir.
+>
+> Başka bir deyişle olasılıklar oranı (odds) leyhte olan olasılıkların
+> (probabilities), aleyhte olan olasılıklara (probabilities) oranıdır. Yani
+> pazar gününü seçme ihtimali (7 de 1) / pazar günü dışında bir gün seçme
+> ihtimali (7 de 6) ya oranıdır.
+>
+>> [Wikipedia](https://tr.wikipedia.org/wiki/Olas%C4%B1l%C4%B1klar_oran%C4%B1)
+
+![YZ 101 3 1 Gözler](/assets/img/yz-101-3-1-gozler.png "YZ 101 3 1 Gözler")
+
+> **Not**
+>
+> **Olasılık oranlarını (odds) neden kullanıyor, yüzdeli rakamları neden kullanmıyoruz?**
+>
+> Dörtte üç elbette %75 ile aynı.(Matematikçiler yüzdelikler yerine 0.75 gibi
+> kesirleri kullanmayı tercih ederler.) Fraksiyonlar ve yüzdelerle uğraşırken
+> insanların hata yapması daha kolay bulunmuştur. Bu yüzden uygun olduğunda
+> doğal frekansları ve olasılık oranlarını (odds) kullanırız.
+
+Dikkat edilmesi gereken önemli bir nokta, olasılıklar oranı (odds), örneğin 3
+ve 1 gibi iki sayı olarak ifade edilirken, tek bir kesir veya bir oran olarak
+düşünülebilir: Örneğin 3/1 (üç, bire bölünmüş) 3'e eşit. Buna göre, 3:1, 6:2
+veya 30:10 aynıdır, çünkü bu olasılıklar oranı (odds) da 3'e eşittir. Benzer
+şekilde, 1:5 olasılıklar oranı (odds) 1/5(bir, beşe bölünmüş) olarak
+düşünülebilir ve bu 0.2'ye eşittir. Yine benzer şekilde, 2:10 veya 10:50
+olasılıklar oranıyla (odds) aynıdır. Çünkü 2'yi 10'a veya 10'u 50'ye bölerek
+elde edersiniz. Fakat çok dikkatli olun! Ondalıklı sayı olarak 0.2 şeklinde
+ifade edilse bile 1:5 (her beş kaybetme için bir kazanma), %20 olasılıktan
+(probability) (veya matematikçilerin notasyonunda olasılık (probability) 0.2)
+farklıdır. 1:5 olasılıklar oranı (odds), oyunu ortalamada bir kez kazanmak
+için altı kez oynamanız gerektiği anlamına gelir. %20 olasılık (probability)
+ise, ortalamada bir kez kazanma elde etmek için beş kez oynamak zorunda
+olduğunuz anlamına gelir.
+
+5:1 gibi, 1'den büyük olan olasılıklar oranı (odds) için, olasılıklarla
+(probability) uğraşmadığımızı hatırlamak kolaydır çünkü hiçbir olasılık
+(probability) 1'den büyük (veya %100'den büyük) olamaz. Fakat 1:5 gibi 1'den
+az olan olasılıklar oranı (odds) için, kafa karışıklığı tehlikesi vardır.
+
+Bu yüzden, olasılıklar oranı (odds) hakkında mı yoksa olasılıklar
+(probabilities) hakkında mı konuştuğumuzdan emin olun.
+
+Aşağıdaki alıştırma, olasılıklar oranı (odds) ve olasılıklar (probabilities)
+arasındaki meseleyi ele alma konusunda pratik yapmanıza yardımcı olacaktır. Bu
+aşamada bazı hatalar yaparsanız endişelenmeyin: Asıl amaç, sonraki bölümlerde
+ihtiyacınız olacak becerileri öğrenmek.
+
+#### Alıştırma 9: Olasılıklar Oranı (Odds)
+
+Yukarıda bahsettiğimiz gibi, 3:1 olasılıklar oranı (odds) (örneğin her
+yağmursuz gün için üç yağmurlu gün) olasılık (probability) 0.75'e (veya %75'e)
+karşılık gelir.
+
+Genel olarak, bir olayın lehine olan olasılıklar oranı (odds) x:y ise, olayın
+ihtimali (probability) x / (x + y) ile verilir. Mesela ihtimal 3:1, 0.75'e
+veya %75'e eşittir.
+
+Ayrıca belirttiğimiz gibi, 6:2 olasılıklar oranı (odds), 3:1 ile aynı
+olasılıklar oranına (odds) karşılık gelir, çünkü x = 6 ve y = 2' yi x / (x +
+y) (6 / (6 + 2)) formülüne yazdığımızda 6/8 = 3/4 = 0,75 = %75 çıkar.
+
+**Göreviniz:**
+
+**İlk üç öğe 1-3 için**, olasılıklar oranından (odds) doğal frekanslar olarak
+ifade edilen olasılıklara (probabilities) dönüştürün; örneğin 1:1 ila 1/2.
+Cevabınızı kesir olarak verin, örneğin 2/3.
+
+**Son üç öğe 4-6 için**, olasılıklar oranından (odds) yüzde olarak ifade
+edilen olasılıklara (probabilities) dönüştürün (%4.2 gibi). Cevabınızı tek bir
+ondalık sayı kullanarak yüzde olarak verin (%12.2).
+
+İpucu: Hesaplamalar basit bir hesap makinesi ile hesaplanacabilir. Formüller
+de üstte.
+
+1. Pokerde aynı türden üç tane (three of a kind) alma olasılıklar oranı
+   yaklaşık 1:46'dır.
+
+   **Cevap:** 1 / (1 + 46) = 1 / 47
+
+2. Helsinki'de yağmur yağma olasılıklar oranı (odds) 206:159'dur.
+
+   **Cevap:** Yani 206 yağmurlu, 156 yağmur yağmayan gün var.
+
+   Buradan: 206 / (206 + 159) = 206 / 365
+
+2. San Diego'da yağmur yağma olasılıklar oranı (odds) 23:342'dir.
+
+   **Cevap:** Yani 23 yağmurlu, 342 yağmur yağmayan gün var.
+
+   Buradan: 23 / (23 + 342) = 23 / 365.
+
+4. Pokerde aynı türden üç tane (three of a kind) alma olasılıklar oranı
+   yaklaşık 1:46'dır.
+
+   **Cevap:** 1 / (1 + 46) = 1 / 47 = %2.1
+
+5. Helsinki'de yağmur yağma olasılıklar oranı (odds) 206:159'dur.
+
+   **Cevap:** Yani 206 yağmurlu, 156 yağmur yağmayan gün var.
+
+   Buradan: 206 / (206 + 159) = 206 / 365 = %56.4
+
+6. San Diego'da yağmur yağma olasılıklar oranı (odds) 23:342'dir.
+
+   **Cevap:** Yani 23 yağmurlu, 342 yağmur yağmayan gün var.
+
+   Buradan: 23 / (23 + 342) = 23 / 365 = %6.3
+
+---
+
+### 3.2. Bayes kuralı (teoremi, formülü)
+
+Olasılık hesabının (probability calculus) ayrıntılarına ve çeşitli Yapay Zeka
+Bayes kuralının gücünü basit bir tıbbi teşhis sorunuyla göstererek
+başlayacağız; bu durum, sezgimizin, çelişen kanıtları birleştirmek için ne
+kadar zayıf olduğunu ortaya koymak için belirlendi. Ardından Bayes kuralının
+çatışan ve gürültülü gözlemlerle başa çıkabilen Yapay Zeka yöntemleri
+oluşturmak için nasıl kullanılabileceğini göstereceğiz.
+
+Bunu yapacağız çünkü bu özel formül hem basit hem zarif hem de inanılmaz
+derecede güçlü. Tıpta, mahkemede ve çoğu (hepsi değilse de) bilimsel
+disiplinde çelişkili kanıt parçalarını tartmak için kullanılabilir. **Formüle
+Bayes kuralı (veya Bayes formülü) denir.**
+
+Bayes kuralının gücünü, çelişkili kanıtları birleştirmek için sezgimizin ne
+kadar yetersiz olduğunu vurgulayan basit bir tıbbi teşhis problemiyle
+göstererek başlayacağız. Daha sonra, Bayes kuralının, çelişkili ve gürültülü
+gözlemlerle başa çıkabilen Yapay Zeka yöntemleri oluşturmak için nasıl
+kullanılabileceğini göstereceğiz.
+
+> **Anahtar Terminoloji**
+>
+> **Ön ve son olasılıklar oranı (Prior and posterior odds)**
+>
+> Bayes kuralı birçok biçimde ifade edilebilir. En basit olanı olasılıklar
+> oranı (odds) açısından ifade edilebilir. Buradaki fikir, bir şeyin
+> olmasının, olmamasına oranına (odds) "ön ihtimal" olarak adlandırıyoruz.
+> "Ön" kelimesi, alakalı olabilecek bazı yeni bilgiler elde etmeden önce
+> olasılıklar oranını (odds) değerlendirmemizi ifade eder. Formülün amacı,
+> yeni bilgi elde edildiğinde önceki olasılıklar oranını (odds) güncellenmesi,
+> son olasılıklar oranının (odds) elde edilmesi veya bilgiyi elde ettikten
+> sonraki olasılıklar oranının (odds) elde edilmesidir. ("posterior" sözlük
+> anlamı "daha sonra gelen bir şey").
+
+![YZ 101 3 2 Olasılıklar Oranı (Odds) Değişimi](/assets/img/yz-101-3-2-olasılıklar-orani-degisimi.png "YZ 101 3 2 Olasılıklar Oranı (Odds) Değişimi")
+
+#### Olasılıklar oranı (odds) nasıl değişir?
+
+Yeni bilgileri tartmak ve mevcut olduğunda olasılıklar oranının (odds) nasıl
+değişeceğine karar vermek için, bu bilgiyle alternatif durumlarda karşılaşma
+olasılığımızın ne kadar olacağını düşünmemiz gerekir. Bugün ilerleyen
+saatlerde yağmur yağması olasılıklar oranını (odds) örnek olarak alalım.
+Finlandiya'da sabah kalktığınızı hayal edin. Yağmur ihtimali 365'de 206
+(yağmur, kar ve dolu dahil. Brrr). Bu nedenle yağmursuz gün sayısı 159'dur.
+Bu, yağmur için 206:159'luk ön olasılıklar oranına (prior odds) dönüşür,
+böylece kartlar siz gözlerinizi açmadan önce size karşı istiflenir. Henüz
+gözlerinizi bile açmadınız (uyanmadınız).
+
+Ancak, gözlerinizi açıp dışarı baktıktan sonra, havanın bulutlu olduğunu
+farkedersiniz. Yağmurlu bir günde bulutlu bir sabah geçirme şansının 10'da 9
+olduğunu farz edelim. Bu, 10 yağmurlu günden sadece bir tanesinin mavi gökyüzü
+ile başladığı anlamına gelir. Ancak bazen yağmursuz bulutlar da var: Yağmursuz
+bir günde bulutlara yakalanma şansı 10'da 1'dir. Şimdi yağmur yağmayan bir
+günle yağan bir günü karşılaştırdığımızda bulut görme şansı ne kadar yüksek?
+Bunu dikkatlice düşünün, çünkü soruyu kavrayabilmek ve aşağıda verilen cevabı
+alabilmek için önemli olacaktır.
+
+Cevap, yağmurlu bir günde bulut görme şansı, yağmur yağmayan bir güne göre 9
+kat daha yüksek: Yağmurlu günlerin 10'da 9'u, yağmursuz günlerin 10'da 1'i
+bulutlu. Bu da dokuz kat daha yüksek yapar.
+
+9/10 ve 1/10 olasılıklarının toplamının 9/10 + 1/10 = 1 olduğu düşünülse bile,
+her zaman anlamsızdır. Başka bir kasabada yağmurlu günlerin sabahları 10'da 8
+bulutlu olabilir. Ancak bu, yağmursuz günlerin 10'da 2 kez bulutlu olduğu
+anlamına gelmez. Hesaplamaları doğru yapmak için dikkatli olmalısınız. (Ama
+bir veya iki hata yaparsanız boşverin, pes etmeyin! Bayes kuralı, hepimiz için
+temel bir düşünme aracıdır.)
+
+> **Anahtar Terminoloji**
+>
+> **Olabilirlik Oranı (Likelihood Ratio)**
+>
+> Az önce bahsettiğimiz oran (yağmurlu bir günde bulut görme şansının, yağmur
+> yağmayan bir güne göre 9 kat daha fazla olması) olabilirlik oranı
+> (likelihood ratio) olarak adlandırılır. Daha genel olarak, olabilirlik oranı
+> (likelihood ratio), ilgili olayın (yukarıda, yağmurlu) olması durumunda
+> gözlem olasılığının (probability), olay olmaması (yukarıda, yağmur yok)
+> durumunda gözlem olasılığına (probability) bölünmesiyle elde edilir. Lütfen
+> önceki cümleyi birkaç kez okuyun. Biraz korkutucu görünebilir, ancak
+> dikkatlice odaklanırsanız sindirmek imkansız değildir. Adımlarda size
+> ayrıntılı olarak rehberlik edeceğiz, sadece cesaretinizi kaybetmeyin.
+> Neredeyse geldik.
+
+Bulutlu bir sabaha uyanma oranına şöyle vardık:
+
+**olabilirlik oranı (likelihood ratio) = (9 / 10) / (1 / 10) = 9**
+
+Ta daa! Ulu Bayes kuralı, ön olasılıklar oranının (odds) sonraki olasılıklar
+oranınıa (odds) dönüşmesi durumudur:
+
+**son olasılıklar oranı (posterior odds) = olabilirlik oranı (likelihood ratio) x ön olasılıklar oranı (prior odds)**
+
+Şimdi muhtemelen şunu düşünüyorsunuz: Bir saniye, formül bu mu? İyi de, bu
+yalnızca bir çarpma! Formül bu, basit olduğunu söyledik, değil mi? Basit bir
+çarpmanın her türden inanılmaz derecede faydalı uygulamalar için
+kullanılabileceğini hayal edemezsiniz, ama olabilir. İşte basit bir çarpım
+işlemi bu kadar faydalı şeyleri hesaplamaya yarayabiliyor. Bunu gösterecek
+birkaç örnek inceleyeceğiz.
+
+> **Not**
+>
+> **Bayes'in diğer formları**
+>
+> Aşağıdaki alıştırmalarda herhangi bir sorun yaşarsanız, yukarıdaki materyali
+> birkaç kez okuyabilir, kendinize biraz zaman tanıyabilir ve bu da olmazsa,
+> internette daha fazla materyal arayıp inceleyebilirsiniz. Sadece bir
+> tavsiye: Bayes kuralının yazılabileceği pek çok farklı biçim vardır ve
+> kullandığımız olasılıklar oranı (odds) biçimi, en yaygın olanı değildir.
+> İşte yararlı bulabileceğiniz birkaç bağlantı:
+>
+> [**1. Maths Doctor: Bayes' Theorem and medical testing**](https://www.youtube.com/watch?v=tRE6mKAIkno)
+>
+> <iframe width="560" height="315"
+> src="https://www.youtube.com/embed/tRE6mKAIkno" frameborder="0"
+> allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+> picture-in-picture" allowfullscreen></iframe>
+>
+> [**2. Better Explained: Understanding Bayes Theorem With Ratios**](https://betterexplained.com/articles/understanding-bayes-theorem-with-ratios/)
+
+#### Alıştırma 10: Bayes kuralı 1
+
+Helsinki'de sabahları gözlenen bulutların yağmura neden olduğu **son
+olasılıklar oranını (posterior odds)** hesaplamak için Bayes kuralını
+uygulayın.
+
+Yukarıda hesapladığımız gibi, yağmur için ön olasılıklar oranı (prior odds)
+**206:159**'dur ve bulutları görme olabilirlik oranı (likelihood ratio)
+**9**'dur.
+
+Sonucunuzu olasılıklar oranı (odds) biçiminde verin, xx:yy, burada xx ve yy
+sayılardır. (xx ve yy'nin, sayıların her birinde iki basamak olması gerektiği
+anlamına **gelmediğini** unutmayın.) Olasılıklar oranı (odds) çarpımı
+yaparken, yalnızca payı (xx bölümü) çarpmanız gerektiğini unutmayın. Örneğin,
+olasılıklar oranları (odds) 5:3'e 5'se, ve çarparsanız, sonuç 25:3'tür. Her
+iki tarafın da ortak bir faktörü olsa bile, ifadeyi basitleştirmeden cevabı
+verin.
+
+**Cevap:** 1854:159
+
+Ön olasılıklar oranı (prior odds) 206: 159'dur. Olabilirlik oranı (likelihood
+ratio) 9. Bu nedenle bahsedilen bulutların yağmur için son olasılıklar oranını
+(posterior odds) 9 × 206: 159 = 1854: 159 olarak elde ederiz. Yani uzun
+vadede, sabahları bulutları gördüğümüz günlerde, her 159 yağmursuz gün için
+1854 yağmurlu gün bekleyebiliriz, bu da 1 yağmursuz gün için 12 yağmurlu gün
+beklemekle aynıdır. Bunu bir olasılık olarak (probability) ifade etmek
+isteseydik (soru bu olmasa da), sonucu yaklaşık 0.92 veya yaklaşık %92 olan
+1854 / (1854 + 159) hesabını, x / (x + y) formülünü kullanarak elde
+edebilirdik. İşte Helsinki'de sabah uyanıp havada bulutlar gördüğünüzde yağmur
+yağma şansı... Bir şemsiye alsanız iyi olur.
+
+#### Uygulamada, partikte Bayes kuralı: meme kanseri taraması
+
+İlk gerçekçi uygulamamız bir tıbbi teşhis, Bayes kuralının uygulandığı klasik
+bir örnek. Bu örnek aynı zamanda, baz/taban oran yanılgısı (base-rate fallacy)
+adı verilen belirsiz bilgilerle başa çıkmada yaygın bir önyargıyı
+göstermektedir.
+
+**Teşhis öncesi popülasyon**
+
+![YZ 101 3 2 Bayes Meme Kanseri 1](/assets/img/yz-101-3-2-bayes-meme-kanseri-1.png "YZ 101 3 2 Bayes Meme Kanseri 1")
+
+**Teşhis sonrası popülasyon**
+
+![YZ 101 3 2 Bayes Meme Kanseri 2](/assets/img/yz-101-3-2-bayes-meme-kanseri-2.png "YZ 101 3 2 Bayes Meme Kanseri 2")
+
+Meme kanseri için mamografik tarama düşünün. Sayıları basitleştirmek adına
+uydurma yüzdeler kullanarak, 100 kadından 5'inin meme kanseri olduğunu
+varsayalım. Diyelim ki bir kişide meme kanseri varsa, o zaman mamografi testi,
+100 testin 80'inde bulacaktır. Meme kanserinin olduğunu gösteren test
+çıktığında, sonuç kanser pozitif olduğunu söylese de, kesin bir şey yok: %20
+olmayabilir. (Bunu söylemenin teknik bir yolu, testin hassasiyetinin %80
+olmasıdır.)
+
+Test, başka bir yönden de başarısız olabilir, yani meme kanseri olmasa da
+varmış gib gösterebilir. Buna yanlış pozitif (false positive) bulgu denir.
+Diyelim ki test edilen kişide meme kanseri yoksa da, yine de testin pozitif
+çıkma ihtimali 100'de 10'dur. (Teknik terimlerle testin özgüllüğünün %90
+olduğunu söyleyebiliriz.)
+
+Yukarıdaki olasılıklara (probabilities) dayanarak, olabilirlik oranını
+(likelihood ratio) hesaplayabilirsiniz. Bunu bir sonraki alıştırmada
+bulacaksınız. Olabilirlik oranının (likelihood ratio) nasıl hesaplandığını
+unuttuysanız, bu bölümün başındaki terminoloji kutusunu kontrol edip yağmur
+örneğini tekrar edebilirsiniz.
+
+Not: Yukarıdaki diyagramı, çöp adamları ya da Cin Alileri, sonucunuzun
+yaklaşık olarak (ballpark) (doğru) olduğunu doğrulamak için kullanabilirsiniz
+ancak diyagramın tam olarak kesin olmadığını unutmayın. Kanseri olmayan 95
+kadından (üst paneldeki gri figürler) yaklaşık 9.5'inin (yanlış) pozitif sonuç
+alması bekleniyor. Kalan 85.5 kişinin (gerçek) negatif sonuç alması
+bekleniyor. İnsanları, hatta çöp adamları ya da Cin Alileri bile ikiye bölecek
+kadar acımasız olmak istemedik, bu yüzden yaklaşık olarak 10 ve 85 kullandık.
+
+#### Alıştırma 11: Bayes kuralı 2
+
+Yukarıdaki meme kanseri senaryosunu düşünün. Bir kadın mamografiyi test eder
+ve meme kanseri olduğunu gösteren pozitif bir test sonucu alır. Testin pozitif
+olduğu gözlemi alındığında meme kanserine sahip olma olasılıklar oranının
+(odds) ne olduğunu düşünüyorsunuz?
+
+İlk olarak, Bayes kuralını uygulamadan sezginizi kullanın ve bir kağıda meme
+kanserine yakalanma şansının pozitif bir test sonucundan sonra sizce ne
+olabileceğini yazın. Sezgisel cevap, cevabınızın bir parçası olmayacak. Sadece
+kendi bilginiz için olacak.
+
+Ardından, **Bayes kuralını kullanarak meme kanseri olan için son olasılıklar
+oranını (posterior odds) hesaplayın.** Bu asıl cevabınız olacak.
+
+İpuçları:
+
+1. Ön olasılıklar oranını (prior odds) hesaplayarak başlayın.
+2. Olay durumunda(kanser var) gözlem olasılığını (probability) belirleyin.
+3. Olay olmaması(kanser yok) durumunda gözlem olasılığını (probability)
+   belirleyin.
+4. Yukarıdaki iki olasılığın (probability) oranı olarak olabilirlik oranını
+   (likelihood ratio) elde edin.
+5. Son olarak, ön olasılıklar oranını (prior odds) olabilirlik oranı
+   (likelihood ratio) ile çarpın.
+
+**Çözüm olarak son olasılıklar oranını (posterior odds) girin.** Cevabı her
+iki tarafın da ortak bir çarpanı olsa bile ifadeyi basitleştirmeden xx:yy
+biçiminde verin ki burada xx ve yy sayıdırlar.
+
+**Cevap:** 40:95
+
+Açıklayalım:
+
+Ön olasılıklar oranı (prior odds), test sonucunu almadan önce durumu açıklar.
+100 kadından beşinde meme kanseri olduğu için, meme kanseri olmayan her 95
+kadın için meme kanseri olan ortalama 5 kadın vardır ve bu nedenle, ön
+olasılıklar oranı (prior odds) 5:95'dir.
+
+Olabilirlik oranı (likelihood ratio), *kanser olması durumunda pozitif sonuç*
+olasılığının (probability), *kanser olmaması durumunda pozitif sonuç*
+olasılığına (probability) bölünmesi ile bulunur. Yukarıdaki sayıları ele
+aldığımızda, bu 80/100 ile 10/100 bölümü sonucu, yani 8'dir.
+
+Şimdi ise, Bayes kuralı, pozitif test sonucu verildiğinde, göğüs kanserin son
+olasılıklar oranını (posterior odds) verir:
+
+son olasılıklar oranı (posterior odds) = 8 × 5:95 = 40:95
+
+Doğru cevap budur.
+
+Bu nedenle, pozitif test sonucuna rağmen, olasılıklar oranı (odds), aslında
+meme kanseri olan kişinin karşısındadır: Test pozitif olan kadınlar arasında,
+meme kanseri olmayan her 95 kadına karşılık ortalama 40 meme kanseri olan
+kadın var. Not: Pozitif test sonucu verilen meme kanseri olasılığını bir
+olasılık olarak ifade etmek istersek (alıştırmada istenen şey bu olmasa da),
+40 kanserli ve 95 kansersiz vakayı birlikte değerlendiririz, ve toplam 40 + 95
+= 135 kişinin ne kadarının kanser olduğunu hesaplarız. Bu, sonucu 135
+üzerinden 40 veya yaklaşık %30 olarak verir. Bu, meme kanseri yaygınlığından
+çok daha yüksektir, (100'de 5 veya% 5), ancak yine de kişinin kanser olmaması
+ihtimali yine de vardır. Çözümü sezgisel cevabınızla karşılaştırırsanız, çoğu
+insan için oldukça farklı olma eğilimindedirler. Bu, belirsiz ve çelişkili
+bilgileri ele almak için sezginin uygun olmadığını gösterir.
+
+#### Baz/taban oran yanılgısı (the base rate fallacy)
+
+Yukarıdaki alıştırmayı yaparken, sezgimizin farklı kanıt parçalarını tartmak
+için yeterince uygun olmadığını fark etmiş olabilirsiniz. Bu, özellikle kanıt
+parçaları birbiriyle çeliştiğinde geçerlidir. Yukarıdaki örnekte, bir yandan,
+meme kanserinin taban oranı (base rate) nispeten düşüktü, yani meme kanseri
+nispeten nadirdir. Yani beynimiz, bir kişinin buna sahip olma ihtimalinin
+düşük olduğunu düşünüyor. Öte yandan, pozitif mamografi testi tam tersini
+gösteriyor. Beynimiz bu kanıtlardan birini seçip diğerini görmezden gelme
+eğilimindedir. Genellikle göz ardı edilen, düşük taban oranıdır (low base
+rate). Bu yüzden sezgileriniz, muhtemelen, pozitif test sonucu verildiğinde
+meme kanserine yakalanma olasılığının %30'dan çok daha yüksek olduğunu
+söylüyor. Bu, "[baz/taban oran
+yanılgısı](https://en.wikipedia.org/wiki/Base_rate_fallacy)" olarak bilinir.
+Bayes kuralını bilmek, bu yanılgıya karşı en iyi tedavidir.
+
+---
+
+### 3.3. Naif Bayes sınıflandırması
+
+Bayes kuralının en yararlı uygulamalarından biri, naif Bayes
+sınıflandırıcısıdır.
+
+Bayes sınıflandırıcı, metin belgeleri gibi nesneleri iki veya daha fazla
+sınıfa sınıflandırmak için kullanılabilen bir makine öğrenme tekniğidir.
+Sınıflandırıcı, doğru sınıfların verildiği bir dizi eğitim verisinin analiz
+edilmesiyle eğitilir.
+
+Naif Bayes sınıflandırıcısı, bir dizi farklı gözlemler verilen sınıfların
+olasılıklarını (probabilities) belirlemek için kullanılabilir. Modeldeki
+varsayım, özellik değişkenlerinin sınıfa göre koşullu olarak bağımsız
+olmasıdır (Bu derste koşullu bağımsızlığın anlamını tartışmayacağız. Bizim
+amaçlarımız için, sınıflandırıcıyı oluştururken koşullu bağımsızlıktan
+yararlanabilmek yeterlidir).
+
+#### Gerçek dünya uygulaması: Spam filtreleri
+
+Naif Bayes sınıflandırıcısı fikrini göstermek için çalışan bir örnek olarak
+bir spam e-posta filtresi kullanacağız. Böylece, sınıf değişkeni, bir mesajın
+spam (ya da "gereksiz e-posta") olup olmadığını ya da meşru bir mesaj olup
+olmadığını ("ham" olarak da adlandırılır) gösterir. Mesajdaki kelimeler
+özellik değişkenlerine karşılık gelir, böylece modeldeki özellik
+değişkenlerinin sayısı mesajın uzunluğuna göre belirlenir.
+
+> **Not**
+>
+> **Neden buna "naif/saf" diyoruz?**
+>
+> İstenmeyen posta filtrelerini örnek olarak kullanırsak, fikir, kelimelerin
+> ardı ardına seçilerek üretildiğini düşünmektir, böylece kelimenin seçimi
+> yalnızca mesajın spam veya ham olmasına bağlıdır. Bu, sürecin kaba bir
+> basitleştirmesidir, çünkü bitişik kelimeler arasında bir bağımlılık olmadığı
+> ve kelimelerin sırasının hiçbir önemi olmadığı anlamına gelir. Aslında
+> yönteme naif denmesinin nedeni budur.
+
+Model, kelimelerin bağımsız olarak işlenebileceği fikrine dayandığından, spam
+("ÜCRETSİZ", "SON", pazarlama", "ilaç", "bedava", "son şans", "indirim",
+herhangi bir link vb.) veya ham ("buluşma", "algoritma") göstergesi olan
+belirli kelimeleri belirleyebiliriz.
+
+![YZ 101 3 3 Naif Bayes Spam Ham](/assets/img/yz-101-3-3-naif-bayes-spam-ham.png "YZ 101 3 3 Naif Bayes Spam Ham")
+
+Naifliğine rağmen, naif Bayes yöntemi pratikte çok iyi çalışma eğilimindedir.
+Bu, istatistikte "tüm modeller yanlıştır, ancak bazıları yararlıdır"
+ifadesinin iyi bir örneğidir (aforizma genellikle istatistikçi [George E.P.
+Box](https://en.wikipedia.org/wiki/George_E._P._Box)'a atfedilir).
+
+#### Parametreleri tahmin etme
+
+Başlamak için, spam için ön olasılıklar oranı (prior odds) (ham'a karşı)
+belirlememiz gerekiyor. Basit olması için bunun 1:1 olduğunu varsayın, bu da
+gelen mesajların ortalama yarısının spam olduğu anlamına gelir (gerçekte, spam
+miktarı muhtemelen çok daha yüksektir).
+
+Olabilirlik oranlarımızı (likelihood ratios) elde etmek için, herhangi bir
+kelimenin ortaya çıkması için, biri spam iletilerde, diğeri ise ham
+iletilerde, iki farklı olasılığa (probabilities) ihtiyacımız var.
+
+İki sınıf için kelime dağılımları en iyi şekilde bazı spam ve meşru (ham)
+mesajlar içeren gerçek eğitim verilerinden tahmin edilir. En basit yol, her
+bir kelimenin, abaküs, akasya, ..., zurg, verilerde kaç kez göründüğünü saymak
+ve sayıyı toplam kelime sayısına bölmektir.
+
+Fikri açıklamak için, elimizde biraz spam ve ham olduğunu varsayalım.
+E-postalarınızın bir grubunu iki dosyaya kaydederek bu tür verileri kolayca
+elde edebilirsiniz.
+
+İki mesaj veya e-posta sınıfında aşağıdaki kelimelerin (diğer tüm kelimelerle
+birlikte) mesajda veya e-postada geçme sayılarını hesapladığımızı varsayalım:
+
+**kelime**|**spam**|**ham (meşru)**
+milyon|156|98
+dolar|29|119
+reklam tıklama (adclick)|51|0
+konferanslar|0|12
+**toplam**|**95791**|**306438**
+
+Şimdi, örneğin bir spam iletideki bir kelimenin milyon olma olasılığının
+(probability), 95791'de yaklaşık 156 olduğunu tahmin edebiliriz ki bu da
+kabaca 614'te 1 ile aynıdır. Aynı şekilde, ham (meşru) iletideki bir kelimenin
+milyon olma olasılığının (probability) 306438 kelimede 98 olduğunu tahmin
+edebiliriz ki bu da 3127'de 1 ile hemen hemen aynıdır. Bu olasılık
+(probability) tahminlerinin her ikisi de küçüktür, 500'de 1'den azdır, ancak
+daha da önemlisi, birincisi ikinciden daha yüksektir: 614'te 1, 3127'de 1'den
+yüksektir. Bu, demektir ki olabilirlik oranı (likelihood ratio) ki ilk oranın
+ikinciye bölümüdür ve 1'den büyüktür. Daha kesin olmak gerekirse, oran (1 /
+614) / (1 / 3127) = 3127 / 614 = 5.1'dir (tek ondalık basamağa yuvarlandı).
+
+Bu bölümdeki matematiği takip etmekte herhangi bir sorun yaşarsanız, daha önce
+verdiğimiz linkleri kullanarak kesirlerle aritmetik konusunu tekrar etmeniz
+gerekir (3.1. Olasılıklar Oranı (Odds) ve Olasılıklar (Probabilties)
+bölümündeki Olasılıklar Oranı (Odds) bölümüne bakın).
+
+> **Not**
+>
+> **Sıfır demek sorun demek**
+>
+> Olasılıkları (probabilities) doğrudan sayımlardan tahmin etmenin bir sorunu,
+> sıfır sayımların sıfır tahminlere yol açmasıdır. Bu, sınıflandırıcının
+> performansı için oldukça zararlı olabilir, son olasılıklar oranının 0 / 0
+> olduğu durumlara kolayca yol açar ki bu da saçmadır. En basit çözüm, tüm
+> olasılık (probabilities) tahminleri için küçük bir alt sınır kullanmaktır.
+> Örneğin 1 / 100000 değeri yeterlidir.
+
+Yukarıdaki mantığı kullanarak, sıfıra ihtiyaç duymadan tüm olası sözcüklerin
+olabilirlik oranını (likelihood ratios) belirleyebiliriz ve bize aşağıdaki
+olabilirlik oranlarını (likelihood ratios) verir:
+
+**kelime**|**olabilirlik oranı (likelihood ratio)**
+milyon|5.1
+dolar|0.8
+reklam tıklama (adclick)|53.2
+konferanslar|0.3
+
+Yeni mesajları sınıflandırmak için metodu uygulamaya hazırız.
+
+#### Örnek: spam mı ham (meşru) mı?
+
+Ön olasılıklar oranı (prior odds) ve olabilirlik oranlarını (likelihood
+ratios) hesapladıktan sonra, örneğimiz olarak tıbbi teşhis vakasında zaten
+uyguladığımız Bayes kuralını uygulamaya hazırız. Muhakeme, mantıklı düşünme
+daha önce olduğu gibi devam ediyor: Spam olasılıklar oranını (odds), onu
+olabilirlik oranıyla (likelihood ratios) çarparak güncelliyoruz. Prosedürü
+kendimize hatırlatmak için, başlamak için tek kelimelik bir mesaj deneyelim.
+Ön olasılıklar oranı (prior odds) için, yukarıda kararlaştırıldığı gibi,
+olasılıklar oranı (odds) 1:1 kullanmalısınız.
+
+#### Alıştırma 12: Tek kelimelik spam filtresi
+
+İçinde sadece bir kelime olan bir mesajla başlayalım: "milyon".
+
+**Göreviniz:** Ön olasılıklar oranı (prior odds) 1:1'den başlayarak ve
+yukarıdaki tabloyu kullanarak bu kelimeye verilen **son olasılıklar oranını
+(posterior odds)** hesaplayın. Olasılıklar oranının (odds), genellikle yüzde
+olarak ifade ettiğimiz olasılıkla (probability) aynı **olmadığını** unutmayın.
+
+**Cevabınızı noktayı '.' ondalık ayracı olarak kullanarak, x.x gibi tek bir
+ondalık sayı şeklinde verin.**
+
+(Olasılıklar oranının (odds) xx:yy veya basitçe tek bir ondalıklı sayı olarak
+temsil edilebileceğini unutmayın: Örneğin olasılıklar oranına (odds) zz
+dersek, zz = xx / yy'dir. Bölüm 3.1. Olasılıklar Oranı (Odds) ve Olasılıklar
+(Probabilties)'da yer alan alıştırma 9'dan hemen önce gelen bu konudaki
+tartışmayı tekrar gözden geçirmek isteyebilirsiniz.)
+
+**Cevap:** 5.1
+
+Fark etmiş olabileceğiniz gibi, bu alıştırmanın yapısı, tıbbi teşhisle ilgili
+önceki alıştırmanın yapısı ile aynıdır. Sınıf etiketi olarak spam veya ham ve
+son olasılıklar oranını (posterior odds) elde etmek için ön olasılıklar
+oranımızı (prior odds) güncellemek için kullanabileceğimiz tek bir delil var.
+Yukarıda, ön olasılıklar oranımızın (prior odds) 1:1 olduğuna karar verdik.
+Olabilirlik oranı (likelihood ratio), istenmeyen e-postadaki 'milyon'
+kelimesinin olasılığının (probability) ham'daki 'milyon' kelimesinin
+olasılığına (probability) bölünmesiyle elde edilir. Yukarıda hesapladığımız bu
+değer, olabilirlik oranları (likelihood ratios) tablosunda bulunabilir: değer
+5.1'dir. Şimdi 1:1 × 5.1 = 5.1 elde etmek için ön olasılıklar oranını (prior
+odds), olabilirlik oranı (likelihood ratio) çarpın. Bu son olasılıklar
+oranıdır (posterior odds). Yine, son olasılıklar oranı (posterior odds),
+'milyon' kelimesini içeren mesajlar için, her ham (meşru) mesaj için ortalama
+5.1 spam mesaj olduğu anlamına gelir. Veya tam sayıları kullanırsak, her 10
+ham (meşru) mesaj için 51 spam (istenmeyen) mesaj vardır. Dolayısıyla olasılık
+(probability) değeri 51 / (51 + 10) = 51 / 61 veya yaklaşık %83.6'dır.
+
+Bir mesajdaki kelimelerin geri kalanını işlemek için, tamamen aynı prosedürü
+kullanabiliriz. Önceki alıştırmada hesapladığınız tek bir kelimenin son
+olasılıklar oranı (posterior odds), bir sonraki kelime için ön olasılıklar
+oranı (prior odds) haline gelecektir, ve bu böyle devam eder.
+
+#### Alıştırma 13: Tam spam filtresi
+
+Şimdi, "milyon dolarlık reklam tıklaması konferansları" içeren spam mesajın,
+son olasılıklar oranını (posterior odds) hesaplamak için naif Bayes yöntemini
+kullanın.
+
+Yine ön olasılıklar oranı (prior odds) 1:1 ile başlamalı ve ardından
+olasılıklar oranını (odds), dört kelimenin her biri için olabilirlik oranıyla
+(likelihood ratio) tekrar tekrar çarpmalısınız. Olabilirlik oranlarının
+(likelihood ratio) referans olması için yukarıda tablo halinde verildiğine
+dikkat edin (bunlar 5.1, 0.8 vb. sayılardır).
+
+**Göreviniz:** Sonucu, sonuçta herhangi bir yuvarlama olmaksızın son
+olasılıklar oranı (posterior odds) olarak ifade edin. Yardım için önceki
+alıştırmanın çözümüne bakabilirsiniz.
+
+**Cevap:** 65.1168
+
+Önceki alıştırma ile aynı şekilde başlıyoruz. Ön olasılıklar oranını (prior
+odds), olabilirlik oranı (likelihood ratio) 5.1 ile çarpmak ('milyon' kelimesi
+için), son olasılıklar oranını (posterior odds) 5.1 olarak verir. Daha sonra,
+olasılıklar oranını (odds) mesajın geri kalanı için olabilirlik oranlarıyla
+(likelihood ratios) çarpmaya devam edeceğiz. Olabilirlik oranları (likelihood
+ratios) yukarıdaki tabloda bulunabilir: 0.8 ('dolar'), 53.2 ('reklam tıklama')
+ve 0.3 ('konferans'). Tüm bu sayıların çarpımı 1:1 × 5.1 × 0.8 × 53.2 × 0.3 =
+65.1168'e eşittir. Bu, bu dört kelimenin tamamını içeren mesajlar için, her
+bir ham (meşru) mesaj için ortalama olarak yaklaşık 65 spam mesajı veya her 10
+ham (meşru) mesaj için yaklaşık 651 spam mesajı olduğu anlamına gelir.
+Olasılık (probability) değerini almak istersek (sorulmadı), bu yaklaşık 651 /
+(651 + 10) = 651/661 veya yaklaşık %98,5'tir. Bu ileti/mesaj/e-posta
+muhtemelen önemsiz posta/junk/spam klasörünüze düşecektir.
+
+Yaşasın! Artık çok çeşitli gerçek dünya Yapay Zeka uygulamalarında her gün
+kullanılan güçlü bir teknik olan naif bayes sınıflandırıcısı konusunda
+ustalaştınız. Bazı teknik özellikleri atlamak zorunda kalsanız bile, inançları
+güncellemek için olasılıkları uygulamanın (probabilities) temel ilkelerini
+anladığınızdan emin olmayı denemelisiniz. Bu bölümün başında tartıştığımız
+gibi, olasılığa (probabilistic) dayalı muhakemenin temel avantajı, belirsiz ve
+çelişkili kanıtları ele alma becerisidir. Tıbbi teşhis ve spam filtrelemedeki
+örnekleri kullanarak, bunun nasıl çalıştığını gösterdik.
+
+---
+
+![YZ 101 1 Yıldız](/assets/img/yildiz.png "YZ 101 1 Yıldız")
+![YZ 101 2 Yıldız](/assets/img/yildiz.png "YZ 101 2 Yıldız")
+![YZ 101 2 Yıldız](/assets/img/yildiz.png "YZ 101 2 Yıldız")
+{: style="text-align: center;"}
+
+**Bölüm 3'ü tamamladıktan sonra şunları yapabilmeniz gerekir:**
+
++ Olasılıkları (probabilities) doğal frekanslar cinsinden ifade etme.
++ Basit senaryolarda riskleri çıkarmak için Bayes kuralını uygulama.
++ Baz/Taban oran yanılgısını (base-rate fallacy) açıklama ve Bayesçi
+  muhakemeyi uygulayarak bundan kaçınma.
+
+[![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
+[![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
+[![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
+{: style="text-align: center;"}

@@ -19,8 +19,7 @@ dersleri almaya koyuldum. Kaydolduğum ilk eğitim
 [Reaktor](https://reaktor.com) işbirliği ile hazırlanan [Yapay Zeka
 Temelleri](https://course.elementsofai.com/) eğitimiydi. Yapabildiğim kadar
 tercüme ettim. Kısa süre önce de tekrardan gözden geçirip yayınlama kararı
-aldım. Altı bölüm olacak lakin şimdilik yalnızca iki bölüm var. Zamanla tüm
-bölümler yüklenmiş olur.
+aldım. Toplamda altı bölüm olacak. Zamanla tüm bölümler yüklenmiş olur.
 
 [Ey benim paşalarım, beylerim, ağalarım; şu şehr-i Konstantıniyye cengindeki
 silah arkadaşlarım!..](https://tr.wikipedia.org/wiki/II._Mehmed) Biz bize
@@ -28,6 +27,7 @@ kaldık madem, afterparty başlasın...
 
 [![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
 [![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
+[![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
 {: style="text-align: center;"}
 
 ---
@@ -43,7 +43,7 @@ kaldık madem, afterparty başlasın...
 
 ## 2. Yapay Zeka Problemi Çözme
 
-![YZ 101 2 Banner](/assets/img/yz-101-2-banner.png "YZ 101 2 Banner")
+![YZ 101 2 Afiş](/assets/img/yz-101-2-afis.png "YZ 101 2 Afiş")
 
 Arama algoritmaları havalı Yapay Zeka yöntemleri gibi hissettirmez. Ancak,
 çoğumuzun kabul edeceği gibi navigasyon veya satranç gibi zeka gerektiren
@@ -501,11 +501,11 @@ Yapay Zeka kullanarak oyunları çözmek için oyun ağacının konseptini
 tanıtacağız. Oyunun farklı durumları, oyun ağacındaki düğümlerle temsil
 edilir, yukarıdaki planlama problemlerine çok benzer. Fikir biraz farklı.
 Oyun ağacında, düğümler oyundaki her oyuncunun oyun sırasına karşılık gelen
-seviyelerde düzenlenir, böylece ağacın “kök” düğümü (genellikle şemanın üst
+seviyelerde düzenlenir, böylece ağacın "kök" düğümü (genellikle şemanın üst
 kısmında gösterilir) oyundaki başlangıç pozisyonudur. Tic-tac-toe'da, bu kök
 durumu, X veya O'nun henüz hiç oynamadığı boş ızgara durumu olacaktır. Kökün
 altında, ikinci seviyede, X veya O, ilk oyuncunun hareketlerinden
-kaynaklanabilecek olası durumlar vardır. Bu düğümleri kök düğümün “çocukları”
+kaynaklanabilecek olası durumlar vardır. Bu düğümleri kök düğümün "çocukları"
 olarak adlandırıyoruz.
 
 İkinci seviyedeki her bir düğüm, karşı oyuncunun hareketlerinden ulaşılabilen
@@ -583,13 +583,20 @@ ekleriz.
 
 #### Kimin kazanacağını belirlemek
 
-Bu bölümdeki en önemli ders, oyunun sonucunu herhangi bir tahta pozisyonundan önce belirlemek için yukarıdaki mantık yürütmeyi tekrar tekrar uygulamaktır.
+Bu bölümdeki en önemli ders, oyunun sonucunu herhangi bir tahta pozisyonundan
+önce belirlemek için yukarıdaki mantık yürütmeyi tekrar tekrar uygulamaktır.
 
-Şimdiye kadar, düğüm (2)'nin değerinin -1 olduğuna karar verdik, yani böyle bir pano pozisyonuna gelirsek Min kazanmayı sağlayabilir ve düğüm (3) ve (4) için ise tersi geçerlidir: Onların değerleri +1, yani Max sadece sıra ona geldiğinde akıllıca oynarsa kazanacağından emin olabilir.
+Şimdiye kadar, düğüm (2)'nin değerinin -1 olduğuna karar verdik, yani böyle
+bir pano pozisyonuna gelirsek Min kazanmayı sağlayabilir ve düğüm (3) ve (4)
+için ise tersi geçerlidir: Onların değerleri +1, yani Max sadece sıra ona
+geldiğinde akıllıca oynarsa kazanacağından emin olabilir.
 
-Son olarak, Min tecrübeli bir oyuncu olduğu için aynı sonuca varabildiğini ve dolayısıyla tek bir gerçek seçeneğinin olduğunu anlayabiliriz: Tahtanın ortasında O oynamak.
+Son olarak, Min tecrübeli bir oyuncu olduğu için aynı sonuca varabildiğini ve
+dolayısıyla tek bir gerçek seçeneğinin olduğunu anlayabiliriz: Tahtanın
+ortasında O oynamak.
 
-Aşağıdaki diyagramda, her bir düğümün değerini ve ayrıca kök düğümde Min'in oynama sırasından başlayarak en uygun oyunu ekledik.
+Aşağıdaki diyagramda, her bir düğümün değerini ve ayrıca kök düğümde Min'in
+oynama sırasından başlayarak en uygun oyunu ekledik.
 
 ![YZ 101 2 Tic-Tac-Toe 5](/assets/img/yz-101-2-tic-tac-toe-5.png "YZ 101 2 Tic-Tac-Toe 5")
 
@@ -637,7 +644,7 @@ gerekli) bir göz atmak isterseniz:
 Yukarıda belirtildiği gibi, Minimax algoritması herhangi bir deterministik,
 iki oyunculu, mükemmel bilgili sıfır toplamlı oyunda en iyi oyunu uygulamak
 için kullanılabilir. Bu tür oyunlar arasında tic-tac-toe, connect four,
-satranç, Go, vb. bulunur. Taş-kağıt-makas, diğer oyuncudan gizlenen bilgileri
+satranç, Go vb. bulunur. Taş-kağıt-makas, diğer oyuncudan gizlenen bilgileri
 içerdiği için bu oyun sınıfında değildir; deterministik olmayan Monopoly veya
 tavla da değildir. İlgilendiğiniz şu konuya gelince; hepsi bu mu millet, artık
 eve gidebilir miyiz? Cevap teorik olarak evet, ancak pratikte hayır.
@@ -767,4 +774,5 @@ oyunun -1 değerinden de anlaşılabilir.
 
 [![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
 [![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
+[![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
 {: style="text-align: center;"}

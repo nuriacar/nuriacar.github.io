@@ -38,15 +38,19 @@ dersleri almaya koyuldum. Kaydolduğum ilk eğitim
 [Reaktor](https://reaktor.com) işbirliği ile hazırlanan [Yapay Zeka
 Temelleri](https://course.elementsofai.com/) eğitimiydi. Yapabildiğim kadar
 tercüme ettim. Kısa süre önce de tekrardan gözden geçirip yayınlama kararı
-aldım. Altı bölüm olacak lakin şimdilik yalnızca iki bölüm var. Zamanla tüm
-bölümler yüklenmiş olur.
+aldım. Toplamda altı bölüm olacak. Zamanla tüm bölümler yüklenmiş olur.
 
 [Ey benim paşalarım, beylerim, ağalarım; şu şehr-i Konstantıniyye cengindeki
 silah arkadaşlarım!..](https://tr.wikipedia.org/wiki/II._Mehmed) Biz bize
 kaldık madem, afterparty başlasın...
 
+> Şiddetle başlayan hazlar, şiddetle son bulurlar.
+> These violent delights have violent ends.
+>> Shakespeare
+
 [![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
 [![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
+[![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
 {: style="text-align: center;"}
 
 ---
@@ -74,10 +78,6 @@ Bu kısımda şu konuları ele alacağız:
 2. Alakalı alanlar
 3. Yapay Zeka Felsefesi
 
-"Şiddetle başlayan hazlar, şiddetle son bulurlar." Shakespeare
-
-"These violent delights have violent ends." Shakespeare
-
 ### [Yapay Zeka 101 [ 2. Bölüm ]](/ai/2020/10/06/yapay-zeka-101-2.html)
 
 Arama algoritmaları havalı Yapay Zeka yöntemleri gibi hissettirmez. Ancak,
@@ -90,6 +90,14 @@ Bu kısımda şu konuları ele alacağız:
 2. Yapay Zeka ile problem çözme
 3. Arama ve oyunlar
 
-"Şiddetle başlayan hazlar, şiddetle son bulurlar." Shakespeare
+### [Yapay Zeka 101 [ 3. Bölüm ]](/ai/2020/10/07/yapay-zeka-101-3.html)
 
-"These violent delights have violent ends." Shakespeare
+Modern Yapay Zeka yöntemlerinin gerçek dünyada işe yaramasının nedenlerinden
+biri, 1960-1980 arası iyi eski moda yöntemlerin çoğunun aksine, belirsizlikle
+başa çıkma becerisidir.
+
+Bu kısımda şu konuları ele alacağız:
+
+1. Olasılıklar Oranı (Odds) ve Olasılıklar (Probabilties)
+2. Bayes kuralı (teoremi, formülü)
+3. Naif Bayes sınıflandırması
