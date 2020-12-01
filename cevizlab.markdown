@@ -45,6 +45,7 @@ silah arkadaşlarım!..](https://tr.wikipedia.org/wiki/II._Mehmed) Biz bize
 kaldık madem, afterparty başlasın...
 
 > Şiddetle başlayan hazlar, şiddetle son bulurlar.
+>
 > These violent delights have violent ends.
 >> Shakespeare
 
