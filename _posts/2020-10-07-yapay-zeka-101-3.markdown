@@ -409,7 +409,7 @@ kullanılabileceğini göstereceğiz.
 > sonraki olasılıklar oranının (odds) elde edilmesidir. ("posterior" sözlük
 > anlamı "daha sonra gelen bir şey").
 
-![YZ 101 3 2 Olasılıklar Oranı (Odds) Değişimi](/assets/img/yz-101-3-2-olasılıklar-orani-degisimi.png "YZ 101 3 2 Olasılıklar Oranı (Odds) Değişimi")
+![YZ 101 3 2 Olasılıklar Oranı (Odds) Değişimi](/assets/img/yz-101-3-2-olasiliklar-orani-degisimi.png "YZ 101 3 2 Olasılıklar Oranı (Odds) Değişimi")
 
 #### Olasılıklar oranı (odds) nasıl değişir?
 
