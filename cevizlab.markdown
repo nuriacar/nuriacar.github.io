@@ -52,6 +52,7 @@ kaldık madem, afterparty başlasın...
 [![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
 [![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
 [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
+[![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
 {: style="text-align: center;"}
 
 ---
@@ -102,3 +103,15 @@ Bu kısımda şu konuları ele alacağız:
 1. Olasılıklar Oranı (Odds) ve Olasılıklar (Probabilties)
 2. Bayes kuralı (teoremi, formülü)
 3. Naif Bayes sınıflandırması
+
+### [Yapay Zeka 101 [ 4. Bölüm ]](/ai/2020/10/08/yapay-zeka-101-4.html)
+
+Uzun zamandır öğrenmenin zekanın temel bir unsuru olduğu anlaşılmıştır. Bu hem
+doğal zeka için -öğrenerek daha akıllı hale geliriz- hem de Yapay Zeka için
+geçerlidir.
+
+Bu kısımda şu konuları ele alacağız:
+
+1. Makine öğrenmesi tipleri
+2. En yakın komşu sınıflandırıcısı
+3. İndirgeme (Regression)

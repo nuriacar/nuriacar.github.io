@@ -5,7 +5,7 @@ date:   2020-10-05 15:15:15 +0300
 categories: ai
 ---
 
-[![Elements of AI](/assets/img/elements-of-ai.jpg "Elements of AI")](https://course.elementsofai.com/)
+[![Elements of Yapay Zeka](/assets/img/elements-of-ai.jpg "Elements of Yapay Zeka")](https://course.elementsofai.com/)
 
 [![Helsinki Üniversitesi](/assets/img/helsinki-uni-logo-mini.png "Helsinki Üniversitesi")](https://www.helsinki.fi/en)
 [![Reaktor](/assets/img/reaktor-logo-mini.png "Reaktor")](https://www.reaktor.com/)
@@ -28,6 +28,7 @@ kaldık madem, afterparty başlasın...
 [![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
 [![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
 [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
+[![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
 {: style="text-align: center;"}
 
 ---
@@ -37,9 +38,9 @@ kaldık madem, afterparty başlasın...
 1. Yapay Zeka Nedir?
 2. Yapay Zeka Problemi Çözme
 3. Gerçek Dünyada Yapay Zeka
-4. Makine Öğrenmesi(Machine Learning)
-5. Yapay Sinir Ağları(Neural Networks)
-6. Yapay Zeka Uygulamaları(Implications)
+4. Makine Öğrenmesi (Machine Learning)
+5. Yapay Sinir Ağları (Neural Networks)
+6. Yapay Zeka Uygulamaları (Implications)
 
 ## 1. Yapay Zeka Nedir?
 
@@ -210,7 +211,7 @@ seçtiniz ve eliniz için bir yörünge planladınız. Ona uzandınız, sonra s�
 çeşitli kasları büzerek elinizi hareket ettirdiniz ve parmaklarınız arasında
 tutmak için nesneyi doğru miktarda kuvvetle sıkıştırmayı başardınız.
 
-Tüm bunların ne kadar karmaşık olduğunu anlamak zor olabilir, ancak bazen bir
+Tüm bunların ne kadar karmaşık olduğunu anlamak zor olabilir ancak bazen bir
 şeyler ters gittiğinde bu zorluk görünür hale gelir: Almak istediğiniz nesne
 beklediğinizden çok daha ağır veya daha hafiftir, ya da bir tutamağı tutmadan
 evvel başka biri sizden önce onu çekerse kendinizi dengede durmaya çabalarken
@@ -470,7 +471,7 @@ bir dalı haline getirir.
 > kullanımda olan çoğu gerçek robotlar, uygulamaya göre tasarlandıkları için
 > çok farklı görünüyorlar. Pek çok uygulama için robotun insan şeklinde olması
 > pek de işe yaramaz zira tıpkı bulaşıklarımızı yıkamak için insansı
-> robotlarımızın olmaması, ancak bulaşıkları suyla yıkayabilmemiz için
+> robotlarımızın olmaması ancak bulaşıkları suyla yıkayabilmemiz için
 > bulaşıkları içine yerleştirilebileceği bulaşık makinelerimizin olması gibi.
 >
 > İlk bakışta açıkça görünemeyebilir, ama en azından bir düzeyde özerkliğe
@@ -540,7 +541,7 @@ içerir).
 rolleri hakkında düşünmeniz için size ilham vermeyi amaçlamaktadır. Bu
 soruların çoğuna net cevaplar olmadığından, **bu alıştırma notlandırmaya dahil
 edilmeyecektir.** Yine de elinizden gelenin en iyisini yapmanızı ve elinizden
-geldiğince iyi cevap vermeye çalışmanızı öneririz, ancak bizim cevaplarımız
+geldiğince iyi cevap vermeye çalışmanızı öneririz ancak bizim cevaplarımız
 sizinkinden farklı olursa endişelenmeyin.
 
 1. Otonom Araçlar: İstatistik, robotik, makine öğrenmesi.
@@ -778,4 +779,5 @@ makine zekasını birleştirerek çok daha fazlasını başarabiliriz.
 [![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
 [![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
 [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
+[![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
 {: style="text-align: center;"}

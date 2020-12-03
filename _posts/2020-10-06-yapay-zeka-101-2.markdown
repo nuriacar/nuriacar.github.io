@@ -5,7 +5,7 @@ date:   2020-10-06 16:16:16 +0300
 categories: ai
 ---
 
-[![Elements of AI](/assets/img/elements-of-ai.jpg "Elements of AI")](https://course.elementsofai.com/)
+[![Elements of Yapay Zeka](/assets/img/elements-of-ai.jpg "Elements of Yapay Zeka")](https://course.elementsofai.com/)
 
 [![Helsinki Üniversitesi](/assets/img/helsinki-uni-logo-mini.png "Helsinki Üniversitesi")](https://www.helsinki.fi/en)
 [![Reaktor](/assets/img/reaktor-logo-mini.png "Reaktor")](https://www.reaktor.com/)
@@ -28,6 +28,7 @@ kaldık madem, afterparty başlasın...
 [![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
 [![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
 [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
+[![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
 {: style="text-align: center;"}
 
 ---
@@ -37,9 +38,9 @@ kaldık madem, afterparty başlasın...
 1. Yapay Zeka Nedir?
 2. Yapay Zeka Problemi Çözme
 3. Gerçek Dünyada Yapay Zeka
-4. Makine Öğrenmesi(Machine Learning)
-5. Yapay Sinir Ağları(Neural Networks)
-6. Yapay Zeka Uygulamaları(Implications)
+4. Makine Öğrenmesi (Machine Learning)
+5. Yapay Sinir Ağları (Neural Networks)
+6. Yapay Zeka Uygulamaları (Implications)
 
 ## 2. Yapay Zeka Problemi Çözme
 
@@ -99,7 +100,7 @@ Bu bölümde, iki tür problemi tartışacağız:
 + Sadece bir oyuncu (agent) ile statik ortamlarda arama ve planlama.
 + Birbiriyle yarışan iki oyunculu (agents) oyunlar.
 
-Bu kategoriler, tüm olası gerçek dünya senaryolarını kapsamaz, ancak ana
+Bu kategoriler, tüm olası gerçek dünya senaryolarını kapsamaz ancak ana
 kavramları ve teknikleri göstermek için yeterince geneldir.
 
 Navigasyon veya satranç gibi karmaşık arama görevlerini ele almadan önce,
@@ -114,7 +115,7 @@ Fikirleri örneklemek için basit bir bulmacadan başlayacağız. Bir robotun bi
 nehrin karşı kıyısına kayıkla üç parça kargo taşıması gerekir: Tilki, tavuk ve
 tavuk yemi çuvalı. Şayet imkanı varsa tilki tavuğu yiyecektir, tavuk imkanı
 varsa tavuk yemini yiyecektir ve biz her ikisini de istemeyiz. Robot
-hayvanlara yakın oldupunda zarar vermelerini engelleyebilir, ancak robot
+hayvanlara yakın oldupunda zarar vermelerini engelleyebilir ancak robot
 yalnızca şunları yapabilir: Kayığını çalıştırıp kargo parçalarından sadece
 ikisini, kendisiyle birlikte kayığa yerleştirebilir. Robot tüm kargo
 parçalarını (tilki, tavuk, tavuk yemi) nehrin karşı kıyısına nasıl
@@ -139,7 +140,8 @@ bu da onaltı kombinasyon ifade eder. Biz bunlara durumlar diyeceğz:
 
 **1: Nehrin Yakın Kıyısı - 2: Nehrin Uzak Kıyısı**
 
-Durum|Robot|Tilki|Tavuk|Tavuk Yemi
+**Durum**|**Robot**|**Tilki**|**Tavuk**|**Tavuk Yemi**
+|---|---|---|---|---|
 1111|1|1|1|1
 1112|1|1|1|2
 1121|1|1|2|1
@@ -166,14 +168,15 @@ ayrıca tavuk yemi yakın tarafta ve hedef durumda, robot uzak tarafta, tilki
 uzak tarafta, tavuk uzak tarafta, tavuk yemi uzak tarafta" vb.
 
 Bu durumlardan bazıları, bulmaca şartları yüzünden yasaklı. Örneğin, 1221
-durumunda (robotun tavuk yemiyle aynı tarafta olduğu, ancak tilki ve tavuğun
+durumunda (robotun tavuk yemiyle aynı tarafta olduğu ancak tilki ve tavuğun
 diğer tarafta olduğu anlamına gelir) tilki tavuğu yiyecektir.  Böylece 1221,
 1222, 2112, 2111, 1122 ve 2211 (mantığımızdan şüpheliyseniz her birini tek tek
 kontrol edebilirsiniz) durumlarını eleyebiliriz. Elimizde şu on durum kaldı:
 
 **1: Nehrin Yakın Kıyısı - 2: Nehrin Uzak Kıyısı**
 
-Durum|Robot|Tilki|Tavuk|Tavuk Yemi
+**Durum**|**Robot**|**Tilki**|**Tavuk**|**Tavuk Yemi**
+|---|---|---|---|---|
 1111|1|1|1|1
 1112|1|1|1|2
 1121|1|1|2|1
@@ -204,7 +207,7 @@ N: Near, Yakın Kıyı, 1. Kıyı - F: Far, Uzak Kıyı, 2. Kıyı
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
 Şimdi geçişleri çizelim. Yönleri bir düğümden diğerine işaret edecek şekilde
-oklar çizebiliriz, ancak bu bulmacada geçişler simetriktir: Eğer robot 1111
+oklar çizebiliriz ancak bu bulmacada geçişler simetriktir: Eğer robot 1111
 durumundan 2122 durumuna kadar kürek çekebiliyorsa, 2122'den 1111'e kürek
 çekmek de eşit sayılır. Bu nedenle, geçişleri sade bir şekilde yönü olmayan
 çizgilerle çizmek daha kolaydır. 1111'den başlayarak 2121, 2122, 2212 ve
@@ -278,7 +281,7 @@ maliyetler gibi kavramları kullanırız.
 #### Alıştırma 5: Daha küçük bir kayık
 
 Bu bulmacanın geleneksel versiyonunda robot, tekneye sadece tek bir şey
-sığdırabilir. Durum uzayı hala aynıdır, ancak daha az geçiş mümkündür.
+sığdırabilir. Durum uzayı hala aynıdır ancak daha az geçiş mümkündür.
 
 Aşağıdaki olası durumlarla birlikte diyagramı bir başlangıç noktası olarak
 kullanarak, olası geçişleri çizin (bunu bir kalem ve kağıtla yapmak, olmadan
@@ -316,7 +319,7 @@ Durum sayısı: 8, Geçiş sayısı: 7
 Başka bir bulmaca yapalım: Ünlü [Hanoi
 Kuleleri](https://www.britannica.com/topic/Tower-of-Hanoi). Bizim
 versiyonumuzda, bulmaca üç pim ve biri büyük diğeri küçük iki disk içerir
-(aslında, herhangi bir sayıda disk olabilir, ancak alıştırma için, prensibi
+(aslında, herhangi bir sayıda disk olabilir ancak alıştırma için, prensibi
 göstermek için iki yeterli).
 
 İlk durumda, her iki disk de ilk (en soldaki) pimde istiflenir. Amaç, diskleri
@@ -422,7 +425,7 @@ oldu ve bunu yapmaya devam ediyor.
 Oyunlarla yakından ilgili olarak, arama ve planlama teknikleri, Yapay Zeka'nın
 1960'larda büyük ilerlemelere yol açtığı bir alandı: O zamanlar geliştirilen
 Minimax algoritması veya Alpha-Beta Budama (Pruning) gibi adlara sahip
-algoritmalar, oyun oynayan Yapay Zeka için hala temel teşkil ediyor, ancak
+algoritmalar, oyun oynayan Yapay Zeka için hala temel teşkil ediyor ancak
 elbette yıllar içinde daha gelişmiş varyantlar önerildi. Bu bölümde oyunları
 ve planlama problemlerini kavramsal düzeyde inceleyeceğiz.
 
@@ -492,7 +495,7 @@ Max tahtaya bakıyor ve bir sonraki hamlesini düşünüyordu, aniden yüzünü
 umutsuzluk içinde ellerine gömdü, 1997'de Deep Blue'ya karşı oynayan Garry
 Kasparov'a oldukça benziyordu.
 
-Evet, Min en üst sırada üç O almaya yakındı, ancak Max bu plana kolayca son
+Evet, Min en üst sırada üç O almaya yakındı ancak Max bu plana kolayca son
 verebilirdi. Peki Max neden bu kadar karamsardı?
 
 #### Oyun ağaçları
@@ -567,7 +570,7 @@ seviyedeki her düğümde oyunun nasıl biteceğini biliyoruz. Bu nedenle (5), (
 düğümlerin değerlerini düşünelim. (2)'nin çocuklarının her ikisinin de, yani
 düğüm (5) ve (6)'nın Min'in zaferine yol açtığını gözlemlediğimiz için,
 tereddüt etmeden -1 değerini düğüm (2)'ye de ekleyebiliriz. Bununla birlikte,
-düğüm (3) için sol çocuk (7) Max'in galibiyetine, +1, yol açar, ancak sağ
+düğüm (3) için sol çocuk (7) Max'in galibiyetine, +1, yol açar ancak sağ
 çocuk (8) Min'in kazanmasına -1 yol açar. Düğüm (3)'ün değeri nedir? Düğüm
 (3)'te seçimi kimin yaptığını aklınızda tutarak bunu bir süre düşünün.
 
@@ -647,7 +650,7 @@ için kullanılabilir. Bu tür oyunlar arasında tic-tac-toe, connect four,
 satranç, Go vb. bulunur. Taş-kağıt-makas, diğer oyuncudan gizlenen bilgileri
 içerdiği için bu oyun sınıfında değildir; deterministik olmayan Monopoly veya
 tavla da değildir. İlgilendiğiniz şu konuya gelince; hepsi bu mu millet, artık
-eve gidebilir miyiz? Cevap teorik olarak evet, ancak pratikte hayır.
+eve gidebilir miyiz? Cevap teorik olarak evet ancak pratikte hayır.
 
 > **Not**
 >
@@ -775,4 +778,5 @@ oyunun -1 değerinden de anlaşılabilir.
 [![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
 [![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
 [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
+[![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
 {: style="text-align: center;"}

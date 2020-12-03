@@ -28,6 +28,7 @@ kaldık madem, afterparty başlasın...
 [![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
 [![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
 [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
+[![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
 {: style="text-align: center;"}
 
 ---
@@ -37,9 +38,9 @@ kaldık madem, afterparty başlasın...
 1. Yapay Zeka Nedir?
 2. Yapay Zeka Problemi Çözme
 3. Gerçek Dünyada Yapay Zeka
-4. Makine Öğrenmesi(Machine Learning)
-5. Yapay Sinir Ağları(Neural Networks)
-6. Yapay Zeka Uygulamaları(Implications)
+4. Makine Öğrenmesi (Machine Learning)
+5. Yapay Sinir Ağları (Neural Networks)
+6. Yapay Zeka Uygulamaları (Implications)
 
 ## 3. Gerçek Dünyada Yapay Zeka
 
@@ -208,7 +209,7 @@ varamaz mıyız ("sonuçlandırılamaz"ı seçin)?
    "Uzun vadede" bu anlama geliyor.) Pratikte, hava durumu tahmincileri sadece
    güvende olmak için aslında bu tür "yanlış" tahminler sunma eğilimindedir:
    Hava tahmin edilenden daha kötü olduğunda insanlar genellikle hayal
-   kırıklığına uğrarlar, ancak tahmin edilenden daha iyi çıktığında hoş bir
+   kırıklığına uğrarlar ancak tahmin edilenden daha iyi çıktığında hoş bir
    şekilde şaşırırlar.
 
 4. Amerika Birleşik Devletleri 2016 başkanlık seçiminde, tanınmış bir siyasi
@@ -453,7 +454,7 @@ temel bir düşünme aracıdır.)
 > (likelihood ratio), ilgili olayın (yukarıda, yağmurlu) olması durumunda
 > gözlem olasılığının (probability), olay olmaması (yukarıda, yağmur yok)
 > durumunda gözlem olasılığına (probability) bölünmesiyle elde edilir. Lütfen
-> önceki cümleyi birkaç kez okuyun. Biraz korkutucu görünebilir, ancak
+> önceki cümleyi birkaç kez okuyun. Biraz korkutucu görünebilir ancak
 > dikkatlice odaklanırsanız sindirmek imkansız değildir. Adımlarda size
 > ayrıntılı olarak rehberlik edeceğiz, sadece cesaretinizi kaybetmeyin.
 > Neredeyse geldik.
@@ -627,7 +628,7 @@ olasılık olarak ifade etmek istersek (alıştırmada istenen şey bu olmasa da
 40 kanserli ve 95 kansersiz vakayı birlikte değerlendiririz, ve toplam 40 + 95
 = 135 kişinin ne kadarının kanser olduğunu hesaplarız. Bu, sonucu 135
 üzerinden 40 veya yaklaşık %30 olarak verir. Bu, meme kanseri yaygınlığından
-çok daha yüksektir, (100'de 5 veya% 5), ancak yine de kişinin kanser olmaması
+çok daha yüksektir, (100'de 5 veya% 5) ancak yine de kişinin kanser olmaması
 ihtimali yine de vardır. Çözümü sezgisel cevabınızla karşılaştırırsanız, çoğu
 insan için oldukça farklı olma eğilimindedirler. Bu, belirsiz ve çelişkili
 bilgileri ele almak için sezginin uygun olmadığını gösterir.
@@ -695,7 +696,7 @@ belirli kelimeleri belirleyebiliriz.
 ![YZ 101 3 3 Naif Bayes Spam Ham](/assets/img/yz-101-3-3-naif-bayes-spam-ham.png "YZ 101 3 3 Naif Bayes Spam Ham")
 
 Naifliğine rağmen, naif Bayes yöntemi pratikte çok iyi çalışma eğilimindedir.
-Bu, istatistikte "tüm modeller yanlıştır, ancak bazıları yararlıdır"
+Bu, istatistikte "tüm modeller yanlıştır ancak bazıları yararlıdır"
 ifadesinin iyi bir örneğidir (aforizma genellikle istatistikçi [George E.P.
 Box](https://en.wikipedia.org/wiki/George_E._P._Box)'a atfedilir).
 
@@ -723,6 +724,7 @@ elde edebilirsiniz.
 birlikte) mesajda veya e-postada geçme sayılarını hesapladığımızı varsayalım:
 
 **kelime**|**spam**|**ham (meşru)**
+|---|---|---|
 milyon|156|98
 dolar|29|119
 reklam tıklama (adclick)|51|0
@@ -734,7 +736,7 @@ konferanslar|0|12
 kabaca 614'te 1 ile aynıdır. Aynı şekilde, ham (meşru) iletideki bir kelimenin
 milyon olma olasılığının (probability) 306438 kelimede 98 olduğunu tahmin
 edebiliriz ki bu da 3127'de 1 ile hemen hemen aynıdır. Bu olasılık
-(probability) tahminlerinin her ikisi de küçüktür, 500'de 1'den azdır, ancak
+(probability) tahminlerinin her ikisi de küçüktür, 500'de 1'den azdır ancak
 daha da önemlisi, birincisi ikinciden daha yüksektir: 614'te 1, 3127'de 1'den
 yüksektir. Bu, demektir ki olabilirlik oranı (likelihood ratio) ki ilk oranın
 ikinciye bölümüdür ve 1'den büyüktür. Daha kesin olmak gerekirse, oran (1 /
@@ -761,6 +763,7 @@ olabilirlik oranını (likelihood ratios) belirleyebiliriz ve bize aşağıdaki
 olabilirlik oranlarını (likelihood ratios) verir:
 
 **kelime**|**olabilirlik oranı (likelihood ratio)**
+|---|---|
 milyon|5.1
 dolar|0.8
 reklam tıklama (adclick)|53.2
@@ -853,6 +856,8 @@ Olasılık (probability) değerini almak istersek (sorulmadı), bu yaklaşık 65
 (651 + 10) = 651/661 veya yaklaşık %98,5'tir. Bu ileti/mesaj/e-posta
 muhtemelen önemsiz posta/junk/spam klasörünüze düşecektir.
 
+...
+
 Yaşasın! Artık çok çeşitli gerçek dünya Yapay Zeka uygulamalarında her gün
 kullanılan güçlü bir teknik olan naif bayes sınıflandırıcısı konusunda
 ustalaştınız. Bazı teknik özellikleri atlamak zorunda kalsanız bile, inançları
@@ -866,7 +871,7 @@ gibi, olasılığa (probabilistic) dayalı muhakemenin temel avantajı, belirsiz
 
 ![YZ 101 1 Yıldız](/assets/img/yildiz.png "YZ 101 1 Yıldız")
 ![YZ 101 2 Yıldız](/assets/img/yildiz.png "YZ 101 2 Yıldız")
-![YZ 101 2 Yıldız](/assets/img/yildiz.png "YZ 101 2 Yıldız")
+![YZ 101 3 Yıldız](/assets/img/yildiz.png "YZ 101 3 Yıldız")
 {: style="text-align: center;"}
 
 **Bölüm 3'ü tamamladıktan sonra şunları yapabilmeniz gerekir:**
@@ -879,4 +884,5 @@ gibi, olasılığa (probabilistic) dayalı muhakemenin temel avantajı, belirsiz
 [![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
 [![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
 [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
+[![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
 {: style="text-align: center;"}

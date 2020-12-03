@@ -1,0 +1,1047 @@
+---
+layout: post
+title:  Yapay Zeka 101 [ 4. Bölüm ]
+date:   2020-10-08 18:18:18 +0300
+categories: ai
+---
+
+[![Elements of Yapay Zeka](/assets/img/elements-of-ai.jpg "Elements of Yapay Zeka")](https://course.elementsofai.com/)
+
+[![Helsinki Üniversitesi](/assets/img/helsinki-uni-logo-mini.png "Helsinki Üniversitesi")](https://www.helsinki.fi/en)
+[![Reaktor](/assets/img/reaktor-logo-mini.png "Reaktor")](https://www.reaktor.com/)
+[![mooc.fi](/assets/img/mooc-fi-logo-mini.png "mooc.fi")](https://mooc.fi/en)
+{: style="text-align: center;"}
+
+2018'de [Finlandiya Helsinki Üniversitesi](https://helsinki.fi/en), bazı
+Bilgisayar Bilimleri derslerini [mooc.fi](http://mooc.fi/en) üzerinden erişime
+açtı. Ben de görür görmez kaydoldum ve eğitimler sisteme yüklendikçe buradaki
+dersleri almaya koyuldum. Kaydolduğum ilk eğitim
+[Reaktor](https://reaktor.com) işbirliği ile hazırlanan [Yapay Zeka
+Temelleri](https://course.elementsofai.com/) eğitimiydi. Yapabildiğim kadar
+tercüme ettim. Kısa süre önce de tekrardan gözden geçirip yayınlama kararı
+aldım. Toplamda altı bölüm olacak. Zamanla tüm bölümler yüklenmiş olur.
+
+[Ey benim paşalarım, beylerim, ağalarım; şu şehr-i Konstantıniyye cengindeki
+silah arkadaşlarım!..](https://tr.wikipedia.org/wiki/II._Mehmed) Biz bize
+kaldık madem, afterparty başlasın...
+
+[![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
+[![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
+[![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
+[![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
+{: style="text-align: center;"}
+
+---
+
+## Bölümler
+
+1. Yapay Zeka Nedir?
+2. Yapay Zeka Problemi Çözme
+3. Gerçek Dünyada Yapay Zeka
+4. Makine Öğrenmesi (Machine Learning)
+5. Yapay Sinir Ağları (Neural Networks)
+6. Yapay Zeka Uygulamaları (Implications)
+
+## Makine Öğrenmesi (Machine Learning)
+
+![YZ 101 4 Afiş](/assets/img/yz-101-4-afis.png "YZ 101 4 Afiş")
+
+Uzun zamandır öğrenmenin zekanın temel bir unsuru olduğu anlaşılmıştır. Bu hem
+doğal zeka için -öğrenerek daha akıllı hale geliriz- hem de Yapay Zeka için
+geçerlidir.
+
+Bu kısımda şu konuları ele alacağız:
+
+1. Makine öğrenmesi tipleri
+2. En yakın komşu sınıflandırıcısı
+3. İndirgeme (Regression)
+
+---
+
+### 4.1. Makine öğrenmesi tipleri
+
+El yazısıyla yazılan rakamlar, makine öğrenimini neden kullandığımızı
+tartışırken sıklıkla kullanılan klasik bir durumdur ve bizde böyle yapacağız.
+
+Çok sık kullanılan [MNIST](https://en.wikipedia.org/wiki/MNIST_database) veri
+kümesinden el yazısı görsellerinin örneklerini görebilirsiniz.
+
+![YZ 101 4 1 MNIST](/assets/img/yz-101-4-1-mnist.png "YZ 101 4 1 MNIST")
+
+Her bir resmin üzerinde doğru etiket (rakamın kaç olduğu) gösterilir. "Doğru"
+sınıf etiketlerden bazılarının sorgulanabilir olduğuna dikkat edin: Örneğin
+soldan ikinci: 7 mi, yoksa aslında 4 mü?
+
+> **Not**
+>
+> **MNIST nedir? (Modified National Institue of Standards and Technology)**
+>
+> Her makine öğrenimi öğrencisi, MNIST veri kümesini bilir. Aslında, M'nin
+> "modifiye edilmiş" olduğunu ve NIST'in Ulusal Standartlar ve Teknoloji
+> Enstitüsü'nü temsil ettiğini söyleyebilmemiz gerekiyor. Şimdi muhtemelen
+> ortalama bir makine öğrenimi uzmanının bilmediği bir şey biliyorsunuz!
+
+En yaygın makine öğrenme problemlerinde, her bir seferde tam olarak bir sınıf
+değeri doğrudur. Bu aynı zamanda MNIST için de doğrudur ki, bahsettiğimiz
+gibi, doğru cevabı söylemek bazen zor olabilir. Bu tür problemlerde, bir
+durumun aynı anda birden fazla sınıfa (veya hiç birine) ait olması mümkün
+değildir. Elde etmek istediğimiz, doğru sonucu verebilen bir Yapay Zeka
+yöntemidir ve doğru etiketi otomatik olarak çıkarmasını bekleriz (0 ile 9
+arasında bir sayı).
+
+> **Not**
+>
+> **Sorun nasıl çözülmez?**
+>
+> Bir otomatik rakam tanıyıcı, prensipte aşağıdaki gibi kurallar yazılarak
+> oluşturulabilir:
+>
+> + Siyah pikseller çoğunlukla tek bir döngü halinde ise, etiket 0'dır.
+> + Siyah pikseller kesişen iki halka oluşturuyorsa, etiket 8'dir.
+> + Siyah pikseller çoğunlukla şeklin ortasındaki düz bir dikey çizgide ise,
+>   etiket 1'dir.
+>
+> ve bunun gibi...
+>
+> Bu, 1980'lerde Yapay Zeka yöntemlerinin çoğunlukla nasıl geliştirildiğini
+> gösterir ("uzman sistemler" olarak adlandırılırlar). Bununla birlikte, rakam
+> tanıma gibi basit bir görev için bile, bu kuralları yazma görevi çok
+> zahmetlidir.  Aslında, yukarıdaki örnek kurallar, programlamaya uygulanacak
+> kadar spesifik olmayacaktı zira "çoğunlukla", "döngü", "çizgi", "orta" vb.
+> ile ne demek istediğimizi tam olarak tanımlamamız gerekir.
+>
+> Ve tüm bu çalışmaları yapsak bile, sonuç muhtemelen kötü bir Yapay Zeka
+> metodu olacaktır çünkü görebildiğiniz gibi, el yazısıyla yazılan rakamlar
+> genellikle çok azdır ve her kuralın bir düzine istisnaya ihtiyacı olacaktır.
+
+#### Üç tip makine öğrenimi
+
+Makine öğreniminin kökenleri istatistiktedir, ki bu da **veriden bilgi
+çıkarma** sanatı olarak düşünülebilir. Özellikle, iki yüz yıldan daha eski
+olsalar da(!) Lineer regresyon (indirgeme) ve Bayes istatistikleri gibi
+yöntemler, bugün bile makine öğreniminin kalbinde yer almaktadır. Daha fazla
+örnek ve kısa bir tarih için, [makine öğreniminin zaman çizelgesine
+(Wikipedia)](https://en.wikipedia.org/wiki/Timeline_of_machine_learning)
+bakın.
+
+Makine öğrenimi alanı genellikle ilgilenilmeye başlanan sorunlara göre alt
+bölgelere ayrılır. Kaba bir kategorileştirme şöyledir:
+
+**Denetimli öğrenim:** Örneğin bir trafik işareti olan bir fotoğraf sisteme
+girilir, görev doğru çıktıyı veya etiketi tahmin etmektir, örneğin trafik
+işareti imajı (hız sınırı, dur işareti vb.) . En basit durumlarda, cevaplar
+evet/hayır şeklindedir (buna ikili sınıflandırma problemleri diyoruz).
+
+**Denetimsiz öğrenim:** Etiket veya doğru çıktı yoktur. Görev, verilerin
+yapısını keşfetmektir: Örneğin, "kümeleri" oluşturmak için benzer öğeleri
+gruplandırmak veya verileri az sayıda önemli "boyut"a indirgemek. Veri
+görselleştirme, denetimsiz öğrenim olarak da düşünülebilir.
+
+**Takviye öğrenimi:** Bir ortamda çalışması gereken bir kendi kendini süren
+bir araç gibi bir Yapay Zeka ajanına/temsilcisine/nesnesine, iyi ya da kötü
+seçimleriyle ilgili geri bildirimin bir miktar gecikmeyle verilebilmesinin
+mümkün olduğu durumlarda yaygın olarak kullanılır. Ayrıca, sonucun sadece
+oyunun sonunda kararlaştırılabildiği oyunlarda da kullanılır.
+
+Kategoriler biraz örtüşüyor ve bulanık, bu yüzden belirli bir yöntemi bazen
+bir kategoriye yerleştirmek zor olabilir. Örneğin, isminden de anlaşılacağı
+gibi, **yarı gözetimli öğrenim (semisupervised learning)** kısmen denetlenir,
+kısmen denetlenmez.
+
+> **Not**
+>
+> **Sınıflandırma**
+>
+> Makine öğrenimi söz konusu olduğunda, öncelikle denetimli öğrenmeye ve
+> özellikle sınıflandırma görevlerine odaklanacağız. Sınıflandırmada, bir
+> trafik işaretinin fotoğrafı gibi girdiyi gözlemliyoruz ve "sınıf"ını
+> (örneğin, 80 km/s hız sınırı, yaya geçidi, dur işareti vb.) türünü çıkarmaya
+> çalışıyoruz.  Diğer sınıflandırma görevleri örnekleri şunlardır: Sahte
+> Twitter hesaplarının tanımlanması (girdi: takipçilerin listesi ve hesabı
+> takip etme oranı, sınıf: sahte ya da gerçek hesap) ve el yazısıyla yazılmış
+> rakam tanıma (girdi: görüntü, sınıf: 0, ..., 9).
+
+![YZ 101 4 1 Denetimli Öğrenme](/assets/img/yz-101-4-1-denetimli-ogrenme.png "YZ 101 4 1 Denetimli Öğrenme")
+
+#### İnsanlar makineleri eğitiyor: Denetimli öğrenme
+
+Sınıflandırmayı yapmak için kesin kuralları elle yazmak yerine denetimli
+makine öğreniminin amacı; bir dizi örnek almak, her birini doğru etiketle
+etiketlemek ve doğru etiketi otomatik olarak tanımak için bir Yapay Zeka
+yöntemini "eğitmek" üzere kullanmak, eğitim örneklerinin yanı sıra başka
+herhangi bir görüntüyü otomatik olarak tanıması beklemektir. Bu, elbette doğru
+etiketlerin sağlanmasını gerektirir, bu yüzden denetimli öğrenim hakkında
+konuşuyoruz. Doğru etiketleri veren kullanıcı, öğrenme algoritmasını doğru
+cevaplara yönlendiren bir denetleyici olup, sonuçta algoritma bağımsız olarak
+bunları üretebilir.
+
+Bir sınıflandırma probleminde doğru etiketin nasıl tahmin edileceğinin
+öğrenilmesine ek olarak, denetimli öğrenme, öngörülen sonucun bir sayı olduğu
+durumlarda da kullanılabilir. Reklam içeriğine ve kullanıcının önceki
+çevrimiçi davranışıyla ilgili verilere dayanarak, bir Google reklamını
+tıklayacak kullanıcıların sayısını tahmin etme, yol koşullarına ve hız
+sınırına göre trafik kazalarının sayısını tahmin etme veya konumuna,
+büyüklüğüne veya durumuna bakarak emlak satış fiyatını tahmin etme. Bu
+problemlere regresyon (indirgeme) denir. Muhtemelen regresyon (indirgeme) için
+klasik, hala çok popüler bir teknik olan lineer regresyon (indirgeme) terimini
+tanırsınız.
+
+> **Not**
+>
+> **Örnek**
+>
+> Apartman satış verilerinden oluşan bir veri setimiz olduğunu varsayalım: Her
+> bir satın alım için, açıkça ödenen fiyat, dairenin metrekare
+> (feetkare)büyüklüğü ile birlikte yatak odası sayısı, yapım yılı, durumu
+> ("döküntü"den "gıcır"a kadar ölçeklendirin) var. Daha sonra, bu özellikleri
+> temel alarak satış fiyatını tahmin eden bir regresyon (indirgeme) modelini
+> eğitmek için makine öğrenimini kullanabiliriz. Burada gerçek bir örnek var:
+> [Tık!](http://kannattaakokauppa.fi/#/en/)
+
+![YZ 101 4 1 Emlak Satışı Regresyonu](/assets/img/yz-101-4-1-emlak-satisi-regresyonu.png "YZ 101 4 1 Emlak Satışı Regresyonu")
+
+#### Caveat: Bu makine öğrenimi algoritmasına dikkat edin
+
+Farkında olmanızı istediğimiz birkaç potansiyel hata var. Makine öğrenim
+yöntemlerinde, uyguladığınız yönteme dikkat etmedikçe, tahminlerinizin
+doğruluğu konusunda çok emin olamayabilirsiniz. Doğruluk durumu beklenenden
+daha kötü olduğu zaman ağır bir şekilde hayal kırıklığına uğramış
+olabilirsiniz.
+
+Büyük hataları önlemek için akılda tutulması gereken ilk şey, veri setinizi
+iki bölüme ayırmaktır: **Eğitim verileri** ve **test verileri**. İlk önce
+algoritmayı sadece eğitim verilerini kullanarak eğitiyoruz. Bu bize, çıktıyı
+girdi değişkenlerine dayanarak tahmin eden bir model veya bir kural verir.
+
+Çıktıları gerçekten ne kadar iyi tahmin edebileceğimizi değerlendirmek için,
+eğitim verilerine güvenemeyiz. Bir modelin eğitim verilerinde çok iyi
+belirleyici olabilmesi, başka herhangi bir veriye **genellenebileceğinin** bir
+kanıtı değildir. Test verilerinin kullanışlı olduğu yer burasıdır: Test
+verilerinin çıktılarını tahmin etmek ve tahminleri gerçek çıktılarla (örneğin,
+gelecekteki daire satış fiyatları) karşılaştırmak için eğitimli modeli
+uygulayabiliriz.
+
+> **Not**
+>
+> **Doğru olmak için çok uygun! Aşırı uygun uyarısı**
+>
+> Makine öğrenimi ile eğitilen bir tahmin edicinin doğruluğunun, eğitim
+> verilerinde ve ayrı test verilerinde oldukça farklı olabileceğini akılda
+> tutmak çok önemlidir. Bu, **overfitting** fenomeni olarak adlandırılan bir
+> olaydır ve bir çok makine öğrenimi araştırması, bir şekilde veya bundan
+> kaçınmak üzerine odaklanmıştır. Sezgisel olarak, overfitting, çok akıllı
+> olmaya çalışıyor demektir. Bilinen bir sanatçı tarafından yapılan yeni bir
+> şarkının başarısını tahmin ederken, sanatçının önceki şarkılarının siciline
+> bakabilir ve "eğer şarkı aşktan ibaretse ve akılda kalıcı bir koro
+> içeriyorsa en iyi 20 listesine girer" gibi bir kuralla ortaya
+> çıkabilirsiniz. Bununla birlikte, belki de akılda kalan akorları olan iki
+> aşk şarkısı en iyi 20'ye girememiştir, bu yüzden kuralınızı devam ettirmeye
+> karar verirsiniz. Bu, kuralınızın geçmiş verilere tam olarak uymasını
+> sağlayabilir ancak **gelecekteki test verileri üzerinde daha kötü**
+> çalışmasını sağlayabilir.
+>
+> Makine öğrenim metotları, overfitting'e özellikle yatkındır, çünkü eğitim
+> verilerine mükemmel uyan birini bulana kadar kadar çok sayıda farklı "kural"
+> deneyebilirler. Özellikle çok esnek olan ve verideki hemen hemen her desene
+> uyarlanabilen yöntemler, veri miktarı çok büyük olmadıkça aşırıya kaçabilir.
+> Örneğin, doğrusal regresyon (indirgeme) ile elde edilen oldukça sınırlı
+> doğrusal modellerle karşılaştırıldığında, sinir ağları güvenilir tahmin
+> üretmeden önce büyük miktarlarda veri gerektirebilir.
+
+Aşırı uyumdan (overfitting) kaçınarak öğrenme ve çok kısıtlı veya çok esnek
+olmayan bir model seçme, bir veri bilimcisinin en önemli becerilerinden
+biridir.
+
+#### Öğretmen olmadan öğrenme: Denetimsiz öğrenme
+
+Yukarıda doğru cevapların olduğu yerlerde denetimli öğrenmeyi ele aldık ve
+makine öğrenimi algoritmasının görevi, bunları giriş verilerine dayanarak
+tahmin eden bir model bulmaktır.
+
+Denetimsiz öğrenmede doğru cevaplar verilmez. Bu durum, durumu oldukça farklı
+kılmaktadır çünkü eğitim verilerindeki doğru cevaplara uydurarak modeli
+kuramayız. Ayrıca bu, öğrenilen modelin iyi olup olmadığını kontrol
+edemediğimizden, performansın değerlendirmesini daha karmaşık hale getirir.
+
+Tipik denetimsiz öğrenme yöntemleri, verilerin altında yatan bir tür "yapı"
+öğrenmeye çalışır. Bu, örneğin, benzer öğelerin birbirine yakın ve benzer
+olmayan öğelerin birbirinden daha uzağa yerleştirildiği **görselleştirme**
+anlamına gelebilir. Birbirine benzer ancak diğer kümelerdeki verilerden farklı
+olan öğe gruplarını veya "kümelerini" tanımlamak için verileri kullandığımız
+yerlerde **kümeleme** anlamına da gelebilir.
+
+> **Not**
+>
+> **Örnek**
+>
+> Somut bir örnek olarak, market zincirleri müşterilerinin alışveriş
+> davranışları hakkında veri toplar (bu yüzden tüm bu sadakat kartlarına
+> sahipsiniz). Müşterilerini daha iyi anlamak için mağaza, her müşterinin bir
+> nokta ile temsil edildiği bir grafik kullanarak verileri görselleştirebilir
+> ve aynı ürünleri satın alma eğiliminde olan müşteriler, farklı ürünleri
+> satın alan müşterilerden daha yakın bir yere yerleştirilir. Ya da, mağaza,
+> "düşük bütçeli sağlık gıda meraklıları", "üst düzey balık severler",
+> "haftada 6 gün" ve "haftada bir pizza" gibi bir dizi müşteri grubu elde
+> etmek için kümelenme uygulayabilir. Makine öğrenim yönteminin müşterileri
+> yalnızca gruplar halinde gruplandıracağını ancak otomatik olarak küme
+> etiketlerini ("balık severler") oluşturmayacağını unutmayın. Bu görev
+> kullanıcı için bırakılacaktır.
+
+Denetimsiz öğrenmenin bir başka örneği, üretken modelleme (generative
+modeling) olarak adlandırılabilir. Son birkaç yıldan beri, derinlemesine bir
+öğrenme tekniği olan ve Generative Adversarial Networks (GAN) olarak
+adlandırılan teknik, büyük ilerlemelere yol açtığı için önemli bir yaklaşım
+haline gelmiştir.  Örneğin, insanların yüzlerinin fotoğrafları gibi bazı
+veriler verildiğinde, generatif bir model, insanların yüzlerinin daha gerçekçi
+ama yapay görüntülerini üretebilir.
+
+GAN'lara ve derste biraz daha kaliteli yapay görüntü içeriği üretmenin
+etkilerine geri döneceğiz ancak daha sonra denetimli öğrenmeye daha yakından
+bakacağız ve bazı özel yöntemleri daha ayrıntılı olarak ele alacağız.
+
+---
+
+### 4.2. En yakın komşu sınıflandırıcısı
+
+En yakın komşu sınıflandırıcısı mümkün olan en basit sınıflandırıcılar
+arasındadır. Sınıflandırılacak bir öğe verildiğinde, yeni öğeye en çok
+benzeyen eğitim verileri öğesini bulur ve etiketini çıkarır.
+
+![YZ 101 4 2 En Yakın Komşu Diyagramı](/assets/img/yz-101-4-2-en-yakin-komsu-diyagram.png "YZ 101 4 2 En Yakın Komşu Diyagramı")
+
+Yukarıdaki diyagramda, bazıları bir sınıfa (yeşil) ve diğeri başka bir sınıfa
+(mavi) ait olan eğitim veri öğelerinin bir koleksiyonunu gösteriyoruz. Ek
+olarak, en yakın komşu yöntemini kullanarak sınıflandıracağımız iki test
+verisi maddesi ve yıldızlar vardır.
+
+İki test öğesinin her ikisi de "yeşil" sınıfında sınıflandırılır çünkü en
+yakın komşularının her ikisi de yeşildir (bkz. Diyagram (b)).
+
+Noktaların konumu, bir şekilde eşyaların özelliklerini temsil eder. Çizim eğer
+düz iki boyutlu bir yüzey üzerinde çizilmişse -ki iki bağımsız yönde hareket
+edebilirsiniz: Yukarı-aşağı veya sol-sağ- öğeler karşılaştırma için
+kullanabileceğimiz iki özelliğe sahiptir. Örneğin, çizimin, bir kliniğin
+hastalarını, yaş ve kan şekeri seviyesi açısından temsil ettiğini düşünün.
+Fakat çizim, sınıfsal değerleri benzerlik (similarity) veya yakınlık
+(proximity) ile ilişkilendirmek olan genel düşünceyi göstermek için görsel bir
+araç olarak ele alınmalıdır.  Genel fikir hiçbir şekilde iki boyutla
+sınırlandırılmamıştır ve en yakın komşu sınıflandırıcı ikiden daha fazla
+özellik ile karakterize edilen öğelere kolayca uygulanabilir.
+
+#### "En yakın" demekle neyi kastederiz?
+
+En yakın komşu sınıflandırıcısı ile ilgili ilginç bir soru (diğerlerinin
+yanında), örnekler arasındaki uzaklık veya benzerliğin tanımıdır. İki boyutta
+çizilmiş bir örnekte, teknik olarak Öklid mesafesi olarak adlandırılan
+standart geometrik mesafenin kullanıldığı zımnen kabul edildi. Bu, eğer
+noktalar bir kâğıt parçası üzerine çizilirse (veya ekranınızda
+görüntülenirse), herhangi bir iki parçanın arasındaki mesafeyi bir parçadan
+diğerine doğru çekerek ve uzunluğunu ölçerek ölçebilirsiniz.
+
+> **Not**
+>
+> **"En yakın" kelimesini tanımlamak**
+>
+> En yakın öğenin hangisi olduğuna karar vermek için geometrik mesafeyi
+> kullanmak her zaman makul ve hatta mümkün olmayabilir: Girdi türü, örneğin,
+> öğelerin geometrik bir gösterimde nasıl çekildiği ve hangi mesafelerın nasıl
+> ölçüldüğü net değildir. Bu nedenle, ayrı ayrı her vaka için mesafe bazında
+> seçim yapmalısınız.
+
+MNIST rakam tanıma işinde, görüntü benzerliğini ölçmenin ortak bir yolu
+piksel-piksel eşleşmeleri saymaktır. Diğer bir deyişle, her görüntünün sol üst
+köşesindeki pikselleri birbiriyle karşılaştırırız ve hangisi gri tonlamada
+daha benzer renk ise, iki görüntü diğerlerine göre daha benzer olur. Ayrıca,
+her görüntünün sağ alt köşesindeki ve tüm piksellerin arasındaki pikselleri de
+karşılaştırırız. Bu teknik, görüntüleri değiştirmeye veya ölçeklemeye oldukça
+duyarlıdır: Eğer '1' imgesini alırsak ve ya sola ya da sağa hafif kaydırırsak,
+sonuç iki görüntü (kaydırmadan önce ve sonra) çok farklıdır. Çünkü siyah
+pikseller iki resimde farklı konumlardadır. Neyse ki, MNIST verileri
+görüntülerin ortalanmasıyla ön-işleme tabi tutuldu ve böylece bu sorun
+hafifletildi.
+
+![YZ 101 4 2 Müzik Onerme](/assets/img/yz-101-4-2-muzik-onerme.png "YZ 101 4 2 Müzik Onerme")
+
+#### Kullanıcı davranışını tahmin etmek için en yakın komşuları kullanma
+
+En yakın komşu yönteminin bir uygulamasının tipik bir örneği, tavsiye
+sistemleri gibi Yapay Zeka uygulamalarında kullanıcı davranışını tahmin
+etmektir.
+
+Buradaki fikir, benzer geçmiş davranışa sahip kullanıcıların benzer
+gelecekteki davranışlara sahip olmaları çok basit bir ilkeyi kullanmaktır.
+Kullanıcıların dinleme davranışları hakkında veri toplayan bir müzik önerisi
+sistemi düşünün. 1980'lerin disko müziğini dinlediniz varsayalım. Bir gün,
+servis sağlayıcı, bulması zor bir 1980 disko klasiği alır ve müzik
+kütüphanesine ekler. Sistem şimdi beğenip beğenmeyeceğinizi tahmin etmelidir.
+Bunu yapmanın bir yolu, hizmet sağlayıcının çalışanları tarafından girilen
+tür, sanatçı ve diğer meta veri bilgilerini kullanmaktır. Ancak, bu bilgi
+nispeten azdır ve kabadır ve sadece kaba tahminler verebilecektir.
+
+Öneri sistemleri, el ile girilen meta veriler yerine, işbirlikçi filtreleme
+adı verilen bir şeyi kullanır. İşbirlikçinin bakış açısı, tercihlerinizi
+tahmin etmek için diğer kullanıcıların verilerini kullanmasıdır. "Filtre"
+kelimesi, yalnızca bir filtreden geçen içeriğin önerileceği gerçeğini ifade
+eder: Keyif alacağınız içerikler geçecek, diğer içerikler olmayacaktır. (Bu
+tür filtreler, Bölüm 1'de bahsettiğimiz filtre filtre balonlarına yol
+açabilir. Daha sonra onlara geri döneceğiz.)
+
+Şimdi, 80'lerin disko müziğini dinleyen diğer kullanıcıların yeni içeriğin
+tadını çıkardığını ve tekrar tekrar dinlemeye devam ettiğini söyleyebiliriz.
+Sistem, sizin ve diğer 80'ler disko fanatiklerinin paylaştığı geçmiş
+davranışları tanımlayacak ve sizin gibi diğer kullanıcılar yeni içerikten
+keyif aldıklarından, sistem sizin de onlarla aynı olacağınızı öngörecektir.
+Bu nedenle öneri listesinin en üstünde görünecektir. Alternatif bir
+gerçeklikte, belki de eklenen şarkı çok ta iyi değildir ve sizinkiyle benzer
+geçmiş davranışları olan diğer kullanıcılar gerçekten beğenmez. Bu durumda,
+sistem size tavsiyede bulunmaktan geri kalmaz, ya da en azından sizin için
+öneriler listesinin en üstünde olmaz.
+
+Sıradaki alıştırma bu fikri anlatacak.
+
+#### Alıştırma 14: Benzer ürünleri satın alan müşteriler
+
+Bu alıştırmada, çevrimiçi bir alışveriş uygulaması için, kullanıcıların satın
+alma geçmişinin kaydedildiği ve kullanıcının daha sonra hangi ürünleri satın
+alacağını tahmin etmek için kullanıldığı basit bir öneri sistemi
+oluşturacağız.
+
+Altı kullanıcıdan veri aldık. Her bir kullanıcı için, son dört ürünün
+alışveriş geçmişini ve bu dört öğeyi satın aldıktan sonra satın aldıkları
+öğeyi kaydettik:
+
+**Kullanıcı**|**Alışveriş Geçmişi ...**|**...**|**...**|**...**|**Alışveriş**
+|---|---|---|---|---|---|
+Sanni|box eldiveni|Moby Dick (Roman)|kulaklık|güneş gözlüğü|kahve çekirdeği
+Jouni|tişört|kahve çekirdeği|kahve yapıcı|kahve çekirdeği|kahve çekirdeği
+Janina|güneş gözlüğü|spor ayakkabı|tişört|spor ayakkabı|örme yün çorap
+Henrik|2001: A Space Odyssey (dvd)|kulaklık|tişört|box eldiveni|parmak arası terlik
+Ville|tişört|parmak arası terlik|güneş gözlüğü|Moby Dick (Roman)|güneş kremi
+Teemu|Moby Dick (Roman)|kahve çekirdeği|2001: A Space Odyssey (dvd)|kulaklık|kahve çekirdeği
+
+En son satın alma, en sağdaki sütundakidir, bu nedenle, örneğin Ville, bir
+tişört, parmak arası terlik, güneş gözlüğü ve Moby Dick (roman) satın aldıktan
+sonra, güneş kremi satın aldı. Hipotezimiz, benzer ürünleri satın aldıktan
+sonra, diğer kullanıcıların da güneş kremi satın alma olasılığının yüksek
+olmasıdır.
+
+En yakın komşu yöntemini uygulamak için, en yakın ile ne demek istediğimizi
+tanımlamamız gerekir. Bu, bazıları diğerlerinden daha iyi çalışan birçok
+farklı şekilde yapılabilir. Her iki kullanıcı tarafından da kaç öğenin satın
+alındığını sayarak benzerliği ("yakınlık") tanımlamak için alışveriş geçmişini
+kullanalım.
+
+Örneğin, Ville ve Henrik kullanıcıları bir tişört satın almışlardır, bu
+nedenle benzerlikleri 1'dir. Benzerliği hesaplarken en son satın alma işlemini
+dahil etmediğimiz için parmak arası terliklerin sayılmadığını unutmayın. O
+başka bir amaç için ayrılmıştır .
+
+Görevimiz, aşağıdaki ürünleri satın alan müşteri Travis'in bit sonraki alımını
+tahmin etmektir:
+
+**Kullanıcı**|**Alışveriş Geçmişi ...**|**...**|**...**|**...**|**Alışveriş**
+|---|---|---|---|---|---|
+Travis|yeşil çay|tişört|güneş gözlüğü| parmak arası terlik|**?**
+
+Travis'in test verimiz olduğunu düşünebilirsiniz. Yukarıdaki altı kullanıcı
+bizim eğitim verilerimizi oluşturuyor.
+
+Aşağıdaki gibi ilerleyin:
+
+1. Eğitim verilerindeki altı kullanıcıya göre Travis'in benzerliğini
+   hesaplayın (kullanıcılar tarafından yapılan benzer satın alma sayısını bir
+   araya getirerek yapılır).
+
+2. Benzerlikleri hesapladıktan sonra, hesaplanan benzerliklerden en genişini
+   seçerek Travis'e en çok benzeyen kullanıcıyı belirleyin.
+
+3. Önceki adımdan en çok benzer kullanıcının yaptığı en son satın alma
+   işlemine (tablodaki en sağdaki sütun) bakarak Travis'in bundan sonra ne
+   satın alacağını tahmin edin.
+
+**Sorular:**
+
++ Travis'e en çok benzeyen kullanıcı kimdir?
+
+**Cevap:** Ville
+
+Travis ve diğer tüm kullanıcılar arasındaki benzerlikleri hesapladığınızda,
+Ville, benzerlik seviyesi 3'le en geniş benzerliktedir.
+
++ Travis'in alışveriş tahmini nedir?
+
+**Cevap:** güneş kremi
+
+Çünkü Ville'nin son alışverişi güneş kremi olduğu için Travis'e de onu
+önereceğiz.
+
+![YZ 101 4 2 Benzer Alışverişler](/assets/img/yz-101-4-2-benzer-alisverisler.png "YZ 101 4 2 Benzer Alışverişler")
+
+Yukarıdaki örnekte, sadece altı kullanıcı verisine sahiptik ve tahminimiz
+muhtemelen çok güvenilmezdi. Ancak, çevrimiçi alışveriş sitelerinin genellikle
+milyonlarca kullanıcısı vardır ve ürettikleri veri miktarı çok fazladır. Çoğu
+durumda, geçmiş davranışları sizinkine çok benzeyen ve satın alma geçmişi ilgi
+alanlarınıza ilişkin oldukça iyi bir gösterge veren bir grup kullanıcı vardır.
+
+Bu tahminler, sistem tarafından size tavsiye edilirse bir ürün satın alma
+olasılığınızın daha yüksek olması anlamında kendi kendini gerçekleştiren
+kehanetler de olabilir, bu da aslında ne kadar iyi çalıştığını değerlendirmeyi
+zorlaştırır. Aynı tür öneri sistemleri, kullanıcılara müzik, film, haber ve
+sosyal medya içeriği önermek için de kullanılır. Haberler ve sosyal medya
+bağlamında, bu tür sistemler tarafından oluşturulan filtreler, filtre
+balonlarına yol açabilir.
+
+#### Alıştırma 15: Filtre balonları
+
+Yukarıda tartışıldığı gibi, bir kullanıcının tıklaması veya beğenmesi muhtemel
+olan haberleri veya sosyal medya içeriğini önermek, kullanıcıların yalnızca
+kendi değerleri ve görünümleriyle uyumlu içeriği gördüğü filtre balonlarına
+yol açabilir.
+
+1. Filtre baloncuklarının zararlı olduğunu düşünüyor musunuz? Sonuçta,
+   kullanıcının beğeneceği içerik önerilerek oluşturulurlar. Varsa, filtre
+   balonları ile ilişkilendirilebilecek olumsuz sonuçlar nelerdir? Diğer
+   kaynaklardan daha fazla bilgi almaktan çekinmeyin.
+
+2. Kişisel tercihlerinize uygun içerik önerildiğinde, filtre baloncuklarından
+   kaçınmanın yollarını düşünün. En az bir öneri ile gelin. Diğer kaynaklardan
+   fikirler arayabilirsiniz ancak kendi fikirlerinizi de duymak isteriz!
+
+**Not:** Cevabınız her bölüm için en az birkaç cümle olmalıdır.
+
+**Cevabım:**
+
+> Gözetleyicileri kim gözetliyor? Who watches the watchmen?
+>> Watchmen
+>
+> Koruyuculardan kim koruyacak? Quis custodiet ipsos custodes?
+>> Decimus Junius Juvenalis(!) (Romalı Şair)
+
+"Gözetleyicileri kim gözetliyor?", Alan Moore'un ünlü çizgi romanı Watchmen'de
+geçiyor. Watchmen adlı süper kahraman ekibini protesto etmek için insanların
+duvarlara yazdığı bir slogan. Daha sonra süper kahramanın kimliğini ortaya
+çıkarmak ve gazete manşetlerine taşımak için yasalar çıkaran kampanyanın ilk
+cümlesi. Sonuç olarak, Wathcmen mürettebatı, birkaçı dışında, devletin
+kontrolüne giriyor ve devletin baskı aygıtı olarak kariyerine devam ediyor.
+
+İnternet her an gelişen inanılmaz bir şey. Sitelerin kullanıcı deneyimini
+iyileştirmek için geliştirdiği algoritmalar sayesinde daha uygun(!) içeriğe
+erişiyoruz.
+
+Eli Pariser, İnternette filtre balonları ile çevrili olduğumuzu; bize
+gösterilenlerin tam olarak nasıl seçildiğini bilmediğimizi, onu kontrol
+edemediğimizi ve daha da kötüsü, seçmediğimiz içerikle dünyayla bağlantı
+kurduğumuzu söylüyor.
+
+Web siteleri, iznimizle veya iznimiz olmadan bizden topladıkları bilgileri
+kararlarımızı etkilemek için kullanırsa ne olur? Bu distopi ile nasıl başa
+çıkacağız? Bkz. Facebook, Cambridge Analytica Skandalı
+
+**Eğitimin örnek cevabı:**
+
+Bu tür filtreler kullanışlıdır. Sevdiğimiz müzik gibi içerikleri tavsiye
+ediyorlar. Kullanıcıların gerçeklere ve fikirlere karşı önyargılı bir bakış
+açısı kazandığı balon fenomeni ise açıkça zararlıdır. "Alternatif gerçekler"
+yoktur -bir olgunun alternatifi gerçek değildir- ancak bilgi her zaman bir
+bakış açısıyla sunulur. Birden fazla bakış açısına maruz kalmazsak, kolayca
+önyargılı bir dünya görüşüne sahip olabiliriz.
+
+Filtre balonlarından tamamen kurtulmak muhtemelen iyi bir fikir değildir.
+Sonuçta, her zaman farklı şeyleri sevdik ve farklı şeylere ilgi duyduk. Basılı
+medya günlerinde, okuduğumuz gazete, balonun çok küçülmemesini sağlayan filtre
+balonumuzdu.
+
+Filtre baloncuklarının zararlı etkilerinden kaçınmanın ilk adımının, ne zaman
+balonun içinde olduğumuzu fark etmek olduğuna inanıyoruz. Bu amaçla,
+kullandığımız uygulamaların, gördüğümüz önerilerin içeriğe yönelik dengeli bir
+genel görünümü temsil etmediğini açıkça belirtmesi yararlıdır. Bu,
+kullanıcının içeriği bir öneri listesinden başka görünümler yoluyla da
+keşfetmesine izin vererek başarılabilir. Spotify'da türüne göre müzik
+seçebilirsiniz ve Netflix ve HBO çeşitli farklı kategorilerde öneriler sunar.
+
+---
+
+### 4.3. İndirgeme (Regression)
+
+Bu bölümdeki ana öğrenme hedefimiz, gözetimli öğrenme yöntemlerinin güzel bir
+örneğidir ve neredeyse en yakın komşu sınıflandırıcısı kadar basittir:
+Doğrusal regresyon (indirgeme). Yakın kuzeni, lojistik regresyonu (indirgeme)
+da tanıtacağız.
+
+> **Not**
+>
+> **Sınıflandırma ve regresyon (indirgeme) arasındaki fark**
+>
+> Farklı senaryolarda üretmemiz gereken tahmin türlerinde küçük ama önemli bir
+> fark var. Örneğin, en yakın komşu sınıflandırıcısı, belirli bir
+> alternatifler dizisi (spam/ham mail veya 0, 1, 2, ..., 9) dışındaki herhangi
+> bir öğe için bir sınıf etiketi seçerken, lineer regresyon (indirgeme),
+> sayısal olmayan bir tahmin üretir. Tamsayı olarak yapılandırılmamıştır (3.14
+> gibi olur). Bu nedenle lineer regresyon (indirgeme), çıktı değişkeninin; bir
+> ürünün fiyatı, bir engele olan mesafe, bir sonraki Star Wars filminin gişe
+> hasılatı gibi rakamsal olduğu durumlarda daha uygundur.
+
+Doğrusal regresyondaki (indirgeme) temel fikir, tahmin edilen değeri üretmek
+için özellik değişkenlerinin her birinin etkilerini eklemektir. Ekleme işlemi
+için teknik terim doğrusal kombinasyondur (lineer combination). Fikir çok
+basit ve alışveriş faturanızla gösterilebilir.
+
+> **Not**
+>
+> **Alışveriş faturasının doğrusal regresyon (indirgeme) olarak düşünülmesi**
+>
+> Markete gidip 2.5kg patates, 1.0kg havuç ve iki şişe süt aldığınızı
+> varsayalım. Patates fiyatı kg başına 2€ ise, havuç fiyatı kg başına 4€, ve
+> bir şişe süt 3€ ise , daha sonra kasiyer tarafından hesaplanan fatura, 2.5 ×
+> 2€ + 1.0 × 4€ + 2 × 3€ = 15€ olur. Doğrusal regresyonda (indirgeme),
+> patates, havuç ve süt miktarı verilerdeki girdilerdir. Çıktı,
+> alışverişinizin maliyeti olup, bu fiyat hem satın aldığınız ürüne hem de
+> ürünün fiyatına bağlıdır.
+
+"Doğrusal" sözcüğü, bir girdi özelliğinin bazı sabit miktarlarla artırılması
+durumunda çıkıştaki artışın her zaman aynı olduğu anlamına gelir. Diğer bir
+deyişle, alışveriş sepetinize iki kilo havuç eklediğinizde fatura 8€ artar.
+İki kilo daha eklediğinizde, fatura 8€ daha yükselir. 1kg eklerseniz, fatura
+4€ artar.
+
+> **Anahtar Terminoloji**
+>
+> **Katsayılar veya ağırlıklar**
+>
+> Doğrusal regresyon (indirgeme) terminolojisinde, farklı ürünlerin fiyatları
+> katsayılar veya ağırlıklar olarak adlandırılacaktır (Bu, patates ve havuç
+> miktarını ağırlığa göre ölçtüğümüz için kafa karıştırıcı görünebilir ancak
+> bununla kandırılmanıza müsade etmeyin). Doğrusal regresyonun (indirgeme)
+> temel avantajlarından biri kolay yorumlanabilirliğidir: Öğrenilen ağırlıklar
+> aslında çıktı tahminlerinden daha ilginç olabilir.
+>
+> Örneğin, yaşam beklentisini tahmin etmek için lineer regresyon (indirgeme)
+> kullandığımızda, her bir sigaranın ağırlığı, yaklaşık yarım yıldan biraz
+> daha azdır, yani günde bir sigara daha fazla sigara içmeniz, sizi ölüme
+> yarım yıl kadar daha yaklaştırır. Aynı şekilde, sebze tüketiminin ağırlığı
+> (günde avuç dolusu yeşilliğin ağırlığı) bir yıl artıdır, bu nedenle bir avuç
+> dolusu yeşillik yemek her gün ortalama bir yıl verir.
+
+#### Alıştırma 16: Lineer Regresyon
+
+Kapsamlı bir çalışmanın gerçekleştirildiğini ve herhangi bir ülkede, sigara
+içmeyen, hiç sebze yemeyen kadınlar arasında yaşam beklentisinin (insanların
+yaşadığı ortalama yıl) 80 yıl olduğunu düşünelim. Dahası, ortalama olarak,
+erkeklerin 5 yıl daha az yaşadığını varsayalım. Ayrıca yukarıda belirtilen
+sayıları da alınız: Günde her bir sigara, yaşam beklentisini yarım yıl azaltır
+ve günde bir avuç sebze bir yıl artırır.
+
+Aşağıdaki örnek durumlar için yaşam beklentisini hesaplayınız:
+
+Örneğin, bir erkek (5 yıl çıkar), günde 8 sigara içiyor (8 × 0,5 = 4 yıl
+çıkarır) ve günde iki avuç sebze yiyor (2 × 1 = 2 yıl ekler). Beklenen yaşam
+beklentisi 80 - 5 - 4 + 2 = 73 yıldır.
+
+**Cinsiyet**|**Sigara (Adet/Gün)**|**Meyve (Avuç Dolusu/Gün)**|**Yaşam beklentisi (Yıl)**
+|---|---|---|---|
+erkek|8|2|73
+erkek|0|6|**A**
+kadın|16|1|**B**
+kadın|0|4|**C**
+
+**Göreviniz:** Doğru değeri sayı olarak giriniz.
+
+A: 81 (= 80 -5 + 6)
+
+B: 73 (= 80- 8 +1)
+
+C: 84 (= 80 + 4)
+
+Yukarıdaki alıştırmada, sigara içmeyen, sebzeden nefret eden eden kadınların
+yaşam beklentisi, 80 yıl, hesaplama için başlangıç noktasıydı. Başlangıç
+noktası için teknik terim **kesişme noktasıdır (intercept)**. Verilerden
+doğrusal regresyon (indirgeme) modellerinin nasıl öğrenileceğini aşağıda
+tartıştığımızda buna döneceğiz.
+
+#### Doğrusal regresyonun (indirgeme) öğrenilmesi
+
+Yukarıda, hem ağırlıklar hem de girdi özellikleri bilindiğinde, tahminlerin
+doğrusal regresyondan (indirgeme) nasıl elde edildiğini tartıştık. Böylece
+girdiler ve ağırlık verip, tahmin edilen çıktıyı üretebiliriz.
+
+Birkaç öğe için girdiler ve çıktılar verildiğinde, öngörülen çıktının gerçek
+çıktı ile mümkün olduğu kadar eşleşeceği ağırlıkları bulabiliriz. Bu, makine
+öğrenimi tarafından çözülen görevdir.
+
+> **Not**
+>
+> **Örnek**
+>
+> Alışverişe benzetmeye devam ederken, bir dizi alışveriş sepetinin ve her
+> birinin toplam faturasının içeriğine sahip olduğumuzu ve ürünlerin (patates,
+> havuç vb.) her birinin fiyatını belirlememiz istendiğini varsayalım. Bir
+> sepette 1kg sığır filetosu, 2kg havuç ve bir şişe Chianti olduğunu ve toplam
+> faturanın 35€ olduğunu bilseydik bile fiyatları belirleyemezdik çünkü aynı
+> toplam faturayı verecek fiyatları belirleyecek pek çok fiyat var. Bununla
+> birlikte, birçok sepetle, genellikle sorunu çözebiliriz.
+
+Ancak, gerçek dünyada, gerçek çıktı, her zaman, girdi tarafından belirsizliğin
+veya "gürültünün" ortaya çıkmasına neden olan çeşitli faktörler nedeniyle her
+zaman tam olarak belirlenemeyeceği gerçeğiyle zorlaşmaktadır. Herhangi bir
+ürün için fiyatların zaman zaman değişebileceği bir çarşıda ya da nihai
+hasarın değişken bir miktarda bahşiş içerdiği bir lokantada alışveriş yapmayı
+düşünebilirsiniz. Bu gibi durumlarda fiyatları tahmin edebiliriz ancak sadece
+sınırlı bir doğrulukla yapabiliriz.
+
+Antrenman verilerindeki tahmin edilen ve gerçek çıktılar arasındaki eşleşmeyi
+optimize eden ağırlıkları bulmak, 1800'lere dayanan klasik bir istatistik
+problemdir ve kitlesel veri setleri için bile kolayca çözülebilir.
+
+Klasik en küçük kareler tekniği veya bunun gibi basit gerçek ağırlık bulma
+algoritmalarının ayrıntılarına dalmayacağız ancak aşağıdaki alıştırmalarda
+verilerdeki trendleri buluyor hissi duyabilirsiniz.
+
+#### Lineer regresyonun (indirgeme) görselleştirilmesi
+
+Doğrusal regresyonun (indirgeme) bize anlatacaklarını anlamanın iyi bir yolu,
+verilerimizi ve regresyon (indirgeme) sonuçlarımızı içeren bir grafik
+çizmektir. Basit bir örnek olarak, veri setimizde bir değişken, bir çalışanın
+günlük olarak içtiği kahve sayısı ve bu çalışan tarafından çıktı olarak günlük
+olarak yazılan kod satırlarının sayısı. Bu, açıkçası gerçek bir veri kümesi
+değildir, bir çalışanın, çalışanın verimliliğini etkileyen başka konmplex
+faktörler de vardır. Kahve miktarını artırmanın üretkenlik artışı yerine çok
+fazla dikkat dağıtması muhtemel.
+
+![YZ 101 4 3 Lineer Regresyon Kahve Kod](/assets/img/yz-101-4-3-lineer-regresyon-kahve-kod.jpg "YZ 101 4 3 Lineer Regresyon Kahve Kod")
+
+Verilerimizi yukarıdaki grafikte bir noktanın bir çalışanı temsil ettiği
+noktalar olarak sunduğumuzda, açıkça daha fazla kahve içmenin daha fazla kod
+satırının yazılmasına yol açtığı şeklinde bir eğilim olduğunu görebiliriz
+(bunun tamamen uydurma veriler olduğunu hatırlayın). Bu veri setinden kahve
+tüketimiyle ilgili katsayı veya ağırlığı öğrenebiliriz ve bunun 5'e yakın bir
+yerde olduğunu söyleyebiliriz, çünkü tüketilen her kahve için programlanan
+satır sayısı kabaca beş sayı artar. Örneğin, günde yaklaşık iki fincan kahve
+içen çalışanlar günde yaklaşık 20 satır kod üretiyor gibi görünüyor ve benzer
+şekilde dört fincan kahvede üretilen satır sayısı yaklaşık 30'dur.
+
+Ayrıca, hiç kahve içmeyen çalışanların da kod ürettikleri ve grafik tarafından
+bunun yaklaşık on satır gösterildiği ortada. Bu sayı, daha önce bahsettiğimiz
+kesişme terimidir. Kesişme, modeldeki verilerden öğrenilebilen ağırlıklar gibi
+başka bir parametredir. Yaşam beklentisi örneğinde olduğu gibi, giriş
+değişkeninin etkilerini eklemeden önce hesaplamalarımızın başlangıç noktası
+olarak düşünülebilir. Birden fazla değişken varsa, bu örnekte kahve fincanları
+veya bir önceki örnekte sigaralar ve sebzeler keişimdir.
+
+Grafikteki çizgi, en küçük kareler adı verilen gerçek bir doğrusal regresyon
+(indirgeme) tekniğini kullanarak kesişim noktasını ve katsayıyı tahmin
+ettiğimiz sonucumuzu temsil eder. Bu çizgi, girdi kahve fincan sayısı
+olduğunda üretilen satır sayısını tahmin etmek için kullanılabilir. Yalnızca
+kısmi bardaklara (yarım, 1/4 fincan vb.) izin versek bile bir tahmin elde
+edebileceğimizi unutmayın.
+
+#### Alıştırma 17: Yaşam beklentisi ve eğitim (Bölüm 1)
+
+Okulda geçirilen toplam yıl sayısı (okul öncesi ve üniversite arasındaki her
+şey dahil) ile beklenen yaşam süresi arasındaki bağlantıyı inceleyelim.
+Noktalarla temsil edilen bir şekilde görüntülenen üç farklı ülkeden veriler:
+
+![YZ 101 4 3 Lineer Regresyon Okul Ömür 1](/assets/img/yz-101-4-3-lineer-regresyon-okul-omur-1.jpg "YZ 101 4 3 Lineer Regresyon Okul Ömür 1")
+
+Ortalama okulda geçirilen yıl sayısının 10 ve ortalama yaşam süresinin 57 yıl
+olduğu bir ülke, okuldaki ortalama okulda geçirilen yıl sayısının 13 ve
+ortalama yaşam süresinin 53 yıl olduğu bir başka ülke ve ortalama okulda
+geçirilen yıl sayısının 20 olduğu bir ülke ve ortalama yaşam süresinin 80 yıl
+olduğu bir ülke var.
+
+Düz çizginin uç noktalarını, çizgiyi, veri noktalarının eğilimini takip edecek
+şekilde konumlandırmak için sürükleyebilirsiniz. Çizgiyi veri noktalarına tam
+olarak uyduramayacağınızı unutmayın ve bu sorun değil: Veri noktalarının
+bazıları çizginin üstünde ve bazıları da altında yer alır. En önemli kısım,
+çizginin genel eğilimi tanımlamasıdır. (Not: Bu site statik lakin orijinali
+dinamikti: Haliyle ben sizin yerinize çizgiyi çektim, affola. NA)
+
+Çizgiyi konumlandırdıktan sonra, yaşam beklentisini tahmin etmek için
+kullanabilirsiniz.
+
+Veriler göz önüne alındığında, 15 yıllık eğitim almış insanların yaşam
+beklentisi hakkında ne söyleyebilirsiniz? Önemli: Çizgiyi ayarlayarak bir
+yıllık bölümlere kadar belirli bir tahmin elde edebilseniz bile, emin bir
+öngörüde bulunamayabileceğinizi unutmayın. Cevabınızı verirken sınırlı
+miktarda veriyi dikkate alın.
+
++ A: Tam olarak 64 yıl
++ B: Kesinlikle 60-70 yıl arası
++ C: Kesinlikle 70 yıldan az
++ D: Muhtemelen 90 yıldan az
+
+**Cevap:** D: Muhtemelen 90 yıldan az
+
+İmkansız hale getirdiğimiz birkaç veri noktası, yalnızca verilere dayanarak
+yaşam beklentisi hakkında neredeyse her şeyi söyler. Elbette, diğer
+kaynaklardan yaşam beklentisi hakkında çok şey öğrenilebilir ancak yukarıdaki
+tablodaki veriler bunu yapmak için yetersizdir. İlk seçim açıkça çok fazla şey
+ifade etmektir. İkinci ve üçüncü seçenekteki aralıklar muhtemelen geçerli olsa
+da, 'kesinlikle' kelimesi onları haksız kılar. Sıfırdan büyük bir olasılık,
+örneğin 70'den büyük bir değerdir. Dolayısıyla rahat olabileceğimiz tek
+seçenek dördüncü seçimdir.
+
+#### Alıştırma 18: Yaşam beklentisi ve eğitim (Bölüm 2)
+
+Önceki alıştırmada, yalnızca üç ülkeden veri aldık. Tam veri seti, burada bir
+grafikte sunulan 14 farklı ülkeden gelen verilerden oluşmaktadır:
+
+![YZ 101 4 3 Lineer Regresyon Okul Ömür 2](/assets/img/yz-101-4-3-lineer-regresyon-okul-omur-2.jpg "YZ 101 4 3 Lineer Regresyon Okul Ömür 2")
+
+Bu verilere dayanarak, 15 yıl eğitim almış kişilerin yaşam beklentisi
+hakkındaki tahmininiz değişir mi? Öyleyse neden?
+
+Aşağıdaki seçeneklerden hangisi, 15 yıllık eğitim almış kişilerin yaşam
+beklentisine ilişkin tahmininize en uygun olanıdır? Düz çizgi modelini
+yukarıdaki verilere uydurarak doğrulanacağını düşündüğünüz en spesifik
+seçeneği seçin.
+
++ A: Muhtemelen 45-50 yıl arası
++ B: Muhtemelen 50-90 yıl arası
++ C: Muhtemelen 69-71 yıl arası
++ D: Muhtemelen 15-150 yıl arası
+
+**Cevap:** B: Muhtemelen 50-90 yıl arası
+
+Veriler, çok az ülkenin yaşam beklentisinin 50'den az olduğunu ve 12 yıldan
+fazla eğitime sahip veri noktalarının hiçbirinin 50'nin altına düşmediğini
+kuvvetle ortaya koyduğundan, ilk seçim açıkça garip bir tahmin olacaktır. Emin
+olamayız. Tabii ki ancak 45 ila 50 yıl arasındaki yaşam beklentisi bu durumda
+çok beklenmedik olurdu. İkinci seçim doğrudur çünkü genel eğilime uymaktadır
+ve 12 yıldan fazla eğitim almış tüm veri noktaları bu aralığa girer. Üçüncü
+seçenekteki 69 ila 71 yıl aralığı, gerçek değeri pekala içerebilir ancak
+yukarıdaki verilere göre, sonucu bu kadar yüksek bir doğrulukla bildiğinizi
+iddia etmek çok cesur olacaktır. Dördüncü seçeneğin 15 ila 150 yıllık aralığı
+neredeyse kesin olarak gerçek değeri içerecektir ancak çok belirsiz olduğu
+için verilerden öğrenebileceklerimizin zayıf bir özeti olacağını düşünüyoruz.
+
+...
+
+Yukarıdaki alıştırmalarda kullanılanlar gibi çalışmaların nedensel ilişkileri
+belirleyemeyeceği belirtilmelidir. Başka bir deyişle, tek başına bu
+verilerden, eğitim süresinin beklenen yaşam süresini artırmasını; iyi eğitim,
+sağlıklı yaşam tarzı veya başka mekanizmalarla açıklamak imkansız. Aynı
+zamanda yaşam beklentisi ile eğitim arasındaki görünür ilişkinin her ikisini
+de etkileyen temel faktörlerden kaynaklanıp kaynaklanmadığını söylemek de
+imkansız. Örneğin, insanların yüksek eğitimli olma eğiliminde olduğu ülkelerde
+beslenme, sağlık hizmetleri ve güvenliğin de daha iyi olması, yaşam
+beklentisini artırması muhtemeldir. Bu tür basit bir analizle, tahmin için
+faydalı olabilecek ilişkileri belirleyebiliriz.
+
+#### Doğrusal regresyonun (indirgeme) makine öğrenimi uygulamaları
+
+Doğrusal regresyon (indirgeme), birçok Yapay Zeka ve veri bilimi uygulamasının
+gerçekten iş gücü, dolap beygiri, amelesidir (workhorse). Sınırları vardır
+ancak genellikle sadeliği, yorumlanabilirliği ve verimliliği ile eksiklikleri
+telafi edilir. Doğrusal regresyon (indirgeme), birkaç örnek vermek gerekirse
+aşağıdaki problemlerde başarıyla kullanılmıştır:
+
++ İnternet reklamcılığında tıklama oranlarının tahmini
++ Ürünler için perakende talebin tahmini
++ Hollywood filmlerinin gişe gelirlerinin tahmini
++ Yazılım maliyetinin tahmini
++ Sigorta maliyetinin tahmini
++ Suç oranlarının tahmini
++ Emlak fiyatlarının tahmini
+
+#### Etiketleri tahmin etmek için regresyon (indirgeme) kullanabilir miyiz?
+
+Yukarıda tartıştığımız gibi, lineer regresyon (indirgeme) ve en yakın komşu
+metodu farklı tahminler üretmektedir. Doğrusal regresyon (indirgeme), sayısal
+çıktıları verirken en yakın komşu metodu sabit bir alternatifler setinden
+("sınıflar") etiketler üretir.
+
+Doğrusal regresyonun (indirgeme), en yakın komşu metoduna kıyasla daha iyi
+olduğu durum, yorumlanabilirliktir. Bununla ne demek istiyoruz? Bir bakıma, en
+yakın komşu yönteminin ve ürettiği tek bir tahminin yorumlanması kolaydır:
+Sadece en yakın eğitim verisi elemanıdır! Bu doğrudur ancak öğrenilen modelin
+yorumlanabilirliğine gelince, net bir fark vardır. Eğitimli modeli en yakın
+komşularda doğrusal regresyondaki (indirgeme) ağırlıklarla benzer şekilde
+yorumlamak imkansızdır: Öğrenilen model temelde tüm verilerdir ve genellikle
+bize çok fazla içgörü sağlamak için çok büyük ve karmaşıktır. Peki ya en yakın
+komşu etiketleriylele aynı tür çıktıları üreten, ancak doğrusal regresyon
+(indirgeme) gibi yorumlanabilen bir yönteme sahip olmak istersek?
+
+#### Kurtarma için lojistik regresyon (indirgeme)
+
+İyi haberlerimiz var: Doğrusal regresyon (indirgeme) yönteminin çıktılarını
+etiketlerle ilgili tahminlere dönüştürebiliriz. Bunu yapan tekniğe lojistik
+regresyon (indirgeme) denir.  Tekniklere girmeyeceğiz, en basit durumda bunu
+söylemek yeterli, çıktıyı bir sayı olarak lineer regresyondan (indirgeme)
+alırız ve etiketin sıfırdan farklı olması halinde etiket A'yı ve sıfıra eşit
+veya az olması halinde ise B'yi tahmin ederiz. Aslında, sadece bir sınıfı veya
+başka bir şeyi tahmin etmek yerine, lojistik regresyon (indirgeme), bize
+tahminin belirsizliğinin bir ölçüsünü verebilir. Bu nedenle, bir müşterinin bu
+yıl yeni bir akıllı telefon satın alıp almayacağını tahmin edersek, A
+müşterisinin %90 olasılıkla bir telefon satın alacağına dair bir tahmin
+yapabiliriz ancak daha az tahmin edilebilir müşteri için, tahmin
+edemeyeceğimizi tahmin edebiliriz. %55 olasılıkla bir telefon satın
+almayacaklar diyebiliriz (ya da başka bir deyişle %45 olasılıkla bir tane
+alacaklar).
+
+Aynı numarayı ikiden fazla olası etiket üzerinde elde etmek de mümkündür, bu
+yüzden her zaman ya evet ya da hayır tahmin etmek yerine (yeni bir telefon
+alma ya da almama, sahte haberler ya da gerçek haberler vb.) tanımlamak için
+lojistik regresyonu (indirgeme) kullanabiliriz. Örneğin, el ile yazılmış
+rakamları tanımlamak ki bu durumda mümkün olan on etiket vardır.
+
+#### Bir lojistik regresyon (indirgeme) örneği
+
+Aşçılıkta giriş dersi alan öğrencilerin verilerini topladığımızı varsayalım.
+Öğrenci kimlik numarası, adı vb. gibi temel bilgilere ek olarak, öğrencilerden
+sınav için kaç saat çalıştıklarını da rapor etmelerini istiyoruz (bir aşçılık
+sınavına çalışıyorsanız, muhtemelen yemek pişiriyorsunuzdur?) ve umuyoruz ki
+raporlarında aşağı yukarı dürüstler. Sınavdan sonra her öğrencinin dersi geçip
+geçmediğini bileceğiz. Bazı veri noktaları aşağıda sunulmuştur:
+
+**Öğrenci Kimlik Numarası**|**Sınava Çalışılan Süre (Saat)**|**Geçti/Kaldı**
+|---|---|---|
+24|15|Geçti
+41|9.5|Geçti
+58|2|Kaldı
+101|5|Kaldı
+103|6.5|Kaldı
+215|6|Geçti
+
+Tabloya dayanarak, çalışılan saatler ile sınavı geçme arasında ne tür bir
+sonuca varabilirsiniz? Yüzlerce öğrenciden veri alırsak, belki dersi geçmek
+için çalışmamız gereken saat miktarını görebiliriz diye düşünebiliriz. Bu
+verileri aşağıda görebileceğiniz gibi bir grafikte sunabiliriz.
+
+#### Alıştırma 19: Lojistik regresyon (indirgeme)
+
+![YZ 101 4 3 Lojistik Regresyon Aşçılık Sınavı](/assets/img/yz-101-4-3-lojistik-regresyon-ascilik-sinavi.jpg "YZ 101 4 3 Lojistik Regresyon Aşçılık Sınavı")
+
+Şekildeki her nokta bir öğrenciye karşılık gelir. Şeklin alt kısmında
+öğrencinin sınava kaç saat çalıştığı ölçeği vardır ve sınavı geçen öğrenciler
+grafiğin üst kısmında noktalar halinde, başarısız olanlar ise alt kısımda
+gösterilir. Hemen aşağıda açıkladığımız gibi lojistik regresyon (indirgeme)
+modelinden alacağımız tahmini geçiş olasılığını belirtmek için soldaki ölçeği
+kullanacağız. Bu rakama dayanarak, daha uzun süre eğitim gören öğrencilerin
+kursu geçme şanslarının daha yüksek olduğunu kabaca görebilirsiniz. Özellikle
+aşırı durumlar sezgiseldir: Bir saatten az bir çalışma ile kursu geçmek çok
+zordur, ancak çok çalışma ile çoğu başarılı olacaktır. Peki ya aşırılıklar
+arasında bir yerde çalışmak için zaman harcayanlar? 6 saat çalışırsanız geçme
+şansınız nedir?
+
+Lojistik regresyon (indirgeme) kullanarak geçiş olasılığını ölçebiliriz.
+Şekildeki eğri, geçme olasılığı olarak yorumlanabilir: Örneğin, beş saat
+çalıştıktan sonra, geçme olasılığı %20'nin biraz üzerindedir. Eğrinin nasıl
+elde edileceğine dair ayrıntılara girmeyeceğiz, ancak bu, doğrusal regresyonda
+ağırlıkları nasıl öğrendiğimize benzeyecektir.
+
+Yukarıdaki şekle göre bir üniversite sınavını geçme şansınızın %80 olmasını
+istiyorsanız, yaklaşık olarak kaç saat çalışmalısınız?
+
++ A: 6-7 saat
++ B: 7-8 saat
++ C: 8-9 saat
++ D: 10-11 saat
+
+**Cevap:** D: 10-11 saat
+
+8-9 saat ders çalışmak size kabaca %70 geçme şansı verir. %80'lik bir geçme
+şansına sahip olmak için yaklaşık 10-11 saat çalışmalısınız.
+
+...
+
+Lojistik regresyon (indirgeme), finansal riskleri, tıbbi çalışmaları vb.
+öngören çok çeşitli gerçek dünyadaki Yapay Zeka uygulamalarında da
+kullanılmaktadır. Bununla birlikte, doğrusal regresyon (indirgeme) gibi,
+doğrusallık özelliği tarafından da kısıtlanır ve bu kısıtları aşmak için araç
+kutumuzda başka birçok yönteme ihtiyacımız vardır. Nöral ağları
+tartıştığımızda daha sonra doğrusallık konusuna döneceğiz.
+
+#### Makine öğreniminin sınırları
+
+Özetlemek gerekirse, makine öğrenimi Yapay Zeka uygulamaları oluşturmak için
+çok güçlü bir araçtır. En yakın komşu yöntemine, lineer regresyona (indirgeme)
+ve lojistik regresyona (indirgeme) ek olarak, binlerce olmasa da yüzlerce
+farklı makine öğrenim tekniği. Hepsinin özü şudur: Veriden desenler ve
+bağımlılıklar çıkarma ve bir fenomeni anlama ya da gelecekteki sonuçları
+öngörme için bunları kullanma.
+
+Makine öğrenimi çok zor bir problem olabilir ve genellikle doğru etiketi her
+zaman üretecek mükemmel bir yöntem elde edemeyiz. Bununla birlikte, çoğu
+durumda, iyi ama mükemmel olmayan bir tahmin, hiç olmamasından daha iyidir.
+Bazen kendimiz daha iyi tahminler üretebiliriz ancak makine öğrenimini
+kullanmayı tercih edebiliriz çünkü makine, tahminlerini daha hızlı yapacak ve
+ayrıca yorulmadan yorulmaya devam edecektir. İyi örnekler, hangi müziğin,
+hangi videoların veya hangi reklamların ilginizi çekeceğini daha önceden
+tahmin etmeleri gereken öneri sistemleridir.
+
+Elde edebileceğimiz sonucun ne kadar iyi olduğunu etkileyen faktörler:
+
++ Görevin zorluğu: El yazısıyla yazılmış rakam tanımada rakamlar çok eğimli
+  bir şekilde yazılırsa, bir insan bile yazarın ne istediğini doğru tahmin
+  edemez.
++ Makine öğrenim yöntemi: Bazı yöntemler belirli bir görev için diğerlerinden
+  çok daha iyidir.
++ Eğitim verilerinin miktarı: Sadece birkaç örnekten iyi bir sınıflandırıcı
+  elde etmek imkansızdır.
++ Verinin kalitesi
+
+> **Not**
+>
+> **Veri kalitesi önemlidir**
+>
+> Bu bölümün başında, yeterli verilere sahip olmanın ve aşırı uygunluk
+> riskinin (overfitting) önemini vurguladık. Diğer eşit derecede önemli bir
+> faktör de verilerin **kalitesidir**. Eğitim verileri dışındaki verilere
+> genel olarak iyi bir model oluşturmak için, eğitim verilerinin eldeki
+> sorunla ilgili yeterli bilgiyi içermesi gerekmektedir. Örneğin, algoritmaya
+> verilen görüntünün ne hakkında olduğunu anlatan bir görüntü sınıflandırıcı
+> oluşturuyorsanız ve bunu yalnızca köpeklerin ve kedilerin resimlerinde
+> eğitmişseniz, gördüğü her şeyi bir köpek veya kedi olarak atayacaktır.
+> Algoritmanın sadece kedileri ve köpekleri göreceği bir ortamda
+> kullanılıyorsa ancak tekneleri, arabaları ve çiçekleri de görmesi
+> beklenmiyorsa, bu mantıklı olacaktır.
+>
+> "Önyargılı/taraflı (biased)" verilerden kaynaklanan potansiyel sorunlara
+> geri döneceğiz.
+
+Farklı makine öğrenme yöntemlerinin farklı görevler için uygun olduğunu
+vurgulamak da önemlidir. Böylece, tüm problemler için tek bir en iyi yöntem
+yoktur ("hepsini yönetecek bir algoritma..."). Neyse ki, birisi çok sayıda
+farklı metodu deneyebilir ve hangisinin elindeki problemin en iyi çözümü
+olduğunu görebilir.
+
+Bu bizi çok önemli ama pratikte genellikle gözden kaçan bir noktaya götürüyor:
+Daha "iyi çalışmak" ne anlama geliyor. Rakam tanıma görevinde, iyi bir yöntem
+elbette çoğu zaman doğru etiketi üretecektir. Bunu sınıflandırma hatasıyla
+ölçebiliriz: Sınıflandırıcımızın yanlış sınıf çıkardığı vakaların oranı. Daire
+fiyatlarının tahmininde, kalite ölçüsü genellikle tahmini fiyat ile dairenin
+satıldığı nihai fiyat arasındaki fark gibi bir şeydir. Birçok gerçek hayat
+uygulamalarında, bir doğrultuda diğerine göre daha fazla hata yapmak da
+kötüdür: Fiyatı çok yüksek ayarlamak süreci aylarca geciktirebilir ancak
+fiyatı çok düşük olarak ayarlamak satıcı için daha az para demektir. Ve başka
+bir örneği ele alacak olursak, bir arabanın önündeki yayayı tespit edememek,
+hiçbiri olmadığı zaman yanlış bir şekilde saptamaktan çok daha kötü bir
+hatadır.
+
+Yukarıda belirtildiği gibi, genellikle sıfır hata elde edemeyiz ancak belki de
+100'de 1'den (veya %1) az hatayla mutlu olacağız. Bu da uygulamaya bağlıdır:
+Sokaklarda sadece %99 güvenli araçlara sahip olmaktan memnun olmazsınız ancak
+yeni bir şarkıyı beğenip beğenmeyeceğinizi bu hassaslıkta tahmin edebilmek hoş
+bir dinleme deneyimi için yeterli olabilir. Asıl hedefi akılda tutmak, daima
+gerçek katma değer yarattığımızdan emin olmamıza yardımcı olur.
+
+---
+
+![YZ 101 1 Yıldız](/assets/img/yildiz.png "YZ 101 1 Yıldız")
+![YZ 101 2 Yıldız](/assets/img/yildiz.png "YZ 101 2 Yıldız")
+![YZ 101 3 Yıldız](/assets/img/yildiz.png "YZ 101 3 Yıldız")
+![YZ 101 4 Yıldız](/assets/img/yildiz.png "YZ 101 4 Yıldız")
+{: style="text-align: center;"}
+
+**Bölüm 4'ü tamamladıktan sonra şunları yapabilmeniz gerekir:**
+
++ Makine öğrenim tekniklerinin neden kullanıldığını açıklama
++ Denetimsiz ve denetimli makine öğrenim senaryoları arasında ayrım yapma
++ Denetimli sınıflandırma yönteminin üç prensibini açıklama: En yakın komşu
+  yöntemi, doğrusal regresyon (indirgeme) ve lojistik regresyon (indirgeme)
+
+[![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
+[![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
+[![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
+[![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
+{: style="text-align: center;"}
