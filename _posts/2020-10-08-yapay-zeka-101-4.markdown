@@ -42,7 +42,7 @@ kaldık madem, afterparty başlasın...
 5. Yapay Sinir Ağları (Neural Networks)
 6. Yapay Zeka Uygulamaları (Implications)
 
-## Makine Öğrenmesi (Machine Learning)
+## 4. Makine Öğrenmesi (Machine Learning)
 
 ![YZ 101 4 Afiş](/assets/img/yz-101-4-afis.png "YZ 101 4 Afiş")
 
