@@ -646,9 +646,9 @@ kadın|0|4|**C**
 
 **Göreviniz:** Doğru değeri sayı olarak giriniz.
 
-A: 81 (= 80 -5 + 6)
+A: 81 (= 80 - 5 + 6)
 
-B: 73 (= 80- 8 +1)
+B: 73 (= 80 - 8 + 1)
 
 C: 84 (= 80 + 4)
 
