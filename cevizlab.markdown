@@ -53,6 +53,7 @@ kaldık madem, afterparty başlasın...
 [![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
 [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
 [![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
+[![YZ 101 Bölüm 5](/assets/img/maze-mini.png "5. Sinir Ağları (Neural Networks)")](/ai/2020/10/09/yapay-zeka-101-5.html)
 {: style="text-align: center;"}
 
 ---
@@ -115,3 +116,15 @@ Bu kısımda şu konuları ele alacağız:
 1. Makine öğrenmesi tipleri
 2. En yakın komşu sınıflandırıcısı
 3. İndirgeme (Regression)
+
+### [Yapay Zeka 101 [ 5. Bölüm ]](/ai/2020/10/09/yapay-zeka-101-5.html)
+
+Doğal dil ve görüntü işleme gibi alanlar geleneksel olarak Yapay Zeka'nın
+sıkıntılı noktaları olmuştur. Bu alanlarda önemli gelişmeler sağlamak için
+sinir ağları ve derin öğrenme kullanılmaktadır.
+
+Bu kısımda şu konuları ele alacağız:
+
+1. Sinir ağı temelleri
+2. Sinir ağları nasıl kurulur
+3. Gelişmiş sinir ağları teknikleri

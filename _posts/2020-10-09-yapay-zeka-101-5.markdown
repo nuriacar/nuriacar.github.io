@@ -1,0 +1,806 @@
+---
+layout: post
+title:  Yapay Zeka 101 [ 5. Bölüm ]
+date:   2020-10-09 19:19:19 +0300
+categories: ai
+---
+
+[![Elements of Yapay Zeka](/assets/img/elements-of-ai.jpg "Elements of Yapay Zeka")](https://course.elementsofai.com/)
+
+[![Helsinki Üniversitesi](/assets/img/helsinki-uni-logo-mini.png "Helsinki Üniversitesi")](https://www.helsinki.fi/en)
+[![Reaktor](/assets/img/reaktor-logo-mini.png "Reaktor")](https://www.reaktor.com/)
+[![mooc.fi](/assets/img/mooc-fi-logo-mini.png "mooc.fi")](https://mooc.fi/en)
+{: style="text-align: center;"}
+
+2018'de [Finlandiya Helsinki Üniversitesi](https://helsinki.fi/en), bazı
+Bilgisayar Bilimleri derslerini [mooc.fi](http://mooc.fi/en) üzerinden erişime
+açtı. Ben de görür görmez kaydoldum ve eğitimler sisteme yüklendikçe buradaki
+dersleri almaya koyuldum. Kaydolduğum ilk eğitim
+[Reaktor](https://reaktor.com) işbirliği ile hazırlanan [Yapay Zeka
+Temelleri](https://course.elementsofai.com/) eğitimiydi. Yapabildiğim kadar
+tercüme ettim. Kısa süre önce de tekrardan gözden geçirip yayınlama kararı
+aldım. Toplamda altı bölüm olacak. Zamanla tüm bölümler yüklenmiş olur.
+
+[Ey benim paşalarım, beylerim, ağalarım; şu şehr-i Konstantıniyye cengindeki
+silah arkadaşlarım!..](https://tr.wikipedia.org/wiki/II._Mehmed) Biz bize
+kaldık madem, afterparty başlasın...
+
+[![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
+[![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
+[![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
+[![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
+[![YZ 101 Bölüm 5](/assets/img/maze-mini.png "5. Sinir Ağları (Neural Networks)")](/ai/2020/10/09/yapay-zeka-101-5.html)
+{: style="text-align: center;"}
+
+---
+
+## Bölümler
+
+1. Yapay Zeka Nedir?
+2. Yapay Zeka Problemi Çözme
+3. Gerçek Dünyada Yapay Zeka
+4. Makine Öğrenmesi (Machine Learning)
+5. Sinir Ağları (Neural Networks)
+6. Yapay Zeka Uygulamaları (Implications)
+
+## 5. Sinir Ağları (Neural Networks)
+
+![YZ 101 5 Afiş](/assets/img/yz-101-5-afis.png "YZ 101 5 Afiş")
+
+Doğal dil ve görüntü işleme gibi alanlar geleneksel olarak Yapay Zeka'nın
+sıkıntılı noktaları olmuştur. Bu alanlarda önemli gelişmeler sağlamak için
+sinir ağları ve derin öğrenme kullanılmaktadır.
+
+Bu kısımda şu konuları ele alacağız:
+
+1. Sinir ağı temelleri
+2. Sinir ağları nasıl kurulur
+3. Gelişmiş sinir ağları teknikleri
+
+---
+
+### 5.1. Sinir ağı temelleri
+
+Şimdiki konu, derin öğrenme ve sinir ağları. Diğer konuların çoğundan daha
+fazla ilgi çeker.
+
+İlginin nedenlerinden biri de beynimizde nöral işlemeden ortaya çıkan kendi
+aklımızı anlama ümididir. Diğer bir neden ise, son yıllarda ulaşılan makine
+öğreniminde, devasa veri kümeleri ve derin öğrenme teknikleri birleştirilerek
+elde edilen gelişmelerdir.
+
+#### Nöral ağlar nelerdir?
+
+Bütününü daha iyi anlamak için, onu oluşturan bireysel birimleri tartışarak
+başlayacağız. Bir sinir ağı, beyninizdeki gibi bir "gerçek" biyolojik sinir
+ağı veya bir bilgisayarda simüle edilen yapay bir sinir ağı anlamına
+gelebilir.
+
+> **Anahtar terminoloji**
+>
+> **Derin öğrenme**
+>
+> Derin öğrenme, basit işleme birimlerinin birkaç "katmanının" bir ağa
+> bağlandığı bazı makine öğrenim tekniklerini ifade eder, böylece sisteme
+> girdiler sırayla her birinin içinden geçirilir. Bu mimari, gözlerden alınıp,
+> retina tarafından yakalanıp beyne iletilen görsel bilginin beyinde
+> işlenmesinden ilham almıştır. Bu derinlik, ağın gerçekçi olmayan büyük
+> miktarlarda veri gerektirmeden daha karmaşık yapılar öğrenmesini sağlar.
+>
+> **Nöronlar, hücre gövdeleri ve sinyaller**
+>
+> Biyolojik veya yapay bir sinir ağı, birbirine sinyalleri alıp ileten çok
+> sayıda basit birimden, nörondan oluşur. Nöronlar, nöronları birbirine
+> bağlayan bir hücre gövdesi ve tellerden oluşan çok basit bilgi
+> işlemcileridir. Çoğu zaman, hiçbir şey yapmazlar ancak oturup oturup
+> tellerden gelecek sinyalleri beklerler.
+>
+> **Dendritler, aksonlar ve sinapslar**
+>
+> Biyolojik dilde, nöronlara girdi sağlayan tellere dendrit diyoruz. Bazen,
+> gelen sinyallere bağlı olarak, nöron ateşlenebilir ve diğer nöronlar için
+> bir sinyal gönderebilir. Giden sinyali ileten tele akson denir. Her bir
+> akson, sinaps olarak adlandırılan kesişim noktalarında bir veya daha fazla
+> dendrite bağlanabilir.
+
+Arkadaş/komşu nöronlarından izole edilen tek bir nöron, oldukça etkisizdir ve
+sadece çok sınırlı davranışlar sergilemektedir. Bununla birlikte, birbirlerine
+bağlandığında, uyumlu eylemlerinden kaynaklanan sistem aşırı derecede karmaşık
+hale gelebilir. Buna kanıt bulmak için, (yasal jargon kullanmak için) "Bakınız
+A": Beyniniz! Sistemin davranışı, nöronların birbirine bağlandığı yollarla
+belirlenir. Her bir nöron, gelen sinyalere, zaman içinde adapte olabilen
+belirli bir şekilde tepki verir. Bu uyarlamanın, hafıza ve öğrenme gibi
+işlevlerin anahtarı olduğu bilinmektedir.
+
+#### Alıştırma 20: Sinir ağı elementleri
+
+Aşağıdaki diyagramda yer alan nörünun farklı bileşenlerini etiketleyin. İpucu:
+Nöronun giriş kısmı soldan gelir, çıkışı sağa gider.
+
+![YZ 101 5 1 Nöron](/assets/img/yz-101-5-1-noron.png "YZ 101 5 1 Nöron")
+
+1. Sinaps (bağlantı): D
+2. Dendrit (giriş): B
+3. Hücre gövdesi: A
+4. Akson (çıkış): C
+
+#### Neden yapay sinir ağlarını geliştirilmeli?
+
+Beynin yapay modellerini oluşturmanın amacı nörobilim, beynin ve genel olarak
+sinir sisteminin incelenmesi olabilir. İnsan beynini yeterince detaylandırarak
+insan ve hayvan bilişi ve bilincinin sırlarını keşfedebileceğimizi düşünmek
+cazip geliyor.
+
+![YZ 101 5 1 Beyin](/assets/img/yz-101-5-1-beyin.png "YZ 101 5 1 Beyin")
+
+> **Not**
+>
+> **Beynin modellenmesi**
+>
+> Amerikan nörobilim araştırmacıları tarafından yönetilen [BRAIN
+> Girişimi](https://braininitiative.nih.gov/), daha önce olduğundan daha iyi
+> ve daha büyük ölçekte beyin görüntüleme, modelleme ve simüle etme
+> teknolojilerini ilerletiyor. Bazı beyin araştırma projeleri hedefler
+> açısından çok hırslı.  [İnsan Beyni
+> Projesi](https://www.youtube.com/watch?v=JqMpGrM5ECo), yaklaşık 5 yıl önce
+> "aklın gizemlerinin yakında çözülebileceğine" söz verdi. Yıllar süren
+> çalışmalardan sonra, İnsan Beyni Projesi, [Avrupa Birliği tarafından
+> yatırılan milyar avronun vaat edilenleri ne zaman sağlayacağına dair
+> sorularla karşı
+> karşıyaydı](https://www.scientificamerican.com/article/why-the-human-brain-project-went-wrong-and-how-to-fix-it/),
+> ancak adil olmak gerekirse, daha az iddialı kilometre taşları elde edildi.
+
+Bununla birlikte, zihni ve bilinci anlamaktan uzakta olsak bile, sinirbilimde
+elde edilen net kilometre taşları var. Beynin yapısını ve işlevini daha iyi
+anlayarak, bazı somut ödüller kazanıyoruz. Örneğin, anormal işleyişi
+tanımlayabiliriz ve beynin bunlardan sakınmasına ve normal çalışmasını yeniden
+başlatmasına yardım edebiliriz. Bu, nörolojik bozukluklardan muzdarip insanlar
+için yaşamı değiştiren yeni tıbbi tedavilere yol açabilir: Epilepsi, Alzheimer
+hastalığı, gelişimsel bozuklukların neden olduğu sorunlar veya yaralanmaların
+neden olduğu hasarlar vb.
+
+> **Not**
+>
+> **Geleceğe bakmak: Beyin bilgisayar arayüzleri**
+>
+> Nörobilimdeki bir araştırma yönü, bir bilgisayarla basitçe düşünerek
+> etkileşime izin veren beyin-bilgisayar arayüzleridir. Mevcut arayüzler çok
+> sınırlıdır ve örneğin [bir kişinin ne gördüğünü çok kaba bir seviyede
+> yeniden yapılandırmak](https://www.youtube.com/watch?v=Ecvv-EvOj8M) veya
+> [robotik silahları veya dronları düşünerek kontrol
+> etmek](https://www.youtube.com/watch?v=7t84lGE5TXA) için kullanılabilirler.
+> Belki bir gün, kesin talimatlara izin veren ancak şu anda bilim kurguya ait
+> bir düşünce okuma makinesi uygulayabiliriz. Küçük elektronik darbelerle
+> uyarmak suretiyle beyni bilgiyle besleyebilmemiz de düşünülebilir. Bu tür
+> uyarım şu anda terapi amaçlı kullanılmaktadır. Belirli kelimeler, fikirler,
+> anı ya da duygular gibi ayrıntılı bilgileri beslemek, en azından şu anda
+> gerçeklikten ziyade bilim kurgudur, fakat açıkçası böyle bir teknolojinin
+> sınırlarını ve bunlara ulaşmanın ne kadar zor olduğunu bilmiyoruz.
+
+Eğitimin konusundan biraz saptık. Aslında, yapay sinir ağları inşa etmenin bir
+başka ana sebebi biyolojik sistemleri anlamakla çok az çalışılmış olması.
+Daha iyi Yapay Zeka ve makine öğrenimi teknikleri geliştirmek için bir ilham
+kaynağı olarak biyolojik sistemleri kullanmak. Bu fikir çok doğaldır: Beyin,
+çok çeşitli akıllı davranışları (artı zaman zaman pek de zeki olmayanları)
+barındıran inanılmaz derecede karmaşık bir bilgi işlem sistemidir ve bu
+nedenle Yapay Zeka sistemleri üretmeye çalışırken ilham almamız mantıklıdır.
+
+Sinir ağları, 1960'lardan beri Yapay Zeka'da büyük bir eğilim olmuştur. Son
+bölümde Yapay Zeka tarihinde popülerlik dalgalarına döneceğiz. Günümüzde nöral
+ağlar, doğal dil ve görüntü işleme gibi pek çok alanda, geleneksel olarak
+Yapay Zeka'nın sıkıntılı noktalarında derinlemesine iyileştirmeler yapmak için
+derin bir öğrenme aracı olarak kullanılmaktadır.
+
+#### Sinir ağları konusunda bu kadar özel olan nedir?
+
+Yapay Zeka'ya bir yaklaşım olarak genel olarak sinir ağlarının durumu, mantık
+temelli yaklaşımlar için olanla benzer bir argümana dayanmaktadır. İkinci
+durumda, insan seviyesinde zeka elde etmek için, daha yüksek seviyeli düşünce
+süreçlerini simüle etmemiz ve özellikle mantık kuralları kullanarak belirli
+somut veya soyut kavramları temsil eden sembollerin manipülasyonunu yapmamız
+gerektiği düşünülüyordu.
+
+Sinir ağları argümanı, nöronlar ve sinir ağları seviyesinde daha düşük
+seviyeli veri işlenmesini simüle ederek, zekanın ortaya çıkmasıdır. Bunların
+hepsi kulağa çok mantıklı geliyor ancak uçan makineler yapmak için
+kanatlarını çırpan veya kemik, kas ve tüyden yapılmış uçaklar yapmadığımızı
+unutmayın. Aynı şekilde, yapay sinir ağlarında, nöronların iç mekanizması
+genellikle göz ardı edilir ve yapay nöronlar genellikle doğal
+meslektaşlarından çok daha basittir. Doğal nöronlar arasındaki eletro-kimyasal
+sinyalleme mekanizmaları, biyolojik sistemlerin simüle edilmesinden ziyade
+Yapay Zeka sistemleri oluşturmak olduğundan yapay modellerde çoğunlukla göz
+ardı edilmektedir.
+
+Bilgisayarların geleneksel olarak nasıl çalıştığıyla karşılaştırıldığında,
+sinir ağlarının belirli özellikleri vardır:
+
+#### Sinir ağı anahtar özelliği 1
+
+Birincisi, geleneksel bir bilgisayarda, bilgi sadece bir anda bir şey yapmaya
+odaklanabilecek bir merkezi işlemcide (merkezi işlem birimi veya kısaca CPU
+olarak adlandırılır) işlenir. CPU, bilgisayarın belleğinden işlenecek verileri
+alabilir ve sonucu hafızada saklayabilir. Böylece, veri depolama ve işleme,
+bilgisayarın iki ayrı bileşeni tarafından işlenir: Bellek ve CPU.  Nöral
+ağlarda, sistem her biri kendi başına bilgi işleyebilen çok sayıda nörondan
+oluşur, böylece her işlem parçasını birbiri ardına bir CPU işlemi yerine,
+nöronlar eşzamanlı olarak çok miktarda bilgiyi işlerler.
+
+#### Sinir ağı anahtar özelliği 2
+
+İkinci fark, veri depolama (bellek) ve işlemenin geleneksel bilgisayarlarda
+olduğu gibi ayrılmamasıdır. Nöronlar bilgiyi hem depolar hem de işler, böylece
+işlem için bellekten veri almaya gerek kalmaz. Veriler kısa süreli olarak
+nöronların kendisinde (herhangi bir zamanda ateşlenir veya ateşlenmez) veya
+daha uzun süreli depolama için nöronlar arasındaki bağlantılarda, aşağıda
+tartışacağımız gibi sözde ağırlıkları olarak depolanabilir.
+
+Bu iki farklılık nedeniyle, sinir ağları ve geleneksel bilgisayarlar biraz
+farklı görevler için uygundur. Sinir ağlarını geleneksel bilgisayarlarda
+simüle etmek mümkün olsa da, uzun süredir kullanılma şekilleri, maksimum
+kapasitelerini ancak çok sayıda bilgiyi işleyebilecek özel donanım (bilgisayar
+parçaları) kullandığımızda elde edilir. Buna paralel işleme (parallel
+processing) denir. Bu arada, grafik işlemcileri (veya grafik işlem üniteleri,
+GPU'lar) bu kapasiteye sahiptir ve devasa derin öğrenme yöntemlerini
+çalıştırmak için uygun maliyetli bir çözüm haline gelmiştir.
+
+---
+
+### 5.2. Sinir ağları nasıl kurulur
+
+Daha önce söylediğimiz gibi, nöronlar çok basit işlem birimleridir. Lineer ve
+lojistik regresyonun Bölüm 4'te tartışılmasından sonra, sinir ağlarının temel
+teknik detayları aynı fikrin küçük farklılıkları olarak görülebilir.
+
+> **Not**
+>
+> **Ağırlıklar ve girdiler**
+>
+> Temel yapay nöron modeli, lineer ve lojistik regresyonda olduğu gibi bir
+> dizi adaptif parametre içerir. Regresyonda olduğu gibi, bu ağırlıklar,
+> eklenmiş olan nöronun girdileri üzerinde çarpanlar olarak kullanılır.
+> Girişlerin ağırlık zamanlarının toplamına, girdilerin doğrusal kombinasyonu
+> denir.  Muhtemelen alışveriş faturası benzetmesini hatırlayabilirsiniz: Her
+> bir öğenin miktarını birim başına fiyatı ile çarpın ve toplamı elde etmek
+> için toplayın.
+
+Altı girişli bir nöronumuz varsa (altı alışveriş öğesinin miktarına benzer:
+patates, havuç vb.), giriş1, giriş2, giriş3, giriş4, giriş5 ve giriş6, ayrıca
+altı da ağırlığa ihtiyacımız var. Ağırlıklar, eşyaların fiyatlarına benzer.
+Bunlara ağırlık1, ağırlık2, ağırlık3, ağırlık4, ağırlık5 ve ağırlık6 olarak
+adlandırılır. Ek olarak, genellikle doğrusal regresyonda yaptığımız gibi bir
+kesişme terimi eklemek isteriz. Bu, örneğin bir kredi kartı ödemesinin
+seçilmesi nedeniyle sabit bir ek ücret olarak düşünülebilir.
+
+Doğrusal kombinasyonu aşağıdaki gibi hesaplayabiliriz: doğrusal kombinasyon =
+kesişme + ağırlık1 × giriş1 + ... + ağırlık6 × giriş6 (burada ... toplamın
+1'den 6'ya kadar olan tüm terimleri içerdiği anlamına gelen kestirme bir
+gösterimdir).
+
+Bazı örnek sayılarla daha sonra şunları elde edebiliriz:
+
+```
+10.0 + (5.4 × 8) + ((-10.2) x 5) + ((-0.1) x 22) + (101.4 × (-5)) +
+(0.0 × 2) + (12.0 × (-3)) = -543.0
+
+```
+
+#### Alıştırma 21: Ağırlıklar ve girişler
+
+Bu alıştırmada, şu ifadedeki ağırlık ve girişleri dikkate alın:
+
+```
+10.0 + (5.4 × 8) + ((-10.2) x 5) + ((-0.1) x 22) + (101.4 × (-5)) +
+(0.0 × 2) + (12.0 × (-3)) = -543.0
+```
+
++ İfadedeki kesişim terimi nedir?
+
+a) 543.0
+
+b) 10.0
+
+c) -3
+
+d) 5.4?
+
+Kesişim, ifadede hiçbir değişkenle çarpılmayandır: **10.0**
+
++ Girişler (inputs) nelerdir?
+
+a) 8, 5, 22, -5, 2, -3
+
+b) 5.4, 8, -10.2, 5, -0.1, 22, 101.4, -5, 0.0, 2, 12.0, -3
+
+c) 5.4, -10.2, -0.1, 101.4, 0.0, 12.0
+
+d) 43.2, -51.0, -2.2, -507.0, 0.0, -36.0
+
+Alıştırmadaki denklemi yukarıdaki tanımdaki denklemle karşılaştırın: Doğrusal
+kombinasyonu kesişim + ağırlıklar x girişler olarak tanımladık. Bu nedenle
+girdiler çarpmadaki ikinci sayılardır. **8, 5, 22, -5, 2, -3**
+
++ Çıktıyı belirli bir miktar artırmak için girdilerden hangisinin en az
+  değiştirilmesi gerekiyor?
+
+a) birinci
+
+b) ikinci
+
+c) üçüncü
+
+d) dördüncü
+
+Dördüncü ağırlık en büyüğüdür. Çıkışı önceden belirlenmiş bir miktar artırmak
+için, **dördüncü** girdinin en az değiştirilmesi gerekir.
+
++ Beşinci giriş 1 artırılırsa ne olur?
+
+a) hiçbir şey
+
+b) çıkış 1 artar
+
+c) çıkış 2 artar
+
+d) bunlardan başka şeyler olur
+
+Beşinci girişin ağırlığı 0.0'dır: Bu da beşinci girişin sahip olduğu değer ne
+olursa olsun, doğrusal kombinasyon üzerindeki etkisinin her zaman sıfır olduğu
+anlamına gelir.
+
+...
+
+Ağırlıklar hemen hemen her zaman, daha önce tartışıldığı gibi, doğrusal veya
+lojistik regresyondaki aynı fikirleri kullanan verilerden öğrenilir. Ancak
+bunu daha ayrıntılı bir şekilde tartışmadan önce, bir nöronun bir çıkış
+sinyali göndermeden önce tamamladığı önemli bir aşamaya geçeceğiz.
+
+#### Aktivasyonlar ve çıkışlar
+
+Doğrusal kombinasyon hesaplandıktan sonra, nöron bir işlem daha yapar.
+Doğrusal kombinasyonu alır ve bunu bir aktifleştirme işlevinden geçirir.
+Aktivasyon fonksiyonunun tipik örnekleri şunları içerir:
+
++ kimlik fonksiyonu: hiçbir şey yapmaz ve sadece lineer kombinasyonu çıkartır.
++ adım fonksiyonu: eğer doğrusal kombinasyonun değeri sıfırdan büyükse, bir
+  darbe (ON) gönder, aksi halde hiçbir şey yapma (OFF)
++ sigmoid işlevi: adım fonksiyonunun "yumuşak" versiyonu
+
+İlk aktivasyon fonksiyonu, kimlik fonksiyonu, nöron lineer regresyon ile
+tamamen aynı olduğunu unutmayın. Bu nedenle kimlik fonksiyonu sinir ağlarında
+nadiren kullanılır: Yeni ve ilginç hiçbir şeye yol açmaz.
+
+> **Not**
+>
+> **Nöronlar nasıl aktive olur**
+>
+> Gerçek, biyolojik nöronlar, "spike" adı verilen keskin, elektriksel darbeler
+> göndererek iletişim kurarlar, böylece herhangi bir zamanda, giden sinyalleri
+> açık veya kapalıdır (1 veya 0). Adım işlevi bu davranışı taklit eder.
+> Bununla birlikte, yapay sinir ağları, sigmoid işlevi gibi her zaman sürekli
+> bir sayısal etkinleştirme düzeyi üreten etkinleştirme işlevlerini kullanma
+> eğilimindedir. Bu nedenle, biraz garip bir konuşma biçimi kullanırlar:
+> Gerçek nöronlar Morse koduna benzer bir şeyle iletişim kurarken yapay
+> sinirler seslerini farklı şekillere ayarlayarak sanki yodeling gibi
+> konuşurlar.
+
+![YZ 101 5 2 Araç](/assets/img/yz-101-5-2-arac.png "YZ 101 5 2 Araç")
+
+Doğrusal kombinasyon ve aktivasyon fonksiyonu ile belirlenen nöronun çıkışı, 
+bir tahmin veya bir karar çıkarmak için kullanılabilir. Örneğin, ağ kendi 
+kendine giden bir arabanın önündeki bir durma işaretini tanımlamak için 
+tasarlandıysa, giriş, arabanın önüne takılı bir kamera tarafından çekilen bir 
+görüntünün pikselleri olabilir, çıkışı (arabayı durduran bir durdurma 
+prosedürünü) etkinleştirmek için kullanılabilir. 
+
+Ağda öğrenme veya adaptasyon, ağırlıklar, doğrusal veya lojistik regresyonda 
+olduğu gibi, ağ doğru çıktıları üretecek şekilde ayarlandığında ortaya çıkar. 
+Birçok sinir ağları çok büyüktür ve en büyükleri yüz milyarlarca ağırlık 
+içerir. Bunları optimize etmek, büyük miktarlarda bilgi işlem gücü gerektiren 
+göz korkutucu bir görev olabilir.
+
+#### Alıştırma 22: Aktivasyonlar ve çıkışlar
+
+Aşağıda, farklı özelliklere sahip üç farklı etkinleştirme işlevi için
+grafikler bulunmaktadır. Önce sigmoid işlevi, ardından adım işlevi ve son
+olarak kimlik işlevi. ÖNEMLİ: Kimlik (identity) fonksiyonu tablosundaki farklı
+y ekseni (dikey) ölçeğine dikkat edin.
+
+![YZ 101 5 2 Etkinleştirme İşlevleri](/assets/img/yz-101-5-2-sigmoid-adim-kimlik.jpg "YZ 101 5 2 Etkinleştirme İşlevleri")
+
++ Yukarıda tanımlananlardan hangi aktivasyon, 5 girişi için en büyük çıktıyı
+  üretir?
+
+Kimlik işlevi 5 girdisi için 5 çıktı verir. Sigmoid 1'e çok yakın bir çıktı
+verir. **Adım işlevi** tam olarak 1 çıktı verir.
+
++ Peki ya -5 girişi için en düşük çıkış?
+
+**Kimlik işlevi** -5 girdisi için -5 çıktı verecektir. Sigmoid, 0'a çok yakın
+bir şey çıkarır. Adım işlevi tam olarak 0 verir.
+
++ -2.5 giriş için en yüksek çıkış?
+
+-2.5'lik bir giriş için kimlik işlevi -2.5 çıktı verir. Adım işlevi 0 çıktı
+verir. **Sigmoid işlevi** 0'dan yüksek ancak 0.1'den düşük bir çıktı verir.
+
+#### Perceptron: Tüm yapay sinir ağlarının (ANN) annesi
+
+Perceptron basitçe, yukarıda tartıştığımız adım aktivasyon fonksiyonu ile
+basit nöron modeli için süslü bir isimdir. Sinirsel hesaplamanın ilk resmi
+modelleri arasındaydı ve sinir ağları tarihindeki temel rolünden dolayı, "Tüm
+Yapay Sinir Ağlarının Annesi" olarak adlandırılmak haksızlık olmazdı.
+
+İkili sınıflandırma görevlerinde basit bir sınıflandırıcı olarak
+kullanılabilir.  Algılayıcıların ağırlıklarını veriden öğrenmek için bir
+yöntem olan Perceptron algoritması, 1957'de psikolog Frank Rosenblatt
+tarafından tanıtıldı. Perceptron algoritmasını ayrıntılı olarak
+incelemeyeceğiz. En yakın komşu sınıflandırıcı kadar basit olduğunu söylemek
+yeterli. Temel ilke, ağ eğitim verilerini her seferinde bir örnekle
+beslemektir. Her yanlış sınıflandırma, ağırlıkta bir güncellemeye yol açar.
+
+> **Not**
+> 
+> **Yapay Zeka Hiperbolü (abartı, abartma, mübalağa)**
+> 
+> Keşfedilmesinden sonra, Perceptron algoritması, mucidi Frank Rosenblatt
+> tarafından yapılan iyimser ifadelerden dolayı çok fazla ilgi görmüştür.
+> Yapay Zeka abartısının klasik bir örneği, 8 Temmuz 1958'de yayınlanan bir
+> New York Times makalesidir:
+>
+> "Donanma bugün, yürüyebileceğini, konuşabileceğini, görebileceğini, kendini
+> yeniden üretebileceğini ve varlığının bilincinde olmasını beklediği bir
+> elektronik bilgisayarın embriyosunu ortaya çıkardı."
+>
+> Sinir ağı meraklılarının iyimserliğe yönelmiş olan tek kişiler olmadığını
+> lütfen unutmayın. Yapay Zeka'ya dayalı mantık tabanlı uzman sistem
+> yaklaşımının yükselişi ve düşüşü, bir Yapay Zeka yutturmacasının tüm ayırt
+> edici özelliklerine sahipti ve insanlar, son atılımın sadece kısa bir süre
+> uzakta olduğunu iddia ettiler.  Hem 1960'ların başlarında hem de 1980'lerin
+> sonunda, Yapay Zeka kışı olarak adlandırılan araştırma fonunda bir çöküş
+> oldu.
+
+Yirmi yıldan uzun bir süredir 1960'larda nöral ağ yaklaşımının neredeyse
+tamamen terk edilmesine yol açan tartışmaların tarihi son derece etkileyici.
+Mikel Olazaran'ın (1996, Social Studies of Science, 1996) yayınladığı
+"[Algılayıcıların Çatışmalarının Resmi Tarihinin Sosyolojik
+Çalışması](https://journals.sagepub.com/doi/10.1177/030631296026003005)"
+makalesi, bir bilim sosyolojisi olgusundaki olayları incelemektedir. Bugün
+okumak oldukça kışkırtıcıdır. İnsan zekası seviyesine ulaşacak ve öz-bilinçli
+hale gelecek olan sinir ağları algoritmalarını geliştiren ünlü Yapay Zeka
+kahramanları hakkındaki hikayeleri okumak, güncel hiperbol sırasında yapılan
+bazı ifadelerle karşılaştırılabilir. Yukarıdaki makaleye bakacak olursanız,
+hepsini okuyamasanız bile, bugünün haberlerine ilginç bir arka plan
+sağlayacaktır. Örneğin [MIT Technology Review
+Dergisi](https://www.technologyreview.com/2017/09/29/67852/is-ai-riding-a-one-trick-pony/)'nde
+Eylül 2017'de yayınlanan bir makaleyi ele alalım. Jordan Jacobs, Yapay Zeka
+için multimilyon dolarlık bir vektör enstitüsünün kurucu ortağı Geoffrey
+Hinton'u (şu anki derin öğrenme patlamasının bir figürü) 80'ler ve sonrasında
+sinir ağı algoritmalarına katkılarından dolayı Einstein'la karşılaştırıyor.
+Ayrıca önceki bölümde bahsedilen İnsan Beyni Projesini de hatırlayın.
+
+Hinton'a göre, "işe yaramaması geçici bir rahatsızlıktır." (Her ne kadar
+makaleye göre, Hinton yukarıdaki ifadeye gülüyor olsa da, onun hakkında ne
+kadar ciddi olduğunu söylemek zor.) İnsan Beyni projesi, "[bilinç
+anlayışımızdaki derin bir sıçramaya
+yakın](https://www.humanbrainproject.eu/en/follow-hbp/news/the-quest-for-consciousness/)"
+olduğunu iddia ediyor. Bu tanıdık geliyor mu?
+
+Kimse kesin olarak geleceği gerçekten bilemez ancak yakın zamanda gerçekleşen
+atılımların önceki kayıtlarının geçmişini bilerek, biraz eleştirel düşünme
+önerilmektedir. Son bölümde Yapay Zeka'ın geleceğine döneceğiz ama şimdilik
+yapay sinir ağlarının nasıl inşa edildiğini görelim.
+
+#### Nöronları bir araya getirmek: ağlar
+
+Tek bir nöron, çoğu gerçek hayattaki uygulamalarda karar vermek ve güvenilir
+bir şekilde tahmin etmek için çok basit olacaktır. Sinir ağlarının tam
+potansiyelini açığa çıkarmak için, bir nöronun çıktısını diğer nöronların
+girdisi olarak kullanabiliriz ki onların da çıkışları diğer nöronların girdisi
+olabilir vb. Tüm ağın çıkışı, çıktı tabakası olarak adlandırılan nöronların
+belirli bir alt kümesinin çıktısı olarak elde edilir. Sinir ağlarının,
+parametrelerini verilerden öğrenerek farklı davranışlar üretmek için nasıl
+adapte olduklarını tartıştıktan sonra buna birazdan döneceğiz.
+
+> **Anahtar terminoloji**
+>
+> **Katmanlar**
+>
+> Genellikle ağ mimarisi katmanlardan oluşur. Giriş katmanı, girdilerini
+> doğrudan verilerden alan nöronlardan oluşur. Örneğin, bir görüntü tanıma
+> görevinde, girdi katmanı, girdi katmanının girdileri olarak girdi
+> görüntüsünün piksel değerlerini kullanır. Ağ tipik olarak, diğer nöronların
+> çıktılarını girdi olarak kullanan ve çıktısı diğer nöron katmanlarına girdi
+> olarak kullanılan gizli katmanlara sahiptir. Son olarak, çıktı katmanı tüm
+> ağın çıktısını üretir. Belirli bir katmandaki tüm nöronlar, önceki
+> katmandaki nöronlardan girdi alır ve çıktılarını bir sonrakine gönderir.
+
+Çok katmanlı bir ağın klasik bir örneği, çok katmanlı algılayıcıdır
+(multilayer perceptron). Yukarıda tartıştığımız gibi, bir perceptronun
+ağırlıklarını öğrenmek için Rosenblatt’ın Perceptron algoritması
+kullanılabilir. Çok katmanlı algılayıcı için, karşılık gelen öğrenme problemi
+çok daha zordur ve çalışan bir çözümün keşfedilmesi uzun zaman aldı. Ama
+sonunda biri icat edildi: Geri yayılım algoritması (backpropagation
+algorithm), 1980'lerin sonunda sinir ağlarının yeniden canlanmasına yol açtı.
+Hala en gelişmiş derin öğrenme çözümlerinin çoğunun merkezinde yer almaktadır.
+
+> **Not**
+>
+> **Bu arada Helsinki'de...**
+>
+> Geri yayılma algoritmasına giden yol(lar) oldukça uzun ve dolambaçlı.
+> Tarihin ilginç bir kısmı, Helsinki Üniversitesi bilgisayar bilimleri bölümü
+> ile ilgilidir. Bölümün 1967'de kurulmasından yaklaşık üç yıl sonra, [bir
+> yüksek lisans
+> tezi](http://people.idsia.ch/~juergen/linnainmaa1970thesis.pdf), Seppo
+> Linnainmaa adında bir öğrenci tarafından yazılmıştır. Tezin konusu
+> "Taylor'un tek tek yuvarlama hatalarının yaklaşımı olarak algoritmaların
+> kümülatif yuvarlama hatası" idi (tez, Fince olarak yazılmıştır, bu nedenle
+> bu, "Algoritmin kumulatiivinen pyöristysvirhe yksittäisten
+> pyöristysvirheiden Taylor-kehitelmänä" adlı eserin bir çevirisidir).
+>
+> Tezde geliştirilen otomatik farklılaşma yöntemi daha sonra, diğer
+> araştırmacılar tarafından, çok katmanlı bir sinir ağının çıktısının
+> duyarlılığını, bireysel ağırlıklara göre ölçmek için uygulanmıştır. Bu, geri
+> yayılmanın (backpropagation) temel fikridir.
+
+#### Basit nöral ağ sınıflandırıcısı
+
+Bir nöral ağ sınıflandırıcısı kullanmanın nispeten basit bir örneğini vermek
+için, MNIST rakam tanıma görevine çok benzeyen, yani iki sınıfta görüntüleri
+sınıflandıran bir görevi ele alacağız. İlk olarak bir görselin çarpı (x) veya
+daire (o) gösterilip göstermediğini sınıflandırmak için bir sınıflandırıcı
+oluşturacağız. Görsellerimiz burada renkli veya beyaz olan pikseller olarak
+temsil edilir ve pikseller 5 × 5 ızgarada düzenlenir. Bu formatta bir çarpı ve
+bir çember (aslında eşkenar dörtgen) imajları şöyle görünür:
+
+![YZ 101 5 2 Basit Nöral Ağ Sınıflandırıcısı](/assets/img/yz-101-5-2-basit-noral-ag-siniflandiricisi.png "YZ 101 5 2 Basit Nöral Ağ Sınıflandırıcısı")
+
+Sinir ağı sınıflandırıcısı oluşturmak için, problemi, öğrendiğimiz yöntemleri
+kullanarak çözebileceğimiz bir şekilde biçimlendirmeliyiz. İlk adımımız,
+pikseldeki bilgileri bir sınıflandırıcıya girdi olarak kullanılabilecek
+sayısal bir değerle temsil etmektir. Kare renkli ise 1, beyaz ise 0
+kullanalım. Yukarıdaki grafikteki sembollerin farklı renklerde (yeşil ve mavi)
+olmasına rağmen, sınıflandırıcımızın renk bilgilerini görmezden geleceğini ve
+yalnızca renkli/beyaz bilgiyi kullanacağını unutmayın. Resimdeki 25 piksel,
+sınıflandırıcımızın girişini yapmaktadır.
+
+Sayısal temsilde hangi pikselin olduğunu bildiğimizden emin olmak için,
+pikselleri metin okuduğunuz sırayla sıralamaya karar verebiliriz, bu yüzden
+üst satırdan alt satıra doğru satırlar sıraya dizilir ve her satırı soldan
+sağa doğru okuruz. Örneğin, çarpıların ilk sırasının, 1,0,0,0,1; ikinci sıra
+0,1,0,1,0 vb. Çarpı giriş için tam giriş şu:
+
+1,0,0,0,1,0,1,0,1,0,0,0,1,0,0,0,1,0,1,0,1,0,0,0,1.
+
+1,0,0,0,1
+0,1,0,1,0
+0,0,1,0,0
+0,1,0,1,0
+1,0,0,0,1
+
+İlk adımın, girdilerin doğrusal bir kombinasyonunu hesaplamak olduğu temel
+nöron modelini kullanacağız. Böylece, giriş piksellerinin her biri için bir
+ağırlık gerekir, bu toplamda 25 ağırlık anlamına gelir.
+
+Son olarak, adım aktivasyon fonksiyonunu kullanıyoruz. Doğrusal kombinasyon
+negatif ise, nöron aktivasyonu sıfırdır ki bunu çarpı belirtmek için
+kullanmaya karar verirdik. Doğrusal kombinasyon pozitif ise, nöron aktivasyonu
+birdir ki bunu da daire belirtmek için kullanmaya karar verdik.
+
+Tüm ağırlıklar aynı sayısal değeri, 1'i aldığında ne olacağını deneyelim. Bu
+kurulumda, çarpı görsel için doğrusal kombinasyonumuz 9 (9 renkli piksel, yani
+9 × 1 ve 16 beyaz piksel, 16 × 0) olacaktır. Daire (eşkenar dörtgen) görüntüsü
+için 8 (8 renkli piksel, 8 × 1 ve 17 beyaz piksel, 17 × 0) olacaktır. Başka
+bir deyişle, doğrusal kombinasyon her iki görüntü için de pozitiftir ve
+dolayısıyla daire olarak sınıflandırılırlar. Sınıflandırılacak sadece iki
+görsel olduğu için çok iyi bir sonuç değil.
+
+Sonucu iyileştirmek için, ağırlıkların, doğrusal kombinasyonun çarpı için
+negatif ve daire için pozitif olacak şekilde ayarlanması gerekir. Çarpı ve
+daire görüntülerini neyin farklılaştırdığını düşünürsek, daire görüntüsünün
+ortasında piksel olmadığını görürsünüz. Benzer şekilde, çarpıda, görüntünün
+köşelerindeki pikseller renklenir ancak dairede beyazdır.
+
+Şimdi ağırlıkları ayarlayabiliriz. İşi yapan sonsuz sayıda ağırlık var.
+Örneğin, orta piksele (13. piksel) -1 ağırlık, görüntünün dört tarafının her
+birinin ortasındaki piksele 1 ağırlık verin, diğer tüm ağırlıklar 0 olsun.
+Şimdi, çarpı girdide diğer piksellerin tümü için pikselin değeri 0 iken,
+merkez piksel değeri -1'dir, yani -1 aynı zamanda toplam değerdir. Bu
+aktivasyon 0'a yol açar ve çarpı, doğru sınıflandırılır.
+
+O zaman daire nasıl olur? Kenarların ortasındaki piksellerin her biri 1
+değerini üretir, toplamı da 4 × 1 = 4 yapar. Diğer tüm pikseller için piksel
+değeri veya ağırlık sıfırdır, yani toplam 4'tür. 4 pozitif bir değer
+olduğundan, aktivasyon 1 olur ve daire doğru olarak tanınır.
+
+#### Multu mu yoksa değil mi?
+
+Şimdi de gülen yüzler (smiley) için bir sınıflandırıcı oluşturmak için benzer
+bir mantık yürüteceğiz. Görüntüdeki giriş piksellerine tıklayarak ağırlıklar
+atayabilirsiniz. Bir kez tıklamak ağırlığı 1'e, tekrar tıklamak ise -1'e
+ayarlar. Etkinleştirme 1, görüntünün mutlu bir yüz olarak sınıflandırıldığını
+belirtirken, etkinleştirme -1 görüntünün üzgün bir yüz olarak
+sınıflandırıldığını gösterir.
+
+Tüm gülen yüzleri doğru bir şekilde sınıflandıramayacağınız için cesaretiniz
+kırılmasın: Aslında basit sınıflandırıcımızla bu imkansız! Bu, önemli bir
+öğrenme hedefidir: Bazen mükemmel sınıflandırma mümkün değildir çünkü
+sınıflandırıcı çok basittir. Bu durumda, girdilerin doğrusal bir
+kombinasyonunu kullanan basit nöron, görev için çok basittir. Farklı
+durumlarda iyi çalışan sınıflandırıcıları nasıl oluşturabileceğinizi
+gözlemleyin: Bazıları üzgün yüzleri yapamazken muutlu yüzleri yapar, bazıları
+da tam tersidir.
+
+Hem mutlu hem de üzgün yüzler için 6/8 doğru elde edebilir misiniz?
+
+![YZ 101 5 2 Gülen Yüzler Soru](/assets/img/yz-101-5-2-gulen-yuzler-soru.jpg "YZ 101 5 2 Gülen Yüzler Soru")
+
+**Cevabım:** 8/8 bile yaparım.
+
+Mutlu yüzler:
+
+![YZ 101 5 2 Gülen Yüzler Cevap 1](/assets/img/yz-101-5-2-gulen-yuzler-cevap-1.jpg "YZ 101 5 2 Gülen Yüzler Cevap 1")
+
+Üzgün yüzler:
+
+![YZ 101 5 2 Gülen Yüzler Cevap 2](/assets/img/yz-101-5-2-gulen-yuzler-cevap-2.jpg "YZ 101 5 2 Gülen Yüzler Cevap 2")
+
+İllaki başka yolu da vardır.
+
+---
+
+### 5.3. Gelişmiş sinir ağları teknikleri
+
+Bir önceki bölümde, birçok sinir ağı yönteminin arkasındaki temel fikirleri 
+tartıştık: Çok katmanlı ağlar, doğrusal olmayan aktivasyon fonksiyonları ve 
+geri yayılım algoritması gibi öğrenme kuralları.
+
+Neredeyse tüm modern sinir ağ uygulamalarına güç veriyorlar. Bununla 
+birlikte, birçok alandaki derin öğrenmede büyük ilerlemelere yol açacak temanın 
+bazı ilginç ve güçlü varyasyonları vardır.
+
+#### Konvolüsyonel (Convolutional/Evrişimli) sinir ağları (CNNs)
+
+Derin öğrenmenin muhteşem başarıya ulaştığı bir alan, görüntü işleme. Bir
+önceki bölümde ayrıntılı olarak incelediğimiz basit bir sınıflandırıcı, ciddi
+bir şekilde sınırlıdır. Ağa daha fazla katman eklemek ve ağırlıkları öğrenmek
+için geri yayılımı kullanmak prensipte sorunu çözer ancak bir diğeri ortaya
+çıkar: Ağırlıkların sayısı çok büyük olur ve sonuç olarak, tatmin edici
+doğruluk elde etmek için gerekli eğitim verisi miktarı çok büyük olabilir. 
+
+Neyse ki, çok fazla ağırlık sorununa çok zarif bir çözüm var: Özel bir tür
+sinir ağı veya daha doğrusu, derin bir sinir ağına dahil edilebilecek özel bir
+tür katman. Bu özel katman türü, **evrişimli katmandır (convolutional
+layer)**. Evrişimli katmanları içeren ağlara **evrişimli sinir ağları
+(convolutional neural networks, CNN)** denir. Önemli özellikleri, parlak veya
+karanlık (veya belirli bir renk) noktalar, çeşitli yönlerde kenarlar, desenler
+vb. gibi görüntü özelliklerini algılayabilmeleridir. Bunlar, bir kedinin
+kulakları, bir köpeğin burnu, bir kişinin gözü veya bir dur işaretinin
+sekizgen şekli gibi daha soyut özelliklerin saptanması için temel oluşturur.
+Normalde, görüntüler farklı konumlarda, farklı yönlerde ve farklı boyutlarda
+görünebildiği için, nesnenin veya kamera açısının hareket ettirilmesi gibi,
+giriş görüntüsünün piksellerine dayalı olarak bu tür özellikleri saptamak için
+bir sinir ağını eğitmek zor olacaktır. Nesnenin kendisi bize aynı görünse bile
+piksel değerlerini dramatik olarak değiştirir. Tüm bu farklı koşullardaki bir
+durdurma işaretini tespit etmeyi öğrenmek için eğitim verilerinin çok miktarda
+olması gerekir çünkü ağ, sadece eğitim verilerinde göründüğü koşullarda
+işareti tespit edecektir. Örneğin, görüntünün sağ üst köşesindeki bir dur
+işareti, yalnızca eğitim verilerinin sağ üst köşedeki dur işareti ile bir
+görüntü içermesi durumunda tespit edilir. CNN'ler, eğitim görüntülerinde
+nerede gözlemlendiği fark etmeksizin, görüntüdeki herhangi bir yerde nesneyi
+tanıyabilir.
+
+> **Not**
+>
+> **Neden kolvolüsyonel nöral ağlara (CNN) ihtiyacımız var?**
+>
+> CNN'ler, farklı koşullarda nesneleri algılamak için gereken eğitim
+> verilerinin miktarını azaltmak için akıllı bir numara/hile kullanır. İşin
+> püf noktası, temelde birçok nöron için aynı girdi ağırlıklarının
+> kullanılması anlamına gelir, böylece tüm bu nöronlar aynı modelle, ancak
+> farklı giriş pikselleriyle etkinleştirilir. Örneğin bir kedinin sivri
+> kulakları tarafından aktive edilen bir dizi nöron olabilir. Giriş bir
+> kedinin fotoğrafı olduğunda, biri sol diğeri sağ kulak için olmak üzere iki
+> nöron aktive olur. Ayrıca, nöronun giriş piksellerinin daha küçük veya daha
+> büyük bir alandan alınmasına izin verebiliriz, böylece farklı ölçeklerde
+> (boyutlarda) kulak tarafından farklı nöronlar aktive olur, böylece eğitim
+> verisi sadece büyük bir kediden alınmış olsa bile küçük bir kedinin
+> kulaklarını tespit edebiliriz.
+
+Konvolüsyonel nöronlar tipik olarak, ham giriş piksellerini işleyen ağın alt
+katmanlarına yerleştirilir. Temel nöronlar (yukarıda ele alınan perceptron
+nöron gibi) alt tabakaların çıktısını işleyen yüksek tabakalara yerleştirilir.
+Alt tabakalar genellikle, göz önünde bulundurularak belirli bir tahmin görevi
+olmaksızın denetimsiz öğrenim kullanılarak eğitilebilir. Ağırlıkları, giriş
+verilerinde sıkça görülen özellikleri tespit etmek üzere ayarlanacaktır.
+Böylece hayvanların fotoğraflarında tipik özellikler kulaklar ve burunlar
+olacak; binaların görüntülerinde ise duvarlar, çatılar, pencereler vb. Giriş
+verileri olarak çeşitli nesneler ve sahnelerin bir karışımı kullanılırsa, alt
+katmanların öğrenmiş olduğu özellikler az çok genel olacaktır. Bu, önceden
+eğitilmiş konvolüsyonel katmanlarının birçok farklı görüntü işleme görevinde
+yeniden kullanılabileceği anlamına gelir. Bu, son derece önemlidir çünkü
+etiketsiz görüntüler olmak üzere, neredeyse sınırsız sayıda etiketlenmemiş
+eğitim verisi elde etmek kolaydır ki bu alt katmanları eğitmek için
+kullanılabilir. Üst katmanlar daima geri yayılım (backpropagation) gibi
+denetlenen makine öğrenme teknikleriyle eğitilir.
+
+![YZ 101 5 2 GAN Kedi Dur Tabelası](/assets/img/yz-101-5-3-gan-kedi-dur-tabelasi.png "YZ 101 5 2 GAN Kedi Dur Tabelası")
+
+#### Nöral ağlar elektrikli koyun düşler mi? Generative adversarial ağlar (GAN)
+
+Bir sinir ağı verilerle eğitildikten sonra, tahmin için kullanılabilir. Ağın
+üst katmanları belirli bir sınıflandırma veya tahmin görevini gerçekleştirmek
+için denetimli bir şekilde eğitildiğinden, üst katmanlar yalnızca bu görev
+için gerçekten yararlıdır. Dur işaretleri tespit etmek için eğitilen bir ağ,
+el yazısıyla yazılan rakamları veya kedileri tespit etmek için işe yaramaz.
+
+Önceden eğitilmiş alt katmanları alarak ve öğrendikleri özelliklerin nasıl bir
+şey yaptığını inceleyerek büyüleyici bir sonuç elde edilir. Bu, alt
+katmanlardaki belirli bir nöron grubunu aktive eden görüntüler üreterek elde
+edilebilir. Oluşturulan görüntülere bakıldığında, nöral ağın belirli bir
+özelliğin neye benzediğini, ya da içinde birtakım özelliklerin bulunduğu bir
+görüntünün neye benzediğini görebiliriz. Hatta bazıları, görüntüleri "hayal"
+ya da "halusinoje eden" ağlar hakkında konuşmak ister (Bkz. [Google
+DeepDream](https://en.wikipedia.org/wiki/DeepDream)).
+
+> **Not**
+>
+> **Metaforlara dikkat...**
+>
+> Bununla birlikte, girdi görüntüsünün basit optimizasyonu kastedildiğinde
+> rüya görme gibi metaforlarla ilgili sorunu bir kez daha vurgulamak istiyoruz
+> (bölüm 1'de tartışılan bavul kelimelerini hatırlayın). Sinir ağı gerçekten
+> hayal etmiyor ve bir insanın anladığı gibi bir anlamda anlayacağı bir kedi
+> kavramına sahip değil. Nesneleri tanımak için eğitilmiştir ve eğitildiği
+> giriş verilerine benzer görüntüler üretebilir.
+
+Gerçek görünümlü kediler, insan yüzleri veya diğer nesneler (eğitim verileri
+olarak kullandığınız her şeyi) oluşturmak için, şu anda Google Brain'de
+çalışan [Ian Goodfellow](https://en.wikipedia.org/wiki/Ian_Goodfellow), iki
+sinir ağının akıllı bir kombinasyonunu önermiştir. Fikir, iki ağın
+birbirlerine karşı rekabet etmesine izin vermektir. Ağlardan biri, eğitim
+verilerindeki gibi görüntüler oluşturmak için eğitilmiştir. Diğer ağın görevi,
+ilk ağ tarafından oluşturulan görüntüleri eğitim verilerindeki gerçek
+görüntülerden ayırmaktır. Buna rakip ağ denir ve tüm sistem generatif rekabet
+ağı veya GAN olarak adlandırılır.
+
+Sistem iki modeli yan yana eğitiyor. Eğitimin başlangıcında, rakip modelin,
+gerçek görüntüleri eğitim verilerinden ve üretken modelin beceriksiz
+girişimlerinden ayırmak için kolay bir görevi vardır. Bununla birlikte,
+generatif ağ yavaşça daha iyi ve daha iyi hale geldikçe, rakip model de
+iyileşmek zorundadır ve sonuçta üretilen görüntüler gerçek olanlardan
+neredeyse ayırt edilemeyinceye kadar devam eder. GAN, yalnızca eğitim
+verilerindeki görüntüleri yeniden üretmeye çalışmakla kalmaz: Bu, düşman ağı
+yenmek için çok basit bir strateji olur. Aksine, sistem yeni, gerçek görünümlü
+görüntüler de üretebilmesi için eğitilmiştir.
+
+![YZ 101 5 2 GAN Sahte Ünlüler](/assets/img/yz-101-5-3-gan-sahte-unluler.jpg "YZ 101 5 2 GAN Sahte Ünlüler")
+
+Bu görseller NVIDIA'da geliştirilen GAN tarafından, [Prof. Jaakko
+Lehtinen](https://users.aalto.fi/~lehtinj7/)'in yürütüğü bir projede üretilmiş
+**gerçekte var olmayan ünlülerdir**: Bkz. [MIT Technology Review
+Makalesi](https://www.technologyreview.com/the-download/609290/meet-the-fake-celebrities-dreamed-up-by-ai/)
+
+Bunların sahte olduğunu fark edebilir miydiniz?
+
+---
+
+![YZ 101 1 Yıldız](/assets/img/yildiz.png "YZ 101 1 Yıldız")
+![YZ 101 2 Yıldız](/assets/img/yildiz.png "YZ 101 2 Yıldız")
+![YZ 101 3 Yıldız](/assets/img/yildiz.png "YZ 101 3 Yıldız")
+![YZ 101 4 Yıldız](/assets/img/yildiz.png "YZ 101 4 Yıldız")
+![YZ 101 5 Yıldız](/assets/img/yildiz.png "YZ 101 5 Yıldız")
+{: style="text-align: center;"}
+
+**Bölüm 5'i tamamladıktan sonra şunları yapabilmeniz gerekir:**
+
++ Sinir ağlarının (Neural Networks) ne olduğunu ve başarılı bir şekilde
+  nerelerde kullanıldığını açıklama
++ Sinir ağlarının temelini oluşturan teknik metodları anlama
+
+[![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
+[![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
+[![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
+[![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
+[![YZ 101 Bölüm 5](/assets/img/maze-mini.png "5. Sinir Ağları (Neural Networks)")](/ai/2020/10/09/yapay-zeka-101-5.html)
+{: style="text-align: center;"}

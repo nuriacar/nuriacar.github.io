@@ -29,6 +29,7 @@ kaldık madem, afterparty başlasın...
 [![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
 [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
 [![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
+[![YZ 101 Bölüm 5](/assets/img/maze-mini.png "5. Sinir Ağları (Neural Networks)")](/ai/2020/10/09/yapay-zeka-101-5.html)
 {: style="text-align: center;"}
 
 ---
@@ -39,7 +40,7 @@ kaldık madem, afterparty başlasın...
 2. Yapay Zeka Problemi Çözme
 3. Gerçek Dünyada Yapay Zeka
 4. Makine Öğrenmesi (Machine Learning)
-5. Yapay Sinir Ağları (Neural Networks)
+5. Sinir Ağları (Neural Networks)
 6. Yapay Zeka Uygulamaları (Implications)
 
 ## 4. Makine Öğrenmesi (Machine Learning)
@@ -858,7 +859,7 @@ yorumlanabilirliğine gelince, net bir fark vardır. Eğitimli modeli en yakın
 komşularda doğrusal regresyondaki (indirgeme) ağırlıklarla benzer şekilde
 yorumlamak imkansızdır: Öğrenilen model temelde tüm verilerdir ve genellikle
 bize çok fazla içgörü sağlamak için çok büyük ve karmaşıktır. Peki ya en yakın
-komşu etiketleriylele aynı tür çıktıları üreten, ancak doğrusal regresyon
+komşu etiketleriylele aynı tür çıktıları üreten ancak doğrusal regresyon
 (indirgeme) gibi yorumlanabilen bir yönteme sahip olmak istersek?
 
 #### Kurtarma için lojistik regresyon (indirgeme)
@@ -919,14 +920,14 @@ modelinden alacağımız tahmini geçiş olasılığını belirtmek için soldak
 kullanacağız. Bu rakama dayanarak, daha uzun süre eğitim gören öğrencilerin
 kursu geçme şanslarının daha yüksek olduğunu kabaca görebilirsiniz. Özellikle
 aşırı durumlar sezgiseldir: Bir saatten az bir çalışma ile kursu geçmek çok
-zordur, ancak çok çalışma ile çoğu başarılı olacaktır. Peki ya aşırılıklar
+zordur ancak çok çalışma ile çoğu başarılı olacaktır. Peki ya aşırılıklar
 arasında bir yerde çalışmak için zaman harcayanlar? 6 saat çalışırsanız geçme
 şansınız nedir?
 
 Lojistik regresyon (indirgeme) kullanarak geçiş olasılığını ölçebiliriz.
 Şekildeki eğri, geçme olasılığı olarak yorumlanabilir: Örneğin, beş saat
 çalıştıktan sonra, geçme olasılığı %20'nin biraz üzerindedir. Eğrinin nasıl
-elde edileceğine dair ayrıntılara girmeyeceğiz, ancak bu, doğrusal regresyonda
+elde edileceğine dair ayrıntılara girmeyeceğiz ancak bu, doğrusal regresyonda
 ağırlıkları nasıl öğrendiğimize benzeyecektir.
 
 Yukarıdaki şekle göre bir üniversite sınavını geçme şansınızın %80 olmasını
@@ -1044,4 +1045,5 @@ gerçek katma değer yarattığımızdan emin olmamıza yardımcı olur.
 [![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
 [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
 [![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
+[![YZ 101 Bölüm 5](/assets/img/maze-mini.png "5. Sinir Ağları (Neural Networks)")](/ai/2020/10/09/yapay-zeka-101-5.html)
 {: style="text-align: center;"}
