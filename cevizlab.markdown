@@ -44,11 +44,12 @@ mümkün olduğunca daha iyiye evrilecek. Eksik, hatalı, zor anlaşılır vb.
 bunduğunuz kısımlar için iletişime geçmenizden ziyadesiyle memnun olurum.
 **Birlikte daha iyi olalım!**
 
-Peki şimdi sırada ne var? Bu eğitimin devamı olan "Yapay Zeka İnşa Etme"
-eğitimini de zaman içinde bu siteye ekleme niyetindeyim. Peki içeriği nasıl?
-Yapay Zeka yöntemleri oluşturmayı mümkün kılan gerçek algoritmalar hakkında
-bilgiler içermekle birlikte temel düzel Python bilgisi gerektiriyor. Çalışmak
-gerek! Çok!..
+Peki şimdi sırada ne var? Bu eğitimin devamı olan "[Yapay Zeka İnşa Etme
+(Building AI)](https://buildingai.elementsofai.com/)" eğitimini de zaman
+içinde bu siteye ekleme niyetindeyim. Peki içeriği nasıl?  Yapay Zeka
+yöntemleri oluşturmayı mümkün kılan gerçek algoritmalar hakkında bilgiler
+içermekle birlikte temel düzel Python bilgisi gerektiriyor. Çalışmak gerek!
+Çok!..
 
 [Ey benim paşalarım, beylerim, ağalarım; şu şehr-i Konstantıniyye cengindeki
 silah arkadaşlarım!..](https://tr.wikipedia.org/wiki/II._Mehmed) Biz bize
