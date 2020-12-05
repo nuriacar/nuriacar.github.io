@@ -33,28 +33,39 @@ permalink: /cevizlab/
 
 2018'de [Finlandiya Helsinki Üniversitesi](https://helsinki.fi/en), bazı
 Bilgisayar Bilimleri derslerini [mooc.fi](http://mooc.fi/en) üzerinden erişime
-açtı. Ben de görür görmez kaydoldum ve eğitimler sisteme yüklendikçe buradaki
-dersleri almaya koyuldum. Kaydolduğum ilk eğitim
-[Reaktor](https://reaktor.com) işbirliği ile hazırlanan [Yapay Zeka
+açtı. Belki de 2018'den önceydi lakin ben 2018'de haberdar oldum. Görür görmez
+kaydoldum ve eğitimler sisteme yüklendikçe buradaki dersleri almaya koyuldum.
+Tamamladığım -ki bir ay sürdü- ilk eğitim [Reaktor](https://reaktor.com)
+işbirliği ile hazırlanan [Yapay Zeka
 Temelleri](https://course.elementsofai.com/) eğitimiydi. Yapabildiğim kadar
 tercüme ettim. Kısa süre önce de tekrardan gözden geçirip yayınlama kararı
-aldım. Toplamda altı bölüm olacak. Zamanla tüm bölümler yüklenmiş olur.
+aldım. Altı bölümden oluşuyor ve bu sitedeki diğer içerikler gibi günden güne
+mümkün olduğunca daha iyiye evrilecek. Eksik, hatalı, zor anlaşılır vb.
+bunduğunuz kısımlar için iletişime geçmenizden ziyadesiyle memnun olurum.
+**Birlikte daha iyi olalım!**
+
+Peki şimdi sırada ne var? Bu eğitimin devamı olan "Yapay Zeka İnşa Etme"
+eğitimini de zaman içinde bu siteye ekleme niyetindeyim. Peki içeriği nasıl?
+Yapay Zeka yöntemleri oluşturmayı mümkün kılan gerçek algoritmalar hakkında
+bilgiler içermekle birlikte temel düzel Python bilgisi gerektiriyor. Çalışmak
+gerek! Çok!..
 
 [Ey benim paşalarım, beylerim, ağalarım; şu şehr-i Konstantıniyye cengindeki
 silah arkadaşlarım!..](https://tr.wikipedia.org/wiki/II._Mehmed) Biz bize
 kaldık madem, afterparty başlasın...
-
-> Şiddetle başlayan hazlar, şiddetle son bulurlar.
->
-> These violent delights have violent ends.
->> Shakespeare
 
 [![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
 [![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
 [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
 [![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
 [![YZ 101 Bölüm 5](/assets/img/maze-mini.png "5. Sinir Ağları (Neural Networks)")](/ai/2020/10/09/yapay-zeka-101-5.html)
+[![YZ 101 Bölüm 6](/assets/img/maze-mini.png "6. Muhtemel Etkiler (Implications)")](/ai/2020/10/10/yapay-zeka-101-6.html)
 {: style="text-align: center;"}
+
+> Şiddetle başlayan hazlar, şiddetle son bulurlar.
+>
+> These violent delights have violent ends.
+>> Shakespeare
 
 ---
 
@@ -128,3 +139,15 @@ Bu kısımda şu konuları ele alacağız:
 1. Sinir ağı temelleri
 2. Sinir ağları nasıl kurulur
 3. Gelişmiş sinir ağları teknikleri
+
+### [Yapay Zeka 101 [ 6. Bölüm ]](/ai/2020/10/10/yapay-zeka-101-6.html)
+
+> Geçmiş hakkında ne kadar çok şey bilirseniz, geleceğe o kadar iyi
+> hazırlandığınıza inanıyorum.
+>> Theodore Roosevelt
+
+Bu kısımda şu konuları ele alacağız:
+
+1. Geleceği öngörme hakkında
+2. Yapay Zeka'nın muhtemel toplumsal etkileri (implications)
+3. Özet

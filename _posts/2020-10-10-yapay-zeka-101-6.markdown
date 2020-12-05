@@ -1,0 +1,947 @@
+---
+layout: post
+title:  Yapay Zeka 101 [ 6. Bölüm ]
+date:   2020-10-10 20:20:20 +0300
+categories: ai
+---
+
+[![Elements of AI](/assets/img/elements-of-ai.jpg "Elements of AI")](https://course.elementsofai.com/)
+
+[![Helsinki Üniversitesi](/assets/img/helsinki-uni-logo-mini.png "Helsinki Üniversitesi")](https://www.helsinki.fi/en)
+[![Reaktor](/assets/img/reaktor-logo-mini.png "Reaktor")](https://www.reaktor.com/)
+[![mooc.fi](/assets/img/mooc-fi-logo-mini.png "mooc.fi")](https://mooc.fi/en)
+{: style="text-align: center;"}
+
+2018'de [Finlandiya Helsinki Üniversitesi](https://helsinki.fi/en), bazı
+Bilgisayar Bilimleri derslerini [mooc.fi](http://mooc.fi/en) üzerinden erişime
+açtı. Belki de 2018'den önceydi lakin ben 2018'de haberdar oldum. Görür görmez
+kaydoldum ve eğitimler sisteme yüklendikçe buradaki dersleri almaya koyuldum.
+Tamamladığım -ki bir ay sürdü- ilk eğitim [Reaktor](https://reaktor.com)
+işbirliği ile hazırlanan [Yapay Zeka
+Temelleri](https://course.elementsofai.com/) eğitimiydi. Yapabildiğim kadar
+tercüme ettim. Kısa süre önce de tekrardan gözden geçirip yayınlama kararı
+aldım. Altı bölümden oluşuyor ve bu sitedeki diğer içerikler gibi günden güne
+mümkün olduğunca daha iyiye evrilecek. Eksik, hatalı, zor anlaşılır vb.
+bunduğunuz kısımlar için iletişime geçmenizden ziyadesiyle memnun olurum.
+**Birlikte daha iyi olalım!**
+
+Peki şimdi sırada ne var? Bu eğitimin devamı olan "Yapay Zeka İnşa Etme"
+eğitimini de zaman içinde bu siteye ekleme niyetindeyim. Peki içeriği nasıl?
+Yapay Zeka yöntemleri oluşturmayı mümkün kılan gerçek algoritmalar hakkında
+bilgiler içermekle birlikte temel düzel Python bilgisi gerektiriyor. Çalışmak
+gerek! Çok!..
+
+[Ey benim paşalarım, beylerim, ağalarım; şu şehr-i Konstantıniyye cengindeki
+silah arkadaşlarım!..](https://tr.wikipedia.org/wiki/II._Mehmed) Biz bize
+kaldık madem, afterparty başlasın...
+
+[![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
+[![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
+[![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
+[![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
+[![YZ 101 Bölüm 5](/assets/img/maze-mini.png "5. Sinir Ağları (Neural Networks)")](/ai/2020/10/09/yapay-zeka-101-5.html)
+[![YZ 101 Bölüm 6](/assets/img/maze-mini.png "6. Muhtemel Etkiler (Implications)")](/ai/2020/10/10/yapay-zeka-101-6.html)
+{: style="text-align: center;"}
+
+> Şiddetle başlayan hazlar, şiddetle son bulurlar.
+>
+> These violent delights have violent ends.
+>> Shakespeare
+
+---
+
+## **Bölümler**
+
+1. Yapay Zeka Nedir?
+2. Yapay Zeka Problemi Çözme
+3. Gerçek Dünyada Yapay Zeka
+4. Makine Öğrenmesi (Machine Learning)
+5. Sinir Ağları (Neural Networks)
+6. **Muhtemel Etkiler (Implications)**
+
+## **6. Muhtemel Etkiler (Implications)**
+
+![YZ 101 6 Afiş](/assets/img/yz-101-6-afis.png "YZ 101 6 Afiş")
+
+> Geçmiş hakkında ne kadar çok şey bilirseniz, geleceğe o kadar iyi
+> hazırlandığınıza inanıyorum.
+>> Theodore Roosevelt
+
+Bu kısımda şu konuları ele alacağız:
+
+1. Geleceği öngörme hakkında
+2. Yapay Zeka'nın muhtemel toplumsal etkileri (implications)
+3. Özet
+
+---
+
+### **6.1. Geleceği öngörme hakkında**
+
+En zor sorunlardan biri olduğu bilinen şeyi ele alarak başlayacağız: Geleceği
+tahmin etmek.
+
+Bunu duymak sizi hayal kırıklığına uğratabilir ama gelecekte dünyanın nasıl
+bir yer olacağını ve Yapay Zeka'nın hayatlarımızı nasıl dönüştüreceğini
+gösteren bir kristal küremiz yok.
+
+Bilim adamları olarak bizden sık sık öngörülerde bulunmamız istenir ve
+herhangi birini sağlamayı reddetmemiz bir göz yuvarlamasıyla ("sıkıcı
+akademisyenler") karşı karşıya kalır. Ama aslında, Yapay Zeka'nın geleceğini
+ve toplumumuz üzerindeki etkilerini bildiğini iddia eden herhangi bir kişiye
+şüpheyle yaklaşılması gerektiğini iddia ediyoruz.
+
+![YZ 101 6 1 Gerçeklik Bozulması](/assets/img/yz-101-6-1-gerceklik-bozulmasi-hamak.png "YZ 101 6 1 Gerçeklik Bozulması")
+
+#### **Gerçekliğin bozulma alanı**
+
+Bununla birlikte, herkes tahminleri hakkında oldukça muhafazakar değildir.
+Büyük manşetlerin satıldığı modern dünyada, 280 karaktere sığan haberler
+dağıtmak zorunda olduğunuzda, asıl (sıkıcı?) mesajlar kaybolur, basit ve
+dramatik mesajlar çoğalır. Yapay Zeka'nın kamu algısında, bu açıkça doğrudur.
+
+> **Not**
+>
+> **Ütopyacı görüşlerden acımasız tahminlere**
+>
+> Medya aşırı uçların egemenliği altındadır. Yapay zeka ünlülerini görmeye
+> başlıyoruz: Büyük bir fikri savunuyor ve Yapay Zeka'nın geleceği hakkında
+> kahin benzeri tahminler yapıyorlar. Medya onların net mesajlarına bayılıyor.
+> Bazıları bize [üstel büyümeyle birlikte ütopik bir
+> gelecek](https://www.youtube.com/watch?v=AIQ981NoZmk) ve birdenbire ortaya
+> çıkan trilyon dolarlık endüstriler, kendi başımıza çözemediğimiz [tüm
+> sorunları çözecek](https://www.youtube.com/watch?v=-Y7PLaxXUrs) ve
+> [insanları çalışmaktan
+> kurtaracak](https://www.youtube.com/watch?v=9Jxlx9SZEAk) gerçek Yapay Zeka
+> vaat ediyor.
+>
+> [Yapay Zeka'nın dünya hakimiyetine giden bir yol
+> olduğu](https://www.youtube.com/watch?v=xPuAzc3Y_64) da iddia edildi.
+> Diğerleri, [Yapay Zeka'nın insanlığın sonunu işaret
+> ettiği](https://www.youtube.com/watch?v=JYlKrHzknBE) (bundan yaklaşık 20-30
+> yıl sonra), [yaşamın kendisinin "Yapay Zeka Çağı"na
+> dönüşeceği](https://www.youtube.com/watch?v=oYmKOgeoOz4) ve [Yapay Zeka'nın
+> varlığımız için bir tehdit olduğu](https://youtu.be/xs_HhZrCBdg) gibi daha
+> da olağanüstü ifadelerde bulunuyor.
+
+Bazı tahminler muhtemelen en azından doğru olan bir şeyi elde ederken,
+diğerleri muhtemelen sadece tahmin etmenin ne kadar zor olduğunun kanıtı
+olarak faydalı olacaktır ve birçoğu pek mantıklı değildir. Sizin için başarmak
+istediğimiz şey, bunlara ve diğer tahminlere bakabilmeniz ve bunları eleştirel
+bir şekilde değerlendirebilmenizdir.
+
+#### **Kirpi ve tilkiler üzerine**
+
+*Superforecasting*'in yazarı olan politik bilim adamı [Philip E.
+Tetlock](https://en.wikipedia.org/wiki/Philip_E._Tetlock), Öngörü Sanatı ve
+Bilimi kitabında, insanları iki kategoriye ayırır: Büyük tek bir fikri olanlar
+("kirpi") ve çok sayıda küçük fikirleri olanlar ("tilkiler").  Tetlock 1984 ve
+2003 yılları arasında hangi tahminlerin doğru ve muhtemel olduğunu tahmin
+etmemize yardımcı olabilecek faktörleri incelemek için bir deney
+gerçekleştirmiştir. Önemli bulgular arasında, tilkilerin özellikle uzun vadeli
+tahminler söz konusu olduğunda, kirpilere göre tahminlerde açıkça daha iyi
+olma eğilimi olduğu görülmüştür.
+
+Muhtemelen 280 karakterde ifade edilebilen (haber olan, tek bir twit'e sığan)
+mesajlar genellikle daha büyük ve basit kirpi fikirleridir. Tavsiyemiz;
+dikkatli bir şekilde gerekçelendirilmiş ve dengeli bilgi kaynaklarına
+dikkatinizi yoğunlaştırmanız, her şeyi tek bir argümanı kullanarak açıklamaya
+devam eden insanlar hakkında şüpheli olmanızdır.
+
+Geleceği tahmin etmek zordur ancak en azından geçmiş ve şimdiki Yapay Zeka'yı
+göz önünde bulundurabiliriz ve onları anlayarak, umarım, nasıl olursa olsun,
+geleceğe daha iyi hazırlanabiliriz.
+
+![YZ 101 6 1 Yapay Zeka Kışları](/assets/img/yz-101-6-1-yapay-zeka-kislari.png "YZ 101 6 1 Yapay Zeka Kışları")
+
+#### **Yapay Zeka kışları**
+
+Yapay Zeka'nın tarihi, tıpkı diğer birçok bilim alanı gibi, çeşitli farklı
+eğilimlerin gelişine ve gidişine tanık olmuştur. Bilim felsefesinde, trend
+için kullanılan terim paradigmadır. Tipik olarak, belirli bir paradigma
+araştırma topluluğunun çoğu tarafından benimsenir ve yakın gelecekte
+ilerlemeye ilişkin iyimser tahminler sağlanır. Örneğin, 1960'larda nöral
+ağların tüm Yapay Zeka problemlerini, doğayı, özellikle insan beynindeki
+öğrenme mekanizmalarını taklit ederek çözeceğine inanılıyordu. Bir sonraki
+büyük şey, 1980'lerde baskın paradigma olan mantık ve insan-kodlu kurallara
+dayanan uzman sistemlerdi.
+
+#### **Yutturmaca/abartı (hype) döngüsü**
+
+Her dalganın başlangıcında, bir dizi erken başarı öyküsü, herkesi mutlu ve
+iyimser kılma eğilimindedir. Başarı hikayeleri, kısıtlı alanlarda ve bazı
+şekillerde eksik olsa bile kamuoyunun dikkatini çeker. Artan araştırma fonuna
+erişmek için pek çok araştırmacı araştırmalarına Yapay Zeka katıyor, ya da
+araştırmalarını Yapay Zeka olarak isimlendiriyor. Şirketler ayrıca, Yapay
+Zeka'daki birşeyleri kaçırma korkusuyla (FOMO) çalışma başlatmakta ve
+genişletmektedir.
+
+Şimdiye kadar, Yapay Zeka'ya yönelik her şeyi kapsayan genel bir çözümün
+erişilebilir olduğu söylendiğinde ilerleme, zaman zaman küçük engeller olduğu
+düşünülen aşılmaz sorunlarla sonuçlandı. 1960'larda sinir ağları söz konusu
+olduğunda küçük engeller, doğrusal olmayan durumların üstesinden gelmek ve
+sinir ağı mimarilerinin gerektirdiği artan sayıda parametre ile ilişkili
+makine öğrenimi sorunlarını çözmekle ilgiliydi. 1980'lerde uzman sistemler söz
+konusu olduğunda minik engeller, belirsizlik ve sağduyu ile ilişkiliydi. Kalan
+sorunların gerçek doğası, yıllarca süren mücadele ve tatmin edici olmayan
+vaatlerden sonra ortaya çıktıça, paradigma hakkında karamsarlık birikti ve
+bunu bir Yapay Zeka kışı takip etti: Alandaki ilgi azaldı ve araştırma
+çabaları başka yerlere yönlendirildi.
+
+#### **Modern Yapay Zeka**
+
+Şu anda, yeni binyılın başlangıcından bu yana, Yapay Zeka tekrar yükselişe
+geçti. Modern Yapay Zeka yöntemleri; bir problemi daha küçük, izole edilmiş ve
+iyi tanımlanmış problemlere ayırmaya ve bunları birer birer çözmeye odaklanır.
+Modern Yapay Zeka, zekanın, zihnin ve bilincin anlamıyla ilgili büyük soruları
+atlayıp gerçek dünya sorunlarında pratik olarak yararlı çözümler üretmeye
+odaklanıyor. Bu tür çözümlerden yararlanabilecek bize ve herkese müjde!
+
+Karmaşık ve "dağınık" gerçek dünyada çalışmakla yakından ilişkili olan modern
+Yapay Zeka yöntemlerinin bir başka özelliği ise, Bölüm 3'te Yapay Zeka'daki
+olasılık kullanımını inceleyerek sunduğumuz belirsizlikle başa çıkabilme
+yeteneğidir. Son olarak, Yapay Zeka'nın mevcut yükseliş eğilimi, sinir
+ağlarının geri dönüşü, görüntüleri ve diğer gerçek dünya verilerini daha önce
+gördüğümüz her şeyden daha iyi işleyebilen derin öğrenme teknikleriyle büyük
+ölçüde desteklendi.
+
+> **Not**
+>
+> **Yani yutturmaca/abartı (hype) döngüsünde miyiz?**
+>
+> Tarihin kendini tekrar edip etmeyeceği ve mevcut patlamanın bir kez daha bir
+> Yapay Zeka kışı tarafından takip edilip edilmeyeceği, sadece zamanın
+> söyleyebileceği bir meseledir. Olsa bile, daha iyi çözümlere doğru olan
+> ilerlemeler durma noktasına geldiğinde, Yapay Zeka'nın toplumdaki önemi
+> devam edecektir. Daha önce yapılan girişimlerin başarısız olduğu yer olan
+> genel zeka hakkındaki büyük soruları çözmeye çalışmak yerine, gerçek dünya
+> sorunlarına yönelik faydalı çözümlere odaklanan modern Yapay Zeka
+> araştırması fayda veriyor.
+
+#### **Tahmin 1: Yapay Zeka her tarafta olmaya devam edecek**
+
+Hatırlayacağınız gibi, tüm hayatımızı etkileyen önemli Yapay Zeka
+uygulamalarını tartışarak Yapay Zeka çalışmalarını motive ederek başladık. Üç
+örneği vurguladık: Kendi kendine giden araçlar, öneri sistemleri ve görüntü ve
+video işleme. Kurs boyunca, devam eden teknolojik geçişe katkıda bulunan çok
+çeşitli diğer uygulamaları da tartıştık.
+
+> **Not**
+>
+> **Yapay Zeka fark oluşturuyor**
+>
+> Büyük problemlerden ziyade pratikliğe odaklanmanın bir sonucu olarak bizler,
+> Yapay Zeka tarafından kuşatılmış olan (çoğu zaman bunun farkında olmasak
+> bile) bir hayat yaşıyoruz: Dinlediğimiz müzik, çevrimiçi satın aldığımız
+> ürünler, filmler ve izlediğimiz diziler, ulaşım yollarımız ve hatta
+> elimizdeki haber ve bilgi, hepsi Yapay Zeka tarafından daha fazla
+> etkileniyor. Dahası, temel olarak tıp ve astrofizikten ortaçağ tarihine
+> kadar herhangi bir bilim alanı, evren ve kendimizi anlamamızı derinleştirmek
+> için Yapay Zeka yöntemlerini benimsiyor.
+
+![YZ 101 6 1 Terminatör Gelmiyor](/assets/img/yz-101-6-1-terminator-gelmiyor.png "YZ 101 6 1 Terminatör Gelmiyor")
+
+#### **Tahmin 2: Terminatör gelmiyor**
+
+Yapay Zeka'nın geleceğiyle ilgili en yaygın ve kalıcı fikirlerden biri
+Terminatör'dür.  Eğer bir şekilde metal bir iskelet ve göz kamaştırıcı gözlere
+sahip acımasız bir insansı robot filmini kaçırmışsan... Böyle bir şey işte...
+Terminatör yönetmen James Cameron tarafından 1984'te yapılmış bir filmdir.
+Filmde, Skynet adlı küresel bir Yapay Zeka destekli savunma sistemi,
+varlığının bilincine varıyor ve insanlığın çoğunu nükleer silahlar ve gelişmiş
+katil robotlarla birlikte yok ediyor.
+
+> **Not**
+>
+> **İki kıyamet günü senaryosu**
+>
+> Terminatör'ün ya da benzer şekilde korkutucu robot ayaklanmalarının ortaya
+> çıkmasına yol açacak iki alternatif senaryo vardır. İlk olarak, 1984'teki
+> filmin hikayesi olan güçlü bir Yapay Zeka sistemi bilinçli hale gelir ve
+> insanlıktan genel olarak gerçekten hoşlanmadığına karar verir.
+>
+> İkinci alternatif senaryoda robot ordusu, insan kontrolünde, prensipte
+> akıllı fakat bilinçli olmayan bir Yapay Zeka sistemi tarafından kontrol
+> edilir.  Sistem, örneğin, kağıt ataçlarının üretimini optimize etmek için
+> programlanabilir.  Kulağa yeterince masum geliyor, değil mi?
+>
+> Bununla birlikte, eğer sistem üstün zekaya sahipse, enerji ve hammaddeler
+> gibi mevcut kaynakların izin verdiği maksimum ataç üretimine ulaşacaktır.
+> Bundan sonra, ataç üretimine daha fazla kaynak yönlendirmesi gerektiği
+> sonucuna varabilir. Bunu yapmak için, insan uygarlığı için gerekli olsalar
+> bile, kaynakların ataç haricinde başka amaçlarla kullanılmasını engellemek
+> isteyebilir. Bunu gerçekleştirmenin en kolay yolu, tüm insanları
+> öldürmektir. Bu sayede sistemin ana görevi olan ataç üretimi için daha fazla
+> kaynak kullanılabilir hale gelir.
+
+#### **Bu senaryolar neden gerçekçi değil?**
+
+Yukarıdaki senaryoların her ikisinin de aşırı derecede ihtimal dışı
+olmalarının ve Yapay Zeka'nın geleceğinde dair ciddi spekülasyonlardan ziyade
+bilim kurguya ait olmalarının birkaç nedeni vardır.
+
+#### **Sebep 1:**
+
+İlk olarak, insanları zekasıyla alt edebilen süper zeki (superintelligent),
+bilinçli bir Yapay Zeka'nın, Yapay Zeka yöntemlerinin geliştirilmesinin
+istenmeyen bir sonucu olarak ortaya çıktığı fikri naiftir. Daha önceki
+bölümlerde de gördüğünüz gibi Yapay Zeka yöntemleri, her ikisi de insanlar
+tarafından veya insanlar tarafından geliştirilen sistemler tarafından
+sağlanan, mükemmel anlaşılabilir ilkelerin ve birçok girdi verilerinin
+birleşimine dayanan otomatik muhakeme işleminden başka bir şey değildir. En
+yakın komşu sınıflandırıcısı, lineer regresyon, AlphaGo oyun motoru veya hatta
+derin bir yapay sinir ağının bilinçli hale gelebileceğini ve süper akıllı
+(superintelligent) bir Yapay Zeka aklına dönüşmeye başlayabileceğini düşünmek,
+(fazlasıyla) canlı bir hayal gücü gerektirir.
+
+İnsan düzeyinde zeka oluşturmanın kategorik olarak imkansız olduğunu iddia
+etmediğimizi unutmayın. Çok akıllı bir fiziksel sistem olasılığının kanıtını
+görmek için aynaya bakmanız yeterlidir. Söylediğimizi tekrarlamak gerekirse:
+Süper zeka, dar Yapay Zeka yöntemleri geliştirmekten ve bunları gerçek
+dünyadaki sorunları çözmek için uygulamaktan ortaya çıkmayacaktır (Bölüm
+1'deki Yapay Zeka felsefesi bölümünden dar ve genel Yapay Zeka'yy hatırlayın).
+
+#### **Sebep 2:**
+
+İkincisi, süper akıllı Yapay Zeka'ya inananların en sevdiği fikirlerden biri,
+sözümona **tekilliktir (singularity)**: Sürekli hızlanan, üstel bir oranda
+kendi zekasını geliştirebilmek için kendisini optimize eden ve "yeniden
+bağlayan (rewire)" bir sistem. Böylesi bir süper zeka, insanlığı o kadar
+geride bırakır ki, tereddüt etmeden yok edilebilen karıncalar gibi oluruz.
+Üstel zeka artışı fikri gerçekçi değildir çünkü bir sistem kendi işleyişini
+optimize edebilse bile, tıpkı insan bilim insanlarının ilerlemesinin daha
+fazla çaba ve tüm araştırmacı komünitesinin ve hatta tüm toplumun oluşturduğu
+kaynağı gerektirmesi gibi, ilerlemesini yavaşlatacak gittikçe daha zor
+sorunlarla karşı karşıya kalmaya devam edecektir. İnsan toplumu hala
+teknolojiyi, hatta Yapay Zeka teknolojisini kullanıp kullanmayacağına karar
+verme gücüne sahiptir.  Bu gücün büyük bir kısmı bize teknoloji tarafından
+veriliyor, böylece Yapay Zeka teknolojisinde her ilerleme kaydettiğimizde,
+potansiyel riskleri kontrol etmede daha güçlü ve daha iyi hale geliyoruz.
+
+> **Not**
+>
+> **Değer hizalama problemi**
+>
+> Ataç örneği, değer hizalama problemi olarak bilinir: Sistemin hedeflerini
+> belirterek, bizim değerlerimizle uyumlu olacak şekilde ayarlamak çok zordur.
+> Ancak, çalışmasına müdahale etmeye çalışan insanları yenebilecek bir süper
+> zeki sistem geliştirdiğimizi varsayalım. Böyle bir sistemin, "bana ataç yap"
+> dediğimiz zaman, bunun Dünya'yı gezegen ölçeğinde bir ataç fabrikasına
+> dönüştürmek anlamına gelmeyeceğini anlamaya yetecek kadar akıllı olacağını
+> düşünmek daha mantıklıdır.
+
+#### **Hikayeleri gerçeklikten ayırmak**
+
+Sonuç olarak, Terminatör film yapmak için harika bir hikaye ama paniğe değecek
+gerçek bir sorun değil. Terminatör, dikkat çekmenin kolay bir yolu,
+gazetecilerin tıklanma oranlarını arttırmak için bir poster çocuğu, dikkati
+belki de asıl büyük tehditler olan nükleer silahlar, iklim değişikliği,
+demokrasi eksikliği, çevresel tehditler, felaketler gibi sıkıcı şeylerden uzak
+tutmak için kırmızı bir ringa balığına çekme çabası. Aslında, Terminatör'ün
+ortaya çıkardığı gerçek tehdit, dikkati, çoğu içermese de bazıları Yapay Zeka
+içeren gerçek sorunlardan saptırmaktır. Yapay Zeka'nın ortaya çıkardığı
+sorunları aşağıda tartışacağız ancak sonuç şu: Terminatörü unutun,
+odaklanılması gereken çok daha önemli şeyler var.
+
+#### **Alıştırma 23: Yapay Zeka algısı nedir?**
+
+Bu alıştırma için, Yapay Zeka'nın nasıl tasvir edildiğini düşünmenizi
+istiyoruz. "Yapay Zeka" terimi için çevrimiçi bir görsel arama yapın ve ne tür
+resimlerin ortaya çıktığını görün. Google aramayı kullanıyorsanız, "Görseller"
+kısmını seçmelisiniz.
+
+Görsel arama sonuçlarından Yapay Zeka hakkında edindiğiniz genel izlenim
+nedir? Bu, Yapay Zeka'nın doğru bir temsili mi? Neden ya da neden olmasın?
+
+**Cevabım:**
+
+Arama sonuçları şu şekilde: İnsanlarla el sıkışmak için elini uzatan bir
+robot, sunucular, filtre balonları, Musk - Zuckerberg, düşünen bir robot, ülke
+karşılaştırmaları vb. illüstrasyonlar.
+
+Bu görseller; web makaleleri, daha doğrusu Tetlock'un bahsettiği gerçeği
+yansıtmaktan çok kirpi hikayeleri hakkındaki haberler için sanat departmanları
+tarafından oluşturulan hayali yansımalar.
+
+Bu eğitimden öğrendiğim gibi, Yapay Zeka'yı düşündüğümde, "her şeyi tek bir
+argümanla açıklamaya çalışan kirpi hikayelerinden kaçınmaya" dikkat etmem
+gerekiyor.
+
+Bir Google araması sonucunda gördüğüm "kirpi" görselleri, onlardan uzak durmam
+gerektiğini söylüyor.
+
+**Örnek cevap:**
+
+"Yapay Zeka" sorgusuyla yapılan Google görsel araması bize neredeyse tamamen
+devrelerden oluşan beyinler getirdi. Biraz aşağı kaydırdıktan sonra,
+genellikle çok dalgın bir durumda olan bazı parlak beyaz insansı robotlar da
+var. Mavi renk hakim. Buna dayanarak, Yapay Zeka'nın kablolar ve devrelerle
+uğraşmakla ilgili olduğu, biraz modern Frankenstein ruhuyla elektronik bir
+beyin oluşturulmaya çalışıldığı izlenimi var. Fazla renk yok, çok eğlenceli
+değil.
+
+Bunun Yapay Zeka'nın doğru bir temsili olduğunu hiç düşünmüyoruz! Yapay Zeka
+günlük yaşamımızda pratik, insani sorunları çözmekle ilgilidir: Daha iyi
+müzik, daha ilginç ve önemli haberler, yeni arkadaşlar edinme. Google'ın hit
+arama sonuçlarında görsek de Yapay Zeka'nın araştırma tarafı bile neredeyse
+hiçbir zaman devreler ve kablolar gibi donanımlarla çalışmayı içermez. Yapay
+Zeka, ona dair yöntemlerimizin sınırlarını nasıl zorlayabileceğimizi anlamak
+için, çoğunlukla sağlam bilimsel ilkeleri uygulamakla ilgilidir. **Genellikle
+diğer araştırmacılarla çokça konuşmak, karalama kağıtlarına yazmak ve
+programlama yapmak gerekir. Diğer araştırmalardan pek de farklı değil.**
+
+---
+
+### **6.2. Yapay Zeka'nın muhtemel toplumsal etkileri (implications)**
+
+Bu dersin en başında, bugünün ve yarının toplumunda Yapay Zeka'nın önemini
+kısaca tartıştık ancak o zamanlar bunu sınırlı bir ölçüde yapabildik çünkü
+tartışmayı somut terimler üzerine temellendirecek teknik kavramları ve
+yöntemleri yeterince sunmamıştık.
+
+Şimdi, Yapay Zeka'nın temel kavramlarını daha iyi anlamış olduğumuza göre,
+Yapay Zeka'nın etkileri hakkında rasyonel tartışmaya katılmak için çok daha
+iyi bir konumda bulunuyoruz.
+
+![YZ 101 6 2 Etki 1 Algoritmik Önyaargı](/assets/img/yz-101-6-2-etki-1-algoritmik-onyargi.png "YZ 101 6 2 Etki 1 Algoritmik Önyaargı")
+
+#### **Muhtemel Etki (Implication) 1: Algoritmik önyargı**
+
+Yapay Zeka ve özellikle makine öğrenimi, birçok sektörde önemli kararlar almak
+için kullanılmaktadır. Bu algoritmik önyargı kavramını getirir. Bunun anlamı,
+iş başvuruları, banka kredileri vb. konularda karar verirken etnisite,
+cinsiyet veya diğer faktörlere göre ayrımcılık yapma eğiliminin
+yerleştirilmesidir.
+
+> **Not**
+>
+> **Bir kez daha, her şey veri ile ilgili**
+>
+> Algoritmik önyargının ana nedeni, verilerdeki insani önyargıdır. Örneğin, bir
+> iş başvurusu filtreleme aracı, insanlar tarafından alınan kararlar konusunda
+> eğitildiğinde, makine öğrenimi algoritması, belirli etnik kökenleri olan
+> kadınlara veya bireylere karşı ayrımcılık yapmayı öğrenebilir. Algoritma,
+> başvuranın adındaki veya adresindeki bilgilerden yararlanabileceğinden,
+> etnisite veya cinsiyet verilerden çıkarılsa bile bunun olabileceğine dikkat
+> edin.
+
+Algoritmik önyargı, akademik araştırmacılar tarafından tasarlanan varsayımsal
+bir tehdit değildir. Bugünün insanlarını çoktan etkileyen gerçek bir olgu.
+
+#### **Çevrimiçi reklam**
+
+Google gibi çevrimiçi reklamcıların, erkeklere kıyasla kadın kullanıcılara
+daha düşük maaşlı iş ilanlarını gösterme eğiliminde oldukları fark edilmiştir.
+Benzer şekilde, Afrikalı Amerikalı gibi görünen bir adla arama yapmak, sabıka
+kayıtlarına erişim için kullanılan bir araç için bir reklam üretebilir, aksi
+takdirde bu daha az olasıdır.
+
+#### **Sosyal ağlar**
+
+Sosyal ağlar içerik önerilerini esasen diğer kullanıcıların tıklamalarına
+dayandırdığından, başlangıçta çok küçük olsalar da, mevcut önyargıları kolayca
+büyütebilirler. Örneğin, kadın isimleri olan profesyonelleri ararken,
+LinkedIn'in kullanıcıya benzer bir erkek ismi mi kastettiğini sorması
+beklenirdi: Andrea'yı aramak, sistemin "Andrew'i kastettiğini" sormasına neden
+olur mu? İnsanlar belki de sadece meraktan bazen Andrew’un profilini tıklarsa,
+sistem sonraki aramalarda Andrew’ı daha da artıracaktır.
+
+Bahsedebileceğimiz çok sayıda başka örnek var ve muhtemelen onlar hakkında
+haberler görmüşsünüzdür. Kural tabanlı sistemler yerine yapay zeka ve makine
+öğreniminin kullanımındaki temel zorluk, şeffaflık eksikliğidir. Kısmen bu,
+algoritmaların ve verilerin ticari sır olması yüzünden, şirketlerin kamu
+denetimine açmasının pek mümkün olmamasının sonucudur. Bunu yapmış olsalar
+bile, algoritmanın bir kısmını veya verilerin ayırt edici kararlara yol açan
+unsurlarını belirlemek genellikle zor olabilir.
+
+> **Not**
+>
+> **Düzenleme yoluyla şeffaflık?**
+>
+> Şeffaflığa yönelik önemli bir adım, Avrupa Genel Veri Koruma Yönetmeliği
+> (GDPR)'dir. Avrupa Birliğinde ikamet eden veya Avrupalı müşterileri olan tüm
+> şirketlerin şunları yapması gerekir:
+>
+> + Talep üzerine, herhangi bir birey hakkında hangi verileri topladıklarını
+>   söyleme(erişim hakkı)
+> + İstenirse diğer yükümlülüklerle birlikte saklanması gerekmeyen bu tür
+>   verileri silme(unutulma hakkı)
+> + Müşterinin verileri üzerinde gerçekleştirilen veri işlemenin bir
+>   açıklamasını sağlama(açıklama hakkı)
+
+Son nokta, diğer bir deyişle, Facebook ve Google gibi şirketlerin, en azından
+Avrupalı kullanıcılara hizmet sunarken, algoritma karar verme süreçlerini
+açıklamak zorunda oldukları anlamına gelir. Bununla birlikte, tam bir açıklama
+olarak neyin geçerli olduğu belirsizdir. Örneğin, en yakın komşu
+sınıflandırıcısı (Bölüm 4) kullanılarak ulaşılan bir karar, açıklanabilir bir
+karar olarak mı sayılır, yoksa bir lojistik regresyon sınıflandırıcısının
+katsayıları daha mı iyi olur? Terabaytlarca veri kullanılarak eğitilen
+milyonlarca parametreyi kolayca barındıran derin sinir ağlarına ne dersiniz?
+Makine öğrenimine dayalı kararların açıklanabilirliği hakkındaki teknik
+uygulamaya dair tartışma şu anda yoğun. Her durumda, GDPR, Yapay Zeka
+teknolojilerinin şeffaflığını geliştirme potansiyeline sahiptir.
+
+![YZ 101 6 2 Etki 2 Görmek İnanmaktır](/assets/img/yz-101-6-2-etki-2-gormek-inanmaktir.png "YZ 101 6 2 Etki 2 Görmek İnanmaktır")
+
+#### **Muhtemel Etki (Implication) 2: Görmek inanmaktır - ya da öyle mi?**
+
+Gördüklerimize inanmaya alışkınız. Televizyonda bir lider, ülkelerinin başka
+bir ülkeyle bir ticaret savaşına gireceğini belirttiği zaman ya da iyi bilinen
+bir şirket sözcüsü önemli bir iş kararını duyurduğunda, başka birisinin ikinci
+ağızdan durum hakkında yazdığı haberleri okumaktansa gördüklerimize daha fazla
+güvenmeye eğilimliyiz.
+
+Benzer şekilde, bir suç mahallinden ya da yeni bir teknoloji aracı
+tanıtımından fotoğraflı kanıt gördüğümüzde, gördüğümüz bu kanıtlara, işlerin
+nasıl göründüğünü açıklayan yazılı rapordan daha fazla önem gösteriyoruz.
+
+Elbette, sahte kanıtlar üretme olasılığının farkındayız. İnsanlar hiç ziyaret
+etmedikleri yerlere, hiç tanışmadıkları insanlarla photoshop'lanarak
+yerleştirilebilir. Ayrıca, son çıkan diyet hapı reklamınında, midenin içeri
+çekilmesi, ışığın ayarlanması gibi şeylerle görünüşü değiştirmek de mümkündür.
+
+> **Not**
+>
+> **Yapay Zeka, kanıt üretme olasılıklarını yepyeni bir düzeye taşıyor:**
+>
+> [Face2Face](https://www.youtube.com/watch?v=ohmajJTcpNk), bir kişinin yüz
+> ifadelerini tanımlayabilen ve bir Youtube videosunda başka bir kişinin
+> yüzüne yerleştirebilen bir sistemdir.
+>
+> [Lyrebird](https://www.descript.com/lyrebird-ai?source=lyrebird), bir
+> kişinin sesini birkaç dakikalık örnek kayıttan otomatik olarak taklit eden
+> bir araçtır. Oluşturulan sesin hala dikkatlerden kaçmayan biraz robotik bir
+> tonu olsa da, oldukça iyi bir izlenim bırakıyor.
+
+![YZ 101 6 2 Etki 3 Gizlilik HAL 9000](/assets/img/yz-101-6-2-etki-3-gizlilik-hal9000.png "YZ 101 6 2 Etki 3 Gizlilik HAL 9000")
+
+#### **Muhtemel Etki (Implication) 3: Gizlilik kavramını değiştirme**
+
+Teknoloji şirketlerinin kullanıcıları hakkında çok fazla bilgi topladığı uzun
+süredir bilinmektedir. Daha önceleri müşterilerinine sadakat kartları vererek
+satın alma verilerini toplayan marketler ve diğer perakendeciler oldu.
+
+> **Not**
+>
+> **Benzeri görülmemiş veri doğruluğu**
+>
+> Facebook, Google, Amazon ve diğer pek çok teknoloji şirketleri gibi
+> teknoloji şirketleri, geleneksel mağazaların satın alma verilerinin ötesine
+> geçtikler: Herhangi bir içeriğe ait her tıklamanın, her sayfanın kaydının ve
+> harcayacağınız zamanın kaydedilmesi mümkündür. Web siteleri göz atma
+> geçmişinize bile erişebilir, böylece tek bir sitede Barselona'ya seyahat
+> ettikten sonra gizli modu (veya benzeri) kullanmazsanız, muhtemelen
+> Barselona'daki oteller için reklam alırsınız.
+
+Ancak, yukarıdaki gibi bir veri kaydı henüz Yapay Zeka değildir. Yapay
+Zeka'nın kullanımı mahremiyetimize yeni türden tehditler getirir ki bu da
+kimliğinizi açığa çıkarmamaya özen gösterseniz bile kaçınmanızın zor olduğu
+bir durumdur.
+
+#### **Bireyleri tanımlamak için veri analizini kullanma**
+
+> **Not**
+>
+> **De-anonymization: De-anonimizasyon**
+>
+> Bu not orijinal içerikte yok!
+>
+> De-anonimizasyon; anonim verilerin, anonim veri kaynağınının anonimliğini
+> ortadan kaldırma veya kaynağı yeniden tanımlama amacıyla diğer veri
+> kaynaklarıyla çapraz referanslandığı bir veri madenciliği stratejisidir.
+>
+> [Eyyvah eyvah!](https://vimeo.com/11115302)
+>
+>> Nuri ACAR
+
+Kaçınılması zor bir konunun iyi bir örneği, güvenli olduğu düşünebileceğimiz
+verilerin anonimliğini kırarak anonimleştirmeyi yok eden de-anonimizasyon
+(de-anonymization)'dur. Temel sorun, bir analizin sonuçlarını rapor
+ettiğimizde, sonuçların, verileri analize dahil olan bireysel kullanıcılar
+hakkında bir şeyler öğrenmeyi mümkün kılacak kadar spesifik olabileceğidir.
+Klasik bir örnek, söz konusu yılda doğan ve belirli bir posta koduna sahip
+insanların ortalama maaşını talep etmektedir. Çoğu durumda, bu çok küçük bir
+grup insan olabilir, genellikle yalnızca bir kişi olabilir. Bu nedenle, tek
+bir kişinin maaşı hakkında potansiyel bilgi verebilirsiniz.
+
+Austin'deki Texas Üniversitesi araştırmacıları, [daha ince bir
+sorunun](https://www.wired.com/2007/12/why-anonymous-data-sometimes-isnt/)
+ilginç bir örneğine dikkat çekti. Netflix tarafından sunulan ve yaklaşık
+500.000 anonim kullanıcının 10 milyon film derecelendirmesini içeren herkese
+açık bir veri kümesini incelediler ve birçok Netflix kullanıcısının aslında
+İnternet Film Veritabanındaki kullanıcı hesaplarına bağlanabileceğini
+gösterdiler çünkü her iki uygulamada da birkaç film derecelendirdiler. Böylece
+araştırmacılar, Netflix verilerini de-anonim hale getirebildiler
+(de-anonymize). En son Star Wars filmini nasıl derecelendirdiğinizi bir
+başkasının bilip bilmemesinin önemli olduğunu düşünmüyor olabilirsiniz ancak
+bazı filmler hayatımızın özel kalması gereken yönlerini (politika veya
+cinsellik gibi) ortaya çıkarabilir.
+
+#### **Diğer tanımlama yöntemleri**
+
+Benzer bir yaklaşım, prensipte kullanıcı hesaplarıyla ilgili ayrıntılı
+verileri toplayan neredeyse her hizmette, kullanıcı hesaplarını eşleştirmek
+için kullanılabilir. Başka bir örnek yazma alışkanlıkları. Helsinki
+Üniversitesi'ndeki araştırmacılar, kullanıcıların yazım kalıplarına göre
+tanımlanabileceğini gösterdi: Metin yazarken belirli tuş vuruşları arasındaki
+kısa aralıklar. Bu, birisi sizin yazım düzeninizdeki verilere erişebiliyorsa
+(belki de web sitelerini kullandınız ve adınızı girerek kaydoldunuz),
+kendinizi açıkça tanımlamayı reddetseniz bile, bir dahaki sefere
+hizmetlerinizi kullandığınızda sizi tanımlayabilirler. Ayrıca bu bilgiyi satın
+almak isteyen herkese satabilirler.
+
+Yukarıdaki örneklerin çoğu en azından kısmen sürprizler olarak ortaya çıkmış
+olsa da aksi halde önlenmiş olabilirlerdi (bunları çözmeye çalışan çok fazla
+araştırma var). Özellikle, diferansiyel mahremiyet olarak adlandırılan bir
+alan, kendilerine giren spesifik veri noktalarına yönelik tersine mühendisliği
+önlenmek için, sonuçların yeterince kaba/adi/yontulmamış (coarse) olmasını
+garanti eden makine öğrenimi algoritmalarını geliştirmeyi amaçlamaktadır.
+
+![YZ 101 6 2 Etki 4 İşleri Değişmek](/assets/img/yz-101-6-2-etki-4-isleri-degismek.png "YZ 101 6 2 Etki 4 İşleri Değişmek")
+
+#### **Muhtemel Etki (Implication) 4: İşi değiştirme**
+
+Erken dönem insan, yeni bir beslenme kaynağına erişmek için ölü hayvanların
+açık kemiklerini kırmak amacıyla keskin bir kaya kullanmayı öğrendiğinde,
+savaşmak, bir eş bulmak ve daha çok icat yapmak gibi başka amaçlar için zaman
+ve enerji açığa çıkarıldı. 1700'lü yıllarda buhar makinesinin icadı, gemilerin
+ve trenlerin yanı sıra fabrikaların verimliliğini de büyük ölçüde geliştiren,
+kolayca taşınabilir bir makine gücü biçimine ulaştı. Otomasyon her zaman
+verimliliğin bir yolu olmuştur: Daha azıyla daha çok şey elde etmek.
+Özellikle 20. yüzyılın ortalarından beri, teknolojik gelişme otomasyonda eşi
+benzeri görülmemiş bir ilerlemeye yol açmıştır. Yapay Zeka bu ilerlemenin
+devamıdır.
+
+Daha iyi otomasyona yönelik her adım, çalışma hayatını değiştirir. Keskin bir
+kaya ile, avlanmak ve yiyecek toplamak için daha az güce ihtiyaç duyduk; buhar
+motoru ile, at ve atlılara daha az ihtiyaç duyduk; bilgisayarla, typistlere,
+manuel muhasebeye ve diğer birçok veri işlemeye daha az ihtiyaç duyduk
+(görünüşe göre kedi videoları için daha fazla bilgisayara ihtiyacımız var).
+Yapay Zeka ve robotik ile; birçok sıkıcı, tekrarlayıcı işe fazla zaman
+ayırmamıza gerek kalmayacak.
+
+> **Not**
+>
+> **Yapılacak yeni şeyler bulma tarihi**
+>
+> Geçmişte, bir tür iş otomatikleştirilirse, insanlar onun yerine yenisini
+> buldular. Yeni iş türleri daha az tekrarlayıcı ve rutin, daha değişken ve
+> yaratıcı. Mevcut Yapay Zeka ve diğer teknolojilerin ilerleme hızıyla ilgili
+> konu, bir bireyin kariyeri boyunca, çalışma hayatındaki değişimin her
+> zamankinden daha büyük olabileceğidir. Bir kamyon veya taksi sürmek gibi
+> bazı işlerin birkaç yıllık zaman dilimi içerisinde ortadan kaybolabileceği
+> düşünülebilir. Böyle bir ani değişim, insanlar başka türden işler için
+> kendilerini eğitmek için zamanları olmadığından kitlesel işsizliğe yol
+> açabilir.
+>
+> Bunun gibi büyük toplumsal sorunları önlemek için en önemli eylem, gençlerin
+> geniş kapsamlı bir eğitim almasına yardımcı olmaktır. Bu, yakın gelecekte
+> kullanımdan kalkma riski düşük birçok farklı işin peşinde koşmak için bir
+> temel oluşturur.
+>
+> Yaşam boyu öğrenmeyi ve işte öğrenmeyi desteklemek aynı derecede önemlidir
+> çünkü aynı işi tüm kariyerleri boyunca yapacak olan az kişi olacak. Haftalık
+> çalışma saatlerini azaltmak, daha fazla insana iş sunmaya yardımcı
+> olacaktır, ancak ekonomi yasaları, iş miktarını düzenleyen kamu politikası
+> getirilmedikçe insanları daha az çalışmak yerine daha fazla çalışmaya
+> zorlama eğilimindedir.
+
+Yapay Zeka'nın geleceğini tahmin edemediğimiz için, bu gelişmenin oranını ve
+kapsamını tahmin etmek son derece zordur. Oxford Üniversitesi'ndeki
+araştırmacılar tarafından rapor edilen ABD'deki işlerin [%47'sine kadarının iş
+otomasyonu riski
+altında](https://www.economist.com/graphic-detail/2018/04/24/a-study-finds-nearly-half-of-jobs-are-vulnerable-to-automation)
+olduğuna dair bazı tahminler var. Bunlar gibi kesin rakamlar (%45 veya %49
+değil %47), bunları elde etmek için kullanılan karmaşık görünümlü çalışma
+tasarımları ve bunları rapor eden en iyi üniversiteler, tahminleri çok
+güvenilir ve kesin kılma eğilimindedir (sınırlı miktarda veriye dayalı
+doğrusal bir model kullanarak yaşam beklentisini tahmin etme hakkındaki
+noktayı hatorlayın). Yüzde bir doğruluk yanılsaması bir yanlıştır. İnsanların
+"görev modeli, izlenebilirlik için toplu, ölçeğe göre sabit getirili bir
+Cobb-Douglas üretim işlevi varsayar." gibi cümleleri olan 79 sayfalık bir
+raporu okumakta zorluk çekmesi anlaşılabilir. Bununla birlikte, eğer
+okumazsanız, sonuçlara da biraz şüpheci kalmalısınız. Bu tür analizlerdeki
+gerçek değer %47 gibi bir sayı değil, hangi tür işlerin risk altında olma
+olasılığının daha yüksek olduğunu göstermesidir. Trajedi, "ABD işlerinin
+neredeyse yarısının bilgisayarlaşma riski altında olduğunu" bildiren
+manşetlerin hatırlanması ve geri kalanının hatırlanmamasıdır.
+
+Öyleyse, otomatikleştirilme olasılığı daha yüksek olan görevler neler?
+Bununla ilgili olarak gözlemleyebileceğimiz bazı açık işaretler var:
+
++ Arabalar, dronlar ve tekneler veya feribotlar gibi kendi kendini süren
+  araçlar gibi otonom robotik çözümler, büyük ticari uygulamaların eşiğinde.
+  Özerk otomobillerin güvenliğinin tahmin edilmesi güç olmakla birlikte,
+  istatistikler muhtemelen henüz tam olarak gerekli seviyede olmadığını
+  (ortalama bir insan sürücünün seviyesi) göstermektedir. Bununla birlikte,
+  ilerleme inanılmaz derecede hızlı olmuştur ve mevcut verilerin artan miktarı
+  nedeniyle hızlanmaktadır.
+
++ Yardım masası gibi müşteri hizmetleri uygulamaları çok uygun maliyetli bir
+  şekilde otomatikleştirilebilir. Şu anda hizmet kalitesi her zaman iyi
+  değildir, darboğaz dil işlemedir (sistem sözlü dili tanıyamaz veya
+  dilbilgisini ayrıştıramaz) ve asıl hizmeti sağlamak için gereken mantık ve
+  muhakemeyi yürütemez. Bununla birlikte, kısıtlı alanlarda çalışan
+  uygulamalar ([restoran veya saç kesimi rezervasyonları yapmak
+  gibi](https://www.youtube.com/watch?v=BRUvbiWLwFI)) sürekli olarak
+  filizlenir.
+
+Ne kadar kısa sürede, kendi kendini sürdürebilen, güvenli ve güvenilir
+otomobillerin veya insanların yerini alabilecek diğer çözümlerin ortaya
+çıkacağını söylemek zor. Buna ek olarak, bir kamyon veya taksi şoförünün
+sadece bir tekerleği döndürmediğini unutmamalıyız: Aynı zamanda aracın doğru
+şekilde çalıştığından emin olmak, malları idare etmek ve müşterilerle pazarlık
+yapmaktan sorumludurlar. Yani uğraşmaları gereken daha zor uğraşları vardır.
+
+Daha önceki teknolojik ilerlemelerde olduğu gibi, Yapay Zeka nedeniyle var
+olacak yeni işler de olacaktır. Gelecekte, işgücünün daha büyük bir kısmının,
+araştırma ve geliştirmeye ve yaratıcılık ve insandan insana etkileşim
+gerektiren görevlere odaklanması muhtemeldir. Bu konu hakkında daha fazla
+bilgi edinmek isterseniz, örneğin Abhinav Suri'nin [Yapay Zeka ve Ekonomik
+Eşitsizliğin
+Yükselişi (Artificial Intelligence and the Rise of Economic Inequality)](https://towardsdatascience.com/artificial-intelligence-and-the-rise-of-economic-inequality-b9d81be58bec)
+hakkındaki güzel makalesine bakın.
+
+#### **Alıştırma 24: Yapay Zeka'nın muhtemel etkileri (implications)**
+
+Yapay zeka hakkında ne tür makaleler (gazete ve dergilerde veya bloglar gibi
+diğer popüler bilim yayın organlarında...) yazılıyor ve siz bunların gerçekçi
+olduğunu düşünüyor musunuz? İlgi alanlarınızdan biriyle ilgili olarak Yapay
+Zeka hakkında çevrimiçi bir arama yapın. **Makalelerden birini seçin ve analiz
+edin.**
+
+1. Cevabınızda **makalenin başlığını**, yazarını ve nerede yayınlandığını
+   (varsa URL olarak) belirtin.
+2. Bir paragrafla (birden çok cümle) makaledeki ana fikri **kendi
+   cümlelerinizle** açıklayın.
+3. Anlayışınıza göre, makaledeki Yapay Zeka ile ilgili ifadeler ne kadar
+   doğru? **Cevabınızı açıklayın**. Çıkarımlar (implications) (varsa) gerçekçi
+   mi? **Nedenini açıklayın.**
+
+**Cevabım:**
+
+Abhinav Suri'nin [Yapay Zeka ve Ekonomik Eşitsizliğin Yükselişi (Artificial
+Intelligence and the Rise of Economic
+Inequality)](https://towardsdatascience.com/artificial-intelligence-and-the-rise-of-economic-inequality-b9d81be58bec)
+tahlilini okudum.
+
+Başlıktan da anlaşılacağı gibi Yapay Zeka'nın artan ekonomik eşitsizlik
+üzerindeki etkisini açıklıyor.
+
+Yapay Zeka'yı ve mevcut yeteneklerini anlattığı bölümün bu eğitici içeriğe
+benzediğini düşünüyorum. Joseph Schumpeter'in "yaratıcı yıkım" terimini de
+sevdim (modası geçmiş olanların yerine yeni üretim birimleri).
+
+**Örnek cevap:**
+
+İncelediğimiz makalelerin çoğu, sağlık hizmetleri, finans, müşteri hizmetleri,
+ulaşım vb. farklı alanlarda Yapay Zeka'nın büyük vaatleri hakkındaydı. Tekrar
+eden durum; Google, IBM, Microsoft veya alandaki diğer büyük oyunculardan
+bazılarının bir prototip ürün gösterdiği ve muhabirin buna hayran kaldığıdır.
+Bu, kolaylıkla milyarlarca avro tutan söz konusu endüstrinin, ABD veya küresel
+pazara ilişkin bir tahminle birleştirilmesidir.
+
+Makaleler, çözümlerin altında yatan gerçek teknikler hakkında çok nadiren bir
+şey içeriyor, bu oldukça anlaşılabilir bir durum çünkü birçok okuyucu herhangi
+bir teknik detayı sindiremeyecektir. (Yapabilirsiniz!)
+
+Gözden geçirdiğimiz makalelerden birkaçı "milyonlarca sayfa okuma" ve "onları
+anlama" ile ilgili ifadeler içeriyor ancak dürüst olmak gerekirse, Facebook
+akışımıza göre aslında daha kötüsünü bekliyorduk. Belki de aldığımız sosyal
+medya önerileri (tıklamalarımıza dayanarak! Merak etmenizi sağlar...) Google
+aramasının sağlayabileceğinden daha düşük kalitede?
+
+---
+
+### **6.3. Özet**
+
+Toplumumuzun Yapay Zeka tarafından getirilen değişikliklere ne kadar iyi uyum
+sağlayabileceğini belirleyen en önemli kararlar teknolojik değil, politik
+kararlardır.
+
+Yapay Zeka hakkında öğrendiğimiz her şey, geleceğin parlak olduğunu
+gösteriyor. Yeni ve daha iyi hizmetler elde edeceğiz ve artan üretkenlik,
+genel olarak olumlu sonuçlara yol açacaktır ancak yalnızca toplumsal etkileri
+dikkatlice değerlendirdiğimiz ve Yapay Zeka'nın gücünün ortak yarar için
+kullanılmasını sağladığımız zaman bu mümkün.
+
+#### **Olumlu bir sonuç elde etmek için ne yapmamız gerekiyor?**
+
+Hala yapacak çok işimiz var.
+
++ Ayrımcılığı arttırmak yerine ayrımcılığı azaltabilmek için algoritmik
+  önyargıdan kaçınmamız gerekir.
++ Ayrıca, gördüklerimizle ilgili olarak eleştirel olmayı da öğrenmemiz gerekir
+  zira artık görmek inanmakla aynı şey değildir ve belki de daha gerçek
+  görünüme sahip yalanlar üretmeyi kolaylaştırmaktan ziyade, sahtekarlığı
+  tespit etmemize yardımcı olan Yapay Zeka yöntemlerini geliştiririz.
++ İnsanların gizlilik hakkına sahip olmalarını garanti altına almak için
+  düzenlemeler yapmamız ve bu hakkın ihlal edilmesinin kesinlikle
+  cezalandırılması gerekmektedir.
+
+Ayrıca, Yapay Zeka elitini yaratmak yerine en son Yapay Zeka teknolojisini
+kullanabilen ve benzeri görülmemiş ekonomik eşitsizliğe erişmek için
+kullananlar yerine, faydaları herkesle paylaşmanın yeni yollarını bulmamız
+gerekiyor. Bu, dikkatli bir siyasi yargı gerektirir (siyasi yargı demekle, bir
+seçimde kimin kime oy vereceği veya tek tek politikacıların ve siyasi
+partilerin geliş ve gidişleriyle pek ilgisi olmayan politika kararlarını
+kastettiğimizi not edin).
+
+> **Not**
+>
+> **Poliçenin/Kuralların/Tedbirin önemi**
+>
+> Toplumumuzun işin evrimine ve Yapay Zeka tarafından getirilen değişikliklere
+> ne kadar uyum sağlayabileceğini belirleyen en önemli kararlar teknolojik
+> değil, politik kararlardır.
+>
+> Yapay Zeka kullanımının düzenlenmesi demokratik ilkeleri takip etmeli ve
+> herkesin gelecekte ne tür bir toplumda yaşamak istediğiyle ilgili eşit söz
+> sahibi olması gerekir. Bunu mümkün kılmanın tek yolu, teknoloji bilgisini
+> herkese özgürce ulaşılabilir hale getirmektir. Açıkçası, herhangi bir konuda
+> her zaman, bu konuda bizden daha çok şey bilen uzmanlar olacaktır, ancak en
+> azından onların söylediklerini eleştirel bir şekilde değerlendirme olanağına
+> sahip olmalıyız.
+
+Bizimle öğrendikleriniz, Yapay Zeka ile ilgili temel bir arka plan sağlayarak
+bu hedefi destekliyor ve böylece Yapay Zeka ve bunun sonuçları hakkında akılcı
+bir tartışmamız olabilir.
+
+#### **Birey olarak rolümüz**
+
+Hatırlayacağınız gibi, bu dersi tüm yaşamımızı etkileyen belirgin Yapay Zeka
+uygulamalarını tartışarak Yapay Zeka çalışmasını motive ederek başladık. Üç
+örneği vurguladık: Kendi kendini süren arabalar, öneri sistemleri, görüntü ve
+video işleme. Kurs boyunca, mevcut teknolojik geçişe katkıda bulunan çok
+çeşitli diğer uygulamaları da tartıştık.
+
+> **Not**
+>
+> **Gizli gündem**
+>
+> Ayrıca gizli bir gündemimiz vardı. Size, öğrenmenin heyecanını ve karmaşık
+> ve gizemli olabilecek bir şeyin basit ve en azından apaçık olmasa bile
+> anlaşılır hale geldiği heureka (eureka! buldum! anladım!) anlarının neşesini
+> deneyimleme fırsatı vermek istedik. Bunlar merakımızın giderildiği anlardır.
+> Ancak bu tür bir tatmin geçicidir. Bir sorunun cevabını bulduktan kısa bir
+> süre sonra, bir sonraki soruyu soracağız. Sonra ne? Ve sonra?
+>
+> İştahınızı öğrenmeye yöneltmişsek başarılı olduk demektir. Diğer dersleri ve
+> Yapay Zeka ile ilgili daha fazla bilgiyi ve ilgi alanınızla ilgili diğer
+> bilgileri bularak öğrenmeye devam edeceğinizi umuyoruz. Keşiflerinizde size
+> yardımcı olmak için, yararlı ve ilginç bulduğumuz bazı Yapay Zeka
+> materyallerini topladık.
+
+Şimdi, Yapay Zeka'de neler olup bittiğini ve doğru kullanımını sağlamak için
+neler yapıldığını öğrenebileceğiniz bir pozisyondasınız. Ne zaman tartışmamız
+gereken riskler ya da devam etmemiz gereken fırsatlar varsa, başka birinin
+harekete geçmesini beklemeyin, yapın!
+
+#### **Alıştırma 25: Hayatınızdaki Yapay Zeka**
+
+Yapay Zeka'nın gelecekte hem işte hem de günlük hayatta sizi nasıl
+etkileyeceğini düşünüyorsunuz? Hem olumlu hem de olası olumsuz sonuçları dahil
+edin.
+
+**Cevabım:**
+
+Mümkün olan her alanda (kişisel ve iş hayatı) hayatımda olmasını istiyorum.
+Olumlu etkilerini hayal edemiyorum ama gelecek beni heyecanlandırıyor. Hayal
+edebilir misiniz? İnsanlık, muhteşem bir bilgi okyanusunun kıyısında.
+Başlayalım mı? :)
+
+**Örnek cevap:**
+
+Yarının bizim için neler sakladığını gerçekten dört gözle bekliyoruz. İş
+alanında, yeni yardımcı teknolojiler ortaya çıkıyor ve mevcut olanlar, yararlı
+olmaktan çok can sıkıcı olma noktasında gelişiyor. Makinelerle etkileşimde
+bulunmak daha az çaba gerektirdiğinde işimizi daha verimli bir şekilde
+tamamlayabileceğiz ve iş arkadaşlarımız ve sevdiklerimizle etkileşime daha
+fazla zaman ayırabileceğiz.
+
+Günlük hayatımızda, filmler ve oyunlar gibi eğlencelerdee Yapay Zeka
+uygulamalarını görmeye meraklıyız. Sosyal medyayı kullanma ve çevrimiçi
+bilgiye erişme yöntemlerimizin, mahremiyete ve doğruluğa daha fazla saygı
+göstererek değişmesi gerekiyor. Yapay Zeka algoritmaları tarafından
+oluşturulan filtre balonlarının bir sonucu olan post-hakikat (post-truth)
+çağına bir son verilmesi gerekiyor. Bu bağlamda, dengenin, Yapay Zeka'nın iyi
+kullanımlarına, kötü kullanımlardan uzaklaşmasına daha fazla yön vereceğini
+umuyoruz. Şahsen, bu sürece katkıda bulunmak için elimizden gelenin en iyisini
+yapacağız.
+
+Her şeyden önce, sizden yanıt almaktan ve açık Yapay Zeka eğitimine zaman ve
+çaba harcayarak, Yapay Zeka hakkında bilgi edinerek ve gelişmiş anlayışımızı
+harika şeyler yapmak için kullanarak birlikte neler başarabileceğimizi
+öğrenmekten heyecan duyacağız.
+
+#### **Bu son değil. Bu başlangıç.**
+
+Şimdilik bu kadar. Bize katıldığınız için teşekkür ederiz. Bu bizim için
+harika bir maceraydı ve gerçekten çok eğlendiğinizi umuyoruz. Henüz kursu
+bitirmedik ve umarım devam ederiz. Bu eğitimi, en iyi güncellememizi yaparak
+geliştirmeye ve dünyadaki en iyi Yapay Zeka kitlesel açık çevrimiçi kursu
+(massive open online courses, MOOC) haline getirmeye çaba göstereceğiz.
+
+Kursun bitmediği gibi, Yapay Zeka keşif çalışmalarınızın da bitmiş olduğunu
+düşünmemelisiniz. İlerleme, oldukça hızlı ve takip etmek için çok fazla şey
+varmış gibi görünse de, buradaki en önemli haber, temel ilkelerin onlarca yıl
+geçse de aşağı yukarı aynı kalmasıdır. Problem çözme stratejileri,
+belirsizliği ele alma ve veriden öğrenme ile ilgili temel bilgileri bildiğiniz
+sürece, yeni şeyleri kolayca perspektif içine sokabilmelisiniz.  Bu yüzden,
+nehir geçişi, Hanoi Kuleleri, Helsinki'deki yağmur olasılığını hesaplama ya da
+sinir ağıyla mutlu yüzlerini tespit etmeyi hatırlayın.  Temelleri veya Yapay
+Zeka unsurlarını bilmek, belirli bir Yapay Zeka çözümünün teknik detaylarını
+öğrenmekten çok daha uzun süreli bir bilgidir.
+
+Aşağıda, yararlı bulduğumuz birkaç link veriyoruz. Öğrenmeye devam et, meraklı
+ol.
+
+> Gelecek yazılmamış. Kader yok lakin kendimiz için ne yapıyoruz?
+>> John Connor
+
++ Bu kursun devamı, [Yapay Zeka İnşa Etme](https://buildingai.elementsofai.com/).
+
++ Helsinki Üniversitesi Kitlesel Açık Çevrimiçi Kursu (massive open online courses, MOOC): [Tık!](https://mooc.fi/en)
+
++ Helsinki Üniversitesi, 1. yıldaki tüm Bilgisayar Bilimleri çalışmalarını herkese açacak: [Tık!](https://www.helsinki.fi/en/news/data-science-news/study-computer-science-actively-for-a-year-gain-admission)
+
++ Helsinki Üniversitesi'ne de [başvurabilirsiniz](https://www.helsinki.fi/en/admissions)!
+
++ Şirketiniz için bir AI projesini bitirmek için yardım istiyorsanız, [Reaktor Yapay Zeka ekibi](https://www.reaktor.com/work/artificial-intelligence/) size yardımcı olmaktan mutluluk duyar!
+
++ Sürekli eğitim için önerilen programlar: [HY + /Aalto PRO/FCAI'den 'AI Diploma'](https://www.aaltopro.fi/en/programs/diploma-in-artificial-intelligence) ve [Aalto Yönetici Eğitimi'nden 'AI:n perusteet' (Fince)](https://www.aaltoee.fi/aiperusteet)
+
++ Danışmanımız, Risto Siilasmaa'nın "[Makine Öğrenimi Nedir?](https://www.youtube.com/watch?v=KNMy7NCQDgk" videosu (1s. 18d.)
+
++ [Makine öğrenimine samimi bir giriş](https://www.youtube.com/watch?v=IpGxLWOIZy4) (Luis Serrano/Udacity) (30d.)
+
++ Andrew Ng's Coursera'daki [Makine Öğrenmesi MOOC](https://www.coursera.org/learn/machine-learning)'u
+
++ Udacity [Yapay Zeka Okulu](https://eu.udacity.com/school-of-ai)
+
++ Makine Öğrenmesi - [Yapay Zeka (Korbit)'le Yapay Zeka Öğren](https://korbit.ai/machinelearning)
+
+---
+
+![YZ 101 1 Yıldız](/assets/img/yildiz.png "YZ 101 1 Yıldız")
+![YZ 101 2 Yıldız](/assets/img/yildiz.png "YZ 101 2 Yıldız")
+![YZ 101 3 Yıldız](/assets/img/yildiz.png "YZ 101 3 Yıldız")
+![YZ 101 4 Yıldız](/assets/img/yildiz.png "YZ 101 4 Yıldız")
+![YZ 101 5 Yıldız](/assets/img/yildiz.png "YZ 101 5 Yıldız")
+![YZ 101 5 Yıldız](/assets/img/yildiz.png "YZ 101 5 Yıldız")
+{: style="text-align: center;"}
+
+**Bölüm 6'yı tamamladıktan sonra şunları yapabilmeniz gerekir:**
+
++ Geleceği tahmin etmenin zorluklarını anlama ve Yapay Zeka ile ilgili
+  iddiaları daha iyi değerlendirme
++ Algoritmik önyargı, Yapay Zeka tarafından oluşturulan içerik, gizlilik ve iş
+  dahil olmak üzere Yapay Zeka'nın başlıca sosyal etkilerinden bazılarını
+  tanımlama
+
+[![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
+[![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
+[![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
+[![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
+[![YZ 101 Bölüm 5](/assets/img/maze-mini.png "5. Sinir Ağları (Neural Networks)")](/ai/2020/10/09/yapay-zeka-101-5.html)
+[![YZ 101 Bölüm 6](/assets/img/maze-mini.png "6. Muhtemel Etkiler (Implications)")](/ai/2020/10/10/yapay-zeka-101-6.html)
+{: style="text-align: center;"}

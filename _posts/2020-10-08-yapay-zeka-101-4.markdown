@@ -5,7 +5,7 @@ date:   2020-10-08 18:18:18 +0300
 categories: ai
 ---
 
-[![Elements of Yapay Zeka](/assets/img/elements-of-ai.jpg "Elements of Yapay Zeka")](https://course.elementsofai.com/)
+[![Elements of AI](/assets/img/elements-of-ai.jpg "Elements of AI")](https://course.elementsofai.com/)
 
 [![Helsinki Üniversitesi](/assets/img/helsinki-uni-logo-mini.png "Helsinki Üniversitesi")](https://www.helsinki.fi/en)
 [![Reaktor](/assets/img/reaktor-logo-mini.png "Reaktor")](https://www.reaktor.com/)
@@ -14,12 +14,22 @@ categories: ai
 
 2018'de [Finlandiya Helsinki Üniversitesi](https://helsinki.fi/en), bazı
 Bilgisayar Bilimleri derslerini [mooc.fi](http://mooc.fi/en) üzerinden erişime
-açtı. Ben de görür görmez kaydoldum ve eğitimler sisteme yüklendikçe buradaki
-dersleri almaya koyuldum. Kaydolduğum ilk eğitim
-[Reaktor](https://reaktor.com) işbirliği ile hazırlanan [Yapay Zeka
+açtı. Belki de 2018'den önceydi lakin ben 2018'de haberdar oldum. Görür görmez
+kaydoldum ve eğitimler sisteme yüklendikçe buradaki dersleri almaya koyuldum.
+Tamamladığım -ki bir ay sürdü- ilk eğitim [Reaktor](https://reaktor.com)
+işbirliği ile hazırlanan [Yapay Zeka
 Temelleri](https://course.elementsofai.com/) eğitimiydi. Yapabildiğim kadar
 tercüme ettim. Kısa süre önce de tekrardan gözden geçirip yayınlama kararı
-aldım. Toplamda altı bölüm olacak. Zamanla tüm bölümler yüklenmiş olur.
+aldım. Altı bölümden oluşuyor ve bu sitedeki diğer içerikler gibi günden güne
+mümkün olduğunca daha iyiye evrilecek. Eksik, hatalı, zor anlaşılır vb.
+bunduğunuz kısımlar için iletişime geçmenizden ziyadesiyle memnun olurum.
+**Birlikte daha iyi olalım!**
+
+Peki şimdi sırada ne var? Bu eğitimin devamı olan "Yapay Zeka İnşa Etme"
+eğitimini de zaman içinde bu siteye ekleme niyetindeyim. Peki içeriği nasıl?
+Yapay Zeka yöntemleri oluşturmayı mümkün kılan gerçek algoritmalar hakkında
+bilgiler içermekle birlikte temel düzel Python bilgisi gerektiriyor. Çalışmak
+gerek! Çok!..
 
 [Ey benim paşalarım, beylerim, ağalarım; şu şehr-i Konstantıniyye cengindeki
 silah arkadaşlarım!..](https://tr.wikipedia.org/wiki/II._Mehmed) Biz bize
@@ -30,20 +40,26 @@ kaldık madem, afterparty başlasın...
 [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
 [![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
 [![YZ 101 Bölüm 5](/assets/img/maze-mini.png "5. Sinir Ağları (Neural Networks)")](/ai/2020/10/09/yapay-zeka-101-5.html)
+[![YZ 101 Bölüm 6](/assets/img/maze-mini.png "6. Muhtemel Etkiler (Implications)")](/ai/2020/10/10/yapay-zeka-101-6.html)
 {: style="text-align: center;"}
+
+> Şiddetle başlayan hazlar, şiddetle son bulurlar.
+>
+> These violent delights have violent ends.
+>> Shakespeare
 
 ---
 
-## Bölümler
+## **Bölümler**
 
 1. Yapay Zeka Nedir?
 2. Yapay Zeka Problemi Çözme
 3. Gerçek Dünyada Yapay Zeka
-4. Makine Öğrenmesi (Machine Learning)
+4. **Makine Öğrenmesi (Machine Learning)**
 5. Sinir Ağları (Neural Networks)
-6. Yapay Zeka Uygulamaları (Implications)
+6. Muhtemel Etkiler (Implications)
 
-## 4. Makine Öğrenmesi (Machine Learning)
+## **4. Makine Öğrenmesi (Machine Learning)**
 
 ![YZ 101 4 Afiş](/assets/img/yz-101-4-afis.png "YZ 101 4 Afiş")
 
@@ -59,7 +75,7 @@ Bu kısımda şu konuları ele alacağız:
 
 ---
 
-### 4.1. Makine öğrenmesi tipleri
+### **4.1. Makine öğrenmesi tipleri**
 
 El yazısıyla yazılan rakamlar, makine öğrenimini neden kullandığımızı
 tartışırken sıklıkla kullanılan klasik bir durumdur ve bizde böyle yapacağız.
@@ -115,7 +131,7 @@ arasında bir sayı).
 > metodu olacaktır çünkü görebildiğiniz gibi, el yazısıyla yazılan rakamlar
 > genellikle çok azdır ve her kuralın bir düzine istisnaya ihtiyacı olacaktır.
 
-#### Üç tip makine öğrenimi
+#### **Üç tip makine öğrenimi**
 
 Makine öğreniminin kökenleri istatistiktedir, ki bu da **veriden bilgi
 çıkarma** sanatı olarak düşünülebilir. Özellikle, iki yüz yıldan daha eski
@@ -164,7 +180,7 @@ kısmen denetlenmez.
 
 ![YZ 101 4 1 Denetimli Öğrenme](/assets/img/yz-101-4-1-denetimli-ogrenme.png "YZ 101 4 1 Denetimli Öğrenme")
 
-#### İnsanlar makineleri eğitiyor: Denetimli öğrenme
+#### **İnsanlar makineleri eğitiyor: Denetimli öğrenme**
 
 Sınıflandırmayı yapmak için kesin kuralları elle yazmak yerine denetimli
 makine öğreniminin amacı; bir dizi örnek almak, her birini doğru etiketle
@@ -201,7 +217,7 @@ tanırsınız.
 
 ![YZ 101 4 1 Emlak Satışı Regresyonu](/assets/img/yz-101-4-1-emlak-satisi-regresyonu.png "YZ 101 4 1 Emlak Satışı Regresyonu")
 
-#### Caveat: Bu makine öğrenimi algoritmasına dikkat edin
+#### **Caveat: Bu makine öğrenimi algoritmasına dikkat edin**
 
 Farkında olmanızı istediğimiz birkaç potansiyel hata var. Makine öğrenim
 yöntemlerinde, uyguladığınız yönteme dikkat etmedikçe, tahminlerinizin
@@ -241,7 +257,7 @@ uygulayabiliriz.
 > sağlayabilir ancak **gelecekteki test verileri üzerinde daha kötü**
 > çalışmasını sağlayabilir.
 >
-> Makine öğrenim metotları, overfitting'e özellikle yatkındır, çünkü eğitim
+> Makine öğrenim metotları, overfitting'e özellikle yatkındır çünkü eğitim
 > verilerine mükemmel uyan birini bulana kadar kadar çok sayıda farklı "kural"
 > deneyebilirler. Özellikle çok esnek olan ve verideki hemen hemen her desene
 > uyarlanabilen yöntemler, veri miktarı çok büyük olmadıkça aşırıya kaçabilir.
@@ -253,7 +269,7 @@ Aşırı uyumdan (overfitting) kaçınarak öğrenme ve çok kısıtlı veya ço
 olmayan bir model seçme, bir veri bilimcisinin en önemli becerilerinden
 biridir.
 
-#### Öğretmen olmadan öğrenme: Denetimsiz öğrenme
+#### **Öğretmen olmadan öğrenme: Denetimsiz öğrenme**
 
 Yukarıda doğru cevapların olduğu yerlerde denetimli öğrenmeyi ele aldık ve
 makine öğrenimi algoritmasının görevi, bunları giriş verilerine dayanarak
@@ -302,7 +318,7 @@ bakacağız ve bazı özel yöntemleri daha ayrıntılı olarak ele alacağız.
 
 ---
 
-### 4.2. En yakın komşu sınıflandırıcısı
+### **4.2. En yakın komşu sınıflandırıcısı**
 
 En yakın komşu sınıflandırıcısı mümkün olan en basit sınıflandırıcılar
 arasındadır. Sınıflandırılacak bir öğe verildiğinde, yeni öğeye en çok
@@ -329,7 +345,7 @@ araç olarak ele alınmalıdır.  Genel fikir hiçbir şekilde iki boyutla
 sınırlandırılmamıştır ve en yakın komşu sınıflandırıcı ikiden daha fazla
 özellik ile karakterize edilen öğelere kolayca uygulanabilir.
 
-#### "En yakın" demekle neyi kastederiz?
+#### **"En yakın" demekle neyi kastederiz?**
 
 En yakın komşu sınıflandırıcısı ile ilgili ilginç bir soru (diğerlerinin
 yanında), örnekler arasındaki uzaklık veya benzerliğin tanımıdır. İki boyutta
@@ -363,7 +379,7 @@ hafifletildi.
 
 ![YZ 101 4 2 Müzik Onerme](/assets/img/yz-101-4-2-muzik-onerme.png "YZ 101 4 2 Müzik Onerme")
 
-#### Kullanıcı davranışını tahmin etmek için en yakın komşuları kullanma
+#### **Kullanıcı davranışını tahmin etmek için en yakın komşuları kullanma**
 
 En yakın komşu yönteminin bir uygulamasının tipik bir örneği, tavsiye
 sistemleri gibi Yapay Zeka uygulamalarında kullanıcı davranışını tahmin
@@ -395,12 +411,12 @@ keyif aldıklarından, sistem sizin de onlarla aynı olacağınızı öngörecek
 Bu nedenle öneri listesinin en üstünde görünecektir. Alternatif bir
 gerçeklikte, belki de eklenen şarkı çok ta iyi değildir ve sizinkiyle benzer
 geçmiş davranışları olan diğer kullanıcılar gerçekten beğenmez. Bu durumda,
-sistem size tavsiyede bulunmaktan geri kalmaz, ya da en azından sizin için
+sistem size tavsiyede bulunmaktan geri kalmaz ya da en azından sizin için
 öneriler listesinin en üstünde olmaz.
 
 Sıradaki alıştırma bu fikri anlatacak.
 
-#### Alıştırma 14: Benzer ürünleri satın alan müşteriler
+#### **Alıştırma 14: Benzer ürünleri satın alan müşteriler**
 
 Bu alıştırmada, çevrimiçi bir alışveriş uygulaması için, kullanıcıların satın
 alma geçmişinin kaydedildiği ve kullanıcının daha sonra hangi ürünleri satın
@@ -492,7 +508,7 @@ sosyal medya içeriği önermek için de kullanılır. Haberler ve sosyal medya
 bağlamında, bu tür sistemler tarafından oluşturulan filtreler, filtre
 balonlarına yol açabilir.
 
-#### Alıştırma 15: Filtre balonları
+#### **Alıştırma 15: Filtre balonları**
 
 Yukarıda tartışıldığı gibi, bir kullanıcının tıklaması veya beğenmesi muhtemel
 olan haberleri veya sosyal medya içeriğini önermek, kullanıcıların yalnızca
@@ -562,7 +578,7 @@ seçebilirsiniz ve Netflix ve HBO çeşitli farklı kategorilerde öneriler suna
 
 ---
 
-### 4.3. İndirgeme (Regression)
+### **4.3. İndirgeme (Regression)**
 
 Bu bölümdeki ana öğrenme hedefimiz, gözetimli öğrenme yöntemlerinin güzel bir
 örneğidir ve neredeyse en yakın komşu sınıflandırıcısı kadar basittir:
@@ -623,7 +639,7 @@ deyişle, alışveriş sepetinize iki kilo havuç eklediğinizde fatura 8€ art
 > (günde avuç dolusu yeşilliğin ağırlığı) bir yıl artıdır, bu nedenle bir avuç
 > dolusu yeşillik yemek her gün ortalama bir yıl verir.
 
-#### Alıştırma 16: Lineer Regresyon
+#### **Alıştırma 16: Lineer Regresyon**
 
 Kapsamlı bir çalışmanın gerçekleştirildiğini ve herhangi bir ülkede, sigara
 içmeyen, hiç sebze yemeyen kadınlar arasında yaşam beklentisinin (insanların
@@ -659,7 +675,7 @@ noktası için teknik terim **kesişme noktasıdır (intercept)**. Verilerden
 doğrusal regresyon (indirgeme) modellerinin nasıl öğrenileceğini aşağıda
 tartıştığımızda buna döneceğiz.
 
-#### Doğrusal regresyonun (indirgeme) öğrenilmesi
+#### **Doğrusal regresyonun (indirgeme) öğrenilmesi**
 
 Yukarıda, hem ağırlıklar hem de girdi özellikleri bilindiğinde, tahminlerin
 doğrusal regresyondan (indirgeme) nasıl elde edildiğini tartıştık. Böylece
@@ -697,7 +713,7 @@ Klasik en küçük kareler tekniği veya bunun gibi basit gerçek ağırlık bul
 algoritmalarının ayrıntılarına dalmayacağız ancak aşağıdaki alıştırmalarda
 verilerdeki trendleri buluyor hissi duyabilirsiniz.
 
-#### Lineer regresyonun (indirgeme) görselleştirilmesi
+#### **Lineer regresyonun (indirgeme) görselleştirilmesi**
 
 Doğrusal regresyonun (indirgeme) bize anlatacaklarını anlamanın iyi bir yolu,
 verilerimizi ve regresyon (indirgeme) sonuçlarımızı içeren bir grafik
@@ -715,7 +731,7 @@ noktalar olarak sunduğumuzda, açıkça daha fazla kahve içmenin daha fazla ko
 satırının yazılmasına yol açtığı şeklinde bir eğilim olduğunu görebiliriz
 (bunun tamamen uydurma veriler olduğunu hatırlayın). Bu veri setinden kahve
 tüketimiyle ilgili katsayı veya ağırlığı öğrenebiliriz ve bunun 5'e yakın bir
-yerde olduğunu söyleyebiliriz, çünkü tüketilen her kahve için programlanan
+yerde olduğunu söyleyebiliriz çünkü tüketilen her kahve için programlanan
 satır sayısı kabaca beş sayı artar. Örneğin, günde yaklaşık iki fincan kahve
 içen çalışanlar günde yaklaşık 20 satır kod üretiyor gibi görünüyor ve benzer
 şekilde dört fincan kahvede üretilen satır sayısı yaklaşık 30'dur.
@@ -735,7 +751,7 @@ olduğunda üretilen satır sayısını tahmin etmek için kullanılabilir. Yaln
 kısmi bardaklara (yarım, 1/4 fincan vb.) izin versek bile bir tahmin elde
 edebileceğimizi unutmayın.
 
-#### Alıştırma 17: Yaşam beklentisi ve eğitim (Bölüm 1)
+#### **Alıştırma 17: Yaşam beklentisi ve eğitim (Bölüm 1)**
 
 Okulda geçirilen toplam yıl sayısı (okul öncesi ve üniversite arasındaki her
 şey dahil) ile beklenen yaşam süresi arasındaki bağlantıyı inceleyelim.
@@ -781,7 +797,7 @@ da, 'kesinlikle' kelimesi onları haksız kılar. Sıfırdan büyük bir olasıl
 örneğin 70'den büyük bir değerdir. Dolayısıyla rahat olabileceğimiz tek
 seçenek dördüncü seçimdir.
 
-#### Alıştırma 18: Yaşam beklentisi ve eğitim (Bölüm 2)
+#### **Alıştırma 18: Yaşam beklentisi ve eğitim (Bölüm 2)**
 
 Önceki alıştırmada, yalnızca üç ülkeden veri aldık. Tam veri seti, burada bir
 grafikte sunulan 14 farklı ülkeden gelen verilerden oluşmaktadır:
@@ -828,7 +844,7 @@ beslenme, sağlık hizmetleri ve güvenliğin de daha iyi olması, yaşam
 beklentisini artırması muhtemeldir. Bu tür basit bir analizle, tahmin için
 faydalı olabilecek ilişkileri belirleyebiliriz.
 
-#### Doğrusal regresyonun (indirgeme) makine öğrenimi uygulamaları
+#### **Doğrusal regresyonun (indirgeme) makine öğrenimi uygulamaları**
 
 Doğrusal regresyon (indirgeme), birçok Yapay Zeka ve veri bilimi uygulamasının
 gerçekten iş gücü, dolap beygiri, amelesidir (workhorse). Sınırları vardır
@@ -844,7 +860,7 @@ aşağıdaki problemlerde başarıyla kullanılmıştır:
 + Suç oranlarının tahmini
 + Emlak fiyatlarının tahmini
 
-#### Etiketleri tahmin etmek için regresyon (indirgeme) kullanabilir miyiz?
+#### **Etiketleri tahmin etmek için regresyon (indirgeme) kullanabilir miyiz?**
 
 Yukarıda tartıştığımız gibi, lineer regresyon (indirgeme) ve en yakın komşu
 metodu farklı tahminler üretmektedir. Doğrusal regresyon (indirgeme), sayısal
@@ -862,7 +878,7 @@ bize çok fazla içgörü sağlamak için çok büyük ve karmaşıktır. Peki y
 komşu etiketleriylele aynı tür çıktıları üreten ancak doğrusal regresyon
 (indirgeme) gibi yorumlanabilen bir yönteme sahip olmak istersek?
 
-#### Kurtarma için lojistik regresyon (indirgeme)
+#### **Kurtarma için lojistik regresyon (indirgeme)**
 
 İyi haberlerimiz var: Doğrusal regresyon (indirgeme) yönteminin çıktılarını
 etiketlerle ilgili tahminlere dönüştürebiliriz. Bunu yapan tekniğe lojistik
@@ -885,7 +901,7 @@ alma ya da almama, sahte haberler ya da gerçek haberler vb.) tanımlamak için
 lojistik regresyonu (indirgeme) kullanabiliriz. Örneğin, el ile yazılmış
 rakamları tanımlamak ki bu durumda mümkün olan on etiket vardır.
 
-#### Bir lojistik regresyon (indirgeme) örneği
+#### **Bir lojistik regresyon (indirgeme) örneği**
 
 Aşçılıkta giriş dersi alan öğrencilerin verilerini topladığımızı varsayalım.
 Öğrenci kimlik numarası, adı vb. gibi temel bilgilere ek olarak, öğrencilerden
@@ -908,7 +924,7 @@ sonuca varabilirsiniz? Yüzlerce öğrenciden veri alırsak, belki dersi geçmek
 için çalışmamız gereken saat miktarını görebiliriz diye düşünebiliriz. Bu
 verileri aşağıda görebileceğiniz gibi bir grafikte sunabiliriz.
 
-#### Alıştırma 19: Lojistik regresyon (indirgeme)
+#### **Alıştırma 19: Lojistik regresyon (indirgeme)**
 
 ![YZ 101 4 3 Lojistik Regresyon Aşçılık Sınavı](/assets/img/yz-101-4-3-lojistik-regresyon-ascilik-sinavi.jpg "YZ 101 4 3 Lojistik Regresyon Aşçılık Sınavı")
 
@@ -952,7 +968,7 @@ doğrusallık özelliği tarafından da kısıtlanır ve bu kısıtları aşmak 
 kutumuzda başka birçok yönteme ihtiyacımız vardır. Nöral ağları
 tartıştığımızda daha sonra doğrusallık konusuna döneceğiz.
 
-#### Makine öğreniminin sınırları
+#### **Makine öğreniminin sınırları**
 
 Özetlemek gerekirse, makine öğrenimi Yapay Zeka uygulamaları oluşturmak için
 çok güçlü bir araçtır. En yakın komşu yöntemine, lineer regresyona (indirgeme)
@@ -1046,4 +1062,5 @@ gerçek katma değer yarattığımızdan emin olmamıza yardımcı olur.
 [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
 [![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
 [![YZ 101 Bölüm 5](/assets/img/maze-mini.png "5. Sinir Ağları (Neural Networks)")](/ai/2020/10/09/yapay-zeka-101-5.html)
+[![YZ 101 Bölüm 6](/assets/img/maze-mini.png "6. Muhtemel Etkiler (Implications)")](/ai/2020/10/10/yapay-zeka-101-6.html)
 {: style="text-align: center;"}

@@ -5,7 +5,7 @@ date:   2020-10-06 16:16:16 +0300
 categories: ai
 ---
 
-[![Elements of Yapay Zeka](/assets/img/elements-of-ai.jpg "Elements of Yapay Zeka")](https://course.elementsofai.com/)
+[![Elements of AI](/assets/img/elements-of-ai.jpg "Elements of AI")](https://course.elementsofai.com/)
 
 [![Helsinki Üniversitesi](/assets/img/helsinki-uni-logo-mini.png "Helsinki Üniversitesi")](https://www.helsinki.fi/en)
 [![Reaktor](/assets/img/reaktor-logo-mini.png "Reaktor")](https://www.reaktor.com/)
@@ -14,12 +14,22 @@ categories: ai
 
 2018'de [Finlandiya Helsinki Üniversitesi](https://helsinki.fi/en), bazı
 Bilgisayar Bilimleri derslerini [mooc.fi](http://mooc.fi/en) üzerinden erişime
-açtı. Ben de görür görmez kaydoldum ve eğitimler sisteme yüklendikçe buradaki
-dersleri almaya koyuldum. Kaydolduğum ilk eğitim
-[Reaktor](https://reaktor.com) işbirliği ile hazırlanan [Yapay Zeka
+açtı. Belki de 2018'den önceydi lakin ben 2018'de haberdar oldum. Görür görmez
+kaydoldum ve eğitimler sisteme yüklendikçe buradaki dersleri almaya koyuldum.
+Tamamladığım -ki bir ay sürdü- ilk eğitim [Reaktor](https://reaktor.com)
+işbirliği ile hazırlanan [Yapay Zeka
 Temelleri](https://course.elementsofai.com/) eğitimiydi. Yapabildiğim kadar
 tercüme ettim. Kısa süre önce de tekrardan gözden geçirip yayınlama kararı
-aldım. Toplamda altı bölüm olacak. Zamanla tüm bölümler yüklenmiş olur.
+aldım. Altı bölümden oluşuyor ve bu sitedeki diğer içerikler gibi günden güne
+mümkün olduğunca daha iyiye evrilecek. Eksik, hatalı, zor anlaşılır vb.
+bunduğunuz kısımlar için iletişime geçmenizden ziyadesiyle memnun olurum.
+**Birlikte daha iyi olalım!**
+
+Peki şimdi sırada ne var? Bu eğitimin devamı olan "Yapay Zeka İnşa Etme"
+eğitimini de zaman içinde bu siteye ekleme niyetindeyim. Peki içeriği nasıl?
+Yapay Zeka yöntemleri oluşturmayı mümkün kılan gerçek algoritmalar hakkında
+bilgiler içermekle birlikte temel düzel Python bilgisi gerektiriyor. Çalışmak
+gerek! Çok!..
 
 [Ey benim paşalarım, beylerim, ağalarım; şu şehr-i Konstantıniyye cengindeki
 silah arkadaşlarım!..](https://tr.wikipedia.org/wiki/II._Mehmed) Biz bize
@@ -30,20 +40,26 @@ kaldık madem, afterparty başlasın...
 [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
 [![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
 [![YZ 101 Bölüm 5](/assets/img/maze-mini.png "5. Sinir Ağları (Neural Networks)")](/ai/2020/10/09/yapay-zeka-101-5.html)
+[![YZ 101 Bölüm 6](/assets/img/maze-mini.png "6. Muhtemel Etkiler (Implications)")](/ai/2020/10/10/yapay-zeka-101-6.html)
 {: style="text-align: center;"}
+
+> Şiddetle başlayan hazlar, şiddetle son bulurlar.
+>
+> These violent delights have violent ends.
+>> Shakespeare
 
 ---
 
-## Bölümler
+## **Bölümler**
 
 1. Yapay Zeka Nedir?
-2. Yapay Zeka Problemi Çözme
+2. **Yapay Zeka Problemi Çözme**
 3. Gerçek Dünyada Yapay Zeka
 4. Makine Öğrenmesi (Machine Learning)
 5. Sinir Ağları (Neural Networks)
-6. Yapay Zeka Uygulamaları (Implications)
+6. Muhtemel Etkiler (Implications)
 
-## 2. Yapay Zeka Problemi Çözme
+## **2. Yapay Zeka Problemi Çözme**
 
 ![YZ 101 2 Afiş](/assets/img/yz-101-2-afis.png "YZ 101 2 Afiş")
 
@@ -59,12 +75,12 @@ Bu kısımda şu konuları ele alacağız:
 
 ---
 
-### 2.1. Arama ve problem çözme
+### 2.1. **Arama ve problem çözme**
 
 Birçok problem arama problemi olarak ifade edilebilir. Bu, alternatif
 seçimleri ve bunların sonuçlarını formüle ederek başlamamızı gerektirir.
 
-Pratikte Arama: A'dan B'ye gitme
+#### **Pratikte Arama: A'dan B'ye gitme**
 
 Yabancı bir şehirde olduğunuzu düşünün, bir adreste (bir otel diyelim) ve
 başka bir adrese gitmek için toplu taşıma araçlarını kullanmak
@@ -108,7 +124,7 @@ Navigasyon veya satranç gibi karmaşık arama görevlerini ele almadan önce,
 sorunları Yapay Zeka tarafından nasıl çözebileceğimize dair anlayışımızı
 geliştirmek için çok basitleştirilmiş bir modelden başlayalım.  
 
-#### Kolay/Bebek oyuncağı problem: Tavuk geçirme
+#### **Kolay/Bebek oyuncağı problem: Tavuk geçirme**
 
 ![YZ 101 2 Tavuk Geçirme](/assets/img/yz-101-2-tavuk-gecirme.png "YZ 101 2 Tavuk Geçirme")
 
@@ -161,7 +177,7 @@ bu da onaltı kombinasyon ifade eder. Biz bunlara durumlar diyeceğz:
 2222|2|2|2|2
 {: style="text-align: center;"}
 
-Durumlara kısa isimler verdik, çünkü aksi takdirde onlar hakkında konuşmak
+Durumlara kısa isimler verdik çünkü aksi takdirde onlar hakkında konuşmak
 zahmetli olur. Şimdi başlangıç durumunun 1111 olduğunu ve hedef durumun 2222
 olduğunu söyleyebiliriz. Sanıyorum şu hali tercih etmezdiniz: "Başlangıç
 durumunda, robot yakın tarafta, tilki yakın tarafta, tavuk yakın tarafta ve
@@ -242,7 +258,7 @@ tavuk yemini taşıyabilir).
 N: Near, Yakın Kıyı, 1. Kıyı - F: Far, Uzak Kıyı, 2. Kıyı
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
-#### Durum uzayı, geçişler ve maliyetler
+#### **Durum uzayı, geçişler ve maliyetler**
 
 Bir planlama problemini formalize etmek için durum uzayı, geçişler ve
 maliyetler gibi kavramları kullanırız.
@@ -279,7 +295,7 @@ maliyetler gibi kavramları kullanırız.
 > maliyet tabii ki zaman olacaktır. Tüm geçişler eşitse, maliyetleri göz ardı
 > edebiliriz.
 
-#### Alıştırma 5: Daha küçük bir kayık
+#### **Alıştırma 5: Daha küçük bir kayık**
 
 Bu bulmacanın geleneksel versiyonunda robot, tekneye sadece tek bir şey
 sığdırabilir. Durum uzayı hala aynıdır ancak daha az geçiş mümkündür.
@@ -315,7 +331,7 @@ ulaşmak için onu uzak tarafa götürür. Sonuç olarak:
 
 Durum sayısı: 8, Geçiş sayısı: 7
 
-#### Alıştırma 6: Hanoi Kuleleri
+#### **Alıştırma 6: Hanoi Kuleleri**
 
 Başka bir bulmaca yapalım: Ünlü [Hanoi
 Kuleleri](https://www.britannica.com/topic/Tower-of-Hanoi). Bizim
@@ -358,9 +374,9 @@ seçin.**
 
 ---
 
-### 2.2. Yapay Zeka ile problem çözme
+### **2.2. Yapay Zeka ile problem çözme**
 
-#### Yapay Zeka'nın tarihi üzerine bir ara: Aramadan başlayarak...
+#### **Yapay Zeka'nın tarihi üzerine bir ara: Aramadan başlayarak...**
 
 Yapay Zeka, bilgisayar bilimi kadar eskidir. Bilgisayarlara sahip olamamızdan
 çok önceleri, insanlar, otomatik akıl yürütme ve zeka olasılığını düşündüler.
@@ -413,7 +429,7 @@ Searle'ın Çin Odası deneyindeki herhangi bir argümanı atlatmak istediğini
 gösterir: "Onu uygulayan sistem sadece bir programı izleyen bir bilgisayar
 olsa bile zeka, zekadır!" der.
 
-#### Yapay Zeka araştırmasında neden "arama" ve "oyun" merkezi rolde oldu?
+#### **Yapay Zeka araştırmasında neden "arama" ve "oyun" merkezi rolde oldu?**
 
 Bilgisayarlar, 1950'lerde pratik Yapay Zeka algoritmaları ile deney yapmanın
 mümkün olduğu seviyeye geldikçe, en belirgin Yapay Zeka problemleri (Nazi
@@ -471,13 +487,13 @@ ve planlama problemlerini kavramsal düzeyde inceleyeceğiz.
 
 ---
 
-### 2.3. Arama ve oyun
+### **2.3. Arama ve oyun**
 
 Bu bölümde klasik bir Yapay Zeka problemini inceleyeceğiz: Oyunlar. Netlik
 uğruna odaklanacağımız en basit senaryo, tic-tac-toe ve satranç gibi iki
 oyunculu, mükemmel bilgi oyunları.
 
-#### Örnek: Tic tac toe oynamak
+#### **Örnek: Tic tac toe oynamak**
 
 Maxine ve Minnie gerçek oyun tutkunları. Sadece oyunları severler. Özellikle
 iki kişilik, tic-tac-toe veya satranç gibi mükemmel bilgi oyunlarını. Bir gün
@@ -499,7 +515,7 @@ Kasparov'a oldukça benziyordu.
 Evet, Min en üst sırada üç O almaya yakındı ancak Max bu plana kolayca son
 verebilirdi. Peki Max neden bu kadar karamsardı?
 
-#### Oyun ağaçları
+#### **Oyun ağaçları**
 
 Yapay Zeka kullanarak oyunları çözmek için oyun ağacının konseptini
 tanıtacağız. Oyunun farklı durumları, oyun ağacındaki düğümlerle temsil
@@ -516,9 +532,9 @@ olarak adlandırıyoruz.
 durumları, kendisinin çocuk düğümleri olarak düğümler. Bu oyunun bittiği
 durumlara erişinceye kadar seviye seviye devam eder. Tic-tac-toe'da oyunun
 bittiği durumlar şöyledir: Oyunculardan biri yatay, dikey, çapraz üç kareyi
-yazarsa kazanır, ya da tahta dolarsa oyun berabere biter.
+yazarsa kazanır ya da tahta dolarsa oyun berabere biter.
 
-#### Değeri minimize veya maksimize etme
+#### **Değeri minimize veya maksimize etme**
 
 Oyunu kazanmaya çalışan oyun Yapay Zeka'sı oluşturabilmek için, olası her
 sonuca sayısal bir değer ekliyoruz. X'in üçlü bir çizgiye sahip olduğu, yani
@@ -528,7 +544,7 @@ olduğu ve oyuncunun kazanamadığı pozisyonlar için, nötr değeri 0 kullanı
 (Max'in değeri en üst düzeye çıkarmaya çalışması veya Min' in değeri en aza
 indirmeye çalışması dışında değerlerin -1, 0 ,1 olması önemli değildir.)
 
-#### Örnek oyun ağacı
+#### **Örnek oyun ağacı**
 
 Örneğin, kökte değil oyunun ortasında başlayan aşağıdaki oyun ağacını düşünün
 (çünkü aksi takdirde ağaç görüntülenemeyecek kadar büyük olur). Bunun, bu
@@ -555,12 +571,12 @@ düğümlerinde kazanan O ile oynayan Min.
 Oyuncuların sıraları değiştiğinden, seviyelerin Min seviyeler ve Max seviyeler
 olarak etiketlenebilir ve bu da kimin sırasının geldiğini gösterir.
 
-#### Stratejik olma
+#### **Stratejik olma**
 
 Alttaki görselde, ikinci seviyedeki (5) - (10) düğümlerini düşünün. (7) ve (9)
 düğümlerinde oyun sona erer ve Max arka arkaya üç X ile kazanır. Bu
 pozisyonların değeri +1'dir. Kalan düğümlerde (5), (6), (8) ve (10) oyun
-pratik olarak bitmiştir, çünkü Min'in kazanmak için kalan tek hücreye O
+pratik olarak bitmiştir çünkü Min'in kazanmak için kalan tek hücreye O
 harfini yerleştirmesi yeterlidir. Yani diğer bir deyişle, alttan ikinci
 seviyedeki her düğümde oyunun nasıl biteceğini biliyoruz. Bu nedenle (5), (6),
 (8) ve (10) düğümlerinin değerinin de -1 olduğuna karar verebiliriz.
@@ -585,7 +601,7 @@ ekleriz.
 
 ![YZ 101 2 Tic-Tac-Toe 4](/assets/img/yz-101-2-tic-tac-toe-4.png "YZ 101 2 Tic-Tac-Toe 4")
 
-#### Kimin kazanacağını belirlemek
+#### **Kimin kazanacağını belirlemek**
 
 Bu bölümdeki en önemli ders, oyunun sonucunu herhangi bir tahta pozisyonundan
 önce belirlemek için yukarıdaki mantık yürütmeyi tekrar tekrar uygulamaktır.
@@ -604,7 +620,7 @@ oynama sırasından başlayarak en uygun oyunu ekledik.
 
 ![YZ 101 2 Tic-Tac-Toe 5](/assets/img/yz-101-2-tic-tac-toe-5.png "YZ 101 2 Tic-Tac-Toe 5")
 
-#### Kök düğümün değeri = kazanan
+#### **Kök düğümün değeri = kazanan**
 
 Oyunun değeri olduğu söylenen kök düğümün değeri, bize kimin kazandığını (ve
 sonuç sadece basit bir kazanma veya kaybetme değilse ne kadar) söyler: Oyunun
@@ -627,7 +643,7 @@ için en iyisinin diğeri için en kötüsü olduğu varsayımına dayanmaktadı
 > çocuk düğümü tarafından verilir. Bazen, eşit derecede iyi olan çok iyi
 > seçimler vardır ve bunların hangisi olursa olsun sonuç aynı olacaktır.
 
-#### Minimax algoritması
+#### **Minimax algoritması**
 
 Minimax algoritması adı verilen bir algoritma elde etmek için yukarıdaki oyun
 değeri kavramını kullanabiliriz. Bu algoritma, teorik olarak, herhangi bir
@@ -643,7 +659,7 @@ gerekli) bir göz atmak isterseniz:
 
 ![YZ 101 2 Satranç](/assets/img/yz-101-2-satranc.png "YZ 101 2 Satranç")
 
-#### Kulağa hoş geliyor, şimdi eve gidebilir miyim?
+#### **Kulağa hoş geliyor, şimdi eve gidebilir miyim?**
 
 Yukarıda belirtildiği gibi, Minimax algoritması herhangi bir deterministik,
 iki oyunculu, mükemmel bilgili sıfır toplamlı oyunda en iyi oyunu uygulamak
@@ -667,7 +683,7 @@ eve gidebilir miyiz? Cevap teorik olarak evet ancak pratikte hayır.
 > dallanma faktörünün yaklaşık 250 olduğu tahmin edilmektedir. Go, Minimax
 > için gitme/gitmez demek (Go means no-go for Minimax.).
 
-#### Daha fazla hile: Büyük oyun ağaçlarını yönetme
+#### **Daha fazla hile: Büyük oyun ağaçlarını yönetme**
 
 Büyük oyun ağaçlarını yönetmek için daha fazla hile gereklidir. Birçoğu, 1997
 yılında, satranç dünya şampiyonu Garry Kasparov'u yenmesinde, IBM’in Deep Blue
@@ -688,7 +704,7 @@ alıp, verilen tahtadan devam eden oyunun olası sonucunu döndürür.
 > ağırlıklandırılan malzeme (taş) miktarını sayar: Vezir genellikle bir
 > kalenin yaklaşık iki katı, bir at veya filin üç katı ve piyonun dokuz katı
 > değerinde kabul edilir. Elbette kral, diğer tüm şeylerin toplamından daha
-> değerlidir, çünkü onu kaybetmek oyunu kaybetmek anlamına gelir. Ayrıca,
+> değerlidir çünkü onu kaybetmek oyunu kaybetmek anlamına gelir. Ayrıca,
 > tahtanın ortasına yakın stratejik olarak önemli pozisyonları işgal etmek bir
 > avantaj olarak kabul edilir ve sezgisel yöntemler bu tür pozisyonlara daha
 > yüksek değer atar.
@@ -699,7 +715,7 @@ değiştirilmeli (depth-limited): Burada derinlik, sezgisel bir değerlendirme
 işlevi uygulanmadan önce oyun ağacının genişletildiği adımların sayısını ifade
 eder.
 
-#### Alıştırma 7: Neden bu kadar karamsarsın Max?
+#### **Alıştırma 7: Neden bu kadar karamsarsın Max?**
 
 Bu bölümün başında anlatılan tic-tac-toe oyununa dönelim. Olası son oyunların
 alanını daraltmak için, Max'in yakın bir yenilgiyi önlemek için en üst sıraya
@@ -753,7 +769,7 @@ oyunun -1 değerinden de anlaşılabilir.
 >
 > Dahası, bir eylemi seçerken bizi bir durumdan diğerine götüren geçişler
 > deterministik değildir. Bu, yapmayı seçtiğimiz her şeyin sonucunun her zaman
-> tam olarak belirlenemeyeceği anlamına gelir, çünkü bizim kontrolümüz dışında
+> tam olarak belirlenemeyeceği anlamına gelir çünkü bizim kontrolümüz dışında
 > kalan ve genellikle bizim için bilinmeyen faktörler vardır.
 >
 > Yukarıda tartıştığımız algoritmalar, örneğin zar atma veya rasgele bir
@@ -781,4 +797,5 @@ oyunun -1 değerinden de anlaşılabilir.
 [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
 [![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
 [![YZ 101 Bölüm 5](/assets/img/maze-mini.png "5. Sinir Ağları (Neural Networks)")](/ai/2020/10/09/yapay-zeka-101-5.html)
+[![YZ 101 Bölüm 6](/assets/img/maze-mini.png "6. Muhtemel Etkiler (Implications)")](/ai/2020/10/10/yapay-zeka-101-6.html)
 {: style="text-align: center;"}

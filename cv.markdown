@@ -11,7 +11,7 @@ permalink: /cv/
 
 ---
 
-### TR [ ENG ⇣ ]
+### **TR [ ENG ⇣ ]**
 
 Ben bir siber sanatçıyım.
 
@@ -47,7 +47,7 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
 ---
 
-### ENG
+### **ENG**
 
 I am a cyber artist.
 
@@ -83,7 +83,7 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
 ---
 
-### 1. Education
+### **1. Education**
 
 + [ 11/2018 - ... ] [ [Uni. of Helsinki & Aalto, Finland, Computer Science, MOOC](https://mooc.fi/en) ]
 
@@ -99,6 +99,7 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
     [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
     [![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
     [![YZ 101 Bölüm 5](/assets/img/maze-mini.png "5. Sinir Ağları (Neural Networks)")](/ai/2020/10/09/yapay-zeka-101-5.html)
+    [![YZ 101 Bölüm 6](/assets/img/maze-mini.png "6. Muhtemel Etkiler (Implications)")](/ai/2020/10/10/yapay-zeka-101-6.html)
     {: style="text-align: center;"}
 
 + [ 9/2020 - ... ] [ [International Akhmet Yassawi Uni., Computer Engineering](https://www.ayu.edu.tr/) ]
@@ -107,7 +108,7 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
 + [ 9/2004 - 12/2014 (Quit) ] [ [Istanbul Uni., Mechanical Engineering](https://makinemuhendislik.istanbulc.edu.tr/) ]
 
-#### 1.1. Course, Certificate
+#### **1.1. Course, Certificate**
 
 + Lisp, Artifical Intelligence, [Enterprise Knowledge Graphs](https://enterprise-kg-cdl-online-meetup.heysummit.com/)
 
@@ -154,7 +155,7 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
 ---
 
-### 2. Skill
+### **2. Skill**
 
 + OS: Windows, Unix-like OS’s
 
@@ -179,7 +180,7 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
 ---
 
-### 3. Work Experience
+### **3. Work Experience**
 
 + [ 8/2019 - ... ] [ [cevizlab](/cevizlab/) & [muucit](/muucit/) ]
   
@@ -314,6 +315,6 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
 ---
 
-### 4. Extra
+### **4. Extra**
 
 + Active Driver (B, D1 Licenses)

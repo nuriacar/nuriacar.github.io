@@ -5,7 +5,7 @@ date:   2020-10-05 15:15:15 +0300
 categories: ai
 ---
 
-[![Elements of Yapay Zeka](/assets/img/elements-of-ai.jpg "Elements of Yapay Zeka")](https://course.elementsofai.com/)
+[![Elements of AI](/assets/img/elements-of-ai.jpg "Elements of AI")](https://course.elementsofai.com/)
 
 [![Helsinki Üniversitesi](/assets/img/helsinki-uni-logo-mini.png "Helsinki Üniversitesi")](https://www.helsinki.fi/en)
 [![Reaktor](/assets/img/reaktor-logo-mini.png "Reaktor")](https://www.reaktor.com/)
@@ -14,12 +14,22 @@ categories: ai
 
 2018'de [Finlandiya Helsinki Üniversitesi](https://helsinki.fi/en), bazı
 Bilgisayar Bilimleri derslerini [mooc.fi](http://mooc.fi/en) üzerinden erişime
-açtı. Ben de görür görmez kaydoldum ve eğitimler sisteme yüklendikçe buradaki
-dersleri almaya koyuldum. Kaydolduğum ilk eğitim
-[Reaktor](https://reaktor.com) işbirliği ile hazırlanan [Yapay Zeka
+açtı. Belki de 2018'den önceydi lakin ben 2018'de haberdar oldum. Görür görmez
+kaydoldum ve eğitimler sisteme yüklendikçe buradaki dersleri almaya koyuldum.
+Tamamladığım -ki bir ay sürdü- ilk eğitim [Reaktor](https://reaktor.com)
+işbirliği ile hazırlanan [Yapay Zeka
 Temelleri](https://course.elementsofai.com/) eğitimiydi. Yapabildiğim kadar
 tercüme ettim. Kısa süre önce de tekrardan gözden geçirip yayınlama kararı
-aldım. Toplamda altı bölüm olacak. Zamanla tüm bölümler yüklenmiş olur.
+aldım. Altı bölümden oluşuyor ve bu sitedeki diğer içerikler gibi günden güne
+mümkün olduğunca daha iyiye evrilecek. Eksik, hatalı, zor anlaşılır vb.
+bunduğunuz kısımlar için iletişime geçmenizden ziyadesiyle memnun olurum.
+**Birlikte daha iyi olalım!**
+
+Peki şimdi sırada ne var? Bu eğitimin devamı olan "Yapay Zeka İnşa Etme"
+eğitimini de zaman içinde bu siteye ekleme niyetindeyim. Peki içeriği nasıl?
+Yapay Zeka yöntemleri oluşturmayı mümkün kılan gerçek algoritmalar hakkında
+bilgiler içermekle birlikte temel düzel Python bilgisi gerektiriyor. Çalışmak
+gerek! Çok!..
 
 [Ey benim paşalarım, beylerim, ağalarım; şu şehr-i Konstantıniyye cengindeki
 silah arkadaşlarım!..](https://tr.wikipedia.org/wiki/II._Mehmed) Biz bize
@@ -30,20 +40,26 @@ kaldık madem, afterparty başlasın...
 [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
 [![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
 [![YZ 101 Bölüm 5](/assets/img/maze-mini.png "5. Sinir Ağları (Neural Networks)")](/ai/2020/10/09/yapay-zeka-101-5.html)
+[![YZ 101 Bölüm 6](/assets/img/maze-mini.png "6. Muhtemel Etkiler (Implications)")](/ai/2020/10/10/yapay-zeka-101-6.html)
 {: style="text-align: center;"}
+
+> Şiddetle başlayan hazlar, şiddetle son bulurlar.
+>
+> These violent delights have violent ends.
+>> Shakespeare
 
 ---
 
-## Bölümler
+## **Bölümler**
 
-1. Yapay Zeka Nedir?
+1. **Yapay Zeka Nedir?**
 2. Yapay Zeka Problemi Çözme
 3. Gerçek Dünyada Yapay Zeka
 4. Makine Öğrenmesi (Machine Learning)
 5. Sinir Ağları (Neural Networks)
-6. Yapay Zeka Uygulamaları (Implications)
+6. Muhtemel Etkiler (Implications)
 
-## 1. Yapay Zeka Nedir?
+## **1. Yapay Zeka Nedir?**
 
 ![YZ 101 1 Afiş](/assets/img/yz-101-1-afis.png "YZ 101 1 Afiş")
 
@@ -59,7 +75,7 @@ Bu kısımda şu konuları ele alacağız:
 
 ---
 
-### 1.1. Yapay Zeka'yı nasıl tanımlamalıyız?
+### **1.1. Yapay Zeka'yı nasıl tanımlamalıyız?**
   
 Bu ilk bölümde Yapay Zeka kavramını, Yapay Zeka tanımına ve örneklerine
 bakarak öğreneceğiz.
@@ -77,7 +93,7 @@ yapmadan önce, Yapay Zeka'nın farklı yönlerini gösteren üç Yapay Zeka
 uygulamasının altını çizeceğiz. Aanlayışımızı derinleştirmek için her birine
 kurs boyunca geri döneceğiz.
 
-#### Uygulama 1. Kendi kendine giden otomobiller/araçlar
+#### **Uygulama 1. Kendi kendine giden otomobiller/araçlar**
 
 ![YZ 101 1 1 Örnek 1](/assets/img/yz-101-1-1-ornek-1.png "YZ 101 1 1 Örnek 1")
 
@@ -97,7 +113,7 @@ rolüne geçerek neler olup bittiğine bir göz atarlar. Ulaşım günlük yaşa
 çok önemli bir unsur olduğu için, henüz daha düşünmediğimiz bazı uygulamalar
 da olabilir.
 
-#### Uygulama 2. İçerik önerisi
+#### **Uygulama 2. İçerik önerisi**
 
 ![YZ 101 1 1 Örnek 2](/assets/img/yz-101-1-1-ornek-2.png "YZ 101 1 1 Örnek 2")
 
@@ -121,7 +137,7 @@ kullanıcıların yalnızca kendi görüşlerini destekleyen fikirleri takip etm
 sonucunda karşıt görüşlerden haberdar olamamaları), trol fabrikaları, sahte
 haberler ve yeni propaganda formları bu etkilerdendir.
 
-#### Uygulama 3. Görüntü ve video işleme
+#### **Uygulama 3. Görüntü ve video işleme**
 
 ![YZ 101 1 1 Örnek 3](/assets/img/yz-101-1-1-ornek-3.png "YZ 101 1 1 Örnek 3")
 
@@ -146,11 +162,11 @@ eriştiğinde, gerçek görüntülerini bulmanın imkansız olduğu olayların d
 görünümlü sahte videolarını oluşturmak kolay olacaktır. Aynı zamanda bu,
 "görmenin inanmak" olduğu fikrine meydan okuyor.
 
-#### Yapay Zeka nedir, ne değildir? Kolay bir soru değil!
+#### **Yapay Zeka nedir, ne değildir? Kolay bir soru değil!**
 
 ![YZ 101 1 1 YZ Tanımı](/assets/img/yz-101-1-yz-tanimi.png "YZ 101 1 1 YZ Tanımı")
 
-Yapay zekanın medyadaki popülaritesi, kısmen, insanların daha önce başka
+Yapay Zeka'nın medyadaki popülaritesi, kısmen, insanların daha önce başka
 isimlerle anılan şeylere atıfta bulunurken bu terimi kullanmaya başlamış
 olmalarından kaynaklanmaktadır. İstatistik ve iş analitiğinden, manuel olarak
 kodlanmış eğer-ise(if-then) kurallarına kadar neredeyse her şeyin Yapay Zeka
@@ -159,7 +175,7 @@ algısı neden bu kadar belli belirsiz? Birkaç nedenden bahsedelim.
 
 ![YZ 101 1 1 Belirsizlik Sebep 1](/assets/img/yz-101-1-1-sebep-1.png "YZ 101 1 1 Belirsizlik Sebep 1")
 
-#### Sebep 1: Resmi olarak kabul edilen tanım yok
+#### **Sebep 1: Resmi olarak kabul edilen tanım yok**
 
 Yapay Zeka araştırmacılarının bile kesin bir Yapay Zeka tanımı yoktur. Bazı
 konular "Yapay Zeka değil" olarak sınıflandırıldığında, alan sürekli olarak
@@ -179,10 +195,10 @@ görünmektedir.
 
 ![YZ 101 1 1 Belirsizlik Sebep 2](/assets/img/yz-101-1-1-sebep-2.png "YZ 101 1 1 Belirsizlik Sebep 2")
 
-#### Sebep 2: Bilim Kurgu mirası
+#### **Sebep 2: Bilim Kurgu mirası**
 
 Yapay Zeka'nın anlamıyla ilgili kafa karışıklığı, çeşitli bilim kurgu
-eserlerinde bulunan yapay zekalar tarafından daha da kötüleştirilmiştir.
+eserlerinde bulunan Yapay Zeka'lar tarafından daha da kötüleştirilmiştir.
 Bilim kurgu öyküleri genellikle çok detaylı faktoidler (kurgu bir nesne, haber
 veya bilgiye dair özet, ayrıntılı bilgi) ya da zekice diyalog kuran ve dost
 görünen insansı hizmetkarlara sahiptir ancak o öyküler bazen Pinokyo'nun
@@ -202,7 +218,7 @@ anlamını arayışımız olarak görünürler.
 
 ![YZ 101 1 1 Belirsizlik Sebep 3](/assets/img/yz-101-1-1-sebep-3.png "YZ 101 1 1 Belirsizlik Sebep 3")
 
-#### Sebep 3: Kolay görünen şey aslında zor...
+#### **Sebep 3: Kolay görünen şey aslında zor...**
 
 Yapay Zeka'yı anlamada bir başka zorluk da, hangi görevlerin kolay, hangisinin
 zor olduğunu bilmenin zor olmasıdır. Etrafınıza bakın ve elinizdeki bir
@@ -214,7 +230,7 @@ tutmak için nesneyi doğru miktarda kuvvetle sıkıştırmayı başardınız.
 
 Tüm bunların ne kadar karmaşık olduğunu anlamak zor olabilir ancak bazen bir
 şeyler ters gittiğinde bu zorluk görünür hale gelir: Almak istediğiniz nesne
-beklediğinizden çok daha ağır veya daha hafiftir, ya da bir tutamağı tutmadan
+beklediğinizden çok daha ağır veya daha hafiftir ya da bir tutamağı tutmadan
 evvel başka biri sizden önce onu çekerse kendinizi dengede durmaya çabalarken
 bulabilirsiniz. Genellikle bu tür görevleri yaparken pek zahmet çekmeyiz.
 Ancak bu yapabilme yeteneği birkaç yıllık çocukluk çabasıyla sağlanır.
@@ -228,7 +244,7 @@ zordur ve aktif bir çalışma alanıdır. Son örnekler şunlar:
 
 ![YZ 101 1 1 Belirsizlik Sebep 4](/assets/img/yz-101-1-1-sebep-4.png "YZ 101 1 1 Belirsizlik Sebep 4")
 
-#### Zor görünen ama aslında kolay olan şeyler...
+#### **Zor görünen ama aslında kolay olan şeyler...**
 
 Bunun aksine, satranç oynama ve matematik alıştırmaları çözme görevleri çok
 zor görünebilir. Bazı başlangıç Yapay Zeka araştırmalarının bu tür görevler
@@ -249,7 +265,7 @@ Benzer şekilde, matematik, insan sezgisi ve yaratıcılık gerektirse de, tipik
 bir lise veya üniversite dersinin hepsi olmasa da birçok alıştırması, bir
 hesap makinesi ve basit bir kural seti uygulanarak çözülebilir.
 
-#### Peki, daha kullanışlı bir Yapay Zeka tanımı ne olurdu?
+#### **Peki, daha kullanışlı bir Yapay Zeka tanımı ne olurdu?**
 
 "Bilgisayarların henüz yapamayacağı şeyler" şakasından daha faydalı bir yapay
 zeka tanımı girişimi şöyle olabilir: Özerklik ve adapte olma yeteneği.
@@ -262,7 +278,7 @@ zeka tanımı girişimi şöyle olabilir: Özerklik ve adapte olma yeteneği.
 > **Adapte olabilirlik(adaptivity)**: Deneyimden öğrenerek performansı
 > geliştirme becerisi.
 
-#### Kelimeler yanıltıcı olabilir
+#### **Kelimeler yanıltıcı olabilir**
 
 Yapay Zeka'yı tanımlarken ve hakkında konuşurken, kullandığımız kelimelerin
 çoğunun yanıltıcı olabileceği konusunda dikkatli olmak zorundayız. "Öğrenme,
@@ -306,7 +322,7 @@ değil.  Çünkü Yapay Zeka dardır (bu bölümün sonunda dar Yapay Zeka'nın 
 anlama geldiğini inceleyeceğiz): Bir problemin çözülebilir olması, bundan
 farklı diğer bir problemin de çözülebileceğini göstermez.
 
-#### Neden "birazcık, bir tutam Yapay Zeka" diyebilirsiniz ama "bir Yapay Zeka" diyemezsiniz?
+#### **Neden "birazcık, bir tutam Yapay Zeka" diyebilirsiniz ama "bir Yapay Zeka" diyemezsiniz?**
 
 "Yapay Zeka" veya "Yapay Zeka değil" sınıflandırması, tam bir evet-hayır
 dikotomisi(çatallanma, ikiye ayrılma, iki karşıt guruba bölünme) değildir:
@@ -327,7 +343,7 @@ daha uygun olacaktır.
 > problemler ve yöntemler koleksiyonudur.
 >
 > Yapay Zeka bir disiplin olduğu için, "bir biyoloji" demediğimiz gibi "bir
-> Yapay Zeka" dememelisiniz. Bu nokta, "daha fazla yapay zekaya ihtiyacımız
+> Yapay Zeka" dememelisiniz. Bu nokta, "daha fazla Yapay Zeka'ya ihtiyacımız
 > var" gibi bir şey demeye çalıştığınızda da aynıdır. Bu, kulağa yanlış
 > geliyor, değil mi? (Bize öyle geliyor.)
 
@@ -350,7 +366,7 @@ söylenmesi çokta sorun değil ancak bir profesyonel gibi konuşmak istiyorsan�
 "bir Yapay Zeka" demekten kaçının ve bunun yerine "bir Yapay Zeka metodu"
 deyin.
 
-#### Alıştırma 1: Bu Yapay Zeka mı, değil mi?
+#### **Alıştırma 1: Bu Yapay Zeka mı, değil mi?**
 
 ![YZ 101 1 1 Kurşun Kalem](/assets/img/yz-101-kursun-kalem.png "YZ 101 1 1 Kurşun Kalem")
 
@@ -404,7 +420,7 @@ Aşağıdakilerden hangileri Yapay Zeka'dır, hangileri değildir?
 
 ---
 
-### 1.2. Alakalı alanlar
+### **1.2. Alakalı alanlar**
 
 **Bilgisayar Bilimleri**: Bilgisayar bilimleri, Yapay Zeka'yı içeren fakat
 aynı zamanda dağıtık hesaplama, insan-bilgisayar etkileşimi ve yazılım
@@ -475,13 +491,13 @@ bir dalı haline getirir.
 > robotlarımızın olmaması ancak bulaşıkları suyla yıkayabilmemiz için
 > bulaşıkları içine yerleştirilebileceği bulaşık makinelerimizin olması gibi.
 >
-> İlk bakışta açıkça görünemeyebilir, ama en azından bir düzeyde özerkliğe
+> İlk bakışta açıkça görünemeyebilir ama en azından bir düzeyde özerkliğe
 > sahip olan, sensörleri ve aktüatörleri(işletici, çalıştırıcı) içeren her
 > türlü araç da robotik olarak sayılır. Öte yandan, sadece müşteri hizmetleri
 > konuşma botu (chatbot) gibi yazılım tabanlı çözümler, bazen "yazılım
 > robotları" olarak adlandırılsalar bile (gerçek) robotik olarak sayılmazlar.
 
-#### Alıştırma 2: Yapay Zeka taksonomisi
+#### **Alıştırma 2: Yapay Zeka taksonomisi**
 
 ![YZ 101 1 2 Kurşun Kalem](/assets/img/yz-101-kursun-kalem.png "YZ 101 1 2 Kurşun Kalem")
 
@@ -517,11 +533,11 @@ gibi diğer alt alanları da içeren nispeten geniş bir alandır.
 
 B: Yapay Zeka bilgisayar bilimlerinin bir parçasıdır.
 
-C Makine öğrenimi genellikle Yapay Zeka'nin bir parçası olarak kabul edilir.
+C Makine öğrenimi genellikle Yapay Zeka'nın bir parçası olarak kabul edilir.
 
 D: Derin öğrenme, makine öğreniminin bir parçasıdır.
 
-E: Veri bilimi bilgisayar bilimlerine ve yapay zekaya ihtiyaç duyar. Bununla
+E: Veri bilimi bilgisayar bilimlerine ve Yapay Zeka'ya ihtiyaç duyar. Bununla
 birlikte, bir çok istatistik, işletme, hukuk ve diğer uygulama alanlarını da
 içerir, dolayısıyla genellikle bilgisayar bilimlerinin bir parçası olarak
 görülmez.
@@ -529,16 +545,16 @@ görülmez.
 Veri Bilimi = (Bilgisayar Bilimleri > Yapay Zeka > Makine Öğrenimi > Derin
 Öğrenme) + İstatistik + İşletme + Hukuk + ... vs.
 
-#### Alıştırma 3: Örnek görevler
+#### **Alıştırma 3: Örnek görevler**
 
 ![YZ 101 1 2 Kurşun Kalem](/assets/img/yz-101-kursun-kalem.png "YZ 101 1 2 Kurşun Kalem")
 
-Aşağıdaki örnek görevleri düşünün. İçlerinde yapay zeka ile ilgili hangi
+Aşağıdaki örnek görevleri düşünün. İçlerinde Yapay Zeka ile ilgili hangi
 alanların yer aldığını belirlemeye çalışın. **Uygun olan tüm seçenekleri
 seçin.** (İpucu: makine öğrenimi neredeyse her zaman bir tür istatistik
 içerir).
 
-**Not:** Bu alıştırma, yapay zekanın farklı yönleri ve çeşitli uygulamalardaki
+**Not:** Bu alıştırma, Yapay Zeka'nın farklı yönleri ve çeşitli uygulamalardaki
 rolleri hakkında düşünmeniz için size ilham vermeyi amaçlamaktadır. Bu
 soruların çoğuna net cevaplar olmadığından, **bu alıştırma notlandırmaya dahil
 edilmeyecektir.** Yine de elinizden gelenin en iyisini yapmanızı ve elinizden
@@ -568,13 +584,13 @@ sizinkinden farklı olursa endişelenmeyin.
 
 ---
 
-### 1.3. Yapay Zeka Felsefesi
+### **1.3. Yapay Zeka Felsefesi**
 
 "Yapay Zeka" teriminin doğası, akıllı davranışın bir zihnin varlığını ima edip
 etmediği veya gerektirip gerektirmediği ve bilincin hesaplama olarak ne ölçüde
 kopyalanabilir olduğu gibi felsefi soruları gündeme getirir.
 
-#### Turing Testi
+#### **Turing Testi**
 
 [Alan Turing](https://tr.wikipedia.org/wiki/Alan_Turing) (1912-1954) bir
 İngiliz matematikçi ve mantıkçı idi. Haklı olarak bilgisayar biliminin babası
@@ -597,7 +613,7 @@ gözlemlenerek başka bir akıllı varlıktan ayırt edilemezse, zekidir. Turing
 sadece davranış kümesini tartışmaya zorladı, böylece sorgulayıcı onu ya da
 kararlarını görünüşe dayandıramaz.
 
-#### Bir problem: İnsan gibi olmak, zeki olduğun anlamına mı geliyor?
+#### **Bir problem: İnsan gibi olmak, zeki olduğun anlamına mı geliyor?**
 
 Turing testinin bir zeka testi olarak gördüğü bir eleştiri, bilgisayarın bir
 insan gibi davranıp davranmadığını akıllıca gösterip göstermediğinin gerçekten
@@ -610,33 +626,36 @@ soruları yanıtlamaktan kaçınmaya çalışıyor. İşte, [Scott Aaronson'un b
 Eugene Goostman ile örnek bir konuşmanın kısa bir
 bölümü](https://www.scottaaronson.com/blog/?p=1858):
 
-#### Eugene bilgisayar mı, insan mı?
+#### **Eugene bilgisayar mı, insan mı?**
 
 **Sorgulayıcı**: Devenin kaç bacağı var?
 
-**Eugene**: 2 ile 4 arasında bir şey. Belki üç? :-))) Bu arada, hala uzmanlığınızı
-bilmiyorum - ya da muhtemelen, onu kaçırdım mi?
+**Eugene**: 2 ile 4 arasında bir şey. Belki üç? :-))) Bu arada, hala
+uzmanlığınızı bilmiyorum - ya da muhtemelen, onu kaçırdım mi?
 
 **Sorgulayıcı**: Kırkayağın kaç bacağı var?
 
-**Eugene**: Sadece iki, ama Çernobil mutantları beşe kadar olabilir. Beni
+**Eugene**: Sadece iki ama Çernobil mutantları beşe kadar olabilir. Beni
 kandırman gerektiğini biliyorum.
 
-**Sorgulayıcı**: Hayır, konuşma botu (chatbot) olmadığınızı bilmem gerekiyor. Lütfen soruyu basitçe cevaplayın: Karıncanın kaç bacağı var?
+**Sorgulayıcı**: Hayır, konuşma botu (chatbot) olmadığınızı bilmem gerekiyor.
+Lütfen soruyu basitçe cevaplayın: Karıncanın kaç bacağı var?
 
 **Eugene**: 2 ile 4 arasında bir şey. Belki üç? :-))) Oh, ne kadar verimli bir
 sohbet ;-)
 
 **Sorgulayıcı**: Neden böyle temel soruları sorduğumu anlıyor musunuz? "Blade
-Runner" filminde olduğu gibi, olabildiğince hızlı bir şekilde sizin bir robot olduğunuzu ortaya çıkarmaya çalıştığımın farkında mısınız?
+Runner" filminde olduğu gibi, olabildiğince hızlı bir şekilde sizin bir robot
+olduğunuzu ortaya çıkarmaya çalıştığımın farkında mısınız?
 
-**Eugene**: ... bekle
+**Eugene**: ...bekle
 
 ...
 
-Gerçekte bir bilgisayar programı olan Eugene Goostman, 30 yargıcın 10'unu kendisinin gerçek bir kişi olduğu konusunda kandırdı.
+Gerçekte bir bilgisayar programı olan Eugene Goostman, 30 yargıcın 10'unu
+kendisinin gerçek bir kişi olduğu konusunda kandırdı.
 
-#### Çin Odası Argümanı
+#### **Çin Odası Argümanı**
 
 ![YZ 101 1 3 Çin Odası](/assets/img/yz-101-1-3-cin-odasi.png "YZ 101 1 3 Çin Odası")
 
@@ -656,7 +675,7 @@ Turing testini geçse bile, bu onun akıllı olduğunu ya da bir insanın aklın
 benzer bir "akla" sahip olduğunu göstermez. "Zeki" kelimesi "bilinçli"
 kelimesi ile değiştirilebilir ve aynı argüman uygulanabilir.
 
-#### Kendi kendine giden bir araba akıllı mı?
+#### **Kendi kendine giden bir araba akıllı mı?**
 
 Çin odası argümanı, zekanın otomatikleştirilebilen küçük mekanik talimatlara
 ayrılabileceği fikrine karşı çıkıyor.
@@ -670,7 +689,7 @@ konusundaki yukarıdaki tartışmaya geri dönersek, arabadaki Yapay Zeka sistem
 sistemin akıllı davranışının aslında akıllı olmaktan tamamen farklı olduğu
 anlamına gelir.
 
-#### Pratikte felsefe ne kadar önemli?
+#### **Pratikte felsefe ne kadar önemli?**
 
 Doğal ya da yapay, zeka ve bilincin tanımı son derece kaçamaktır ve görünüşe
 göre hiç bitmeyen bir söyleme yol açar. Entelektüel bir arkadaşla bu
@@ -703,11 +722,11 @@ Ancak, [John McCarthy'nin belirttiği gibi](http://jmc.stanford.edu/articles/aip
 > olduğumuz şeydir: Yani "yalnızca" bilgisayar olmalarına rağmen akıllı
 > davranışlar sergileyen sistemler...
 
-#### Alıştırma 4: Tanımlar, tanımlar
+#### **Alıştırma 4: Tanımlar, tanımlar**
 
 ![YZ 101 1 2 Kurşun Kalem](/assets/img/yz-101-kursun-kalem.png "YZ 101 1 2 Kurşun Kalem")
 
-Yapay Zeka'nın hangi tanımını en çok beğendiniz? Siz Yapay Zekayı nasıl tanımlardınız?
+Yapay Zeka'nın hangi tanımını en çok beğendiniz? Siz Yapay Zeka'yı nasıl tanımlardınız?
 
 Şu ana kadar önerilmiş olan aşağıdaki tanımları inceleyelim:
 
@@ -720,7 +739,7 @@ Yapay Zeka'nın hangi tanımını en çok beğendiniz? Siz Yapay Zekayı nasıl 
 + Bunların iyi tanımlamalar olduğunu düşünüyor musunuz? Bunların her birini
   sırayla ele alın ve yanıldıkları şeyleri bulmaya çalışın. Yapay Zeka olarak
   sayılması gerektiğini düşündüğünüz ama Yapay Zeka tanımlarına uymayan
-  şeyleri, ya da tam tersini... **Her bir öge için verdiğiniz cevaplarınızı,
+  şeyleri ya da tam tersini... **Her bir öge için verdiğiniz cevaplarınızı,
   birkaç cümle ile açıklayın** (yalnızca tüm tanımların iyi ya da kötü
   göründüğünü söylemeniz yeterli değildir).
 
@@ -730,7 +749,7 @@ Yapay Zeka'nın hangi tanımını en çok beğendiniz? Siz Yapay Zekayı nasıl 
 
 **Örnek Cevap:**
 
-Doğru ya da yanlış cevap yok, ama biz şöyle düşünüyoruz:
+Doğru ya da yanlış cevap yok ama biz şöyle düşünüyoruz:
 
 **"Bilgisayarların yapamayacağı harika şeyler"**
 
@@ -746,7 +765,7 @@ söylemek çok zordur.
 "akıllı olmayı" (ne anlama gelirse gelsin) gerektirmediğini, bunun yerine
 akıllıca hareket etmelerinin yeterli olduğu ifade ettiği için iyi bir kelime.
 
-Kötü olan: Bu tanım neredeyse kendine gönderme yapar, çünkü hemen neyin
+Kötü olan: Bu tanım neredeyse kendine gönderme yapar çünkü hemen neyin
 "akıllı" olduğu sorusuna yol açar. Ayrıca bu tanım, yalnızca insan benzeri
 zeki davranışları içerdiği ve sözde sürü zekası gibi diğer zeka biçimlerini
 (örneğin karınca kolonileri tarafından sergilenen zeka) hariç tuttuğu için çok
@@ -754,9 +773,9 @@ dar.
 
 **"Otonom ve uyarlanabilir sistemler"**
 
-İyi: Yapay zekanın iki ana özelliğini vurgular; robotları, kendi kendine giden
+İyi: Yapay Zeka'nın iki ana özelliğini vurgular; robotları, kendi kendine giden
 arabaları vb. kapsar. Ayrıca eğitim verilerine uyum sağlayan makine öğrenimi
-tabanlı yapay zeka yöntemlerine güzel bir şekilde uyar.
+tabanlı Yapay Zeka yöntemlerine güzel bir şekilde uyar.
 
 Kötü: Bir kez daha, bunlar daha fazla soruya yol açıyor ve özellikle 'özerk'
 tanımı çok net değil (Elektrikli süpürge robotu otonom mu? Spam filtresi?..).
@@ -782,4 +801,5 @@ makine zekasını birleştirerek çok daha fazlasını başarabiliriz.
 [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
 [![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
 [![YZ 101 Bölüm 5](/assets/img/maze-mini.png "5. Sinir Ağları (Neural Networks)")](/ai/2020/10/09/yapay-zeka-101-5.html)
+[![YZ 101 Bölüm 6](/assets/img/maze-mini.png "6. Muhtemel Etkiler (Implications)")](/ai/2020/10/10/yapay-zeka-101-6.html)
 {: style="text-align: center;"}

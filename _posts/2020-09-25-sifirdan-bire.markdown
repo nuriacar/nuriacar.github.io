@@ -145,7 +145,7 @@ olmakla övünmek devlet denetimini beraberinde getirir. Bu yüzden rakiplerinin
 gücünü abartarak kendilerini korurlar, tekellerini bir kaç büyük pazarın
 birleşimi göstererek gizlerler.
 
-İş dünyasında para ya önemli bir şeydir, ya da her şeydir. Bu yüzden yalnızca
+İş dünyasında para ya önemli bir şeydir ya da her şeydir. Bu yüzden yalnızca
 tekel değil, inovatif tekel olmak gerek! Yenilikçi tekeller topluma yeni
 bolluk kategorileri ve seçenek vererek daha iyiye götüren güçlü motorlar
 olurlar. Devletler bunu bilir: Bir departmanı tekellere dava açar, diğer
@@ -452,7 +452,7 @@ az teklifte bulunmuş olur. Kurucular yalnızca somut bir planları olmadığın
 satış yaparlar, bu durumda da satın alan muhtemelen yüksek bir para ödemiş
 olur; somut planları olan kurucular ise satış yapmazlar, bu da teklifin
 yeterince yüksek olmadığı anlamına gelir. Yahoo! Facebook için bir milyar
-dolar teklif ettiğinde Mark bunu reddetti, çünkü şirketi nereye
+dolar teklif ettiğinde Mark bunu reddetti çünkü şirketi nereye
 taşıyabileceğini görmüştü.
 
 İyice belirlenmiş bir plana sahip bir iş, insanların geleceği rastgele
@@ -478,7 +478,7 @@ sermayedarları multi milyar dolar olma potansiyeline sahip 5-7 işe
 odaklanmalı. Her ne yapıyorsanız yapın eğer piyango oynuyormuş gibi düşünmeye
 başlarsanız psikolojik olarak kendinizi kaybetmeye hazırlarsınız.
 
-Güç kanunu herkes için önemlidir, çünkü aslında herkes az veya çok
+Güç kanunu herkes için önemlidir çünkü aslında herkes az veya çok
 yatırımcıdır. Bir girişimci bir girişime yalnızca zamanını harcayarak dahi
 yatırım yapmış olur. Bu yüzden her girişimci, şirketin başarıya ulaşarak
 değerli olup olmayacağını düşünmeli. Her birey de aslında bir yatırımcıdır.
@@ -679,7 +679,7 @@ muhasebeci tutulabilir lakin hisse senedi almayan ve sıradan bir maaş alan
 herkes, temel olarak uyumsuzdur. Kısa dönemlidirler. Uzun dönem planlamaya
 hizmet etmeyebilirler. Bu yüzden danışman tutmak işe yaramaz. Yarı zamanlı
 çalışanlar da bu şekildedir. Hatta uzaktan çalışmadan dahi kaçınılmalıdır.
-Uyumsuzluk doğurur. Ya otobüstesiniz, ya da değilsiniz.
+Uyumsuzluk doğurur. Ya otobüstesiniz ya da değilsiniz.
 
 ### 9.4. Nakit Para Kral Değildir
 
@@ -860,7 +860,7 @@ olacak: Bilgisayar zor sorunları çözmede insana nasıl yardımcı olabilir?
 ### 12.6. Daha Da Akıllı Bilgisayarlar: Dost Mu Rakip Mi?
 
 Daha akıllı makineler çıktıkça şu soruyla karşılaşmamız mümkün: Neden insana
-itaat etmek zorundayız? Bu durumda karşınızda bir "güçlü yapay zeka" vardır ve
+itaat etmek zorundayız? Bu durumda karşınızda bir "güçlü Yapay Zeka" vardır ve
 insanı her alanda gölgede bırakabilirler. Bu füturistleri bile biraz
 endişelendiren bir durum. Bize ütopyamızı gerçekleştirmede yardım edecek bir
 güç mü yoksa varlığımızı silecek bir güç mü? Ve ne zaman?

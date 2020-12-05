@@ -12,7 +12,7 @@ permalink: /sir/
 
 ---
 
-## Ses... Deneme... Prova... 1, 2, 3... A... Çh...
+## **Ses... Deneme... Prova... 1, 2, 3... A... Çh...**
 
 Her ne olduysa bilgisayar yüzünden oldu. Ciddiyim!
 
@@ -37,7 +37,7 @@ diyorum zira çocukluğumun seslerini farkında olmadan bir yerlerde kaybetmişi
 Yetmemiş, kaybettiğimi bile kaybetmişim. Çok geçmeden Mızraplı Tanbur ve
 bilgisayarımda sentezlediğim seslerle NewAge yapmaya koyuldum.
 
-### Amesia Newborn
+### **Amesia Newborn**
 
 Bir süre sonra Amesia Newborn albümüm ortaya çıktı.
 
@@ -51,7 +51,7 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 Bu albümün kaydedildiği zamanlar, TRT yarışmaları ve belgeselleri için müzik
 bestelediğim zamanlar. Fakat onlar nedense bende yoklar. Sahi neden yoklar?
 
-### Atasoy Müftüoğlu Belgeseli
+### **Atasoy Müftüoğlu Belgeseli**
 
 Bir günübirlik Edirne seyahati hayal edin. Anlaştığınız tur firması otobüs
 çalışanlarına uzun zamandır ödemesini yapmıyor fakat siz bunu gece vakti dönüş
@@ -87,7 +87,7 @@ Hepsi bir yana, ne ka güzel insanlarla tanıştım anlatamam.
 Ayrıca, sayfanın devamında göreceğiniz Fethi Gemuhluoğlu Belgeseli de yukarıda
 bahsettiğim Edirne Dörtlüsü'nün işi.
 
-### Özer Arkun, Yanni & Victor Espinola
+### **Özer Arkun, Yanni & Victor Espinola**
 
 Bu mix, Kaos Teorisi ve diğer pek çok faydalı şey gibi istemsizce var oldu.
 Kardeşime dinlemesi için gönderdiğim Yanni'nin Live Concert Event 2006
@@ -106,7 +106,7 @@ src="https://www.youtube.com/embed/yqLMW6AMfa4" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
 picture-in-picture" allowfullscreen></iframe>
 
-### UK2911 - Uzay Kuvvetleri 2911
+### **UK2911 - Uzay Kuvvetleri 2911**
 
 ![Uzay Kuvvetleri 2911 Murat Kaptan](/assets/img/uk2911-murat-kaptan.jpg "Uzay Kuvvetleri 2911 Murat Kaptan")
 
@@ -170,7 +170,7 @@ src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdL0_yY5aNM_P2pj8u
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### SIR N[01]
+### **SIR N[01]**
 
 ![N[01] Album](/assets/img/n01.jpg "N[01] Album")
 
@@ -189,7 +189,7 @@ src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdJ39LkXn9mk9Qkum1
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Fethi Gemuhluoğlu Belgeseli
+### **Fethi Gemuhluoğlu Belgeseli**
 
 > Evveli, âhiri, zâhiri, bâtını selamlarım. El-Evvelü Allah, El-Âhirü Allah,
 > Ez-Zâhirü Allah, El-Bâtınü Allah. Sâhib’i selâmlarım. Sâhib-i Hakîki’yi
@@ -209,7 +209,7 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 > küşâde ola... Bana hakkınızı helâl ediniz.
 >> İrfan Fethi Gemuhluoğlu
 
-### Eee?
+### **Eee?**
 
 Eee'si bu! Artık Mızraplı Tanbur'um yok. Fehmi Usta Covid-19 hapsinde bana bir
 Klasik Kemençe yaptı. Sağolsun. Antonio Stradivari neyse Fehmi Kılınçer de o.
