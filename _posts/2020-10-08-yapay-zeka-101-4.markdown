@@ -905,7 +905,7 @@ rakamları tanımlamak ki bu durumda mümkün olan on etiket vardır.
 #### **Bir lojistik regresyon (indirgeme) örneği**
 
 Aşçılıkta giriş dersi alan öğrencilerin verilerini topladığımızı varsayalım.
-Öğrenci kimlik numarası, adı vb. gibi temel bilgilere ek olarak, öğrencilerden
+Öğrenci kimlik numarası, adı vb. temel bilgilere ek olarak, öğrencilerden
 sınav için kaç saat çalıştıklarını da rapor etmelerini istiyoruz (bir aşçılık
 sınavına çalışıyorsanız, muhtemelen yemek pişiriyorsunuzdur?) ve umuyoruz ki
 raporlarında aşağı yukarı dürüstler. Sınavdan sonra her öğrencinin dersi geçip

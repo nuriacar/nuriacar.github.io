@@ -293,7 +293,7 @@ görevi yerine getirebileceğini kolayca gösterir: Bakkala gitmek ve yemek
 pişirmek, çamaşır yıkamak ve katlamak vb.
 
 Aynı şekilde, bilgisayarın görme sistemi bir görüntüyü otomobiller, yayalar,
-binalar, yol vb. gibi farklı nesneler halinde anlayabildiği için, "anlama"
+binalar, yol vb. farklı nesneler halinde anlayabildiği için, "anlama"
 kelimesi de kolayca önerilebilir. Bununla birlikte bir kişi üzerine yol
 fotoğrafı basılmış olan bir tişörtü giyse bile, o yolda (kişi üzerinde)
 sürmenin yanlış olduğunu anlaması gerekir.
