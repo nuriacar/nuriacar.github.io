@@ -97,7 +97,7 @@ gerçekleştiriyor.
 
 I coded a program with Bash, Python 3, Common Lisp and C which is a newbie
 imitator of the Central Population Management System (MERNİS) of Turkey. To
-read the details: [Click!](https://github.com/nuriacar/trnids)
+read the details: [Click!](/cevizlab/2020/10/11/mernis-trnids.html)
 
 [![TRNIDS GitHub](/assets/img/github-icon.png "TRNIDS GitHub")](https://github.com/nuriacar/trnids)
 
@@ -206,5 +206,5 @@ Bash, Python 3, Common Lisp ve C ile Merkezi Nüfus İdare Sistemi'ne (MERNİS)
 
 I coded a program with Bash, Python 3, Common Lisp and C which is a newbie
 imitator of the Central Population Management System (MERNİS) of Turkey. To
-read the details: [Click!](https://github.com/nuriacar/trnids)
+read the details: [Click!](/cevizlab/2020/10/11/mernis-trnids.html)
 
