@@ -68,6 +68,51 @@ kaldık madem, afterparty başlasın...
 > These violent delights have violent ends.
 >> Shakespeare
 
+## ☣
+{: style="text-align: center;"}
+
+### [MERNİS : TRNIDS](/cevizlab/2020/10/11/mernis-trnids.html)
+
+#### **TR [ ENG ⇣ ]**
+
+Bash, Python 3, Common Lisp ve C ile Merkezi Nüfus İdare Sistemi'ne (MERNİS)
+öykünen bir program yazdım. Ayrıntıları okumak için:
+[Tık!](/cevizlab/2020/10/11/mernis-trnids.html)
+
+[![TRNIDS GitHub](/assets/img/github-icon.png "TRNIDS GitHub")](https://github.com/nuriacar/trnids)
+
+Kaynak Kod Deposu
+{: style="color:gray; font-size: 80%; text-align: left;"}
+
+Bu program Merkezi Nüfus İdare Sistemi'ne (MERNİS) öykünen bir yeni yetme.
+Bence de komik... :) Özetle; TCNO doğrulaması, geçerli rastgele TCNO üretimi,
+kişinin potansiyel akrabalarını bulma (soyağacı) (tanımadığınız akrabalarınızı
+bulabilir ki baya enteresan oluyor), MERNİS sisteminin dağıtabileceği tüm
+geçerli TCNO havuzunu (geçmiş, şimdi, gelecek) üretebilme vb. işlemler
+gerçekleştiriyor.
+
+![Var mi bonbamız?](/assets/img/var-mi-bonbamiz.jpg "Var mı bonbamız?")
+
+#### **ENG**
+
+I coded a program with Bash, Python 3, Common Lisp and C which is a newbie
+imitator of the Central Population Management System (MERNİS) of Turkey. To
+read the details: [Click!](https://github.com/nuriacar/trnids)
+
+[![TRNIDS GitHub](/assets/img/github-icon.png "TRNIDS GitHub")](https://github.com/nuriacar/trnids)
+
+Source Code Repository
+{: style="color:gray; font-size: 80%; text-align: left;"}
+
+This program is a newbie imitator of the Central Population Management System
+(MERNİS) of Turkey. I think it's funny too... :) To sum up, it performs; TRNID
+verification, valid random TRNID generation, finding potential relatives of
+the person (family tree) (finding relatives you do not know, which is quite
+interesting), being able to generate the entire valid TRNID pool (past,
+present, future) that the MERNİS system can distribute, etc.
+
+![Do we have bnob?](/assets/img/var-mi-bonbamiz.jpg "Do we have bnob?")
+
 ---
 
 ## cevizlab Blog ⇣
@@ -152,3 +197,14 @@ Bu kısımda şu konuları ele alacağız:
 1. Geleceği öngörme hakkında
 2. Yapay Zeka'nın muhtemel toplumsal etkileri (implications)
 3. Özet
+
+### [MERNİS : TRNIDS](/cevizlab/2020/10/11/mernis-trnids.html)
+
+Bash, Python 3, Common Lisp ve C ile Merkezi Nüfus İdare Sistemi'ne (MERNİS)
+öykünen bir program yazdım. Ayrıntıları okumak için:
+[Tık!](/cevizlab/2020/10/11/mernis-trnids.html)
+
+I coded a program with Bash, Python 3, Common Lisp and C which is a newbie
+imitator of the Central Population Management System (MERNİS) of Turkey. To
+read the details: [Click!](https://github.com/nuriacar/trnids)
+

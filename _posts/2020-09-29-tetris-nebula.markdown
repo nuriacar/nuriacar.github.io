@@ -11,7 +11,7 @@ categories: muucit
 
 ---
 
-### TR [ ENG ⇣ ]
+#### **TR [ ENG ⇣ ]**
 
 ![Tetris Nebula Flat](/assets/img/tetris-nebula-flat.png "Tetris & Nebula")
 
@@ -137,7 +137,7 @@ kabul ediniz.
 
 ---
 
-### ENG
+#### **ENG**
 
 ![Tetris Nebula Isometric](/assets/img/tetris-nebula-isometric.png "Tetris & Nebula")
 

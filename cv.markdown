@@ -11,7 +11,7 @@ permalink: /cv/
 
 ---
 
-### **TR [ ENG ⇣ ]**
+#### **TR [ ENG ⇣ ]**
 
 Ben bir siber sanatçıyım.
 
@@ -47,7 +47,7 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
 ---
 
-### **ENG**
+#### **ENG**
 
 I am a cyber artist.
 

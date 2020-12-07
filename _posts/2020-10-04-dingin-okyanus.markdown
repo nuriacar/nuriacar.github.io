@@ -20,7 +20,7 @@ picture-in-picture" allowfullscreen></iframe>
 
 ---
 
-### TR [ ENG ⇣ ]
+#### **TR [ ENG ⇣ ]**
 
 Ah efsunlu o bakış, ah hisli ahu
 
@@ -60,7 +60,7 @@ Nuri ACAR, İstanbul, Mayıs 2018.
 
 ---
 
-### ENG
+#### **ENG**
 
 Oh that enchanted look, oh sentient gazelle
 
