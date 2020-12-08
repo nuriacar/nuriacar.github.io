@@ -75,43 +75,83 @@ kaldık madem, afterparty başlasın...
 
 #### **TR [ ENG ⇣ ]**
 
+*Not: Ayrıntıları okumak için başlığa veya [buraya](/cevizlab/2020/10/11/mernis-trnids.html) tıklayabilirsiniz.*
+
 Bash, Python 3, Common Lisp ve C ile Merkezi Nüfus İdare Sistemi'ne (MERNİS)
-öykünen bir program yazdım. Ayrıntıları okumak için:
-[Tık!](/cevizlab/2020/10/11/mernis-trnids.html)
+öykünen yeni yetme bir program yazdım. Bence de komik... :) **Özetle; TCNO
+doğrulaması, geçerli rastgele TCNO üretimi, kişinin potansiyel akrabalarını
+bulma (soyağacı) (tanımadığınız akrabalarınızı bulabilir ki baya enteresan
+oluyor), MERNİS sisteminin dağıtabileceği tüm geçerli TCNO havuzunu (geçmiş,
+şimdi, gelecek) üretebilme vb. işlemler gerçekleştiriyor.** Aşağıdaki
+**kehtapot**'a veya **ahtapedi**'ye (ahtapot ve kedi birleşimi bir modern
+zaman canavarı, GitHub maskotu: **Octocat**) tıklayarak kaynak kodlara
+erişebilirsiniz.
 
 [![TRNIDS GitHub](/assets/img/github-icon.png "TRNIDS GitHub")](https://github.com/nuriacar/trnids)
 
 Kaynak Kod Deposu
 {: style="color:gray; font-size: 80%; text-align: left;"}
 
-Bu program Merkezi Nüfus İdare Sistemi'ne (MERNİS) öykünen bir yeni yetme.
-Bence de komik... :) Özetle; TCNO doğrulaması, geçerli rastgele TCNO üretimi,
-kişinin potansiyel akrabalarını bulma (soyağacı) (tanımadığınız akrabalarınızı
-bulabilir ki baya enteresan oluyor), MERNİS sisteminin dağıtabileceği tüm
-geçerli TCNO havuzunu (geçmiş, şimdi, gelecek) üretebilme vb. işlemler
-gerçekleştiriyor.
-
-![Var mi bonbamız?](/assets/img/var-mi-bonbamiz.jpg "Var mı bonbamız?")
-
 #### **ENG**
 
+*Note: You can click on the title or [here](/cevizlab/2020/10/11/mernis-trnids.html) to read the details.*
+
 I coded a program with Bash, Python 3, Common Lisp and C which is a newbie
-imitator of the Central Population Management System (MERNİS) of Turkey. To
-read the details: [Click!](/cevizlab/2020/10/11/mernis-trnids.html)
+imitator of the Central Population Management System (MERNİS) of Turkey. I
+think it's funny too... :) **To sum up, it performs; TRNID verification, valid
+random TRNID generation, finding potential relatives of the person (family
+tree) (finding relatives you do not know, which is quite interesting), being
+able to generate the entire valid TRNID pool (past, present, future) that the
+MERNİS system can distribute, etc.** You can access the source code by
+clicking **Octocat** below.
 
 [![TRNIDS GitHub](/assets/img/github-icon.png "TRNIDS GitHub")](https://github.com/nuriacar/trnids)
 
 Source Code Repository
 {: style="color:gray; font-size: 80%; text-align: left;"}
 
-This program is a newbie imitator of the Central Population Management System
-(MERNİS) of Turkey. I think it's funny too... :) To sum up, it performs; TRNID
-verification, valid random TRNID generation, finding potential relatives of
-the person (family tree) (finding relatives you do not know, which is quite
-interesting), being able to generate the entire valid TRNID pool (past,
-present, future) that the MERNİS system can distribute, etc.
+## ☣
+{: style="text-align: center;"}
 
-![Do we have bnob?](/assets/img/var-mi-bonbamiz.jpg "Do we have bnob?")
+### [RZIPS: Recursive ZIP Suite](/cevizlab/2020/10/12/rzips.html)
+
+#### **TR [ ENG ⇣ ]**
+
+*Not: Ayrıntıları okumak için başlığa veya [buraya](/cevizlab/2020/10/12/rzips.html) tıklayabilirsiniz.*
+
+Bir CTF (Capture the Flag) flag'i düşünün: İç içe 2020 defa ziplenmiş ve
+yetmezmiş gibi zip dosyalarına parola konulmuş. Ya manuel, yani tek tek siz
+açacaksınız ki gerek yok ya da bu işi bilgisayara yaptıracaksınız. Yedi gün
+boyunca oturup bu programı yazdım. CTF (bazıları hariç) yedi güne kalmaz tabii
+lakin gelecekteki CTF'lerde işe yarayacak faydalı bir programım oldu.
+**Yalnızca CTF'e girdiğinizde değil, önemli dosyalarınızı, parola korumalı
+olarak defalarca zipleyerek korumak için de kullanabilirsiniz.** Aşağıdaki
+**kehtapot**'a veya **ahtapedi**'ye (ahtapot ve kedi birleşimi bir modern
+zaman canavarı, GitHub maskotu: **Octocat**) tıklayarak kaynak kodlara
+erişebilirsiniz.
+
+[![RZIPS GitHub](/assets/img/github-icon.png "RZIPS GitHub")](https://github.com/nuriacar/rzips)
+
+Kaynak Kod Deposu
+{: style="color:gray; font-size: 80%; text-align: left;"}
+
+#### **ENG**
+
+*Note: You can click on the title or [here](/cevizlab/2020/10/12/rzips.html) to read the details.*
+
+Consider a CTF (Capture the Flag) flag: zipped 2020 times nested and password
+set on zip files as if it wasn't enough. Either manually, you will open it one
+by one, so there is no need or you will have this work done on the computer. I
+sat down and wrote this program for seven days. CTF will not take up to seven
+days (except some) of course, but I have had a useful program that will work
+with future CTFs. **You can use it not only when you join the CTF, but also to
+protect your important files by zipping them with passwords over and over
+again.** You can access the source code by clicking **Octocat** below.
+
+[![RZIPS GitHub](/assets/img/github-icon.png "RZIPS GitHub")](https://github.com/nuriacar/rzips)
+
+Source Code Repository
+{: style="color:gray; font-size: 80%; text-align: left;"}
 
 ---
 
@@ -201,10 +241,19 @@ Bu kısımda şu konuları ele alacağız:
 ### [MERNİS : TRNIDS](/cevizlab/2020/10/11/mernis-trnids.html)
 
 Bash, Python 3, Common Lisp ve C ile Merkezi Nüfus İdare Sistemi'ne (MERNİS)
-öykünen bir program yazdım. Ayrıntıları okumak için:
-[Tık!](/cevizlab/2020/10/11/mernis-trnids.html)
+öykünen yeni yetme bir program yazdım. Bence de komik... :)
 
 I coded a program with Bash, Python 3, Common Lisp and C which is a newbie
-imitator of the Central Population Management System (MERNİS) of Turkey. To
-read the details: [Click!](/cevizlab/2020/10/11/mernis-trnids.html)
+imitator of the Central Population Management System (MERNİS) of Turkey. I
+think it's funny too... :)
+
+### [RZIPS: Recursive ZIP Suite](/cevizlab/2020/10/12/rzips.html)
+
+Yalnızca CTF'e girdiğinizde değil, önemli dosyalarınızı, parola korumalı
+olarak defalarca zipleyerek korumak için de kullanabileceğiniz faydalı bir
+program.
+
+A useful program that you can use not only when you join CTF's, but also to
+protect your important files by zipping them over and over with passwords
+protection.
 

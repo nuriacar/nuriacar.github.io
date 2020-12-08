@@ -41,11 +41,11 @@ Select an Option!
 ### **MERNİS : TRNIDS**
 
 Bu program Merkezi Nüfus İdare Sistemi'ne (MERNİS) öykünen bir yeni yetme.
-Bence de komik... :) Özetle; TCNO doğrulaması, geçerli rastgele TCNO üretimi,
-kişinin potansiyel akrabalarını bulma (soyağacı) (tanımadığınız akrabalarınızı
-bulabilir ki baya enteresan oluyor), MERNİS sisteminin dağıtabileceği tüm
-geçerli TCNO havuzunu (geçmiş, şimdi, gelecek) üretebilme vb. işlemler
-gerçekleştiriyor.
+Bence de komik... :) **Özetle; TCNO doğrulaması, geçerli rastgele TCNO
+üretimi, kişinin potansiyel akrabalarını bulma (soyağacı) (tanımadığınız
+akrabalarınızı bulabilir ki baya enteresan oluyor), MERNİS sisteminin
+dağıtabileceği tüm geçerli TCNO havuzunu (geçmiş, şimdi, gelecek) üretebilme
+vb. işlemler gerçekleştiriyor.**
 
 ![Var mi bonbamız?](/assets/img/var-mi-bonbamiz.jpg "Var mı bonbamız?")
 
@@ -115,6 +115,8 @@ Versiyon geçmişi şöyle:
 Menüye göz atacak olursak:
 
 ```
+[ Menu ]
+===============================================================================
 .
 ... 1. Check NID Validation
 ... 2. Generate Last Two Digits
@@ -125,6 +127,7 @@ Menüye göz atacak olursak:
 
 ... 98. About & Source Code Repository & Version History
 ... 99. Exit
+===============================================================================
 ```
 
 `1.` Girilen TCNO'nun doğru olup olmadığını kontrol eder.
@@ -328,11 +331,11 @@ Select an Option!
 ### **MERNİS : TRNIDS**
 
 This program is a newbie imitator of the Central Population Management System
-(MERNİS) of Turkey. I think it's funny too... :) To sum up, it performs; TRNID
-verification, valid random TRNID generation, finding potential relatives of
-the person (family tree) (finding relatives you do not know, which is quite
+(MERNİS) of Turkey. I think it's funny too... :) **To sum up, it performs;
+TRNID verification, valid random TRNID generation, finding potential relatives
+of the person (family tree) (finding relatives you do not know, which is quite
 interesting), being able to generate the entire valid TRNID pool (past,
-present, future) that the MERNİS system can distribute, etc.
+present, future) that the MERNİS system can distribute, etc.**
 
 ![Do we have bnob?](/assets/img/var-mi-bonbamiz.jpg "Do we have bnob?")
 
