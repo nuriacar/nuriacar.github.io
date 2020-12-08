@@ -153,6 +153,54 @@ again.** You can access the source code by clicking **Octocat** below.
 Source Code Repository
 {: style="color:gray; font-size: 80%; text-align: left;"}
 
+## ☣
+{: style="text-align: center;"}
+
+### [Project Muse](/cevizlab/2020/10/13/project_muse.html)
+
+#### **TR [ ENG ⇣ ]**
+
+*Not: Ayrıntıları okumak için başlığa veya [buraya](/cevizlab/2020/10/13/project_muse.html) tıklayabilirsiniz.*
+
+> John Hopkins Üniversitesi, Covid-19 nedeniyle,
+> [https://muse.jhu.edu/](https://muse.jhu.edu/) linkinde yer alan pek çok
+> kitabı çevrimiçi erişime açmış. Yetmezmiş gibi Arizona, Colorado, Cornell,
+> Fordham, Georgia, MIT, Nebraska, North Carolina, Pennsylvania, Princeton,
+> Temple ve Texas Tech üniversiteleri de **[Project
+> Muse](https://muse.jhu.edu/)** üzerinde yer alıyor. Bu hazineden
+> alabildiğimizi alalım ama manuel olarak çok zaman alıyor, bir program
+> yazsan..."
+>> Kardeşim
+
+Aşağıdaki **kehtapot**'a veya **ahtapedi**'ye (ahtapot ve kedi birleşimi bir
+modern zaman canavarı, GitHub maskotu: **Octocat**) tıklayarak kaynak kodlara
+erişebilirsiniz.
+
+[![Project Muse GitHub](/assets/img/github-icon.png "Project Muse GitHub")](https://github.com/nuriacar/project_muse)
+
+Kaynak Kod Deposu
+{: style="color:gray; font-size: 80%; text-align: left;"}
+
+#### **ENG**
+
+*Note: You can click on the title or [here](/cevizlab/2020/10/13/project_muse.html) to read the details.*
+
+> Due to Covid-19, John Hopkins University has made many books available
+> online at [https://muse.jhu.edu/](https://muse.jhu.edu/). As if it wasn't
+> enough, universities of Arizona, Colorado, Cornell, Fordham, Georgia, MIT,
+> Nebraska, North Carolina, Pennsylvania, Princeton, Temple and Texas Tech are
+> also located on the **[Project Muse](https://muse.jhu.edu/)**. Let's take
+> what we can get from this treasure, but it takes a lot of time manually, if
+> you write a program ... "
+>> My brother
+
+You can access the source code by clicking **Octocat** below.
+
+[![Project Muse GitHub](/assets/img/github-icon.png "Project Muse GitHub")](https://github.com/nuriacar/project_muse)
+
+Source Code Repository
+{: style="color:gray; font-size: 80%; text-align: left;"}
+
 ---
 
 ## cevizlab Blog ⇣
@@ -256,4 +304,10 @@ program.
 A useful program that you can use not only when you join CTF's, but also to
 protect your important files by zipping them over and over with passwords
 protection.
+
+### [Project Muse](/cevizlab/2020/10/13/project_muse.html)
+
+John Hopkins Üniversitesi hazinesi Project Muse'da yer alan kitapları indiren bir program.
+
+A program that downloads books from the John Hopkins University treasury Project Muse.
 
