@@ -91,17 +91,6 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
   + [Elements of Artifical Intelligence, Reaktor](https://www.elementsofai.com/)
 
-    I translated this training in Turkish. There will be six chapter but there
-    is only one for now! I will add other chapters over time.
-
-    [![YZ 101 Bölüm 1](/assets/img/maze-mini.png "1. Yapay Zeka Nedir?")](/ai/2020/10/05/yapay-zeka-101-1.html)
-    [![YZ 101 Bölüm 2](/assets/img/maze-mini.png "2. Yapay Zeka Problemi Çözme")](/ai/2020/10/06/yapay-zeka-101-2.html)
-    [![YZ 101 Bölüm 3](/assets/img/maze-mini.png "3. Gerçek Dünyada Yapay Zeka")](/ai/2020/10/07/yapay-zeka-101-3.html)
-    [![YZ 101 Bölüm 4](/assets/img/maze-mini.png "4. Makine Öğrenmesi (Machine Learning)")](/ai/2020/10/08/yapay-zeka-101-4.html)
-    [![YZ 101 Bölüm 5](/assets/img/maze-mini.png "5. Sinir Ağları (Neural Networks)")](/ai/2020/10/09/yapay-zeka-101-5.html)
-    [![YZ 101 Bölüm 6](/assets/img/maze-mini.png "6. Muhtemel Etkiler (Implications)")](/ai/2020/10/10/yapay-zeka-101-6.html)
-    {: style="text-align: center;"}
-
 + [ 9/2020 - ... ] [ [International Akhmet Yassawi Uni., Computer Engineering](https://www.ayu.edu.tr/) ]
 
 + [ 9/2007 - 1/2015 ] [ [Anadolu Uni., Bussiness Management](https://www.anadolu.edu.tr/) ]
