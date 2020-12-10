@@ -5,6 +5,8 @@ date:   2020-10-13 23:23:23 +0300
 categories: cevizlab
 ---
 
+#### **TR [ ENG ⇣ ]**
+
 ```
 ██████╗░██████╗░░█████╗░░░░░░██╗███████╗░█████╗░████████╗
 ██╔══██╗██╔══██╗██╔══██╗░░░░░██║██╔════╝██╔══██╗╚══██╔══╝
@@ -41,8 +43,6 @@ Select an Option!
 
 >>>
 ```
-
-#### **TR [ ENG ⇣ ]**
 
 > John Hopkins Üniversitesi, Covid-19 nedeniyle,
 > [https://muse.jhu.edu/](https://muse.jhu.edu/) linkinde yer alan pek çok
