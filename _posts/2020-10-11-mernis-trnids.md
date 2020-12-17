@@ -47,8 +47,6 @@ akrabalarınızı bulabilir ki baya enteresan oluyor), MERNİS sisteminin
 dağıtabileceği tüm geçerli TCNO havuzunu (geçmiş, şimdi, gelecek) üretebilme
 vb. işlemler gerçekleştiriyor.**
 
-![Var mi bonbamız?](/assets/img/var-mi-bonbamiz.jpg "Var mı bonbamız?")
-
 > MERNİS, [Ahvâl-i
 > şahsiyye](https://islamansiklopedisi.org.tr/ahval-i-sahsiyye) bilgilerini
 > elektronik ortama aktaran ve [ahvâl-i
@@ -337,8 +335,6 @@ of the person (family tree) (finding relatives you do not know, which is quite
 interesting), being able to generate the entire valid TRNID pool (past,
 present, future) that the MERNİS system can distribute, etc.**
 
-![Do we have bnob?](/assets/img/var-mi-bonbamiz.jpg "Do we have bnob?")
-
 > MERNİS is a project that transfers personal information to electronic
 > environment and ensures that all changes in personal information are
 > instantly updated from centers scattered all over the country and securely
@@ -467,7 +463,7 @@ of enlightenment experienced by the child watching the washing machine. :)
 
 Some information written here is not exact! I think they are, but I can't
 prove **Attention! Two [!] between *italics* written information may not be
-correct!** 
+correct!**
 
 Republic of Turkey identification number (TRNID) consisting of two parts (9 +
 2) a special 11-digit number to the person. The first 9 digits range from
