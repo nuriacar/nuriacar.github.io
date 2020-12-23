@@ -32,6 +32,8 @@ Sonic Foundry Acid'le yaptığım ilk kayıtlar, mix'ler kurbağa oldular. Neden
 ve proje klasörünü arşivlemem gerektiğini bilmiyordum. Sanıyorum en eski 2006
 kaydı duruyor.
 
+<iframe width="100%" height="500" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1182738466&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sirnewage" title="SIR NewAge" target="_blank" style="color: #cccccc; text-decoration: none;">SIR NewAge</a> · <a href="https://soundcloud.com/sirnewage/sets/vokal-vocal" title="Vokal/Vocal" target="_blank" style="color: #cccccc; text-decoration: none;">Vokal/Vocal</a></div>
+
 Bir süre sonra Yanni, Vangelis ve Kitaro'yu ikinci kez keşfettim. İkinci kez
 diyorum zira çocukluğumun seslerini farkında olmadan bir yerlerde kaybetmişim.
 Yetmemiş, kaybettiğimi bile kaybetmişim. Çok geçmeden Mızraplı Tanbur ve
@@ -47,6 +49,8 @@ Bir süre sonra Amesia Newborn albümüm ortaya çıktı.
 src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdImnpbthirSQf1TQWaxmpLX"
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="100%" height="320" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/4332061&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sirnewage" title="SIR NewAge" target="_blank" style="color: #cccccc; text-decoration: none;">SIR NewAge</a> · <a href="https://soundcloud.com/sirnewage/sets/amesia-newborn-album" title="Amesia NewBorn Album" target="_blank" style="color: #cccccc; text-decoration: none;">Amesia NewBorn Album</a></div>
 
 Bu albümün kaydedildiği zamanlar, TRT yarışmaları ve belgeselleri için müzik
 bestelediğim zamanlar. Fakat onlar nedense bende yoklar. Sahi neden yoklar?
@@ -80,6 +84,8 @@ src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdLbpT82poAOwGqvOB
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<iframe width="100%" height="350" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/6987204&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sirnewage" title="SIR NewAge" target="_blank" style="color: #cccccc; text-decoration: none;">SIR NewAge</a> · <a href="https://soundcloud.com/sirnewage/sets/atasoy-muftuoglu-belgeseli-album" title="Atasoy Müftüoğlu Belgeseli Müzikleri" target="_blank" style="color: #cccccc; text-decoration: none;">Atasoy Müftüoğlu Belgeseli Müzikleri</a></div>
+
 Hepsi bir yana, ne ka güzel insanlarla tanıştım anlatamam.
 
 ![Atasoy Müftüoğlu Belgesel Soundtrack Album](/assets/img/atasoy-muftuoglu-belgeseli-2.jpg "Atasoy Müftüoğlu Belgesel Soundtrack Album")
@@ -105,6 +111,8 @@ aynı anda çalması ile doğdu.
 src="https://www.youtube.com/embed/yqLMW6AMfa4" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
 picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1182820984&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sirnewage" title="SIR NewAge" target="_blank" style="color: #cccccc; text-decoration: none;">SIR NewAge</a> · <a href="https://soundcloud.com/sirnewage/sets/mix" title="Mix" target="_blank" style="color: #cccccc; text-decoration: none;">Mix</a></div>
 
 ### **UK2911 - Uzay Kuvvetleri 2911**
 
@@ -170,6 +178,8 @@ src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdL0_yY5aNM_P2pj8u
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<iframe width="100%" height="320" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/122295458&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sirnewage" title="SIR NewAge" target="_blank" style="color: #cccccc; text-decoration: none;">SIR NewAge</a> · <a href="https://soundcloud.com/sirnewage/sets/uzay-kuvvetleri-2911-siggraph-2013-teaser-ost" title="Uzay Kuvvetleri 2911" target="_blank" style="color: #cccccc; text-decoration: none;">Uzay Kuvvetleri 2911</a></div>
+
 ### **SIR N[01]**
 
 ![N[01] Album](/assets/img/n01.jpg "N[01] Album")
@@ -189,6 +199,8 @@ src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdJ39LkXn9mk9Qkum1
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<iframe width="100%" height="380" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/23805832&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sirnewage" title="SIR NewAge" target="_blank" style="color: #cccccc; text-decoration: none;">SIR NewAge</a> · <a href="https://soundcloud.com/sirnewage/sets/n01-album" title="N[01] Album" target="_blank" style="color: #cccccc; text-decoration: none;">N[01] Album</a></div>
+
 ### **Fethi Gemuhluoğlu Belgeseli**
 
 > Evveli, âhiri, zâhiri, bâtını selamlarım. El-Evvelü Allah, El-Âhirü Allah,
@@ -204,6 +216,8 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdIEyRTlREPwL9v4Te9CtjgB"
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="100%" height="290" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/262155719&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sirnewage" title="SIR NewAge" target="_blank" style="color: #cccccc; text-decoration: none;">SIR NewAge</a> · <a href="https://soundcloud.com/sirnewage/sets/fethi-gemuhluoglu-album" title="Fethi Gemuhluoğlu Album" target="_blank" style="color: #cccccc; text-decoration: none;">Fethi Gemuhluoğlu Album</a></div>
 
 > Son sözüm: Nefesler pâyende ola. Demler, safâlar müzdâd ola. Kulûb-ı âşıkan
 > küşâde ola... Bana hakkınızı helâl ediniz.
