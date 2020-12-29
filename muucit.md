@@ -19,7 +19,7 @@ permalink: /muucit/
 
 ---
 
-#### **TR [ ENG ⇣ ]**
+#### **TR [ EN ⇣ ]**
 
 Selam Boyut Gezgini!
 
@@ -49,7 +49,7 @@ pek çok gezegen seni bekliyor!
 
 ---
 
-#### **ENG**
+#### **EN**
 
 Hi Dimension Voyager!
 

@@ -7,79 +7,73 @@ permalink: /cv/
 ## ☣
 {: style="text-align: center;"}
 
-### [Linkedin](https://www.linkedin.com/in/acarnuri/)
+### [Digital Arts, Computer Programming, Cyber Security]
+{: style="text-align: center;"}
+
+[na@nuriacar.com](mailto:na@nuriacar.com)|+905052827654|[GitHub](https://github.com/nuriacar)|[LinkedIn](https://www.linkedin.com/in/acarnuri/)|[Download CV](/assets/pdf/nuriacar-cv.pdf)
+{: style="text-align: center;"}
 
 ---
 
-#### **TR [ ENG ⇣ ]**
+#### **TR [ EN ⇣ ]**
 
-Ben bir siber sanatçıyım.
+Merhaba.
 
-Ortaokul, lise ve üniversite eğitimim devam ederken aynı zamanda Klasik Türk
-Müziği eğitimi de aldım. Üniversite günlerinde ise işin içine bilgisayar
-girdi. Meğer ne harika bir şeymiş. Elektrik olduğu sürece sonu yok! Dijitale
-evrildim. Sinema filmleri, diziler, çizgi filmler, reklamlar, belgeseller,
-yarışmalar, mobil oyunlar/uygulamalar, canlı yayınlar ve stüdyo albümleri
-için; 3d animasyon, vfx, video kurgu, senaryo yazımı, ses efekt tasarımı, ses
-kurgusu, müzik besteleri ve tonmaisterlik yaptım.
+Ben görsel efekt, video kurgu, ses tasarımı ve film/belgesel müziği besteleri yapmanın yanında bilgisayar programlama (C, Python, Bash, Common Lisp) da yapan bir siber sanatçıyım.
+
+Ortaokul, lise ve üniversite eğitimim devam ederken aynı zamanda Klasik Türk Müziği eğitimi de aldım. Üniversite günlerinde ise işin içine bilgisayar girdi. 2004 senesinde kazandığım İstanbul Üniversitesi Makine Mühendisliği bölümünü bırakarak sinema filmleri, diziler, çizgi filmler, reklamlar, belgeseller, yarışmalar, mobil oyunlar/uygulamalar, canlı yayınlar ve stüdyo albümleri için; 3d animasyon, vfx, video kurgu, senaryo yazımı, ses efekt tasarımı, ses kurgusu, müzik besteleri ve tonmaisterlik yapmaya başladım.  Ayrıca dönem dönem Bilge Adam ve 3D Akademi gibi eğitim kurumlarında yaptığım işlerin eğitimlerini verdim.
 
 Yaptığım işlerin bir kısmı şu linklerdeler:
 
 [CGI & Ses Efekt](https://vimeo.com/nuriacar)
 
+[IMDb](https://www.imdb.com/name/nm6932027/)
+
 [Müzik](https://youtube.com/user/sirnewage/playlists)
 
-Tüm bunların programlama ve siber güvenlikle ne alakası var? Görsel efekt
-programlarının kendi script dillerinin yanında Python modülleri de var. Bu;
-işleri kolaylaştıran, otomatize eden harika bir özellik. Sıradan bir
-bilgisayar, bir text editörü ve Python'la yapılabilecekler hayal gücünüze ve
-azminize kalmış. Sonu yok! Belki vardır ama ben henüz oraya varmadım.
-Hatırlatmakta fayda var: π ≅ 3, elektrik hep var!
+"Dijital sanatların, programlama ve siber güvenlikle ne alakası var?" diyebilirsiniz. Görsel efekt programlarının kendi script dillerinin yanında Python programlama dili modülleri de var. Bu; işleri kolaylaştıran, otomatize eden harika bir özellik. Sıradan bir bilgisayar, bir kod editörü ve Python'la yapılabilecekler hayal gücünüze ve azminize kalmış. Sonu yok! Belki vardır ama ben henüz oraya varmadım. Ardından C, Bash, Common Lisp dilleri ve bunlarla yazılmış Siber Güvenlik amaçlı programlar geldi. Bazıları şu linkteler:
 
-...ve siber sanatlara evrildim.
+[GitHub](https://github.com/nuriacar)
 
-Sonrası? [Bilinmeze Yolculuk!](https://www.youtube.com/watch?v=o3KN1bktV2U)
+Umarım birlikte çalışabileceğimiz ortak bir konu vardır. Bunun için aşağıdaki e-posta adresine mail atmanız yeterli (zaman içinde cevap gelmemişse spam/istenmeyen klasörünü kontrol etmenizde fayda var):
 
-Shell we begin? T - 34, 21, 13, 8, 5, 3, 2, 1, 1, 0 . . . . . [We have
-liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
+[`na@nuriacar.com`](mailto:na@nuriacar.com)
 
-[Nuri ACAR](http://nuriacar.com)
+Görüşmek üzere!
+
+**[Nuri ACAR](http://nuriacar.com)**
 
 ---
 
-#### **ENG**
+#### **EN**
 
-I am a cyber artist.
+Hi.
 
-While my secondary school, high school and university education continues, at
-the same time I also studied Classical Turkish Music. At university, I met
-computer. What a wonderful thing. As long as power on, there is no end! I
-evolved to digital. For motion pictures, TV series, cartoons, advertisements,
-documentaries, reality shows, mobile games/apps, live streams and studio
-albums; I did 3d animation, vfx, video editing, script writing, sound effects
-design, sound editing, musical compositions and audio engineering.
+I am a cyber artist who also does computer programming (C, Python, Bash, Common Lisp) as well as make visual effects, video editing, sound design, and compose film/documentary soundtrack.
 
-Check links below for some of my showreels:
+While my secondary school, high school and university education was continuing, I also studied Classical Turkish Music. During my university days, the computer was involved. Quiting the Mechanical Engineering department of Istanbul University, which I won in 2004, for motion pictures, series, cartoons, advertisements, documentaries, competitions, mobile games/applications, live broadcasts and studio albums; I started doing 3d animation, vfx, video editing, scriptwriting, sound effect design, sound editing, musical compositions and audio engineering. In addition, I trained my work in educational institutions such as Bilge Adam and 3D Akademi from time to time.
+
+Some of my works are on the following links:
 
 [CGI & Sound Effects](https://vimeo.com/nuriacar)
 
+[IMDb](https://www.imdb.com/name/nm6932027/)
+
 [Music](https://youtube.com/user/sirnewage/playlists)
 
-What does all this have to do with programming and cybersecurity? Visual
-effects programs have Python modules as well as their own scripting languages.
-It is a great feature that makes things easier and automates. What you can do
-with an ordinary computer, a text editor and Python is up to your imagination
-and perseverance. There is no end! Maybe there is, but I haven't reached there
-yet. It is useful to remind: Assume π ≅ 3 and power always on!
+"What do the digital arts have to do with computer programming and cybersecurity?" you might say. Visual effects programs have Python programming language modules as well as their own scripting languages. This; a great feature that makes things easier and automates. What can be done with an ordinary computer, a code editor and Python is up to your imagination and determination. There is no end! Maybe there is, but I did not reach there yet. Then came C, Bash, Common Lisp languages and Cyber Security programs written with them. Some of them are in the following links:
 
-...and I evolved into the cyber arts.
+[GitHub](https://github.com/nuriacar)
 
-Next? [Into Darkness!](https://www.youtube.com/watch?v=o3KN1bktV2U)
+I hope there is a common thread that we can work with. For this, just send an e-mail to the following address (if there is no reply in time, it is useful to check the spam folder):
 
-Shell we begin? T - 34, 21, 13, 8, 5, 3, 2, 1, 1, 0. . . . . [We have
-liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
+[`na@nuriacar.com`](mailto:na@nuriacar.com)
 
-[Nuri ACAR](http://nuriacar.com)
+See you!
+
+**[Nuri ACAR](http://nuriacar.com)**
+
+---
 
 ---
 
@@ -91,7 +85,7 @@ liftoff!](https://www.youtube.com/watch?v=kixPJtyOtPY)
 
   + [Elements of Artifical Intelligence, Reaktor](https://www.elementsofai.com/)
 
-+ [ 9/2020 - ... ] [ [International Akhmet Yassawi Uni., Computer Engineering](https://www.ayu.edu.tr/) ]
++ [ 9/2020 - 01/2021 (Quit) ] [ [International Akhmet Yassawi Uni., Computer Engineering](https://www.ayu.edu.tr/) ]
 
 + [ 9/2007 - 1/2015 ] [ [Anadolu Uni., Bussiness Management](https://www.anadolu.edu.tr/) ]
 

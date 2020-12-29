@@ -17,7 +17,7 @@ Ketime sings the original song.
 
 ---
 
-#### **TR [ ENG ⇣ ]**
+#### **TR [ EN ⇣ ]**
 
 Ah efsunlu o bakış, ah hisli ahu
 
@@ -57,7 +57,7 @@ Nuri ACAR, İstanbul, Mayıs 2018.
 
 ---
 
-#### **ENG**
+#### **EN**
 
 Oh that enchanted look, oh sentient gazelle
 

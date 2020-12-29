@@ -5,7 +5,7 @@ date:   2020-10-13 23:23:23 +0300
 categories: cevizlab
 ---
 
-#### **TR [ ENG ⇣ ]**
+#### **TR [ EN ⇣ ]**
 
 ```
 ██████╗░██████╗░░█████╗░░░░░░██╗███████╗░█████╗░████████╗
@@ -91,7 +91,7 @@ Kaynak Kod Deposu
 
 ---
 
-#### **ENG**
+#### **EN**
 
 > Due to Covid-19, John Hopkins University has made many books available
 > online at [https://muse.jhu.edu/](https://muse.jhu.edu/). As if it wasn't

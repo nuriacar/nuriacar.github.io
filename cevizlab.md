@@ -26,7 +26,7 @@ permalink: /cevizlab/
 
 ### [TRNIDS: TR National Identifier Suite](/cevizlab/2020/10/11/mernis-trnids.html)
 
-#### **TR [ ENG ⇣ ]**
+#### **TR [ EN ⇣ ]**
 
 *Not: Ayrıntıları okumak için başlığa veya [buraya](/cevizlab/2020/10/11/mernis-trnids.html) tıklayabilirsiniz.*
 
@@ -45,7 +45,7 @@ erişebilirsiniz.
 Kaynak Kod Deposu
 {: style="color:gray; font-size: 80%; text-align: left;"}
 
-#### **ENG**
+#### **EN**
 
 *Note: You can click on the title or [here](/cevizlab/2020/10/11/mernis-trnids.html) to read the details.*
 
@@ -68,7 +68,7 @@ Source Code Repository
 
 ### [RZIPS: Recursive ZIP Suite](/cevizlab/2020/10/12/rzips.html)
 
-#### **TR [ ENG ⇣ ]**
+#### **TR [ EN ⇣ ]**
 
 *Not: Ayrıntıları okumak için başlığa veya [buraya](/cevizlab/2020/10/12/rzips.html) tıklayabilirsiniz.*
 
@@ -88,7 +88,7 @@ erişebilirsiniz.
 Kaynak Kod Deposu
 {: style="color:gray; font-size: 80%; text-align: left;"}
 
-#### **ENG**
+#### **EN**
 
 *Note: You can click on the title or [here](/cevizlab/2020/10/12/rzips.html) to read the details.*
 
@@ -111,7 +111,7 @@ Source Code Repository
 
 ### [Project Muse](/cevizlab/2020/10/13/project_muse.html)
 
-#### **TR [ ENG ⇣ ]**
+#### **TR [ EN ⇣ ]**
 
 *Not: Ayrıntıları okumak için başlığa veya [buraya](/cevizlab/2020/10/13/project_muse.html) tıklayabilirsiniz.*
 
@@ -134,7 +134,7 @@ erişebilirsiniz.
 Kaynak Kod Deposu
 {: style="color:gray; font-size: 80%; text-align: left;"}
 
-#### **ENG**
+#### **EN**
 
 *Note: You can click on the title or [here](/cevizlab/2020/10/13/project_muse.html) to read the details.*
 
@@ -159,7 +159,7 @@ Source Code Repository
 
 ### [TRTELS: TR Phone Numbers Suite](/cevizlab/2020/10/14/trtels.html)
 
-#### **TR [ ENG ⇣ ]**
+#### **TR [ EN ⇣ ]**
 
 *Not: Ayrıntıları okumak için başlığa veya [buraya](/cevizlab/2020/10/14/trtels.html) tıklayabilirsiniz.*
 
@@ -174,7 +174,7 @@ erişebilirsiniz.
 Kaynak Kod Deposu
 {: style="color:gray; font-size: 80%; text-align: left;"}
 
-#### **ENG**
+#### **EN**
 
 *Note: You can click on the title or [here](/cevizlab/2020/10/14/trtels.html) to read the details.*
 
