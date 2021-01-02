@@ -33,3 +33,7 @@ permalink: /q/
 ### **006**
 
 ![Q 006](/assets/img/q006.jpg "Q 006")
+
+### **007**
+
+![Q 007](/assets/img/q007.jpg "Q 007")
