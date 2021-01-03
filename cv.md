@@ -13,7 +13,7 @@ permalink: /cv/
 **Contact**|[na@nuriacar.com](mailto:na@nuriacar.com)|+905052827654
 **CV**|[Download CV](/assets/pdf/nuriacar-cv.pdf)|[LinkedIn](https://www.linkedin.com/in/acarnuri/)
 **Code**|[GitHub](https://github.com/nuriacar)|
-**Music**|[YouTube](https://youtube.com/user/sirnewage/playlists)|[SoundCloud](https://soundcloud.com/sirnewage/albums)
+**Music**|[YouTube](https://youtube.com/user/sirnewage/playlists)|[SoundCloud](https://soundcloud.com/sirnewage/)
 **Video**|[IMDb](https://www.imdb.com/name/nm6932027/)|[Vimeo](https://vimeo.com/nuriacar)
 {: style="text-align: center; font-size: 80%;"}
 

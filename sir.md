@@ -7,7 +7,7 @@ permalink: /sir/
 ![SIR Logo](/assets/img/sir-logo.jpg "SIR Logo")
 
 [![Youtube Icon](/assets/img/youtube-icon.png "Youtube")](https://www.youtube.com/user/sirnewage/playlists)
-[![SoundCloud Icon](/assets/img/soundcloud-icon.png "SoundCloud")](https://soundcloud.com/sirnewage/albums)
+[![SoundCloud Icon](/assets/img/soundcloud-icon.png "SoundCloud")](https://soundcloud.com/sirnewage)
 {: style="text-align: center;"}
 
 ---
