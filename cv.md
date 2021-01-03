@@ -10,7 +10,11 @@ permalink: /cv/
 ### [Digital Arts, Computer Programming, Cyber Security]
 {: style="text-align: center;"}
 
-[na@nuriacar.com](mailto:na@nuriacar.com)|+905052827654|[GitHub](https://github.com/nuriacar)|[LinkedIn](https://www.linkedin.com/in/acarnuri/)|[Download CV](/assets/pdf/nuriacar-cv.pdf)
+**Contact**|[na@nuriacar.com](mailto:na@nuriacar.com)|+905052827654
+**CV**|[Download CV](/assets/pdf/nuriacar-cv.pdf)|[LinkedIn](https://www.linkedin.com/in/acarnuri/)
+**Code**|[GitHub](https://github.com/nuriacar)|
+**Music**|[YouTube](https://youtube.com/user/sirnewage/playlists)|[SoundCloud](https://soundcloud.com/sirnewage/albums)
+**Video**|[IMDb](https://www.imdb.com/name/nm6932027/)|[Vimeo](https://vimeo.com/nuriacar)
 {: style="text-align: center;"}
 
 ---
