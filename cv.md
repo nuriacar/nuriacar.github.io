@@ -7,7 +7,7 @@ permalink: /cv/
 ## ☣
 {: style="text-align: center;"}
 
-### [Digital Arts, Computer Programming, Cyber Security]
+### [ Digital Arts ] [ Computer Programming ] [ Cyber Security ]
 {: style="text-align: center;"}
 
 **Contact**|[na@nuriacar.com](mailto:na@nuriacar.com)|+905052827654
@@ -169,13 +169,13 @@ See you!
 
 ### **3. Work Experience**
 
-+ [ 8/2019 - ... ] [ [cevizlab](/cevizlab/) & [muucit](/muucit/) ]
++ [ 8/2019 - ... ] [ [cevizlab](http://nuriacar.com/cevizlab/) & [muucit](http://nuriacar.com/muucit/) ]
   
   [ Entrepreneur ]
   
-  + cevizlab: [Cyber Arts](https://instagram.com/cevizlab)
+  + cevizlab: Cyber Arts
   
-  + muucit: [Mathematic and Art Toys, Puzzles, Objects](https://instagram.com/muucit)
+  + muucit: Mathematic and Art Toys, Puzzles, Objects
 
 + [ 10/2019 - 12/2019 ] [ Freelance ] [ [StemistLab](http://stemistbox.com) ]
 
