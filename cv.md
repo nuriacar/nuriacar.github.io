@@ -15,7 +15,7 @@ permalink: /cv/
 **Code**|[GitHub](https://github.com/nuriacar)|
 **Music**|[YouTube](https://youtube.com/user/sirnewage/playlists)|[SoundCloud](https://soundcloud.com/sirnewage/albums)
 **Video**|[IMDb](https://www.imdb.com/name/nm6932027/)|[Vimeo](https://vimeo.com/nuriacar)
-{: style="text-align: center;"}
+{: style="text-align: center; font-size: 80%;"}
 
 ---
 

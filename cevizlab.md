@@ -8,7 +8,6 @@ permalink: /cevizlab/
 
 ![whoami admin](/assets/img/poi-whoami-admin.jpg "whoami admin")
 
-[![Instagram Icon](/assets/img/instagram-icon.png "Instagram")](https://www.instagram.com/cevizlab/)
 [![Youtube Icon](/assets/img/youtube-icon.png "Youtube")](https://www.youtube.com/channel/UCdr-_dvdG8W1piZWRUUMWrw)
 [![Cart Icon](/assets/img/cart-icon.png "Shopier")](/store/)
 {: style="text-align: center;"}

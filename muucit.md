@@ -12,7 +12,6 @@ permalink: /muucit/
 
 [![QB 50](/assets/img/qb-50-afis-01.jpg "qb 50")](/store/)
 
-[![Instagram Icon](/assets/img/instagram-icon.png "Instagram")](https://www.instagram.com/muucit/)
 [![Youtube Icon](/assets/img/youtube-icon.png "Youtube")](https://www.youtube.com/channel/UCzAo3peHOsI10nQeO_nmg6Q)
 [![Cart Icon](/assets/img/cart-icon.png "Shopier")](/store/)
 {: style="text-align: center;"}
@@ -20,6 +19,8 @@ permalink: /muucit/
 ---
 
 #### **TR [ EN ⇣ ]**
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Selam Boyut Gezgini!
 
@@ -50,6 +51,8 @@ pek çok gezegen seni bekliyor!
 ---
 
 #### **EN**
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Hi Dimension Voyager!
 
