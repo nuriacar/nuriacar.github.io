@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Yalın Startup
+title:  Yalın Startup [Kitap Özeti]
 date:   2020-09-26 06:06:06 +0300
 categories: kitap-ozeti
 ---

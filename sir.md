@@ -223,6 +223,35 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 > küşâde ola... Bana hakkınızı helâl ediniz.
 >> İrfan Fethi Gemuhluoğlu
 
+### **Binaural Beats**
+
+Özel istek üzerine, deney amacıyla bazı sesler hazırladım. Sol ve sağ kulağa
+farklı frekansta sesler göndererek beynin çalışma modu ve insanın duygu durumu
+değiştirilebiliyor. İndandırıcı gelmese de ölçümlenen etkilerine bakınca gayet
+gerçek oldukları ortaya çıkıyor. Ayrıntısını anlattığım blog yazım burada:
+[Tık!](/sir/2020/10/17/binaural-beats.html)
+
+On special request, I prepared some sounds for experimentation. By sending
+sounds of different frequencies to the left and right ears, the operating mode
+of the brain and the mood of the human can be changed. Although it doesn't
+sound intimidating, it turns out to be quite real when looking at their
+measured effects. Here is my blog post I explained in detail:
+[Click](/sir/2020/10/17/binaural-beats.html)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdK6ORjlRIkvWRXlxReGLMF9" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+### **Kaçan Ayna [Sesli Kitap]**
+
+Jorge Luis Borges'in hazırladığı, Giovanni Papini'nin Kaçan Ayna kitabını
+seslendirdim. Olabildiğince temiz lakin sonuçta ev ortamı kaydı... İlk 3
+öyküyü, yani 105 sayfalık kitabın 44 sayfasını okudum. Zor bir iş. Belki
+gelecekte bir stüdyo ortamında hepsini okurum. Şimdilik hepsi bu. İyi
+dinlemeler.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdJI0M1lFH0rmUPu5t8KmFsv" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<iframe width="100%" height="350" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1191065737&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sirnewage" title="SIR NewAge" target="_blank" style="color: #cccccc; text-decoration: none;">SIR NewAge</a> · <a href="https://soundcloud.com/sirnewage/sets/giovanni-papini-kacan-ayna" title="Giovanni Papini - Kaçan Ayna [Sesli Kitap]" target="_blank" style="color: #cccccc; text-decoration: none;">Giovanni Papini - Kaçan Ayna [Sesli Kitap]</a></div>
+
 ### **Eee?**
 
 Eee'si bu! Artık Mızraplı Tanbur'um yok. Fehmi Usta Covid-19 hapsinde bana bir
@@ -279,3 +308,25 @@ Ketime sings the original song.
 Hicaz Beste
 
 Hicaz Composition
+
+### [Binaural Beats](/sir/2020/10/17/binaural-beats.html)
+
+Özel istek üzerine, deney amacıyla bazı sesler hazırladım. Sol ve sağ kulağa
+farklı frekansta sesler göndererek beynin çalışma modu ve insanın duygu durumu
+değiştirilebiliyor. İndandırıcı gelmese de ölçümlenen etkilerine bakınca gayet
+gerçek oldukları ortaya çıkıyor.
+
+On special request, I prepared some sounds for experimentation. By sending
+sounds of different frequencies to the left and right ears, the operating mode
+of the brain and the mood of the human can be changed. Although it doesn't
+sound intimidating, it turns out to be quite real when looking at their
+measured effects.
+
+### [Kaçan Ayna [Sesli Kitap]](/sir/2020/10/18/kacan-ayna.html)
+
+Jorge Luis Borges'in hazırladığı, Giovanni Papini'nin Kaçan Ayna kitabını
+seslendirdim. Olabildiğince temiz lakin sonuçta ev ortamı kaydı... İlk 3
+öyküyü, yani 105 sayfalık kitabın 44 sayfasını okudum. Zor bir iş. Belki
+gelecekte bir stüdyo ortamında hepsini okurum. Şimdilik hepsi bu. İyi
+dinlemeler.
+

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Sıfırdan Bire
+title:  Sıfırdan Bire [Kitap Özeti]
 date:   2020-09-25 05:05:05 +0300
 categories: kitap-ozeti
 ---

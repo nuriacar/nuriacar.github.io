@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Tetris & Nebula
+title:  Tetris & Nebula [Girişim]
 date:   2020-09-29 09:09:09 +0300
 categories: muucit
 ---
