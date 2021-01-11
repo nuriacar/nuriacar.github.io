@@ -23,11 +23,21 @@ permalink: /cevizlab/
 ## ☣
 {: style="text-align: center;"}
 
+### [cevizlab](/cevizlab/2020/09/27/cevizlab.html)
+
+Sevgili [677 No'lu
+Kanun](https://www.mevzuat.gov.tr/MevzuatMetin/1.3.677.pdf)! Kurduğum tarikat
+sandığın gibi değil. Açıklayabilirim...
+
+Dear [Law No. 677](https://www.mevzuat.gov.tr/MevzuatMetin/1.3.677.pdf)! My
+cult I founded is not a cult like you think. I can explain...
+
+## ☣
+{: style="text-align: center;"}
+
 ### [TRNIDS: TR National Identifier Suite](/cevizlab/2020/10/11/mernis-trnids.html)
 
 #### **TR [ EN ⇣ ]**
-
-*Not: Ayrıntıları okumak için başlığa veya [buraya](/cevizlab/2020/10/11/mernis-trnids.html) tıklayabilirsiniz.*
 
 Bash, Python 3, Common Lisp ve C ile Merkezi Nüfus İdare Sistemi'ne (MERNİS)
 öykünen yeni yetme bir program yazdım. Bence de komik... :) **Özetle; TCNO
@@ -45,8 +55,6 @@ Kaynak Kod Deposu
 {: style="color:gray; font-size: 80%; text-align: left;"}
 
 #### **EN**
-
-*Note: You can click on the title or [here](/cevizlab/2020/10/11/mernis-trnids.html) to read the details.*
 
 I coded a program with Bash, Python 3, Common Lisp and C which is a newbie
 imitator of the Central Population Management System (MERNİS) of Turkey. I
@@ -69,8 +77,6 @@ Source Code Repository
 
 #### **TR [ EN ⇣ ]**
 
-*Not: Ayrıntıları okumak için başlığa veya [buraya](/cevizlab/2020/10/12/rzips.html) tıklayabilirsiniz.*
-
 Bir CTF (Capture the Flag) flag'i düşünün: İç içe 2020 defa ziplenmiş ve
 yetmezmiş gibi zip dosyalarına parola konulmuş. Ya manuel, yani tek tek siz
 açacaksınız ki gerek yok ya da bu işi bilgisayara yaptıracaksınız. Yedi gün
@@ -88,8 +94,6 @@ Kaynak Kod Deposu
 {: style="color:gray; font-size: 80%; text-align: left;"}
 
 #### **EN**
-
-*Note: You can click on the title or [here](/cevizlab/2020/10/12/rzips.html) to read the details.*
 
 Consider a CTF (Capture the Flag) flag: zipped 2020 times nested and password
 set on zip files as if it wasn't enough. Either manually, you will open it one
@@ -112,8 +116,6 @@ Source Code Repository
 
 #### **TR [ EN ⇣ ]**
 
-*Not: Ayrıntıları okumak için başlığa veya [buraya](/cevizlab/2020/10/13/project_muse.html) tıklayabilirsiniz.*
-
 > John Hopkins Üniversitesi, Covid-19 nedeniyle,
 > [https://muse.jhu.edu/](https://muse.jhu.edu/) linkinde yer alan pek çok
 > kitabı çevrimiçi erişime açmış. Yetmezmiş gibi Arizona, Colorado, Cornell,
@@ -134,8 +136,6 @@ Kaynak Kod Deposu
 {: style="color:gray; font-size: 80%; text-align: left;"}
 
 #### **EN**
-
-*Note: You can click on the title or [here](/cevizlab/2020/10/13/project_muse.html) to read the details.*
 
 > Due to Covid-19, John Hopkins University has made many books available
 > online at [https://muse.jhu.edu/](https://muse.jhu.edu/). As if it wasn't
@@ -160,8 +160,6 @@ Source Code Repository
 
 #### **TR [ EN ⇣ ]**
 
-*Not: Ayrıntıları okumak için başlığa veya [buraya](/cevizlab/2020/10/14/trtels.html) tıklayabilirsiniz.*
-
 Türkiye'deki telefon numaralarının ~%99.9'unu üreten bir program.
 
 Aşağıdaki **kehtapot**'a veya **ahtapedi**'ye (ahtapot ve kedi birleşimi bir
@@ -174,8 +172,6 @@ Kaynak Kod Deposu
 {: style="color:gray; font-size: 80%; text-align: left;"}
 
 #### **EN**
-
-*Note: You can click on the title or [here](/cevizlab/2020/10/14/trtels.html) to read the details.*
 
 A program that generates ~99.9% of telephone numbers in Turkey.
 
@@ -193,8 +189,6 @@ Source Code Repository
 
 #### **TR [ EN ⇣ ]**
 
-*Not: Ayrıntıları okumak için başlığa veya [buraya](/cevizlab/2020/10/16/badusb.html) tıklayabilirsiniz.*
-
 BadUSB yapmak için bir tarif.
 
 Aşağıdaki **kehtapot**'a veya **ahtapedi**'ye (ahtapot ve kedi birleşimi bir
@@ -208,8 +202,6 @@ Kaynak Kod Deposu
 
 #### **EN**
 
-*Note: You can click on the title or [here](/cevizlab/2020/10/16/badusb.html) to read the details.*
-
 Instructions for building an Arduino Pro Micro based BadUSB.
 
 You can access the source code by clicking **Octocat** below.
@@ -219,52 +211,13 @@ You can access the source code by clicking **Octocat** below.
 Source Code Repository
 {: style="color:gray; font-size: 80%; text-align: left;"}
 
----
+## ☣
+{: style="text-align: center;"}
 
-## cevizlab Blog ⇣
+### SOC Level 1 Temel Eğitimi
 
-### [cevizlab](/cevizlab/2020/09/27/cevizlab.html)
+Bu içerik, şu linkteki derlemeden aldığım notlardan oluşuyor: [Tık!](https://www.chiheb-chebbi.com/) Huzeyfe ÖNAL'ın LinkedIn gönderisi ile haberim oldu. Zaman içinde asıl kaynakta yer almayan bilgileri de öğrenip ekleyerek yapabildiğim kadar geliştirme niyetindeyim. Toplamda 21 bölüm olacak.
 
-Sevgili [677 No'lu
-Kanun](https://www.mevzuat.gov.tr/MevzuatMetin/1.3.677.pdf)! Kurduğum tarikat
-sandığın gibi değil. Açıklayabilirim...
+[M01: Olay Müdahalesi ve Güvenlik Operasyonlarının Temelleri](/cevizlab/2020/11/01/soc-l1-module-01.html)
 
-Dear [Law No. 677](https://www.mevzuat.gov.tr/MevzuatMetin/1.3.677.pdf)! My
-cult I founded is not a cult like you think. I can explain...
-
-### [TRNIDS: TR National Identifier Suite](/cevizlab/2020/10/11/mernis-trnids.html)
-
-Bash, Python 3, Common Lisp ve C ile Merkezi Nüfus İdare Sistemi'ne (MERNİS)
-öykünen yeni yetme bir program yazdım. Bence de komik... :)
-
-I coded a program with Bash, Python 3, Common Lisp and C which is a newbie
-imitator of the Central Population Management System (MERNİS) of Turkey. I
-think it's funny too... :)
-
-### [RZIPS: Recursive ZIP Suite](/cevizlab/2020/10/12/rzips.html)
-
-Yalnızca CTF'e girdiğinizde değil, önemli dosyalarınızı, parola korumalı
-olarak defalarca zipleyerek korumak için de kullanabileceğiniz faydalı bir
-program.
-
-A useful program that you can use not only when you join CTF's, but also to
-protect your important files by zipping them over and over with passwords
-protection.
-
-### [Project Muse](/cevizlab/2020/10/13/project_muse.html)
-
-John Hopkins Üniversitesi hazinesi Project Muse'da yer alan kitapları indiren bir program.
-
-A program that downloads books from the John Hopkins University treasury Project Muse.
-
-### [TRTELS: TR Phone Numbers Suite](/cevizlab/2020/10/14/trtels.html)
-
-Türkiye'deki telefon numaralarının ~%99.9'unu üreten bir program.
-
-A program that generates ~99.9% of telephone numbers in Turkey.
-
-### [BadUSB: Arduino Pro Micro based BadUSB](/cevizlab/2020/10/16/badusb.html)
-
-BadUSB yapmak için bir tarif.
-
-Instructions for building an Arduino Pro Micro based BadUSB.
+[M02: Her Mavi Takım üyesinin sahip olması gereken en iyi 19 açık kaynaklı araç](/cevizlab/2020/11/02/soc-l1-module-02.html)
