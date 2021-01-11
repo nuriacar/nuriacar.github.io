@@ -225,6 +225,8 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### **Binaural Beats**
 
+![Stereofonika 1 Album](/assets/img/stereofonika-1.jpg "Stereofonika 1 Album")
+
 Özel istek üzerine, deney amacıyla bazı sesler hazırladım. Sol ve sağ kulağa
 farklı frekansta sesler göndererek beynin çalışma modu ve insanın duygu durumu
 değiştirilebiliyor. İndandırıcı gelmese de ölçümlenen etkilerine bakınca gayet
