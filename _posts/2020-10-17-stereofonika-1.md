@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Binaural Beats [Ses]
+title:  Stereofonika 1, Binaural Beats & Noises [Ses]
 date:   2020-10-17 07:07:07 +0000
 categories: sir
 ---

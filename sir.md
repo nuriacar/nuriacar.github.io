@@ -223,7 +223,7 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 > küşâde ola... Bana hakkınızı helâl ediniz.
 >> İrfan Fethi Gemuhluoğlu
 
-### **Binaural Beats**
+### **Stereofonika 1: Binaural Beats & Noises**
 
 ![Stereofonika 1 Album](/assets/img/stereofonika-1.jpg "Stereofonika 1 Album")
 
@@ -231,14 +231,14 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 farklı frekansta sesler göndererek beynin çalışma modu ve insanın duygu durumu
 değiştirilebiliyor. İndandırıcı gelmese de ölçümlenen etkilerine bakınca gayet
 gerçek oldukları ortaya çıkıyor. Ayrıntısını anlattığım blog yazım burada:
-[Tık!](/sir/2020/10/17/binaural-beats.html)
+[Tık!](/sir/2020/10/17/stereofonika-1.html)
 
 On special request, I prepared some sounds for experimentation. By sending
 sounds of different frequencies to the left and right ears, the operating mode
 of the brain and the mood of the human can be changed. Although it doesn't
 sound intimidating, it turns out to be quite real when looking at their
 measured effects. Here is my blog post I explained in detail:
-[Click](/sir/2020/10/17/binaural-beats.html)
+[Click](/sir/2020/10/17/stereofonika-1.html)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdK6ORjlRIkvWRXlxReGLMF9" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
@@ -311,7 +311,7 @@ Hicaz Beste
 
 Hicaz Composition
 
-### [Binaural Beats](/sir/2020/10/17/binaural-beats.html)
+### [Stereofonika 1: Binaural Beats & Noises](/sir/2020/10/17/stereofonika-1.html)
 
 Özel istek üzerine, deney amacıyla bazı sesler hazırladım. Sol ve sağ kulağa
 farklı frekansta sesler göndererek beynin çalışma modu ve insanın duygu durumu
