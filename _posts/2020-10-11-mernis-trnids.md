@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  MERNİS (TCNO) - TRNIDS [Siber Güvenlik]
-date:   2020-10-11 21:21:21 +0300
+date:   2020-10-11 21:21:21 +0000
 categories: cevizlab
 ---
 

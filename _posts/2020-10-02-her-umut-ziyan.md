@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Her Umut Ziyan [Müzik]
-date:   2020-10-02 12:12:12 +0300
+date:   2020-10-02 12:12:12 +0000
 categories: sir
 ---
 

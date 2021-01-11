@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Binaural Beats [Ses]
-date:   2020-10-17 07:07:07 +0300
+date:   2020-10-17 07:07:07 +0000
 categories: sir
 ---
 

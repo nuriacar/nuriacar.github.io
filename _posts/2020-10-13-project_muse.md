@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Project Muse [Genel Programlama]
-date:   2020-10-13 23:23:23 +0300
+date:   2020-10-13 23:23:23 +0000
 categories: cevizlab
 ---
 
