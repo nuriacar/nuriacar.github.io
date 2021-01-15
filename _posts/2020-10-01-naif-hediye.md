@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Naif Hediye [Müzik]
-date:   2020-10-01 11:11:11 +0000
+date:   2020-10-01 12:00:00 +0000
 categories: sir
 ---
 

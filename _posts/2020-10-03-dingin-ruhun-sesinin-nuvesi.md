@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Dingin Ruhun Sesinin Nüvesi [Müzik]
-date:   2020-10-03 13:13:13 +0000
+date:   2020-10-03 12:00:00 +0000
 categories: sir
 ---
 

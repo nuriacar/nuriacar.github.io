@@ -221,3 +221,5 @@ Bu içerik, şu linkteki derlemeden aldığım notlardan oluşuyor: [Tık!](http
 [M01: Olay Müdahalesi ve Güvenlik Operasyonlarının Temelleri](/cevizlab/2020/11/01/soc-l1-module-01.html)
 
 [M02: Her Mavi Takım üyesinin sahip olması gereken en iyi 19 açık kaynaklı araç](/cevizlab/2020/11/02/soc-l1-module-02.html)
+
+[M03: Ayrıntılı Kılavuz: Elastic Stack (ELK) SIEM'inizi nasıl deploy edersiniz?](/cevizlab/2020/11/03/soc-l1-module-03.html)

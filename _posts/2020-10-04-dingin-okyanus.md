@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Dingin Okyanus [Müzik]
-date:   2020-10-04 14:14:14 +0000
+date:   2020-10-04 12:00:00 +0000
 categories: sir
 ---
 
