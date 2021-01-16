@@ -6,6 +6,10 @@ permalink: /sir/
 
 ![SIR Logo](/assets/img/sir-logo.jpg "SIR Logo")
 
+[![Spotify Icon](/assets/img/spotify-icon.png "Spotify")](https://open.spotify.com/artist/7iJDIKzmQsGxP6st682HYA)
+[![Youtube Music Icon](/assets/img/youtube-music-icon.png "Youtube Music")](https://music.youtube.com/channel/UCt2phzIHw6lXODDve8nQpEA)
+[![Apple Music Icon](/assets/img/apple-music-icon.png "Apple Music")](https://music.apple.com/us/artist/sir-newage/1548186562)
+[![Amazon Music Icon](/assets/img/amazon-music-icon.png "Amazon Music")](https://www.amazon.com/s?k=SIR+NewAge&i=digital-music&dc&qid=1610746234)
 [![Youtube Icon](/assets/img/youtube-icon.png "Youtube")](https://www.youtube.com/user/sirnewage/playlists)
 [![SoundCloud Icon](/assets/img/soundcloud-icon.png "SoundCloud")](https://soundcloud.com/sirnewage)
 {: style="text-align: center;"}
@@ -41,6 +45,11 @@ bilgisayarımda sentezlediğim seslerle NewAge yapmaya koyuldum.
 
 ### **Amesia Newborn**
 
+[![Spotify Icon](/assets/img/spotify-icon.png "Spotify")](https://open.spotify.com/album/1stKVaGP6MOeISsaqUpPdU)
+[![Youtube Music Icon](/assets/img/youtube-music-icon.png "Youtube Music")](https://music.youtube.com/playlist?list=OLAK5uy_l2LKy1teJ6fAKQdsKON-FpOBqzIBB6BmI)
+[![Apple Music Icon](/assets/img/apple-music-icon.png "Apple Music")](https://music.apple.com/us/album/amesia-newborn-single/1548188631)
+[![Amazon Music Icon](/assets/img/amazon-music-icon.png "Amazon Music")](https://www.amazon.com/gp/product/B08SL6635T/)
+
 Bir süre sonra Amesia Newborn albümüm ortaya çıktı.
 
 ![Amesia Newborn Album](/assets/img/amesia-newborn.jpg "Amesia Newborn Album")
@@ -56,6 +65,11 @@ Bu albümün kaydedildiği zamanlar, TRT yarışmaları ve belgeselleri için m�
 bestelediğim zamanlar. Fakat onlar nedense bende yoklar. Sahi neden yoklar?
 
 ### **Atasoy Müftüoğlu Belgeseli**
+
+[![Spotify Icon](/assets/img/spotify-icon.png "Spotify")](https://open.spotify.com/album/0iFxXeIXeZKc65ABNzxmx1)
+[![Youtube Music Icon](/assets/img/youtube-music-icon.png "Youtube Music")](https://music.youtube.com/playlist?list=OLAK5uy_mExBBYL7rJMT6G_iV8THnS6C6hgykV-Gk)
+[![Apple Music Icon](/assets/img/apple-music-icon.png "Apple Music")](https://music.apple.com/us/album/atasoy-müftüoğlu-single/1548189503)
+[![Amazon Music Icon](/assets/img/amazon-music-icon.png "Amazon Music")](https://www.amazon.com/gp/product/B08SL6XZGY)
 
 Bir günübirlik Edirne seyahati hayal edin. Anlaştığınız tur firması otobüs
 çalışanlarına uzun zamandır ödemesini yapmıyor fakat siz bunu gece vakti dönüş
@@ -116,9 +130,14 @@ picture-in-picture" allowfullscreen></iframe>
 
 ### **UK2911 - Uzay Kuvvetleri 2911**
 
+[![Spotify Icon](/assets/img/spotify-icon.png "Spotify")](https://open.spotify.com/album/5Cu8TRWt5IBvTEhetTSMmk)
+[![Youtube Music Icon](/assets/img/youtube-music-icon.png "Youtube Music")](https://music.youtube.com/playlist?list=OLAK5uy_mJz_nv765S1yJ1CgVDunq04T3CpvMb88E)
+[![Apple Music Icon](/assets/img/apple-music-icon.png "Apple Music")](https://music.apple.com/us/album/uzay-kuvvetleri-2911-single/1548188639)
+[![Amazon Music Icon](/assets/img/amazon-music-icon.png "Amazon Music")](https://www.amazon.com/gp/product/B08SL7QQYR)
+
 ![Uzay Kuvvetleri 2911 Murat Kaptan](/assets/img/uk2911-murat-kaptan.jpg "Uzay Kuvvetleri 2911 Murat Kaptan")
 
-Not: İsterseniz "Uzayopoulos Kuvvetleridis 2911" diyerek tereddütsüz
+**Not:** İsterseniz "Uzayopoulos Kuvvetleridis 2911" diyerek tereddütsüz
 Yunanistan'a iteleyebilir, bu başlığı okumadan bir sonrakine atlayabilirsiniz.
 :)
 
@@ -182,6 +201,11 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### **SIR N[01]**
 
+[![Spotify Icon](/assets/img/spotify-icon.png "Spotify")](https://open.spotify.com/album/41LE8by3dx66Z2B7XhRFXb)
+[![Youtube Music Icon](/assets/img/youtube-music-icon.png "Youtube Music")](https://music.youtube.com/playlist?list=OLAK5uy_l6rokF1EEf86piRIejufUGM7v90FtS8BI)
+[![Apple Music Icon](/assets/img/apple-music-icon.png "Apple Music")](https://music.apple.com/us/album/n-01-ep/1548188718)
+[![Amazon Music Icon](/assets/img/amazon-music-icon.png "Amazon Music")](https://www.amazon.com/gp/product/B08SL4Y7P6)
+
 ![N[01] Album](/assets/img/n01.jpg "N[01] Album")
 
 Neden albüm kapağında bir Siyam kedisi var? Çünkü o zamanlar bir Siyam kedisi
@@ -202,6 +226,11 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <iframe width="100%" height="380" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/23805832&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sirnewage" title="SIR NewAge" target="_blank" style="color: #cccccc; text-decoration: none;">SIR NewAge</a> · <a href="https://soundcloud.com/sirnewage/sets/n01-album" title="N[01] Album" target="_blank" style="color: #cccccc; text-decoration: none;">N[01] Album</a></div>
 
 ### **Fethi Gemuhluoğlu Belgeseli**
+
+[![Spotify Icon](/assets/img/spotify-icon.png "Spotify")](https://open.spotify.com/album/6Q5wxlKRKUoaBobVHzy2UP)
+[![Youtube Music Icon](/assets/img/youtube-music-icon.png "Youtube Music")](https://music.youtube.com/playlist?list=OLAK5uy_mjRz27WFzxG1iIxtoXKEpvZ183Z7fxRd4)
+[![Apple Music Icon](/assets/img/apple-music-icon.png "Apple Music")](https://music.apple.com/us/album/fethi-gemuhluoğlu/1548191402)
+[![Amazon Music Icon](/assets/img/amazon-music-icon.png "Amazon Music")](https://www.amazon.com/gp/product/B08SL8HBFT)
 
 > Evveli, âhiri, zâhiri, bâtını selamlarım. El-Evvelü Allah, El-Âhirü Allah,
 > Ez-Zâhirü Allah, El-Bâtınü Allah. Sâhib’i selâmlarım. Sâhib-i Hakîki’yi
