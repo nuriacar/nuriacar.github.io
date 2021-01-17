@@ -223,3 +223,5 @@ Bu içerik, şu linkteki derlemeden aldığım notlardan oluşuyor: [Tık!](http
 [M02: Her Mavi Takım üyesinin sahip olması gereken en iyi 19 açık kaynaklı araç](/cevizlab/2020/11/02/soc-l1-module-02.html)
 
 [M03: Ayrıntılı Kılavuz: Elastic Stack (ELK) SIEM'inizi nasıl deploy edersiniz?](/cevizlab/2020/11/03/soc-l1-module-03.html)
+
+[M04: Microsoft Azure Sentinel (Cloud-Native SIEM ve SOAR) kullanmaya başlama](/cevizlab/2020/11/04/soc-l1-module-04.html)
