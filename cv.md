@@ -22,6 +22,7 @@ permalink: /cv/
 #### **TR [ EN ⇣ ]**
 
 Merhaba.
+
 Ben görsel efekt, video kurgu, ses tasarımı ve film/belgesel müziği besteleri yapmanın yanında bilgisayar programlama (C, C#, Python, Bash, Common Lisp) da yapan bir siber sanatçıyım.
 
 Ortaokul, lise ve üniversite eğitimim devam ederken aynı zamanda Klasik Türk Müziği eğitimi de aldım. Üniversite günlerinde ise işin içine bilgisayar girdi. 2004 senesinde kazandığım İstanbul Üniversitesi Makine Mühendisliği bölümünü bırakarak sinema filmleri, diziler, çizgi filmler, reklamlar, belgeseller, yarışmalar, mobil oyunlar/uygulamalar, canlı yayınlar ve stüdyo albümleri için; 3d animasyon, vfx, video kurgu, senaryo yazımı, ses efekt tasarımı, ses kurgusu, müzik besteleri ve tonmaisterlik yapmaya başladım. Ayrıca dönem dönem çeşitli eğitim kurumlarında yaptığım işlerin eğitimlerini verdim. Bu alanda yaptığım işlerin bir kısmı şu linklerdeler:
@@ -30,7 +31,7 @@ Ortaokul, lise ve üniversite eğitimim devam ederken aynı zamanda Klasik Türk
 **Stüdyo Albümleri, Film Müzikleri**|[YouTube](https://youtube.com/user/sirnewage/playlists)|[SoundCloud](https://soundcloud.com/sirnewage/)
 {: style="text-align: center; font-size: 80%;"}
 
-“Dijital sanatların, programlama ve siber güvenlikle ne alakası var?” diyebilirsiniz. Görsel efekt programlarının kendi script dillerinin yanında Python programlama dili modülleri de var. Bu; işleri kolaylaştıran, otomatize eden harika bir özellik. Görsel efekt amaçlı yazılmış Python script'leri, kısa bir süre sonra yerini Siber Güvenlik programlarına bıraktı. Ardından C, C#, Bash, Common Lisp dilleri ve bunlarla yazılmış Siber Güvenlik amaçlı programlar geldi. Bazıları şu linklerdeler:
+"Dijital sanatların, programlama ve siber güvenlikle ne alakası var?" diyebilirsiniz. Görsel efekt programlarının kendi script dillerinin yanında Python programlama dili modülleri de var. Bu; işleri kolaylaştıran, otomatize eden harika bir özellik. Görsel efekt amaçlı yazılmış Python script'leri, kısa bir süre sonra yerini Siber Güvenlik programlarına bıraktı. Ardından C, C#, Bash, Common Lisp dilleri ve bunlarla yazılmış Siber Güvenlik amaçlı programlar geldi. Bazıları şu linklerdeler:
 
 [GitHub](https://github.com/nuriacar)|[cevizlab®](/cevizlab/)
 {: style="text-align: center; font-size: 80%;"}
@@ -92,14 +93,11 @@ See you!
 
 + Lisp, Artifical Intelligence, [Enterprise Knowledge Graphs](https://enterprise-kg-cdl-online-meetup.heysummit.com/)
 
-  + Data Revolution: The Emergence of the Decentralized Enterprise Knowledge
-  Graph. (Tony Seale, Information Architect)
+  + Data Revolution: The Emergence of the Decentralized Enterprise Knowledge Graph. (Tony Seale, Information Architect)
 
-  + The future of AI in the Enterprise: Entity-Event Knowledge Graphs for
-  Data-Centric Organizations (Jans Aasman, CEO, Franz Inc)
+  + The future of AI in the Enterprise: Entity-Event Knowledge Graphs for Data-Centric Organizations (Jans Aasman, CEO, Franz Inc)
 
-  + Knowledge Graphs for Data Integrity, Innovation and Digitalization in
-  Professional Services (Symeon Vasileiadis, Knowledge Engineer, EngineB)
+  + Knowledge Graphs for Data Integrity, Innovation and Digitalization in Professional Services (Symeon Vasileiadis, Knowledge Engineer, EngineB)
 
 + [Bilgi Teknolojileri Kurumu - BTK Academy](https://www.btkakademi.gov.tr)
 
@@ -168,16 +166,15 @@ See you!
   
   [ Entrepreneur ]
   
-  + cevizlab: Cyber Arts
+  + [cevizlab: Cyber Arts](http://nuriacar.com/cevizlab/)
   
-  + muucit: Mathematic and Art Toys, Puzzles, Objects
+  + [muucit: Mathematic and Art Toys, Puzzles, Objects](https://www.youtube.com/playlist?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw)
 
-+ [ 10/2019 - 12/2019 ] [ Freelance ] [ [StemistLab](http://stemistbox.com) ]
++ [ 10/2019 - 12/2019 ] [ **Freelance** ] [ [StemistLab](http://stemistbox.com) ]
 
   [ Visionary ]
   
-  In StemistLab Mars workshop, I taught about 500 students on space, soilless
-  agriculture and problem solving, and did visionary.
+  In StemistLab Mars workshop, I taught about 500 students on space, soilless agriculture and problem solving, and did visionary.
 
 + [ 8/2015 - 10/2019 ] [ [TürkMedya](http://turkmedya.com.tr) ]
 
@@ -187,13 +184,13 @@ See you!
 
   [ Co-Founder ]
 
-+ [ 7/2014 - 9/2014 ] [ Freelance ] [ Fethi Gemuhluoğlu Documentary ]
++ [ 7/2014 - 9/2014 ] [ **Freelance** ] [ Fethi Gemuhluoğlu Documentary ]
 
   [ Artist, Soundtrack Composer, Performer, Recording Engineer ]
 
   [Soundtrack Album](https://www.youtube.com/playlist?list=PLjGoAmqsQhdIEyRTlREPwL9v4Te9CtjgB)
 
-+ [ 5/2014 - 6/2014 ] [ Freelance ] [ Ciklet Games ]
++ [ 5/2014 - 6/2014 ] [ **Freelance** ] [ Ciklet Games ]
   
   [ Rigger, 3D Animator ]
 
@@ -213,7 +210,7 @@ See you!
 
   + [Nuri ACAR, IMDB](https://www.imdb.com/name/nm6932027/)
 
-+ [ 5/2013 - 7/2013 ] [ Freelance ] [ Atasoy Müftüoğlu Documentary ]
++ [ 5/2013 - 7/2013 ] [ **Freelance** ] [ Atasoy Müftüoğlu Documentary ]
 
   [ Artist, Soundtrack Composer, Performer, Recording Engineer ]
 
@@ -235,11 +232,11 @@ See you!
 
   Graniser Ceramic advertisement shooting and post production.
 
-+ [ 3/2012 - 6/2012 ] [ Freelance ] [ [3D Akademi](https://3dakademi.com/) ]
++ [ 3/2012 - 6/2012 ] [ **Freelance** ] [ [3D Akademi](https://3dakademi.com/) ]
 
   [ Autodesk Maya Instructor ]
 
-+ [ 2/2012 - 4/2012 ] [ Freelance ] [ Unity Production & Procter&Gamble ]
++ [ 2/2012 - 4/2012 ] [ **Freelance** ] [ Unity Production & Procter&Gamble ]
 
   [ Rigger, 3D Animator ]
 
@@ -261,11 +258,11 @@ See you!
   
   Endless War 3D cartoon.
 
-+ [ 4/2010 - 6/2010 ] [ Freelance ] [ [Bilge Adam ](https://www.bilgeadam.com/) ]
++ [ 4/2010 - 6/2010 ] [ **Freelance** ] [ [Bilge Adam ](https://www.bilgeadam.com/) ]
 
   [ Adobe After Effects Instructor ]
 
-+ [ 2/2010 - 4/2010 ] [ Freelance ] [ Post Pro Production ]
++ [ 2/2010 - 4/2010 ] [ **Freelance** ] [ Post Pro Production ]
 
   [ 3D Animator ]
 
