@@ -210,22 +210,3 @@ You can access the source code by clicking **Octocat** below.
 
 Source Code Repository
 {: style="color:gray; font-size: 80%; text-align: left;"}
-
-## ☣
-{: style="text-align: center;"}
-
-### SOC Level 1 Temel Eğitimi
-
-Bu içerik, [Chiheb Chebbi'nin önce Peerlyst'te, Peerlyst kapandıktan sonra kendi sitesinde yayınladığı](https://www.chiheb-chebbi.com/) derlemesinden aldığım notlardan oluşuyor. [Huzeyfe ÖNAL](https://www.lifeoverip.net/)'ın LinkedIn gönderisi ile haberim oldu. Ardından [Chiheb Chebbi](https://www.chiheb-chebbi.com/) ile iletişime geçip iznini alarak blogumda yayınlamaya başladım. Zaman içinde asıl kaynakta yer almayan bilgileri de öğrenip ekleyerek yapabildiğim kadar geliştirme niyetindeyim. Şimdilik, toplamda 21 bölüm olacak.
-
-[M01: Olay Müdahalesi ve Güvenlik Operasyonlarının Temelleri](/cevizlab/2020/11/01/soc-l1-module-01.html)
-
-[M02: Her Mavi Takım üyesinin sahip olması gereken en iyi 19 açık kaynaklı araç](/cevizlab/2020/11/02/soc-l1-module-02.html)
-
-[M03: Ayrıntılı Kılavuz: Elastic Stack (ELK) SIEM'inizi nasıl deploy edersiniz?](/cevizlab/2020/11/03/soc-l1-module-03.html)
-
-[M04: Microsoft Azure Sentinel (Cloud-Native SIEM ve SOAR) kullanmaya başlama](/cevizlab/2020/11/04/soc-l1-module-04.html)
-
-[M05: Wazuh (HIDS: Host-based Intrusion Detection System) Deploy Etme](/cevizlab/2020/11/05/soc-l1-module-05.html)
-
-[M06: Tehdit İstihbaratı Temelleri](/cevizlab/2020/11/06/soc-l1-module-06.html)
