@@ -122,7 +122,7 @@ okunması iyi olur.
   bir parçası haline gelir.
   
   3. Müşteri Grubu: Ürün müşterilerin gerçek bir problemini çözüyordur lakin
-  bu müşteri grubu ilk planda hizmet verilmesi düşünülen bir grup değildir
+  bu müşteri grubu ilk planda hizmet verilmesi düşünülen bir grup değildir.
   
   4. Müşteri İhtiyacı: Müşteriyi çok iyi tanıyınca çözmeye çalıştığınız
   problemin aslında müşteri için çok da önemli olmadığını görürsünüz.

@@ -162,6 +162,10 @@ See you!
 
 ### **3. Work Experience**
 
++ [ 2/2021 - ... ] [ [LoreSecurity](https://www.loresecurity.com/) ]
+
+  [ Penetration Tester & Coder ]
+
 + [ 8/2019 - ... ] [ [cevizlab](http://nuriacar.com/cevizlab/) & [muucit](http://nuriacar.com/muucit/) ]
   
   [ Entrepreneur ]
