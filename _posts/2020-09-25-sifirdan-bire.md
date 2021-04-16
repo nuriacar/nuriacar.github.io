@@ -693,7 +693,7 @@ optimum maaş alarak şirket tavan ücretini belirlemesidir.
 ### 9.5. Kazanılmış Hak
 
 Girişim yüksek maaş vermek zorunda değildir. Zira ortaklık verir. Bu da günlük
-iş kotarımların ziyade geleceğe yönelik değer üretmeyi teşvik eder. Hisse
+iş kotarımlarından ziyade geleceğe yönelik değer üretmeyi teşvik eder. Hisse
 dağıtımının bağlılık oluşturması için adil dağıtımı gerekir. Eşit hisse
 dağıtımı hatalıdır. Zira yetkinlikler farklıdır. Farklı hisse dağıtımı ise
 dargınlığa sebep olarak şirketi bitirebilir. Bunun bir çözümü yoktur. Hisse
@@ -1006,7 +1006,7 @@ hatırlayıp abartma yolunu mu seçiyoruz? Bir kurucu için hangi kişisel
 özellikler en büyük önemi taşır? Yeri doldurulabilir bir yönetici yerine
 kendine özgü bir bireyin yönetimi hem güçlü hem tehlikeli nasıl olabilir?
 
-Bazıları güçlü bazıları zayıftır, bazıları dahi bazıları ahmatır, çoğu ise
+Bazıları güçlü bazıları zayıftır, bazıları dahi bazıları ahmaktır, çoğu ise
 aradadır. Çan eğrisi aşikar...
 
 Normalde zıt özelliklerin birbirini dışlaması beklenir. Hem zengin hem fakir
@@ -1033,7 +1033,7 @@ mit hissiyatını kaybetmek ve hayal kırıklığını bilgelikle karıştırmak
 
 ## Sonuç: Durgunluk Mu Tekillik Mi?
 
-En yetenkli kurucular bile yirmi veya otuz yıl sonrasını planlayamıyorsa, uzak
+En yetenekli kurucular bile yirmi veya otuz yıl sonrasını planlayamıyorsa, uzak
 gelecekle alakalı söyleyecek bir şey var mıdır? Spesifik olamayız ama çerçeve
 çizebiliriz. Felsefeci [Nick Bostrom](nickbostrom.com) insanlığın geleceğiyle
 ilgili dört muhtemel şablon tanımlıyor:
