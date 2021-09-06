@@ -27,7 +27,7 @@ Bu kitap en kısa özetle şu:
 
 Peki ne yapmak gerek? Özeti boşverin, kitabı okuyun.
 
-[Nuri ACAR](http://nuriacar.com)
+[Nuri ACAR](https://nuriacar.com)
 
 ![Sıfırdan Bire](/assets/img/sifirdan-bire.jpg)
 
@@ -95,7 +95,7 @@ Girişimcilerin bu büyük iflastan aldıkları dört büyük ders:
 1. Kademeli ilerleyin. Büyük vizyonlar balonu şişirir, o yüzden hoş
    görülmemelidir. Çok büyük işler başaracağını iddia eden herkesten
    şüphelenilebilir. Dünyayı değiştirmek isteyen herkes daha alçak gönüllü
-   olmalıdr. Küçük, kademeli adımlar ileriye giden tek güvenli yoldur.
+   olmalıdır. Küçük, kademeli adımlar ileriye giden tek güvenli yoldur.
 
 2. Yalın ve esnek olun. Tüm şirketler "yalın" olmalıdır. Bu "plansız" olmanın
    anahtarıdır. İşinizin nasıl ilerleyeceğini bilmemelisiniz; planlamak
@@ -246,7 +246,7 @@ markalaşmanın kombinasyonu bu sorulara genel cevap olabilir.
    küçüktür ki iş imkanı yokmuş gibi gözükürler.
 
 3. Ölçek Ekonomileri: Bir tekel işi, büyüdükçe güçlenir: Bir ürünü
-   oluşturmanın sabit maliyeti (mühendislik, yönetim, ofis... vs.) satışlar
+   oluşturmanın sabit maliyeti (mühendislik, yönetim, ofis vs.) satışlar
    arttıkça azalır, şirket verimliliği artar. Çeşit üretmek yerine yüksek
    sayılarda aynı ürün üretmek daha ucuza üretmeniz anlamına gelir. Yazılım
    girişimleri ise daha hareketli ölçek ekonomisine sahiptir. Çünkü ürünün
@@ -383,7 +383,7 @@ kaçınılmaz sonla nasıl baş edeceklerini düşünüyorlardı. Son iki asrın
 feylesofları ise sağ veya sol ayırdetmeksizin çoğunlukla belirli iyimserdiler
 ve insan yaşamını kökten değiştirecek somut ilerlemeler bekliyorlardı. Bu
 durum 20. yüzyılın sonuna doğru belirsiz iyimserliğe evrildi. Günümüz dünyası
-sağ, sol... vs. gibi etiket farklarını gereksiz abartıyor çünkü taraf
+sağ, sol vs. gibi etiket farklarını gereksiz abartıyor çünkü taraf
 ayırdetmeksizin herkes belirsiz gelecek düşüncesini paylaşıyor.
 
 Belirsiz Yaşam: Atalarımız insan yaşamını anlamak ve uzatmak için çalıştılar.
@@ -528,7 +528,7 @@ düşeceğini iyice düşünün!
 Bugünün en önemli ve bilindik fikirlerinin her biri bir zamanlar bilinmez ve
 umulmadıktı. Eğer doğal dünyanın öğrenebileceğimiz kadarını öğrenebilseydik
 yani yapılacak her şey yapılmış olsaydı keşfedilecek sır kalmamış demek
-olurdu. Aykırı düşünce, dünyada vazgeçilecek ir sır kalmadıysa anlamsızdır.
+olurdu. Aykırı düşünce, dünyada vazgeçilecek bir sır kalmadıysa anlamsızdır.
 
 Fakat anlamadığımız pek çok şey var ancak bunlardan bazılarını anlamak mümkün
 olmayabilir: Gizemler böyledir. Örneğin sicim teorisi: Doğru mudur? Test etmek
@@ -723,7 +723,7 @@ uzak geleceği şekillendirir ve değiştirilemez kılarsanız sonsuzsunuz.
 İdeal şirket kültürü nasıl olmalıdır? Çalışanlar işlerini sevmeli, ofise
 gitmekten ve orada olmaktan keyif almalı ki resmi çalışma saatleri hükümsüz
 olsun, kimse saatine bile bakmasın. Çalışma alanı açık olmalı, evde
-hissetmeliler... Masaj, tropik meyveler, yoga, pinpon... vs. Bunlar iyidir
+hissetmeliler... Masaj, tropik meyveler, yoga, pinpon vs. Bunlar iyidir
 lakin içerik olmadan bunlar bir işe yaramaz. Harika bir iç mimar ve büyüleyici
 kelimeler kuran marka uzmanı tutarak hiçbir şey üretemezsiniz. Gereken şey
 şirket kültürüdür ve şirket kültürü bizatihi şirketin kendisidir.

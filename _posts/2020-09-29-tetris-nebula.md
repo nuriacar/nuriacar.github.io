@@ -80,7 +80,7 @@ hızlandıracağını söyleyin. Hala sizi dinlemiyor mu? Yerine [Boris
 Yeltsin](https://tr.wikipedia.org/wiki/Boris_Yeltsin)'in geleceğini
 söylerseniz kesin dinler. Sizi kimin gönderdiğini ve bunları nereden
 bildiğinizi sorarsa -ki sormazsa ayıp- "boyutlar arası gezinti yapabilen nevi
-şahsına mühnasır bir dost, [Ceviz](http://nuriacar.com)." diyerek cevaplayın
+şahsına mühnasır bir dost, [Ceviz](https://nuriacar.com)." diyerek cevaplayın
 lutfen. Fakat üzülerek şunu hatırlatmakta fayda var: Çok isteseniz de bazı
 şeyleri değiştiremezsiniz.
 
@@ -125,7 +125,7 @@ Ayrıca şuraya resmi sitesi üzerinden [Tetris oynama
 linki](https://tetris.com/play-tetris/) bırakayım, lütfen göz kirası niyetine
 kabul ediniz.
 
-İmza: [Ceviz](http://nuriacar.com), ... boyutlararası gezinti yapabilen nev'i
+İmza: [Ceviz](https://nuriacar.com), ... boyutlararası gezinti yapabilen nev'i
 şahsına münhasır bir dost.
 
 [END OF LINE](https://en.wikipedia.org/wiki/Newline). (Bkz:
@@ -199,7 +199,7 @@ Chernobyl disaster. Still doesn't he listen to you? If you tell him that
 [Boris Yeltsin](https://en.wikipedia.org/wiki/Boris_Yeltsin) will successor
 instead, he will listen to you... If he asks who sent you and how you know
 them -which is a shame if he does not ask- please answer "...a peculiar friend
-who can be travel between dimensions, [Walnut](http://nuriacar.com)". But
+who can be travel between dimensions, [Walnut](https://nuriacar.com)". But
 sadly, it's worth remembering: You can't change some things even if you want
 to.
 
@@ -242,7 +242,7 @@ Traveller" consciousness reading till here.
 Also let me leave [Tetris play link](https://tetris.com/play-tetris/) on its
 official site, please accept it for the time & eye rent.
 
-Signature: [Walnut](http://nuriacar.com), ...a peculiar friend who can be
+Signature: [Walnut](https://nuriacar.com), ...a peculiar friend who can be
 travel between dimensions.
 
 [END OF LINE](https://en.wikipedia.org/wiki/Newline). (See:

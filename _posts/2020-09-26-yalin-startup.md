@@ -12,7 +12,7 @@ kitabından aldığım notlardan oluşuyor. Öncelikle [Taiichi
 Ohno](https://en.wikipedia.org/wiki/Taiichi_Ohno)'nun Toyota Ruhu kitabının
 okunması iyi olur.
 
-[Nuri ACAR](http://nuriacar.com)
+[Nuri ACAR](https://nuriacar.com)
 
 ![Yalın Startup](/assets/img/yalin-startup.jpg)
 
@@ -104,7 +104,7 @@ okunması iyi olur.
 
 + Kohort analizi, ziyaretçi veya müşterilerinizi gruplara ayırıp
   davranışlarının detaylı analizini sunar. Kohort, belli biz özelliğe sahip
-  (doğum yılı, iş yeri, bölge... vs.) grup. Google Analytics.
+  (doğum yılı, iş yeri, bölge vs.) grup. Google Analytics.
 
 + Sırada - Yapılıyor - Yapıldı - Doğrulandı: Her sütunda en fazla üç şey
   olmalı!

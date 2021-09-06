@@ -23,7 +23,7 @@ permalink: /cv/
 
 Merhaba.
 
-Ben görsel efekt, video kurgu, ses tasarımı ve film/belgesel müziği besteleri yapmanın yanında bilgisayar programlama (C, C#, Python, Bash, Common Lisp) da yapan bir siber sanatçıyım.
+Ben görsel efekt, video kurgu, ses tasarımı ve film/belgesel müziği besteleri yapmanın yanında bilgisayar programlama (C, Python, Bash, Common Lisp) da yapan bir siber sanatçıyım.
 
 Ortaokul, lise ve üniversite eğitimim devam ederken aynı zamanda Klasik Türk Müziği eğitimi de aldım. Üniversite günlerinde ise işin içine bilgisayar girdi. 2004 senesinde kazandığım İstanbul Üniversitesi Makine Mühendisliği bölümünü bırakarak sinema filmleri, diziler, çizgi filmler, reklamlar, belgeseller, yarışmalar, mobil oyunlar/uygulamalar, canlı yayınlar ve stüdyo albümleri için; 3d animasyon, vfx, video kurgu, senaryo yazımı, ses efekt tasarımı, ses kurgusu, müzik besteleri ve tonmaisterlik yapmaya başladım. Ayrıca dönem dönem çeşitli eğitim kurumlarında yaptığım işlerin eğitimlerini verdim. Bu alanda yaptığım işlerin bir kısmı şu linklerdeler:
 
@@ -31,7 +31,7 @@ Ortaokul, lise ve üniversite eğitimim devam ederken aynı zamanda Klasik Türk
 **Stüdyo Albümleri, Film Müzikleri**|[YouTube](https://youtube.com/user/sirnewage/playlists)|[SoundCloud](https://soundcloud.com/sirnewage/)
 {: style="text-align: center; font-size: 80%;"}
 
-"Dijital sanatların, programlama ve siber güvenlikle ne alakası var?" diyebilirsiniz. Görsel efekt programlarının kendi script dillerinin yanında Python programlama dili modülleri de var. Bu; işleri kolaylaştıran, otomatize eden harika bir özellik. Görsel efekt amaçlı yazılmış Python script'leri, kısa bir süre sonra yerini Siber Güvenlik programlarına bıraktı. Ardından C, C#, Bash, Common Lisp dilleri ve bunlarla yazılmış Siber Güvenlik amaçlı programlar geldi. Bazıları şu linklerdeler:
+"Dijital sanatların, programlama ve siber güvenlikle ne alakası var?" diyebilirsiniz. Görsel efekt programlarının kendi script dillerinin yanında Python programlama dili modülleri de var. Bu; işleri kolaylaştıran, otomatize eden harika bir özellik. Görsel efekt amaçlı yazılmış Python script'leri, kısa bir süre sonra yerini Siber Güvenlik programlarına bıraktı. Ardından C, Bash, Common Lisp dilleri ve bunlarla yazılmış Siber Güvenlik amaçlı programlar geldi. Bazıları şu linklerdeler:
 
 [GitHub](https://github.com/nuriacar)|[cevizlab®](/cevizlab/)
 {: style="text-align: center; font-size: 80%;"}
@@ -43,7 +43,7 @@ Umarım birlikte çalışabileceğimiz ortak bir konu vardır. Böyle bir durumd
 
 Görüşmek üzere!
 
-**[Nuri ACAR](http://nuriacar.com)**
+**[Nuri ACAR](https://nuriacar.com)**
 
 ---
 
@@ -51,7 +51,7 @@ Görüşmek üzere!
 
 Hi.
 
-I am a cyber artist who also does computer programming (C, C#, Python, Bash, Common Lisp) as well as make visual effects, video editing, sound design, and compose film/documentary soundtrack.
+I am a cyber artist who also does computer programming (C, Python, Bash, Common Lisp) as well as make visual effects, video editing, sound design, and compose film/documentary soundtrack.
 
 While my secondary school, high school and university education was continuing, I also studied Classical Turkish Music. During my university days, the computer was involved. Quiting the Mechanical Engineering department of Istanbul University, which I won in 2004, for motion pictures, series, cartoons, advertisements, documentaries, competitions, mobile games/applications, live broadcasts and studio albums; I started doing 3d animation, vfx, video editing, scriptwriting, sound effect design, sound editing, musical compositions and audio engineering. In addition, I trained my work at various educational institutions from time to time.
 
@@ -59,7 +59,7 @@ While my secondary school, high school and university education was continuing, 
 **Studio Albums, Motion Picture Soundtracks**|[YouTube](https://youtube.com/user/sirnewage/playlists)|[SoundCloud](https://soundcloud.com/sirnewage/)
 {: style="text-align: center; font-size: 80%;"}
 
-"What do the digital arts have to do with computer programming and cybersecurity?" you might say. Visual effects programs have Python programming language modules as well as their own scripting languages. This; a great feature that makes things easier and automates. Python scripts written for visual effects were replaced by Cyber Security programs after a short time. Then came C, C#, Bash, Common Lisp languages and Cyber Security programs written with them. Some of my works in this area are as follows:
+"What do the digital arts have to do with computer programming and cybersecurity?" you might say. Visual effects programs have Python programming language modules as well as their own scripting languages. This; a great feature that makes things easier and automates. Python scripts written for visual effects were replaced by Cyber Security programs after a short time. Then came C, Bash, Common Lisp languages and Cyber Security programs written with them. Some of my works in this area are as follows:
 
 [GitHub](https://github.com/nuriacar)|[cevizlab®](/cevizlab/)
 {: style="text-align: center; font-size: 80%;"}
@@ -71,7 +71,7 @@ I hope there is a common thread that we can work with. In such a case, I would b
 
 See you!
 
-**[Nuri ACAR](http://nuriacar.com)**
+**[Nuri ACAR](https://nuriacar.com)**
 
 ---
 
@@ -81,7 +81,9 @@ See you!
 
   + [Introduction to Cyber Security, F-Secure](https://cybersecuritybase.mooc.fi/)
 
-  + [Elements of Artifical Intelligence, Reaktor](https://www.elementsofai.com/)
+  + [Elements of Artifical Intelligence, Reaktor](https://course.elementsofai.com/)
+
+  + [Building AI, Reaktor](https://buildingai.elementsofai.com/)
 
 + [ 9/2020 - 01/2021 (Quit) ] [ [International Akhmet Yassawi Uni. Computer Engineering](https://www.ayu.edu.tr/) ]
 
@@ -137,7 +139,7 @@ See you!
 
 + OS: Windows, Unix-like OS’s
 
-+ Programming Languages: C, C#, Python, Lisp, Bash, MS-DOS, PowerShell
++ Programming Languages: C, Python, Lisp, Bash, MS-DOS, PowerShell
 
 + Programs:
   + CGI & Video:
@@ -146,7 +148,6 @@ See you!
     + Avid: Media Composer
     + Editshare: Lightworks
     + Sony: Vegas
-    + Grass Valley: Edius
     + Blender Foundation: Blender
     + Gimp, Inkscape
 
@@ -164,13 +165,25 @@ See you!
 
 + [ 2/2021 - ... ] [ [LoreSecurity](https://www.loresecurity.com/) ]
 
-  [ Penetration Tester & Coder ]
+  [ Red Team Lead, Penetration Tester & Coder ]
 
-+ [ 8/2019 - ... ] [ [cevizlab](http://nuriacar.com/cevizlab/) & [muucit](http://nuriacar.com/muucit/) ]
+  + Local Network Penetration Test
+
+  + Computer Forensics
+
+  + Phishing, Social Engineering, Mysterious Guest
+
+  + DoS/DDoS
+
+  + Information & Cyber Security Awareness Training
+
+  + Protocol, Standardization, Continuity
+
++ [ 8/2019 - ... ] [ [cevizlab](https://nuriacar.com/cevizlab/) & [muucit](https://nuriacar.com/muucit/) ]
   
   [ Entrepreneur ]
   
-  + [cevizlab: Cyber Arts](http://nuriacar.com/cevizlab/)
+  + [cevizlab: Cyber Arts](https://nuriacar.com/cevizlab/)
   
   + [muucit: Mathematic and Art Toys, Puzzles, Objects](https://www.youtube.com/playlist?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw)
 
