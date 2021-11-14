@@ -163,7 +163,15 @@ See you!
 
 ### **3. Work Experience**
 
-+ [ 2/2021 - ... ] [ [LoreSecurity](https://www.loresecurity.com/) ]
++ [ 8/2019 - ... ] [ [cevizlab](https://nuriacar.com/cevizlab/) & [muucit](https://nuriacar.com/muucit/) ]
+  
+  [ Entrepreneur ]
+  
+  + [cevizlab: Cyber Arts](https://nuriacar.com/cevizlab/)
+  
+  + [muucit: Mathematic and Art Toys, Puzzles, Objects](https://www.youtube.com/playlist?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw)
+
++ [ 2/2021 - 10/2021 ] [ [LoreSecurity](https://www.loresecurity.com/) ]
 
   [ Red Team Lead, Penetration Tester & Coder ]
 
@@ -178,14 +186,6 @@ See you!
   + Information & Cyber Security Awareness Training
 
   + Protocol, Standardization, Continuity
-
-+ [ 8/2019 - ... ] [ [cevizlab](https://nuriacar.com/cevizlab/) & [muucit](https://nuriacar.com/muucit/) ]
-  
-  [ Entrepreneur ]
-  
-  + [cevizlab: Cyber Arts](https://nuriacar.com/cevizlab/)
-  
-  + [muucit: Mathematic and Art Toys, Puzzles, Objects](https://www.youtube.com/playlist?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw)
 
 + [ 10/2019 - 12/2019 ] [ **Freelance** ] [ [StemistLab](http://stemistbox.com) ]
 
