@@ -171,6 +171,22 @@ See you!
   
   + [muucit: Mathematic and Art Toys, Puzzles, Objects](https://www.youtube.com/playlist?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw)
 
++ [11/2021 - ... ] [ [Nefer Defense Inc.](https://nefersavunma.com.tr/) ]
+
+  [ Information Technology & Cyber Security Advisor and Architect ]
+
+  + Information Technology & Cyber Security Advisory and Architecture
+
+  + Protocol, Standardization, Continuity
+
+  + Research & Development
+
+  + Phishing, Social Engineering
+
+  + DoS / DDoS
+
+  + Information & Cyber Security Awareness Training
+
 + [ 2/2021 - 10/2021 ] [ [LoreSecurity](https://www.loresecurity.com/) ]
 
   [ Red Team Lead, Penetration Tester & Coder ]
