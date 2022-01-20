@@ -26,7 +26,7 @@ Bir tehdit aktörü, saldırı yazılımlarına yedi-sekiz haneli rakamlarda öd
 + **Ayda bir Apple iTunes yedekleri alın.** Böylece Af Örgütü'nün MVT (Mobile Verification Toolkit) paketini kullanarak saldırıyı teşhis etmenizi sağlar.
 + **Cihazınızın JailBrake olup olmadığını kontrol eden ve uyarı veren bir uygulama kullanın.** **JailBrake** olmamış bir cihazdan defaaten atılmaktan bıkan saldırganlar bir süre sonra kalıcılık oluşturmak isteyecek, bunun için de JailBrake yapacaklardır. Bu en yüksek saldırı yakalama olasılığı barındıran durum.
 + **Sık sık sistem tanılamayı (sysdiag) çalıştırın ve harici bir diske yedek alın.** Saldırı şüphesi bulunduğunda adli bilişim (**forensics**) uygulanırsa içinden kanıtlar çıkabilir. Sistem tanılama cihaz modeline göre değişiklik gösterebilir. İnternete bakın: **Apple** **SysDiagnose**
-+ **Her zaman trafiğinizi maskeleyen bir VPN kullanın.** İstismar araçları (exploit) **GSM** **aradaki** **adam** **saldırısı** (**MitM**), **DNS** ele geçirme (**hijack**) veya **HTTP** sitelerde gezerken bulaştırılır. **VPN** sizi bunlardan korur ama VPN'lerin hepsi korumaz. Şunlara dikkat edilmeli:
++ **Her zaman trafiğinizi maskeleyen bir VPN kullanın.** İstismar araçları (exploit) **GSM** **aradaki** **adam** **saldırısı** (**MitM**), **DNS** ele geçirme (**hijack**) ile veya **HTTP** sitelerde gezerken bulaştırılır. **VPN** sizi bunlardan korur ama VPN'lerin hepsi korumaz. Şunlara dikkat edilmeli:
 
   - Ücretsiz VPN olmaz! Olur ama güvenli olmaz!
   - Kripto varlıklarla ödeme kabul eden ve kayıt bilgisi vermenizin gerekmeyeceği VPN'lere bakın.
