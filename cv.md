@@ -7,7 +7,7 @@ permalink: /cv/
 ## ☣
 {: style="text-align: center;"}
 
-### [ Digital Arts ] [ Computer Programming ] [ Cyber Security ]
+### [ Cyber Weapon Coder ] [ Intelligence Analyst ]
 {: style="text-align: center;"}
 
 **Contact**|[na@nuriacar.com](mailto:na@nuriacar.com)|+905052827654
@@ -19,52 +19,28 @@ permalink: /cv/
 
 ---
 
-#### **TR [ EN ⇣ ]**
-
-Merhaba.
-
-Ben görsel efekt, video kurgu, ses tasarımı ve film/belgesel müziği besteleri yapmanın yanında bilgisayar programlama (C, Python, Bash, Common Lisp) da yapan bir siber sanatçıyım.
-
-Ortaokul, lise ve üniversite eğitimim devam ederken aynı zamanda Klasik Türk Müziği eğitimi de aldım. Üniversite günlerinde ise işin içine bilgisayar girdi. 2004 senesinde kazandığım İstanbul Üniversitesi Makine Mühendisliği bölümünü bırakarak sinema filmleri, diziler, çizgi filmler, reklamlar, belgeseller, yarışmalar, mobil oyunlar/uygulamalar, canlı yayınlar ve stüdyo albümleri için; 3d animasyon, vfx, video kurgu, senaryo yazımı, ses efekt tasarımı, ses kurgusu, müzik besteleri ve tonmaisterlik yapmaya başladım. Ayrıca dönem dönem çeşitli eğitim kurumlarında yaptığım işlerin eğitimlerini verdim. Bu alanda yaptığım işlerin bir kısmı şu linklerdeler:
-
-**2D/3D, Video Kurgu & Ses Efekt**|[IMDb](https://www.imdb.com/name/nm6932027/)|[Vimeo](https://vimeo.com/nuriacar)
-**Stüdyo Albümleri, Film Müzikleri**|[YouTube](https://youtube.com/user/sirnewage/playlists)|[SoundCloud](https://soundcloud.com/sirnewage/)
-{: style="text-align: center; font-size: 80%;"}
-
-"Dijital sanatların, programlama ve siber güvenlikle ne alakası var?" diyebilirsiniz. Görsel efekt programlarının kendi script dillerinin yanında Python programlama dili modülleri de var. Bu; işleri kolaylaştıran, otomatize eden harika bir özellik. Görsel efekt amaçlı yazılmış Python script'leri, kısa bir süre sonra yerini Siber Güvenlik programlarına bıraktı. Ardından C, Bash, Common Lisp dilleri ve bunlarla yazılmış Siber Güvenlik amaçlı programlar geldi. Bazıları şu linklerdeler:
-
-[GitHub](https://github.com/nuriacar)|[cevizlab®](/cevizlab/)
-{: style="text-align: center; font-size: 80%;"}
-
-Umarım birlikte çalışabileceğimiz ortak bir konu vardır. Böyle bir durumda şu kanallardan iletişime geçmenizden memnuniyet duyarım:
-
-[na@nuriacar.com](mailto:na@nuriacar.com)|+905052827654
-{: style="text-align: center; font-size: 80%;"}
-
-Görüşmek üzere!
-
-**[Nuri ACAR](https://nuriacar.com)**
-
----
-
-#### **EN**
-
 Hi.
 
-I am a cyber artist who also does computer programming (C, Python, Bash, Common Lisp) as well as make visual effects, video editing, sound design, and compose film/documentary soundtrack.
+I am a Cyber Weapon Coder and Intelligence Analyst with a background in the conservatory and audiovisual arts career.
 
-While my secondary school, high school and university education was continuing, I also studied Classical Turkish Music. During my university days, the computer was involved. Quiting the Mechanical Engineering department of Istanbul University, which I won in 2004, for motion pictures, series, cartoons, advertisements, documentaries, competitions, mobile games/applications, live broadcasts and studio albums; I started doing 3d animation, vfx, video editing, scriptwriting, sound effect design, sound editing, musical compositions and audio engineering. In addition, I trained my work at various educational institutions from time to time.
+I do:
 
-**2D/3D, Video Editing & Sound Effects**|[IMDb](https://www.imdb.com/name/nm6932027/)|[Vimeo](https://vimeo.com/nuriacar)
-**Studio Albums, Motion Picture Soundtracks**|[YouTube](https://youtube.com/user/sirnewage/playlists)|[SoundCloud](https://soundcloud.com/sirnewage/)
-{: style="text-align: center; font-size: 80%;"}
++ [Coding with C, Python, Bash, Common Lisp and Julia programming languages]((https://github.com/nuriacar))
++ Intelligence Analysis
++ [Arduino based hacking hardware development](https://nuriacar.com/cevizlab/2020/10/16/badusb.html)
++ Penetration Test
++ Social Engineering
++ Computer Forensics
++ Information Security/Cyber Security Awareness Instructor
++ [Udemy Instructor]((/udemy/))
++ [Developing art and math toys](/muucit/)
 
-"What do the digital arts have to do with computer programming and cybersecurity?" you might say. Visual effects programs have Python programming language modules as well as their own scripting languages. This; a great feature that makes things easier and automates. Python scripts written for visual effects were replaced by Cyber Security programs after a short time. Then came C, Bash, Common Lisp languages and Cyber Security programs written with them. Some of my works in this area are as follows:
+Some of the codes I wrote (less harmful) are at the following links:
 
 [GitHub](https://github.com/nuriacar)|[cevizlab®](/cevizlab/)
 {: style="text-align: center; font-size: 80%;"}
 
-I hope there is a common thread that we can work with. In such a case, I would be pleased that you contact the following channels:
+I hope there is a common thread that we can work with. In such a case, I would be pleased in contact:
 
 [na@nuriacar.com](mailto:na@nuriacar.com)|+905052827654
 {: style="text-align: center; font-size: 80%;"}
@@ -101,45 +77,13 @@ See you!
 
   + Knowledge Graphs for Data Integrity, Innovation and Digitalization in Professional Services (Symeon Vasileiadis, Knowledge Engineer, EngineB)
 
-+ [Bilgi Teknolojileri Kurumu - BTK Academy](https://www.btkakademi.gov.tr)
-
-  + [Cyber Security Analist](https://www.btkakademi.gov.tr/portal/course/siber-guvenlik-analisti-egitimi-5020)
-
-  + [Security Test](https://www.btkakademi.gov.tr/portal/course/guvenlik-testi-online-egitimi-4608)
-
-  + [Linux System Administration](https://www.btkakademi.gov.tr/portal/course/linux-sistem-yonetimi-874)
-  
-  + [Wireless Network Security](https://www.btkakademi.gov.tr/portal/course/kablosuz-ag-guvenligi-900)
-
-  + [Bash Programming Language](https://www.btkakademi.gov.tr/portal/course/bash-programlama-dili-883)
-
-  + [Python Programming Language](https://www.btkakademi.gov.tr/portal/course/python-programlama-dili-891)
-
-  + [Basics of Cryptology](https://www.btkakademi.gov.tr/portal/course/kriptoloji-temelleri-3054)
-
-  + [Introduction to Cellular Systems](https://www.btkakademi.gov.tr/portal/course/hucresel-sistemlere-giris-3051)
-
-  + [Evolution of Cellular Systems](https://www.btkakademi.gov.tr/portal/course/hucresel-sistemlerin-gelisimi-3052)
-
-  + [Introduction to Spectrum Management](https://www.btkakademi.gov.tr/portal/course/spektrum-yonetimine-giris-730)
-
-  + [Personal Information Security](https://www.btkakademi.gov.tr/portal/course/kisisel-bilgi-guvenligi-200)
-
-  + [Secrets of Persuasion](https://www.btkakademi.gov.tr/portal/course/ikna-n-n-s-rlar--259)
-
-  + [Time Management](https://www.btkakademi.gov.tr/portal/course/zaman-yonetimi-3000)
-
-+ Udemy
-
-  + [System Penertation Testing and Ethical Hacking, Alparslan Akyıldız](https://www.udemy.com/course/pentesting_system/)
-
 ---
 
 ### **2. Skill**
 
 + OS: Windows, Unix-like OS’s
 
-+ Programming Languages: C, Python, Lisp, Bash, MS-DOS, PowerShell
++ Programming Languages: C, Python, Common Lisp, Julia, Bash, MS-DOS
 
 + Programs:
   + CGI & Video:

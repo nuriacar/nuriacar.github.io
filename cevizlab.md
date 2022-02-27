@@ -36,7 +36,7 @@ Dear [Law No. 677](https://www.mevzuat.gov.tr/MevzuatMetin/1.3.677.pdf)! My cult
 
 #### **TR [ EN ⇣ ]**
 
-Bash, Python 3, Common Lisp ve C ile Merkezi Nüfus İdare Sistemi'ne (MERNİS) öykünen yeni yetme bir program yazdım. Bence de komik... :) **Özetle; TCNO doğrulaması, geçerli rastgele TCNO üretimi, kişinin potansiyel akrabalarını bulma (soyağacı) (tanımadığınız akrabalarınızı bulabilir ki baya enteresan oluyor), MERNİS sisteminin dağıtabileceği tüm geçerli TCNO havuzunu (geçmiş, şimdi, gelecek) üretebilme vb. işlemler gerçekleştiriyor.** Aşağıdaki **kehtapot**'a veya **ahtapedi**'ye (ahtapot ve kedi birleşimi bir modern zaman canavarı, GitHub maskotu: **Octocat**) tıklayarak kaynak kodlara erişebilirsiniz.
+Bash, Python 3, Common Lisp, Julia ve C ile Merkezi Nüfus İdare Sistemi'ne (MERNİS) öykünen yeni yetme bir program yazdım. Bence de komik... :) **Özetle; TCNO doğrulaması, geçerli rastgele TCNO üretimi, kişinin potansiyel akrabalarını bulma (soyağacı) (tanımadığınız akrabalarınızı bulabilir ki baya enteresan oluyor), MERNİS sisteminin dağıtabileceği tüm geçerli TCNO havuzunu (geçmiş, şimdi, gelecek) üretebilme vb. işlemler gerçekleştiriyor.** Aşağıdaki **kehtapot**'a veya **ahtapedi**'ye (ahtapot ve kedi birleşimi bir modern zaman canavarı, GitHub maskotu: **Octocat**) tıklayarak kaynak kodlara erişebilirsiniz.
 
 [![TRNIDS GitHub](/assets/img/github-icon.png "TRNIDS GitHub")](https://github.com/nuriacar/trnids)
 
@@ -45,7 +45,7 @@ Kaynak Kod Deposu
 
 #### **EN**
 
-I coded a program with Bash, Python 3, Common Lisp and C which is a newbie imitator of the Central Population Management System (MERNİS) of Turkey. I think it's funny too... :) **To sum up, it performs; TRNID verification, valid random TRNID generation, finding potential relatives of the person (family tree) (finding relatives you do not know, which is quite interesting), being able to generate the entire valid TRNID pool (past, present, future) that the MERNİS system can distribute, etc.** You can access the source code by clicking **Octocat** below.
+I coded a program with Bash, Python 3, Common Lisp, Julia and C which is a newbie imitator of the Central Population Management System (MERNİS) of Turkey. I think it's funny too... :) **To sum up, it performs; TRNID verification, valid random TRNID generation, finding potential relatives of the person (family tree) (finding relatives you do not know, which is quite interesting), being able to generate the entire valid TRNID pool (past, present, future) that the MERNİS system can distribute, etc.** You can access the source code by clicking **Octocat** below.
 
 [![TRNIDS GitHub](/assets/img/github-icon.png "TRNIDS GitHub")](https://github.com/nuriacar/trnids)
 
