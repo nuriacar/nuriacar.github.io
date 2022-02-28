@@ -13,11 +13,11 @@ Bu menüde de verdiğim Udemy kurs linkleri ve indirim kuponları yer alıyor. K
 
 ### Bilgi Güvenliği / Siber Güvenlik Farkındalık Eğitimi
 
-Eğitim broşürünü indirmek için lütfen tıklayınız: [Tık!](/assets/pdf/na-bgfe-tr-20220225-brosur.pdf)
+Eğitim broşürünü indirmek için lütfen tıklayınız: [Tık!](/assets/pdf/na-bgfe-tr-20220225-brosur-web.pdf)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2H5S6QvqSxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Eğitime ulaşmak için lütfen aşağıdaki görsele tıklayınız!
 
-[![Bilgi Güvenliği / Siber Güvenlik Farkındalık Eğitimi](/assets/img/na-bgfe-udemy.jpg "Bilgi Güvenliği / Siber Güvenlik Farkındalık Eğitimi")](https://www.udemy.com/course/na-bilgi-guvenligi-farkindalik-egitimi/)
+[![Bilgi Güvenliği / Siber Güvenlik Farkındalık Eğitimi](/assets/img/na-bgfe-tr-kapak.jpg "Bilgi Güvenliği / Siber Güvenlik Farkındalık Eğitimi")](https://www.udemy.com/course/na-bilgi-guvenligi-farkindalik-egitimi/)
 {: style="text-align: center;"}
