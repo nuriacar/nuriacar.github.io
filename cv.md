@@ -25,14 +25,14 @@ I am a Cyber Weapon Coder and Intelligence Analyst with a background in the cons
 
 I do:
 
-+ [Coding with C, Python, Bash, Common Lisp and Julia programming languages]((https://github.com/nuriacar))
++ [Coding with C, Python, Bash, Common Lisp and Julia programming languages](https://github.com/nuriacar)
 + Intelligence Analysis
 + [Arduino based hacking hardware development](https://nuriacar.com/cevizlab/2020/10/16/badusb.html)
 + Penetration Test
 + Social Engineering
 + Computer Forensics
 + Information Security/Cyber Security Awareness Instructor
-+ [Udemy Instructor]((/udemy/))
++ [Udemy Instructor](/udemy/)
 + [Developing art and math toys](/muucit/)
 
 Some of the codes I wrote (less harmful) are at the following links:
