@@ -43,7 +43,7 @@ Select an Option!
 Bu program Merkezi Nüfus İdare Sistemi'ne (MERNİS) öykünen bir yeni yetme.
 Bence de komik... :) **Özetle; TCNO doğrulaması, geçerli rastgele TCNO
 üretimi, kişinin potansiyel akrabalarını bulma (soyağacı) (tanımadığınız
-akrabalarınızı bulabilir ki baya enteresan oluyor), MERNİS sisteminin
+akrabalarınızı bulabilir ki bayağı enteresan oluyor), MERNİS sisteminin
 dağıtabileceği tüm geçerli TCNO havuzunu (geçmiş, şimdi, gelecek) üretebilme
 vb. işlemler gerçekleştiriyor.**
 

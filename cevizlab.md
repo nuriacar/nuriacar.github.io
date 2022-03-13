@@ -32,11 +32,40 @@ Dear [Law No. 677](https://www.mevzuat.gov.tr/MevzuatMetin/1.3.677.pdf)! My cult
 ## ☣
 {: style="text-align: center;"}
 
+### [Keylogger, Screenlogger, Installer, Uninstaller, Archiver](/cevizlab/2022/03/13/logger.html)
+
+#### **TR [ EN ⇣ ]**
+
+Bir gün **Keylogger** ve **Screenlogger** geliştirmek istedim. **Sanıyorum 2019'un Ocak ayı...** Sonuç?
+
+Aşağıdaki **kehtapot**'a veya **ahtapedi**'ye (ahtapot ve kedi birleşimi bir
+modern zaman canavarı, GitHub maskotu: **Octocat**) tıklayarak kaynak kodlara
+erişebilirsiniz.
+
+[![Logger GitHub](/assets/img/github-icon.png "Logger GitHub")](https://github.com/nuriacar/logger)
+
+Kaynak Kod Deposu
+{: style="color:gray; font-size: 80%; text-align: left;"}
+
+#### **EN**
+
+One day I wanted to develop **Keylogger** and **Screenlogger**. **I think it's January of 2019...** So?
+
+You can access the source code by clicking **Octocat** below.
+
+[![Logger GitHub](/assets/img/github-icon.png "Logger GitHub")](https://github.com/nuriacar/logger)
+
+Source Code Repository
+{: style="color:gray; font-size: 80%; text-align: left;"}
+
+## ☣
+{: style="text-align: center;"}
+
 ### [TRNIDS: TR National Identifier Suite](/cevizlab/2020/10/11/mernis-trnids.html)
 
 #### **TR [ EN ⇣ ]**
 
-Bash, Python 3, Common Lisp, Julia ve C ile Merkezi Nüfus İdare Sistemi'ne (MERNİS) öykünen yeni yetme bir program yazdım. Bence de komik... :) **Özetle; TCNO doğrulaması, geçerli rastgele TCNO üretimi, kişinin potansiyel akrabalarını bulma (soyağacı) (tanımadığınız akrabalarınızı bulabilir ki baya enteresan oluyor), MERNİS sisteminin dağıtabileceği tüm geçerli TCNO havuzunu (geçmiş, şimdi, gelecek) üretebilme vb. işlemler gerçekleştiriyor.** Aşağıdaki **kehtapot**'a veya **ahtapedi**'ye (ahtapot ve kedi birleşimi bir modern zaman canavarı, GitHub maskotu: **Octocat**) tıklayarak kaynak kodlara erişebilirsiniz.
+Bash, Python 3, Common Lisp, Julia ve C ile Merkezi Nüfus İdare Sistemi'ne (MERNİS) öykünen yeni yetme bir program yazdım. Bence de komik... :) **Özetle; TCNO doğrulaması, geçerli rastgele TCNO üretimi, kişinin potansiyel akrabalarını bulma (soyağacı) (tanımadığınız akrabalarınızı bulabilir ki bayağı enteresan oluyor), MERNİS sisteminin dağıtabileceği tüm geçerli TCNO havuzunu (geçmiş, şimdi, gelecek) üretebilme vb. işlemler gerçekleştiriyor.** Aşağıdaki **kehtapot**'a veya **ahtapedi**'ye (ahtapot ve kedi birleşimi bir modern zaman canavarı, GitHub maskotu: **Octocat**) tıklayarak kaynak kodlara erişebilirsiniz.
 
 [![TRNIDS GitHub](/assets/img/github-icon.png "TRNIDS GitHub")](https://github.com/nuriacar/trnids)
 

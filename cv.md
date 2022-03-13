@@ -35,7 +35,7 @@ I do:
 + [Udemy Instructor](/udemy/)
 + [Developing art and math toys](/muucit/)
 
-Some of the codes I wrote (less harmful) are at the following links:
+Some of the codes I wrote are at the following links:
 
 [GitHub](https://github.com/nuriacar)|[cevizlab®](/cevizlab/)
 {: style="text-align: center; font-size: 80%;"}
@@ -107,28 +107,35 @@ See you!
 
 ### **3. Work Experience**
 
-+ [ 8/2019 - ... ] [ [cevizlab](https://nuriacar.com/cevizlab/) & [muucit](https://nuriacar.com/muucit/) ]
++ [ 06/2012 - ... ] [ [cevizlab](https://nuriacar.com/cevizlab/) & [muucit](https://nuriacar.com/muucit/) ]
   
   [ Entrepreneur ]
   
   + [cevizlab: Cyber Arts](https://nuriacar.com/cevizlab/)
-  
+    + Cyber Weapon Coding with C, Python, Common Lisp, Julia, Bash, MS-DOS
+    + Artifical Intelligence
+    + Experiencing on Unix-like OS’s.
+    + Cryptography
+    + Cyber Security, Penetration Test
+    + Computer Forensics
+    + Hacking Hardware
+    + Philosophy, Sociology, Psychology, Culture, Analysis
+    + Social Engineering, Manipulation
+    + Intelligence Analysis
+    + Hacker Culture
+    + Information & Cyber Security Awareness
+    + [Udemy](/udemy/)
   + [muucit: Mathematic and Art Toys, Puzzles, Objects](https://www.youtube.com/playlist?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw)
-
+    + Mathematic and Art Toys Design
 + [11/2021 - ... ] [ [Nefer Defense Inc.](https://nefersavunma.com.tr/) ]
 
   [ Information Technology & Cyber Security Advisor and Architect ]
 
   + Information Technology & Cyber Security Advisory and Architecture
-
   + Protocol, Standardization, Continuity
-
   + Research & Development
-
   + Phishing, Social Engineering
-
   + DoS / DDoS
-
   + Information & Cyber Security Awareness Training
 
 + [ 2/2021 - 10/2021 ] [ [LoreSecurity](https://www.loresecurity.com/) ]
@@ -136,15 +143,10 @@ See you!
   [ Red Team Lead, Penetration Tester & Coder ]
 
   + Local Network Penetration Test
-
   + Computer Forensics
-
   + Phishing, Social Engineering, Mysterious Guest
-
   + DoS/DDoS
-
   + Information & Cyber Security Awareness Training
-
   + Protocol, Standardization, Continuity
 
 + [ 10/2019 - 12/2019 ] [ **Freelance** ] [ [StemistLab](http://stemistbox.com) ]
