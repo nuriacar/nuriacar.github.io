@@ -18,7 +18,7 @@ Bu yazı, **FireEye**'ın **APT28: A Window Into Russia’s Cyber Espionage Oper
 
 ## APT28'in NATO, Doğu Avrupa ve Kafkasya İlgisi
 
-**ATP28 siber istihbarat (cyber espionage) odaklı bir grup.** Bu sebeple pek çok domain kiralamış, oltalama epostaları ve bu epostalara eklenecek içinde **zararlı kod** barındıran **sahte dokümanlar** hazırlamış.
+**APT28 siber istihbarat (cyber espionage) odaklı bir grup.** Bu sebeple pek çok domain kiralamış, oltalama epostaları ve bu epostalara eklenecek içinde **zararlı kod** barındıran **sahte dokümanlar** hazırlamış.
 
 ![APT28 Targets 1](/assets/img/apt28-targets-1.jpg "APT28 Targets 1")
 
