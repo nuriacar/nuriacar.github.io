@@ -38,7 +38,7 @@ Diğer bir örnek ise şu:
 
 ![APT28 Gürcü BT Oltalaması](/assets/img/apt28-georgian-it-phishing.jpg "APT28 Gürcü BT Oltalaması")
 
-### Gürcistan Savunma Bakanlığının (MOD) Hedeflenmesi
+### Gürcistan Savunma Bakanlığı'nın (MOD) Hedeflenmesi
 
 **Gürcistan Savunma Bakanlığı**, onları eğiten **Amerikalı** bir **savunma müteahhidi** üzerinden hedef alınıyor.
 
@@ -131,9 +131,9 @@ Modülerliğini açacak olursak, gerektiğinde farklı yeteneklere sahip varyant
 
 Şu şekillerde veri çıkarıyor.
 
-+ HTTP kullanarak C2 ile iletişim.
-+ Eposta sunucusu ile veri (klavye verisi, ofis dokümanları, PGP anahtarları) gönderimi.
-+ Airgap ağlardan veri çıkarmak için yerel dizinler, registry ve USB disklere kopyalama.
++ **HTTP** kullanarak **C2** ile iletişim.
++ **Eposta sunucusu** ile veri (klavye verisi, **ofis dokümanları**, **PGP** anahtarları) gönderimi.
++ **Airgap** ağlardan veri çıkarmak için yerel dizinler, **registry** ve **USB** disklere kopyalama.
 
 Çalışma adımları şöyle:
 
