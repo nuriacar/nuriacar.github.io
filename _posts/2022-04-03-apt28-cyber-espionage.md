@@ -9,22 +9,22 @@ Bu yazı, **FireEye**'ın **APT28: A Window Into Russia’s Cyber Espionage Oper
 
 ---
 
-## **Neden?**
+## Neden?
 
 **MITRE ATT&CK** bakınmam gerekti. Deniz derya... İçinde kaybolmamak ve saldırılara dair anlayışımı kuvvetlendirmesi için yazılmış raporlara göz atmak istedim ve yukarıda bahsettiğim **pdf**'i seçtim. Okurken aldığım notlar bu yazıyı oluşturdu.
 
 ---
 ---
 
-## **APT28'in NATO, Doğu Avrupa ve Kafkasya İlgisi**
+## APT28'in NATO, Doğu Avrupa ve Kafkasya İlgisi
 
 **ATP28 siber istihbarat (cyber espionage) odaklı bir grup.** Bu sebeple pek çok domain kiralamış, oltalama epostaları ve bu epostalara eklenecek içinde **zararlı kod** barındıran **sahte dokümanlar** hazırlamış.
 
-![APT28 Targets 1](../assets/img/apt28-targets-1.jpg "APT28 Targets 1")
+![APT28 Targets 1](/assets/img/apt28-targets-1.jpg "APT28 Targets 1")
 
-![APT28 Targets 2](../assets/img/apt28-targets-2.jpg "APT28 Targets 2")
+![APT28 Targets 2](/assets/img/apt28-targets-2.jpg "APT28 Targets 2")
 
-### **Gürcistan İçişleri Bakanlığı'nın (MIA) Hedeflenmesi**
+### Gürcistan İçişleri Bakanlığı'nın (MIA) Hedeflenmesi
 
 APT28, geliştirdikleri zararlı yazılımları belirli ortamlara göre uyarlıyor. Örneğin, hedeflerinin eposta sunucusunu kullanarak veri çalıyorlar. Örneğin; içinde Gürcü ehliyet numaraları olan sahte ve **zararlı yazılım içeren bir belge**. Bu belgedeki **arka kapı (bakcdoor)** şunları yapmaya çalışıyor:
 
@@ -36,15 +36,15 @@ Diğer bir örnek ise şu:
 
 **Gürcistan, Tiflis, Ortachala** semtine ithafen "MIA Users\Ortachala" referansları içeren **Bilgi Teknolojileri** temalı sahte bir belge. Bu belge, kurum adı olarak "**MIA**" yani **İçişleri Bakanlığı**'nı, yazar olarak "**Beka Nozadze**" isimli sistem yöneticisini, içerik olarak da **Windows XP ve 7** sistemleri için **domain ve kullanıcı grubu kurulum bilgileri** içeriyor. Böyle bir belge tüm **İçişleri Bakanlığı sistem kullanıcıları** için meşru görünür ve bu sayede içinde yer alan zararlı yazılımın çalıştırılması sağlanır.
 
-![APT28 Gürcü BT Oltalaması](../assets/img/apt28-georgian-it-phishing.jpg "APT28 Gürcü BT Oltalaması")
+![APT28 Gürcü BT Oltalaması](/assets/img/apt28-georgian-it-phishing.jpg "APT28 Gürcü BT Oltalaması")
 
-### **Gürcistan Savunma Bakanlığının (MOD) Hedeflenmesi**
+### Gürcistan Savunma Bakanlığının (MOD) Hedeflenmesi
 
 **Gürcistan Savunma Bakanlığı**, onları eğiten **Amerikalı** bir **savunma müteahhidi** üzerinden hedef alınıyor.
 
 APT28, Amerikalı savunma müteahhidi ve Gürcistan Savunma Bakanlığı ortak çalışma grubundakilerin doğum günlerini içeren fakat içinde **SOURFACE** zararlı yazılım indiricisini içeren sahte bir belge ile saldırıyor.
 
-### **Kafkasya'dan Haber Veren Bir Gazetecinin, Ermenistan'ın ve Doğu Avrupa'nın Hedeflenmesi**
+### Kafkasya'dan Haber Veren Bir Gazetecinin, Ermenistan'ın ve Doğu Avrupa'nın Hedeflenmesi
 
 Gazetecileri hedef almak, APT28'e ve sponsorlarına kamuoyunu izleme, muhalifleri belirleme, dezenformasyon yayma veya daha fazla hedeflemeyi kolaylaştırma yolu sağlayabilir.
 
@@ -62,7 +62,7 @@ Gazetecileri hedef almak, APT28'e ve sponsorlarına kamuoyunu izleme, muhalifler
 |q0v.pl, mail.q0v.pl|gov.pl, mail.gov.pl (Polonya Hükümeti)|
 |poczta.mon.q0v.pl|poczta.mon.gov.pl (Polonya Savunma Bakanlığı)|
 
-### **NATO ve Diğer Avrupa Güvenlik Organizasyonlarının Hedeflenmesi**
+### NATO ve Diğer Avrupa Güvenlik Organizasyonlarının Hedeflenmesi
 
 Saldırılardan **NATO** da nasibini almış. Saldırıda kullanılacak sahte domainler ve oltalama epostası ekleri içeriği örnekleri şunlar:
 
@@ -72,23 +72,23 @@ Saldırılardan **NATO** da nasibini almış. Saldırıda kullanılacak sahte do
 |natoexhibitionff14.com|natoexhibition.org (NATO Future Forces 2014 Sergi ve Konferansı)|
 |login-osce.org|osce.org (Organization for Security and Cooperation in Europe)|
 
-![APT28 NATO Oltalaması](../assets/img/apt28-nato-phishing.jpg "APT28 NATO Oltalaması")
+![APT28 NATO Oltalaması](/assets/img/apt28-nato-phishing.jpg "APT28 NATO Oltalaması")
 
-![APT28 NATO Oltalaması Konu Başlıkları](../assets/img/apt28-nato-phishing-mail-subjects.jpg "APT28 NATO Oltalaması Konu Başlıkları")
+![APT28 NATO Oltalaması Konu Başlıkları](/assets/img/apt28-nato-phishing-mail-subjects.jpg "APT28 NATO Oltalaması Konu Başlıkları")
 
-![APT28 NATO UK](../assets/img/apt28-uk-army.jpg "APT28 NATO UK")
+![APT28 NATO UK](/assets/img/apt28-uk-army.jpg "APT28 NATO UK")
 
-![APT28 NATO TR](../assets/img/apt28-tr-army.jpg "APT28 NATO TR")
+![APT28 NATO TR](/assets/img/apt28-tr-army.jpg "APT28 NATO TR")
 
 ---
 
-## **Yetenekli Rus Geliştiriciler**
+## Yetenekli Rus Geliştiriciler
 
 APT28, **uzun vadeli kullanım ve çok yönlülük** için tasarlanmış araçlar oluşturan ve kafa karıştırmak için çaba sarf eden bir grup. Yazdıkları zararlı yazılımlar, taşınabilir çalıştırılabilir (**PE: Portable Executable**) dosyalar olup çeşitli karşı analiz yetenekleri içeriyor. Örneğin; analiz ortamını belirlemek için çalışma zamanı (runtime) kontrolleri, çalışma zamanında (runtime) paketten çıkarılan karıştırılmış stringler, kullanılmayan makine talimatları... Bunlar, analizi yavaşlatıyor.
 
-### **SOURFACE / CORESHELL**
+### SOURFACE / CORESHELL
 
-![SOURFACE Deployment Ecosystem](../assets/img/apt28-sourface-deployment-ecosystem.jpg "SOURFACE Deployment Ecosystem")
+![SOURFACE Deployment Ecosystem](/assets/img/apt28-sourface-deployment-ecosystem.jpg "SOURFACE Deployment Ecosystem")
 
 İndirici (downloader). Örneğin, **oltalama** epostalarına ekli sahte dokümanlar açıldığında çalışır ve **C2** sunucusuna bağlanarak ikinci seviye (**second stage**) bir arka kapı indirir.
 
@@ -107,19 +107,19 @@ Cache-Control: no-cache
 zXeuYq+sq2m1a5HcqyC5Zd6yrC2WNYL989WCHse9qO6c7powrOUh5KY=
 ```
 
-### **EVILTOSS**
+### EVILTOSS
 
 Bu arka kapı; keşif, izleme, kimlik bilgisi hırsızlığı ve kabuk kodu yürütme için, sistem erişimi elde etmek için **SOURFACE** indiricisi aracılığıyla yükleniyor.
 
-### **OLDBAIT**
+### OLDBAIT
 
 Kendisini `%ALLUSERPROFILE%\Application Data\ Microsoft\MediaPlayer\` içine `updatewindws.exe` ('o' yok!) olarak kuran bir kimlik bilgisi toplayıcı.
 
 Şu uygulamalara erişebiliyor:
 
-![Apps detected by CHOPSTICK](../assets/img/apt28-apps-detected-by-chopstick.jpg "Apps detected by CHOPSTICK")
+![Apps detected by CHOPSTICK](/assets/img/apt28-apps-detected-by-chopstick.jpg "Apps detected by CHOPSTICK")
 
-### **CHOPSTICK**
+### CHOPSTICK
 
 Metodik ve çalışkan kodlayıcıların eseri. **C++** ile yazılmış, modülerleştirilmiş, **nesne yönelimli** bir çerçeve kullanan, özel işlevsellik ve esneklik sağlayan bir arka kapı. Bu çerçeve, ortak bir kod tabanını paylaşan kötü amaçlı yazılım türevleri arasında çok çeşitli yeteneklere izin veriyor. **CHOPSTICK**, **SMTP** veya **HTTP** kullanarak harici sunucularla iletişim kurabiliyor.
 
@@ -159,10 +159,10 @@ Cache-Control: no-cache
 1b2x7F4Rsi8_e4N_sYYpu1m7AJcgN6BzDpQYv1P2piFBLBqghXiHY3SIfe8cUHHYojeXfeyyOhw==
 ```
 
-## **Rusya'yı İşaret Eden Bulgular**
+## Rusya'yı İşaret Eden Bulgular
 
 Zararlı yazılımların derlenme (**compile**) zamanları **Moskova** ve **St. Petersburg**'un iş saatleri (Pazartesi - Cuma, 08.00 - 18.00 arası) içinde. Bunun yanında bakılan bir diğer yer de şu: **Portable Executable (PE)** kaynağı "**locale**" denen dil tanımlayıcısını da içerir. Görünen o ki bu zararlı yazılımları, sisteminde **Rusça** dili tanımlı birileri kodlamış.
 
-![APT28 TimeZone](../assets/img/apt28-timezone.jpg "APT28 TimeZone")
+![APT28 TimeZone](/assets/img/apt28-timezone.jpg "APT28 TimeZone")
 
-![APT28 Locale](../assets/img/apt28-locale-lang.jpg "APT28 Locale")
+![APT28 Locale](/assets/img/apt28-locale-lang.jpg "APT28 Locale")
