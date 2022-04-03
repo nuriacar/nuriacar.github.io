@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  APT28 ve Rusya'nın Siber İstihbarat Operasyonları [Siber Güvenlik]
-date:   2022-04-04 12:00:00 +0000
+date:   2022-04-03 12:00:00 +0000
 categories: cevizlab
 ---
 
