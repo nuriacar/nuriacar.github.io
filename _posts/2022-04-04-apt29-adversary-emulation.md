@@ -83,7 +83,7 @@ Payload'un reverse shell üzerinden erişim sağladığı C2 sunucusu önce CMD,
 
 [pupy (CMD)] > `powershell`
 
-### Adım 2: Hızlı Toplama ve Sızma
+### Adım 2: Hızlı Toplama ve Sızdırma
 
 Saldırgan, dosya sisteminde belge ve medya dosyaları aramak ([T1083](https://attack.mitre.org/techniques/T1083/), [T1119](https://attack.mitre.org/techniques/T1119/)), içeriği toplamak ([T1005](https://attack.mitre.org/techniques/T1005/)) ve sıkıştırmak ([T1002](https://attack.mitre.org/versions/v6/techniques/T1002/) / [T1560.001](https://attack.mitre.org/techniques/T1560/001/)) için tek satırlık bir komut çalıştırır. Dosya daha sonra mevcut C2 bağlantısı ([T1041](https://attack.mitre.org/techniques/T1041/)) üzerinden dışa aktarılır.
 
@@ -277,7 +277,7 @@ Parola hash dump'ı alır:
 
 [meterpreter\*] > `run post/windows/gather/credentials/credential_collector`
 
-### Adım 7: Toplama ve Sızma
+### Adım 7: Toplama ve Sızdırma
 
 Saldırgan, ekran görüntülerini ([T1113](https://attack.mitre.org/techniques/T1113/)), kullanıcının panosundaki verileri ([T1115](https://attack.mitre.org/techniques/T1115/)) ve tuş vuruşlarını ([T1056](https://attack.mitre.org/versions/v6/techniques/T1056/) / [T1056.001](https://attack.mitre.org/techniques/T1056/001/)) toplar. Ardından saldırgan tarafından kontrol edilen bir WebDAV paylaşımına ([T1048](https://attack.mitre.org/versions/v6/techniques/T1048/) / [T1048](https://attack.mitre.org/techniques/T1048/003)) sızdırmadan önce sıkıştırılmış ve şifrelenmiş ([T1560](https://attack.mitre.org/versions/v6/techniques/T1560/) / [T1560.001](https://attack.mitre.org/techniques/T1560/001/)) dosyaları toplar ([T1005](https://attack.mitre.org/techniques/T1005/)).
 
