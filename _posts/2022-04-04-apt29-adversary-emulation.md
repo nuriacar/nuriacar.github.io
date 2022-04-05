@@ -55,7 +55,8 @@ Görece ufak operasyonlar yaptıklarında ise operasyonlarına dair önceden yay
 ### Özet
 
 + Senaryo genele yönelik oltalama üzerinden işleyen reverse shell payload ile başlar.
-+ Hedefe karar vermeden önce "parçala ve yakala (smash-and-grap)" tarzı veri toplama ve sızma, gelecekte değerli olabilir ve uzun vadeli istismar için daha gizli kötü amaçlı yazılımlar dağıtabilir.
++ Hedefe karar vermeden önce "parçala ve yakala (smash-and-grab)" tarzında ilk erişilen hedeften hızlı veri toplama ve sızdırma ile sürer.
++ İlk erişilen sistem uzun vadeli istismar için daha gizli kötü amaçlı yazılımlar dağıtma amacıyla kullanılabilir.
 + PowerShell script'leri gibi modüler bileşenler atomik olarak çalıştırılabilir.
 
 ### Adım 1: İlk Erişim
