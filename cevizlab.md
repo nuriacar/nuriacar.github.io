@@ -107,7 +107,7 @@ Source Code Repository
 ## ☣
 {: style="text-align: center;"}
 
-### [Project Muse](/cevizlab/2020/10/13/project_muse.html)
+### [Project Muse](/cevizlab/2020/10/13/project-muse.html)
 
 #### **TR [ EN ⇣ ]**
 
