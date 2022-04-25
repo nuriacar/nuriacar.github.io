@@ -127,7 +127,7 @@ See you!
     + [Udemy](/udemy/)
   + [muucit: Mathematic and Art Toys, Puzzles, Objects](https://www.youtube.com/playlist?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw)
     + Mathematic and Art Toys Design
-+ [11/2021 - ... ] [ [Nefer Defense Inc.](https://nefersavunma.com.tr/) ]
++ [ 11/2021 - 4/2022 ] [ [Nefer Defense Inc.](https://nefersavunma.com.tr/) ]
 
   [ Information Technology & Cyber Security Advisor and Architect ]
 
