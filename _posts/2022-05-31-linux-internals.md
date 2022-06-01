@@ -27,7 +27,7 @@ merak eden;
 + yetmezse "Gölgelerin gücü adına! He`man`!" diye kükreyerek
 
 mevzuyu; incir uyutması gibi kod yazmanın yanında üzerine fındık, fıstık,
-ceviz, tarçın vs. babında yorum satırı ve domüman yazan gerçek hacker'lardan
+ceviz, tarçın vs. babında yorum satırı ve doküman yazan gerçek hacker'lardan
 doğrudan öğrenebilir.
 
 Ah mirim, nerede o eski hacker'lar!
@@ -38,6 +38,12 @@ Ah mirim, nerede o eski hacker'lar!
 ---
 
 ## Uzaktan GNU/Linux Yönetimi
+
+### Telnet
+
+![Ne demek Telnet'e çay yok!](/assets/img/ne-demek-sakire-cay-yok.jpg "Ne demek Telnet'e çay yok!")
+
+Ne demek Telnet'e çay yok!
 
 ### ssh
 
