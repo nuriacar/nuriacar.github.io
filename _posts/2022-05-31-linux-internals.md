@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  GNU/Linux Internals [Purple Teaming] [Siber Güvenlik]
+title:  GNU/Linux Internals [Purple Team] [Siber Güvenlik]
 date:   2022-05-31 12:00:00 +0000
 categories: cevizlab
 ---
