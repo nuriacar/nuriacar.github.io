@@ -81,7 +81,7 @@ Argümanlar gene aynı işi yapıyorlar.
 `ss -anp`
 
 -a: Yalnızca aktif (ESTABLISHED) olanları değil tüm soketleri görüntüler. Bu,
-dinleme (LISTEN) durumunda olan portların da görümntülenmesini sağlar.
+dinleme (LISTEN) durumunda olan portların da görüntülenmesini sağlar.
 
 -n: IP veya portun hizmet isminin çözümlenmemesi isteği. Aksi durumda ağ
 topolojisine bağlı olarak cevap dönme süresi uzar.
@@ -171,7 +171,7 @@ Boot sırasında çağrılan genel lokasyonlar şunlar:
 
 `/etc/rc.local` : Bu konum, kullanıcının boot'ta herhangi bir komutu
 çalıştırmasını sağlar. Çalışması için bir init script'i tarafından çağrılması
-ve rc.local'in execution bit'inin açık olması (bkz. chmod, rwx) gerekir.
+ve rc.local'in execution bit'inin açık olması (Bkz. `chmod`) gerekir.
 
 `/usr/lib/systemd/user/*` : Bu konum, paketler tarafından yüklenen sistemd unit
 dosyaları için default konum. systemd ise, hizmet yöneticisinin modern bir
@@ -203,7 +203,7 @@ birinden çıkış yapılarak nelerin çalıştırıldığı görülebilir.
 
 ## Otomatik Başlayan Process'ler Bölüm 2
 
-GNU/Linux cihazlarda zamanlanmış görevler cronjobs'ler aracılığıyla yapılır.
+GNU/Linux cihazlarda zamanlanmış görevler cronjobs'lar aracılığıyla yapılır.
 Bunlar, kullanıcı veya device crontab'lerinde bulunur. Bu crontab'ler da
 `locate crontab` yazarak bulunur. Tipik olarak bu process'lerin PID'leri, boot
 process PID'lerinden belirgin şekilde daha yüksektir. Aşağıdaki komutlar, bir
@@ -211,19 +211,19 @@ cihazdaki tüm zamanlanmış görevleri görüntüler:
 
 `crontab -al`
 
-Login olan user kimse onun crontab'ını gösterir. Kimisinin crontab'ı, kalbi
+Login olan user kimse onun crontab'ını gösterir. Kimisinin crontab'i, kalbi
 kadar temiz bir sayfa olabilir.
 
 `crontab -u herhangi-bir-user -l`
 
 Başkalarının crontab'ini görüntülemek için makamınıza (root) tahsis edilmiş
 koyu camlı, sirenli, çakarlı aracınız olması gerek. Bu yoksa böyle bir konumda
-yakınınız, defterinde (/etc/sudoers) adınız olması gerek. Bu sadece başkasına
+yakınınız, defterinde (`/etc/sudoers`) adınız olması gerek. Bu sadece başkasına
 ait bir crontab'i görüntülemeye has bir durum değil. Güzel ve yalnız ülkemde
 insanların geneli, teknik birey olsun olmasın bu durumu bilir ve bir çeşit hak
-yeme olduğu için değil yalnızca kendi isimleri de "/etc/sudoers" içinde
-olmadığı için sinirlenir. Çok da şaapmamak(!) lazım zira "Nasılsanız, öyle
-yönetilirsiniz!". Tüm zamanlardan mahlukat adedince selam olsun.
+yeme olduğu için değil yalnızca kendi isimleri de `/etc/sudoers` içinde
+olmadığı için sinirlenir. Çok da şaapmamak(!) lazım zira "**Nasılsanız, öyle
+yönetilirsiniz!**". Tüm zamanlardan mahlukat adedince selam olsun.
 
 `cat /etc/crontab`
 
