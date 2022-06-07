@@ -26,7 +26,7 @@ I am a Cyber Weapon Coder and Intelligence Analyst with a background in the cons
 I do:
 
 + [Coding with C, Rust, Python, Common Lisp, Julia, Bash, PowerShell, MS-DOS programming languages](https://github.com/nuriacar)
-+ Live Fire Excersize Simulation Range Preperation, Deployment, Conducting, Reporting
++ Live Fire Exercise Simulation Range Preperation, Deployment, Conducting, Reporting
 + Advanced Persistent Threat (APT) Research, Adversary Emulation
 + Intelligence Analysis
 + [Arduino based hacking hardware development](https://nuriacar.com/cevizlab/2020/10/16/badusb.html)
@@ -115,7 +115,7 @@ See you!
   
   + [cevizlab: Cyber Arts](https://nuriacar.com/cevizlab/)
     + Cyber Weapon Coding with C, Rust, Python, Common Lisp, Julia, Bash, PowerShell, MS-DOS
-    + Live Fire Excersize Simulation Range Preperation, Deployment, Conducting, Reporting
+    + Live Fire Exercise Simulation Range Preperation, Deployment, Conducting, Reporting
     + Advanced Persistent Threat (APT) Research, Adversary Emulation
     + Artifical Intelligence
     + Experiencing on Unix-like OS’s.
@@ -137,7 +137,7 @@ See you!
   [ Cyber Weapon Coder, Cyber Security Analyst, Purple Teamer ]
 
     + Cyber Weapon Coding with C, Rust, Python, Common Lisp, Julia, Bash, PowerShell, MS-DOS
-    + Live Fire Excersize Simulation Range Preperation, Deployment, Conducting, Reporting
+    + Live Fire Exercise Simulation Range Preperation, Deployment, Conducting, Reporting
     + Advanced Persistent Threat (APT) Research, Adversary Emulation
     + Intelligence Analysis
     + Hacking Hardware
