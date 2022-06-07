@@ -25,7 +25,9 @@ I am a Cyber Weapon Coder and Intelligence Analyst with a background in the cons
 
 I do:
 
-+ [Coding with C, Python, Bash, Common Lisp and Julia programming languages](https://github.com/nuriacar)
++ [Coding with C, Rust, Python, Common Lisp, Julia, Bash, PowerShell, MS-DOS programming languages](https://github.com/nuriacar)
++ Live Fire Excersize Simulation Range Preperation, Deployment, Conducting, Reporting
++ Advanced Persistent Threat (APT) Research, Adversary Emulation
 + Intelligence Analysis
 + [Arduino based hacking hardware development](https://nuriacar.com/cevizlab/2020/10/16/badusb.html)
 + Penetration Test
@@ -83,7 +85,7 @@ See you!
 
 + OS: Windows, Unix-like OS’s
 
-+ Programming Languages: C, Python, Common Lisp, Julia, Bash, MS-DOS
++ Programming Languages: C, Rust, Python, Common Lisp, Julia, Bash, PowerShell, MS-DOS
 
 + Programs:
   + CGI & Video:
@@ -112,11 +114,13 @@ See you!
   [ Entrepreneur ]
   
   + [cevizlab: Cyber Arts](https://nuriacar.com/cevizlab/)
-    + Cyber Weapon Coding with C, Python, Common Lisp, Julia, Bash, MS-DOS
+    + Cyber Weapon Coding with C, Rust, Python, Common Lisp, Julia, Bash, PowerShell, MS-DOS
+    + Live Fire Excersize Simulation Range Preperation, Deployment, Conducting, Reporting
+    + Advanced Persistent Threat (APT) Research, Adversary Emulation
     + Artifical Intelligence
     + Experiencing on Unix-like OS’s.
     + Cryptography
-    + Cyber Security, Penetration Test
+    + Cyber Security, Purple Teaming, Red Teaming, Penetration Test
     + Computer Forensics
     + Hacking Hardware
     + Philosophy, Sociology, Psychology, Culture, Analysis
@@ -127,6 +131,20 @@ See you!
     + [Udemy](/udemy/)
   + [muucit: Mathematic and Art Toys, Puzzles, Objects](https://www.youtube.com/playlist?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw)
     + Mathematic and Art Toys Design
+
++ [ 05/2022 - ... ] [ [ADEO Cyber Security Services Inc.](https://adeo.com.tr) ]
+
+  [ Cyber Weapon Coder, Cyber Security Analyst, Purple Teamer ]
+
+    + Cyber Weapon Coding with C, Rust, Python, Common Lisp, Julia, Bash, PowerShell, MS-DOS
+    + Live Fire Excersize Simulation Range Preperation, Deployment, Conducting, Reporting
+    + Advanced Persistent Threat (APT) Research, Adversary Emulation
+    + Intelligence Analysis
+    + Hacking Hardware
+    + Philosophy, Sociology, Psychology, Culture, Analysis
+    + Social Engineering, Manipulation
+    + Information & Cyber Security Awareness
+
 + [ 11/2021 - 4/2022 ] [ [Nefer Defense Inc.](https://nefersavunma.com.tr/) ]
 
   [ Information Technology & Cyber Security Advisor and Architect ]
