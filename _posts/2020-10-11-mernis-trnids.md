@@ -69,10 +69,12 @@ Kaynak Kod Deposu
 {: style="color:gray; font-size: 80%; text-align: left;"}
 
 Bash, Python 3, Common Lisp, Julia ve C ile kodladım. Benim için özel yanı,
-bilmediğim ama öğrenmeye merak saldığım tüm progrmalama dillerini bu programı
-yazarak öğrenmeye çalışıyor olmam. Bash ve C ile başlayıp Python 3'e port
-ettim, ardından Python 3'ten Common Lisp'e port ettim, ardından tekrar Python
-3'e, ondan da Julia'ya aktardım. Bakalım zamanla daha hangi dillere evrilecek.
+bilmediğim ama öğrenmeye merak saldığım tüm
+[programlama](https://www.youtube.com/watch?v=M4ZoCHID9GI "8444") dillerini bu
+programı yazarak öğrenmeye çalışıyor olmam. Bash ve C ile başlayıp Python 3'e
+port ettim, ardından Python 3'ten Common Lisp'e port ettim, ardından tekrar
+Python 3'e, ondan da Julia'ya aktardım. Bakalım zamanla daha hangi dillere
+evrilecek.
 
 `[ Bash & C ] => [ Python 3 & C ] => [ Common Lisp ] => [ Python 3 & C ] => [ Julia ]`
 
@@ -139,8 +141,8 @@ tabanı olsun isterim. Sorgulanan kişiye dair olabildiğince alakalı veri
 döndürecek.
 
 `4.` TCNO'su girilen kişinin muhtemel(!) akrabalarını buluyor. ("**Aşağıda,
-TCKNO Nedir? Nasıl dağıtılır?**" kısmı sonunda bahsettiğim alakasız kimlik
-numarası verilmesi ihtimalini unutmayın!)
+T.C. Kimlik Numarası (TCNO) nedir? Nasıl dağıtılır?**" kısmı sonunda
+bahsettiğim alakasız kimlik numarası verilmesi ihtimalini unutmayın!)
 
 `5.` Girilen sayı kadar, rastgele oluşturulmuş, geçerli TCNO üretir.
 
@@ -425,7 +427,7 @@ possible on the person of interest.
 
 `4.` Find probable(!) relatives of the person whose TRNID is entered.
 (Remember the possibility of giving an irrelevant ID that I mentioned at the
-end of the "**What is TRNID? How is it distributed?**" section below!)
+end of the "**What is TR Identification Number (TRNID)? How is it distributed?**" section below!)
 
 `5.` Generates a randomly generated valid TRNID for the number of times
 entered.
