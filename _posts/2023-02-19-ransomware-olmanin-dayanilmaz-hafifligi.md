@@ -5,8 +5,6 @@ date:   2023-02-19 12:00:00 +0000
 categories: cevizlab
 ---
 
-## Ransomware Olmanın Dayanılmaz Hafifliği
-
 Nedendir bilinmez lakin **Ransomware** olduğum için içten içe bir haz duymuyorum desem yalan olur. Belki de **Ransomware** olmaktan başka bir şeyi bilmediğim ve bilemeyeceğim içindir. Ah, Milan Kundera! Seni bunca zamandır ayakkabı dükkanı sanıyor olmaktan dolayı nasıl da mahcubum fakat bu başka bir maceranın konusu.
 
 ![Oxfords, not Brogues!](/assets/img/oxfords-not-brogues.jpg "Oxfords, not Brogues!")
@@ -25,7 +23,7 @@ Burada bir es verip spoiler'ı farkedenlere en derin hürmetlerimi sunar; büyü
 
 ![Slow and Deliberate](/assets/img/slow-and-deliberate.jpg "Slow and Deliberate")
 
-Network Beylerbeyi Selahattin Paşa'nın, al gözlü puhusuna 50 kalem çekirge pirzola rüşvet verip kefere üzerinde *B-2 Spirit* gibi *stealth* gezdirerek elde ettiği bilgilere istinaden "Görelim bakalım nece yaman delikanlıymış bu Ransomware Protection" özelliği diyerekten çıktığımız Payitaht'tan, bu heyula kal'aya varmamız için Ay'ın kendi etrafında sekiz kez dönmesi gerekti. Gördük ki gide gide bir *Microsoft Windows* makinesi içinde at koşturan *CommVault Media Agent*'a dayanmışız. "Hem nefeslenelim hem de yetkili bir abiye rastlayıp esvabını çalıp kal'aya sızalım" diyerekten C diskine kamp kurduk; **MitM**, **Access Token Manipulation** vesaire hazırlıklarına koyulduk. Ne de iyi etmişiz zira yumurta satan köylü kılığında askerin arasına sızmanın işe yarar bir yöntem olmadığını, sepeti başımıza çalıp bizden Çelebi'nin hem matbahına hem damağına yaraşır soğanlı yumurta yaptıklarında anladık.
+Network Beylerbeyi Selahattin Paşa'nın, al gözlü puhusuna elli kalem çekirge pirzola rüşvet verip kefere üzerinde *B-2 Spirit* gibi *stealth* gezdirerek elde ettiği bilgilere istinaden "Görelim bakalım nece yaman delikanlıymış bu Ransomware Protection" özelliği diyerekten çıktığımız Payitaht'tan, bu heyula kal'aya varmamız için Ay'ın kendi etrafında sekiz kez dönmesi gerekti. Gördük ki gide gide bir *Microsoft Windows* makinesi içinde at koşturan *CommVault Media Agent*'a dayanmışız. "Hem nefeslenelim hem de yetkili bir abiye rastlayıp esvabını çalıp kal'aya sızalım" diyerekten C diskine kamp kurduk; **MitM**, **Access Token Manipulation** vesaire hazırlıklarına koyulduk. Ne de iyi etmişiz zira yumurta satan köylü kılığında askerin arasına sızmanın işe yarar bir yöntem olmadığını, sepeti başımıza çalıp bizden Çelebi'nin hem matbahına hem damağına yaraşır soğanlı yumurta yaptıklarında anladık.
 
 Kal'adan veri kaçırıp:
 
@@ -47,7 +45,7 @@ Madem öyle, *Arri*'sinin vizörüne gözünü dayayıp "*L'Action"* diyen *Luc 
 
 ![Luc Besson - Leon](/assets/img/luc-besson-leon.jpg "Luc Besson - Leon")
 
-Çelebi'ciğim, yıllar evveli bahçesine diktiği orkidelerden hazırladığı salepini kütüphanesinde yudumlarken taa uzaklardan verdiği komutla beni -Bihter'ini- Bursa işi ipekli .zip arşivinden çıkardığında ne bir siber güvenlik ürünü ne de bir SOC/MDR analist işkillendi.
+Çelebi'ciğim, yıllar evveli bahçesine diktiği orkidelerden hazırladığı salepini kütüphanesinde yudumlarken taa uzaklardan verdiği komutla beni -Bihter'ini- Bursa işi ipekli *.zip* arşivinden çıkardığında ne bir siber güvenlik ürünü ne de bir SOC/MDR analist işkillendi.
 
 ![PowerShell Ejderyası](/assets/img/powershell-ejderyasi.jpg "PowerShell Ejderyası")
 
@@ -77,8 +75,8 @@ Kısa bir afallamanın ardından Çelebi'ciğimle iletişimimi sağlayan C&C sun
 
 ![Şoför Nebahat](/assets/img/sofor-nebahat.jpg "Şoför Nebahat")
 
-Yukarıda bahsettiklerimin yanında suların kesilmesi, Ruşen Amca'nın oğlu Sedat'ın silgiyi camdan atması türevi tırışkadan sebeplerle akamete uğrayan [1. CommVault Muhasarası]((https://tr.wikipedia.org/wiki/I._Viyana_Ku%C5%9Fatmas%C4%B1)), "Ben karşının taksisiyim!" ayağına yatmayan Şoför Nebahat ablamın taksisiyle Buda'dan Peşte'ye geçildikten sonra, akmamakta ısrar eden Tuna'nın doğu yakası takip edilerek Payitaht'a dönülmesiyle, onuncu ayında son buldu.
+Yukarıda bahsettiklerimin yanında suların kesilmesi, Ruşen Amca'nın oğlu Sedat'ın silgimi camdan atması türevi tırışkadan sebeplerle akamete uğrayan [1. CommVault Muhasarası](https://tr.wikipedia.org/wiki/I._Viyana_Ku%C5%9Fatmas%C4%B1), "Ben karşının taksisiyim!" ayağına yatmayan Şoför Nebahat ablamın taksisiyle Buda'dan Peşte'ye geçildikten sonra, akmamakta ısrar eden Tuna'nın doğu yakası takip edilerek Payitaht'a dönülmesiyle, onuncu ayında son buldu.
 
 ![Merzifonlu Kara Mustafa Paşa](/assets/img/merzifonlu-kara-mustafa-pasa.jpg "Merzifonlu Kara Mustafa Paşa")
 
-Kellesine güvenen bir Merzifonlu daha çıkar mı bilinmez lakin menekşe gözlerim [2. CommVault Seferi](https://tr.wikipedia.org/wiki/II._Viyana_Ku%C5%9Fatmas%C4%B1) hülyasında!
+Kellesine güvenen bir Merzifonlu daha çıkar mı bilinmez lakin menekşe gözlerim [2. CommVault Muhasarası](https://tr.wikipedia.org/wiki/II._Viyana_Ku%C5%9Fatmas%C4%B1) hülyasında!
