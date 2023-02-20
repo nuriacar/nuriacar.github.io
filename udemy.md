@@ -15,7 +15,7 @@ Bu menüde de verdiğim Udemy kurs linkleri ve indirim kuponları yer alıyor. K
 
 Eğitim broşürünü indirmek için lütfen tıklayınız: [Tık!](/assets/pdf/na-bgfe-tr-20220301-brosur-web.pdf)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2H5S6QvqSxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NzPwg-YLI_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Eğitime ulaşmak için lütfen aşağıdaki görsele tıklayınız!
 
