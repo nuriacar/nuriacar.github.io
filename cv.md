@@ -7,7 +7,7 @@ permalink: /cv/
 ## ☣
 {: style="text-align: center;"}
 
-### [ Cyber Weapon Coder ] [ Intelligence Analyst ]
+### [ Cyber Weapon Coder ] [ Certified Cyber Range Engineer ]
 {: style="text-align: center;"}
 
 **Contact**|[na@nuriacar.com](mailto:na@nuriacar.com)|+905052827654
@@ -21,12 +21,12 @@ permalink: /cv/
 
 Hi.
 
-I am a Cyber Weapon Coder and Intelligence Analyst with a background in the conservatory and audiovisual arts career.
+I am a Cyber Weapon Coder and Certified Cyber Range Engineer with a background in the conservatory and audiovisual arts career.
 
 I do:
 
 + [Coding with C, Rust, Python, Common Lisp, Julia, Bash, PowerShell, MS-DOS programming languages](https://github.com/nuriacar)
-+ Live Fire Exercise Simulation Range Preperation, Deployment, Conducting, Reporting
++ Cyber Range Live Fire Exercise Simulation, Range Preperation, Deployment, Conducting, Reporting
 + Advanced Persistent Threat (APT) Research, Adversary Emulation
 + Intelligence Analysis
 + [Arduino based hacking hardware development](https://nuriacar.com/cevizlab/2020/10/16/badusb.html)
@@ -70,6 +70,8 @@ See you!
 + [ 9/2004 - 12/2014 (Quit) ] [ [Istanbul Uni. Mechanical Engineering](https://makinemuhendislik.istanbulc.edu.tr/) ]
 
 #### **1.1. Course, Certificate**
+
++ Certified Cyber Range Engineer, [Simspace](https://www.simspace.com/)
 
 + Lisp, Artifical Intelligence, [Enterprise Knowledge Graphs](https://enterprise-kg-cdl-online-meetup.heysummit.com/)
 
@@ -115,7 +117,7 @@ See you!
   
   + [cevizlab: Cyber Arts](https://nuriacar.com/cevizlab/)
     + Cyber Weapon Coding with C, Rust, Python, Common Lisp, Julia, Bash, PowerShell, MS-DOS
-    + Live Fire Exercise Simulation Range Preperation, Deployment, Conducting, Reporting
+    + Cyber Range Live Fire Exercise Simulation, Range Preperation, Deployment, Conducting, Reporting
     + Advanced Persistent Threat (APT) Research, Adversary Emulation
     + Artifical Intelligence
     + Experiencing on Unix-like OS’s.
@@ -134,10 +136,10 @@ See you!
 
 + [ 05/2022 - ... ] [ [ADEO Cyber Security Services Inc.](https://adeo.com.tr) ]
 
-  [ Cyber Weapon Coder, Cyber Security Analyst, Purple Teamer ]
+  [ Cyber Weapon Coder, Certified Cyber Range Engineer, Purple Teamer ]
 
     + Cyber Weapon Coding with C, Rust, Python, Common Lisp, Julia, Bash, PowerShell, MS-DOS
-    + Live Fire Exercise Simulation Range Preperation, Deployment, Conducting, Reporting
+    + Cyber Range Live Fire Exercise Simulation, Range Preperation, Deployment, Conducting, Reporting
     + Advanced Persistent Threat (APT) Research, Adversary Emulation
     + Intelligence Analysis
     + Hacking Hardware
@@ -151,7 +153,6 @@ See you!
 
   + Information Technology & Cyber Security Advisory and Architecture
   + Protocol, Standardization, Continuity
-  + Research & Development
   + Phishing, Social Engineering
   + DoS / DDoS
   + Information & Cyber Security Awareness Training
