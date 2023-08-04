@@ -179,7 +179,7 @@ Besides, I say "product covering all products" because every product that can be
 
 + **Technology Layer**: You can include your network and security products (*router*, *switch*, *SIEM*, *SOAR*, etc.) in the exercise. But keep in mind; You bring your own license.
 
-+ **Emulation Layer**: You can also emulate whatever you have on behalf of architecture, such as *IT*, *Cloud*, *OT*, *IoT* etc.
++ **Emulations Layer**: You can also emulate whatever you have on behalf of architecture, such as *IT*, *Cloud*, *OT*, *IoT* etc.
 
 All of these come together to become **Cyber Range**, or rather **[SimSpace Cyber Range](https://www.simspace.com/)**, because other alternatives may not have these features.
 
