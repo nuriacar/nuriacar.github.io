@@ -5,12 +5,6 @@
 layout: page
 ---
 
-## ☣
-{: style="text-align: center;"}
-
-### [ Cyber Weapon Coder ] [ Certified Cyber Range Engineer ]
-{: style="text-align: center;"}
-
 ![Pegi +18](/assets/img/pegi18-logo.png "Pegi +18 lakin sandığınız gibi değil! :) Pegi +18, but not what you think! :)")
 
 Bu sitede yer alan içerik; ulema, cühela ve ehli dubara'yı; ehli namus, ehli işret ve erbab-ı livata'yı tatmin edecek haldedir. ...ve dahi tüm site içeriği, ben öğrendikçe kendini evriltecektir. İlan, hikayet ve beyan olunur!
