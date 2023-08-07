@@ -7,13 +7,13 @@ categories: cevizlab
 
 #### **TR [ EN ⇣ ]**
 
-*Hanımların dikkatine! Overlok makinesi ayağınıza geldi!*
+![Belediye Apolyası :)](/assets/img/belediye-apolyasi.png "Tikkat! Etrafta kabuklu yemiş, meyve, sebze yiyenlerin vay haline! Sonra vay ben duymadım, vay ben işitmedim demeyin!.. Belediye")
 
-![SimSpace Logo](/assets/img/simspace-logo.png "SimSpace Logo")
+*Hanımların dikkatine! Overlok makinesi ayağınıza geldi!*
 
 Şimdi size 2022 Mayıs'ından beri kendimi parçalarcasına odaklandığım (bugün itibariyle 2000 saate yaklaşıyor) yenilikçi bir teknolojiden bahsedeceğim: Muhterem Hâzirûn! Come closer! Step right up! You will not believe your eyes! Ta daa... Huzurlarınızda **Cyber Range**! **[SimSpace Cyber Range](https://www.simspace.com/)**!
 
-![Belediye Apolyası :)](/assets/img/belediye-apolyasi.png "Tikkat! Etrafta kabuklu yemiş, meyve, sebze yiyenlerin vay haline! Sonra vay ben duymadım, vay ben işitmedim demeyin!.. Belediye")
+![SimSpace Logo](/assets/img/simspace-logo.png "SimSpace Logo")
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LcgG_E9gQJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -147,6 +147,24 @@ Lisanslama, kullanmayı planladığınız sanal makine sayısına göre oluyor. 
 ---
 
 #### **EN**
+
+Ladies and gentlemen!
+
+Boys and girls!
+
+Step right up! step right up!
+
+Come closer! you won't believe your eyes!
+
+Behind this curtain,
+
+Witness something you've never seen before...
+
+Heard before, dreamt before...
+
+The most amazing Cyber Range on Earth!
+
+![SimSpace Logo](/assets/img/simspace-logo.png "SimSpace Logo")
 
 ## What is Cyber Range?
 
