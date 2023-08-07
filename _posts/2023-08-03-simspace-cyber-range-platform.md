@@ -11,7 +11,7 @@ categories: cevizlab
 
 *Hanımların dikkatine! Overlok makinesi ayağınıza geldi!*
 
-Şimdi size 2022 Mayıs'ından beri kendimi parçalarcasına odaklandığım (bugün itibariyle 2000 saate yaklaşıyor) yenilikçi bir teknolojiden bahsedeceğim: Muhterem Hâzirûn! Come closer! Step right up! You will not believe your eyes! Ta daa... Huzurlarınızda **Cyber Range**! **[SimSpace Cyber Range](https://www.simspace.com/)**!
+Şimdi size 2022 Mayıs'ından beri odaklandığım yenilikçi bir teknolojiden bahsedeceğim: Muhterem Hâzirûn! Come closer! Step right up! You will not believe your eyes! Ta daa... Huzurlarınızda **Cyber Range**! **[SimSpace Cyber Range](https://www.simspace.com/)**!
 
 ![SimSpace Logo](/assets/img/simspace-logo.png "SimSpace Logo")
 
