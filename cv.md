@@ -19,9 +19,9 @@ permalink: /cv/
 
 ---
 
-Hi.
+Greetings,
 
-I am a Cyber Weapon Coder and Certified Cyber Range Engineer with a background in the conservatory and audiovisual arts career.
+I am a Cyber Weapon Coder, Certified Cyber Range Engineer and Purple Teamer with a background in the conservatory and audiovisual arts career. My Jungian/MBTI personality type is Architect (INTJ).
 
 I do:
 
@@ -62,6 +62,10 @@ See you!
   + [Elements of Artifical Intelligence, Reaktor](https://course.elementsofai.com/)
 
   + [Building AI, Reaktor](https://buildingai.elementsofai.com/)
+
++ [ 10/2023 - ... ] [ [Anadolu Uni. Management Information Systems](https://www.anadolu.edu.tr/) ]
+
++ [ 9/2022 - 10/2023 (Quit) ] [ [Mimar Sinan Fine Arts Uni. History of Art](https://msgsu.edu.tr/) ]
 
 + [ 9/2020 - 01/2021 (Quit) ] [ [International Akhmet Yassawi Uni. Computer Engineering](https://www.ayu.edu.tr/) ]
 
@@ -119,9 +123,8 @@ See you!
     + Cyber Weapon Coding with C, Rust, Python, Common Lisp, Julia, Bash, PowerShell, MS-DOS
     + Cyber Range Live Fire Exercise Simulation, Range Preperation, Deployment, Conducting, Reporting
     + Advanced Persistent Threat (APT) Research, Adversary Emulation
-    + Artifical Intelligence
+    + Threat Modeling & Analysis, Risk Management
     + Experiencing on Unix-like OS’s.
-    + Cryptography
     + Cyber Security, Purple Teaming, Red Teaming, Penetration Test
     + Computer Forensics
     + Hacking Hardware
@@ -142,6 +145,7 @@ See you!
     + Cyber Range Live Fire Exercise Simulation, Range Preperation, Deployment, Conducting, Reporting
     + Advanced Persistent Threat (APT) Research, Adversary Emulation
     + Intelligence Analysis
+    + Threat Modeling & Analysis, Risk Management
     + Hacking Hardware
     + Philosophy, Sociology, Psychology, Culture, Analysis
     + Social Engineering, Manipulation
