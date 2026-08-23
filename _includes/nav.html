@@ -1,0 +1,46 @@
+<header class="nav" role="banner">
+  <div class="nav__inner">
+    <a class="nav__brand" href="/">{{ site.title | escape }}</a>
+
+    <nav aria-label="Site gezinmesi">
+      <ul class="nav__links">
+        {% for path in site.header_pages %}
+          {% assign p = site.pages | where: 'path', path | first %}
+          {% if p %}
+            <li>
+              <a class="nav__link{% if page.url == p.url %} nav__link--active{% endif %}" href="{{ p.url | default: '/' }}">{% assign nav_label = p.nav_title | default: p.title %}{{ nav_label | escape }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <div class="nav__right">
+      <div class="nav__search">
+        <input type="search" class="search__input" id="search-input"
+               placeholder="ara" aria-label="Site içinde ara"
+               autocomplete="off" spellcheck="false">
+        <div class="search__results nav__dropdown" id="search-results" role="listbox" aria-label="Arama sonuçları"></div>
+      </div>
+
+      <button class="nav__theme" id="theme-toggle" type="button" aria-label="Karanlık / aydınlık tema değiştir" title="Tema değiştir"></button>
+
+      <button class="nav__toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile" aria-label="Menüyü aç / kapat">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+    </div>
+  </div>
+
+  <ul class="nav__mobile nav__dropdown" id="nav-mobile">
+    {% for path in site.header_pages %}
+      {% assign p = site.pages | where: 'path', path | first %}
+      {% if p %}
+        <li>
+          <a class="nav__link{% if page.url == p.url %} nav__link--active{% endif %}" href="{{ p.url | default: '/' }}">{% assign nav_label = p.nav_title | default: p.title %}{{ nav_label | escape }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</header>

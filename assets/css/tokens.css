@@ -1,0 +1,143 @@
+/*
+ * Bauhaus Minimal Web Design System — nuriacar.com
+ * Katman 1: Ham tokenlar (renk paleti, spacing, tipografi, layout) + @font-face
+ * Kural: Hex/rgba yalnızca bu dosyadaki :root --c-* tanımlarında ve
+ * accent/mode katman dosyalarında yaşar. Bileşen CSS'lerinde sıfır hardcode renk.
+ */
+
+/* ---------- Fontlar (self-host, woff2) ---------- */
+
+
+
+
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/ubuntu-mono-latin-ext-400.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/ubuntu-mono-latin-400.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/ubuntu-mono-latin-ext-700.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/ubuntu-mono-latin-700.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ---------- Ham palet (28 sabit) ---------- */
+
+:root {
+  /* Yeşil / turkuaz */
+  --c-seafoam: #8DDCDC;
+  --c-teal: #069494;
+  --c-olive-green: #636B2F;
+  --c-verdigris: #43B3AE;
+  --c-blue-green: #00CEC8;
+  --c-light-sea-green: #20B2AA;
+  /* Mavi / camgöbeği */
+  --c-dark-turquoise: #00CED1;
+  --c-peacock-blue: #096C6C;
+  --c-cerulean: #007BA7;
+  --c-slate-blue: #557C99;
+  --c-dark-cyan: #008B8B;
+  /* Kırmızı / pembe / mor */
+  --c-cherry: #D20A2E;
+  --c-byzantium: #702963;
+  --c-boysenberry: #873260;
+  --c-blush: #DE5D83;
+  --c-raspberry: #E30B5D;
+  --c-salmon-pink: #FF91A4;
+  /* Toprak / bej */
+  --c-beige: #EDE8D0;
+  --c-almond: #EED9C4;
+  --c-parchment: #F1E9D2;
+  --c-eggshell: #F0EAD6;
+  --c-xanadu: #738678;
+  /* Nötr */
+  --c-cool-gray: #CBCBCB;
+  --c-charcoal: #4A4A4A;
+  --c-warm-gray: #A49A87;
+  /* Solarized */
+  --c-base03: #002b36;
+  /* Sarı / turuncu */
+  --c-amber: #FFBF00;
+  --c-mango: #FDBE02;
+  --c-jasmine: #F8DE7E;
+
+  /* ---------- Yazı tipleri ---------- */
+  --fn-mono: 'Ubuntu Mono', ui-monospace, 'JetBrains Mono', monospace;
+
+  /* ---------- Spacing: 4px atom skalası ---------- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 2.5rem;
+  --sp-8: 4rem;
+
+  /* ---------- Tipografi skalası ---------- */
+  --fs-hero: clamp(2rem, 4vw, 3rem);
+  --fs-h1: 1.875rem;
+  --fs-h2: 1.5rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1.125rem;
+  --fs-label: 0.875rem;
+  --fs-micro: 0.75rem;
+  --fs-nav: 1rem;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 800;
+  --lh-tight: 1.2;
+  --lh-body: 1.6;
+  --lh-relaxed: 1.7;
+  --ls-label: 0.3em;
+  --ls-title: 0.2em;
+  --ls-mid: 0.15em;
+  --ls-tight: 0.1em;
+
+  /* ---------- Layout ---------- */
+  --max-width: 75rem;
+  --reading: 50rem;
+  --nav-h: 4rem;
+  --section-gap: calc(var(--sp-8) + var(--sp-7));
+  --section-gap-m: var(--sp-8);
+  --card-pad: var(--sp-6);
+  --gap: var(--sp-4);
+  --page-pad: var(--sp-7);
+  --page-pad-m: var(--sp-5);
+  --grid-dot: var(--sp-4);
+  --dot-size: 0.5px;
+  --marker-size: 8px;
+
+  /* ---------- Kenar / hareket ---------- */
+  --border: 1px;
+  --br-zero: 0;
+  --an-speed: 0.3s;
+  --an-speed-fast: 0.2s;
+}

@@ -1,0 +1,339 @@
+/*
+ * Katman 5 — Gezinme: sabit üst çubuk, arama, tema düğmesi, mobil menü.
+ */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-h);
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: var(--border) solid var(--accent-dark);
+}
+
+.nav__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  height: 100%;
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+.nav__brand {
+  font-family: var(--fn-mono);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-title);
+  color: var(--text-bright);
+  white-space: nowrap;
+  justify-self: start;
+}
+
+.nav__brand:hover {
+  color: var(--accent-bright);
+  text-decoration: none;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  list-style: none;
+  justify-self: center;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.nav__link {
+  font-family: var(--fn-mono);
+  font-size: var(--fs-body);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-mid);
+  color: var(--text-dim);
+  white-space: nowrap;
+  padding: var(--sp-1) 0;
+  border-bottom: 2px solid transparent;
+  transition: color var(--an-speed-fast) ease, border-color var(--an-speed-fast) ease;
+}
+
+.nav__right {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.nav__link:hover {
+  color: var(--text-bright);
+  text-decoration: none;
+}
+
+.nav__link--active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.nav__link--active:hover {
+  color: var(--accent-bright);
+}
+
+/* ---------- Arama ---------- */
+
+.nav__search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search__input {
+  font-family: var(--fn-mono);
+  font-size: var(--fs-body);
+  color: var(--text-bright);
+  background: var(--bg-dark);
+  border: var(--border) solid var(--accent-border);
+  border-radius: var(--br-zero);
+  padding: var(--sp-2) var(--sp-3);
+  width: 14rem;
+  transition: width var(--an-speed) ease, border-color var(--an-speed) ease;
+}
+
+.search__input::placeholder {
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-mid);
+}
+
+.search__input:focus {
+  outline: none;
+  border-color: var(--accent);
+  width: 18rem;
+}
+
+.search__results {
+  position: fixed;
+  width: min(26rem, calc(100vw - 2 * var(--page-pad)));
+  max-height: 60vh;
+  overflow-y: auto;
+  background: var(--bg-dark);
+  border: var(--border) solid var(--accent-border);
+  display: none;
+}
+
+
+
+.search__results.is-open {
+  display: block;
+}
+
+.search__result {
+  display: block;
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: var(--border) solid var(--accent-border);
+}
+
+.search__result:last-child {
+  border-bottom: 0;
+}
+
+.search__result:hover,
+.search__result.is-selected {
+  background: var(--bg-mid);
+  text-decoration: none;
+}
+
+.search__result-title {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  color: var(--text-bright);
+  line-height: var(--lh-tight);
+}
+
+.search__result:hover .search__result-title,
+.search__result.is-selected .search__result-title {
+  color: var(--accent-bright);
+}
+
+.search__result-meta {
+  font-family: var(--fn-mono);
+  font-size: var(--fs-body);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-mid);
+  color: var(--text-dim);
+  margin-top: var(--sp-1);
+}
+
+.search__empty {
+  font-family: var(--fn-mono);
+  font-size: var(--fs-body);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-mid);
+  color: var(--text-dim);
+  padding: var(--sp-3) var(--sp-4);
+}
+
+/* ---------- Tema düğmesi ---------- */
+
+.nav__theme {
+  font-family: var(--fn-mono);
+  font-size: var(--fs-body);
+  line-height: 1;
+  color: var(--text-dim);
+  background: transparent;
+  border: var(--border) solid var(--accent-border);
+  border-radius: var(--br-zero);
+  width: var(--sp-7);
+  height: var(--sp-7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color var(--an-speed-fast) ease, border-color var(--an-speed-fast) ease;
+}
+
+.nav__theme:hover {
+  color: var(--accent-bright);
+  border-color: var(--accent);
+}
+
+[data-mode="dark"] .nav__theme::after {
+  content: "☀";
+}
+
+[data-mode="light"] .nav__theme::after {
+  content: "☾";
+}
+
+/* ---------- Mobil menü ---------- */
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: var(--sp-7);
+  height: var(--sp-7);
+  background: transparent;
+  border: var(--border) solid var(--accent-border);
+  border-radius: var(--br-zero);
+  cursor: pointer;
+  padding: 0;
+  align-items: center;
+}
+
+.nav__toggle-bar {
+  display: block;
+  width: 1rem;
+  height: 2px;
+  background: var(--text-light);
+  transition: transform var(--an-speed-fast) ease, opacity var(--an-speed-fast) ease;
+}
+
+.nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.nav__mobile {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .nav__inner {
+    display: flex;
+    gap: var(--sp-3);
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav__right {
+    margin-left: auto;
+    gap: var(--sp-2);
+  }
+
+  .search__input {
+    width: 7.5rem;
+  }
+
+  .nav__mobile .nav__link {
+    display: block;
+    padding: var(--sp-2) 0;
+    font-size: var(--fs-body);
+    border-bottom: var(--border) solid var(--accent-border);
+  }
+}
+
+/* ---------- Hamburger varsayılan (tüm ekranlar) ----------
+   Kalabalık yatay menü kalkar; nav her zaman hamburger + açılır liste.
+   Dropdown'un sağ kenarı = hamburger butonunun sağ kenarı: nav__right'a
+   absolute bağlanır (nav__right: relative). */
+
+.nav__links {
+  display: none;
+}
+
+.nav__toggle {
+  display: flex;
+}
+
+/* ---------- Standart açılır panel (header altı + içerik sağı hizası) ----------
+   .nav__dropdown: hem menü hem arama sonuçları bu geometriyi paylaşır.
+   top = header altı (--nav-h); sağ kenar = nav__inner sağ içerik hizası. */
+
+.nav__dropdown {
+  top: var(--nav-h);
+  right: 50%;
+  left: auto;
+  transform: translateX(calc(var(--max-width) / 2 - var(--page-pad)));
+}
+
+@media (min-width: 75rem) /* = --max-width */ {
+  .nav__dropdown {
+    transform: none;
+    right: calc(50% - var(--max-width) / 2 + var(--page-pad));
+  }
+}
+
+.nav__mobile {
+  display: none;
+  position: absolute;
+  width: min(20rem, calc(100vw - 2 * var(--page-pad)));
+  background: var(--bg-deep);
+  border: var(--border) solid var(--accent-dark);
+  list-style: none;
+  padding: var(--sp-2) var(--sp-4) var(--sp-4);
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.nav__mobile.is-open {
+  display: flex;
+}
+
+.nav__mobile .nav__link {
+  display: block;
+  padding: var(--sp-2) 0;
+  font-size: var(--fs-body);
+  border-bottom: var(--border) solid var(--accent-border);
+}

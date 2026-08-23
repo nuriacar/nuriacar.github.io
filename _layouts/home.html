@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<div class="page__inner">
+  <div class="reading">
+    {% if page.content and page.content != '' %}
+    <div class="content content--intro">
+      {{ content }}
+    </div>
+    {% endif %}
+
+    <section>
+      <div class="section-header">
+        <span class="section-marker"></span>
+        <span class="section-title">yazılar · {{ site.posts | size }}</span>
+      </div>
+
+      <div class="post-meta post-meta--filters">
+        {% for topic in site.data.topics %}
+          {% assign count = site.tags[topic.slug] | size %}
+          <a class="chip" href="/konu/{{ topic.slug }}/">{{ topic.title }} · {{ count }}</a>
+        {% endfor %}
+      </div>
+
+      <div class="cards">
+        {% for post in site.posts %}
+          {% include post-card.html post=post %}
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</div>

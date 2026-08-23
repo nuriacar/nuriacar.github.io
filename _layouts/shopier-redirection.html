@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr" data-accent="teal" data-mode="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="2; URL=https://shopier.com/nuriacar">
+  <script src="/assets/js/theme-init.js?v={{ site.asset_version }}"></script>
+  {% seo %}
+  <link rel="icon" href="/favicon.ico">
+  <link type="application/atom+xml" rel="alternate" href="{{ '/feed.xml' | absolute_url }}" title="{{ site.title | escape }}">
+  <link rel="stylesheet" href="/assets/css/tokens.css?v={{ site.asset_version }}">
+  <link rel="stylesheet" href="/assets/css/accent/teal.css?v={{ site.asset_version }}">
+  <link rel="stylesheet" href="/assets/css/mode/dark.css?v={{ site.asset_version }}">
+  <link rel="stylesheet" href="/assets/css/mode/light.css?v={{ site.asset_version }}">
+  <link rel="stylesheet" href="/assets/css/base.css?v={{ site.asset_version }}">
+  <link rel="stylesheet" href="/assets/css/nav.css?v={{ site.asset_version }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+  {% include nav.html %}
+  <main id="main" class="page" aria-label="İçerik">
+    <div class="page__inner">
+      <div class="error-page">
+        <h1 class="error-page__title">store</h1>
+        <p>Mağazaya yönlendiriliyorsunuz.</p>
+        <p>You are being redirected to the store.</p>
+        <p><img src="/assets/img/spock-salute.png" alt="Spock Salute"></p>
+        <p><a class="btn btn--solid" href="https://shopier.com/nuriacar">beklemek istemiyorum ›</a></p>
+      </div>
+    </div>
+  </main>
+  {% include footer.html %}
+  <script src="/assets/js/main.js?v={{ site.asset_version }}" defer></script>
+</body>
+</html>

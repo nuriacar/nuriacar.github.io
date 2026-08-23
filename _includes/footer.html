@@ -1,0 +1,30 @@
+<footer class="site-footer h-card" role="contentinfo">
+  <div class="footer-inner">
+    <div>
+      <data class="p-name" value="{{ site.title | escape }}"></data>
+      <div class="footer__title"><a href="/">{{ site.title | escape }}</a></div>
+      <p class="footer__tagline">{{ site.description | escape }}</p>
+    </div>
+
+    <div>
+      <div class="footer__label">İletişim</div>
+      <ul class="footer__list">
+        <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li><a href="/store/">store</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer__label">Sosyal</div>
+      <ul class="footer__list">
+        {% if site.github_username %}
+        <li><a href="https://github.com/{{ site.github_username }}">github</a></li>
+        {% endif %}
+        {% if site.linkedin_username %}
+        <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">linkedin</a></li>
+        {% endif %}
+        <li><a href="{{ '/feed.xml' | absolute_url }}">rss</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

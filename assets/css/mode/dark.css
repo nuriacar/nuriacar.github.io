@@ -1,0 +1,14 @@
+/* Katman 3 — Mod: dark (varsayılan). Solarized Dark. Tam 9 token çözer. */
+
+[data-mode="dark"] {
+  color-scheme: dark;
+  --bg-deep: var(--c-base03);
+  --bg-dark: #073642;
+  --bg-mid: #0a4a5c;
+  --nav-bg: color-mix(in srgb, var(--c-base03) 92%, transparent);
+  --text-light: #93a1a1;
+  --text-dim: #586e75;
+  --text-bright: #e0f2f1;
+  --dot-color: color-mix(in srgb, var(--c-teal) 25%, transparent);
+  --gold: #b58900;
+}

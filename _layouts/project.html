@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="page__inner">
+  <div class="reading">
+    {% if page.eyebrow %}
+    <header class="section-header section-header--page">
+      <span class="section-marker"></span>
+      <span class="section-title">{{ page.eyebrow }}</span>
+    </header>
+    {% endif %}
+
+    {% if page.title %}
+    <h1 class="page-title">{{ page.title | escape }}</h1>
+    {% endif %}
+
+    <div class="content">
+      {{ content }}
+    </div>
+  </div>
+</div>

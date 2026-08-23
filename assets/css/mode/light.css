@@ -1,0 +1,39 @@
+/* Katman 3 — Mod: light. Buzlu turkuaz. Tam 9 token çözer. */
+
+[data-mode="light"] {
+  color-scheme: light;
+  --bg-deep: #EBF4F6;
+  --bg-dark: #d6eaed;
+  --bg-mid: #c0dce1;
+  --nav-bg: color-mix(in srgb, var(--bg-deep) 92%, transparent);
+  --text-light: #09637E;
+  --text-dim: #3a8a9e;
+  --text-bright: #04303d;
+  --dot-color: var(--c-base03);
+  --gold: #b58900;
+  /* Light modda parlak aksan okunmuyor: dark mod zemin tonuna iner */
+  --accent-bright: var(--c-base03);
+}
+
+/* Kod vurgusu: light zeminde açık renkler okunmaz — koyu palet tokenlarına iner */
+[data-mode="light"] .highlight .s,
+[data-mode="light"] .highlight .s1,
+[data-mode="light"] .highlight .s2,
+[data-mode="light"] .highlight .sd,
+[data-mode="light"] .highlight .se,
+[data-mode="light"] .highlight .si,
+[data-mode="light"] .highlight .sr,
+[data-mode="light"] .highlight .sx { color: var(--c-teal); }
+
+[data-mode="light"] .highlight .m,
+[data-mode="light"] .highlight .mf,
+[data-mode="light"] .highlight .mh,
+[data-mode="light"] .highlight .mi,
+[data-mode="light"] .highlight .il,
+[data-mode="light"] .highlight .mo { color: var(--gold); }
+
+[data-mode="light"] .highlight .nf,
+[data-mode="light"] .highlight .nc,
+[data-mode="light"] .highlight .nb,
+[data-mode="light"] .highlight .nx,
+[data-mode="light"] .highlight .nt { color: var(--c-peacock-blue); }

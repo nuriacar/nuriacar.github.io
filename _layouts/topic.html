@@ -1,0 +1,35 @@
+---
+layout: default
+---
+{% assign topic_posts = site.tags[page.topic] %}
+
+<div class="page__inner">
+  <div class="reading">
+    <nav class="breadcrumb" aria-label="Yol">
+      <a href="/">nuri</a>
+      <span class="breadcrumb__sep">›</span>
+      <a href="/blog/">blog</a>
+      <span class="breadcrumb__sep">›</span>
+      <span>{{ page.title | escape }}</span>
+    </nav>
+
+    <header class="section-header">
+      <span class="section-marker"></span>
+      <span class="section-title">konu · {{ topic_posts | size }} yazı</span>
+    </header>
+
+    <h1 class="page-title">{{ page.title | escape }}</h1>
+
+    {% if page.content and page.content != '' %}
+    <div class="content content--intro">
+      {{ content }}
+    </div>
+    {% endif %}
+
+    <div class="cards">
+      {% for post in topic_posts %}
+        {% include post-card.html post=post %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+/* Katman 2 — Aksan: teal (varsayılan). Tam 4 token çözer. */
+
+[data-accent="teal"] {
+  --accent: var(--c-teal);
+  --accent-bright: var(--c-seafoam);
+  --accent-dark: var(--c-peacock-blue);
+  --accent-border: rgba(6, 148, 148, 0.12);
+}

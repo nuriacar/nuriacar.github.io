@@ -1,0 +1,11 @@
+{% assign post = include.post %}
+<article class="card">
+  <div class="card__meta">
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time>
+    {% for t in post.tags %}
+      {% assign topic = site.data.topics | where: 'slug', t | first %}
+      {% if topic %}<span class="chip--sep">·</span><a class="chip" href="/konu/{{ t }}/">{{ topic.title }}</a>{% endif %}
+    {% endfor %}
+  </div>
+  <h3 class="card__title"><a href="{{ post.url }}">{{ post.title | escape }}</a></h3>
+</article>

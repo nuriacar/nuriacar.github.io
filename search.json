@@ -1,0 +1,10 @@
+---
+layout: null
+---
+[
+{% assign items = site.posts %}
+{% for item in items %}
+{% assign txt = item.content | strip_html | newline_to_br | split: '<br />' | join: ' ' | strip | truncate: 4000 %}
+{"title": {{ item.title | strip_html | jsonify }}, "url": {{ item.url | jsonify }}, "date": {{ item.date | date: '%Y-%m-%d' | jsonify }}, "topics": {{ item.tags | jsonify }}, "text": {{ txt | jsonify }}}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

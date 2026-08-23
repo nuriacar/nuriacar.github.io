@@ -1,0 +1,97 @@
+---
+layout: default
+---
+{% assign primary_tag = page.tags | first %}
+{% assign primary_topic = site.data.topics | where: 'slug', primary_tag | first %}
+{% assign plist = site.tags[primary_tag] | sort: 'date' %}
+{% assign pidx = -1 %}
+{% for p in plist %}
+  {% if p.id == page.id %}{% assign pidx = forloop.index0 %}{% endif %}
+{% endfor %}
+{% assign prev_idx = pidx | minus: 1 %}
+{% assign next_idx = pidx | plus: 1 %}
+
+<div class="page__inner">
+  <article class="reading">
+    <nav class="breadcrumb" aria-label="Yol">
+      <a href="/">nuri</a>
+      <span class="breadcrumb__sep">›</span>
+      <a href="/blog/">blog</a>
+      {% if primary_topic %}
+      <span class="breadcrumb__sep">›</span>
+      <a href="/konu/{{ primary_tag }}/">{{ primary_topic.title }}</a>
+      {% endif %}
+    </nav>
+
+    <h1 class="page-title">{{ page.title | escape }}</h1>
+
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y-%m-%d' }}</time>
+      {% assign words = page.content | strip_html | split: ' ' | size %}
+      {% assign mins = words | divided_by: 200 %}
+      {% assign rem = words | modulo: 200 %}
+      {% if rem > 0 %}{% assign mins = mins | plus: 1 %}{% endif %}
+      <span class="post-meta__sep">·</span>
+      <span>~{{ mins }} dk</span>
+      {% for t in page.tags %}
+        {% assign topic = site.data.topics | where: 'slug', t | first %}
+        {% if topic %}
+        <span class="post-meta__sep">·</span>
+        <a class="chip" href="/konu/{{ t }}/">{{ topic.title }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="content content--post">
+      {{ content }}
+    </div>
+
+    <nav class="pager" aria-label="Yazı gezinmesi">
+      {% assign prev_post = null %}
+      {% assign next_post = null %}
+      {% for p in plist %}
+        {% if forloop.index0 == prev_idx %}{% assign prev_post = p %}{% endif %}
+        {% if forloop.index0 == next_idx %}{% assign next_post = p %}{% endif %}
+      {% endfor %}
+
+      {% if prev_post %}
+      <a class="pager__item" href="{{ prev_post.url }}">
+        <span class="pager__label">‹ önceki</span>
+        <span class="pager__title">{{ prev_post.title | escape }}</span>
+      </a>
+      {% else %}
+      <a class="pager__item" href="/blog/">
+        <span class="pager__label">‹</span>
+        <span class="pager__title">tüm yazılar</span>
+      </a>
+      {% endif %}
+
+      {% if next_post %}
+      <a class="pager__item pager__item--next" href="{{ next_post.url }}">
+        <span class="pager__label">sonraki ›</span>
+        <span class="pager__title">{{ next_post.title | escape }}</span>
+      </a>
+      {% else %}
+      <a class="pager__item pager__item--next" href="/blog/">
+        <span class="pager__label">›</span>
+        <span class="pager__title">tüm yazılar</span>
+      </a>
+      {% endif %}
+    </nav>
+
+    {% assign related = site.tags[primary_tag] | where_exp: 'p', 'p.id != page.id' | limit: 3 %}
+    {% if related.size > 0 %}
+    <section>
+      <div class="section-header section-header--block">
+        <span class="section-marker"></span>
+        <span class="section-title">ilgili yazılar</span>
+      </div>
+      <div class="cards">
+        {% for p in related %}
+          {% include post-card.html post=p %}
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  </article>
+</div>
