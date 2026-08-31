@@ -47,7 +47,7 @@ permalink: /sozluk/
 - <span id="baiting"></span>**Baiting** (Yemleme): Kurbanı bir ödül veya merak uyandıran dosyayla kandırma. Sosyal mühendislik yöntemlerinden biridir.
 - <span id="base64"></span>**base64**: İkili veriyi ASCII metne çeviren kodlama; şifreleme DEĞİL. SMTP AUTH LOGIN kimlikleri ve e-posta ekleri bu formatta taşınır; `base64 -d` ile anında geri çözülür.
 - <span id="baseline"></span>**Baseline** (Referans Profil): Bir ağın veya sistemin "normal" halinin ölçülmüş profili. Anomali tespiti normali bilmekle başlar; saldırı, baseline'dan sapma olarak görünür.
-- <span id="beacon"></span>**Beacon** (Fener): Ele geçirilmiş cihazın C2 sunucusuna düzenli aralıklarla gönderdiği haberleşme sinyali. Düşük jitter'lı (zamanlama sapması az) düzenli trafik, tipik imzasıdır.
+- <span id="beacon"></span>**Beacon** (Fener): Ele geçirilmiş cihazın C2 sunucusuna düzenli aralıklarla gönderdiği haberleşme sinyali; bu davranışa beaconing denir. Düşük jitter'lı (zamanlama sapması az) düzenli trafik, tipik imzasıdır. Wi-Fi'daki Beacon ise erişim noktasının periyodik duyuru çerçevesidir — C2 ile ilgisi yoktur, ad benzerliği vardır.
 - <span id="bec"></span>**BEC** (Business Email Compromise — İş E-postası Dolandırıcılığı): Kurumsal e-posta dolandırıcılığı. Saldırgan CEO/CFO taklidi yaparak para transferi sağlar. 2023'te dünya çapında 2.9 milyar dolar kayıp.
 - <span id="bilgi-savasi"></span>**Bilgi Savaşı** (Information Warfare): Bilgiyi silah gibi kullanma sanatı: dezenformasyon, siber saldırı ve algı operasyonlarının toplamı. Hibrit harbin en görünür cephesidir; hedef makine değil zihindir.
 - <span id="bimi"></span>**BIMI** (Brand Indicators for Message Identification — Marka Kimlik Göstergeleri): DMARC geçerli maillerde marka logosunun gösterilmesi. DMARC `p=reject` ile birlikte kullanılır.
@@ -74,6 +74,7 @@ permalink: /sozluk/
 - <span id="ci-cd"></span>**CI/CD** (Continuous Integration / Continuous Deployment — Sürekli Entegrasyon / Sürekli Dağıtım): Sürekli entegrasyon ve sürekli dağıtım. Kodun yazıldığı andan üretime çıkana kadar otomatik test ve dağıtım sürecini yöneten sistem.
 - <span id="cipher-suite"></span>**Cipher Suite** (Şifre Takımı): TLS bağlantısında kullanılacak algoritma takımı: anahtar değişimi (ECDHE), kimlik doğrulama (RSA), toplu şifre (AES-GCM) ve hash (SHA384). İstemci listeler, sunucu seçer; RC4, DES ve 3DES (eski blok şifreler) içerenler zayıftır.
 - <span id="cleartext-protocol"></span>**Cleartext Protocol** (Şifresiz Protokol): FTP, HTTP, SMTP gibi içeriği şifrelemeden taşıyan protokoller. Kimlik bilgileri kablodan düz metin geçer; dinleyen herkes okuyabilir.
+- <span id="cli"></span>**CLI** (Command-Line Interface — Komut Satırı Arayüzü): Grafik arayüz olmadan, komutla konuşulan katman. tshark ve tcpdump CLI'dır; otomasyonun doğal evidir.
 - <span id="cloud-misconfiguration"></span>**Cloud Misconfiguration** (Bulut Yanlış Yapılandırması): Bulut kaynaklarının yanlış ayarlanması. Public S3 bucket, geniş IAM policy, açık yönetim portları en yaygın örnekler. İhlallerin %95'i bu nedenden.
 - <span id="codec"></span>**Codec** (Kodlayıcı/Çözücü): Sesin/görüntünün sıkıştırılmış paketlere kodlanma biçimi. G.711 (PCMU/PCMA, 64 kbps) kaliteli, G.729 düşük bant genişliklidir; çağrının codec'i SIP INVITE içindeki SDP (oturum tanımı) bölümünde bildirilir.
 - <span id="coloring-rules"></span>**Coloring Rules** (Renklendirme Kuralları): Wireshark'ın paketleri display filter'lara göre otomatik renklendirdiği kural sistemi. Kurallar yukarıdan aşağı değerlendirilir, ilk eşleşen kazanır; "Bad TCP" kırmızısı retransmission'ları hemen ele verir.
@@ -146,6 +147,7 @@ permalink: /sozluk/
 <details class="toc-block" markdown="block" id="letter-e">
 <summary>E</summary>
 
+- <span id="eap"></span>**EAP** (Extensible Authentication Protocol — Genişletilebilir Kimlik Doğrulama Protokolü): Kurumsal ağlarda (802.1X) kimlik doğrulamanın taşıyıcı çerçevesi. WPA-Enterprise'ın motorudur; Wi-Fi el sıkışmasında EAPOL paketleriyle taşınır.
 - <span id="eavesdropping"></span>**Eavesdropping** (Gizlice Dinleme): Dinleme. Ağ trafiğini veya fiziksel ortamı dinleyerek bilgi toplama.
 - <span id="echo-request-reply"></span>**Echo Request / Echo Reply** (Yankı İsteği / Yankı Yanıtı): ICMP'nin "orada mısın?" (Type 8) ve "evet, buradayım" (Type 0) çifti; ping'in kalbi. Identifier ve Sequence alanlarından eşleştirilir; gidiş-dönüş süresi (RTT) buradan ölçülür.
 - <span id="edr"></span>**EDR** (Endpoint Detection and Response — Uç Nokta Tehdit Tespiti ve Yanıtı): Uç noktada tespit ve yanıt. Cihazlardaki tehditleri gerçek zamanlı tespit edip müdahale eden güvenlik teknolojisi.
@@ -338,7 +340,7 @@ permalink: /sozluk/
 - <span id="nmap"></span>**nmap**: Keşif ve port taramanın de facto aracı: `-sS` SYN (half-open), `-sT` connect, `-sU` UDP, `-sn` ping sweep, `-f` parçalı tarama. Script motoru NSE (Nmap Scripting Engine) Lua ile yazılır.
 - <span id="nonce"></span>**Nonce** (Tek Kullanımlık Değer): Şifrelemede her işlem için bir kez kullanılan rastgele sayı. AES-GCM'de nonce tekrar edilirse şifreleme tamamen kırılır.
 - <span id="nse"></span>**NSE** (Nmap Scripting Engine — Nmap Betik Motoru): Nmap'in Lua tabanlı script motoru; yüzlerce scriptle versiyon tespiti, zafiyet kontrolü ve hatta exploit denemesi yapar.
-- <span id="ntlm"></span>**NTLM** (NT LAN Manager — Windows'un Eski Kimlik Doğrulaması): Windows'un Kerberos öncesi, sorgu-yanıt tabanlı kimlik doğrulaması. Parola ağda taşınmaz ama parola türevli zayıf hash yakalanıp çevrimdışı kırılır ve relay edilir; modern ortam Kerberos ister.
+- <span id="ntlm"></span>**NTLM** (NT LAN Manager — Windows'un Eski Kimlik Doğrulaması): Windows'un Kerberos öncesi, sorgu-yanıt tabanlı kimlik doğrulaması; paketlerde NTLMSSP (Müzakere → Sorgu → Doğrulama üçlüsü) olarak görünür. Parola ağda taşınmaz ama parola türevli zayıf hash yakalanıp çevrimdışı kırılır ve relay edilir; modern ortam Kerberos ister.
 - <span id="ntp"></span>**NTP** (Network Time Protocol — Ağ Zaman Protokolü): Zaman senkronizasyon protokolü (UDP 123). Kerberos'un 5 dakikalık toleransı yüzünden alan ortamında hayati; açık NTP sunucuları amplification saldırısına da alet edilir.
 - <span id="null-session"></span>**NULL Session** (Anonim Oturum): Kimlik kanıtı verilmeden kurulan SMB oturumu; eski Windows'larda dizinden bilgi sızmaya (SAMR ile kullanıcı/envanter dökümü) izin verirdi. Trafikte birden çok NULL oturum, kimsesiz ama meraklı bir misafirdir.
 - <span id="nxdomain"></span>**NXDOMAIN** (Non-Existent Domain — Var Olmayan Alan Adı): DNS'in "böyle alan adı yok" cevabı. Normalde nadir görülür; ani patlamaları subdomain keşfi veya DNS tünelinin imzasıdır.
@@ -438,6 +440,7 @@ permalink: /sozluk/
 - <span id="rootkit"></span>**Rootkit**: İşletim sisteminin en derinine yerleşip antivirüsten gizlenen kötü amaçlı yazılım. Tespiti çok zordur; genelde devlet düzeyi casus yazılımlarla birlikte gelir.
 - <span id="router"></span>**Router / Yönlendirici** (Modem): İnterneti eve dağıtan cihaz. Fabrika parolası "admin/admin" kalırsa saldırgan parola kırmadan tüm ağını ele geçirir.
 - <span id="rpc"></span>**RPC** (Remote Procedure Call — Uzaktan Yordam Çağrısı): Başka makinedeki fonksiyonu çağırma mekanizması; SAMR ve svcctl bunun üstünde koşar. Gerekli ama açıktır: saldırgan da çağırır.
+- <span id="rssi"></span>**RSSI** (Received Signal Strength Indicator — Alınan Sinyal Gücü Göstergesi): Kablosuz sinyalin gücü, dBm cinsinden. -50 civarı mükemmel, -90'lar sınırda; cihazın konum tespitinde ilk ipucudur.
 - <span id="rtt"></span>**RTT** (Round-Trip Time — Gidiş-Dönüş Süresi): Paketin gidip cevabın dönmesi için geçen süre. Ağ sağlığının nabzıdır; C2 beacon analizi ve performans ölçümünün temel metriğidir.
 
 </details>
@@ -454,6 +457,7 @@ permalink: /sozluk/
 - <span id="samr"></span>**SAMR** (SAM Remote Protocol — Uzaktan SAM Protokolü): Windows'un uzaktan hesap veritabanı (SAM) sorgulama arayüzü; kullanıcı ve grup envanteri RPC (uzaktan yordam çağrısı) üzerinden dökülür. Anonim NULL oturumla birleşince saldırganın dizini sayfalama aracı olur.
 - <span id="san"></span>**SAN** (Subject Alternative Name — Konu Alternatif Adı): Sertifikanın geçerli olduğu alan adları listesi. CN tek isim taşır, SAN ise siteyi ve tüm alt alan adlarını kapsar; modern sertifika doğrulaması SAN'e bakar.
 - <span id="sandbox"></span>**Sandbox** (Kum Havuzu): Şüpheli bir dosyayı güvenli, izole ortamda çalıştırma yöntemi. Dosya zararlı olsa bile gerçek sistemine sıçrayamaz.
+- <span id="sasl"></span>**SASL** (Simple Authentication and Security Layer — Basit Kimlik Doğrulama ve Güvenlik Katmanı): Protokole mekanizma temelli kimlik doğrulama ekleyen çerçeve. LDAP'daki en yaygın mekanizması GSSAPI, yani Kerberos biletidir.
 - <span id="sast"></span>**SAST** (Static Application Security Testing — Statik Uygulama Güvenlik Testi): Kaynak kodu çalıştırmadan analiz eden güvenlik testi. Kodu tarar ve bilinen güvenlik açığı kalıpları arar.
 - <span id="sbom"></span>**SBOM** (Software Bill of Materials — Yazılım Bileşen Listesi): Yazılımın "içindekiler etiketi". Hangi dependency, hangi sürüm, hangi license. Log4Shell gibi bir zafiyette hangi sistemlerde olduğu bilinir.
 - <span id="sca"></span>**SCA** (Software Composition Analysis — Yazılım Bileşen Analizi): Projenin kullandığı üçüncü parti kütüphanelerdeki bilinen güvenlik açıklarını tarayan analiz yöntemi.
@@ -482,7 +486,7 @@ permalink: /sozluk/
 - <span id="sim-swap"></span>**SIM swap** (SIM Değişimi): Telefon numaranı başka bir SIM karta aktarıp hesaplarına erişme saldırısı.
 - <span id="sip-rtp"></span>**SIP / RTP** (Session Initiation Protocol / Real-time Transport Protocol — Oturum Başlatma / Gerçek Zamanlı Aktarım Protokolü): VoIP'nin iki yakası: SIP çağrıyı kurar (sinyalleme), RTP sesi ve görüntüyü taşır (medya). Şifrelenmezse dinleme ve vishing altyapısı olur; SRTP ile korunur.
 - <span id="slsa"></span>**SLSA** (Supply-chain Levels for Software Artifacts — Yazılım Tedarik Zinciri Seviyeleri): Yazılım tedarik zinciri güvenlik seviyeleri. Seviye 1-4 arası, build sürecinin güvenliğini sertleştirir.
-- <span id="smb"></span>**SMB** (Server Message Block — Sunucu İleti Bloğu): Windows dünyasının dosya ve yazıcı paylaşım protokolü. İmzasız oturumlar ağdan dosya çalmaya açıktır; SMBv1 (EternalBlue) fidye yazılımlarının tarihi kapısıydı.
+- <span id="smb"></span>**SMB** (Server Message Block — Sunucu İleti Bloğu): Windows dünyasının dosya ve yazıcı paylaşım protokolü; modern sürümleri SMB2 ve SMB3'tür. İmzasız oturumlar ağdan dosya çalmaya açıktır; SMBv1 (EternalBlue) fidye yazılımlarının tarihi kapısıydı.
 - <span id="smishing"></span>**Smishing** (SMS Oltalaması): SMS ile yapılan oltalama. "Kargon teslim edilemedi, tıkla" tarzı mesajlarla sahte siteye çekilirsin; mesajdaki kısa linke tıklama.
 - <span id="smtp"></span>**SMTP** (Simple Mail Transfer Protocol — Basit Posta Aktarım Protokolü): E-posta gönderme protokolü; 25 sunucular arası aktarım (MTA), 587 istemci gönderimi, 465 TLS. EHLO → MAIL FROM → RCPT TO → DATA diyalogu STARTTLS yoksa düz metindir; açık relay spam fabrikasıdır.
 - <span id="sni"></span>**SNI** (Server Name Indication — Sunucu Adı Belirtme): ClientHello'da taşınan hedef alan adı; aynı IP'te çok sertifika barındıran sunucuya doğru sertifikayı seçtirir. TLS kurulmadan ÖNCE gönderildiği için şifreli trafikte "kim nereye gitti" bilgisini yalnız SNI verir.
