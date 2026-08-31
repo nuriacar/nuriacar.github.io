@@ -88,7 +88,7 @@
   --c-jasmine: #F8DE7E;
 
   /* ---------- Yazı tipleri ---------- */
-  --fn-mono: 'Ubuntu Mono', ui-monospace, 'JetBrains Mono', monospace;
+  --fn-mono: 'Ubuntu Mono', ui-monospace, monospace;
 
   /* ---------- Spacing: 4px atom skalası ---------- */
   --sp-1: 0.25rem;
