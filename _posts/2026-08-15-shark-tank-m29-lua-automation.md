@@ -41,7 +41,7 @@ Size -bu okuduklarınız gibi yazılmadığı için- AI slop gibi görünen laki
 
 Diyelim ki "tiz tiftik idüle!" deyû 9.831 paketlik bir pcap geldi. Şakk, Vaayırşark! Mission accomplished! Peki aynı ağdan **500 pcap** gelirse?!.. Her birinde 5432 paket. Ne olacak? Olacak olan şu: "Analiz" adı altında üç gün boyunca 15 farklı filtreyi her birine ayrı ayrı kopyala-yapıştır yapıp atom fiziğine de profesörlüğe de hayır dua ede ede rapor yazacaksın! Bu analiz değil, **angarya**.
 
-Bu 500 pcap'ı `shared/shark-tank.lua` canavarına verdiğinde ise:
+Bu 500 pcap'ı [`shared/shark-tank.lua`](https://github.com/nuriacar/shark-tank/blob/main/shared/shark-tank.lua){: target="_blank" rel="noopener"} canavarına verdiğinde ise:
 
 - Saniyeler içinde **500 ayrı bulgu raporu** olur; her pcap'in yanına, aynı isimde bir `.md` rapor üretilir.
 - Her raporda keşif taramaları, sızan kimlik bilgileri, C2 adayı kanallar (jitter hesabı yapılmış), entropi ölçülmüş exfil adayları, dosya indirmeleri, kill-chain tablosu ve Wireshark'ta manuel teyit edebileceğin hazır filtreler olur.
@@ -67,8 +67,7 @@ Uzun cevap: Lua, [Maria João Pires](https://www.youtube.com/watch?v=Ch2mrPm1JnM
 
 Arman gibi anlatayım! Yıl 1993, yer Brezilya. Rio de Janeiro'daki PUC-Rio üniversitesine bağlı Tecgraf enstitüsü, Petrobras için mühendislik simülasyonları yazıyor. "[Zıkkımın kökü!](https://www.youtube.com/shorts/6VBC1yv09ds)" denecek bir durum var: Her yeni ihtiyaçta, mevcut araçlara bir yenisi ekleniyor; her ekleme, bir öncekinin etrafına yeni bir duvar örmek demek. Yamalı bohça, fakir yorganı durumu! Bir de kriz ve ihtiyaç durumu hasıl olmuş: O dönemde Brezilya'nın ithal bilgisayar donanımı ve yazılımına yönelik katı ticari kısıtlamaları (pazar korumacılığı) var. Tecgraf mühendisleri de dışarıdan hazır çözümler almak yerine kendi "yapıştırıcı" (glue) dillerini yazmaya mecbur kalmışlar. Ana programlar C veya Fortran gibi eli öpülüp hayır dua alınası dillerle yazıldığı için her yeni veri girişi veya konfigürasyon için ana programı yeniden derlemek "İllallah!" ettirmiş! Geldik "No country for old men!" durumuna! Sorunu çözmek için başlangıçta DEL (Data Entry Language) (veri girişi formu yönetimi) ve SOL (Simple Object Language) (nesne tanımlamaları/konfigürasyon) diye diller inşa etmişler. Bir süre sonra kodladıkları şey Frankenstein olmuş! Sonrası rezilik! Takımın başındaki Roberto Ierusalimschy ve meslektaşları (Waldemar Celes ve Luiz Henrique de Figueiredo), DEL ve SOL'un özelliklerini birleştirerek çok daha hafif, hızlı ve C kodunun içine kolayca gömülebilen (embeddable) tek bir dil tasarlamaya karar vermişler. SOL (Simple Object Language), Portekizce'de "Güneş" anlamına geliyor; bu yüzden yeni dilin kulağına ezan okuyup üç defa "Ay" anlamına gelen Lua ünlemişler.
 
-Yani dikkat buyrun zira burası çokomelli: Lua, angarya sevmeyen mühendislerden, angarya sevmeyen insanlara bir hediye. Kişiyi mâlâyâni'den azade kılmanın güzel bir numunesi! Ömür Hediyesi! Yani Wireshark ve Tshark'ın Lua kullanması yanında bu modülde Lua'yı tercih etmemin nedeni [cinslik ya da zevk meselesi değil!](/cevizlab/2022/04/06/malware-gelistirme.html) (bkz. [Fakat Müzeyyen Bu Derin Bir Tutku!
-](https://www.kitapyurdu.com/kitap/fakat-muzeyyen-bu-derin-bir-tutku/356930.html))
+Yani dikkat buyrun zira burası çokomelli: Lua, angarya sevmeyen mühendislerden, angarya sevmeyen insanlara bir hediye. Kişiyi mâlâyâni'den azade kılmanın güzel bir numunesi! Ömür Hediyesi! Yani Wireshark ve Tshark'ın Lua kullanması yanında bu modülde Lua'yı tercih etmemin nedeni [cinslik ya da zevk meselesi değil!](/cevizlab/2022/04/06/malware-gelistirme.html) (bkz. [Fakat Müzeyyen Bu Derin Bir Tutku!](https://www.kitapyurdu.com/kitap/fakat-muzeyyen-bu-derin-bir-tutku/356930.html))
 
 ## Bu Kadar Ufak Şey
 
@@ -76,7 +75,7 @@ Lua interpreter yüz kilobayt civarında. Bunun ne demek olduğunu siber güvenl
 
 Siber güvenlik tarafı ise aşikar:
 
-- **Wireshark**: Eklenti mimarisi Lua ile konuşur. Bu modüldeki `shark-tank.lua` tam olarak budur.
+- **Wireshark**: Eklenti mimarisi Lua ile konuşur. Bu modüldeki [`shark-tank.lua`](https://github.com/nuriacar/shark-tank/blob/main/shared/shark-tank.lua){: target="_blank" rel="noopener"} tam olarak budur.
 - **Nmap**: `-sC` ile çalıştırdığın, "nmap script" diye andığın şey Lua. [Fyodor! Anlat hacım!](https://www.youtube.com/watch?v=MMfQkAAUnvo)
 - **Snort 3**: Kural ve konfigürasyon, statik text'ten (.conf) Lua'ya geçti. Daha az kaynakla, daha çok iş! Paкéтa!
 
@@ -100,7 +99,7 @@ Potansiyel itirazlara bir iki kelam edeyim:
 
 ## Boğma Wireshark Script'i: 28 Modülün Damıtılması
 
-28 modülde manuel yaparak öğrendiğimiz ne varsa hepsi tek betikte! Aşağıdaki tablo, modül modül manuel yaptığımız işin `shark-tank.lua'daki karşılığı. Bu tablo bir "feature list" değil, bir **muhasebe!**: 28 modüllük sermayenin otomasyona dönüşmüş hâli.
+28 modülde manuel yaparak öğrendiğimiz ne varsa hepsi tek betikte! Aşağıdaki tablo, modül modül manuel yaptığımız işin [`shark-tank.lua`](https://github.com/nuriacar/shark-tank/blob/main/shared/shark-tank.lua){: target="_blank" rel="noopener"}'daki karşılığı. Bu tablo bir "feature list" değil, bir **muhasebe!**: 28 modüllük sermayenin otomasyona dönüşmüş hâli.
 
 | Modül | Elle ne yaptık | Betikteki karşılığı |
 |-------|----------------|---------------------|
@@ -145,7 +144,7 @@ Bir kahramanlık hikayesi: Betiğe daha önce hiç görmediği bir ağdan 9.831 
 make test-sharktank
 ```
 
-GUI'de denemek istersen: script'i Lua eklenti dizinine kopyala, Wireshark'ı yeniden başlat, bir pcap aç ve menüden **Tools > Shark-Tank > Rapor Üret** de. Rapor bir pencerede belirir. Detaylar `shared/shark-tank.lua` dosyasının başlık yorumunda ve [Modül 20'de](/2026/08/06/shark-tank-m20-tshark.html).
+GUI'de denemek istersen: script'i Lua eklenti dizinine kopyala, Wireshark'ı yeniden başlat, bir pcap aç ve menüden **Tools > Shark-Tank > Rapor Üret** de. Rapor bir pencerede belirir. Detaylar [`shared/shark-tank.lua`](https://github.com/nuriacar/shark-tank/blob/main/shared/shark-tank.lua){: target="_blank" rel="noopener"} dosyasının başlık yorumunda ve [Modül 20'de](/2026/08/06/shark-tank-m20-tshark.html).
 
 ## Kendine Sınav (5 Soru)
 

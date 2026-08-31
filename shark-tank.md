@@ -79,6 +79,6 @@ Docker'ın yoksa da dert değil: 25 pcap repoda gömülü; klonla, Wireshark'ta 
 | 26 | [Baseline](/2026/08/12/shark-tank-m26-baseline.html) | Trafik profili, anomali tespiti | Sentez |
 | 27 | [Sınav Pratiği](/2026/08/13/shark-tank-m27-exam-practice.html) | 10 senaryo, 27 soru, kill chain | Sentez |
 | 28 | [Forensics](/2026/08/14/shark-tank-m28-forensics.html) | Port scan, C2, SQLi, XSS, exfiltration | Sentez |
-| 29 | [Lua ile Otomasyon](/2026/08/15/shark-tank-m29-lua-automation.html) | shark-tank.lua, otomatik bulgu raporu, angaryadan kurtulma | Sentez |
+| 29 | [Lua ile Otomasyon](/2026/08/15/shark-tank-m29-lua-automation.html) | [shark-tank.lua](https://github.com/nuriacar/shark-tank/blob/main/shared/shark-tank.lua){: target="_blank" rel="noopener"}, otomatik bulgu raporu, angaryadan kurtulma | Sentez |
 
 </details>
