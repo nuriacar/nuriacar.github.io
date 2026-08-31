@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Sözlük: Dijital Güvenlik Terimleri"
+title: "Siber Güvenlik Sözlüğü"
 nav_title: Sözlük
 permalink: /sozluk/
 eyebrow: dijital güvenlik terimleri
