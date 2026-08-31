@@ -130,6 +130,7 @@ permalink: /sozluk/
 - <span id="edr"></span>**EDR** (Uç Nokta Tehdit Tespiti ve Yanıtı, İng. Endpoint Detection and Response): Uç noktada tespit ve yanıt. Cihazlardaki tehditleri gerçek zamanlı tespit edip müdahale eden güvenlik teknolojisi.
 - <span id="elevation-of-privilege"></span>**Elevation of Privilege** (Yetki Yükseltme): Sıradan bir kullanıcının daha yüksek yetkiler elde etmesi. STRIDE tehdit kategorilerinden biri.
 - <span id="evil-twin"></span>**Evil Twin** (Sahte Ağ): Saldırganın kafe veya otel Wi-Fi'siyle aynı isimde kurduğu sahte ağ. Yanlış olanı seçersen tüm trafiğin saldırgandan geçer; VPN'i açık tut.
+- <span id="entropi"></span>**Entropi (Shannon)**: Bir verinin ne kadar rastgele ve öngörülemez olduğunu ölçen metrik; düz metin düşük, şifreli/sıkıştırılmış veri yüksek entropilidir. Analizde tam bir dedektiftir: 40+ karakterlik yüksek entropili DNS etiketi tünel adayı, yüksek entropili POST gövdesi exfil adayıdır.
 - <span id="expert-information"></span>**Expert Information**: Wireshark'ın pcap'teki anormallikleri dört ciddiyette (Error/Warn/Note/Chat) özetlediği panel. Analistin pcap'i açınca bakacağı ilk yerdir: retransmission, duplicate ACK, zero window tek listede.
 - <span id="exfiltration"></span>**Exfiltration** (Veri Sızdırma): Ele geçirilen verinin ağ dışına çıkarılması; kill chain'in son halkası. DNS tüneli, HTTPS gövdesi ve bulut depolama yaygın yoldur; tek yönlü dev asimetrik transfer fark edilir.
 - <span id="export-objects"></span>**Export Objects**: Wireshark'ın pcap içinden transfer edilen dosyaları (HTTP gövdeleri, SMB dosyaları) diske çıkaran özelliği. Ağ forensiklerinde kritik: indirilen zararlıyı veya sızdırılan belgeyi orijinal haliyle kurtarır.
@@ -243,6 +244,7 @@ permalink: /sozluk/
 
 - <span id="ldap"></span>**LDAP**: Dizin servisinin (kullanıcı, grup, bilgisayar) sorgulama protokolü; Active Directory'nin arayüzü. 389 düz/StartTLS, 636 LDAPS; rootDSE boş sorgusu dizinin "kimlik kartını" anonim verir — keşfin ilk adımıdır.
 - <span id="ldap-injection"></span>**LDAP Injection**: LDAP filtresine kullanıcı girdisiyle müdahale: sorgu genişletilip tüm kayıtlar dökülür. SQL injection'ın LDAP kardeşi; filtre kaçışıyla önlenir.
+- <span id="larry-wall"></span>**Larry Wall'un Üç Erdemi**: Büyük mühendisin üç erdemi (Perl'in babasından): Tembellik — aynı angaryayı iki kez yapmamak için otomasyon yazar; Sabırsızlık — darboğazı yaşanmadan önce çözer; Kibir — "bunu hangi sığır yazdı?" dedirtmeyecek kadar temiz kod üretir.
 - <span id="lease-time"></span>**Lease Time**: DHCP'nin verdiği IP adresinin geçerlilik süresi (Option 51, tipik 24 saat). Süre dolmadan yenilenir (renew); istemci dönmezse adres havuza geri döner.
 - <span id="least-privilege"></span>**Least Privilege** (En Az Yetki): Bir kullanıcının veya sistemin yalnızca görevini yerine getirmek için gereken en düşük yetki seviyesine sahip olması prensibi.
 - <span id="link-local"></span>**Link-Local**: Yalnız aynı segmentte geçerli IPv6 adresi (fe80::/10); router asla taşımaz. Her arayüz otomatik alır; NDP ve router keşfi bununla çalışır: `fe80::1%eth0` gibi kullanılır.
@@ -288,6 +290,7 @@ permalink: /sozluk/
 - <span id="nonce"></span>**Nonce**: Şifrelemede her işlem için bir kez kullanılan rastgele sayı. AES-GCM'de nonce tekrar edilirse şifreleme tamamen kırılır.
 - <span id="ntlm"></span>**NTLM**: Windows'un Kerberos öncesi, sorgu-yanıt tabanlı kimlik doğrulaması. Parola ağda taşınmaz ama parola türevli zayıf hash yakalanıp çevrimdışı kırılır ve relay edilir; modern ortam Kerberos ister.
 - <span id="ntp"></span>**NTP**: Zaman senkronizasyon protokolü (UDP 123). Kerberos'un 5 dakikalık toleransı yüzünden alan ortamında hayati; açık NTP sunucuları amplification saldırısına da alet edilir.
+- <span id="null-session"></span>**NULL Session (Anonim Oturum)**: Kimlik kanıtı verilmeden kurulan SMB oturumu; eski Windows'larda dizinden bilgi sızmaya (SAMR ile kullanıcı/envanter dökümü) izin verirdi. Trafikte birden çok NULL oturum, kimsesiz ama meraklı bir misafirdir.
 - <span id="nxdomain"></span>**NXDOMAIN**: DNS'in "böyle alan adı yok" cevabı. Normalde nadir görülür; ani patlamaları subdomain keşfi veya DNS tünelinin imzasıdır.
 
 </details>
@@ -353,6 +356,7 @@ permalink: /sozluk/
 - <span id="race-condition"></span>**Race Condition** (Yarış Durumu): İki işlemin aynı kaynağa aynı anda erişmesi sonucu oluşan güvenlik açığı. Örneğin rate limiting sayaçları birden çok işlemci arasında kilitlenmezse atlanabilir.
 - <span id="rag"></span>**RAG** (Getirme Artırılmış Üretim, İng. Retrieval-Augmented Generation): LLM'e harici bilgi tabanından belge getirterek yanıt üretme. ACL'lere dikkat: kullanıcı yetkisiz belge görmemeli.
 - <span id="rate-limiting"></span>**Rate Limiting** (Hız Sınırlandırma): Bir kullanıcının belirli süre içinde yapabileceği istek sayısını sınırlama. Brute force ve DDoS saldırılarına karşı ilk savunma hattı.
+- <span id="rc4"></span>**RC4**: Kırılması kolay, çağdışı akış şifreleyici; TLS'den çoktan kaldırıldı ama Kerberos'ta etype 23 olarak hâlâ görülür. Ağda RC4 bilet bolluğu, Kerberoasting için gönderilmiş davetiyedir.
 - <span id="recursive-query"></span>**Recursive Query**: İstemcinin tek sorup nihai cevap beklediği DNS sorgusu; sunucu gerekirse root → TLD → authoritative zincirini kendisi dolaşır. Wireshark genelde yalnız ilk soruyu ve son cevabı görür.
 - <span id="reassembly"></span>**Reassembly**: Parçaların hedefte orijinal pakete geri birleştirilmesi; router taşır, yalnız hedef birleştirir. Zaman aşımında (Linux 30s, Windows 60s) eksik set çöpe gider; Wireshark "Reassembled" başlığıyla sonucu gösterir.
 - <span id="red-team"></span>**Red Team** (Kırmızı Takım): Gerçek bir saldırgan gibi davranıp sisteme sızmaya çalışan denetim ekibi. Otomatik taramadan farklı olarak doğaçlama ve gerçek saldırı teknikleri kullanır.
@@ -373,6 +377,7 @@ permalink: /sozluk/
 - <span id="saldiri-vektoru"></span>**Saldırı Vektörü** (Attack Vector): Saldırganın hedefe ulaşmak için kullandığı yol veya yöntem. E-posta, USB, web sitesi gibi çeşitli vektörler vardır.
 - <span id="sack"></span>**SACK** (Selective Acknowledgment): TCP'nin "sadece şu aralıklar elime ulaştı" diyebilmesi. Paket kaybında yalnız eksik parça yeniden gönderilir; gereksiz retransmission azalır.
 - <span id="salt"></span>**Salt** (Tuz): Parola hash'ine eklenen, her kullanıcı için benzersiz rastgele değer. Aynı parola farklı tuzlarla farklı hash üretir; böylece rainbow table saldırıları engellenir.
+- <span id="samr"></span>**SAMR**: Windows'un uzaktan hesap veritabanı (SAM) sorgulama arayüzü; kullanıcı ve grup envanteri RPC üzerinden dökülür. Anonim NULL oturumla birleşince saldırganın dizini sayfalama aracı olur.
 - <span id="sandbox"></span>**Sandbox** (Kum Havuzu): Şüpheli bir dosyayı güvenli, izole ortamda çalıştırma yöntemi. Dosya zararlı olsa bile gerçek sistemine sıçrayamaz.
 - <span id="sast"></span>**SAST** (Static Application Security Testing): Kaynak kodu çalıştırmadan analiz eden güvenlik testi. Kodu tarar ve bilinen güvenlik açığı kalıpları arar.
 - <span id="sca"></span>**SCA** (Software Composition Analysis): Projenin kullandığı üçüncü parti kütüphanelerdeki bilinen güvenlik açıklarını tarayan analiz yöntemi.
@@ -400,6 +405,7 @@ permalink: /sozluk/
 - <span id="smtp"></span>**SMTP**: E-posta gönderme protokolü; 25 sunucular arası (MTA), 587 istemci gönderimi, 465 TLS. EHLO → MAIL FROM → RCPT TO → DATA diyalogu STARTTLS yoksa düz metindir; açık relay spam fabrikasıdır.
 - <span id="sni"></span>**SNI (Server Name Indication)**: ClientHello'da taşınan hedef alan adı; aynı IP'te çok sertifika barındıran sunucuya doğru sertifikayı seçtirir. TLS kurulmadan ÖNCE gönderildiği için şifreli trafikte "kim nereye gitti" bilgisini yalnız SNI verir.
 - <span id="snmp"></span>**SNMP**: Ağ cihazlarının yönetim ve izleme protokolü (UDP 161/162); community string'leri v1/v2'de düz metindir. Amplification saldırısının sevilen vektörlerinden biridir.
+- <span id="snort"></span>**Snort**: Açık kaynak IDS/IPS duayeni; imza tabanlı kurallarla trafiği eşleştirir. Snort 3'te kural ve konfigürasyon statik .conf dosyalarından Lua'ya taşındı — daha az kaynakla daha çok iş.
 - <span id="soar"></span>**SOAR** (Security Orchestration, Automation and Response): Tekrarlayan güvenlik müdahale adımlarını otomatikleştiren araç.
 - <span id="soc"></span>**SOC** (Security Operations Center): Güvenlik operasyon merkezi; alarmın insana ulaştığı ve kararın verildiği oda. SIEM görür, EDR tutar, SOC analisti karar verir ve olayı yönetir.
 - <span id="soc-2"></span>**SOC 2**: Hizmet kuruluşlarının güvenlik, kullanılabilirlik ve gizlilik kontrollerini denetleyen rapor standardı. ISO 27001 süreç ister, SOC 2 kontrol işler; bulut tedarikçilerinin ortak dilidir.
