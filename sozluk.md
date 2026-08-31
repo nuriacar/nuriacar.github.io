@@ -6,10 +6,6 @@ permalink: /sozluk/
 eyebrow: dijital güvenlik terimleri
 ---
 
-**Özlü kural:** Bir terimi bilmiyorsan utanma, bilmediğini bilmek güvenliğinin ilk adımıdır.
-
-> **Nota**: Bu sözlük, rehber boyunca karşılaşacağın terimleri kısaca açıklar. Her terim en fazla bir iki cümleyle tanımlanır.
-
 <details class="toc-block" markdown="block" id="letter-sayi">
 <summary>Sayılar</summary>
 
