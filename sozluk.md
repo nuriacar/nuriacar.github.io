@@ -3,7 +3,6 @@ layout: project
 title: "Siber Güvenlik Sözlüğü"
 nav_title: Sözlük
 permalink: /sozluk/
-eyebrow: dijital güvenlik terimleri
 ---
 
 <details class="toc-block" markdown="block" id="letter-sayi">
