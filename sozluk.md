@@ -22,10 +22,10 @@ permalink: /sozluk/
 - <span id="active-passive-mode"></span>**Active / Passive Mode** (FTP): FTP veri kanalının yönü: active mode'da sunucu istemciye bağlanır (PORT), passive mode'da istemci sunucunun bildirdiği rastgele porta bağlanır (PASV). Firewall ve NAT arkasında passive mode sorunsuz çalışır.
 - <span id="adversary-emulation"></span>**Adversary Emulation** (Düşman Taklidi): Gerçek bir tehdit aktörünün taktik ve tekniklerini, MITRE ATT&CK eşlemesiyle adım adım canlı olarak yeniden oynatma. Amaç, savunmanın gerçek bir saldırgana karşı ne kadar görünürlüğü olduğunu kanıtlamaktır.
 - <span id="adware"></span>**Adware** (Reklam Yazılımı): Sana sürekli reklam açan, tarayıcıyı yönlendiren ve cihazını yavaşlatan yazılım. Can sıkıcı görünür ama asıl işi seni izleyip verini toplamaktır.
-- <span id="alan-adi"></span>**Alan Adı** (Domain): İnternette bir sitenin adresi (turkiye.gov.tr gibi). Sahte adresler oltalamanın en sık yoludur; giriş yapmadan önce adresi harf harf kontrol et.
-- <span id="anonimilestirme"></span>**Anonimleştirme** (Anonymization): Kişisel verinin, ek bilgilerle birleştirilse bile artık kişiye bağlanamayacak hale getirilmesi. KVKK ve GDPR bunu teknik gereklilik sayar; sadece ismi silmek (pseudonimleştirme) yetmez.
 - <span id="aes"></span>**AES** (Advanced Encryption Standard): Simetrik şifrelemenin günümüz standardı; 128/192/256 bit anahtarla blok blok şifreler. TLS'in gözde şifresi AES-256-GCM'dir; kırıldığı için değil, anahtarı çalındığı için düşer.
 - <span id="air-gap"></span>**Air Gap** (Fiziksel İzolasyon): Hedef ağı internet'ten ve diğer ağlardan tamamen koparma. En sıkı izolasyon bile USB belleğe ve insider'a dayanamaz — Stuxnet'in dersi.
+- <span id="alan-adi"></span>**Alan Adı** (Domain): İnternette bir sitenin adresi (turkiye.gov.tr gibi). Sahte adresler oltalamanın en sık yoludur; giriş yapmadan önce adresi harf harf kontrol et.
+- <span id="anonimilestirme"></span>**Anonimleştirme** (Anonymization): Kişisel verinin, ek bilgilerle birleştirilse bile artık kişiye bağlanamayacak hale getirilmesi. KVKK ve GDPR bunu teknik gereklilik sayar; sadece ismi silmek (pseudonimleştirme) yetmez.
 - <span id="amplification"></span>**Amplification** (Yükseltme Saldırısı): Sahte kaynak IP ile küçük bir UDP sorgusu gönderip, kurbanın adresine çok daha büyük yanıt döndürtme. DNS, NTP ve SNMP en yaygın vektörlerdir; az çabayla büyük DDoS üretir.
 - <span id="antivirus"></span>**Antivirüs** (AV): İmza ve buluşmacı (heuristik) taramayla bilinen zararlıları yakalayan klasik uç nokta savunması. Fileless ve LotL tekniklerinde devre dışı kalır; yerine EDR geçer.
 - <span id="apk"></span>**APK** (Android Package): Resmi mağaza (Play Store, App Store) dışından dosya olarak indirilen Android uygulaması. Denetimden geçmez; en yaygın casus yazılım bulaşma yoludur.
@@ -67,9 +67,9 @@ permalink: /sozluk/
 - <span id="casus-yazilim"></span>**Casus yazılım** (spyware): Cihazını izleyen, ses kaydeden, ekran okuyan gizli yazılım.
 - <span id="certificate"></span>**Sertifika** (Certificate): Bir sunucunun kimliğini ve açık anahtarını taşıyan, bir CA tarafından imzalanmış dijital belge (X.509). Veren (issuer), konu (CN/SAN) ve geçerlilik tarihleri Wireshark'ta TLS el sıkışmasında açıkça görülür.
 - <span id="certificate-pinning"></span>**Certificate Pinning** (Sertifika Sabitleme): Mobil uygulamanın sadece belirli sertifikaları kabul etmesi. MITM (ortadaki adam) saldırılarını engeller.
+- <span id="checksum"></span>**Checksum** (Sağlama Toplamı): Paket içeriğinin bütünlüğünü doğrulayan matematiksel kontrol değeri. IP, TCP ve UDP'nin kendi checksum'ları vardır; ağ kartının hesaplamayı devralması (offloading) yüzünden yakalama anında "bad checksum" görünmesi her zaman gerçek hata değildir.
 - <span id="ci-cd"></span>**CI/CD** (Continuous Integration / Continuous Deployment): Sürekli entegrasyon ve sürekli dağıtım. Kodun yazıldığı andan üretime çıkana kadar otomatik test ve dağıtım sürecini yöneten sistem.
 - <span id="cia"></span>**CIA** (Confidentiality, Integrity, Availability): Bilgi güvenliğinin üç temel ilkesi. Gizlilik, bütünlük, erişilebilirlik.
-- <span id="checksum"></span>**Checksum** (Sağlama Toplamı): Paket içeriğinin bütünlüğünü doğrulayan matematiksel kontrol değeri. IP, TCP ve UDP'nin kendi checksum'ları vardır; ağ kartının hesaplamayı devralması (offloading) yüzünden yakalama anında "bad checksum" görünmesi her zaman gerçek hata değildir.
 - <span id="cipher-suite"></span>**Cipher Suite** (Şifre Takımı): TLS bağlantısında kullanılacak algoritma takımı: anahtar değişimi (ECDHE), kimlik doğrulama (RSA), toplu şifre (AES-GCM) ve hash (SHA384). İstemci listeler, sunucu seçer; RC4/DES/3DES içerenler zayıftır.
 - <span id="cleartext-protocol"></span>**Cleartext Protocol** (Şifresiz Protokol): FTP, HTTP, SMTP gibi içeriği şifrelemeden taşıyan protokoller. Kimlik bilgileri kablodan düz metin geçer; dinleyen herkes okuyabilir.
 - <span id="cloud-misconfiguration"></span>**Cloud Misconfiguration** (Bulut Yanlış Yapılandırması): Bulut kaynaklarının yanlış ayarlanması. Public S3 bucket, geniş IAM policy, açık yönetim portları en yaygın örnekler. İhlallerin %95'i bu nedenden.
@@ -85,8 +85,8 @@ permalink: /sozluk/
 - <span id="csp"></span>**CSP** (İçerik Güvenliği Politikası, İng. Content-Security-Policy): Tarayıcının hangi kaynaklardan içerik yükleyebileceğini belirten HTTP başlığı. XSS saldırılarını kısıtlar.
 - <span id="cspm"></span>**CSPM** (Bulut Güvenliği Duruş Yönetimi, İng. Cloud Security Posture Management): Bulut hesabını sürekli tarayıp yanlış yapılandırmaları raporlayan araç. Prowler, ScoutSuite, Wiz örnek.
 - <span id="csrf"></span>**CSRF** (Siteler Arası İstek Sahteciliği, İng. Cross-Site Request Forgery): Siteler arası istek sahteciliği. Saldırganın, kullanıcının haberi olmadan tarayıcısından senin sitene istek göndermesi. CSRF token ve SameSite çerezi ile önlenir.
-- <span id="cti"></span>**CTI** (Cyber Threat Intelligence): Siber tehdit istihbaratı; saldırganların kim, ne yapar, nasıl yapar sorularına kanıtla dayalı cevap üreten disiplin. Çıktıları IOC, TTP ve aktör profilleridir.
 - <span id="ctf"></span>**CTF** (Capture the Flag): Gizlenmiş bayrağı (flag) bulmayı hedefleyen güvenlik yarışması. Jeopardy ve attack-defense formatları vardır; öğrenmenin en oyunbaz hali.
+- <span id="cti"></span>**CTI** (Cyber Threat Intelligence): Siber tehdit istihbaratı; saldırganların kim, ne yapar, nasıl yapar sorularına kanıtla dayalı cevap üreten disiplin. Çıktıları IOC, TTP ve aktör profilleridir.
 - <span id="cyber-range"></span>**Cyber Range** (Siber Eğitim Sahası): Gerçek saldırı-savunma senaryolarının izole ortamda canlı olarak oynandığı eğitim ve tatbikat sahası. Askeri tatbikatın siber karşılığıdır; "canlı ateş" (live-fire) antrenmanı burada yapılır.
 - <span id="cerezi"></span>**Çerez** (Cookie): Sitelerin tarayıcına bıraktığı seni tanımaya yarayan küçük dosyalar. Çalınırsa parolan olmadan hesabına girilebilir; üçüncü taraf çerezlerini engelle.
 
@@ -95,12 +95,14 @@ permalink: /sozluk/
 <details class="toc-block" markdown="block" id="letter-d">
 <summary>D</summary>
 
+- <span id="dast"></span>**DAST** (Dinamik Uygulama Güvenlik Testi, İng. Dynamic Application Security Testing): Çalışan uygulamayı dışarıdan tarayarak güvenlik açığı arayan test yöntemi. Kaynak koda ihtiyaç duymaz, uygulamaya HTTP istekleri gönderir.
 - <span id="ddos"></span>**DDoS** (Distributed Denial of Service): Dağıtık hizmet engelleme. Binlerce cihazdan aynı anda gelen trafikle bir siteyi çökertme.
 - <span id="deauthentication"></span>**Deauthentication** (Deauth): Wi-Fi cihazını ağdan zorla koparan 802.11 yönetim çerçevesi. Saldırgan sahte deauth yağdırıp kurbanı yeniden bağlanmaya zorlar; amaç, WPA 4-way handshake'i yakalayıp şifreyi çevrimdışı kırmaktır.
 - <span id="deepfake"></span>**Deepfake** (Derin Sahte): Yapay zekayla üretilmiş sahte görüntü veya ses. Kişilerin yüzünü veya sesini taklit eder.
 - <span id="dependency-confusion"></span>**Dependency Confusion** (Bağımlılık Karışıklığı): Public ve private package isim çakışması sömürüsü. Saldırgan public registry'de aynı isimle yüksek sürüm yayınlar, build'iniz kötü amaçlı kodu çeker.
 - <span id="deserialization"></span>**Deserialization** (Ters Serileştirme): Verinin nesneye dönüştürülmesi. Güvenilmeyen veri ile yapıldığında (Python pickle, PHP unserialize, Java ObjectInputStream) uzaktan kod çalıştırmaya yol açar. JSON + şema doğrulama güvenli alternatif.
 - <span id="destination-unreachable"></span>**Destination Unreachable** (Hedefe Ulaşılamıyor): ICMP Type 3 hata mesajı: "hedefe ulaşılamadı". Kodları nedeni söyler: ağ yok (0), cihaz yok (1), port kapalı (3). Firewall'lar genelde sessizce düşürür; dönüyorsa ya gerçek sorun ya da ICMP döndüren güvenlik duvarıdır.
+- <span id="devsecops"></span>**DevSecOps**: Geliştirme (Dev), güvenlik (Sec) ve operasyon (Ops) süreçlerini birleştiren yaklaşım. Güvenlik testlerinin kod yazımından üretime kadar otomatik çalışmasını sağlar.
 - <span id="dezenformasyon"></span>**Dezenformasyon**: Bilerek üretilip yayılan yanlış bilgi; yanlışlıkla yayılanına misinformation denir. Bot hesaplarla çoğaltılır, hedef algıdır; panzehiri medya okuryazarlığıdır.
 - <span id="dfd"></span>**DFD** (Data Flow Diagram): Veri akış diyagramı. Verinin sistem içinde nasıl hareket ettiğini gösteren diyagram, tehdit modellemenin temel aracı.
 - <span id="dfir"></span>**DFIR** (Digital Forensics & Incident Response): Dijital adli bilişim + olay müdahalesi ikilisi. Delil toplayan ve aynı anda saldırıyı durduran disiplindir; şüphe ile kanıt arasındaki köprü.
@@ -114,19 +116,17 @@ permalink: /sozluk/
 - <span id="display-capture-filter"></span>**Display / Capture Filter** (Görüntüleme / Yakalama Filtresi): Wireshark'ın iki filtre dili: capture filter yakalama anında (BPF sözdizimiyle) süzer, display filter yakalananlar arasında (protokol alanlarıyla) süzer. Expert Info ise Wireshark'ın trafik hakkındaki otomatik yorumudur.
 - <span id="dkim"></span>**DKIM** (DomainKeys Identified Mail): E-postaya kriptografik imza ekleyen standart. Alıcı, DNS'te yayınlanan public key ile imzayı doğrular.
 - <span id="dlp"></span>**DLP** (Data Loss Prevention): Veri sızıntısını önleme. Hassas verilerin kurum dışına yetkisiz olarak gönderilmesini veya kopyalanmasını engelleyen teknoloji.
-- <span id="dmz"></span>**DMZ** (Tampon Bölge): İç ağ ile internet arasına yerleştirilen bölge; dışa açık sunucular (web, mail) burada çalışır. İç ağa sızmak için önce DMZ geçilir — derinlikli savunmanın ilk hendeği.
 - <span id="dmarc"></span>**DMARC** (Domain-based Message Authentication, Reporting and Conformance): SPF ve DKIM'e dayalı e-posta kimlik doğrulama politikası katmanı. "Geçersiz mail ne yapalım?" sorusuna cevap verir (none/quarantine/reject).
+- <span id="dmz"></span>**DMZ** (Tampon Bölge): İç ağ ile internet arasına yerleştirilen bölge; dışa açık sunucular (web, mail) burada çalışır. İç ağa sızmak için önce DMZ geçilir — derinlikli savunmanın ilk hendeği.
 - <span id="dns"></span>**DNS** (Domain Name System): Alan adı sistemi. Web adreslerini IP adreslerine çeviren telefon rehberi gibi çalışır.
 - <span id="dns-kayit-tipleri"></span>**DNS Kayıt Tipleri**: A (IPv4 adresi), AAAA (IPv6), CNAME (takma ad), MX (mail sunucusu), NS (name server), TXT (metin; SPF/DKIM kayıtları burada yaşar). Sorgu tipine göre yanıtın anlamı değişir.
 - <span id="dns-poisoning"></span>**DNS Poisoning** (DNS Zehirlenmesi): DNS önbelleğine sahte kayıt yerleştirip kullanıcıları sahte siteye yönlendirme (pharming). Kaminsky saldırısı Transaction ID tahminine dayanır; panzehiri DNSSEC ve rastgele kaynak portlarıdır.
-- <span id="dnssec"></span>**DNSSEC** (DNS Security Extensions): Yanıtları dijital imza ile doğrulayan DNS uzantısı; sahte yanıt kanıtla reddedilir. Zehirlenmeye çare olur ama gizlilik sağlamaz — sorgular hâlâ düz metindir.
 - <span id="dns-tunneling"></span>**DNS Tunneling** (DNS Tüneli): Veriyi DNS sorgularının içine gizleyerek dışarı kaçırmak veya içeri komut taşımak. Uzun, yüksek entropili subdomain'ler imzasıdır; çoğu firewall DNS trafiğine eli açık davranır.
-- <span id="doh-dot"></span>**DoH / DoT** (DNS over HTTPS / DNS over TLS): DNS sorgularını şifreleyen yöntemler: DoT ayrı portta (853/TCP) TLS tüneli, DoH mevcut HTTPS akışının içinde (443). Kurumsal görünürlüğü azaltırlar: hangi istemci neyi sordu, artık pcap'te görünmez.
-- <span id="doxxing"></span>**Doxxing** (Kimlik İfşası): Birinin özel bilgilerini (adres, telefon, fotoğraf) öç almak veya linç için İnternette yayınlama. Özellikle kadınlara, muhaliflere ve gazetecilere karşı kullanılır.
-- <span id="dast"></span>**DAST** (Dinamik Uygulama Güvenlik Testi, İng. Dynamic Application Security Testing): Çalışan uygulamayı dışarıdan tarayarak güvenlik açığı arayan test yöntemi. Kaynak koda ihtiyaç duymaz, uygulamaya HTTP istekleri gönderir.
-- <span id="devsecops"></span>**DevSecOps**: Geliştirme (Dev), güvenlik (Sec) ve operasyon (Ops) süreçlerini birleştiren yaklaşım. Güvenlik testlerinin kod yazımından üretime kadar otomatik çalışmasını sağlar.
+- <span id="dnssec"></span>**DNSSEC** (DNS Security Extensions): Yanıtları dijital imza ile doğrulayan DNS uzantısı; sahte yanıt kanıtla reddedilir. Zehirlenmeye çare olur ama gizlilik sağlamaz — sorgular hâlâ düz metindir.
 - <span id="docker"></span>**Docker**: Uygulamayı bağımlılıklarıyla birlikte paketleyen herhangi bir ortamda çalıştırılabilen konteyner platformu. Güvenliği iyi yapılandırılmazsa saldırgan yüzeyi oluşturur.
+- <span id="doh-dot"></span>**DoH / DoT** (DNS over HTTPS / DNS over TLS): DNS sorgularını şifreleyen yöntemler: DoT ayrı portta (853/TCP) TLS tüneli, DoH mevcut HTTPS akışının içinde (443). Kurumsal görünürlüğü azaltırlar: hangi istemci neyi sordu, artık pcap'te görünmez.
 - <span id="dora"></span>**DORA**: DHCP'nin dört adımlı süreci: Discover, Offer, Request, ACK. Sıra her zaman aynıdır; döngüde eksik adım ya sunucu yokluğunu ya da sahte (rogue) DHCP şüphesini işaret eder.
+- <span id="doxxing"></span>**Doxxing** (Kimlik İfşası): Birinin özel bilgilerini (adres, telefon, fotoğraf) öç almak veya linç için İnternette yayınlama. Özellikle kadınlara, muhaliflere ve gazetecilere karşı kullanılır.
 - <span id="dread"></span>**DREAD**: Tehditleri zarar, tekrarlanabilirlik, sömürülebilirlik, etkilenen kullanıcı, keşfedilebilirlik kriterleriyle puanlama modeli. Microsoft artık terk etti; tek başına güvenilir değildir.
 - <span id="drive-by"></span>**Drive-by Download** (Sürpriz İndirme): Kullanıcı farkında olmadan tarayıcı açığı üzerinden cihazına zararlı inmesi; tıklamak bile gerekmez, ziyaret yeter. One-click'in bile altındaki katmandır.
 - <span id="dual-stack"></span>**Dual-Stack** (Çift Yığın): Bir cihazın/ağın aynı anda IPv4 ve IPv6 çalıştırması. Modern işletim sistemlerinin tamamı dual-stack'tir; bu yüzden analizde iki aileyi birden bilmek zorunludur.
@@ -142,18 +142,18 @@ permalink: /sozluk/
 - <span id="echo-request-reply"></span>**Echo Request / Echo Reply** (Yankı İsteği / Yankı Yanıtı): ICMP'nin "orada mısın?" (Type 8) ve "evet, buradayım" (Type 0) çifti; ping'in kalbi. Identifier ve Sequence alanlarından eşleştirilir; gidiş-dönüş süresi (RTT) buradan ölçülür.
 - <span id="edr"></span>**EDR** (Uç Nokta Tehdit Tespiti ve Yanıtı, İng. Endpoint Detection and Response): Uç noktada tespit ve yanıt. Cihazlardaki tehditleri gerçek zamanlı tespit edip müdahale eden güvenlik teknolojisi.
 - <span id="elevation-of-privilege"></span>**Elevation of Privilege** (Yetki Yükseltme): Sıradan bir kullanıcının daha yüksek yetkiler elde etmesi. STRIDE tehdit kategorilerinden biri.
-- <span id="evil-twin"></span>**Evil Twin** (Sahte Ağ): Saldırganın kafe veya otel Wi-Fi'siyle aynı isimde kurduğu sahte ağ. Yanlış olanı seçersen tüm trafiğin saldırgandan geçer; VPN'i açık tut.
 - <span id="entropi"></span>**Entropi** (Shannon): Bir verinin ne kadar rastgele ve öngörülemez olduğunu ölçen metrik; düz metin düşük, şifreli/sıkıştırılmış veri yüksek entropilidir. Analizde tam bir dedektiftir: 40+ karakterlik yüksek entropili DNS etiketi tünel adayı, yüksek entropili POST gövdesi exfil adayıdır.
 - <span id="enumeration"></span>**Enumeration** (Keşif Sayımı): Hedefte kullanıcı, paylaşım, servis ve DNS kaydı listeleme. Keşif (reconnaissance) aşamasının elle tutulur çıktısıdır: kim var, ne açık, ne kullanılabilir.
+- <span id="etc-shadow"></span>**/etc/passwd ve /etc/shadow**: Unix'in kullanıcı listesi ve salt'lı parola hash deposu. passwd herkesçe okunur, shadow yalnız root'un; ikisini birden isteyen, kimlik dökümü peşindedir.
 - <span id="eternalblue"></span>**EternalBlue**: NSA'dan sızıp siber suç dünyasına geçen, SMBv1 açığını sömüren efsane exploit. WannaCry ve NotPetya bu kapıdan dünya turu yaptı; yamasız 445 hâlâ davetiye çıkarır.
-- <span id="expert-information"></span>**Expert Information**: Wireshark'ın pcap'teki anormallikleri dört ciddiyette (Error/Warn/Note/Chat) özetlediği panel. Analistin pcap'i açınca bakacağı ilk yerdir: retransmission, duplicate ACK, zero window tek listede.
+- <span id="evil-twin"></span>**Evil Twin** (Sahte Ağ): Saldırganın kafe veya otel Wi-Fi'siyle aynı isimde kurduğu sahte ağ. Yanlış olanı seçersen tüm trafiğin saldırgandan geçer; VPN'i açık tut.
 - <span id="exfiltration"></span>**Exfiltration** (Veri Sızdırma): Ele geçirilen verinin ağ dışına çıkarılması; kill chain'in son halkası. DNS tüneli, HTTPS gövdesi ve bulut depolama yaygın yoldur; tek yönlü dev asimetrik transfer fark edilir.
-- <span id="export-objects"></span>**Export Objects** (Nesneleri Dışa Aktar): Wireshark'ın pcap içinden transfer edilen dosyaları (HTTP gövdeleri, SMB dosyaları) diske çıkaran özelliği. Ağ forensiklerinde kritik: indirilen zararlıyı veya sızdırılan belgeyi orijinal haliyle kurtarır.
 - <span id="exif"></span>**EXIF** (Exchangeable Image File Format): Fotoğraf dosyasının içindeki gizli veri. Konum, saat, cihaz bilgisi taşır.
+- <span id="expert-information"></span>**Expert Information**: Wireshark'ın pcap'teki anormallikleri dört ciddiyette (Error/Warn/Note/Chat) özetlediği panel. Analistin pcap'i açınca bakacağı ilk yerdir: retransmission, duplicate ACK, zero window tek listede.
 - <span id="exploit"></span>**Exploit** (Sömürü): Bir zafiyetten yararlanıp sisteme sızmak için kullanılan yöntem veya kod. Açık kapanana kadar tekrar tekrar kullanılabilir.
 - <span id="exploit-kit"></span>**Exploit Kit** (İstismar Seti): Tarayıcı/plugin açıklarını paketleyip "kurban gel, açığını seç" diye satan hazır istismar seti. Payload'ı RAM'e enjekte eder; exploitler bir araya gelince kit olur.
+- <span id="export-objects"></span>**Export Objects** (Nesneleri Dışa Aktar): Wireshark'ın pcap içinden transfer edilen dosyaları (HTTP gövdeleri, SMB dosyaları) diske çıkaran özelliği. Ağ forensiklerinde kritik: indirilen zararlıyı veya sızdırılan belgeyi orijinal haliyle kurtarır.
 - <span id="extension-header"></span>**Extension Header** (Genişletilmiş Başlık): IPv6'da ek protokol bilgisini taşıyan zincirleme başlık yapısı (Fragment, Hop-by-Hop, Routing, ESP/AH). Ana başlık 40 byte sabit kalır; her halka bir sonrakini "Next Header" alanıyla işaret eder.
-- <span id="etc-shadow"></span>**/etc/passwd ve /etc/shadow**: Unix'in kullanıcı listesi ve salt'lı parola hash deposu. passwd herkesçe okunur, shadow yalnız root'un; ikisini birden isteyen, kimlik dökümü peşindedir.
 
 </details>
 
@@ -198,10 +198,10 @@ permalink: /sozluk/
 - <span id="hid"></span>**HID** (Human Interface Device): Klavye ve fare gibi insan arayüzü aygıt sınıfı. BadUSB'nin rolüdür: takılır, kendini klavye tanıtır ve yazmaya başlar — bilgisayar "dur" diyemez.
 - <span id="hsts"></span>**HSTS** (HTTP Strict Transport Security): Tarayıcıya "bu siteyle asla HTTP konuşma" diyen yanıt başlığı. SSL stripping'in panzehiridir; bir kez öğrenen tarayıcı geri dönmez.
 - <span id="http"></span>**HTTP** (HyperText Transfer Protocol): Web'in taşıma protokolü; istek (GET/POST) ve yanıt (status code + header + body) düz metin akar. Port 80; dinleyen herkes çerez ve form verisini okur — şifreli hali HTTPS'tir (443).
-- <span id="http2-http3"></span>**HTTP/2 ve HTTP/3** (QUIC): Web protokolünün yeni nesilleri: HTTP/2 TCP üzerinde ikili çerçeveleme ve HPACK sıkıştırma, HTTP/3 ise UDP/443 üzerinde QUIC ile çalışır. Wireshark'ta klasik `http` filtresi yerine http2/quic dissector'ları gerekir.
 - <span id="http-header"></span>**HTTP Header** (HTTP Başlığı): İstek ve yanıtların gövdeden önce gelen metadata satırları (Ad: Değer). Host, User-Agent, Cookie istek tarafında; Server, Content-Length, Location yanıt tarafında yaşar. Sahte User-Agent, otomatize araç ifşasıdır.
 - <span id="http-request-method"></span>**HTTP Request Method** (HTTP İstek Metodu): İsteğin amacını belirten komut: GET okur (parametre URL'de), POST gönderir (veri gövdede), PUT oluşturur, DELETE siler, HEAD yalnız başlık ister. Şifreler POST gövdesinde düz metin gezer.
 - <span id="http-status-code"></span>**HTTP Status Code** (HTTP Durum Kodu): Sunucunun üç haneli kararı: 2xx başarı, 3xx yönlendirme, 4xx istemci hatası, 5xx sunucu hatası. Art arda 401/403 brute force, 404 yağmuru dizin taraması (directory scanning) demektir.
+- <span id="http2-http3"></span>**HTTP/2 ve HTTP/3** (QUIC): Web protokolünün yeni nesilleri: HTTP/2 TCP üzerinde ikili çerçeveleme ve HPACK sıkıştırma, HTTP/3 ise UDP/443 üzerinde QUIC ile çalışır. Wireshark'ta klasik `http` filtresi yerine http2/quic dissector'ları gerekir.
 - <span id="https"></span>**HTTPS / TLS / SSL**: Sitenin seninle arasındaki bağlantıyı şifreleyen protokol. Adres çubuğunda kilit ve `https://` yoksa banka, e-Devlet, kart bilgisi kesinlikle girme.
 
 </details>
@@ -209,16 +209,16 @@ permalink: /sozluk/
 <details class="toc-block" markdown="block" id="letter-i">
 <summary>I</summary>
 
-- <span id="ids-ips"></span>**IDS/IPS** (Intrusion Detection/Prevention System): Saldırı tespit/önleme sistemi. Ağ trafiğini izleyerek saldırıları tespit eden (IDS) ve engelleyen (IPS) güvenlik sistemleri.
 - <span id="iam"></span>**IAM** (Kimlik ve Erişim Yönetimi, İng. Identity and Access Management): Bulutta kimlik ve erişim yönetimi. AWS IAM, Azure RBAC, Google Cloud IAM. En az ayrıcallık ilkesi kritik.
 - <span id="icmp"></span>**ICMP** (Internet Control Message Protocol): Ağ durumu ve hata mesajları protokolü; ping ve traceroute bununla çalışır. Veri taşımaz sanılır; ICMP tüneliyle veri kaçırılır.
 - <span id="icmp-tunneling"></span>**ICMP Tunneling** (ICMP Tüneli): Veriyi ICMP Echo paketlerinin payload'ına gömüp firewall'u aşma. ICMP her yerde serbesttir; anlamsız karakterli, normalden büyük payload'lar ihaneti ele verir.
 - <span id="icmpv6"></span>**ICMPv6**: IPv6'nın ICMP karşılığı; ping/hata bildiriminin ötesinde protokolün omurgasıdır: NDP komşu keşfi, RA ile adres yapılandırma, Packet Too Big ile MTU bildirimi hep bunun üzerinden yürür.
 - <span id="imap"></span>**IMAP** (Internet Message Access Protocol): E-postayı sunucuda tutup çok cihazla senkronize eden protokol (143/993). POP3 indirip siler, IMAP saklar; LOGIN'de kimlik bilgileri düz metindir.
+- <span id="ids-ips"></span>**IDS/IPS** (Intrusion Detection/Prevention System): Saldırı tespit/önleme sistemi. Ağ trafiğini izleyerek saldırıları tespit eden (IDS) ve engelleyen (IPS) güvenlik sistemleri.
+- <span id="iha-destekli-saldiri"></span>**İHA-Destekli Saldırı** (UAV-Assisted Attack): İnsansız hava aracıyla hedefe yaklaşıp sahte baz istasyonu kurma, Wi-Fi/Bluetooth dinleme veya yakın-menzil saldırı düzenleme. Menzil ve başarı oranı klasik yöntemlerden yüksektir.
 - <span id="implant"></span>**Implant**: Hedef ortama özel hazırlanan, kalıcı yaşamak üzere yerleştirilen saldırgan bileşeni. Her kurban için ayrı derlenir; genel imzayla yakalanmaz.
 - <span id="imsi-catcher"></span>**IMSI Catcher** (Sahte Baz İstasyonu): Telefonunu taklit bir baz istasyonuna çekip konumunu ve konuşmanı dinleyen cihaz. Sinyalin gittiği yer gerçek operatör olmayabilir.
 - <span id="information-disclosure"></span>**Information Disclosure** (Bilgi Sızdırma): Bilginin yetkisiz kişilere sızdırılması. STRIDE tehdit kategorilerinden biri.
-- <span id="iha-destekli-saldiri"></span>**İHA-Destekli Saldırı** (UAV-Assisted Attack): İnsansız hava aracıyla hedefe yaklaşıp sahte baz istasyonu kurma, Wi-Fi/Bluetooth dinleme veya yakın-menzil saldırı düzenleme. Menzil ve başarı oranı klasik yöntemlerden yüksektir.
 - <span id="insider-tehdit"></span>**İnsider Tehdit** (Insider Threat): Kurum içinden gelen tehdit. Kötü niyetli veya dikkatsiz çalışan, yüklenici veya eski personelin kurum verilerine erişimi.
 - <span id="io-graph"></span>**IO Graph** (Giriş/Çıkış Grafiği): Trafik miktarını zaman ekseninde çizen Wireshark grafiği; her satıra display filter bağlanabilir. Ani spike DDoS/veri sızdırma, düzenli küçük tepelekler C2 beacon'ı işaret eder.
 - <span id="ioa"></span>**IoA** (Indicator of Attack): Saldırının izinden çok nişine bakan gösterge: "neden bu LDAP sorgusu?" IoC makineyi arar, IoA davranışı. Tespitin geleceği IoA'dadır.
@@ -226,8 +226,8 @@ permalink: /sozluk/
 - <span id="iot"></span>**IoT** (Nesnelerin İnterneti): İnternete bağlı akıllı cihazlar (kamera, lamba, termostat). Güvenlikleri genelde zayıftır; misafir ağına bağla ki ele geçirilince tüm ağa sıçramasın.
 - <span id="ip-adresi"></span>**IP adresi**: Cihazının İnternet üzerindeki adresi. Her bağlantıda bir IP atanır. VPN ile gizlenebilir.
 - <span id="ip-fragmentation"></span>**IP Fragmentation** (IP Parçalanması): Büyük paketlerin yolun MTU sınırına göre parçalanması. Çakışan (overlap) parçalar IDS atlatma tekniğidir; PMTUD, yolun MTU'sunu keşfeden mekanizmadır.
-- <span id="ipv6"></span>**IPv6** (Internet Protocol version 6): 128 bitlik adres uzayına sahip IP'nin halefi; broadcast yok, header 40 byte sabit, checksum yoktur. Dual-stack cihazlarda sessizce çalıştığı için "IPv6'yı kapattım" diyen ağda bile görünebilir.
 - <span id="iptables"></span>**iptables**: Linux'un kural tabanlı paket filtresi ve güvenlik duvarı; kural zincirleri (chain) ve tablolardan oluşur. Host savunmasının ve Linux NAT'ın klasiğidir.
+- <span id="ipv6"></span>**IPv6** (Internet Protocol version 6): 128 bitlik adres uzayına sahip IP'nin halefi; broadcast yok, header 40 byte sabit, checksum yoktur. Dual-stack cihazlarda sessizce çalıştığı için "IPv6'yı kapattım" diyen ağda bile görünebilir.
 - <span id="ir-playbook"></span>**IR Playbook** (Olay Müdahale Kitabı): Olay müdahale senaryo kitabı. Fidye yazılımı, veri sızıntısı, DDoS gibi olay tipleri için adım adım ne yapılacağını tanımlar.
 - <span id="iso-27001"></span>**ISO 27001**: Bilgi güvenliği yönetim sistemi (BGYS) için uluslararası standart. Risk değerlendirmeye dayalı, belgelenebilir süreç ister; sertifikasyon yıllık gözetim denetimleriyle yaşar.
 
@@ -249,8 +249,8 @@ permalink: /sozluk/
 - <span id="kalicilik"></span>**Kalıcılık** (Persistence): Saldırganın yeniden başlatmalara rağmen sistemde kalması: Registry Run Keys, cron, servis, başlangıç klasörü. "Girdi ama kalamadı" ile "yerleşti" arasındaki farktır.
 - <span id="katman"></span>**Katman** (Layer): Ağ protokollerinin iç içe hiyerarşisi: Ethernet (L2, MAC) → IP (L3, adres) → TCP/UDP (L4, taşıma) → HTTP/DNS (L7, uygulama). Wireshark paket detayını katman katman açar; her katman bir sonrakini sarar (encapsulation).
 - <span id="kdc"></span>**KDC** (Key Distribution Center): Kerberos'un kalbi; alan denetleyicisinde (domain controller) yaşar ve iki hizmet barındırır: AS (kullanıcıyı doğrulayıp TGT verir) ve TGS (servis bileti verir). KDC'yi ele geçiren, realm'i (alanı) ele geçirir.
-- <span id="keylogger"></span>**Keylogger** (Klavye Kaydedici): Bastığın her tuşu gizlice kaydedip saldırgana gönderen yazılım. Parolan ne kadar uzun olursa olsun tuş tuş çalınır; ekran klavyesi bile kurtarmayabilir.
 - <span id="keep-alive"></span>**Keep-Alive** (Canlı Tutma): Boşta kalan TCP bağlantısında karşı tarafın canlı olup olmadığını yoklayan küçük paket. NAT ve firewall'ların boş bağlantıyı unutmasını önler; düzenli aralıklı keep-alive trafiği stealth C2'ün de maskesi olabilir.
+- <span id="keylogger"></span>**Keylogger** (Klavye Kaydedici): Bastığın her tuşu gizlice kaydedip saldırgana gönderen yazılım. Parolan ne kadar uzun olursa olsun tuş tuş çalınır; ekran klavyesi bile kurtarmayabilir.
 - <span id="kerberos"></span>**Kerberos**: Active Directory'nin bilet tabanlı kimlik doğrulama protokolü. AS ve TGS biletleriyle çalışır; RC4 (etype 23) bilet bolluğu, Kerberoasting saldırısının keskin imzasıdır.
 - <span id="kerberoasting"></span>**Kerberoasting**: Dizindeki SPN'ler için istenen servis biletlerini (tercihen RC4/etype 23) kapıp parolayı çevrimdışı kırmak. Ağda şifre taşınmaz; kırılabilir bilet taşınır. Panzehiri uzun servis parolaları ve AES'a geçiştir.
 - <span id="kendinden-imzali-sertifika"></span>**Kendinden İmzalı Sertifika** (Self-Signed): Veren ile sahibin aynı olduğu sertifika; CA doğrulaması yoktur. Test ortamında normal, üretimde MITM göstergesidir; Wireshark'ta issuer = subject olarak görülür.
@@ -268,10 +268,10 @@ permalink: /sozluk/
 <details class="toc-block" markdown="block" id="letter-l">
 <summary>L</summary>
 
+- <span id="larry-wall"></span>**Larry Wall'un Üç Erdemi**: Büyük mühendisin üç erdemi (Perl'in babasından): Tembellik — aynı angaryayı iki kez yapmamak için otomasyon yazar; Sabırsızlık — darboğazı yaşanmadan önce çözer; Kibir — "bunu hangi sığır yazdı?" dedirtmeyecek kadar temiz kod üretir.
 - <span id="lateral-movement"></span>**Yanal Hareket** (Lateral Movement): İlk kurbandan diğerlerine sıçrama: uzaktan yürütme araçlarıyla (PsExec, WinRM) ve çalınan kimlik bilgileriyle. Tek makine ihlali, yanal harekette bir ağ ihlaline dönüşür.
 - <span id="ldap"></span>**LDAP**: Dizin servisinin (kullanıcı, grup, bilgisayar) sorgulama protokolü; Active Directory'nin arayüzü. 389 düz/StartTLS, 636 LDAPS; rootDSE boş sorgusu dizinin "kimlik kartını" anonim verir — keşfin ilk adımıdır.
 - <span id="ldap-injection"></span>**LDAP Injection** (LDAP Enjeksiyonu): LDAP filtresine kullanıcı girdisiyle müdahale: sorgu genişletilip tüm kayıtlar dökülür. SQL injection'ın LDAP kardeşi; filtre kaçışıyla önlenir.
-- <span id="larry-wall"></span>**Larry Wall'un Üç Erdemi**: Büyük mühendisin üç erdemi (Perl'in babasından): Tembellik — aynı angaryayı iki kez yapmamak için otomasyon yazar; Sabırsızlık — darboğazı yaşanmadan önce çözer; Kibir — "bunu hangi sığır yazdı?" dedirtmeyecek kadar temiz kod üretir.
 - <span id="lease-time"></span>**Lease Time** (Kiralama Süresi): DHCP'nin verdiği IP adresinin geçerlilik süresi (Option 51, tipik 24 saat). Süre dolmadan yenilenir (renew); istemci dönmezse adres havuza geri döner.
 - <span id="least-privilege"></span>**Least Privilege** (En Az Yetki): Bir kullanıcının veya sistemin yalnızca görevini yerine getirmek için gereken en düşük yetki seviyesine sahip olması prensibi.
 - <span id="link-local"></span>**Link-Local** (Bağlantı-Yerel): Yalnız aynı segmentte geçerli IPv6 adresi (fe80::/10); router asla taşımaz. Her arayüz otomatik alır; NDP ve router keşfi bununla çalışır: `fe80::1%eth0` gibi kullanılır.
@@ -290,15 +290,15 @@ permalink: /sozluk/
 - <span id="malware"></span>**Malware** (Kötü Amaçlı Yazılım): Virüs, trojan, fidye yazılımı, casus yazılım gibi zarar vermek amacıyla yazılmış tüm yazılımların ortak (şemsiye) adı.
 - <span id="man-in-the-middle"></span>**Man-in-the-Middle** (Ortadaki Adam): Ortadaki adam saldırısı. İki taraf arasına girerek haberleşmeyi dinleme veya değiştirme.
 - <span id="mass-assignment"></span>**Mass Assignment** (Toplu Alan Ataması): Framework'lerin form verisini otomatik modele ataması. Saldırgan forma `is_admin=true` eklerse admin olur. Whitelist/DTO ile önlenir.
-- <span id="mime"></span>**MIME** (Multipurpose Internet Mail Extensions): E-postada metin dışı içeriği (ek, resim, html) tanımlayan standart; Content-Type ve ayraç (boundary) ile gövde bölünür. Ekler base64 ile MIME zarfına sarılır — zarf açılınca malware çıkabilir.
-- <span id="mimikatz"></span>**mimikatz**: Windows kimlik bilgisi hasadının efsanesi: Windows'un kimlik sürecinden (LSASS) parola hash'i, bilet ve düz metin çıkarır. Pass-the-hash dünyası onunla yayıldı.
-- <span id="mitre-attack"></span>**MITRE ATT&CK**: Gerçek tehdit aktörlerinin taktik ve tekniklerini (TTP) matris halinde kataloglayan bilgi tabanı. Tehdit modelleme, red team planlama ve savunma kapsaması doğrulamada ortak dildir.
 - <span id="mdm"></span>**MDM** (Mobil Cihaz Yönetimi, İng. Mobile Device Management): Mobil cihaz yönetimi. Kurum içindeki mobil cihazları güvenlik politikalarıyla yöneten sistem.
 - <span id="mdr"></span>**MDR** (Managed Detection and Response): Yönetilen tespit ve yanıt; MSSP'in aktif müdahaleli kardeşi. Uzaktan SOC analistleri alarmı kapatmaz, olayı kapatır.
 - <span id="metadata"></span>**Metadata** (Üst Veri): Veri hakkında veri. Dosyanın oluşturulma tarihi, yazarı, konumu gibi bilgiler.
-- <span id="mf-df"></span>**MF / DF Bayrakları**: IP parçalama bayrakları: MF=1 "devamı var", DF=1 "parçalama". DF'li paket MTU'yu aşarsa düşer ve ICMP Fragmentation Needed döner — PMTUD'un temel mekanizması budur.
 - <span id="metasploit"></span>**Metasploit / Meterpreter**: Sızma testinin efsane çerçevesi ve oturum yöneticisi payload'u. Dinleyiciyi (handler) başlat, exploiti gönder, meterpreter oturumuyla yaşa — kırmızı takımın dil kalıbıdır.
+- <span id="mf-df"></span>**MF / DF Bayrakları**: IP parçalama bayrakları: MF=1 "devamı var", DF=1 "parçalama". DF'li paket MTU'yu aşarsa düşer ve ICMP Fragmentation Needed döner — PMTUD'un temel mekanizması budur.
 - <span id="mfa"></span>**MFA** (Çok Faktörlü Doğrulama, İng. Multi-Factor Authentication): Çok faktörlü doğrulama. İkiden fazla doğrulama yöntemi kullanarak kimlik doğrulama. 2FA'nın daha kapsamlı halidir.
+- <span id="mime"></span>**MIME** (Multipurpose Internet Mail Extensions): E-postada metin dışı içeriği (ek, resim, html) tanımlayan standart; Content-Type ve ayraç (boundary) ile gövde bölünür. Ekler base64 ile MIME zarfına sarılır — zarf açılınca malware çıkabilir.
+- <span id="mimikatz"></span>**mimikatz**: Windows kimlik bilgisi hasadının efsanesi: Windows'un kimlik sürecinden (LSASS) parola hash'i, bilet ve düz metin çıkarır. Pass-the-hash dünyası onunla yayıldı.
+- <span id="mitre-attack"></span>**MITRE ATT&CK**: Gerçek tehdit aktörlerinin taktik ve tekniklerini (TTP) matris halinde kataloglayan bilgi tabanı. Tehdit modelleme, red team planlama ve savunma kapsaması doğrulamada ortak dildir.
 - <span id="model-poisoning"></span>**Model Poisoning** (Model Zehirlenme): LLM'in eğitim verisinin manipüle edilmesi. Model, belirli girdilerde kötü çıktı verir.
 - <span id="monitor-mode"></span>**Monitor Mode** (İzleme Modu): Wi-Fi kartının tüm kanallardaki çerçeveleri yakaladığı mod; 802.11 analizi (Beacon, deauth, handshake) ancak bu modda yapılır. Kablolu dünyadaki promiscuous mode'un radyo karşılığıdır.
 - <span id="mss"></span>**MSS** (Maximum Segment Size): TCP'nin tek pakette taşıyabileceği azami uygulama verisi; Ethernet'te tipik 1460 byte (1500 − 20 IP − 20 TCP). SYN'de opsiyon olarak bildirilir; iki tarafın küçüğü kazanır.
@@ -350,9 +350,8 @@ permalink: /sozluk/
 <details class="toc-block" markdown="block" id="letter-p">
 <summary>P</summary>
 
-- <span id="paket"></span>**Paket** (Packet): Ağ üzerinden gönderilen temel veri birimi; zarf gibi hem adres (IP, port) hem içerik (payload) taşır. Katmanlı yapı sayesinde paket içinde paket yaşar: Ethernet → IP → TCP → HTTP.
 - <span id="packer"></span>**Packer** (Paketleyici): Zararlıyı sıkıştırıp saran, imzadan kaçıran ambalaj (UPX en bilineni). Analisti yavaşlatır ama durdurmaz: imza değişir, davranış değişmez.
-- <span id="pasta"></span>**PASTA** (Process for Attack Simulation and Threat Analysis): Saldırı simülasyonu ve tehdit analizi sürecini tanımlayan tehdit modelleme çerçevesi.
+- <span id="paket"></span>**Paket** (Packet): Ağ üzerinden gönderilen temel veri birimi; zarf gibi hem adres (IP, port) hem içerik (payload) taşır. Katmanlı yapı sayesinde paket içinde paket yaşar: Ethernet → IP → TCP → HTTP.
 - <span id="parametreli-sorgu"></span>**Parametreli Sorgu** (Parameterized Query): SQL enjeksiyonunu önleyen veritabanı sorgu yöntemi. Veri ile SQL komutunu ayrı işler; kullanıcı girdisi asla SQL kodu olarak yorumlanmaz.
 - <span id="parola"></span>**Parola** (Password): En yaygın kimlik doğrulama gizlizi. Uzunluk karmaşıklıktan önemlidir: 12+ karakter, her hesapta farklı ve parola yöneticisinde saklanmış olmalıdır.
 - <span id="parola-yoneticisi"></span>**Parola Yöneticisi** (Password Manager): Tüm parolaları tek ana parolanın arkasında şifreli tutan yazılım. Her hesap için uzun, benzersiz parola üretir; ezber yükünü sıfırlar, tekrar kullanımı bitirir.
@@ -360,8 +359,9 @@ permalink: /sozluk/
 - <span id="pass-the-ticket"></span>**Pass-the-Ticket**: Çalınan Kerberos biletinin parolasız yeniden kullanımı. Kimlik kanıtı biletin kendisidir; hash'i ele geçiren saldırgan kopyayı sunar ve içeri girer.
 - <span id="passkey"></span>**Passkey** (Parolasız Anahtar): Parolanın yerini alan kriptografik kimlik doğrulama. Face ID/Touch ID ile cihazda private key, sunucuda public key. Phishing-proof.
 - <span id="password-spraying"></span>**Password Spraying** (Parola Püskürtme): Çok kullanıcıya tek tanıdık parola denemek. Brute force'un tersi: hesap kilidi tetiklemez, denemeleri kullanıcılara yayar; SMB'de STATUS_LOGON_FAILURE yağmuru olarak görülür.
-- <span id="path-traversal"></span>**Path Traversal** (Dizin Geçişi): Saldırganın `../../etc/passwd` gibi yollarla yetkisiz dizinlere erişmesi. Dosya adı doğrulaması ve yol çözümlemesi ile önlenir.
+- <span id="pasta"></span>**PASTA** (Process for Attack Simulation and Threat Analysis): Saldırı simülasyonu ve tehdit analizi sürecini tanımlayan tehdit modelleme çerçevesi.
 - <span id="patch"></span>**Yama** (Patch): Üreticinin zafiyeti kapatan güncellemesi. Yamasız kalmak kapıyı açık bırakmaktır; exploit kitler yamalanmış açıkların bile gerisinde koşar.
+- <span id="path-traversal"></span>**Path Traversal** (Dizin Geçişi): Saldırganın `../../etc/passwd` gibi yollarla yetkisiz dizinlere erişmesi. Dosya adı doğrulaması ve yol çözümlemesi ile önlenir.
 - <span id="payload"></span>**Payload** (Yük): Saldırının asıl işi yapan bileşeni: exploit kapıyı aralar, payload içeri girer — reverse shell, implant, ransomware. Zarf-mektup ilişkisinin siber hali.
 - <span id="pcap"></span>**pcap**: Ağ trafiğinin ham yakalanmış hali; paket analizin ham maddesi. Wireshark'ın doğal formatı, libpcap'ın çıktısıdır; adını dosya uzantısından alır.
 - <span id="pegasus"></span>**Pegasus**: NSO Group tarafından geliştirilen ticari casus yazılım. Sıfır tıklamayla cihaza bulaşabilir.
@@ -371,8 +371,8 @@ permalink: /sozluk/
 - <span id="ping"></span>**ping**: ICMP Echo ile erişilebilirlik testi: "orada mısın?" sorusu, RTT ölçümü ve paket kayıp oranı döner. Filtrelenmiş olabilir; sessizlik "kapalı" demek değildir.
 - <span id="pkce"></span>**PKCE** (Proof Key for Code Exchange): Mobil ve tek sayfa uygulamalarında OAuth 2.0 güvenliğini artıran protokol. Her yetki isteği için dinamik secret üretir; 2024'ten beri zorunlu.
 - <span id="pmtud"></span>**PMTUD** (Path MTU Discovery): Yol üzerindeki en küçük MTU'yu bulma mekanizması: DF işaretli paket gönderilir, daralan router ICMP "Fragmentation Needed" ile MTU'yu bildirir. ICMP filtrelenirse bağlantı kara deliğe düşer.
-- <span id="pop3"></span>**POP3** (Post Office Protocol v3): E-postayı indirip (genelde) sunucudan silen basit protokol (110/995). USER/PASS düz metindir; tek cihaz döneminin mirasıdır, çok cihaz senkronu IMAP ister.
 - <span id="polymorphic-metamorphic"></span>**Polymorphic / Metamorphic Code** (Çok Biçimli / Kendini Yeniden Yazan Kod): İmzadan kaçan şekil değiştiren kodlar: polymorphic her kopyada şifreleyici anahtarını değiştirir; metamorphic kendini baştan yazar. AV imzası sabit kalır, kod kalmaz.
+- <span id="pop3"></span>**POP3** (Post Office Protocol v3): E-postayı indirip (genelde) sunucudan silen basit protokol (110/995). USER/PASS düz metindir; tek cihaz döneminin mirasıdır, çok cihaz senkronu IMAP ister.
 - <span id="port"></span>**Port**: Uygulamanın 16 bitlik kapı numarası (0-65535); 0-1023 "well-known" (HTTP 80, DNS 53), istemci tarafı ephemeral (yüksek) portlardan konuşur. Paket hangi kapıya gelirse o uygulamaya teslim edilir.
 - <span id="port-mirroring"></span>**Port Mirroring** (SPAN): Anahtarın bir portundaki trafiğin kopyasını izleme portuna yansıtması. Switch ortamında analiz makinesi her şeyi ancak SPAN ile görür; kartın promiscuous olması yetmez.
 - <span id="port-scan"></span>**Port Scan** (Port Taraması): Hedefteki açık kapıların (portların) keşfi. SYN taraması yarı bağlantıyla sessiz kalır, connect taraması tam bağlantı açar; kapı zili çalmak gibidir ama log bir yere düşer.
@@ -397,9 +397,9 @@ permalink: /sozluk/
 <summary>R</summary>
 
 - <span id="ra"></span>**RA** (Router Advertisement): IPv6 router'ının "ben buradayım, şu adres önekini (prefix) kullanın" duyurusu (ICMPv6 Type 134). SLAAC bu duyurudan beslenir; sahte RA gönderen saldırgan kendini gateway yapar (RA spoofing).
-- <span id="rbac"></span>**RBAC** (Role-Based Access Control): Rol bazlı erişim kontrolü. Kullanıcı yetkilerini roller üzerinden yönetme yöntemi.
 - <span id="race-condition"></span>**Race Condition** (Yarış Durumu): İki işlemin aynı kaynağa aynı anda erişmesi sonucu oluşan güvenlik açığı. Örneğin rate limiting sayaçları birden çok işlemci arasında kilitlenmezse atlanabilir.
 - <span id="rag"></span>**RAG** (Getirme Artırılmış Üretim, İng. Retrieval-Augmented Generation): LLM'e harici bilgi tabanından belge getirterek yanıt üretme. ACL'lere dikkat: kullanıcı yetkisiz belge görmemeli.
+- <span id="rbac"></span>**RBAC** (Role-Based Access Control): Rol bazlı erişim kontrolü. Kullanıcı yetkilerini roller üzerinden yönetme yöntemi.
 - <span id="rat"></span>**RAT** (Remote Access Trojan): Uzaktan komuta truva atı: ekran, klavye, dosya, mikrofon — hepsi saldırganın panelinde. Arka kapının konsollu lüks versiyonudur.
 - <span id="rate-limiting"></span>**Rate Limiting** (Hız Sınırlandırma): Bir kullanıcının belirli süre içinde yapabileceği istek sayısını sınırlama. Brute force ve DDoS saldırılarına karşı ilk savunma hattı.
 - <span id="rc4"></span>**RC4** (Rivest Cipher 4): Kırılması kolay, çağdışı akış şifreleyici; TLS'den çoktan kaldırıldı ama Kerberos'ta etype 23 olarak hâlâ görülür. Ağda RC4 bilet bolluğu, Kerberoasting için gönderilmiş davetiyedir.
@@ -422,9 +422,9 @@ permalink: /sozluk/
 <details class="toc-block" markdown="block" id="letter-s">
 <summary>S</summary>
 
+- <span id="sack"></span>**SACK** (Selective Acknowledgment): TCP'nin "sadece şu aralıklar elime ulaştı" diyebilmesi. Paket kaybında yalnız eksik parça yeniden gönderilir; gereksiz retransmission azalır.
 - <span id="saldiri-agaci"></span>**Saldırı Ağacı** (Attack Tree): Saldırı senaryolarını ağaç yapısında modelleme yöntemi.
 - <span id="saldiri-vektoru"></span>**Saldırı Vektörü** (Attack Vector): Saldırganın hedefe ulaşmak için kullandığı yol veya yöntem. E-posta, USB, web sitesi gibi çeşitli vektörler vardır.
-- <span id="sack"></span>**SACK** (Selective Acknowledgment): TCP'nin "sadece şu aralıklar elime ulaştı" diyebilmesi. Paket kaybında yalnız eksik parça yeniden gönderilir; gereksiz retransmission azalır.
 - <span id="salt"></span>**Salt** (Tuz): Parola hash'ine eklenen, her kullanıcı için benzersiz rastgele değer. Aynı parola farklı tuzlarla farklı hash üretir; böylece rainbow table saldırıları engellenir.
 - <span id="sam"></span>**SAM** (Security Account Manager): Windows'un yerel hesap ve parola hash deposu. Credential dumping'in birincil hedefidir; /etc/shadow'nun Windows karşılığıdır.
 - <span id="samr"></span>**SAMR** (SAM Remote Protocol): Windows'un uzaktan hesap veritabanı (SAM) sorgulama arayüzü; kullanıcı ve grup envanteri RPC üzerinden dökülür. Anonim NULL oturumla birleşince saldırganın dizini sayfalama aracı olur.
@@ -446,6 +446,7 @@ permalink: /sozluk/
 - <span id="shadow-it"></span>**Shadow IT** (Gölge BT): Çalışanların BT departmanından habersiz kullandığı yazılım, hizmet ve cihazlar. Güvenlik riskleri taşır.
 - <span id="shared-responsibility"></span>**Shared Responsibility Model** (Sorumluluk Paylaşımı): Bulut sağlayıcı ve müşteri arasındaki sorumluluk paylaşımı. Sağlayıcı bulutun altyapısını, müşteri üzerindekileri korur.
 - <span id="shift-left"></span>**Shift-Left** (Sola Kaydırma): Güvenliği sürecin en başına, yani tasarım ve geliştirme aşamasına çekme felsefesi. Hata ne kadar erken yakalanırsa düzeltme o kadar ucuz olur.
+- <span id="sizma-testi"></span>**Sızma Testi** (Pentest): Sistemin zafiyetlerini bulmak için etik hackerlara yaptırılan sahte saldırı. Hangi açığın gerçekten sömürülebilir olduğunu kanıtlar.
 - <span id="siber-casusluk"></span>**Siber Casusluk** (Cyber Espionage): Devlet veya devlet destekli aktörlerin bilgi çalma kampanyası. APT28/APT29 gibi ekipler yıllarca içeride yaşar; hedef veridir, şov değil.
 - <span id="siber-dayaniklilik"></span>**Siber Dayanıklılık** (Cyber Resilience): Saldırıyı önlemenin ötesi: vurulunca da çalışmaya devam edebilme. Yedek, tekrarlama ve tatbikat üçlüsüyle inşa edilir.
 - <span id="siber-zorbalik"></span>**Siber Zorbalık** (Cyberbullying): Dijital araçlarla tekrarlanan taciz, tehdit, iftira ve dışlama. Kurban çoğu zaman çocuktur; ekran görüntüsüyle kanıt topla, engelle, yetişkine ve platforma bildir.
@@ -454,7 +455,6 @@ permalink: /sozluk/
 - <span id="sim-swap"></span>**SIM swap** (SIM Değişimi): Telefon numaranı başka bir SIM karta aktarıp hesaplarına erişme saldırısı.
 - <span id="sip-rtp"></span>**SIP / RTP** (Session Initiation Protocol / Real-time Transport Protocol): VoIP'nin iki yakası: SIP çağrıyı kurar (sinyalleme), RTP sesi ve görüntüyü taşır (medya). Şifrelenmezse dinleme ve vishing altyapısı olur; SRTP ile korunur.
 - <span id="situational-awareness"></span>**Durumsal Farkındalık** (Situational Awareness): Sistemin o anki halini bilmek: hangi süreç, hangi bağlantı, hangi kullanıcı normal? İhlalde sorulacak ilk soru "normal neydi?" sorusudur.
-- <span id="sizma-testi"></span>**Sızma Testi** (Pentest): Sistemin zafiyetlerini bulmak için etik hackerlara yaptırılan sahte saldırı. Hangi açığın gerçekten sömürülebilir olduğunu kanıtlar.
 - <span id="slsa"></span>**SLSA** (Yazılım Tedarik Zinciri Seviyeleri, İng. Supply-chain Levels for Software Artifacts): Yazılım tedarik zinciri güvenlik seviyeleri. Seviye 1-4 arası, build sürecinin güvenliğini sertleştirir.
 - <span id="smb"></span>**SMB** (Server Message Block): Windows dünyasının dosya ve yazıcı paylaşım protokolü. İmzasız oturumlar ağdan dosya çalmaya açıktır; SMBv1 (EternalBlue) fidye yazılımlarının tarihi kapısıydı.
 - <span id="smishing"></span>**Smishing** (SMS Oltalaması): SMS ile yapılan oltalama. "Kargon teslim edilemedi, tıkla" tarzı mesajlarla sahte siteye çekilirsin; mesajdaki kısa linke tıklama.
@@ -493,10 +493,10 @@ permalink: /sozluk/
 <details class="toc-block" markdown="block" id="letter-t">
 <summary>T</summary>
 
+- <span id="tabletop"></span>**Tabletop Exercise** (Masa Başı Tatbikatı): IR ekibinin bir senaryo üzerinden sözlü olarak müdahale tatbikatı. Yılda en az 2 önerilir.
 - <span id="tailgating"></span>**Tailgating** (Arkaya Takılma): Arkana takılma. Fiziksel güvenliği aşmak için yetkisiz kişinin senin peşinden geçmesi.
 - <span id="tails"></span>**Tails**: USB'ye kurulan ve bilgisayarda hiç iz bırakmayan işletim sistemi. USB'yi çıkarınca ne yaptığın unutulur; gazeteci ve aktivistlerin yüksek riskli aracı.
 - <span id="tampering"></span>**Tampering** (Veri Bozma): Verinin yetkisiz bir kişi tarafından değiştirilmesi. STRIDE tehdit kategorilerinden biri.
-- <span id="tabletop"></span>**Tabletop Exercise** (Masa Başı Tatbikatı): IR ekibinin bir senaryo üzerinden sözlü olarak müdahale tatbikatı. Yılda en az 2 önerilir.
 - <span id="tck"></span>**TCK** (Türk Ceza Kanunu): Bilişim suçlarını ve cezalarını düzenleyen temel yasa. Bilişim alanındaki suçlar TCK'nın çeşitli maddelerinde tanımlanır.
 - <span id="tcp"></span>**TCP** (Transmission Control Protocol): Bağlantı kuran, sıralayan, onaylayan güvenilir taşıma protokolü: 3-way handshake, sequence/ACK, retransmission. Web, e-posta ve dosya transferinin tamamı TCP üzerindedir; hız gerekince UDP.
 - <span id="tcp-bayraklari"></span>**TCP Bayrakları** (SYN, ACK, FIN, RST, PSH, URG): Bağlantının kontrol sinyalleri: SYN açar, ACK onaylar, FIN kapatır, RST zorla keser, PSH veriyi anında iletir, URG acil işaretler. SYN=1 & ACK=0 bir taramanın başlangıcı, yalnız RST ise kapalı kapıdır.
@@ -539,8 +539,8 @@ permalink: /sozluk/
 <details class="toc-block" markdown="block" id="letter-v">
 <summary>V</summary>
 
-- <span id="verbis"></span>**VERBİS** (Veri Sorumluları Sicili): Kişisel Verileri İşleyen Veri Sorumluları Sicili. KVKK kapsamında veri sorumlularının kayıt yaptırmak zorunda olduğu sistem.
 - <span id="vault"></span>**Vault**: Gizli anahtarları (API key, parola, şifreleme anahtarı) merkezi ve güvenli biçimde saklayan sistem. HashiCorp Vault en bilinen örnektir. Anahtarlar koda gömülmez, Vault'tan dinamik olarak alınır.
+- <span id="verbis"></span>**VERBİS** (Veri Sorumluları Sicili): Kişisel Verileri İşleyen Veri Sorumluları Sicili. KVKK kapsamında veri sorumlularının kayıt yaptırmak zorunda olduğu sistem.
 - <span id="veri-brokeri"></span>**Veri Brokerı** (Data Broker): Senin hakkında toplanan verileri toplayıp satan şirket. Adını hiç duymadığın firmalar profilini alıp satıyor; çıkış talep edebilirsin.
 - <span id="veri-ihlali"></span>**Veri İhlali** (Data Breach): Kişisel verilerin yetkisiz kişilerin eline geçmesi. KVKK kapsamında kurum, ihlali en kısa sürede ilgili kişilere ve Kurul'a bildirmek zorundadır.
 - <span id="veri-minimizasyonu"></span>**Veri Minimizasyonu** (Data Minimization): Kişisel verilerin işleme amacıyla sınırlı olarak, olabildiğince az toplanması prensibi.
@@ -556,15 +556,15 @@ permalink: /sozluk/
 <summary>W</summary>
 
 - <span id="wcna"></span>**WCNA** (Wireshark Certified Network Analyst): Wireshark üzerinde ağ analizi sertifikası; display filter, expert bilgi ve grafik okuma becerisini ölçer. Bu serinin müfredat hedeflerinden biridir.
-- <span id="whaling"></span>**Whaling** (Balina Avlama): Üst düzey yöneticilere (CEO, bakan, genel müdür) yapılan hedefli oltalama. Spear phishing'in en üstü; inandırıcılığı ve hasarı daha büyüktür.
 - <span id="webauthn"></span>**WebAuthn** (Web Authentication): W3C standardı, Passkeys'in temel API'si. Tarayıcıdan parolasız kimlik doğrulama.
+- <span id="whaling"></span>**Whaling** (Balina Avlama): Üst düzey yöneticilere (CEO, bakan, genel müdür) yapılan hedefli oltalama. Spear phishing'in en üstü; inandırıcılığı ve hasarı daha büyüktür.
 - <span id="white-team"></span>**White Team** (Beyaz Takım): Tatbikatın hakem ve kontrol kulesi: kuralları koyar, skorları tutar, kurguyu yönetir. Red saldırır, Blue savunur, Purple öğretir, White izler.
 - <span id="whois"></span>**whois**: Alan adının kayıt bilgilerini sorgulayan protokol ve araç: kime kayıtlı, ne zaman, hangi DNS sunucuları. OSINT'in ilk kapısıdır.
 - <span id="wireshark"></span>**Wireshark**: Ağ trafiğini paket paket görselleştiren sektör standardı analiz aracı. Display/capture filter ile trafiğin hikâyesini okur; eklentileri Lua ile yazılır.
 - <span id="wmi"></span>**WMI** (Windows Management Instrumentation): Windows'un yönetim ve otomasyon altyapısı; PowerShell ile birlikte LotL saldırılarının iki kolundan biridir. Süreç başlatma ve bilgi toplama "meşru yönetim" kılığında yapılır.
+- <span id="worm"></span>**Worm** (Solucan): Kendi kendine ağda yayılan zararlı; tıklamaya ihtiyaç duymaz. Morris Worm'dan beri internetin bağımsız gezginidir.
 - <span id="wpa"></span>**WPA2 / WPA3** (Wi-Fi Protected Access): Wi-Fi ağının şifreleme standartları. Modem ayarında bunlardan biri olsun; eski WEP ise dakikalar içinde kırılır.
 - <span id="wps"></span>**WPS** (Wi-Fi Protected Setup): Modeme tuşa basarak hızlı bağlanma özelliği. Kırılması kolaydır; güvenlik için modem arayüzünden kapat.
-- <span id="worm"></span>**Worm** (Solucan): Kendi kendine ağda yayılan zararlı; tıklamaya ihtiyaç duymaz. Morris Worm'dan beri internetin bağımsız gezginidir.
 
 </details>
 
