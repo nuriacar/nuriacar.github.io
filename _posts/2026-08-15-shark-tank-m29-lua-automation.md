@@ -126,7 +126,7 @@ Potansiyel itirazlara bir iki kelam edeyim:
 | 27 | Zinciri elle kur, zamanı not et | **Timeline tablosu** otomatik kronolojide |
 | 28 | Kill chain + IOC özetini elle yaz | Kill-chain tablosu + IOC bloğu + istenirse `.json` |
 
-Bir de hiç beklemediğin yerden gelir kahramanlık: Betiğe daha önce hiç görmediği bir ağdan 9.831 paketlik bir pcap verdim. Saniyeler sonra rapor: sahte User-Agent (`MSIE 8.0` + `Windows 10` — gerçek tarayıcıda imkansız bileşim), 6 anonim (NULL) SMB oturumu, SAMR ile dizin envanteri, RC4 biletler, ve dışarıdaki makineden SMB ile indirilmiş `server.exe` adlı malware — tam **598.528 bayt**... GUI'de bu dosya adını bulana kadar hangi filtreyi kaç kere yazacaktın?
+Bir kahramanlık hikayesi: Betiğe daha önce hiç görmediği bir ağdan 9.831 paketlik bir pcap verdim. Saniyeler sonra rapor: sahte User-Agent (`MSIE 8.0` + `Windows 10` — gerçek tarayıcıda imkansız bileşim), 6 anonim (NULL) SMB oturumu, SAMR ile dizin envanteri, RC4 biletler, ve dışarıdaki makineden SMB ile indirilmiş 598.528 bayt'lık server.exe adlı malware! GUI'de bu dosya adını bulana kadar hangi filtreyi kaç kere yazacaktın?
 
 ---
 
@@ -150,7 +150,7 @@ GUI'de denemek istersen: script'i Lua eklenti dizinine kopyala, Wireshark'ı yen
 ## Kendine Sınav (5 Soru)
 
 1. Bir SOC ekibine günde 300 pcap düşüyor. GUI mi, betik mi, hangi iş bölümü? Gerekçesiyle açıkla.
-2. Nmap'in `-sC` scriptleri hangi dilde yazılmıştır ve bu durum "Lua'ya kızanlar" itirazını nasıl güçlendirir?
+2. Nmap'in `-sC` scriptleri hangi dilde yazılmıştır ve bu bilgi, yıllardır Nmap kullanan birinin Lua ile ilişkisini nasıl değiştirir?
 3. Betiğin raporunda "C2 adayı" yazıyor. Manuel takip olarak **GUI'de** hangi üç adımı atarsın?
 4. Larry Wall'un üç erdemi say ve her birinin bu modüldeki otomasyon kararına nasıl karşılık geldiğini açıkla.
 5. `campaign.md` neyi ifade eder; iki pcap'in "aynı kampanya" olduğunu hangi ortak IOC'lerden çıkarırsın?
