@@ -270,8 +270,8 @@ permalink: /sozluk/
 - <span id="kill-chain"></span>**Kill Chain** (Öldürme Zinciri): Saldırıyı aşamalara ayıran model: keşif, silahlanma, teslim, istismar, kurulum, C2, hedefe erişim. Savunma zincirin tek bir halkasını kırmayı hedefler; Lockheed Martin modelidir.
 - <span id="kill-switch"></span>**Kill Switch** (Bağlantı Kesici): VPN koptuğu an İnternet erişimini otomatik kesen özellik. Açık değilse VPN düşerken farkında olmadan korumasız gezersin.
 - <span id="kod-inceleme"></span>**Kod İnceleme** (Code Review): Başka bir geliştiricinin yazılan kodu güvenlik açısından denetlemesi. Otomatik araçlar (SAST) birçok hatayı yakalar ama iş mantığı hataları sadece insan gözüyle tespit edilir.
-- <span id="kpi"></span>**KPI** (Key Performance Indicator): Temel performans göstergesi. Hedeflere ulaşılıp ulaşılmadığını ölçen metrik.
 - <span id="kok-dns"></span>**Kök DNS** (Root DNS): DNS hiyerarşisinin tepesi; TLD'lere yol soran 13 kök sunucu kümesi. Tehdit değil ama hedeftir: DDoS'una düşse internetin isimleri çözülmez.
+- <span id="kpi"></span>**KPI** (Key Performance Indicator): Temel performans göstergesi. Hedeflere ulaşılıp ulaşılmadığını ölçen metrik.
 - <span id="krbtgt"></span>**krbtgt**: KDC'nin imza anahtarını taşıyan hesap; TGT'leri o imzalar. Hash'i sızarsa Golden Ticket kapısı açılır — parolasını iki kez sıfırlamak eski anahtarı öldürür.
 - <span id="kri"></span>**KRI** (Key Risk Indicator): Temel risk göstergesi. Risklerin gerçekleşme olasılığını önceden haber veren metrik.
 - <span id="kriptografi"></span>**Kriptografi**: Şifreleme bilimi. Veriyi okunamaz hale getirip yalnızca yetkili kişinin açmasını sağlar. Simetrik yöntem tek anahtarla, asimetrik yöntem (public/private anahtar çifti) çalışır.
