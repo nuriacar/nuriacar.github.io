@@ -34,8 +34,8 @@ permalink: /sozluk/
 - <span id="apt"></span>**APT** (Advanced Persistent Threat): Gelişmiş sürekli tehdit. Uzun süreli, hedefli ve karmaşık siber saldırı.
 - <span id="arp"></span>**ARP** (Address Resolution Protocol): Ağda IP adresini MAC adresine çeviren protokol; yerel ağda "bu IP kimin?" sorusunun cevabıdır. Yerel ağ saldırılarının çoğu buradan başlar.
 - <span id="arp-cache"></span>**ARP Cache** (ARP Önbelleği): Cihazın öğrendiği IP-MAC eşleşmelerini sakladığı geçici tablo. `arp -a` ile görüntülenir; zehirlenmiş cache, MITM saldırısının ayak izidir.
-- <span id="authoritative-dns"></span>**Authoritative DNS** (Yetkili DNS Sunucusu): Bir alan adının nihai cevabını veren sunucu; kayıtların asıl sahibi. Recursive sunucu bilmiyorsa en son ona sorar — verdiği cevap bağlayıcıdır.
 - <span id="arp-spoofing"></span>**ARP Spoofing** (ARP Zehirlenmesi): Saldırganın kendisini ağ geçidiymiş gibi tanıtıp trafiği üzerinden geçirdiği yerel ağ saldırısı. Aynı L2 ağda olmak yeterlidir; HTTPS ve statik ARP kayıtları korur.
+- <span id="authoritative-dns"></span>**Authoritative DNS** (Yetkili DNS Sunucusu): Bir alan adının nihai cevabını veren sunucu; kayıtların asıl sahibi. Recursive sunucu bilmiyorsa en son ona sorar — verdiği cevap bağlayıcıdır.
 
 </details>
 
@@ -128,8 +128,8 @@ permalink: /sozluk/
 - <span id="dnssec"></span>**DNSSEC** (DNS Security Extensions): Yanıtları dijital imza ile doğrulayan DNS uzantısı; sahte yanıt kanıtla reddedilir. Zehirlenmeye çare olur ama gizlilik sağlamaz — sorgular hâlâ düz metindir.
 - <span id="dns-tunneling"></span>**DNS Tunneling** (DNS Tüneli): Veriyi DNS sorgularının içine gizleyerek dışarı kaçırmak veya içeri komut taşımak. Uzun, yüksek entropili alt-alan-adı (subdomain) etiketleri imzasıdır; çoğu firewall DNS trafiğine eli açık davranır.
 - <span id="docker"></span>**Docker**: Uygulamayı bağımlılıklarıyla birlikte paketleyen herhangi bir ortamda çalıştırılabilen konteyner platformu. Güvenliği iyi yapılandırılmazsa saldırgan yüzeyi oluşturur.
-- <span id="domain-controller"></span>**Domain Controller** (Alan Denetleyicisi): Active Directory'nin beyin sunucusu; KDC ve dizin burada yaşar. Düşerse alan düşer — kurtaran yedek değil, sık yedeklemedir.
 - <span id="doh-dot"></span>**DoH / DoT** (DNS over HTTPS / DNS over TLS): DNS sorgularını şifreleyen yöntemler: DoT ayrı portta (853/TCP) TLS tüneli, DoH mevcut HTTPS akışının içinde (443). Kurumsal görünürlüğü azaltırlar: hangi istemci neyi sordu, artık pcap'te görünmez.
+- <span id="domain-controller"></span>**Domain Controller** (Alan Denetleyicisi): Active Directory'nin beyin sunucusu; KDC ve dizin burada yaşar. Düşerse alan düşer — kurtaran yedek değil, sık yedeklemedir.
 - <span id="dora"></span>**DORA**: DHCP'nin dört adımlı süreci: Discover, Offer, Request, ACK. Sıra her zaman aynıdır; döngüde eksik adım ya sunucu yokluğunu ya da sahte (rogue) DHCP şüphesini işaret eder.
 - <span id="downloader"></span>**Downloader** (İndirici): Sisteme sızmış küçük ön parça; asıl görevi C2'den ikinci aşamayı (RAT, implant) çekmek. Kendi küçüktür, getirdiği büyüktür.
 - <span id="doxxing"></span>**Doxxing** (Kimlik İfşası): Birinin özel bilgilerini (adres, telefon, fotoğraf) öç almak veya linç için İnternette yayınlama. Özellikle kadınlara, muhaliflere ve gazetecilere karşı kullanılır.
@@ -271,11 +271,11 @@ permalink: /sozluk/
 - <span id="kill-switch"></span>**Kill Switch** (Bağlantı Kesici): VPN koptuğu an İnternet erişimini otomatik kesen özellik. Açık değilse VPN düşerken farkında olmadan korumasız gezersin.
 - <span id="kod-inceleme"></span>**Kod İnceleme** (Code Review): Başka bir geliştiricinin yazılan kodu güvenlik açısından denetlemesi. Otomatik araçlar (SAST) birçok hatayı yakalar ama iş mantığı hataları sadece insan gözüyle tespit edilir.
 - <span id="kpi"></span>**KPI** (Key Performance Indicator): Temel performans göstergesi. Hedeflere ulaşılıp ulaşılmadığını ölçen metrik.
+- <span id="kok-dns"></span>**Kök DNS** (Root DNS): DNS hiyerarşisinin tepesi; TLD'lere yol soran 13 kök sunucu kümesi. Tehdit değil ama hedeftir: DDoS'una düşse internetin isimleri çözülmez.
 - <span id="krbtgt"></span>**krbtgt**: KDC'nin imza anahtarını taşıyan hesap; TGT'leri o imzalar. Hash'i sızarsa Golden Ticket kapısı açılır — parolasını iki kez sıfırlamak eski anahtarı öldürür.
 - <span id="kri"></span>**KRI** (Key Risk Indicator): Temel risk göstergesi. Risklerin gerçekleşme olasılığını önceden haber veren metrik.
 - <span id="kriptografi"></span>**Kriptografi**: Şifreleme bilimi. Veriyi okunamaz hale getirip yalnızca yetkili kişinin açmasını sağlar. Simetrik yöntem tek anahtarla, asimetrik yöntem (public/private anahtar çifti) çalışır.
 - <span id="kripto-para"></span>**Kripto Para** (Bitcoin): İzlenmesi güç dijital para birimi. Fidye yazılımları ve dolandırıcılıkta ödeme olarak istenir; "Bitcoin gönder, ikiye katlarım" diyene asla inanma.
-- <span id="kok-dns"></span>**Kök DNS** (Root DNS): DNS hiyerarşisinin tepesi; TLD'lere yol soran 13 kök sunucu kümesi. Tehdit değil ama hedeftir: DDoS'una düşse internetin isimleri çözülmez.
 - <span id="kvkk"></span>**KVKK** (Kişisel Verilerin Korunması Kanunu): Türkiye'de kişisel verilerin işlenme ve korunma koşullarını düzenleyen yasa.
 
 </details>
@@ -336,8 +336,8 @@ permalink: /sozluk/
 - <span id="netstat"></span>**netstat / ss**: Aktif bağlantı, dinleyen port ve sahibi süreci listeleyen komutlar. "Bu makine neden dışarı konuşuyor?" sorusunun ilk cevabıdır.
 - <span id="nist"></span>**NIST** (National Institute of Standards and Technology): ABD ulusal standart ve teknoloji kurumu; SP 800 serisi (Zero Trust: 800-207) ve Cybersecurity Framework (CSF) ile siber güvenliğin künye sahibi. ISO'nun Amerikalı muadili.
 - <span id="nmap"></span>**nmap**: Keşif ve port taramanın de facto aracı: `-sS` SYN (half-open), `-sT` connect, `-sU` UDP, `-sn` ping sweep, `-f` parçalı tarama. Script motoru NSE (Nmap Scripting Engine) Lua ile yazılır.
-- <span id="nse"></span>**NSE** (Nmap Scripting Engine): Nmap'in Lua tabanlı script motoru; yüzlerce scriptle versiyon tespiti, zafiyet kontrolü ve hatta exploit denemesi yapar.
 - <span id="nonce"></span>**Nonce** (Tek Kullanımlık Değer): Şifrelemede her işlem için bir kez kullanılan rastgele sayı. AES-GCM'de nonce tekrar edilirse şifreleme tamamen kırılır.
+- <span id="nse"></span>**NSE** (Nmap Scripting Engine): Nmap'in Lua tabanlı script motoru; yüzlerce scriptle versiyon tespiti, zafiyet kontrolü ve hatta exploit denemesi yapar.
 - <span id="ntlm"></span>**NTLM** (NT LAN Manager): Windows'un Kerberos öncesi, sorgu-yanıt tabanlı kimlik doğrulaması. Parola ağda taşınmaz ama parola türevli zayıf hash yakalanıp çevrimdışı kırılır ve relay edilir; modern ortam Kerberos ister.
 - <span id="ntp"></span>**NTP** (Network Time Protocol): Zaman senkronizasyon protokolü (UDP 123). Kerberos'un 5 dakikalık toleransı yüzünden alan ortamında hayati; açık NTP sunucuları amplification saldırısına da alet edilir.
 - <span id="null-session"></span>**NULL Session** (Anonim Oturum): Kimlik kanıtı verilmeden kurulan SMB oturumu; eski Windows'larda dizinden bilgi sızmaya (SAMR ile kullanıcı/envanter dökümü) izin verirdi. Trafikte birden çok NULL oturum, kimsesiz ama meraklı bir misafirdir.
@@ -436,8 +436,8 @@ permalink: /sozluk/
 - <span id="risk"></span>**Risk**: Bir olayın olasılığı ve etkisinin birleşimi. Belirsizlik durumunda kayıp veya hasar oluşma ihtimali.
 - <span id="rogue-dhcp"></span>**Rogue DHCP** (Sahte DHCP): Ağa izinsiz giren DHCP sunucusu; kurbanlara kendi gateway ve DNS'ini dağıtır. Adam ortada (MITM) olur; tek paket bile şifreli olmak zorunda değildir.
 - <span id="rootkit"></span>**Rootkit**: İşletim sisteminin en derinine yerleşip antivirüsten gizlenen kötü amaçlı yazılım. Tespiti çok zordur; genelde devlet düzeyi casus yazılımlarla birlikte gelir.
-- <span id="rpc"></span>**RPC** (Remote Procedure Call — Uzaktan Yordam Çağrısı): Başka makinedeki fonksiyonu çağırma mekanizması; SAMR ve svcctl bunun üstünde koşar. Gerekli ama açıktır: saldırgan da çağırır.
 - <span id="router"></span>**Router / Yönlendirici** (Modem): İnterneti eve dağıtan cihaz. Fabrika parolası "admin/admin" kalırsa saldırgan parola kırmadan tüm ağını ele geçirir.
+- <span id="rpc"></span>**RPC** (Remote Procedure Call — Uzaktan Yordam Çağrısı): Başka makinedeki fonksiyonu çağırma mekanizması; SAMR ve svcctl bunun üstünde koşar. Gerekli ama açıktır: saldırgan da çağırır.
 - <span id="rtt"></span>**RTT** (Round-Trip Time): Paketin gidip cevabın dönmesi için geçen süre. Ağ sağlığının nabzıdır; C2 beacon analizi ve performans ölçümünün temel metriğidir.
 
 </details>
