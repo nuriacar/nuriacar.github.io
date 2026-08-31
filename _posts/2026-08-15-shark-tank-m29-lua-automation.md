@@ -159,7 +159,7 @@ GUI'de denemek istersen: script'i Lua eklenti dizinine kopyala, Wireshark'ı yen
 <summary><strong>Cevapları Göster</strong></summary>
 
 1. Betik triaj eder, insan GUI'de derinleşir: 300 pcap'ı betik tarar, şüpheli azınlığı raporlar; analist vaktini yalnızca işaretlenen vakalara harcar. GUI'de 300 pcap = günler; betik + odaklanmış GUI = saatler.
-2. Lua (NSE). Nmap'i yıllardır kullanan herkes, farkında olarak Lua ekosistemini kullanmıştır; dolayısıyla "Lua'a kızan" aslında tanımadığı şeye kızmaktadır.
+2. Lua (NSE). Nmap'i yıllardır kullanan herkes, farkında olarak Lua ekosistemini kullanmıştır; Lua, tanımadığı bir şey değil, yıllardır farkında olmadan kullanılan eski bir tanıdıktır.
 3. Örnek sıra: (a) raporun verdiği filtreyi uygula ve beacon kanalını izole et, (b) Follow TCP Stream ile ilk konuşmayı oku, (c) SNI/UA/sertifika ile hikâyeyi doğrula. (Farklı sıra kabul edilebilir; ölçüt: teyit üç farklı kaynaktan yapılmalı.)
 4. Tembellik → işi bir kez yazıp tekrarlamamak (betik); sabırsızlık → 500 pcap'ı bekletmemek (saniyeler); kibir → yarın da çalışacağından emin olmak için `make test-sharktank` regresyon testi.
 5. Dizin taramasında pcap'ler arası ortak IOC raporudur: aynı C2 kanalı, aynı sahte User-Agent, aynı NTLM hesabı, aynı RC4 bilet deseni vb. iki dosyada birden görünüyorsa olaylar bağımsız değil, aynı el/altyapıdır.
