@@ -39,7 +39,7 @@ Select an Option!
 >>>
 ```
 
-### **MERNİS : TRNIDS**
+## **MERNİS : TRNIDS**
 
 Bu program Merkezi Nüfus İdare Sistemi'ne (MERNİS) öykünen bir yeni yetme.
 Bence de komik... :) **Özetle; TCNO doğrulaması, geçerli rastgele TCNO
@@ -62,7 +62,7 @@ Bir de bu işlere bakan [milletlerarası bir
 komisyon](https://tr.wikipedia.org/wiki/Milletleraras%C4%B1_Ahvali_%C5%9Eahsiye_Komisyonu)
 varmış ki ilk kurulduğu günlerden üyeymişiz! Enteresan!
 
-### **Program özellikleri ve kodlara dair...**
+## **Program özellikleri ve kodlara dair...**
 
 <div class="repo-link" markdown="1">
 
@@ -184,7 +184,7 @@ Bundan sonrası TCNO, algoritması ve haliyle programın işleyişine dair bilgi
 içeriyor. Dikkat! Bundan sonrasını okumak, çamaşır makinesi seyreden çocuğun
 yaşadığı türde bir aydınlanmaya sebep olabilir. :)
 
-### **T.C. Kimlik Numarası (TCNO) nedir? Nasıl dağıtılır?**
+## **T.C. Kimlik Numarası (TCNO) nedir? Nasıl dağıtılır?**
 
 Burada yazılan bazı bilgiler kesin değil! Öyle olduklarını düşünüyorum ama
 ıspatlayamam. **Dikkat! İki [!] arasında *italik* yazılan bilgiler doğru
@@ -224,7 +224,7 @@ olacak.* **[!]**
 
 [MERNİS Skandalı](https://www.milliyet.com.tr/ekonomi/mernis-skandali-181319)
 
-### **Nasıl oluşturulur?**
+## **Nasıl oluşturulur?**
 
 İlk 9 hane 100000001 ile 999999999 aralığında! Son iki hane, ilk 9 haneden
 türetiliyor. Şöyle:
@@ -234,7 +234,7 @@ türetiliyor. Şöyle:
 3. (n - m) % 10 = TCNO 10. hane olur. Şimdi elimizde 10 hane oldu.
 4. İlk 10 hanenin toplamı % 10 = TCNO 11. hane. Ta daa!
 
-#### **Örnek 1:**
+### **Örnek 1:**
 
 Rastgele bir TCNO şöyle olsun (11 hane): **123456789xy**
 
@@ -256,7 +256,7 @@ rakamlar! Şimdi "Nasıl hesaplanır?" kısmındaki algoritmaya göre hesaplayal
 
 **TCNO : 12345678950**
 
-#### **Örnek 2:**
+### **Örnek 2:**
 
 Diğer bir rastgele TCNO şöyle olsun (11 hane): **192837465xy**
 
@@ -283,7 +283,7 @@ yüzden 10. hane için her zaman absolute (mutlak) değer aldım. Belki de bu
 negatif çıkan 10. basamak yüzünden ~900 milyonluk (999999999 - 100000001 =
 899999999) muhtemel TCNO havuzunun tamamını dağıtamıyorlardır.**
 
-### **Peki aile bireyleri?**
+## **Peki aile bireyleri?**
 
 1. **Büyükler**: Aynı ailede senden büyükleri bulabilmek için kendi kimlik
    numaranın ilk 9 hanesine 29999 ekle, oluşan 9 haneli rakamdan yukarıdaki
@@ -334,7 +334,7 @@ Select an Option!
 >>>
 ```
 
-### **MERNİS : TRNIDS**
+## **MERNİS : TRNIDS**
 
 This program is a newbie imitator of the Central Population Management System
 (MERNİS) of Turkey. I think it's funny too... :) **To sum up, it performs;
@@ -355,7 +355,7 @@ commission](http://www.ciec1.org/SITECIEC_WEB/FR/index.awp) that took care of
 these issues, and Turkey were members from the first days it was founded!
 Interesting!
 
-### **About program features and codes...**
+## **About program features and codes...**
 
 <div class="repo-link" markdown="1">
 
@@ -474,7 +474,7 @@ After that, the post contains information about the algorithm and the
 functioning of the program. Attention! Reading from now on can cause the kind
 of enlightenment experienced by the child watching the washing machine. :)
 
-### **What is TR Identification Number (TRNID)? How is it distributed?**
+## **What is TR Identification Number (TRNID)? How is it distributed?**
 
 Some information written here is not exact! I think they are, but I can't
 prove **Attention! Two [!] between *italics* written information may not be
@@ -518,7 +518,7 @@ save the day will cause in the future.* **[!]**
 
 [The MERNİS Scandal](https://www.milliyet.com.tr/ekonomi/mernis-skandali-181319)
 
-### **How is it produced?**
+## **How is it produced?**
 
 The first 9 digits range from 100000001 to 999999999! The last two digits are
 derived from the first 9 digits. It is as follows:
@@ -528,7 +528,7 @@ derived from the first 9 digits. It is as follows:
 3. (n - m) % 10 = 10th digit of TRNID. Now we have 10 households.
 4. Total of the first 10 digits % 10 = 11th digit of TRNID. Ta daa!
 
-#### **Example 1:**
+### **Example 1:**
 
 Let a random TRNID be (11 digits): **123456789xy**
 
@@ -551,7 +551,7 @@ let's calculate according to the algorithm in "How is it calculated?":
 
 **TRNID : 12345678950**
 
-#### **Example 2:**
+### **Example 2:**
 
 Let a random TRNID be (11 digits): **192837465xy**
 
@@ -580,7 +580,7 @@ because of this negative 10th digit, system cannot distribute the entire
 possible TRNID pool of ~900 million (999999999 - 100000001 = 899999999)
 numbers.**
 
-### **What about family members?**
+## **What about family members?**
 
 1. **Seniors**: Add 29999 to the first 9 digits of your ID number to find the
    first senior in the same family, derive the last 2 digits from the 9-digit

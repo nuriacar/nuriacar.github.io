@@ -97,9 +97,16 @@ layout: default
 </div>
 
 <aside class="post-toc" id="post-toc" aria-label="İçindekiler">
-  <div class="post-toc__marker"></div>
-  <div class="post-toc__title">harita</div>
-  <ul class="post-toc__list"></ul>
+  <button class="post-toc__toggle" id="post-toc__toggle" aria-expanded="false" aria-controls="post-toc__body">
+    <span class="post-toc__toggle-bar"></span>
+    <span class="post-toc__toggle-bar"></span>
+    <span class="post-toc__toggle-bar"></span>
+  </button>
+  <div class="post-toc__body" id="post-toc__body">
+    <div class="post-toc__marker"></div>
+    <div class="post-toc__title">içindekiler</div>
+    <ul class="post-toc__list"></ul>
+  </div>
 </aside>
 
 <script>
@@ -140,6 +147,14 @@ layout: default
       subLi.appendChild(subA);
       subList.appendChild(subLi);
     }
+  });
+
+  // Toggle
+  var toggle = document.getElementById('post-toc__toggle');
+  var body = document.getElementById('post-toc__body');
+  toggle.addEventListener('click', function() {
+    var open = toc.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open);
   });
 
   list.querySelectorAll('.post-toc__group > a').forEach(function(groupLink) {

@@ -102,7 +102,7 @@
   border: var(--border) solid var(--accent-border);
   border-radius: var(--br-zero);
   padding: var(--sp-2) var(--sp-3);
-  width: 14rem;
+  width: calc(var(--sp-8) * 3 + var(--sp-2));
   transition: width var(--an-speed) ease, border-color var(--an-speed) ease;
 }
 
@@ -218,7 +218,7 @@
   display: none;
   flex-direction: column;
   justify-content: center;
-  gap: 4px;
+  gap: var(--sp-1);
   width: var(--sp-7);
   height: var(--sp-7);
   background: transparent;
@@ -231,14 +231,14 @@
 
 .nav__toggle-bar {
   display: block;
-  width: 1rem;
-  height: 2px;
+  width: var(--sp-4);
+  height: calc(var(--border) * 2);
   background: var(--text-light);
   transition: transform var(--an-speed-fast) ease, opacity var(--an-speed-fast) ease;
 }
 
 .nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
+  transform: translateY(calc(var(--sp-1) + var(--border) * 2)) rotate(45deg);
 }
 
 .nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(2) {
@@ -246,7 +246,7 @@
 }
 
 .nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
+  transform: translateY(calc((var(--sp-1) + var(--border) * 2) * -1)) rotate(-45deg);
 }
 
 .nav__mobile {
@@ -318,7 +318,7 @@
 .nav__mobile {
   display: none;
   position: absolute;
-  width: min(20rem, calc(100vw - 2 * var(--page-pad)));
+  width: calc(var(--sp-8) * 3 + var(--sp-2) + var(--sp-3) * 2 + var(--sp-7) * 2);
   background: var(--bg-deep);
   border: var(--border) solid var(--accent-dark);
   border-top: 0;

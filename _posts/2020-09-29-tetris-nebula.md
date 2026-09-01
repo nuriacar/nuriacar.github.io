@@ -43,7 +43,7 @@ kaldık madem, afterparty başlasın...
 
 Dikkat! Göz yaşartıcı soruların ilki geliyor:
 
-#### 1. Daha önce "[polyomino](https://mathworld.wolfram.com/Polyomino.html)" kelimesini duydunuz mu? Malumatınız? (50 Puan)
+## 1. Daha önce "[polyomino](https://mathworld.wolfram.com/Polyomino.html)" kelimesini duydunuz mu? Malumatınız? (50 Puan)
 
 ![Polyominoes](/assets/img/polyominoes.png "Polyominoes")
 
@@ -54,7 +54,7 @@ bir bileşik/çoklu form. Tek bir adetten başlayarak dilediğiniz kadar
 birbirinin aynısı kareyi yanyana getirip kenarlarından birleştirerek farklı
 şekiller oluşturabiliyorsunuz.
 
-#### 2. [Tetris](https://tr.wikipedia.org/wiki/Tetris) oyunu ile [polyomino](https://mathworld.wolfram.com/Polyomino.html)ların benzerliğinizi bulunuz? (25 Puan)
+## 2. [Tetris](https://tr.wikipedia.org/wiki/Tetris) oyunu ile [polyomino](https://mathworld.wolfram.com/Polyomino.html)ların benzerliğinizi bulunuz? (25 Puan)
 
 ![Tetris 1984 Electronica 60](/assets/img/tetris-1984.jpg "Tetris 1984 Electronica 60")
 
@@ -93,7 +93,7 @@ src="https://www.youtube.com/embed/omXjhq7DqQY" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
 picture-in-picture" allowfullscreen></iframe>
 
-#### 3. [Tetris](https://tr.wikipedia.org/wiki/Tetris) ile [Nebula](/store/) arasındaki benzerliği bulunuz? (25 Puan)
+## 3. [Tetris](https://tr.wikipedia.org/wiki/Tetris) ile [Nebula](/store/) arasındaki benzerliği bulunuz? (25 Puan)
 
 [![Nebula](/assets/img/nebula-afis-01.jpg "Nebula")](/store/)
 
@@ -166,7 +166,7 @@ us, afterparty start...
 
 Attention! The first of tearful questions comes:
 
-#### 1. Have you ever heard the word "[polyomino](https://mathworld.wolfram.com/Polyomino.html)" before? Any information? (50 Points)
+## 1. Have you ever heard the word "[polyomino](https://mathworld.wolfram.com/Polyomino.html)" before? Any information? (50 Points)
 
 ![Polyominoes](/assets/img/polyominoes.png "Polyominoes")
 
@@ -176,7 +176,7 @@ at the edges. Each cell is a compound/multiple form with identical squares.
 Starting from a single piece, you can create different shapes by combining the
 equal/same squares from the edges with each other.
 
-#### 2. Find the similarity of the [Tetris](https://en.wikipedia.org/wiki/Tetris) game with the [polyomino](https://mathworld.wolfram.com/Polyomino.html)? (25 Points)
+## 2. Find the similarity of the [Tetris](https://en.wikipedia.org/wiki/Tetris) game with the [polyomino](https://mathworld.wolfram.com/Polyomino.html)? (25 Points)
 
 ![Tetris 1984 Electronica 60](/assets/img/tetris-1984.jpg "Tetris 1984 Electronica 60")
 
@@ -212,7 +212,7 @@ src="https://www.youtube.com/embed/omXjhq7DqQY" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
 picture-in-picture" allowfullscreen></iframe>
 
-#### 3. Find the similarity between [Tetris](https://en.wikipedia.org/wiki/Tetris) and [Nebula](/store/)? (25 Points)
+## 3. Find the similarity between [Tetris](https://en.wikipedia.org/wiki/Tetris) and [Nebula](/store/)? (25 Points)
 
 [![Nebula](/assets/img/nebula-afis-01.jpg "Nebula")](/store/)
 

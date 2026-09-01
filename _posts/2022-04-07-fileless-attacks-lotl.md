@@ -25,7 +25,7 @@ Fileless malware saldırısı başlatmak için kod yüklemek gerekmese de lokald
 + **Fileless Ransomware:** PowerShell'le ve Windows'da varsayılan gelen BitLocker'la Ransom yiyen müşterilerim oldu. Şaşırtıcı bir tecrübeydi.
 + **Çalıntı kimlik bilgileri:** Legal kullanıcı bilgileri çalındığında exploit etmeye gerek kalmaksızın o kullanıcıymış gibi PowerShell ve WMI üzerinden saldırı başlatılabilir.
 
-### Örnek Bir Saldırı
+## Örnek Bir Saldırı
 
 **Safha 1:** Erişim Kazanma
 
@@ -43,17 +43,17 @@ Registry içine sistem her boot olduğunda seni içeri alacak bir arka kapı yer
 
 Almak istediğin veriyi bir yere toplayıp [compact](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/compact) kullanarak sıkıştır ve FTP ile dışarı çıkar.
 
-### Patron Çıldırdı
+## Patron Çıldırdı
 
 **Bitmedi!** Bir değil, iki değil, üç değil... [Tam beş kavanoz faydalı içerik...](https://docs.broadcom.com/doc/istr-living-off-the-land-and-fileless-attack-techniques-en)
 
-### LotL'den Nasıl Korunulur?
+## LotL'den Nasıl Korunulur?
 
 ![Külyutmaz Necmi](/assets/img/hababam-kulyutmaz-necmi.jpg "Külyutmaz Necmi")
 
 IoC (Indicators of Compromise) yerine IoA'ya (Indicators of Attack) odaklanmak gerekiyor. Yani saldırının nasıl başlatıldığına veya yürütüldüğüne değil gerçekleştirilen eylemlere ve diğer eylemlerle bağlantısına bakmalı. Bırakın AV ya da EDR'ı, Yapay Zekalı sistemler bile bu saldırıyı yakalayamayabilir. Ancak işin tekniğini bilen, hayal gücü gelişmiş, buluttan nem kapmaya meraklı ve stalk yeteneği olan sağlam bir analist bu işi hakkıyla yapacaktır. Naçizane Külyutmaz Necmi Bey'i öneriyorum.
 
-### Nasıl Gizli Kalırsınız?
+## Nasıl Gizli Kalırsınız?
 
 Madem bu saldırı, nasıl başlatıldığına veya yürütüldüğüne değil (IoC) gerçekleştirilen eylemlere ve diğer eylemlerle bağlantısına (IoA) bakılarak açığa çıkarılıyor; safhalar arası zaman boşlukları bırakarak, bu aralıklarda alakasız işlemler gerçekleştirerek farkedilmenizi zorlaştırabilirsiniz. Örneğin [APT29'un alametifarikalarından Slow and Deliberate](/cevizlab/2022/04/04/apt29-adversary-emulation.html) tam da böyle bir şey. Bilinçli bir şekilde sakin, yavaş ve derinden...
 
