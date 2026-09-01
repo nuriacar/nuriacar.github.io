@@ -109,6 +109,113 @@ main {
   margin: 0 auto;
 }
 
+/* ---------- Yazı haritası (test) ---------- */
+
+.post-toc {
+  display: none;
+}
+
+@media (min-width: 81.25rem) {
+  .post-toc {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: calc(var(--nav-h) + var(--sp-6));
+    left: calc(50% + var(--reading) / 2 + var(--sp-6));
+    width: 13rem;
+    max-height: calc(100vh - var(--nav-h) - var(--sp-8));
+    font-family: var(--fn-mono);
+    font-size: var(--fs-small);
+    line-height: var(--lh-tight);
+  }
+
+  .post-toc__marker {
+    display: block;
+    width: var(--sp-4);
+    height: 2px;
+    background: var(--accent);
+    margin-bottom: var(--sp-2);
+    flex-shrink: 0;
+  }
+
+  .post-toc__title {
+    font-size: var(--fs-small);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-title);
+    color: var(--text-dim);
+    margin-bottom: var(--sp-3);
+    flex-shrink: 0;
+  }
+
+  .post-toc__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-left: var(--border) solid var(--accent-border);
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+    scrollbar-width: none;
+  }
+
+  .post-toc__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .post-toc__group {
+    padding: 0;
+  }
+
+  .post-toc__group > a {
+    display: block;
+    padding: var(--sp-2) var(--sp-3);
+    color: var(--text-dim);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color var(--an-speed-fast) ease;
+  }
+
+  .post-toc__group > a:hover {
+    color: var(--accent-bright);
+  }
+
+  .post-toc__has-sub > a::before {
+    content: "▸ ";
+    color: var(--text-faint, var(--text-dim));
+    display: inline;
+    transition: transform var(--an-speed-fast) ease;
+  }
+
+  .post-toc__has-sub.is-open > a::before {
+    transform: rotate(90deg);
+  }
+
+  .post-toc__sublist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+  }
+
+  .post-toc__group.is-open .post-toc__sublist {
+    display: block;
+  }
+
+  .post-toc__sublist a {
+    display: block;
+    padding: var(--sp-1) var(--sp-3) var(--sp-1) var(--sp-5);
+    color: var(--text-dim);
+    font-size: calc(var(--fs-small) * 0.9);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color var(--an-speed-fast) ease;
+  }
+
+  .post-toc__sublist a:hover {
+    color: var(--accent-bright);
+  }
+}
+
 /* ---------- Eyebrow başlık dili ---------- */
 
 .section-header {
@@ -401,6 +508,13 @@ a:focus {
 .content iframe {
   max-width: 100%;
   border: 0;
+}
+
+/* Steam widget: dark modda tarayıcının beyaz iframe arka planını kapat */
+.content iframe[src*="steampowered.com/widget"] {
+  color-scheme: light;
+}
+
 }
 
 /* Başlık çapaları (JS ekler) */
