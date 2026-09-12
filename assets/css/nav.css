@@ -257,6 +257,8 @@
   .nav__inner {
     display: flex;
     gap: var(--sp-3);
+    padding-left: var(--page-pad-m);
+    padding-right: var(--page-pad-m);
   }
 
   .nav__links {
@@ -273,7 +275,7 @@
   }
 
   .search__input {
-    width: 7.5rem;
+    width: 6rem;
   }
 
   .nav__mobile .nav__link {
