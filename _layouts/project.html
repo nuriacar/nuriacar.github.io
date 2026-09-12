@@ -3,6 +3,12 @@ layout: default
 ---
 <div class="page__inner">
   <div class="reading">
+    <nav class="breadcrumb" aria-label="Yol">
+      <a href="/">{{ site.title | escape }}</a>
+      <span class="breadcrumb__sep">›</span>
+      <span>{{ page.title | escape }}</span>
+    </nav>
+
     {% if page.eyebrow %}
     <header class="section-header section-header--page">
       <span class="section-marker"></span>

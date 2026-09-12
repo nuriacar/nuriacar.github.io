@@ -1,6 +1,7 @@
 ---
 layout: udemy
 title: udemy
+nav_title: udemy
 permalink: /udemy/
 eyebrow: eğitim
 ---

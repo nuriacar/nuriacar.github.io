@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "Siber Güvenlik Sözlüğü"
-nav_title: Sözlük
+nav_title: sözlük
 permalink: /sozluk/
 ---
 

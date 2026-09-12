@@ -4,6 +4,7 @@
 
 layout: home
 title: blog
+nav_title: blog
 permalink: /blog/
 ---
 

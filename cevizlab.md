@@ -1,6 +1,7 @@
 ---
 layout: project
 title: cevizlab
+nav_title: cevizlab
 permalink: /cevizlab/
 eyebrow: siber sanatlar
 ---

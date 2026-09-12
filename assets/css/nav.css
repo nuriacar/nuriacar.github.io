@@ -54,8 +54,6 @@
 .nav__link {
   font-family: var(--fn-mono);
   font-size: var(--fs-body);
-  text-transform: uppercase;
-  letter-spacing: var(--ls-mid);
   color: var(--text-dim);
   white-space: nowrap;
   padding: var(--sp-1) 0;

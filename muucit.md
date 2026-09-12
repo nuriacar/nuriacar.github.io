@@ -1,6 +1,7 @@
 ---
 layout: project
 title: muucit
+nav_title: muucit
 permalink: /muucit/
 eyebrow: girişim
 ---

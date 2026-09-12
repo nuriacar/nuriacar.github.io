@@ -1,6 +1,7 @@
 ---
 layout: project
 title: sır
+nav_title: sır
 permalink: /sir/
 eyebrow: müzik
 ---

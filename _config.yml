@@ -37,7 +37,7 @@ header_pages:
   - store.md
 
 # Asset cache-bust sürümü (CSS/JS değişince artırılır)
-asset_version: 34
+asset_version: 35
 
 # Build settings
 plugins:
