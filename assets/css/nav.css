@@ -31,8 +31,6 @@
   font-family: var(--fn-mono);
   font-size: var(--fs-body);
   font-weight: var(--fw-regular);
-  text-transform: uppercase;
-  letter-spacing: var(--ls-title);
   color: var(--text-bright);
   white-space: nowrap;
   justify-self: start;
