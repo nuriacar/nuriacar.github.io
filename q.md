@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Q
+title: q
 permalink: /q/
 eyebrow: galeri
 ---
