@@ -18,6 +18,7 @@ tags: [oyun]
 > And then...\
 > One day...\
 > I got in...
+
 >> Kevin Flynn - [Tron](https://en.wikipedia.org/wiki/Tron))
 
 <iframe width="560" height="315"
@@ -136,6 +137,8 @@ Görsellere itiraz yok, itiraz "peki oyun nerede" kısmında: kovalamacada kaybe
 
 Sakin, duygusal. Oynayanlar "dedemi düşündüm, ağladım; oğluma oynattım, o da ağladı" diyorlar.. İki saatte bitiyor; kumandayı gasp ettikten sonra "yaşlandım be!" hissiyle geri verebilirsiniz. Manzaraları kaydırarak yol açma fikri o kadar basit ki "neden ben düşünmedim" diyorsunuz. Yorumların neredeyse hepsi olumlu; "keşke daha uzun olsaydı" diyeceğinize eminim!
 
+> Güney Azerbaycan Mahnısı\
+> \
 > Pər-pər olub güllərimiz\
 > Ağlayır gözlərimiz\
 > Hərdən yadıma düşür\
@@ -148,7 +151,6 @@ Sakin, duygusal. Oynayanlar "dedemi düşündüm, ağladım; oğluma oynattım, 
 > Yalan dünya, baba yalan dünya\
 > Evimi yıxıb, qapımı bağlı qoyan dünya
 
->> Güney Azerbaycan Mahnısı\
 >> Mecid Mecidi - Âvâz-e Gonjeshkhâ - آواز گنجشک‌ها - Serçelerin Şarkısı - Sərçələrin Nəğməsi
 
 <iframe width="100%" height="315" style="border:0;" src="https://www.youtube.com/embed/UbE4pjtoNVM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
@@ -171,7 +173,7 @@ Küçük yapım, az yorum: "Tatlı ama kısa!" demişler. Zamanı avucunuzla sar
 > Gitsen, dünyanın en uzak ucunda olsan\
 > Çıksan göklerde yıldız, yıldız, yıldız dolaşsan\
 > Değil bir gün, değil bir ömür beni anmasan\
-> Unutmam, unutamam\
+> Unutmam, unutamam
 
 >> Özhan Eren
 
