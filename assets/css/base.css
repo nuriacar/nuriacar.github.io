@@ -392,6 +392,12 @@ a:focus {
   color: var(--text-light);
 }
 
+/* Uzun postlarda ekran dışı içeriği render etme — hamburger/scroll tepkisi hızlanır */
+.content--post {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 100000px;
+}
+
 .content > * + * {
   margin-top: var(--sp-4);
 }
