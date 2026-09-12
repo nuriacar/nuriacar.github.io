@@ -575,6 +575,13 @@ a:focus {
 /* Steam widget: dark modda tarayıcının beyaz iframe arka planını kapat */
 .content iframe[src*="steampowered.com/widget"] {
   color-scheme: light;
+  height: calc(var(--sp-8) * 5 + var(--sp-5)); /* widget içeriği + pay: kırpılma yok */
+}
+
+@media (max-width: 31.25rem) /* = 500px: Steam'in mobil kırılımı — kapsül alt alta yığılır */ {
+  .content iframe[src*="steampowered.com/widget"] {
+    height: calc(var(--sp-8) * 8 + var(--sp-4)); /* yığılmış düzen için boyut */
+  }
 }
 
 }
