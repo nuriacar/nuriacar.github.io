@@ -225,7 +225,7 @@
   });
 })();
 
-/* ---------- 5) Başlık çapaları ---------- */
+/* ---------- 5) Başlık çapaları (ID atama — görünür # link yok) ---------- */
 
 (function () {
   'use strict';
@@ -244,20 +244,14 @@
   var used = {};
 
   document.querySelectorAll('article .content h2, article .content h3, article .content h4').forEach(function (h) {
-    if (h.querySelector('a.anchor')) return;
+    if (h.id) return;
     if (h.classList.contains('lang')) return;
-    var base = h.id || slugify(h.textContent);
+    var base = slugify(h.textContent);
     if (!base) return;
     var id = base, n = 2;
-    while (used[id] && used[id] !== h) { id = base + '-' + n; n++; }
-    used[id] = h;
+    while (used[id]) { id = base + '-' + n; n++; }
+    used[id] = true;
     h.id = id;
-    var a = document.createElement('a');
-    a.className = 'anchor';
-    a.href = '#' + id;
-    a.setAttribute('aria-label', 'Bu başlığa bağlantı');
-    a.textContent = '#';
-    h.appendChild(a);
   });
 })();
 

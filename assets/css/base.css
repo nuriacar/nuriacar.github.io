@@ -594,10 +594,10 @@ a:focus {
   transition: opacity var(--an-speed-fast) ease;
 }
 
-.content h1:hover a.anchor,
-.content h2:hover a.anchor,
-.content h3:hover a.anchor,
-.content h4:hover a.anchor,
+.content h1 a.anchor:hover,
+.content h2 a.anchor:hover,
+.content h3 a.anchor:hover,
+.content h4 a.anchor:hover,
 .content h1 a.anchor:focus,
 .content h2 a.anchor:focus,
 .content h3 a.anchor:focus,
