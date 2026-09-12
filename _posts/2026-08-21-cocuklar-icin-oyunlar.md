@@ -418,7 +418,7 @@ Oyunun bende hissettirdiği ise şu:
 
 <iframe src="https://store.steampowered.com/widget/424840/" style="border:0;width:100%;height:190px;" loading="lazy"></iframe>
 
-Gece korkusunun estetik hâli; sarı yağmurluklu Six ikonik; insanlar cosplay'ini yapıyor. İnternette her platformda "çocuklar oynayabilir mi?" diye soruluyor; cevap "evet, 13-14 yaş üzeri". "Six'i oynarken kendimi altı yaşında hissettim" diyen var; "dev evde kaybolmak kâbusum" diyen de. En çok tekrarlanan cümle: "Atmosfer muhteşem ama gece oynamayın!" Dev evin mimarisi kâbus ama güzelliği de; her oda hem tehdit hem tablo.
+Gece korkusunun estetik hâli; sarı yağmurluklu Six ikonik; insanlar cosplay'ini yapıyor. İnternette her platformda "çocuklar oynayabilir mi?" diye soruluyor; cevap "evet, 13-14 yaş üzeri". "Six'i oynarken kendimi altı yaşında hissettim" diyen var; "dev evde kaybolmak kâbusum" diyen de. En çok tekrarlanan cümle: "Atmosfer muhteşem ama gece oynamayın!" Dev evin mimarisi kâbus ama aynı zamanda güzelliği! Her oda hem tehdit hem tablo.
 
 Aklıma püsküllü deli Tim Burton'ın The Nightmare Before Christmas'ı ve rahmetli Ken Page geldi!
 
