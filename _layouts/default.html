@@ -22,6 +22,11 @@
     {{ content }}
   </main>
   {% include footer.html %}
+  <dialog id="lightbox" class="lightbox">
+    <button class="lightbox__nav lightbox__nav--prev" id="lightbox__prev" aria-label="Önceki" tabindex="-1">‹</button>
+    <img src="" alt="" class="lightbox__img">
+    <button class="lightbox__nav lightbox__nav--next" id="lightbox__next" aria-label="Sonraki" tabindex="-1">›</button>
+  </dialog>
   <script src="/assets/js/main.js?v={{ site.asset_version }}" defer></script>
 </body>
 </html>

@@ -505,6 +505,21 @@ a:focus {
   text-align: center;
 }
 
+/* Kutu içi buton: full width, fotoğrafa yakın */
+.box .btn {
+  width: 100%;
+  text-align: center;
+  margin-top: var(--sp-3);
+}
+
+/* Kutu içi başlık: iç çerçevede, fotoğrafa yakın */
+.box > p:first-child {
+  border: var(--border) solid var(--accent-border);
+  border-radius: var(--br-zero);
+  padding: var(--sp-2) var(--sp-3);
+  margin-bottom: var(--sp-3);
+}
+
 /* Kutu içi metin/caption'lar sola dayalı (medya ortada kalır) */
 .box p,
 .box blockquote,
@@ -870,6 +885,68 @@ a.chip:hover {
   height: auto;
   border: 0;
 }
+
+.course__video img {
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- Lightbox: <dialog> tabanlı — tıkla büyüt, tıkla küçült ---------- */
+
+.lightbox {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: auto;
+  background: transparent;
+  box-shadow: none;
+  max-width: calc(100vw - var(--sp-8));
+  max-height: calc(100vh - var(--sp-8));
+}
+
+.lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(var(--sp-2));
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: calc(100vh - var(--sp-8));
+  width: auto;
+  height: auto;
+  display: block;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  cursor: zoom-out;
+}
+
+/* Lightbox sol/sağ ok butonları — her zaman görünür */
+.lightbox__nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--sp-7);
+  height: var(--sp-7);
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text-light);
+  font-family: var(--fn-mono);
+  font-size: var(--fs-h2);
+  cursor: pointer;
+}
+
+.lightbox__nav:hover {
+  color: var(--text-bright);
+}
+
+.lightbox__nav--prev { left: var(--sp-4); }
+.lightbox__nav--next { right: var(--sp-4); }
 
 .course__side {
   display: flex;

@@ -32,12 +32,13 @@ header_pages:
   - muucit.md
   - sir.md
   - udemy.md
+  - galeri.md
   - cv.md
   - q.md
   - store.md
 
 # Asset cache-bust sürümü (CSS/JS değişince artırılır)
-asset_version: 35
+asset_version: 49
 
 # Build settings
 plugins:

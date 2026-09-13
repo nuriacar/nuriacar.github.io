@@ -255,6 +255,46 @@
   });
 })();
 
+/* ---------- 6) Lightbox: course__video içindeki görseller + ok tuşlarıyla gezinme ---------- */
+
+(function () {
+  'use strict';
+
+  var dialog = document.getElementById('lightbox');
+  if (!dialog) return;
+  var img = dialog.querySelector('img');
+  var photos = Array.prototype.slice.call(document.querySelectorAll('.course__video img'));
+  if (!photos.length) return;
+  var idx = -1;
+
+  function show(i) {
+    idx = (i + photos.length) % photos.length;
+    img.src = photos[idx].src;
+    img.alt = photos[idx].alt;
+  }
+
+  photos.forEach(function (photo, i) {
+    photo.style.cursor = 'zoom-in';
+    photo.addEventListener('click', function () {
+      show(i);
+      dialog.showModal();
+    });
+  });
+
+  dialog.addEventListener('click', function (e) {
+    if (e.target.closest('.lightbox__nav')) return;
+    dialog.close();
+  });
+
+  document.getElementById('lightbox__prev').addEventListener('click', function () { show(idx - 1); });
+  document.getElementById('lightbox__next').addEventListener('click', function () { show(idx + 1); });
+
+  dialog.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); show(idx - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); show(idx + 1); }
+  });
+})();
+
 /* ---------- Dış linkler yeni sekmede ----------
    Farklı domaine giden her <a> target="_blank" + rel="noopener noreferrer" alır.
    site.url ile karşılaştırma; şema farkı (http/https) ve www hariç tutulur. */
