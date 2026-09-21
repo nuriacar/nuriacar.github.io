@@ -39,19 +39,62 @@ Madem öyle, Hafız Burhan'dan gelsin! "Her yer karanlık!.."
   <div class="box course__video">
     <p>Tanıdık Bilinmezlerin Cümle Kapısı</p>
     <img src="/assets/img/001/001-1.webp" alt="001-1">
-    <a class="btn btn--solid" href="https://shopier.com/50807923">baskı satın al ›</a>
+    <a class="btn btn--solid" href="https://shopier.com/50807923">baskı satın al›</a>
   </div>
 
   <div class="box course__video">
     <p>Ihlamur içersin canım?</p>
     <img src="/assets/img/001/001-2.webp" alt="001-2">
-    <a class="btn btn--solid" href="https://shopier.com/50808026">baskı satın al ›</a>
+    <a class="btn btn--solid" href="https://shopier.com/50808026">baskı satın al›</a>
   </div>
 
   <div class="box course__video">
     <p>Allahümme'ftah lehû ebvâbe rahmetik!<br>Yâ Rab! Ona rahmet kapılarını aç!</p>
     <img src="/assets/img/001/001-3.webp" alt="001-3">
-    <a class="btn btn--solid" href="https://shopier.com/50808095">baskı satın al ›</a>
+    <a class="btn btn--solid" href="https://shopier.com/50808095">baskı satın al›</a>
+  </div>
+
+</div>
+
+<article class="card card--solo" markdown="1">
+<div class="card__meta">2. Gene mi bamya!..</div>
+
+He! Gene bamya!.. Kentmare Pan 400 de kasetten azade olup koptu! Sorun tazecik filmde değil 65 yaşındaki makinede; ya da ben bir yerde hata yapıyorum! Hülasa; elde yazıyla "beş" fotoğraf var!
+
+Bakacaz!..
+
+</article>
+
+<div class="cards">
+
+  <div class="box course__video">
+    <p>Beam them up, Scotty!</p>
+    <img src="/assets/img/002/002-1.webp" alt="002-1">
+    <a class="btn btn--solid" href="https://shopier.com/51079633">baskı satın al›</a>
+  </div>
+
+  <div class="box course__video">
+    <p>I always have a plan!</p>
+    <img src="/assets/img/002/002-2.webp" alt="002-2">
+    <a class="btn btn--solid" href="https://shopier.com/51079713">baskı satın al›</a>
+  </div>
+
+  <div class="box course__video">
+    <p>Şemsiyeler</p>
+    <img src="/assets/img/002/002-3.webp" alt="002-3">
+    <a class="btn btn--solid" href="https://shopier.com/51079764">baskı satın al›</a>
+  </div>
+
+  <div class="box course__video">
+    <p>Simeeet!</p>
+    <img src="/assets/img/002/002-4.webp" alt="002-4">
+    <a class="btn btn--solid" href="https://shopier.com/51079794">baskı satın al›</a>
+  </div>
+
+  <div class="box course__video">
+    <p><a href="/sir/2020/10/15/bul-beni.html">Bul Beni!</a></p>
+    <img src="/assets/img/002/002-5.webp" alt="002-5">
+    <a class="btn btn--solid" href="https://shopier.com/51079829">baskı satın al›</a>
   </div>
 
 </div>
