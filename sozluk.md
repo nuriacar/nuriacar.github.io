@@ -7,15 +7,15 @@ permalink: /sozluk/
 
 Sözlük projesi birkaç benzer durumun üst üste gelmesi ile şekillendi ve şimdi huzurlarınızda! Dört aya yayılan hikayesi şöyle:
 
-Projelerimden biri olan bilgiguvenligi.org'u 7'den 77'ye herkes ve her rol için inşa ettim lakin zamanla farkettim ki terimlerin ne olduğu belirsiz. Yazdıkça kelimeler çoğaldı ve sözlük ihtiyacı hasıl oldu. Ben de o proje özelinde bir sözlük inşa ettim ve bu başlangıç oldu.
+Projelerimden biri olan [bilgiguvenligi.org](https://bilgiguvenligi.org)'u 7'den 77'ye herkes ve her rol için inşa ettim lakin zamanla farkettim ki terimlerin ne olduğu belirsiz. Yazdıkça kelimeler çoğaldı ve sözlük ihtiyacı hasıl oldu. Ben de o proje özelinde bir sözlük inşa ettim ve bu başlangıç oldu.
 
-Sonra siber güvenlik yüksek lisans dersi sınavına çalışmak için Shark Tank (Wireshark Eğitim Laboratuvarı) projesine başladım ve her modülde önce o modülde anlatılan şeyleri açıkladığım bir mini modül içi sözlük oluştu.
+Sonra siber güvenlik yüksek lisans dersi sınavına çalışmak için [Shark Tank (Wireshark Eğitim Laboratuvarı)](/shark-tank/) projesine başladım ve her modülde önce o modülde anlatılan şeyleri açıkladığım bir mini modül içi sözlük oluştu.
 
-Sonra nuriacar.com'daki yazılarımda kullandığım terimler için bir sözlük inşa etme fikri doğdu ve bu sayfayı inşa ettim; yeni yazılar paylaştıkça sözlüğü genişletmeye devam ettim.
+Sonra [nuriacar.com](https://nuriacar.com)'daki yazılarımda kullandığım terimler için bir sözlük inşa etme fikri doğdu ve bu sayfayı inşa ettim; yeni yazılar paylaştıkça sözlüğü genişletmeye devam ettim.
 
-Sonra düşündüm ki 3 farklı projedeki dedike sözlükler şu an okuduğunuz birleşse harika olacak. Sözlükleri birleştirmekle kalmadım, birebir terim karşılıklarının yanında arkadaşıma anlatıyormuş gibi kısa açıklama metinleri ekledim zira terim/deyim karşılıkları olsa bile işin dışından biri için anlaşılmayacak haldeydiler!
+Sonra düşündüm ki üç farklı projedeki dedike sözlükler şu an okuduğunuz birleşse harika olacak. Sözlükleri birleştirmekle kalmadım, birebir terim karşılıklarının yanında arkadaşıma anlatıyormuş gibi kısa açıklama metinleri ekledim zira terim/deyim karşılıkları olsa bile işin dışından biri için anlaşılmayacak haldeydiler!
 
-Ve geldik son adıma: Yüksek lisans tezim için siber güvenlik terimlerinin Türkçe karşılıkları lazım oldu ve hocam TMMOB BMO 6. Dönem Siber Güvenlik Komisyonu'nun oluşturduğu bir PDF'i işaret etti. Bkz. Siber Güvenlik Terim Karşılıkları (Aralık 2023). Bu PDF'deki karşılıklarla tezimi yazdım ve sonra içindeki maddeleri birkaç aydır geliştirdiğim sözlük projeme dahil ettim. Komisyonun PDF'inde açıklamalar yok. Bu sebeple yaklaşık 4.083 madde için yine arkadaşıma anlatır gibi kısa açıklamalar yazdım.
+Ve geldik son adıma: Yüksek lisans tezim için siber güvenlik terimlerinin Türkçe karşılıkları lazım oldu ve hocam TMMOB BMO 6. Dönem Siber Güvenlik Komisyonu'nun oluşturduğu bir PDF'i işaret etti. Bkz. [Siber Güvenlik Terim Karşılıkları (Aralık 2023)](/assets/pdf/tmmob-siber-guvenlik-terim-karsiliklari-202312.pdf). Bu PDF'deki karşılıklarla tezimi yazdım ve sonra içindeki maddeleri birkaç aydır geliştirdiğim sözlük projeme dahil ettim. Komisyonun PDF'inde açıklamalar yok. Bu sebeple yaklaşık 4.083 madde için yine arkadaşıma anlatır gibi kısa açıklamalar yazdım.
 
 Proje sabit değil! Zamanla yeni terim ve deyimlerle genişlemeye devam edecek! Herhangi bir geribildirimde bulunmak isterseniz sayfanın en alt kısmında epostam var; oradan erişebilirsiniz. Umarım Siber Okuryazarlık açısından faydası dokunur.
 
@@ -41,6 +41,12 @@ Proje sabit değil! Zamanla yeni terim ve deyimlerle genişlemeye devam edecek! 
 </div>
 
 </div>
+
+<div class="search" role="search">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="16" y1="16" x2="21" y2="21" stroke="currentColor" stroke-width="1.8"/></svg>
+  <input type="search" id="sozluk-input" placeholder="sözlükte ara — terim, karşılık, açıklama" aria-label="Sözlükte ara" autocomplete="off" spellcheck="false">
+</div>
+<p class="conn" id="sozluk-count" hidden></p>
 
 <details class="accordion" markdown="block" id="letter-sayi">
 <summary>Sayılar</summary>

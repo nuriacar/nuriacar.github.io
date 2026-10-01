@@ -4,6 +4,7 @@
  * 2) Mobil menü (hamburger, aria)
  * 3) Site içi arama (search.json, Türkçe karakter normalizasyonu)
  * 4) Başlık çapaları (içeriğe dokunmadan id + # link)
+ * 10) Sözlük süzgeci (/sozluk/ — accordion satır filtresi)
  */
 
 /* ---------- 1) Tema ---------- */
@@ -1103,4 +1104,93 @@
       }
     } catch (e) { /* geçersiz href — dokunma */ }
   }
+})();
+
+/* ---------- 10) Sözlük süzgeci ----------
+   /sozluk/ sayfasında accordion tablo satırlarını canlı süzer.
+   Eşleşme: terim + karşılık + açıklama (TR normalizasyonlu).
+   Bölüm sayaçları summary içinde .box-inline rozeti; temizlemede kaldırılır.
+   CSP not: satır gizlemede inline style özniteliği yok — CSSOM (el.style.display). */
+
+(function () {
+  'use strict';
+
+  var input = document.getElementById('sozluk-input');
+  var count = document.getElementById('sozluk-count');
+  if (!input) return;
+
+  var TR_MAP = { 'ç': 'c', 'ğ': 'g', 'ı': 'i', 'ö': 'o', 'ş': 's', 'ü': 'u', 'â': 'a', 'î': 'i', 'û': 'u', 'İ': 'i' };
+
+  function norm(s) {
+    s = String(s || '');
+    return s.replace(/[çğışöüâîûİ]/g, function (c) { return TR_MAP[c] || c; })
+           .toLowerCase()
+           .replace(/\s+/g, ' ')
+           .trim();
+  }
+
+  var boxes = [];
+  var lists = document.querySelectorAll('details.accordion');
+  for (var i = 0; i < lists.length; i++) {
+    var d = lists[i];
+    var rows = d.querySelectorAll('tbody tr');
+    if (!rows.length) continue;
+    var texts = [];
+    for (var j = 0; j < rows.length; j++) texts.push(norm(rows[j].textContent));
+    boxes.push({ d: d, sum: d.querySelector('summary'), rows: rows, texts: texts, badge: null });
+  }
+
+  function clear() {
+    for (var i = 0; i < boxes.length; i++) {
+      var b = boxes[i];
+      for (var j = 0; j < b.rows.length; j++) b.rows[j].style.display = '';
+      b.d.open = false;
+      if (b.badge) { b.badge.remove(); b.badge = null; }
+    }
+    if (count) count.hidden = true;
+  }
+
+  function apply() {
+    var q = norm(input.value);
+    if (!q) { clear(); return; }
+    var hits = 0, secs = 0;
+    for (var i = 0; i < boxes.length; i++) {
+      var b = boxes[i];
+      var n = 0;
+      for (var j = 0; j < b.rows.length; j++) {
+        var ok = b.texts[j].indexOf(q) !== -1;
+        b.rows[j].style.display = ok ? '' : 'none';
+        if (ok) n++;
+      }
+      b.d.open = n > 0;
+      if (n) secs++;
+      hits += n;
+      if (n && b.sum) {
+        if (!b.badge) {
+          b.badge = document.createElement('span');
+          b.badge.className = 'box-inline';
+          b.sum.appendChild(b.badge);
+        }
+        b.badge.textContent = String(n);
+      } else if (b.badge) {
+        b.badge.remove();
+        b.badge = null;
+      }
+    }
+    if (count) {
+      count.textContent = hits ? hits + ' sonuç · ' + secs + ' bölüm' : 'sonuç yok';
+      count.hidden = false;
+    }
+  }
+
+  var timer = null;
+
+  input.addEventListener('input', function () {
+    clearTimeout(timer);
+    timer = setTimeout(apply, 120);
+  });
+
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { input.value = ''; clear(); }
+  });
 })();
