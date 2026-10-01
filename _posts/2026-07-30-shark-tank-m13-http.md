@@ -4,7 +4,7 @@ title:  "shark-tank - m13: HTTP Analizi"
 date:   2026-07-30 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 13: HTTP Analizi
+## Modül 13: HTTP Analizi
 
 **Neden?** Web uygulamasına SQL injection yapıldı, kullanıcı veritabanı çalındı. Saldırgan işe DNS çözümlemesiyle başlamış, ardından web oturumunu taklit etmek için çalınmış cookie'yi kullanmış. HTTP trafiğinin tamamı şifresizdir: Saldırganın gönderdiği payload Wireshark'ta aynen görünür. SQL injection (veritabanı sızdırma), XSS (kullanıcı çalma), path traversal (dosya okuma), HTTP request smuggling (önbellek zehirleme), credential stuffing (POST body'de şifre dener), CSRF (işlem çalma). Bu modülde, HTTP saldırılarını paket seviyesinde tespit etmeyi ve DNS ile HTTP arasındaki zaman ilişkisini (delta) okumayı öğreneceksin.
 
@@ -54,13 +54,7 @@ HTTP (HyperText Transfer Protocol), web istemci-sunucu iletişim protokolüdür.
 > - `http.response.code == 401` art arda → **Brute force** girişimi
 > - `http.user_agent` anormal → **Bot veya otomatize araç** (nmap, sqlmap, curl)
 
-> **HTTP/2 ve HTTP/3 notu:** Modern web'de karşına HTTP/1.1 yerine
-> **HTTP/2** (TCP üzerinde ikili çerçeveleme, tek bağlantıda çoklu akış) veya
-> **HTTP/3** (QUIC/UDP üzerinde — bkz. Modül 10) çıkabilir. HTTP/2'de
-> header'lar HPACK ile sıkıştırıldığı için metin olarak okunmaz; Wireshark
-> `http2` dissector'ıyla akışları ayrıştırır ve filtresi `http2`'dir.
-> Sınav kapsamı HTTP/1.1'dir; HTTP/2 görürsen "bu trafik ikili protokol"
-> diye tanıman yeterli.
+> **HTTP/2 ve HTTP/3 notu:** Modern web'de karşına HTTP/1.1 yerine **HTTP/2** (TCP üzerinde ikili çerçeveleme, tek bağlantıda çoklu akış) veya **HTTP/3** (QUIC/UDP üzerinde — bkz. Modül 10) çıkabilir. HTTP/2'de header'lar HPACK ile sıkıştırıldığı için metin olarak okunmaz; Wireshark `http2` dissector'ıyla akışları ayrıştırır ve filtresi `http2`'dir. Sınav kapsamı HTTP/1.1'dir; HTTP/2 görürsen "bu trafik ikili protokol" diye tanıman yeterli.
 
 ## Hazırlık
 
@@ -149,16 +143,9 @@ HTTP gövdesinin uzunluğu iki farklı şekilde bildirilir:
 ```text
 http.transfer_encoding contains "chunked"
 ```
-Bu response'un **Content-Length başlığı olmadığına** dikkat et. Paket
-detaylarında `Media Type` altında chunk satırlarını görürsün; Wireshark
-bunları otomatik birleştirir. Chunked aktarım, uzunluğu önceden
-bilinmeyen (dinamik üretilen, akış halindeki) içeriklerde kullanılır —
-ve ters mühendislik için önemli bir gerçektir: **Content-Length yoksa
-gövdeyi tek pakette aramamalısın.**
+Bu response'un **Content-Length başlığı olmadığına** dikkat et. Paket detaylarında `Media Type` altında chunk satırlarını görürsün; Wireshark bunları otomatik birleştirir. Chunked aktarım, uzunluğu önceden bilinmeyen (dinamik üretilen, akış halindeki) içeriklerde kullanılır — ve ters mühendislik için önemli bir gerçektir: **Content-Length yoksa gövdeyi tek pakette aramamalısın.**
 
-> **SINAV İPUCU:** "Response'un toplam gövde boyutu nedir?" sorusunda
-> önce Content-Length var mı diye bak; yoksa chunk boyutlarını toplaman
-> (ya da Wireshark'ın birleştirdiği gövdeye bakman) gerekir.
+> **SINAV İPUCU:** "Response'un toplam gövde boyutu nedir?" sorusunda önce Content-Length var mı diye bak; yoksa chunk boyutlarını toplaman (ya da Wireshark'ın birleştirdiği gövdeye bakman) gerekir.
 
 ## Alıştırma 3: POST Isteğini İncele
 
@@ -184,9 +171,7 @@ http.request.method == "POST"
 
 ### HTTP Basic Authentication: Header'da Taşınan Kimlik
 
-POST gövdesi tek credential yolu değildir: **Basic auth**, kimlik bilgisini
-her isteğin başlığında taşır — `Authorization: Basic <base64>` biçiminde.
-Base64 şifreleme DEĞİLDİR, kodlamadır: Anında çözülür.
+POST gövdesi tek credential yolu değildir: **Basic auth**, kimlik bilgisini her isteğin başlığında taşır — `Authorization: Basic <base64>` biçiminde. Base64 şifreleme DEĞİLDİR, kodlamadır: Anında çözülür.
 
 pcap'te iki Basic auth'lu istek var:
 
@@ -206,18 +191,13 @@ v Hypertext Transfer Protocol
 echo "a2FtZTpoYW1laGE=" | base64 -d     # -> kame:hameha
 ```
 
-Aynı teknik ters yönde de çalışır — saldırgan exfil için veriyi
-Basic auth başlığına gömebilir; her `Authorization` başlığını
-`http.authorization` filtresiyle kontrol etmek analist refleksi olmalı.
+Aynı teknik ters yönde de çalışır — saldırgan exfil için veriyi Basic auth başlığına gömebilir; her `Authorization` başlığını `http.authorization` filtresiyle kontrol etmek analist refleksi olmalı.
 
-> **SINAV İPUCU:** "Kimlik bilgisi nerede taşınamaz?" — hiçbir yerde:
-> POST gövdesi (cleartext), Basic auth başlığı (base64), URL query'si
-> (`http.request.uri contains "user="`) — üçünü de ayrı filtrele.
+> **SINAV İPUCU:** "Kimlik bilgisi nerede taşınamaz?" — hiçbir yerde: POST gövdesi (cleartext), Basic auth başlığı (base64), URL query'si (`http.request.uri contains "user="`) — üçünü de ayrı filtrele.
 
 ### Content-Length Toplama Tekniği
 
-Büyük POST'lar tek TCP segmentine sığmaz. pcap'te ~74 KB'lık bir POST var
-(`POST /api/data`, gövdesi rapor kayıtlarıyla dolu):
+Büyük POST'lar tek TCP segmentine sığmaz. pcap'te ~74 KB'lık bir POST var (`POST /api/data`, gövdesi rapor kayıtlarıyla dolu):
 
 1. Filtrele: `http.request.method == "POST" && http.content_length > 50000`
 2. İsteğin `Content-Length` değerini not et
@@ -225,17 +205,13 @@ Büyük POST'lar tek TCP segmentine sığmaz. pcap'te ~74 KB'lık bir POST var
    ```text
    tcp.stream == <numara> && ip.src == 172.50.2.100 && tcp.len > 0
    ```
-4. **Statistics > Capture File Properties** yerine pratik yol: her paketin
-   `tcp.len` değerlerini topla
+4. **Statistics > Capture File Properties** yerine pratik yol: her paketin `tcp.len` değerlerini topla
 
 Karşılaştır (lab ölçümü):
 - Content-Length: **74670** (sadece gövde)
 - Σ tcp.len: **74803** (7 segment) = 74670 gövde + **133** HTTP başlığı
 
-İlk segment başlıkları da taşıdığı için toplam Content-Length'ten biraz
-fazladır. Bu fark, başlık uzunluğudur — sınavda "gövde kaç byte?"
-sorusunda Content-Length'i, "istemci kaç byte TCP verisi gönderdi?"
-sorusunda tcp.len toplamını sorarlar.
+İlk segment başlıkları da taşıdığı için toplam Content-Length'ten biraz fazladır. Bu fark, başlık uzunluğudur — sınavda "gövde kaç byte?" sorusunda Content-Length'i, "istemci kaç byte TCP verisi gönderdi?" sorusunda tcp.len toplamını sorarlar.
 
 ## Alıştırma 4: Follow TCP Stream
 
@@ -263,40 +239,29 @@ Content-Length: 72
 
 ## Alıştırma 5: Cookie İzleme (Set-Cookie → Cookie)
 
-Web oturumları cookie'lerle yürür — ve HTTP şifresiz olduğu için saldırgan
-çalınmış bir cookie ile kullanıcının kimliğine bürünebilir (session hijacking).
+Web oturumları cookie'lerle yürür — ve HTTP şifresiz olduğu için saldırgan çalınmış bir cookie ile kullanıcının kimliğine bürünebilir (session hijacking).
 
 1. Sunucunun oturum açtığı yanıtı bul:
    ```text
    http.set_cookie
    ```
-   `/session` yanıtı iki cookie gönderir: `session=st-abc123def456`
-   (HttpOnly) ve `lang=tr`.
+   `/session` yanıtı iki cookie gönderir: `session=st-abc123def456`    (HttpOnly) ve `lang=tr`.
 2. İstemcinin sonraki isteklerde bu cookie'leri geri taşıdığını gör:
    ```text
    http.cookie
    ```
-   `/api/data` isteğinin `Cookie: session=st-abc123def456; lang=tr`
-   başlığı var mı?
+   `/api/data` isteğinin `Cookie: session=st-abc123def456; lang=tr`    başlığı var mı?
 
 **Analist sorusu:** pcap'te `http.cookie` ile taşınan **session token
-değeri** nedir? (Cevap: `st-abc123def456`.) Saldırgan bu değeri kendi
-tarayıcısına koyarsa, sunucu onu kurban gibi karşılar.
+değeri** nedir? (Cevap: `st-abc123def456`.) Saldırgan bu değeri kendi tarayıcısına koyarsa, sunucu onu kurban gibi karşılar.
 
-> **SINAV İPUCU:** "Oturum token'i nasıl çalındı?" sorusunun cevabı bu
-> zincirde: Set-Cookie (kurban) → cleartext HTTP → Cookie (saldırganın
-> sonraki isteği). `http.cookie || http.set_cookie` tek filtreyle ikisini
-> birlikte görebilirsin.
+> **SINAV İPUCU:** "Oturum token'i nasıl çalındı?" sorusunun cevabı bu zincirde: Set-Cookie (kurban) → cleartext HTTP → Cookie (saldırganın sonraki isteği). `http.cookie || http.set_cookie` tek filtreyle ikisini birlikte görebilirsin.
 
 ## Alıştırma 6: DNS → GET Delta Ölçümü
 
-Tarayıcı bir siteye bağlanmadan önce DNS çözer. Bu iki adım arasındaki
-süre (delta), kullanıcı deneyimi analizi ve bot tespitinde kullanılır:
-İnsan DNS yanıtı gelmeden GET atamaz; otomatik araçlar bazen DNS'i
-atlar veya araya milisaniyeler koyar.
+Tarayıcı bir siteye bağlanmadan önce DNS çözer. Bu iki adım arasındaki süre (delta), kullanıcı deneyimi analizi ve bot tespitinde kullanılır: İnsan DNS yanıtı gelmeden GET atamaz; otomatik araçlar bazen DNS'i atlar veya araya milisaniyeler koyar.
 
-pcap'te zincir şöyle: `dig web.shark-tank.local` hemen ardından
-`GET / (Host: web.shark-tank.local)`.
+pcap'te zincir şöyle: `dig web.shark-tank.local` hemen ardından `GET / (Host: web.shark-tank.local)`.
 
 1. DNS konuşmasını bul:
    ```text
@@ -307,9 +272,7 @@ pcap'te zincir şöyle: `dig web.shark-tank.local` hemen ardından
    ```text
    http.request && http.host == "web.shark-tank.local"
    ```
-3. Delta = GET zamanı − DNS yanıt zamanı. Örnek lab ölçümü: **~0.27 sn**
-   (curl başlatma süresi; senin ölçümün ortam hızına göre değişebilir —
-   önemli olan yöntemdir).
+3. Delta = GET zamanı − DNS yanıt zamanı. Örnek lab ölçümü: **~0.27 sn** (curl başlatma süresi; senin ölçümün ortam hızına göre değişebilir — önemli olan yöntemdir).
 
 **tshark ile otomatik ölçüm:**
 ```sh
@@ -318,9 +281,7 @@ tshark -r shared/pcaps/module-13-http.pcap -Y \
   -T fields -e frame.time_relative -e _ws.col.Info
 ```
 
-> **SINAV İPUCU:** "DNS yanıtı ile ilk GET arasında ne kadar zaman geçti?"
-> sorusunda iki paketin `frame.time_relative` değerlerini çıkart. Time
-> Display Format'i (Modül 1) kullanmak işini kolaylaştırır.
+> **SINAV İPUCU:** "DNS yanıtı ile ilk GET arasında ne kadar zaman geçti?" sorusunda iki paketin `frame.time_relative` değerlerini çıkart. Time Display Format'i (Modül 1) kullanmak işini kolaylaştırır.
 
 ## Alıştırma 7: HTTP Yönlendirme (302)
 

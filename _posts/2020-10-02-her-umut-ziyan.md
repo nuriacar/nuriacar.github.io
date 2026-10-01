@@ -6,10 +6,7 @@ categories: sir
 tags: [muzik]
 ---
 
-Aranje yapan hem yetenekli hem eğlenceli bir arkadaşım var.
-[Eren](https://soundcloud.com/erenduranoglu). Bir enstrümantal beste yapmış.
-Dedi ki "Abi buna söz yazar mısın?". Bu sözler çıktı. Belki bir gün
-kaydederiz.
+Aranje yapan hem yetenekli hem eğlenceli bir arkadaşım var. [Eren](https://soundcloud.com/erenduranoglu). Bir enstrümantal beste yapmış. Dedi ki "Abi buna söz yazar mısın?". Bu sözler çıktı. Belki bir gün kaydederiz.
 
 ---
 

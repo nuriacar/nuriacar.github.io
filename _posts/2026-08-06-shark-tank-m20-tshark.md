@@ -4,7 +4,7 @@ title:  "shark-tank - m20: tshark CLI Analizi"
 date:   2026-08-06 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 20: tshark CLI Analizi
+## Modül 20: tshark CLI Analizi
 
 **Neden?** Olay müdahale ekibine 500 pcap dosyası geldi. GUI ile tek tek açmak imkansız: Haftalar sürer. Tshark bu analizi otomatize eder: Komut satırından filtreleme, field extraction, istatistik, object export. Scripting ile tüm pcap'leri tarar, IOC (Indicator of Compromise) eşleştirmesi yapar. Wireshark GUI tek bir pcap içindir; tshark binlerce pcap içindir. Bu modülde, tshark ile toplu pcap analizini otomatize etmeyi öğreneceksin.
 
@@ -202,9 +202,7 @@ tshark -r shared/pcaps/module-12-dns.pcap -Y "dns" -T json \
 ```
 CSV ise `-T csv` + `-e` sütunlarıyla SIEM raporlarına hazır tablo üretir.
 
-> **SINAV İPUCU:** "Bir araca aktarılacak yapılandırılmış çıktı" istenirse:
-> `-T json` (nested veri) veya `-T csv` (düz tablo). İkisi de `-e` ile
-> seçilen alanları taşıyabilir.
+> **SINAV İPUCU:** "Bir araca aktarılacak yapılandırılmış çıktı" istenirse: `-T json` (nested veri) veya `-T csv` (düz tablo). İkisi de `-e` ile seçilen alanları taşıyabilir.
 
 ---
 
@@ -285,22 +283,11 @@ tshark -r shared\pcaps\module-13-http.pcap \
 
 ### Repo'nun Kendi Analiz Aracı: shark-tank.lua
 
-Bu repo, bu modülde öğrendiğin her tshark tekniğini tek seferde çalıştıran
-bir Lua analiz aracıyla gelir: `shared/shark-tank.lua`. Wireshark'ın Lua
-API'siyle yazıldı; tshark üzerinden çalışır — tek pcap veya tam bir dizin
-tarar, her pcap'in yanına aynı adda bir `.md` bulgu raporu yazar.
+Bu repo, bu modülde öğrendiğin her tshark tekniğini tek seferde çalıştıran bir Lua analiz aracıyla gelir: `shared/shark-tank.lua`. Wireshark'ın Lua API'siyle yazıldı; tshark üzerinden çalışır — tek pcap veya tam bir dizin tarar, her pcap'in yanına aynı adda bir `.md` bulgu raporu yazar.
 
-Araç, bu müfredattaki tüm bulgu sınıflarını (port scan, credential
-sızıntısı, SQLi/XSS, DNS/ICMP tunneling, Kerberos spray/Kerberoasting (RC4
-bilet), SMB brute force/svcctl (PsExec ayak izi), OCSP + sertifika sağlığı,
-beaconing, entropy/exfil, fragment overlap...) desen tabanlı tespitle
-tarar ve kill-chain sırasına dizilmiş bir Markdown raporu üretir. Kaynak kodunu
-okumak, "tshark çıktısı nasıl rapora dönüşür" sorusunun canlı cevabıdır.
+Araç, bu müfredattaki tüm bulgu sınıflarını (port scan, credential sızıntısı, SQLi/XSS, DNS/ICMP tunneling, Kerberos spray/Kerberoasting (RC4 bilet), SMB brute force/svcctl (PsExec ayak izi), OCSP + sertifika sağlığı, beaconing, entropy/exfil, fragment overlap...) desen tabanlı tespitle tarar ve kill-chain sırasına dizilmiş bir Markdown raporu üretir. Kaynak kodunu okumak, "tshark çıktısı nasıl rapora dönüşür" sorusunun canlı cevabıdır.
 
-> **Otomasyon merakın varsa:** Modül 29 tam sana göre — Lua'nın
-> hikâyesini, Wireshark'ı neden Lua'yla konuşturduğumuzu ve bu aracın
-> nasıl evrildiğini anlatıyor. Bu bölüm aracı *kullanmayı*, m29 onu
-> *anlamayı* öğretir.
+> **Otomasyon merakın varsa:** Modül 29 tam sana göre — Lua'nın hikâyesini, Wireshark'ı neden Lua'yla konuşturduğumuzu ve bu aracın nasıl evrildiğini anlatıyor. Bu bölüm aracı *kullanmayı*, m29 onu *anlamayı* öğretir.
 
 ### Üç Çalıştırma Yolu
 
@@ -321,12 +308,9 @@ tshark.exe -q -X lua_script:C:\tools\shark-tank.lua -r C:\captures\firma.pcap
 
 - Kalıcı: script'i Lua plugin dizinine kopyala, Wireshark'ı yeniden başlat:
   - macOS/Linux: `~/.local/lib/wireshark/plugins/shark-tank.lua`
-  - Windows: `%APPDATA%\Wireshark\plugins\shark-tank.lua`
-    (veya `C:\Program Files\Wireshark\plugins\`)
-- Menü: **Analyze/Tools > Shark-Tank > Rapor Üret** (açık pcap'i tarar,
-  raporu pencerede gösterir; dosya yazılmaz)
-- Geçici: **File > Run Lua Script** > `shark-tank.lua` seç > pcap aç >
-  aynı menü (betik, dosyayı `retap` ile baştan işler — kaçırdığı paket kalmaz)
+  - Windows: `%APPDATA%\Wireshark\plugins\shark-tank.lua` (veya `C:\Program Files\Wireshark\plugins\`)
+- Menü: **Analyze/Tools > Shark-Tank > Rapor Üret** (açık pcap'i tarar, raporu pencerede gösterir; dosya yazılmaz)
+- Geçici: **File > Run Lua Script** > `shark-tank.lua` seç > pcap aç > aynı menü (betik, dosyayı `retap` ile baştan işler — kaçırdığı paket kalmaz)
 
 Ek modlar:
 ```sh
@@ -352,9 +336,7 @@ SHARK_TANK_PCAP=shared/pcaps/module-28-forensics.pcap tshark -q \
   -X lua_script:shared/shark-tank.lua
 ```
 
-GUI'de (Wireshark): script `~/.local/lib/wireshark/plugins/` altına
-kopyalanırsa **Tools > Shark-Tank > Rapor Üret** menüsü açılan dosyayı
-raporlar.
+GUI'de (Wireshark): script `~/.local/lib/wireshark/plugins/` altına kopyalanırsa **Tools > Shark-Tank > Rapor Üret** menüsü açılan dosyayı raporlar.
 
 ### Bash (macOS / Linux):
 
@@ -427,8 +409,7 @@ sudo tshark -i en0 -f "udp port 53" -c 20
 
 ## Alıştırma 9: Dosya Çıkarma + SHA-256 Hash (DFIR Zinciri)
 
-Ağdan çıkardığın dosyanın kimliğini hash ile sabitlersin — IOC
-raporlamasının temel adımı.
+Ağdan çıkardığın dosyanın kimliğini hash ile sabitlersin — IOC raporlamasının temel adımı.
 
 ### Adımlar:
 
@@ -490,9 +471,7 @@ shasum -a 256 /tmp/tshark-export/auth
 | `-V` | Detaylı çıktı | `tshark -r f.pcap -V` |
 | `-O proto` | Sadece protokol detayı | `tshark -r f.pcap -O http` |
 
-> **Aile notu:** pcap birleştirme/silme/dilimleme araçları `mergecap` ve
-> `editcap` Modül 21'de (gelişmiş yakalama) işlenir; tshark okur, onlar
-> pcap dosyaları üzerinde yazar.
+> **Aile notu:** pcap birleştirme/silme/dilimleme araçları `mergecap` ve `editcap` Modül 21'de (gelişmiş yakalama) işlenir; tshark okur, onlar pcap dosyaları üzerinde yazar.
 
 > Lua script yazma merakı: bkz. Modül 29 (Lua ile Otomasyon).
 

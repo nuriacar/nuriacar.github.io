@@ -1,0 +1,17 @@
+{% assign posts = include.posts %}
+<div class="card">
+  <table class="table">
+    <tr><th>tarih</th><th>başlık</th>{% if include.show_topic %}<th>konu</th>{% endif %}</tr>
+    {% for post in posts %}
+    {% assign primary_tag = post.tags | first %}
+    {% assign topic = site.data.topics | where: 'slug', primary_tag | first %}
+    <tr>
+      <td><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y%m%d' }}</time></td>
+      <td><a href="{{ post.url }}">{{ post.title | escape }}</a></td>
+      {% if include.show_topic %}
+      <td>{% if topic %}<a href="/konu/{{ primary_tag }}/">{{ topic.title }}</a>{% endif %}</td>
+      {% endif %}
+    </tr>
+    {% endfor %}
+  </table>
+</div>

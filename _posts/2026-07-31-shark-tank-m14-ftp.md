@@ -4,7 +4,7 @@ title:  "shark-tank - m14: FTP Analizi"
 date:   2026-07-31 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 14: FTP Analizi
+## Modül 14: FTP Analizi
 
 **Neden?** FTP sunucusunda anormal bir hesap görüldü. Brute force ile ele geçirilmiş olabilir. FTP, kullanıcı adı ve şifreyi düz metin olarak gönderir. Saldırgan Wireshark ile FTP oturumunu izleyerek `USER` ve `PASS` komutlarını okur. Anonymous FTP (açık dosya sunucusu), FTP bounce attack (proxy ile port tarama), brute force tespiti FTP analizinin temel konularıdır. Bu modülde, FTP oturumlarındaki güvenlik açıklarını bulmayı öğreneceksin.
 
@@ -235,9 +235,7 @@ tcp.dstport == 21 || tcp.srcport == 21
 
 ## Alıştırma 5: Active Mode Analizi
 
-> **Not:** pcap'te iki active mode oturumu var: Biri normal (PORT istemcinin
-> kendi IP'sine), biri bounce denemesi (PORT üçüncü bir makineye). İkisini de
-> `ftp.request.command == "PORT"` filtresiyle bulabilirsin.
+> **Not:** pcap'te iki active mode oturumu var: Biri normal (PORT istemcinin kendi IP'sine), biri bounce denemesi (PORT üçüncü bir makineye). İkisini de `ftp.request.command == "PORT"` filtresiyle bulabilirsin.
 
 Active mode'da, PORT komutu ile istemci server'a hangi IP ve portta dinlediğini söyler. Server daha sonra **kendi port 20'sinden istemciye** veri bağlantısı başlatır.
 
@@ -301,11 +299,7 @@ v File Transfer Protocol (FTP)
 
 ### FTP Bounce Attack (PORT ile Üçüncü Tarafa Atlama)
 
-FTP bounce, active mode'un kötüye kullanımıdır: Saldırgan, FTP sunucusuna
-PORT komutuyla **kendi adresi yerine üçüncü bir makinenin** IP/portunu
-verir ve LIST/RETR ile sunucuyu o makineye bağlanmaya zorlar. Sonuç:
-FTP sunucusu saldırgan adına port taraması yapar (kaynak izi FTP
-sunucusunda kalır, saldırganınkinde değil).
+FTP bounce, active mode'un kötüye kullanımıdır: Saldırgan, FTP sunucusuna PORT komutuyla **kendi adresi yerine üçüncü bir makinenin** IP/portunu verir ve LIST/RETR ile sunucuyu o makineye bağlanmaya zorlar. Sonuç: FTP sunucusu saldırgan adına port taraması yapar (kaynak izi FTP sunucusunda kalır, saldırganınkinde değil).
 
 pcap'teki deneme (ikinci PORT oturumu):
 ```text
@@ -322,14 +316,9 @@ ftp.response.code == 500 || ftp.response.code == 425 # reddedilen veri bağlant�
 tcp contains "PORT 172,50,2,16"                     # ham hedef IP kanıtı
 ```
 
-Analist çıkarımı: PORT argümanındaki IP, kontrol bağlantısının kurulduğu
-istemci IP'sinden farklıysa **bounce denemesidir**. Modern sunucular
-(vsftpd dahil) bu durumu 500 ile reddeder; ama denemenin kendisi pcap'te
-cleartext olarak durur — saldırganın kimliği ve hedefi buradadır.
+Analist çıkarımı: PORT argümanındaki IP, kontrol bağlantısının kurulduğu istemci IP'sinden farklıysa **bounce denemesidir**. Modern sunucular (vsftpd dahil) bu durumu 500 ile reddeder; ama denemenin kendisi pcap'te cleartext olarak durur — saldırganın kimliği ve hedefi buradadır.
 
-> **SINAV İPUCU:** "PORT komutuyla hangi üçüncü makine hedeflendi?"
-> sorusunda `ftp.request.command == "PORT"` çıktısındaki argümanı çöz:
-> `h1,h2,h3,h4` hedef IP'dir. (Bizim pcap'te: 172.50.2.16 ve 172.50.2.14.)
+> **SINAV İPUCU:** "PORT komutuyla hangi üçüncü makine hedeflendi?" sorusunda `ftp.request.command == "PORT"` çıktısındaki argümanı çöz: `h1,h2,h3,h4` hedef IP'dir. (Bizim pcap'te: 172.50.2.16 ve 172.50.2.14.)
 
 ## Alıştırma 6: FTP vs HTTP vs HTTPS - Şifre Karşılaştırma
 

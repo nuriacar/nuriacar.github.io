@@ -4,7 +4,7 @@ title:  "shark-tank - m23: Performans Analizi"
 date:   2026-08-09 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 23: Performans Analizi
+## Modül 23: Performans Analizi
 
 **Neden?** Sistem yavaş, sebebi bulunamıyor. Yönetici "network kaynaklı" diyor ama kimse emin değil. Performans düşüşü çoğu zaman saldırının ilk belirtisidir: Ani retransmission artışı (SYN flood), RTT dalgalanması (tunneling veya proxy), throughput düşüşü (DoS), Expert Info uyarıları (TCP Reset, Window violation). Performans metrikleri saldırıyı erken uyarı sistemi gibi yakalar. Bu modülde, performans metriklerinden saldırıyı okumayı öğreneceksin.
 
@@ -107,9 +107,7 @@ Round Trip Time, bir paketin gidip gelme süresidir.
 
 ### tcp.analysis.ack_rtt Alanı: Wireshark'ın Hesapladığı RTT
 
-Manuel zaman ölçümüne (Time Display Format) gerek kalmadan, Wireshark her
-ACK paketi için RTT'yi kendisi hesaplar: `tcp.analysis.ack_rtt` = bu
-ACK'in onayladığı verinin gönderilmesinden geçen süre.
+Manuel zaman ölçümüne (Time Display Format) gerek kalmadan, Wireshark her ACK paketi için RTT'yi kendisi hesaplar: `tcp.analysis.ack_rtt` = bu ACK'in onayladığı verinin gönderilmesinden geçen süre.
 
 ```text
 tcp.analysis.ack_rtt
@@ -132,12 +130,9 @@ tshark -r shared/pcaps/module-23-performance.pcap -Y 'tcp.analysis.ack_rtt' \
 | awk '{s+=$1; n++} END {printf "Ortalama RTT: %.3f sn (n=%d)\n", s/n, n}'
 ```
 
-Sınavda "bağlantının ortalama RTT'si kaç?" sorusunda en hızlı yol budur:
-Manuel değil, alan değerlerinin ortalaması.
+Sınavda "bağlantının ortalama RTT'si kaç?" sorusunda en hızlı yol budur: Manuel değil, alan değerlerinin ortalaması.
 
-> **İstihbarat İşaretleri:** `tcp.analysis.ack_rtt` 40-200 ms'lik
-> düzenli kümeler = delayed ACK (bkz. Modül 11); ani RTT sıçramaları =
-> ağ tıkanıklığı ya da yol (route) değişimi.
+> **İstihbarat İşaretleri:** `tcp.analysis.ack_rtt` 40-200 ms'lik düzenli kümeler = delayed ACK (bkz. Modül 11); ani RTT sıçramaları = ağ tıkanıklığı ya da yol (route) değişimi.
 
 ---
 

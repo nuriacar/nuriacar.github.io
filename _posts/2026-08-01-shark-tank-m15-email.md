@@ -4,7 +4,7 @@ title:  "shark-tank - m15: Email Protokol Analizi (SMTP/POP/IMAP)"
 date:   2026-08-01 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 15: Email Protokol Analizi (SMTP/POP/IMAP)
+## Modül 15: Email Protokol Analizi (SMTP/POP/IMAP)
 
 **Neden?** Şirket çalışanlarına şüpheli emailler geliyor. Kaynak doğrulanamıyor: Email spoofing olabilir. Email protokolleri (SMTP, POP3, IMAP) şifresiz çalışır. Saldırgan SMTP trafiğini izleyerek email içeriğini, ekleri, kullanıcı adlarını ve şifreleri okuyabilir. SMTP relay (spam gönderme), email spoofing (sahte gönderici), open relay abuse, spear phishing kampanyaları SMTP analiziyle tespit edilir. Bu modülde, email trafiğini analiz ederek phishing kampanyasını tespit etmeyi öğreneceksin.
 
@@ -521,42 +521,31 @@ QUIT                                                <-- CLIENT
 
 ### Alıştırma 7: Email Attachment'ını Kurtarma (MIME + base64)
 
-Phishing mail'leri ikinci bir "silah" taşır: Ek dosya. pcap'te ekli bir
-mail var — göndereni `phantom@shark-tank.local`, konusu "Fatura ve rapor
-ektedir (acil)". Hem SMTP tarafında (gönderim) hem IMAP tarafında
-(`FETCH 2 (BODY[])`) yakalanabilir.
+Phishing mail'leri ikinci bir "silah" taşır: Ek dosya. pcap'te ekli bir mail var — göndereni `phantom@shark-tank.local`, konusu "Fatura ve rapor ektedir (acil)". Hem SMTP tarafında (gönderim) hem IMAP tarafında (`FETCH 2 (BODY[])`) yakalanabilir.
 
 1. MIME yapısını bul:
    ```text
    tcp contains "multipart/mixed"
    ```
-   Mail, `--ST-BOUNDARY-42` ile ayrılmış iki parçadan oluşur: metin ve
-   `gizli-ek.bin` adlı, `Content-Transfer-Encoding: base64` ile kodlanmış
-   binary ek.
-2. Ekli mailin stream'ini aç: Bulduğun pakete sağ tık → **Follow > TCP
-   Stream**. Base64 bloğunu kopyala.
+   Mail, `--ST-BOUNDARY-42` ile ayrılmış iki parçadan oluşur: metin ve    `gizli-ek.bin` adlı, `Content-Transfer-Encoding: base64` ile kodlanmış    binary ek.
+2. Ekli mailin stream'ini aç: Bulduğun pakete sağ tık → **Follow > TCP Stream**. Base64 bloğunu kopyala.
 3. Terminalde çöz:
    ```sh
    echo "<base64-bloğu>" | base64 -d > ek.bin
    shasum -a 256 ek.bin   # bütünlük kontrolü
    xxd ek.bin | head      # içerik incelemesi
    ```
-4. Alternatif — Wireshark'ın otomatik yolu: **File > Export Objects >
-   IMF**. Liste, pcap'teki mail gövdelerini (eml) dosya olarak verir;
-   eml'yi bir mail istemcisiyle açınca ek görünür.
+4. Alternatif — Wireshark'ın otomatik yolu: **File > Export Objects > IMF**. Liste, pcap'teki mail gövdelerini (eml) dosya olarak verir; eml'yi bir mail istemcisiyle açınca ek görünür.
 
 **Analist soruları:**
 - Ekin gerçek dosya adı ne? (`Content-Disposition: attachment; filename=...`)
 - Ek 0-127 arası döngüsel byte'lar içeriyor — muhtemelen şifreli/sıkıştırılmış payload. Binary ek + "acil" konulu cleartext mail = phishing göstergesi.
 
-> **SINAV İPUCU:** "Attachment'ı pcap'ten nasıl çıkarırsın?" → Follow TCP
-> Stream + base64 -d, ya da Export Objects > IMF. Dosya adı ve MIME tipi
-> header satırlarında cleartext durur.
+> **SINAV İPUCU:** "Attachment'ı pcap'ten nasıl çıkarırsın?" → Follow TCP Stream + base64 -d, ya da Export Objects > IMF. Dosya adı ve MIME tipi header satırlarında cleartext durur.
 
 ### Sender Sahteciliği Kontrolü: SPF, DKIM, DMARC
 
-Email spoofing'in cevabı üç başlıkta gizlidir (pcap'te bunlar yoktur —
-lab maili bunları taşımıyor; gerçeğe uygun olarak header'larda ARARLAR):
+Email spoofing'in cevabı üç başlıkta gizlidir (pcap'te bunlar yoktur — lab maili bunları taşımıyor; gerçeğe uygun olarak header'larda ARARLAR):
 
 | Mekanizma | Ne Yapar | Wireshark'ta Nerede |
 |-----------|----------|---------------------|
@@ -564,26 +553,15 @@ lab maili bunları taşımıyor; gerçeğe uygun olarak header'larda ARARLAR):
 | **DKIM** | Mail gövdesi, gönderen alan adının anahtarıyla imzalı mı? | `DKIM-Signature:` başlığı; doğrulama sonucu `Authentication-Results:` içinde |
 | **DMARC** | SPF/DKIM başarısızsa ne yapılsın? (quarantine/reject) | `DMARC` sonuç satırı `Authentication-Results:` içinde |
 
-`MAIL FROM:<phantom@...>` ile `From:` başlığı uyuşmuyorsa ve
-`Authentication-Results: spf=fail` varsa → sahte gönderen. Spoofing
-tespiti Modül 28'deki forensics akışında tekrar karşına çıkacak.
+`MAIL FROM:<phantom@...>` ile `From:` başlığı uyuşmuyorsa ve `Authentication-Results: spf=fail` varsa → sahte gönderen. Spoofing tespiti Modül 28'deki forensics akışında tekrar karşına çıkacak.
 
-> **SINAV İPUCU:** "Bu email sahte mi?" sorusunda önce Received-SPF ve
-> Authentication-Results başlıklarını ara; ikisi de yoksa güvenli sayma.
+> **SINAV İPUCU:** "Bu email sahte mi?" sorusunda önce Received-SPF ve Authentication-Results başlıklarını ara; ikisi de yoksa güvenli sayma.
 
 ### STARTTLS: Fırsat Anındaki Şifreleme
 
-SMTP (587), IMAP (143) ve POP3 (110) cleartext başlar; istemci `STARTTLS`
-komutuyla bağlantıyı TLS'e yükseltebilir. Yükseltme anından sonra trafik
-şifrelidir — Wireshark artık sadece TLS kayıtları görür. Bu lab'ta
-dovecot `ssl = no` ile çalıştığı için tüm oturum cleartext'tir (eğitim
-amacıyla). Gerçek hayatta `imap` filtresinde aniden `tls` görmek,
-STARTTLS geçişini işaret eder: `ssl.handshake.type == 1` ile ClientHello'
-yu yakalayınca geçiş paketini bulabilirsin.
+SMTP (587), IMAP (143) ve POP3 (110) cleartext başlar; istemci `STARTTLS` komutuyla bağlantıyı TLS'e yükseltebilir. Yükseltme anından sonra trafik şifrelidir — Wireshark artık sadece TLS kayıtları görür. Bu lab'ta dovecot `ssl = no` ile çalıştığı için tüm oturum cleartext'tir (eğitim amacıyla). Gerçek hayatta `imap` filtresinde aniden `tls` görmek, STARTTLS geçişini işaret eder: `ssl.handshake.type == 1` ile ClientHello' yu yakalayınca geçiş paketini bulabilirsin.
 
-> **SINAV İPUCU:** "POP3/IMAP şifreli mi?" → 993/995 portuna bak
-> (IMAPS/POP3S her zaman TLS); 143/110 + STARTTLS = opsiyonel;
-> 143/110 + cleartext credential = açık sızıntı (bu lab'ın durumu).
+> **SINAV İPUCU:** "POP3/IMAP şifreli mi?" → 993/995 portuna bak (IMAPS/POP3S her zaman TLS); 143/110 + STARTTLS = opsiyonel; 143/110 + cleartext credential = açık sızıntı (bu lab'ın durumu).
 
 ## Filtre Referansı
 

@@ -1,27 +1,14 @@
 ---
 layout: default
 ---
-<div class="page__inner">
-  <div class="reading">
-    <nav class="breadcrumb" aria-label="Yol">
-      <a href="/">{{ site.title | escape }}</a>
-      <span class="breadcrumb__sep">›</span>
-      <span>{{ page.title | escape }}</span>
-    </nav>
+<nav class="breadcrumb" aria-label="Yol">
+  <a href="/">{{ site.title | escape }}</a>
+  <span class="breadcrumb__sep">›</span>
+  {% if page.breadcrumb_parent %}
+  <a href="{{ page.breadcrumb_parent_url }}">{{ page.breadcrumb_parent }}</a>
+  <span class="breadcrumb__sep">›</span>
+  {% endif %}
+  <span>{{ page.nav_title | default: page.title | escape }}</span>
+</nav>
 
-    {% if page.eyebrow %}
-    <header class="section-header section-header--page">
-      <span class="section-marker"></span>
-      <span class="section-title">{{ page.eyebrow }}</span>
-    </header>
-    {% endif %}
-
-    {% if page.title %}
-    <h1 class="page-title">{{ page.title | escape }}</h1>
-    {% endif %}
-
-    <div class="content">
-      {{ content }}
-    </div>
-  </div>
-</div>
+{{ content }}

@@ -14,13 +14,13 @@ Gerçek ağ trafiği üreterek paket analizini sıfırdan ileri seviyeye öğret
 
 Aşağıdaki **kehtapot**'a veya **ahtapedi**'ye (ahtapot ve kedi birleşimi bir modern zaman canavarı, GitHub maskotu: **Octocat**) tıklayarak kaynak kodlara erişebilirsin.
 
-<div class="repo-link" markdown="1">
+<figure markdown="1">
 
 [![shark-tank GitHub](/assets/img/github-icon.png "shark-tank GitHub")](https://github.com/nuriacar/shark-tank)
 
-Kaynak Kod Deposu
+<figcaption>Kaynak Kod Deposu</figcaption>
 
-</div>
+</figure>
 
 ```sh
 git clone https://github.com/nuriacar/shark-tank.git
@@ -31,7 +31,7 @@ Docker'ın yoksa da dert değil: 25 pcap repoda gömülü; klonla, Wireshark'ta 
 
 ---
 
-<details class="toc-block" markdown="block">
+<details class="accordion" markdown="block">
 <summary>Önce Oku: Referans Dokümanlar</summary>
 
 | # | Doküman | Ne zaman okunur? |
@@ -46,7 +46,7 @@ Docker'ın yoksa da dert değil: 25 pcap repoda gömülü; klonla, Wireshark'ta 
 
 ---
 
-<details class="toc-block" markdown="block">
+<details class="accordion" markdown="block">
 <summary>Modüller</summary>
 
 | # | Modül | Konu | Seviye |

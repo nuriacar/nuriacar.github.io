@@ -541,9 +541,7 @@ make test-sharktank                                             # regresyon test
 
 ## Sertifika Zinciri (mini-CA)
 
-Lab, HTTPS servisini artık gerçek bir **mini-CA hiyerarşisiyle** çalıştırır. Zincir
-`shared/ca/generate-ca.sh` tarafından deterministik üretilir (sabit serial'lar; her
-kurulumda aynı değerler görülür):
+Lab, HTTPS servisini artık gerçek bir **mini-CA hiyerarşisiyle** çalıştırır. Zincir `shared/ca/generate-ca.sh` tarafından deterministik üretilir (sabit serial'lar; her kurulumda aynı değerler görülür):
 
 | Sertifika | Serial | Konu | Rol |
 |-----------|--------|------|-----|

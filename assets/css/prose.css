@@ -1,0 +1,531 @@
+/*
+ * Prose adaptörü — markdown gövdesi TDD bileşenlerine class ekleyemez;
+ * bu katman YALNIZ element seçicileriyle çalışır (sıfır yeni class).
+ * Kural: her değer TDD tokenından gelir; hex/px literal yok.
+ * Sınıfsız kapsayıcılar (article, sınıfsız div) stil alır;
+ * TDD sınıflı bileşenlerin (.card/.box/.accordion…) içi dokunulmaz —
+ * onlar kendi bileşen CSS'iyle yaşar.
+ * TDD kaynaklı sınıf referansları (kapsam için): .highlight (Jekyll/Rouge
+ * üretimi), .btn--copy, .box — yeni sınıf TANIMI yoktur.
+ */
+
+/* ---------- Erişilebilirlik: içeriğe atla ---------- */
+
+a[href="#main"] {
+  position: fixed;
+  left: var(--sp-4);
+  top: var(--sp-4);
+  z-index: 200;
+  background: var(--accent);
+  color: var(--bg-deep);
+  font-family: var(--fn-mono);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-mid);
+  padding: var(--sp-2) var(--sp-4);
+  transform: translateY(-200%);
+}
+
+a[href="#main"]:focus {
+  transform: translateY(0);
+}
+
+/* ---------- Hover dili: renk, çizgi değil ----------
+ * Her link tipinin hover'da rengi zaten değişir (TDD); altı çizgi
+ * gereksiz. Base a:hover'un underline'ı (components.css:117) burada
+ * sıra ile ezilir — prote.css components'ten sonra yüklenir.
+ * Klavye odak geri bildirimi *:focus-visible outline'ından gelir. */
+a:hover, a:focus { text-decoration: none; }
+
+/* ---------- Tablo kolon ekonomisi: yalnız başlık sarar ----------
+ * Tarih ve konu hücreleri tek satır (nowrap); uzun başlık (2. kolon)
+ * sardığında konu zaten tek satırına iner. Şablona dokunulmaz. */
+main .table th,
+main .table td { white-space: nowrap; }
+
+main .table th:nth-child(2),
+main .table td:nth-child(2) { white-space: normal; }
+
+/* ---------- Akış ritmi: main'in doğrudan çocukları arası nefes ----------
+ * TDD reset tüm margin'leri sıfırlar; bileşenler iç boşluğunu flex-gap ile
+ * kendi yönetir. Üst düzey bloklar (box-row, card, accordion, grid, nesir)
+ * bu kural olmadan birbirine yapışır. Varsayılan sp-6; bölüm kuralları
+ * (section-gap, accordion sp-5, header sp-8) aşağıda ezer. */
+main > * + * {
+  margin-top: var(--gap);
+}
+
+/* İç akış ritmi: makale gövdesi, sınıfsız sarmallar, accordion ve timeline
+ * içeriği — reset'in söldüğü her yerde karışık blok geçişleri (p→tablo,
+ * alıntı→iframe, liste→kod...) sp-4 nefes alır. Başlık/figure/hr/pager
+ * kuralları dosyada SONRA geldiği için kendi değerlerini korur. */
+main article > * + *,
+main div:not([class]) > * + *,
+main details.accordion > *:not(summary) + *:not(summary),
+main .timeline__content > * + * {
+  margin-top: var(--gap);
+}
+
+/* ---------- Post: sayfa konteyneri kadar geniş ----------
+ * TDD'de reading ölçüsü bileşenlere op-in'dir (form, hero__sub);
+ * global nesir zarfı DEĞİLDİR. main.page = 75rem — post da o kadar. */
+
+/* Uzun postlarda ekran dışı render atlama — scroll tepkisi */
+main > article {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 100000px;
+}
+
+/* ---------- Paragraf ritmi (sınıfsız kapsayıcılar) ---------- */
+
+main > article p + p,
+main > p + p,
+main div:not([class]) p + p {
+  margin-top: var(--gap);
+}
+
+/* ---------- Başlıklar ---------- */
+
+main h1, main h2, main h3,
+main h4, main h5, main h6 {
+  font-family: var(--fn-mono);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  color: var(--text-bright);
+  margin-top: var(--sp-6);
+  margin-bottom: var(--sp-3);
+}
+
+main h1 { font-size: var(--fs-h2); letter-spacing: var(--ls-title); }
+main h2 { font-size: var(--fs-h3); color: var(--accent-bright); }
+main h3 { font-size: var(--fs-h3); }
+main h4 { font-size: var(--fs-h3); text-transform: uppercase; letter-spacing: var(--ls-mid); }
+main h5, main h6 { font-size: var(--fs-body); text-transform: uppercase; letter-spacing: var(--ls-tight); color: var(--text-dim); }
+
+main > article > h1:first-child,
+main > h1:first-child {
+  margin-top: 0;
+}
+
+/* ---------- Vurgu ---------- */
+
+main strong { color: var(--text-bright); font-weight: var(--fw-bold); }
+main em { color: var(--text-bright); }
+
+/* ---------- Görseller ---------- */
+
+main img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: top;
+}
+
+main article > p:has(> img:only-child),
+main article > p:has(> a:only-child > img:only-child),
+main article > p:has(img) {
+  text-align: center;
+}
+
+/* ---------- Alıntı (TDD .quote bileşeninin element karşılığı) ---------- */
+
+main blockquote {
+  border-left: var(--sp-1) solid var(--accent);
+  padding: var(--sp-3) var(--sp-4);
+  font-style: italic;
+  color: var(--text-light);
+}
+
+main blockquote p { margin: 0; }
+main blockquote p + p { margin-top: var(--sp-2); }
+
+/* >> atıfı — kramdown iç içe blockquote üretir */
+main blockquote blockquote {
+  border-left: 0;
+  padding: 0;
+  margin-top: var(--sp-2);
+  color: var(--text-dim);
+  font-style: normal;
+}
+
+/* ---------- Satır içi kod ---------- */
+
+main code {
+  font-family: var(--fn-mono);
+  font-size: 1em;
+  background: var(--bg-dark);
+  border: var(--border) solid var(--accent-border);
+  padding: 0.125em 0.375em;
+  overflow-wrap: anywhere;
+}
+
+main pre {
+  position: relative;
+  background: var(--bg-dark);
+  border: var(--border) solid var(--text-dim);
+  padding: var(--sp-4);
+  font-family: var(--fn-mono);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--accent-bright);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+main pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: inherit;
+}
+
+/* Kod bloğu kopyala düğmeleri (TDD .btn--copy, konum burada) —
+ * shell bloklarında .highlight katmanına komut başına düğme gelir;
+ * düğme kod üstünde okunur (zemin) */
+main .highlight { position: relative; }
+
+main pre .btn--copy {
+  position: absolute;
+  top: var(--sp-2);
+  right: var(--sp-2);
+  background: var(--bg-deep);
+}
+
+main .highlight .btn--copy {
+  position: absolute;
+  right: var(--sp-2);
+  width: var(--sp-5);
+  height: var(--sp-5);
+  background: var(--bg-deep);
+  z-index: 1;
+}
+
+/* ---------- Rouge sözdizimi (dark — Jekyll .highlight sınıfları) ---------- */
+
+.highlight .c, .highlight .cm, .highlight .c1, .highlight .cd { color: var(--text-dim); font-style: italic; }
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .o { color: var(--accent-bright); }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sd, .highlight .se, .highlight .si, .highlight .sr, .highlight .sx { color: var(--c-verdigris); }
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo { color: var(--c-mango); }
+.highlight .nf, .highlight .nc, .highlight .nb, .highlight .nx, .highlight .nt { color: var(--c-blue-green); }
+.highlight .gh, .highlight .gp { color: var(--text-dim); }
+.highlight .err { color: var(--c-cherry); }
+
+/* ---------- Tablolar (TDD .table görünümü, bare <table>) ---------- */
+
+main table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-body);
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+main th {
+  text-align: left;
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+  color: var(--text-dim);
+  padding: var(--sp-2) var(--sp-3);
+  border-bottom: var(--border) solid var(--text-dim);
+}
+
+main td {
+  padding: var(--sp-2) var(--sp-3);
+  border-bottom: var(--border) solid color-mix(in srgb, var(--text-dim) 35%, transparent);
+  color: var(--text-light);
+  vertical-align: top;
+}
+
+main tr:last-child td { border-bottom: none; }
+
+/* ---------- Listeler ---------- */
+
+main ul, main ol { padding-left: var(--sp-6); }
+main li + li { margin-top: var(--sp-2); }
+main li::marker { color: var(--accent); }
+
+/* TDD .list bileşeni kendi stilini taşır — marker'ı bastır */
+main .list { padding-left: 0; }
+main .list li::marker { content: none; }
+
+/* ---------- Yatay çizgi ---------- */
+
+main hr {
+  border: 0;
+  border-top: var(--border) solid var(--text-dim);
+  margin: var(--gap) 0;
+}
+
+/* ---------- Medya: responsive iframe'ler ---------- */
+
+main iframe[src*="youtube.com"],
+main iframe[src*="youtube-nocookie.com"],
+main iframe[src*="vimeo.com"] {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+}
+
+main iframe {
+  max-width: 100%;
+  border: 0;
+}
+
+/* Steam widget: dark temada beyaz iframe arka planını kapat */
+main iframe[src*="steampowered.com/widget"] {
+  color-scheme: light;
+}
+
+/* ---------- Bölüm aralıkları (sınıfsız <section>) ---------- */
+
+/* section-gap yalnız sınıfsız (gerçek sayfa bölümü) <section>'larda;
+ * sınıflı bölüm-card'ları (cv/udemy panelleri) genel gap ritmine döner */
+main > section:not([class]),
+main > section:not([class]) + section:not([class]),
+main > article + section:not([class]) {
+  margin-top: var(--section-gap);
+}
+
+/* ---------- TDD .box içi paragraf ritmi ---------- */
+
+main .box p + p { margin-top: var(--gap); }
+
+/* Kutu içi tablo (cv ☣ iletişim bloğu): tam genişlik veri ızgarası değil —
+ * doğal genişlikte, ortalanmış, TDD .box table mirası; dar ekranda taşmaz */
+main .box table {
+  width: auto;
+  max-width: 100%;
+  display: table;
+  overflow: visible;
+  margin: var(--gap) auto;
+}
+
+/* ---------- Simülasyon paneli responsive ----------
+ * TDD sim-bar sabit yükseklikte (sp-7) ve sim-grid iki kolon — mobilde
+ * istatistik + hız düğmeleri taşar, grid ezik kalır. */
+main .sim-bar {
+  flex-wrap: wrap;
+  min-height: var(--sp-7);
+  row-gap: var(--sp-2);
+}
+
+@media (max-width: 48rem) {
+  main .sim-grid { grid-template-columns: 1fr; }
+}
+
+/* Grid çocukları daraltılabilir — min-content track'i ezmesin
+ * (TDD'nin .box-row .box { min-width:0 } deseniyle aynı ders) */
+main .card-grid > * { min-width: 0; }
+
+/* Mobilde foto ızgarası tek kolon — kart min-içeriği (buton) 98px'lik
+ * track'e sığmazdı; fotoğraflar büyür, taşma biter */
+@media (max-width: 48rem) {
+  main .card-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Native katlanır: <details class="accordion"> ----------
+ * TDD .accordion kutusunu sınıf olarak taşır (kenar); başlık = summary
+ * (ok döner, hover accent), içerik doğrudan details içinde — JS'siz
+ * çalışır, arama motoru için en sağlam katlanır yapı. */
+main details.accordion > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  width: 100%;
+  padding: var(--sp-3) var(--sp-4);
+  font-family: var(--fn-mono);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  color: var(--text-light);
+  text-align: left;
+}
+
+main details.accordion > summary::-webkit-details-marker { display: none; }
+main details.accordion > summary::after {
+  content: "›";
+  color: var(--text-dim);
+  transition: transform var(--an-speed-fast) ease;
+  flex: none;
+}
+main details.accordion[open] > summary::after { transform: rotate(90deg); }
+main details.accordion > summary:hover { color: var(--accent-bright); }
+
+main details.accordion > *:not(summary) {
+  padding: 0 var(--sp-4);
+}
+main details.accordion > *:not(summary):first-of-type { padding-top: var(--sp-2); }
+main details.accordion > *:not(summary):last-of-type { padding-bottom: var(--sp-4); }
+
+/* Derin bağlantı (#harf) kapalı bloğa düşerse açılır (JS) — CSS yalnız odak */
+main details.accordion:target { border-color: var(--accent); }
+
+/* ---------- Mobil nav: arama gizli ----------
+ * TDD nav mobilde marka + tema + hamburger yaşar; arama kutusu (şablonda
+ * yok) genişliği hamburger'ı viewport dışına itiyordu. */
+@media (max-width: 48rem) {
+  .nav .dropdown { display: none; }
+}
+
+/* Mobilde kutu içi tablo (cv iletişim) kaydırmalı — min-içerik > ekran */
+@media (max-width: 48rem) {
+  main .box table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+}
+
+/* ---------- Lightbox görseli: modal karta sığar ---------- */
+
+#lightbox img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- TDD .box ailesi: kap kuralları ----------
+ * TDD components.css'te çocuk yardımcıları var (.box .btn, .box > p:first-child,
+ * .box--media > p/img, .box-row .box) ama KAP kuralları eksik — o/web
+ * aktarımında düşmüş. Bunlar olmadan kutu düz div'dir: kenar/dolgu yok,
+ * box-row alt alta yığılır. TDD sınıf adlarıyla tamamlanır. */
+main .box {
+  border: var(--border) solid var(--accent-border);
+  border-radius: var(--br-zero);
+  padding: var(--sp-4);
+  text-align: center;
+}
+
+main .box--media {
+  display: flex;
+  align-items: stretch;
+}
+
+main .box-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--gap);
+  align-items: stretch;
+}
+
+@media (max-width: 48rem) {
+  main .box-row { grid-template-columns: 1fr; }
+}
+
+/* ---------- Akış illüstrasyonu: <figure> + <figcaption> ----------
+ * Metnin referans verdiği ikon/logo/poster (kehtapot, platform ikonları,
+ * repo bağlantıları) BLOK değil illüstrasyondur: çerçevesiz akış, ortalanmış;
+ * caption dim küçük etiket. Sınıf sıfır — native elementler. */
+main figure {
+  margin: var(--gap) 0;
+  text-align: center;
+}
+
+main figure img {
+  display: inline-block;
+}
+
+main figcaption {
+  margin-top: var(--sp-2);
+  color: var(--text-dim);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-mid);
+}
+
+/* Foto kutuları (galeri grid hücreleri, q fotoğrafları): DİKEY —
+ * çerçeveli caption + tam genişlik fotoğraf + buton. Bağlantılı görseller
+ * (udemy logosu gibi) genişletilmez; yalnız çıplak fotoğraflar. */
+main .box:not(.box--media) img:not(a img) {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* main düzeyinde tek başına duran GÖRSEL kutu (q foto, logo): sarılı, ortalı */
+main > .box {
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* İçerik-dolu kutu (cv ☣ kimlik paneli: başlık + iletişim tablosu):
+ * panel gibi tam genişlik — sayfanın sol ritmiyle hizalı */
+main > .box:has(h2, h3, table) {
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* box-row METİN kutusunda çerçeve YOK: p:first-child çerçevesi etiket+medya
+ * kutuları içindir; manifesto gibi BAĞLI cümleleri ikiye böler — Pegi 18
+ * yanındaki beyanname tek akış olarak okunur. Medya kutuları (box--media)
+ * çerçevesini korur. */
+main .box-row .box:not(.box--media) > p:first-child {
+  border: 0;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+main .filter { margin-bottom: var(--gap); }
+
+/* Aktif nav bağlantısı (attribute — sınıf yok) */
+nav a[aria-current="page"] { color: var(--accent-bright); }
+
+/* ---------- Arama: klavye seçimi (attribute — sınıf yok) ---------- */
+
+#search-results a[aria-selected="true"] {
+  background: var(--accent-border);
+}
+
+#search-results a[aria-selected="true"] strong {
+  color: var(--accent-bright);
+}
+
+#search-results strong { color: var(--text-bright); }
+
+/* ---------- Navbar uyum düzeltmeleri ----------
+ * TDD katalog nav'ı 2 link için tasarlandı; bu sitede 13 link var ve
+ * 64px sabit yükseklikte masaüstü link satırı taşar. Sitenin önceki
+ * açık kararı: nav her ekranda hamburger + açılır liste. */
+.nav .nav__links { display: none; }
+.nav .nav__toggle { display: flex; }
+
+/* ---------- Sayfalama: uzun başlıklar sabit yükseklikte sıkışır ---------- */
+
+main .pager .btn {
+  height: auto;
+  min-height: var(--sp-7);
+  white-space: normal;
+  text-align: left;
+  flex: 1 1 45%;
+}
+
+/* ---------- Ardışık accordion'lar arası nefes (sözlük: 27 blok) ---------- */
+
+main .accordion + .accordion { margin-top: var(--gap); }
+
+/* ---------- Sayfa ortası bölüm başlıkları (TDD --block varyantı yok) ---------- */
+
+main > .section-header:not(:first-child) { margin-top: var(--gap); }
+
+/* ---------- Article içi bölüm (ilgili yazılar) üst boşluğu ---------- */
+
+main article > section { margin-top: var(--section-gap); }
+
+/* ---------- Arama paneli geometrisi: sağa dayalı, geniş (ID — sınıf yok) ---------- */
+
+#search-results {
+  left: auto;
+  right: 0;
+  min-width: calc(var(--sp-8) * 3.5);
+  max-height: 60vh;
+  overflow-y: auto;
+}

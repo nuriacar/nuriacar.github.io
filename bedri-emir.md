@@ -18,7 +18,7 @@ Arşivin tamamına **[buradan](/bedriemir.com/)** ulaşabilirsiniz.
 
 ---
 
-<details class="toc-block" markdown="block" id="programlama">
+<details class="accordion" markdown="block" id="programlama">
 <summary>Programlama Dersleri</summary>
 
 | Bölüm | İçerik |
@@ -32,7 +32,7 @@ Arşivin tamamına **[buradan](/bedriemir.com/)** ulaşabilirsiniz.
 
 </details>
 
-<details class="toc-block" markdown="block" id="matematik">
+<details class="accordion" markdown="block" id="matematik">
 <summary>Matematik Dersleri</summary>
 
 | Bölüm | İçerik |

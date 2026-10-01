@@ -4,7 +4,7 @@ title:  "shark-tank - m22: TCP Grafikleri"
 date:   2026-08-08 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 22: TCP Grafikleri
+## Modül 22: TCP Grafikleri
 
 **Neden?** C2 sunucusuyla iletişim düzenli aralıklarla gerçekleşiyor. Paket listesine bakınca görmek zor, ama grafiğe dökünce desen belli oluyor. Saldırı grafiklerde anomali olarak görünür: IO Graph'da throughput spike (DDoS veya veri sızdırma), Flow Graph'da ani bağlantı artışı (port scan veya botnet aktivasyonu), Stream Graph'da düzenli aralıklarla tekrar eden trafik (C2 beaconing). Sayısal veri gözle görülmeyen saldırıyı ortaya çıkarır. Bu modülde, grafiklerle saldırı desenlerini okumayı öğreneceksin.
 
@@ -277,9 +277,7 @@ Receive window boyutunun zaman içindeki değişimi.
 
 ## Alıştırma 7: Flow Graph — Saldırının Zaman Çizelgesi
 
-Hikayenin dediği gibi: "Paket listesine bakınca görmek zor, ama grafiğe
-dökünce desen belli oluyor." Flow Graph, pcap'teki tüm bağlantıları tek
-görselde dizerek saldırı zaman çizelgesini çıkarır.
+Hikayenin dediği gibi: "Paket listesine bakınca görmek zor, ama grafiğe dökünce desen belli oluyor." Flow Graph, pcap'teki tüm bağlantıları tek görselde dizerek saldırı zaman çizelgesini çıkarır.
 
 ### Adımlar:
 
@@ -287,40 +285,27 @@ görselde dizerek saldırı zaman çizelgesini çıkarır.
 2. **Statistics → Flow Graph** menüsünü aç
 3. Görünümü ayarla:
    - **Flow type: TCP Flows** (default; UDP'yi de katmak için All Flows)
-4. Oku: Her satır bir host; oklar paket yönünü, renkler protokolü gösterir.
-   SYN ile başlayan kalın oklar yeni bağlantıdır.
+4. Oku: Her satır bir host; oklar paket yönünü, renkler protokolü gösterir. SYN ile başlayan kalın oklar yeni bağlantıdır.
 
 ### Ne Görmelisin?
 
-- pcap'te **10 farklı TCP stream** var; Flow Graph bunları zaman sırasına
-  dizer: art arda açılan bağlantılar (aynı hedefe) beaconing/scan deseni
-  verir
-- Aynı satırdan (172.50.2.200) çıkan çok sayıda kısa dikey ok dizisi =
-  **port scan**: her ok bir SYN denemesi, arkasından RST
-- Normal trafiğin yatay ve uzun, saldırı trafiğinin dikey ve kısa
-  olduğuna dikkat et
+- pcap'te **10 farklı TCP stream** var; Flow Graph bunları zaman sırasına dizer: art arda açılan bağlantılar (aynı hedefe) beaconing/scan deseni verir
+- Aynı satırdan (172.50.2.200) çıkan çok sayıda kısa dikey ok dizisi = **port scan**: her ok bir SYN denemesi, arkasından RST
+- Normal trafiğin yatay ve uzun, saldırı trafiğinin dikey ve kısa olduğuna dikkat et
 
 ### Zaman Çizelgesi Çıkarma (sınav tekniği):
 
-1. Flow Graph'taki ilk saldırı paketine tıkla → paket listesi o frame'e
-   atlar → `frame.time_relative` değerini not et
+1. Flow Graph'taki ilk saldırı paketine tıkla → paket listesi o frame'e atlar → `frame.time_relative` değerini not et
 2. Son saldırı paketine kadar tekrarla
-3. Elde ettiğin "T1'de keşif → T2'de bağlantı denemeleri → T3'te veri"
-   dizisi, Modül 28'deki kill-chain raporunun iskeletidir
+3. Elde ettiğin "T1'de keşif → T2'de bağlantı denemeleri → T3'te veri" dizisi, Modül 28'deki kill-chain raporunun iskeletidir
 
-> **SINAV İPUCU:** "Saldırının zaman çizelgesini çıkarın" sorusunda
-> Flow Graph + Time Display Format (Modül 1) ikilisini kullan: grafik
-> olayları bulur, zaman formatı okumayı kolaylaştırır. Alternatif CLI:
-> `tshark -q -z conv,tcp` bağlantı listesini verir ama görsel sıra
-> yalnız Flow Graph'ta vardır.
+> **SINAV İPUCU:** "Saldırının zaman çizelgesini çıkarın" sorusunda Flow Graph + Time Display Format (Modül 1) ikilisini kullan: grafik olayları bulur, zaman formatı okumayı kolaylaştırır. Alternatif CLI: `tshark -q -z conv,tcp` bağlantı listesini verir ama görsel sıra yalnız Flow Graph'ta vardır.
 
 ---
 
 ## Alıştırma 8: Conversations — Kim Kime Kaç Bayt?
 
-Flow Graph "ne zaman"ı verir; **Conversations** "ne kadar"ı verir.
-`Statistics → Conversations` (sekme bazlı: Ethernet/TCP/UDP/IPv4):
-her satır bir konuşma, sütunlar paket/byte ve A→B / B→A yönü.
+Flow Graph "ne zaman"ı verir; **Conversations** "ne kadar"ı verir. `Statistics → Conversations` (sekme bazlı: Ethernet/TCP/UDP/IPv4): her satır bir konuşma, sütunlar paket/byte ve A→B / B→A yönü.
 
 ### Adımlar:
 
@@ -337,12 +322,9 @@ tshark -r shared/pcaps/module-22-tcp-graph.pcap -q -z conv,tcp | head -12
 ```
 
 **Analist kalıbı:** Conversations ile 3 saniyede "bu pcap'in özeti hangi
-çiftlerde?" sorusu cevaplanır; şüpheli çift bulunca sağ tık → Apply as
-Filter → protokol derinliğine inilir.
+çiftlerde?" sorusu cevaplanır; şüpheli çift bulunca sağ tık → Apply as Filter → protokol derinliğine inilir.
 
-> **SINAV İPUCU:** "En çok veri transfer eden iki ucuz hangileri?"
-> sorusunun cevabı Conversations tablosunun Bytes sıralamasıdır —
-> Endpoints tek yön toplarken, Conversations ikisini birlikte gösterir.
+> **SINAV İPUCU:** "En çok veri transfer eden iki ucuz hangileri?" sorusunun cevabı Conversations tablosunun Bytes sıralamasıdır — Endpoints tek yön toplarken, Conversations ikisini birlikte gösterir.
 
 ---
 

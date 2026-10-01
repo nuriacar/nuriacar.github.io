@@ -6,18 +6,18 @@ permalink: /sir/
 eyebrow: müzik
 ---
 
-<div class="box">
+<figure>
   <img src="/assets/img/sir-logo.jpg" alt="SIR Logo" title="SIR Logo">
-</div>
+</figure>
 
-<div class="box">
+<figure>
   <a href="https://www.youtube.com/user/sirnewage/playlists"><img src="/assets/img/youtube-icon.png" alt="Youtube" title="Youtube"></a>
   <a href="https://music.youtube.com/channel/UCt2phzIHw6lXODDve8nQpEA"><img src="/assets/img/youtube-music-icon.png" alt="Youtube Music" title="Youtube Music"></a>
   <a href="https://soundcloud.com/sirnewage"><img src="/assets/img/soundcloud-icon.png" alt="SoundCloud" title="SoundCloud"></a>
   <a href="https://open.spotify.com/artist/7iJDIKzmQsGxP6st682HYA"><img src="/assets/img/spotify-icon.png" alt="Spotify" title="Spotify"></a>
   <a href="https://music.apple.com/us/artist/sir-newage/1548186562"><img src="/assets/img/apple-music-icon.png" alt="Apple Music" title="Apple Music"></a>
   <a href="https://www.amazon.com/s?k=%22SIR%20NewAge%22&i=digital-music&dc&qid=1610746234"><img src="/assets/img/amazon-music-icon.png" alt="Amazon Music" title="Amazon Music"></a>
-</div>
+</figure>
 
 ## **Ses... Deneme... Prova... 1, 2, 3... A... Çh...**
 
@@ -39,9 +39,9 @@ Bir süre sonra Yanni, Vangelis ve Kitaro'yu ikinci kez keşfettim. İkinci kez 
 
 Ayrıca, sayfanın devamında göreceğiniz Fethi Gemuhluoğlu Belgeseli de yukarıda bahsettiğim Edirne Dörtlüsü'nün işi.
 
-<section class="item" markdown="1">
+<section class="card" markdown="1">
 
-<div class="item__meta">albüm · 01</div>
+<div class="card__meta">albüm · 01</div>
 
 ### **Amesia Newborn**
 
@@ -66,9 +66,9 @@ Bu albümün kaydedildiği zamanlar, TRT yarışmaları ve belgeselleri için m�
 
 </section>
 
-<section class="item" markdown="1">
+<section class="card" markdown="1">
 
-<div class="item__meta">albüm · 02</div>
+<div class="card__meta">albüm · 02</div>
 
 ### **Atasoy Müftüoğlu Belgeseli**
 
@@ -97,9 +97,9 @@ Hepsi bir yana, ne ka güzel insanlarla tanıştım anlatamam.
 
 </section>
 
-<section class="item" markdown="1">
+<section class="card" markdown="1">
 
-<div class="item__meta">albüm · 03</div>
+<div class="card__meta">albüm · 03</div>
 
 ### **Özer Arkun, Yanni & Victor Espinola**
 
@@ -123,9 +123,9 @@ picture-in-picture" allowfullscreen></iframe>
 
 </section>
 
-<section class="item" markdown="1">
+<section class="card" markdown="1">
 
-<div class="item__meta">albüm · 04</div>
+<div class="card__meta">albüm · 04</div>
 
 ### **UK2911 - Uzay Kuvvetleri 2911**
 
@@ -163,9 +163,9 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </section>
 
-<section class="item" markdown="1">
+<section class="card" markdown="1">
 
-<div class="item__meta">albüm · 05</div>
+<div class="card__meta">albüm · 05</div>
 
 ### **SIR N[01]**
 
@@ -190,9 +190,9 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </section>
 
-<section class="item" markdown="1">
+<section class="card" markdown="1">
 
-<div class="item__meta">albüm · 06</div>
+<div class="card__meta">albüm · 06</div>
 
 ### **Fethi Gemuhluoğlu Belgeseli**
 
@@ -224,9 +224,9 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </section>
 
-<section class="item" markdown="1">
+<section class="card" markdown="1">
 
-<div class="item__meta">albüm · 07</div>
+<div class="card__meta">albüm · 07</div>
 
 ### **Stereofonika 1: Binaural Beats & Noises**
 
@@ -242,9 +242,9 @@ On special request, I prepared some sounds for experimentation. By sending sound
 
 </section>
 
-<section class="item" markdown="1">
+<section class="card" markdown="1">
 
-<div class="item__meta">albüm · 08</div>
+<div class="card__meta">albüm · 08</div>
 
 ### **Kaçan Ayna [Sesli Kitap]**
 
@@ -259,9 +259,9 @@ Jorge Luis Borges'in hazırladığı, Giovanni Papini'nin Kaçan Ayna kitabını
 
 </section>
 
-<section class="item" markdown="1">
+<section class="card" markdown="1">
 
-<div class="item__meta">son söz</div>
+<div class="card__meta">son söz</div>
 
 ### **Eee?**
 
@@ -269,14 +269,10 @@ Eee'si bu! Artık Mızraplı Tanbur'um yok. Fehmi Usta Covid-19 hapsinde bana bi
 
 </section>
 
-<div class="section-header section-header--block">
+<div class="section-header">
   <span class="section-marker"></span>
   <span class="section-title">sır blog</span>
 </div>
 
-<div class="cards cards--single">
 {% assign sposts = site.posts | where: 'categories', 'sir' %}
-{% for post in sposts %}
-{% include post-card.html post=post %}
-{% endfor %}
-</div>
+{% include post-table.html posts=sposts show_topic=true %}

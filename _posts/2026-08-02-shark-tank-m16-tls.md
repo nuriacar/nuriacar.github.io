@@ -4,7 +4,7 @@ title:  "shark-tank - m16: TLS/SSL Analizi"
 date:   2026-08-02 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 16: TLS/SSL Analizi
+## Modül 16: TLS/SSL Analizi
 
 **Neden?** HTTPS olmasına rağmen kullanıcı bilgileri çalınıyor. SSL stripping saldırısı olabilir: HTTPS HTTP'ye düşürülüyor. TLS trafiği şifrelidir, ancak zafiyetleri vardır: Self-signed sertifika tespiti, expired sertifika, iptal edilmiş sertifika (OCSP ile doğrulanır), Heartbleed (CVE-2014-0160: TLS heartbeat ile memory sızdırma). Ayrıca TLS handshake'ten cipher suite, SNI ve sertifika zinciri bilgileri okunur. Bu modülde, TLS handshake ve sertifika analizi yaparak zafiyetleri bulmayı ve sertifikanın geçerliliğini (zincir + OCSP) doğrulamayı öğreneceksin.
 
@@ -215,9 +215,7 @@ TLS 1.3'te **ServerKeyExchange** ve **ClientKeyExchange** yoktur! Anahtar deği�
 
 ### Sertifika Zinciri (Certificate Chain)
 
-Bu lab'ın HTTPS sunucusu artık bir **mini-CA** tarafından imzalanıyor:
-`Shark-Tank Lab Root CA` sunucu sertifikasını imzalamış ve nginx, Certificate
-mesajında **iki sertifikayı birden** (server + root CA) gönderiyor.
+Bu lab'ın HTTPS sunucusu artık bir **mini-CA** tarafından imzalanıyor: `Shark-Tank Lab Root CA` sunucu sertifikasını imzalamış ve nginx, Certificate mesajında **iki sertifikayı birden** (server + root CA) gönderiyor.
 
 ```text
 v Handshake Protocol: Certificate
@@ -237,12 +235,9 @@ tls.handshake.certificate contains "Shark-Tank Lab Root CA"  # zincirde CA var m
 
 Sunucu sertifikasının `Authority Information Access` uzantısında bir de
 **OCSP URL'i** taşındığını gör: `http://172.50.2.19:9080`. Tarayıcı bu
-adresi sertifika iptal kontrolü için kullanır — bir sonraki alıştırmada
-biz de kullanacağız.
+adresi sertifika iptal kontrolü için kullanır — bir sonraki alıştırmada biz de kullanacağız.
 
-> **SINAV İPUCU:** Self-signed sertifikalarda issuer = subject. CA imzalı
-> sertifikalarda ise sunucu sertifikasının issuer'ı, zincirdeki üst
-> sertifikaların subject'iyle eşleşir. Zincir köke böyle kapanır.
+> **SINAV İPUCU:** Self-signed sertifikalarda issuer = subject. CA imzalı sertifikalarda ise sunucu sertifikasının issuer'ı, zincirdeki üst sertifikaların subject'iyle eşleşir. Zincir köke böyle kapanır.
 
 ### Sertifika Sağlık Kontrol Listesi (Analist Rutini)
 
@@ -264,26 +259,15 @@ Filtreler ve okuma:
 tls.handshake.type == 11          # Certificate mesajı
 x509af.utcTime                    # notBefore/notAfter satırları (string)
 ```
-`validity` düğümündeki iki `utcTime` değerini (`2026-08-23 ...` /
-`2028-08-22 ...`) paketin zamanıyla karşılaştır: `notAfter` geçmişse
-sertifika ölüdür. Zayıf imzayı `signatureAlgorithm
-(sha256WithRSAEncryption)` satırından okursun; SHA-1/MD5 görürsen kırmızı
-bayrak. (Süreler FT_STRING olduğu için tshark'la kıyaslama yapmak
-yerine gözle/`-T fields -e x509af.utcTime` çıktısıyla yapılır.)
+`validity` düğümündeki iki `utcTime` değerini (`2026-08-23 ...` / `2028-08-22 ...`) paketin zamanıyla karşılaştır: `notAfter` geçmişse sertifika ölüdür. Zayıf imzayı `signatureAlgorithm (sha256WithRSAEncryption)` satırından okursun; SHA-1/MD5 görürsen kırmızı bayrak. (Süreler FT_STRING olduğu için tshark'la kıyaslama yapmak yerine gözle/`-T fields -e x509af.utcTime` çıktısıyla yapılır.)
 
-> **SINAV İPUCU:** "Bu sertifika güvenilir mi?" sorusu bu dört maddenin
-> ezber taramasıdır: issuer zinciri, tarih aralığı, imza algoritması,
-> isim eşleşmesi. OCSP iptal kontrolü (bir sonraki alıştırma) beşinci
-> ve son maddedir.
+> **SINAV İPUCU:** "Bu sertifika güvenilir mi?" sorusu bu dört maddenin ezber taramasıdır: issuer zinciri, tarih aralığı, imza algoritması, isim eşleşmesi. OCSP iptal kontrolü (bir sonraki alıştırma) beşinci ve son maddedir.
 
 ## Alıştırma 5: OCSP ile İptal Durumu Doğrulama
 
-Sertifika geçerli tarihli ve CA imzalı olsa bile **iptal edilmiş**
-(revoked) olabilir. OCSP (Online Certificate Status Protocol), sertifikayı
-veren CA'ya "bu sertifika hala geçerli mi?" diye sorar.
+Sertifika geçerli tarihli ve CA imzalı olsa bile **iptal edilmiş** (revoked) olabilir. OCSP (Online Certificate Status Protocol), sertifikayı veren CA'ya "bu sertifika hala geçerli mi?" diye sorar.
 
-pcap'te client, HTTPS oturumlarının ardından OCSP responder'a
-(172.50.2.19:9080) sorgu yapmış durumda.
+pcap'te client, HTTPS oturumlarının ardından OCSP responder'a (172.50.2.19:9080) sorgu yapmış durumda.
 
 ### Filtreler:
 ```text
@@ -293,9 +277,7 @@ ocsp.certStatus == 0                   # good (iptal edilmemiş)
 ```
 
 ### Ne Görmelisin?
-1. **OCSP Request** (HTTP POST üzerinden): Serinin (serial number)
-   hash'lenmiş hali `certID` alanında taşınır. Hostname kanıtı:
-   `http.host == "172.50.2.19"` — OCSP trafiği HTTP üzerinden gider.
+1. **OCSP Request** (HTTP POST üzerinden): Serinin (serial number) hash'lenmiş hali `certID` alanında taşınır. Hostname kanıtı: `http.host == "172.50.2.19"` — OCSP trafiği HTTP üzerinden gider.
 2. **OCSP Response**:
    ```text
    v Online Certificate Status Protocol
@@ -309,17 +291,12 @@ ocsp.certStatus == 0                   # good (iptal edilmemiş)
                    certStatus: good (0)             <-- İPTAL EDİLMEMİŞ
    ```
 
-`certStatus` değerleri: `good` (0), `revoked` (1), `unknown` (2).
-Bir saldırı senaryosunda `revoked` görürsen: sertifika çalınmış/iptal
-edilmiş ama hala kullanılıyor — ciddi bir göstergedir.
+`certStatus` değerleri: `good` (0), `revoked` (1), `unknown` (2). Bir saldırı senaryosunda `revoked` görürsen: sertifika çalınmış/iptal edilmiş ama hala kullanılıyor — ciddi bir göstergedir.
 
 **Doğrulama zinciri tamamlandı:** tarih geçerli (validity) + CA imzalı
-(chain) + iptal edilmemiş (OCSP good) = güvenilir sertifika. Üçünden
-biri bile eksikse analist şüphelenmelidir.
+(chain) + iptal edilmemiş (OCSP good) = güvenilir sertifika. Üçünden biri bile eksikse analist şüphelenmelidir.
 
-> **SINAV İPUCU:** "Sertifika iptal edilmiş mi?" → `ocsp.certStatus`
-> alanına bak: 0=good, 1=revoked, 2=unknown. OCSP trafiği HTTP POST
-> olarak (genelde 80/8080) görünür — TLS değil!
+> **SINAV İPUCU:** "Sertifika iptal edilmiş mi?" → `ocsp.certStatus` alanına bak: 0=good, 1=revoked, 2=unknown. OCSP trafiği HTTP POST olarak (genelde 80/8080) görünür — TLS değil!
 
 ## Alıştırma 6: Şifrelenmiş Veri
 
@@ -345,9 +322,7 @@ TLS handshake'den sonraki TÜM veri şifrelidir:
 
 ### Payload Length (Record Length) Analizi
 
-Şifre açılamasa bile TLS kayıt uzunlukları analyst için değerlidir:
-`tls.record.length` alanı her Application Data kaydının payload boyutunu
-verir (maks. ~16 KB).
+Şifre açılamasa bile TLS kayıt uzunlukları analyst için değerlidir: `tls.record.length` alanı her Application Data kaydının payload boyutunu verir (maks. ~16 KB).
 
 ```text
 tls.record.content_type == 23
@@ -355,11 +330,7 @@ tls.record.content_type == 23
 Lab ölçümü — ilk kayıt uzunlukları: `92, 1000, 102, 287, 103, ...` byte.
 
 **Neden önemli?** Uzunluk deseni, içerik hakkında bilgi sızdırır
-(traffic analysis): Örn. parola yazarken her tuş vuruşu ayrı küçük
-kayıt olursa (Ex: 92 byte sonra 103 byte), tuş zamanlaması analiziyle
-parola tahmin edilebilir. Sınavda "şifreli trafikte neler görünür?"
-sorununun cevabı: versiyon, cipher, SNI, sertifika, **uzunluk ve zaman**
-— ama içerik asla.
+(traffic analysis): Örn. parola yazarken her tuş vuruşu ayrı küçük kayıt olursa (Ex: 92 byte sonra 103 byte), tuş zamanlaması analiziyle parola tahmin edilebilir. Sınavda "şifreli trafikte neler görünür?" sorununun cevabı: versiyon, cipher, SNI, sertifika, **uzunluk ve zaman** — ama içerik asla.
 
 **tshark ile toplam şifreli payload:**
 ```sh
@@ -468,13 +439,7 @@ tls.handshake.type == 2    # ServerHello: seçilen cipher ve sürüm
 >
 > Ayrıca TLS 1.3'te ChangeCipherSpec ve ayrı KeyExchange paketleri yoktur: Anahtar değişimi handshake içine gömülüdür.
 
-> **TLS 1.3 0-RTT risk notu:** TLS 1.3'ün 0-RTT (early data) özelliği,
-> daha önce bağlanılmış sunuculara ilk pakette veri göndermeye izin verir
-> (handshake beklemeden). Hız kazandırır ama **replay saldırısına**
-> açıktır: Aynı early-data paketi yakalanıp tekrar oynatılabilir.
-> Wireshark'ta `tls.handshake.extensions.psk_key_exchange_modes` veya
-> early data uzantıları görüldüğünde bu riski not etmen gerekir. Bu lab
-> 0-RTT kullanmaz (nginx'de kapalıdır).
+> **TLS 1.3 0-RTT risk notu:** TLS 1.3'ün 0-RTT (early data) özelliği, daha önce bağlanılmış sunuculara ilk pakette veri göndermeye izin verir (handshake beklemeden). Hız kazandırır ama **replay saldırısına** açıktır: Aynı early-data paketi yakalanıp tekrar oynatılabilir. Wireshark'ta `tls.handshake.extensions.psk_key_exchange_modes` veya early data uzantıları görüldüğünde bu riski not etmen gerekir. Bu lab 0-RTT kullanmaz (nginx'de kapalıdır).
 
 Farklı paketlerde TLS versiyonunu kontrol et.
 
@@ -542,8 +507,7 @@ Wireshark'ın işaretçileri:
 
 ## Alıştırma 12: SNI — Şifreli Trafiğin Görünen Yüzü
 
-TLS şifreli olsa bile ClientHello içindeki SNI (Server Name Indication)
-alanı düz metindir: İstemcinin HANGİ sunucuya bağlandığını ele verir.
+TLS şifreli olsa bile ClientHello içindeki SNI (Server Name Indication) alanı düz metindir: İstemcinin HANGİ sunucuya bağlandığını ele verir.
 
 ### Filtre:
 ```text
@@ -561,9 +525,7 @@ v Extension: server_name (len=28)
         Server Name: "secure.shark-tank.local"    ← düz metin!
 ```
 
-3. Aynı pcap'te bu SNI'ye sahip bağlantının sunucu IP'sini belirle:
-   ClientHello paketinin `ip.dst` değeriyle eşle (172.50.2.13 = https
-   sunucusu, ref5 servis envanterinden)
+3. Aynı pcap'te bu SNI'ye sahip bağlantının sunucu IP'sini belirle: ClientHello paketinin `ip.dst` değeriyle eşle (172.50.2.13 = https sunucusu, ref5 servis envanterinden)
 
 ### SNI Neden Var?
 

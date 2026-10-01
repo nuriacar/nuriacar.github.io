@@ -4,22 +4,15 @@ title:  "shark-tank - m17: Kerberos Analizi"
 date:   2026-08-03 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 17: Kerberos Analizi
+## Modül 17: Kerberos Analizi
 
 **Neden?** Şirket ağında bir kullanıcının kimliğine bürünüldü ve SOC ekibi
-haberi geç aldı. Windows dünyasında kimlik doğrulamanın kalbi Kerberos'tur:
-Oturum açan her kullanıcı, domain denetleyicisinden bilet alır ve bu biletlerle
-dosyaya, yazıcıya, veritabanına erişir. Saldırgan için Kerberos altın
-madendir: Çalınan bilet parolayı gerekli kılmaz (pass-the-ticket), zayıf
-şifrelemeli servis biletleri kırılabilir (Kerberoasting), yanlış saat
-senkronu kovalamacaya dönüşür. Bu modülde, Kerberos akışını paket
-seviyesinde okumayı ve saldırı izlerini tespit etmeyi öğreneceksin.
+haberi geç aldı. Windows dünyasında kimlik doğrulamanın kalbi Kerberos'tur: Oturum açan her kullanıcı, domain denetleyicisinden bilet alır ve bu biletlerle dosyaya, yazıcıya, veritabanına erişir. Saldırgan için Kerberos altın madendir: Çalınan bilet parolayı gerekli kılmaz (pass-the-ticket), zayıf şifrelemeli servis biletleri kırılabilir (Kerberoasting), yanlış saat senkronu kovalamacaya dönüşür. Bu modülde, Kerberos akışını paket seviyesinde okumayı ve saldırı izlerini tespit etmeyi öğreneceksin.
 
 **Görev:** SHARK-TANK.LOCAL domaininde kimlik doğrulama trafiğini analiz et.
 
 **Öğrenim Hedefleri:**
-- Kerberos AS/TGS akışını (kinit → bilet → servis erişimi) adım adım takip
-  edebilmek
+- Kerberos AS/TGS akışını (kinit → bilet → servis erişimi) adım adım takip edebilmek
 - KRB-ERROR kodlarını (PREAUTH_FAILED, PREAUTH_REQUIRED) okuyabilmek
 - CNameString ve SNameString alanlarından kullanıcı ve servis (SPN) çıkarabilmek
 - Bilet şifreleme türlerini (etype) yorumlayabilmek
@@ -56,9 +49,7 @@ Kerberos akışı üç aşamada gerçekleşir:
   |<-- AP-REP -----------------------------------------|
 ```
 
-Kritik nokta: TGT almak için parola kanıtı gerekir, ama TGT'yi kullanarak
-servis bileti almak için parola gerekmez. Bilet çalınan bir saldırgan 2.
-ve 3. aşamayı parolasız tamamlar.
+Kritik nokta: TGT almak için parola kanıtı gerekir, ama TGT'yi kullanarak servis bileti almak için parola gerekmez. Bilet çalınan bir saldırgan 2. ve 3. aşamayı parolasız tamamlar.
 
 ### Kerberos Mesaj Tipleri (msg_type):
 
@@ -218,8 +209,7 @@ sname: backup,svc-backup.shark-tank.local
        └─ servis adı
 ```
 
-4. `smb2 || ldap` filtresiyle modül 19 pcap'inde aynı SPN'lerin
-   gerçek erişimde nasıl kullanıldığını karşılaştır
+4. `smb2 || ldap` filtresiyle modül 19 pcap'inde aynı SPN'lerin gerçek erişimde nasıl kullanıldığını karşılaştır
 
 > **SINAV İPUÇLARI:**
 >
@@ -256,8 +246,7 @@ Frame 128: backup,svc-backup.shark-tank.local
 
 ### Keskin İmza: etype 23 (RC4) Bileti
 
-Kerberoasting'in ağda en net izi, **dönen biletin şifreleme türüdür**:
-Kıran araçlar (Rubeus, GetUserSPNs.py, `kvno -e rc4-hmac`) bileti
+Kerberoasting'in ağda en net izi, **dönen biletin şifreleme türüdür**: Kıran araçlar (Rubeus, GetUserSPNs.py, `kvno -e rc4-hmac`) bileti
 **RC4-HMAC (etype 23)** ile ister çünkü RC4 anahtar türevi (NT hash)
 kırılması kolay kriptodur. Bu pcap'te saldırgan tam bunu yaptı:
 
@@ -266,19 +255,12 @@ kırılması kolay kriptodur. Bu pcap'te saldırgan tam bunu yaptı:
 kerberos.etype == 23
 ```
 
-İki TGS-REP'te biletin `etype: 23 (RC4-HMAC)` taşıdığını görürsün
-(biri istemcinin oturumunda, biri saldırganın SPN taramasında).
-Karşılaştır: Diğer tüm biletler `etype 18 (AES256)` — aynı ağda iki
-etype kuşağı görüyorsan RC4 tarafını hemen incele.
+İki TGS-REP'te biletin `etype: 23 (RC4-HMAC)` taşıdığını görürsün (biri istemcinin oturumunda, biri saldırganın SPN taramasında). Karşılaştır: Diğer tüm biletler `etype 18 (AES256)` — aynı ağda iki etype kuşağı görüyorsan RC4 tarafını hemen incele.
 
 **Not:** İstemci TGS-REQ'te desteklediği listeyle (18...) gider; RC4
- tercihi **yanıt biletine** yansır — bu yüzden filtre msg_type 13'te
-veya doğrudan `kerberos.etype == 23`'te atılır.
+ tercihi **yanıt biletine** yansır — bu yüzden filtre msg_type 13'te veya doğrudan `kerberos.etype == 23`'te atılır.
 
-> **SINAV İPUCU:** "Kerberoasting'i tek filtreyle nasıl kanıtlarsın?"
-> → `kerberos.msg_type == 13 && kerberos.etype == 23`: RC4 bilet +
-> saldırgan kaynaklı toplu SPN taraması birlikte kesin imzadır; tek
-> başına "çok TGS-REQ" sezgisel kalır.
+> **SINAV İPUCU:** "Kerberoasting'i tek filtreyle nasıl kanıtlarsın?" → `kerberos.msg_type == 13 && kerberos.etype == 23`: RC4 bilet + saldırgan kaynaklı toplu SPN taraması birlikte kesin imzadır; tek başına "çok TGS-REQ" sezgisel kalır.
 
 ### Kerberoasting Aşamaları:
 
@@ -288,11 +270,7 @@ veya doğrudan `kerberos.etype == 23`'te atılır.
 | 2. Bilet toplama | Art arda TGS-REQ'ler (bu alıştırma) | **Kısa sürede çok SPN** |
 | 3. Kırma | Ağda GÖRÜNMEZ (çevrimdışı) | Ancak bilet etype'ından anlaşılır |
 
-> **Not:** Kerberoasting'in klasik imzası RC4 (etype 23) şifreli servis
-> biletleridir; bu labın Samba KDC'si yalnızca AES verir, bu yüzden
-> buradaki tespit SPN tarama kalıbına dayanır. Gerçek dünyada
-> `kerberos.etype == 23 && kerberos.msg_type == 13` filtresi zayıf
-> biletleri doğrudan yakalar.
+> **Not:** Kerberoasting'in klasik imzası RC4 (etype 23) şifreli servis biletleridir; bu labın Samba KDC'si yalnızca AES verir, bu yüzden buradaki tespit SPN tarama kalıbına dayanır. Gerçek dünyada `kerberos.etype == 23 && kerberos.msg_type == 13` filtresi zayıf biletleri doğrudan yakalar.
 
 > **İstihbarat İşaretleri, Kerberoasting:**
 >
@@ -335,8 +313,7 @@ kerberos.msg_type == 30
 
 ### Bilet Hırsızlığı Ailesi: Pass-the-Ticket, Golden ve Silver Ticket
 
-Ağdan çalınan biletlerle oynanan saldırılar (bu pcap'te üretilmez — trafik
-analiziyle sınırlıdır; **istihbarat notu** olarak bilin):
+Ağdan çalınan biletlerle oynanan saldırılar (bu pcap'te üretilmez — trafik analiziyle sınırlıdır; **istihbarat notu** olarak bilin):
 
 | Saldırı | Ne Çalınır | Ağdaki İmza |
 |---------|-----------|-------------|
@@ -348,14 +325,9 @@ Ortak tespit filtresi biletin yeniden kullanımıdır:
 ```text
 kerberos.msg_type == 12 || kerberos.msg_type == 14   # AP-REQ / AP-REP
 ```
-Aynı `sname`+`cname` bileti farklı IP'lerden geliyorsa = pass-the-ticket
-adayı. Golden/Silver tespiti asıl olarak DC loglarıyla yapılır; pcap'te
-"dolaysız" kanıt KDC'ye hiç danışmayan geçerli biletlerdir.
+Aynı `sname`+`cname` bileti farklı IP'lerden geliyorsa = pass-the-ticket adayı. Golden/Silver tespiti asıl olarak DC loglarıyla yapılır; pcap'te "dolaysız" kanıt KDC'ye hiç danışmayan geçerli biletlerdir.
 
-> **SINAV İPUCU:** "Kerberoasting ile pass-the-ticket farkı?" →
-> Kerberoasting çevrimdışı parola kırma (bileti kırarsın);
-> pass-the-ticket biletin kendisini anında yeniden kullanma (kırma yok).
-> Golden ticket = krbtgt anahtarıyla sahte TGT üretme.
+> **SINAV İPUCU:** "Kerberoasting ile pass-the-ticket farkı?" → Kerberoasting çevrimdışı parola kırma (bileti kırarsın); pass-the-ticket biletin kendisini anında yeniden kullanma (kırma yok). Golden ticket = krbtgt anahtarıyla sahte TGT üretme.
 
 ---
 
@@ -379,44 +351,30 @@ adayı. Golden/Silver tespiti asıl olarak DC loglarıyla yapılır; pcap'te
 
 ## Sınav Soruları (Çöz)
 
-1. Kerberos'ta TGT ile servis bileti arasındaki fark nedir? Hangisi hangi
-   msg_type ile verilir?
+1. Kerberos'ta TGT ile servis bileti arasındaki fark nedir? Hangisi hangi msg_type ile verilir?
 2. KRB-ERROR kodu 24 ne anlama gelir ve hangi saldırının habercisidir?
-3. Bir istemcinin `cifs/dc.shark-tank.local` SPN'i için bilet alması ne
-   yapmaya çalıştığını gösterir?
+3. Bir istemcinin `cifs/dc.shark-tank.local` SPN'i için bilet alması ne yapmaya çalıştığını gösterir?
 4. Kerberoasting'in AĞDA GÖRÜNEN aşaması hangisidir ve nasıl tespit edilir?
 5. etype 23 neden güvenlik açısından önemlidir?
 6. AS-REP paketinde cname ve sname alanları sırasıyla neyi belirtir?
-7. KDC_ERR_PRINCIPAL_UNKNOWN (kod 10) hatalarının art arda gelmesi neyi
-   işaret edebilir?
+7. KDC_ERR_PRINCIPAL_UNKNOWN (kod 10) hatalarının art arda gelmesi neyi işaret edebilir?
 
 <details markdown="block">
 <summary><strong>Cevapları Göster</strong></summary>
 
-1. TGT (AS-REP, msg_type 11) TGS servisine erişim için verilir ve parola
-   kanıtı gerektirir. Servis bileti (TGS-REP, msg_type 13) TGT kullanılarak
-   alınır ve parola gerektirmez.
+1. TGT (AS-REP, msg_type 11) TGS servisine erişim için verilir ve parola kanıtı gerektirir. Servis bileti (TGS-REP, msg_type 13) TGT kullanılarak alınır ve parola gerektirmez.
 
-2. PREAUTH_FAILED: Parola yanlış. Art arda 24 kodları parola tahmini
-   (brute force) denemesidir.
+2. PREAUTH_FAILED: Parola yanlış. Art arda 24 kodları parola tahmini (brute force) denemesidir.
 
-3. Dosya paylaşımına (SMB/CIFS) erişmek istediğini. SPN'ler servisin
-   kimliğidir: cifs = dosya paylaşımı servisi.
+3. Dosya paylaşımına (SMB/CIFS) erişmek istediğini. SPN'ler servisin kimliğidir: cifs = dosya paylaşımı servisi.
 
-4. Bilet toplama aşaması: Tek kaynak IP'den kısa sürede çok sayıda farklı
-   SPN'e TGS-REQ. Kırma aşaması çevrimdışı gerçekleştiği için ağda görünmez.
+4. Bilet toplama aşaması: Tek kaynak IP'den kısa sürede çok sayıda farklı SPN'e TGS-REQ. Kırma aşaması çevrimdışı gerçekleştiği için ağda görünmez.
 
-5. RC4-HMAC zayıf bir algoritmadır; bu tür şifrelenmiş servis biletleri
-   çevrimdışı kırılarak servis hesabı parolası ele geçirilebilir
-   (Kerberoasting). Bu pcap'te kanıtı: `kerberos.etype == 23` filtresi
-   2 TGS-REP yakalar (biri saldırganın `kvno -e rc4-hmac` çağrısından);
-   kalan biletlerin tamamı etype 18 (AES256).
+5. RC4-HMAC zayıf bir algoritmadır; bu tür şifrelenmiş servis biletleri çevrimdışı kırılarak servis hesabı parolası ele geçirilebilir (Kerberoasting). Bu pcap'te kanıtı: `kerberos.etype == 23` filtresi 2 TGS-REP yakalar (biri saldırganın `kvno -e rc4-hmac` çağrısından); kalan biletlerin tamamı etype 18 (AES256).
 
-6. cname bileti alan kullanıcıyı (analyst), sname biletin hangi servis
-   için olduğunu (krbtgt/REALM veya SPN) belirtir.
+6. cname bileti alan kullanıcıyı (analyst), sname biletin hangi servis için olduğunu (krbtgt/REALM veya SPN) belirtir.
 
-7. Kullanıcı adı keşfi (enumeration): Saldırgan geçerli kullanıcı
-   adlarını bulmak için tahminlerle denemeler yapıyor olabilir.
+7. Kullanıcı adı keşfi (enumeration): Saldırgan geçerli kullanıcı adlarını bulmak için tahminlerle denemeler yapıyor olabilir.
 
 </details>
 

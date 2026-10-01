@@ -4,7 +4,7 @@ title:  "shark-tank - m04: DHCP Analizi"
 date:   2026-07-21 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 04: DHCP Analizi
+## Modül 04: DHCP Analizi
 
 **Neden?** Ofiste bazı bilgisayarlar internete çıkamıyor. DHCP server'dan IP alamıyorlar. Araştırınca ağda yetkisiz bir DHCP sunucusu çalıştığı ortaya çıkıyor. Rogue DHCP server saldırısında saldırgan ağa sahte bir DHCP sunucusu koyar. Kurbanlara sahte DNS (trafiği yönlendirmek için), sahte gateway (MITM için) ve sahte IP dağıtır. DHCP starvation ile gerçek sunucunun havuzu tüketilir, ardından sahte sunucu devreye girer. Bu modülde, rogue DHCP'yi tespit etmeyi öğreneceksin.
 
@@ -181,8 +181,7 @@ dhcp.option.dhcp == 7    # Release
 
 ### IPv6 Tarafı: DHCPv6 ve SLAAC
 
-IPv4'teki DHCP'nin IPv6 karşılığı **DHCPv6**'dır (UDP 546/547, mesaj
-tipleri 1=Solicit, 2=Advertise, 3=Request, 5=Reply):
+IPv4'teki DHCP'nin IPv6 karşılığı **DHCPv6**'dır (UDP 546/547, mesaj tipleri 1=Solicit, 2=Advertise, 3=Request, 5=Reply):
 ```text
 dhcpv6           # Wireshark filtresi
 icmpv6.type == 133   # Router Solicitation (SLAAC yolunu tetikler)
@@ -196,9 +195,7 @@ icmpv6.type == 133   # Router Solicitation (SLAAC yolunu tetikler)
 | Broadcast | Discover broadcast'tir | Multicast (ff02::1:2 DHCPv6 relay / ff02::1:ffxx:xxxx DAD) |
 | Kimlik | MAC (chaddr) | DUID + IAID |
 
-Analist için pratik değer: Bir IPv6 istemci gördüğünde adresin SLAAC mı
-DHCPv6 mı olduğunu RA'daki M/O bitleri belirler (Modül 7). Bu lab'ın
-DHCP hattı IPv4'tür; IPv6 tarafı Modül 7'de ele alınır.
+Analist için pratik değer: Bir IPv6 istemci gördüğünde adresin SLAAC mı DHCPv6 mı olduğunu RA'daki M/O bitleri belirler (Modül 7). Bu lab'ın DHCP hattı IPv4'tür; IPv6 tarafı Modül 7'de ele alınır.
 
 ## Hızlı Referans - DHCP Filtreleri
 

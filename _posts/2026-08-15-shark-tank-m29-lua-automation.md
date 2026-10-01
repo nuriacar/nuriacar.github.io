@@ -4,7 +4,7 @@ title:  "shark-tank - m29: Lua Bu Gece Başka Güzel"
 date:   2026-08-15 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 29: Lua Bu Gece Başka Güzel
+## Modül 29: Lua Bu Gece Başka Güzel
 
 ```lua
 function lua()

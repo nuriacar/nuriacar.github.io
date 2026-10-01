@@ -4,7 +4,7 @@ title:  "shark-tank - m01: Wireshark Temelleri"
 date:   2026-07-18 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 01: Wireshark Temelleri
+## Modül 01: Wireshark Temelleri
 
 **Neden?** SOC L1 stajyeri olarak ilk günün. Ekibin elinde bir pcap var: "ağda bir şeyler dönüyor" deniyor. Nereye bakacağını bilmiyorsun. Wireshark, ağ saldırılarını tespit etmenin en temel aracıdır. Port scanning, ARP spoofing, DNS tunneling, C2 beaconing: Her saldırı türü paket seviyesinde iz bırakır. Wireshark olmadan bu izleri görmek imkansızdır. Bu modülde, Wireshark'ı açıp ilk pcap'ini analiz etmeyi öğreneceksin.
 
@@ -225,9 +225,7 @@ http.request.method == "GET"           # Sadece GET istekleri
 
 ### Zaman Gösterimi (View > Time Display Format)
 
-Paket listesindeki **Time** sütunu varsayılan olarak capture başlangıcından
-itibaren geçen saniyeyi gösterir (`0.000123`). Analiz türüne göre formatı
-değiştirmek çoğu soruyu kolaylaştırır:
+Paket listesindeki **Time** sütunu varsayılan olarak capture başlangıcından itibaren geçen saniyeyi gösterir (`0.000123`). Analiz türüne göre formatı değiştirmek çoğu soruyu kolaylaştırır:
 
 | Format | Ne İşe Yarar | Tipik Kullanım |
 |--------|--------------|----------------|
@@ -237,20 +235,14 @@ değiştirmek çoğu soruyu kolaylaştırır:
 | UTC Date and Time of Day | Mutlak zaman | Olay korelasyonu (loglarla eşleme) |
 
 **Alıştırma (m01):** `module-01-basics.pcap` dosyasını aç, Time sütununa
-sağ tıkla → **Second Precision > ...Milliseconds** seç. Ardından bir ICMP
-echo request/response çiftini bul: iki paket arasındaki süre kabaca RTT'dir.
-Aynı ölçümü `View > Time Display Format > Seconds Since Previous Captured
-Packet` ile de yapabilirsin — ilk sütun 0.000'a yakın bir değer gösterir.
+sağ tıkla → **Second Precision > ...Milliseconds** seç. Ardından bir ICMP echo request/response çiftini bul: iki paket arasındaki süre kabaca RTT'dir. Aynı ölçümü `View > Time Display Format > Seconds Since Previous Captured Packet` ile de yapabilirsin — ilk sütun 0.000'a yakın bir değer gösterir.
 
 **SINAV İPUCU:** "İki DNS sorgusu arasında ne kadar zaman geçti?" tarzı
-sorularda önce Time Display Format'ı değiştir, sonra iki paketin zamanlarını
-okuyarak farkını çıkar.
+sorularda önce Time Display Format'ı değiştir, sonra iki paketin zamanlarını okuyarak farkını çıkar.
 
 ### İsim Çözümleme (Name Resolution)
 
-Ham adresler (MAC, IP, port) okumayı zorlaştırır. Wireshark üç düzeyde isim
-çözer — hepsi **View > Name Resolution** menüsünden ve sağ alt köşedeki
-simge durumundan açılır:
+Ham adresler (MAC, IP, port) okumayı zorlaştırır. Wireshark üç düzeyde isim çözer — hepsi **View > Name Resolution** menüsünden ve sağ alt köşedeki simge durumundan açılır:
 
 | Düzey | Örnek Dönüşüm | Nasıl Açılır |
 |-------|---------------|--------------|
@@ -259,16 +251,10 @@ simge durumundan açılır:
 | Resolve Transport (Port) Adresses | Port 53 → `domain`, 8080 → `http-alt` | View > Name Resolution > Resolve Transport Names |
 
 **Alıştırma (m01):** `module-01-basics.pcap` içinde `tcp.port == 8080`
-filtrele. Port sütunu önce `8080` gösterir; transport çözümlemesini açınca
-`http-alt` olur. DNS paketlerinde (`dns`) kaynak adres `172.50.2.11` yerine
-çözülmüş bir isim görmek için IP çözümlemesini aç (lab ortamında ters DNS
-kayıtları yoksa değişmez — bu da bir bilgindir: çözümleme ağın sunduğu
-kaynağa bağlıdır).
+filtrele. Port sütunu önce `8080` gösterir; transport çözümlemesini açınca `http-alt` olur. DNS paketlerinde (`dns`) kaynak adres `172.50.2.11` yerine çözülmüş bir isim görmek için IP çözümlemesini aç (lab ortamında ters DNS kayıtları yoksa değişmez — bu da bir bilgindir: çözümleme ağın sunduğu kaynağa bağlıdır).
 
 **SINAV İPUCU:** Port-numarası çözümlemesi kapalıyken "hangi servise
-gidiyor?" sorusu için `View > Name Resolution`'ı açmak en hızlı yoldur.
-Detaylı protokol-isim eşlemesi Modül 3'te (MAC) ve Modül 8'de (port) tekrar
-karşına çıkacak.
+gidiyor?" sorusu için `View > Name Resolution`'ı açmak en hızlı yoldur. Detaylı protokol-isim eşlemesi Modül 3'te (MAC) ve Modül 8'de (port) tekrar karşına çıkacak.
 
 ## Adım 7: İlk Capturing
 

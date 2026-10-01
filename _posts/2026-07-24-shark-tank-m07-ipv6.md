@@ -4,7 +4,7 @@ title:  "shark-tank - m07: IPv6 Analizi"
 date:   2026-07-24 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 07: IPv6 Analizi
+## Modül 07: IPv6 Analizi
 
 **Neden?** Ağın IPv6 destekliyor ama kimse izlemiyor. Saldırgan bunu biliyor ve IPv6 protokollerini kullanarak güvenlik duvarını atlıyor. IPv6'da ARP yerine NDP (Neighbor Discovery Protocol) vardır: NDP spoofing ile ARP poisoning'in aynısı yapılabilir. Router Advertisement spoofing ile sahte gateway tanıtılır. IPv6 tunneling (6to4, Teredo) ile IPv4 güvenlik duvarı atlanır. Çoğu ağ IPv6'yı izlemez: Saldırgan için cennet. Bu modülde, IPv6 saldırılarını tespit etmeyi öğreneceksin.
 
@@ -158,9 +158,7 @@ CİHAZ A (fe80::1)                          CİHAZ B (fe80::2)
 
 ### DAD (Duplicate Address Detection): Adres Çakışması Kontrolü
 
-Yeni bir IPv6 adresi etkinleştirilmeden önce, cihaz o adrese **kendisi**
-Neighbor Solicitation gönderir (hedef = kendi adresinin solicited-node
-multicast'i). Yanıt gelirse adres **çakışıyor** demektir:
+Yeni bir IPv6 adresi etkinleştirilmeden önce, cihaz o adrese **kendisi** Neighbor Solicitation gönderir (hedef = kendi adresinin solicited-node multicast'i). Yanıt gelirse adres **çakışıyor** demektir:
 
 ```text
 # DAD sorgusu: NS paketi, hedef adres = kaynak adresin kendisi
@@ -169,10 +167,7 @@ icmpv6.type == 135 && ipv6.dst ~= ff02::1:ff00:0   # solicited-node mcast
 icmpv6.type == 136
 ```
 
-Saldırı bağlamı: **DAD spoofing** — saldırgan her DAD NS'ine NA ile
-"o adres benim" derse, kurbanın adresi hiç kullanıma girmez (DoS) veya
-SLAAC manipülasyonu yapılır. `icmpv6.type == 135` yoğunluğu + ardışık NA
-çiftleri, ağda DAD oyunu oynandığını gösterir.
+Saldırı bağlamı: **DAD spoofing** — saldırgan her DAD NS'ine NA ile "o adres benim" derse, kurbanın adresi hiç kullanıma girmez (DoS) veya SLAAC manipülasyonu yapılır. `icmpv6.type == 135` yoğunluğu + ardışık NA çiftleri, ağda DAD oyunu oynandığını gösterir.
 
 ### Dual-Stack, Tunneling ve Çeviri:
 

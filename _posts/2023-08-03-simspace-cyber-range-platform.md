@@ -20,9 +20,7 @@ tags: [siber-guvenlik]
 
 Beni bilen *okült* cengâverlerin veryansınlarını duyar gibi oluyorum:
 
-> A bizim *Blacksmith*'imiz! Neme lazım demeyip, gün yüzü görmemiş silahlar yapıp, nice siber savaşta elimize tutuşturan *Levazım Subayı*'mız! [*Kibirli Ceviz*](https://www.youtube.com/watch?v=vYJDtCdOHfA "Bu şarkının bana yazıldığını düşünmek için yeterince sebebim var :)")'imiz! Sanat ehli *Quartermaster*'ımız!
-> Böyle giderse -ki inşallah gitmez- mecburen basılması gerekecek ve 160.000 altına denk paşa dedesi *Kâime-i Mûtebere*'nin aksine vâ esefâ yarım gram altın dahi alamayan 1000 TL'lik *gayme*ye sureti basılası *Gökbörü*'müz!
-> Sen ki *virüs* geliştiren adamsın; neden *SimSpace* denen oyunda oynaştasın?!...
+> A bizim *Blacksmith*'imiz! Neme lazım demeyip, gün yüzü görmemiş silahlar yapıp, nice siber savaşta elimize tutuşturan *Levazım Subayı*'mız! [*Kibirli Ceviz*](https://www.youtube.com/watch?v=vYJDtCdOHfA "Bu şarkının bana yazıldığını düşünmek için yeterince sebebim var :)")'imiz! Sanat ehli *Quartermaster*'ımız! Böyle giderse -ki inşallah gitmez- mecburen basılması gerekecek ve 160.000 altına denk paşa dedesi *Kâime-i Mûtebere*'nin aksine vâ esefâ yarım gram altın dahi alamayan 1000 TL'lik *gayme*ye sureti basılası *Gökbörü*'müz! Sen ki *virüs* geliştiren adamsın; neden *SimSpace* denen oyunda oynaştasın?!...
 >> Okült Cengâverler
 
 ![Bozkurt'lu İlk Emisyon 5 Lira - 1927](/assets/img/bozkurtlu-ilk-emisyon-5-lira-1927.jpg "Bozkurt'lu İlk Emisyon 5 Lira - 1927")

@@ -18,7 +18,7 @@ Kılavuzun tamamı [bilgiguvenligi.org](https://bilgiguvenligi.org/)'da yayında
 
 ---
 
-<details class="toc-block" markdown="block" id="farkindalik">
+<details class="accordion" markdown="block" id="farkindalik">
 <summary>Herkes İçin Temel Bilgi Güvenliği Farkındalık Eğitimi</summary>
 
 | # | Bölüm |
@@ -69,7 +69,7 @@ Kılavuzun tamamı [bilgiguvenligi.org](https://bilgiguvenligi.org/)'da yayında
 
 </details>
 
-<details class="toc-block" markdown="block" id="risk">
+<details class="accordion" markdown="block" id="risk">
 <summary>İT/BT Risk Yönetimi, Tehdit Modelleme ve Shadow IT</summary>
 
 | # | Bölüm |
@@ -88,7 +88,7 @@ Kılavuzun tamamı [bilgiguvenligi.org](https://bilgiguvenligi.org/)'da yayında
 
 </details>
 
-<details class="toc-block" markdown="block" id="kodlama">
+<details class="accordion" markdown="block" id="kodlama">
 <summary>Güvenli Kodlama Eğitimi</summary>
 
 | # | Bölüm |
@@ -108,7 +108,7 @@ Kılavuzun tamamı [bilgiguvenligi.org](https://bilgiguvenligi.org/)'da yayında
 
 </details>
 
-<details class="toc-block" markdown="block" id="ek-kaynaklar">
+<details class="accordion" markdown="block" id="ek-kaynaklar">
 <summary>Ek Kaynaklar</summary>
 
 | Kaynak |

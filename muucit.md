@@ -6,34 +6,34 @@ permalink: /muucit/
 eyebrow: girişim
 ---
 
-<div class="box">
+<figure>
   <img src="/assets/img/muucit-logo.png" alt="muucit Logo" title="muucit Logo">
-</div>
+</figure>
 
-<div class="box">
+<figure>
   <a href="/store/"><img src="/assets/img/nebula-afis-01.jpg" alt="Nebula" title="Nebula"></a>
-</div>
+</figure>
 
-<div class="box">
+<figure>
   <a href="/store/"><img src="/assets/img/qb-15-afis-01.jpg" alt="QB 15" title="qb 15"></a>
-</div>
+</figure>
 
-<div class="box">
+<figure>
   <a href="/store/"><img src="/assets/img/qb-50-afis-01.jpg" alt="QB 50" title="qb 50"></a>
-</div>
+</figure>
 
-<div class="box">
+<figure>
   <a href="https://www.youtube.com/channel/UCzAo3peHOsI10nQeO_nmg6Q"><img src="/assets/img/youtube-icon.png" alt="Youtube" title="Youtube"></a>
   <a href="/store/"><img src="/assets/img/cart-icon.png" alt="Shopier" title="Shopier"></a>
-</div>
+</figure>
 
-<section class="item" markdown="1">
+<section class="card" markdown="1">
 
-<div class="item__meta">muucit®</div>
+<div class="card__meta">muucit®</div>
 
-<div class="lang" id="muucit-tr">TR [ <a href="#muucit-en">EN ⇣</a> ]</div>
+<div class="chip" id="muucit-tr">TR [ <a href="#muucit-en">EN ⇣</a> ]</div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F3yHkHa1vS4?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Selam Boyut Gezgini!
 
@@ -49,9 +49,9 @@ Her [muucit®](/muucit/) nesnesi, boyutlar arası yolculuk yapabilecek şekilde 
 
 Nesnelerim, bilincinde yepyeni yıldız sistemlerinin doğuşuna sebep olacak [füzyon](https://tr.wikipedia.org/wiki/N%C3%BCkleer_f%C3%BCzyon) tepkimeleri oluştursunlar isterim. Doğacak yıldızlarının kalbinden çıkan enerjiye muhtaç pek çok gezegen seni bekliyor!
 
-<div class="lang" id="muucit-en">EN [ <a href="#muucit-tr">TR ⇡</a> ]</div>
+<div class="chip" id="muucit-en">EN [ <a href="#muucit-tr">TR ⇡</a> ]</div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F3yHkHa1vS4?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Hi Dimension Voyager!
 
@@ -69,14 +69,10 @@ I hope my objects create [fusion](https://en.wikipedia.org/wiki/Nuclear_fusion) 
 
 </section>
 
-<div class="section-header section-header--block">
+<div class="section-header">
   <span class="section-marker"></span>
   <span class="section-title">muucit blog</span>
 </div>
 
-<div class="cards">
 {% assign mposts = site.posts | where: 'categories', 'muucit' %}
-{% for post in mposts %}
-{% include post-card.html post=post %}
-{% endfor %}
-</div>
+{% include post-table.html posts=mposts show_topic=true %}

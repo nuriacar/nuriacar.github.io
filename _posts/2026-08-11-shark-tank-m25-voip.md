@@ -4,7 +4,7 @@ title:  "shark-tank - m25: VoIP Analizi"
 date:   2026-08-11 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 25: VoIP Analizi
+## Modül 25: VoIP Analizi
 
 **Neden?** Şirket santraline ulaşılamıyor: SIP flood yemiş olabilir. VoIP (SIP/RTP) saldırıları kurumsal ağlarda ciddi tehdittir: SIP flood (santrali çökertme), RTP injection (ses akışına müdahale), eavesdropping (görüşmeyi dinleme), caller ID spoofing (sahte arayan), vishing (sesli phishing). VoIP trafiği genellikle izlenmez: Saldırgan bunu bilir. Bu modülde, SIP/RTP trafiğini analiz etmeyi öğreneceksin.
 
@@ -355,24 +355,18 @@ Jitter (ms)
 
 ### Ses Oynatma: Player ile Çağrıyı Dinleme
 
-RTP analizi yalnızca sayı değildir — Wireshark **çağrının kendisini
-oynatabilir**:
+RTP analizi yalnızca sayı değildir — Wireshark **çağrının kendisini oynatabilir**:
 
-1. `Statistics → RTP → Show All Streams` (veya Telephony → VoIP Calls →
-   Player)
+1. `Statistics → RTP → Show All Streams` (veya Telephony → VoIP Calls → Player)
 2. Bir stream seç → **Player** butonuna bas
 3. Açılan pencerede **Decode** ve sonra **Play**'e bas
-4. G/711 (PCMU/PCMA) gibi codec'ler doğrudan çözülür; ses, iki taraf
-   (upstream/downstream) ayrı kanallarda duyulur
+4. G/711 (PCMU/PCMA) gibi codec'ler doğrudan çözülür; ses, iki taraf (upstream/downstream) ayrı kanallarda duyulur
 
-Analist değeri: Vishing (sesli dolandırıcılık) olaylarında çağrı
-içeriğinin kanıtı budur. Codec pcap'te SDP'de (Alıştırma 2) görünür:
-`a=rtpmap:0 PCMU/8000` gibi.
+Analist değeri: Vishing (sesli dolandırıcılık) olaylarında çağrı içeriğinin kanıtı budur. Codec pcap'te SDP'de (Alıştırma 2) görünür: `a=rtpmap:0 PCMU/8000` gibi.
 
 ### RTCP: Kalite Raporu Protokolü
 
-RTP'nin yanında kardeşi **RTCP** (RTP Control Protocol) düzenli olarak
-kalite raporları taşır (port = RTP + 1, örn. 10002):
+RTP'nin yanında kardeşi **RTCP** (RTP Control Protocol) düzenli olarak kalite raporları taşır (port = RTP + 1, örn. 10002):
 
 ```text
 rtcp
@@ -383,14 +377,9 @@ rtcp
 | **Sender Report (SR)** | Gönderenin paket/byte sayısı, NTP zamanı |
 | **Receiver Report (RR)** | **Fraction lost** (% kayıp), **jitter**, en yüksek SN, gecikme (LSR/DLSR) |
 
-RR'deki `fraction lost > %5` + yüksek `interarrival jitter` = alıcı
-zaten şikayet ediyor; MOS düşüşünün nedeni ağda demektir.
+RR'deki `fraction lost > %5` + yüksek `interarrival jitter` = alıcı zaten şikayet ediyor; MOS düşüşünün nedeni ağda demektir.
 
-> **MOS metodolojisi notu:** MOS 1-5 insan oyu ölçeğidir; Wireshark'ın
-> gösterdiği MOS değeri, loss + jitter + codec parametrelerinden
-> **E-model (ITU-T G.107)** formülüyle hesaplanan tahmindir (R-değeri →
-> MOS dönüşümü). Ölçüm değil, model çıktısıdır — ama sınavda "kaliteyi
-> tahmin et" sorusunun standart cevabıdır.
+> **MOS metodolojisi notu:** MOS 1-5 insan oyu ölçeğidir; Wireshark'ın gösterdiği MOS değeri, loss + jitter + codec parametrelerinden **E-model (ITU-T G.107)** formülüyle hesaplanan tahmindir (R-değeri → MOS dönüşümü). Ölçüm değil, model çıktısıdır — ama sınavda "kaliteyi tahmin et" sorusunun standart cevabıdır.
 
 ---
 

@@ -13,13 +13,13 @@ shark-tank, Docker tabanlı, tek komutla ayağa kalkan Wireshark eğitim laborat
 
 Aşağıdaki **kehtapot**'a veya **ahtapedi**'ye (ahtapot ve kedi birleşimi bir modern zaman canavarı, GitHub maskotu: **Octocat**) tıklayarak kaynak kodlara erişebilirsin.
 
-<div class="repo-link" markdown="1">
+<figure markdown="1">
 
 [![shark-tank GitHub](/assets/img/github-icon.png "shark-tank GitHub")](https://github.com/nuriacar/shark-tank)
 
-Kaynak Kod Deposu
+<figcaption>Kaynak Kod Deposu</figcaption>
 
-</div>
+</figure>
 
 ---
 

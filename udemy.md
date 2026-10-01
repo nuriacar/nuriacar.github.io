@@ -12,7 +12,7 @@ eyebrow: eğitim
 
 </div>
 
-<article class="card card--solo" markdown="1">
+<article class="card" markdown="1">
 <div class="card__meta">nedir? what is?</div>
 
 Bu menüde de verdiğim Udemy kurs linkleri yer alıyor! Yukarıdaki Udemy logosuna tıklayarak doğruca Udemy eğitmen sayfama ulaşabilirsiniz. Aşağıda ise eğitim broşürleri, fragmanlar ve kurslara ait bağlantılar yer alıyor!
@@ -21,36 +21,36 @@ In this menu, I am also sharing my Udemy course links! By clicking the Udemy log
 
 </article>
 
-<section class="course">
+<section class="card">
 
-<div class="course__meta">KURS · 01</div>
+<div class="card__meta">KURS · 01</div>
 
-<h2 class="course__title">Bilgi Güvenliği / Siber Güvenlik Farkındalık Eğitimi</h2>
+<h2>Bilgi Güvenliği / Siber Güvenlik Farkındalık Eğitimi</h2>
 
-<div class="course__grid">
-  <div class="course__video">
+<div class="box-row">
+  <div class="box box--media">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/NzPwg-YLI_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
-  <div class="course__side">
-    <a class="btn btn--solid" href="https://www.udemy.com/course/na-bilgi-guvenligi-farkindalik-egitimi/">eğitime git ›</a>
+  <div class="box">
+    <a class="btn btn--primary" href="https://www.udemy.com/course/na-bilgi-guvenligi-farkindalik-egitimi/">eğitime git ›</a>
     <a class="btn" href="/assets/pdf/na-bgfe-tr-20220301-brosur-web.pdf">broşür ↓</a>
   </div>
 </div>
 
 </section>
 
-<section class="course">
+<section class="card">
 
-<div class="course__meta">KURS · 02</div>
+<div class="card__meta">KURS · 02</div>
 
-<h2 class="course__title">IT / BT Risk Yönetimi, Tehdit Modelleme ve Shadow IT Eğitimi</h2>
+<h2>IT / BT Risk Yönetimi, Tehdit Modelleme ve Shadow IT Eğitimi</h2>
 
-<div class="course__grid">
-  <div class="course__video">
+<div class="box-row">
+  <div class="box box--media">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/V05tL2BXxzg?si=6wscBCk2l9FvuOFm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
-  <div class="course__side">
-    <a class="btn btn--solid" href="https://www.udemy.com/course/it-bt-risk-yonetimi-tehdit-modelleme-ve-shadow-it/">eğitime git ›</a>
+  <div class="box">
+    <a class="btn btn--primary" href="https://www.udemy.com/course/it-bt-risk-yonetimi-tehdit-modelleme-ve-shadow-it/">eğitime git ›</a>
     <a class="btn" href="/assets/pdf/na-itrmtmsi-tr-20250814-brosur-web.pdf">broşür ↓</a>
   </div>
 </div>

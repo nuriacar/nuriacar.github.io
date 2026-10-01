@@ -6,11 +6,9 @@ categories: sir
 tags: [muzik]
 ---
 
-Antonis Apergis bestesi Mavra mou Matia üzerine Türkçe aranjman yazdım.
-Şarkının aslını Areti Ketime söylüyor.
+Antonis Apergis bestesi Mavra mou Matia üzerine Türkçe aranjman yazdım. Şarkının aslını Areti Ketime söylüyor.
 
-I wrote Turkish arrangement on Mavra mou Matia by Antonis Apergis. Areti
-Ketime sings the original song.
+I wrote Turkish arrangement on Mavra mou Matia by Antonis Apergis. Areti Ketime sings the original song.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Pv8WKg0p1TA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

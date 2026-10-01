@@ -1,35 +1,26 @@
 ---
 layout: default
 ---
-{% assign topic_posts = site.tags[page.topic] %}
+{% assign topic_posts = site.tags[page.topic] | sort: 'date' | reverse %}
 
-<div class="page__inner">
-  <div class="reading">
-    <nav class="breadcrumb" aria-label="Yol">
-      <a href="/">{{ site.title | escape }}</a>
-      <span class="breadcrumb__sep">›</span>
-      <a href="/blog/">blog</a>
-      <span class="breadcrumb__sep">›</span>
-      <span>{{ page.title | escape }}</span>
-    </nav>
+<nav class="breadcrumb" aria-label="Yol">
+  <a href="/">{{ site.title | escape }}</a>
+  <span class="breadcrumb__sep">›</span>
+  <a href="/blog/">blog</a>
+  <span class="breadcrumb__sep">›</span>
+  <span>{{ page.title | escape }}</span>
+</nav>
 
-    <header class="section-header">
-      <span class="section-marker"></span>
-      <span class="section-title">konu · {{ topic_posts | size }} yazı</span>
-    </header>
+{% if page.content and page.content != '' %}
+{{ content }}
+{% endif %}
 
-    <h1 class="page-title">{{ page.title | escape }}</h1>
-
-    {% if page.content and page.content != '' %}
-    <div class="content content--intro">
-      {{ content }}
-    </div>
-    {% endif %}
-
-    <div class="cards">
-      {% for post in topic_posts %}
-        {% include post-card.html post=post %}
-      {% endfor %}
-    </div>
-  </div>
+<div class="filter">
+  <a class="filter__chip" href="/blog/">Tümü · {{ site.posts | size }}</a>
+  {% for t in site.data.topics %}
+    {% assign count = site.tags[t.slug] | size %}
+    <a class="filter__chip{% if t.slug == page.topic %} filter__chip--active{% endif %}" href="/konu/{{ t.slug }}/">{{ t.title }} · {{ count }}</a>
+  {% endfor %}
 </div>
+
+{% include post-table.html posts=topic_posts %}

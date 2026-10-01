@@ -4,7 +4,7 @@ title:  "shark-tank - m09: TCP Dizi Analizi"
 date:   2026-07-26 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 09: TCP Dizi Analizi
+## Modül 09: TCP Dizi Analizi
 
 **Neden?** TCP bağlantıları sürekli kopuyor. Kullanıcı dosya indiremiyor. Retransmission yağmuru var. Sequence prediction ile saldırgan TCP bağlantısına enjekte yapabilir (blind TCP injection). Retransmission, duplicate ACK, out-of-order paketler ağ sorunlarını ve bazen saldırı girişimlerini (ACK flood) gösterir. Bu modülde, TCP sequence analizi ile ağ sorunlarını ve saldırıları teşhis etmeyi öğreneceksin.
 
@@ -197,19 +197,14 @@ TCP receive window boyutu, alıcının ne kadar veri alabileceğini belirtir.
 
 ### Akış Kontrolü mü, Tıkanıklık Kontrolü mü?
 
-Zero window gördüğünde sorulacak ilk soru: **Suçlu alıcı mı, ağ mı?**
-Bu iki mekanizma sık karıştırılır ama sorumluları farklıdır:
+Zero window gördüğünde sorulacak ilk soru: **Suçlu alıcı mı, ağ mı?** Bu iki mekanizma sık karıştırılır ama sorumluları farklıdır:
 
 | Mekanizma | Karar Veren | Sinyal | Yorum |
 |-----------|-------------|--------|-------|
 | **Flow control** (akış kontrolü) | ALICI, kendi buffer'ına bakar | `tcp.window_size == 0`, zero window | Alıcı uygulamayı kastediyor: "Yavaş işliyorum" |
 | **Congestion control** (tıkanıklık kontrolü) | GÖNDERİCİ, ağı tahmin eder | Retransmission'lar, pencerenin kendiliğinden küçülmesi | Ağı kastediyor: "Paket kaybediyorum, yavaşlayayım" |
 
-Pratik ayrım: Zero window var ama retransmission yoksa sorun **alıcıda**.
-Hem retransmission hem daralan pencere varsa sorun **ağda** (lossy link).
-Tıkanıklık kontrolünün ayrıntıları — slow start, fast retransmit/recovery —
-Modül 11'de derinlemesine işlenecek; burada yalnızca hangi tarafın
-"yavaşlayın" dediğini ayırt etmen yeterli.
+Pratik ayrım: Zero window var ama retransmission yoksa sorun **alıcıda**. Hem retransmission hem daralan pencere varsa sorun **ağda** (lossy link). Tıkanıklık kontrolünün ayrıntıları — slow start, fast retransmit/recovery — Modül 11'de derinlemesine işlenecek; burada yalnızca hangi tarafın "yavaşlayın" dediğini ayırt etmen yeterli.
 
 ---
 

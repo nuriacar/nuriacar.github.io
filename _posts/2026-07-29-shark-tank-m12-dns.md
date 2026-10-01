@@ -4,7 +4,7 @@ title:  "shark-tank - m12: DNS Analizi"
 date:   2026-07-29 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 12: DNS Analizi
+## Modül 12: DNS Analizi
 
 **Neden?** Şirket verilerinin sızdığı tespit edildi. Ama güvenlik duvarı HTTP/HTTPS dışındaki çıkışları engelliyor. Saldırgan DNS sorgularının içine veri gizlemiş. DNS, saldırganın en sevdiği protokoldür. DNS tunneling ile veri sızdırma (iodine, dnscat2): Sorgu alan adlarına base64 ile veri gizlenir. DNS cache poisoning (Kaminsky attack) ile kullanıcılar sahte sitelere yönlendirilir. DNS amplification DDoS ile büyük çaplı saldırılar düzenlenir. Bu modülde, DNS trafiğini analiz ederek tunneling'i yakalamayı öğreneceksin.
 
@@ -56,13 +56,10 @@ DNS (Domain Name System), domain adlarını IP adreslerine çeviren sistemdir.
 | **DoT** (DNS over TLS) | Sorgunun dinlenmesi: TLS tüneline alınır | 853/TCP portu: `tcp.port == 853` — içerik şifreli |
 | **DoH** (DNS over HTTPS) | Sorgunun "web trafiği gibi" saklanması: 443 üzerinden HTTP/2+TLS | DNS başlığı TLS içinde gizli; tespit imzası bilinen genel çözümleyici IP'lerine (1.1.1.1, 8.8.8.8) 443 trafiği: `tls && ip.addr == 1.1.1.1` |
 
-Analist gerçeği: Bu lab'ın DNS'i DNSSEC'sizdir (RRSIG görmezsin — gerçeğe
-uygun bir eksiklik). Kurumsal ağda DoH görmek, kurum çözümleyicisi
-atlanıyor (bypass) demektir — politikaya göre şüphelidir.
+Analist gerçeği: Bu lab'ın DNS'i DNSSEC'sizdir (RRSIG görmezsin — gerçeğe uygun bir eksiklik). Kurumsal ağda DoH görmek, kurum çözümleyicisi atlanıyor (bypass) demektir — politikaya göre şüphelidir.
 
 **SINAV İPUCU:** "Sorgu TLS ile mi taşınıyor?" → porta bak: 53 = klasik
-(açık), 853 = DoT, 443'e genel DNS IP'leri = DoH. "Yanıt imzalı mı?" →
-AD bit / RRSIG kaydı.
+(açık), 853 = DoT, 443'e genel DNS IP'leri = DoH. "Yanıt imzalı mı?" → AD bit / RRSIG kaydı.
 
 ### DNS Response Kodları:
 

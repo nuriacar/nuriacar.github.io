@@ -1,0 +1,1433 @@
+[data-mode="light"] .highlight .nt { color: var(--c-peacock-blue); }
+
+/* ═══════════ KATMAN 4: BASE ═══════════ */
+/*
+ * Katman 4 — Temel: reset, element stilleri, tipografi, içerik (prose),
+ * kartlar, rozetler, gezinme yardımcıları, alt bilgi.
+ * Sıfır hardcode renk; her değer token'dan gelir.
+ */
+
+/* ---------- Reset ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + var(--sp-4));
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--bg-deep);
+  background-image: radial-gradient(circle, var(--dot-color) var(--dot-size), transparent var(--dot-size));
+  background-size: var(--grid-dot) var(--grid-dot);
+  color: var(--text-light);
+  font-family: var(--fn-mono);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding-top: calc(var(--nav-h) + var(--section-gap));
+  padding-bottom: var(--section-gap);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg-deep);
+}
+
+/* ---------- Erişilebilirlik ---------- */
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+*:focus-visible {
+  outline: var(--border) solid var(--accent);
+  outline-offset: var(--sp-1);
+}
+
+/* ---------- Sayfa iskeleti ---------- */
+
+.page {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+}
+
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  margin-top: var(--section-gap);
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+}
+
+/* Okuma ölçüsü: uzun metinler 800px'e sıkıştır */
+
+/* ---------- Eyebrow başlık dili ---------- */
+
+.section-title {
+  font-family: var(--fn-mono);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+  color: var(--text-bright);
+  margin-bottom: var(--gap);
+}
+
+/* Sayfa başındaki eyebrow */
+
+/* Blok/hub başlığı (blog ⇣ bölümleri) */
+
+/* Yardımcı aralık sınıfları (layout inline yerine) */
+
+.footer__title a {
+  color: inherit;
+}
+
+/* ---------- Sayfa başlıkları ---------- */
+
+/* ---------- Bağlantılar ---------- */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--an-speed-fast) ease, border-color var(--an-speed-fast) ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-bright);
+  text-decoration: underline;
+}
+
+/* ---------- Kart ızgarası ---------- */
+
+/* Galeri numarası (q): mono etiket, kutunun üstünde */
+
+/* Depo bağlantısı: ikon + caption birlikte ortalanır */
+.repo-link,
+.repo-link p {
+  text-align: center;
+}
+
+/* Modül sonu gezinme notu: dikkat çekici uyarı şeridi */
+
+.repo-link > p {
+  margin: 0;
+}
+
+.repo-link > p + p {
+  color: var(--text-dim);
+  font-size: var(--fs-body);
+}
+
+/* Kutu içi buton: full width, fotoğrafa yakın */
+.box .btn {
+  width: 100%;
+  text-align: center;
+  margin-top: var(--sp-3);
+}
+
+/* Kutu içi başlık: iç çerçevede, fotoğrafa yakın */
+.box > p:first-child {
+  border: var(--border) solid var(--accent-border);
+  border-radius: var(--br-zero);
+  padding: var(--sp-2) var(--sp-3);
+  margin-bottom: var(--sp-3);
+}
+
+/* Kutu içi metin/caption'lar sola dayalı (medya ortada kalır) */
+.box p,
+.box blockquote,
+.box figcaption {
+  text-align: left;
+}
+
+.box table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tek başına duran medya bloğu: görsel kutu yüksekliğini doldurur */
+
+.box--media > p {
+  display: flex;
+  margin: 0;
+  width: 100%;
+}
+
+.box--media img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  margin: auto;
+}
+
+/* İki bağımsız blok yan yana, eşit yükseklik (imaj | video+caption) */
+
+.box-row .box {
+  min-width: 0;
+}
+
+/* ---------- Kart içi tipografi ---------- */
+
+.card:hover {
+  background: var(--bg-dark);
+  border-color: var(--accent);
+}
+
+.card__meta {
+  font-family: var(--fn-mono);
+  font-size: var(--fs-body);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-mid);
+  color: var(--text-dim);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--gap);
+  display: block;
+  margin-bottom: var(--sp-2);
+}
+
+.card__title {
+  font-family: var(--fn-mono);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  color: var(--text-bright);
+  overflow-wrap: anywhere;
+}
+
+.card__title a {
+  color: inherit;
+}
+
+.card__title a:hover {
+  color: var(--accent-bright);
+  text-decoration: none;
+}
+
+/* ---------- Rozet / çip ---------- */
+
+.chip {
+  display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;
+  height: var(--sp-6);
+  padding: 0 var(--sp-3);
+  font-family: var(--fn-mono);
+  font-size: var(--fs-body);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-mid);
+  color: var(--accent-bright);
+  border: var(--border) solid var(--accent-border);
+  padding: var(--sp-1) var(--sp-2);
+  border-radius: var(--br-zero);
+  white-space: nowrap;
+}
+
+a.chip:hover {
+  border-color: var(--accent);
+  color: var(--accent-bright);
+  text-decoration: none;
+}
+
+/* ---------- Breadcrumb ---------- */
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--gap);
+  font-family: var(--fn-mono);
+  font-size: var(--fs-body);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-mid);
+  color: var(--text-dim);
+  margin-bottom: var(--sp-5);
+}
+
+.breadcrumb a {
+  color: var(--text-dim);
+}
+
+.breadcrumb a:hover {
+  color: var(--accent-bright);
+}
+
+.breadcrumb__sep {
+  color: var(--accent);
+}
+
+/* ---------- Sayfalayıcı (önceki / sonraki) ---------- */
+
+.pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  margin-top: var(--sp-8);
+  border-top: var(--border) solid var(--accent-border);
+  padding-top: var(--sp-5);
+}
+
+/* ---------- Alt bilgi ---------- */
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--gap);
+  align-items: start;
+}
+
+.footer__title {
+  font-family: var(--fn-mono);
+  font-size: var(--fs-body);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-title);
+  color: var(--text-bright);
+}
+
+.footer__tagline {
+  font-family: var(--fn-mono);
+  font-size: var(--fs-body);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-mid);
+  color: var(--text-dim);
+  margin-top: var(--sp-2);
+}
+
+.footer__label {
+  font-family: var(--fn-mono);
+  font-size: var(--fs-body);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+  color: var(--text-dim);
+  margin-bottom: var(--sp-2);
+}
+
+.footer__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.footer__list a {
+  font-family: var(--fn-mono);
+  font-size: var(--fs-body);
+  color: var(--text-light);
+}
+
+.footer__list a:hover {
+  color: var(--accent-bright);
+}
+
+/* ═══════════ KATMAN 5: COMPONENTS ═══════════ */
+/*
+ * Timurg Ortak Tasarım Dili — Katman 5: Bileşenler
+ * Tek kaynak: o/web (Go embed). Üç ürün (timurg.org, Zülüflü, 5GraphiTe)
+ * bu dosyayı değiştirmeden serve eder.
+ * KURAL (tokens.css sözleşmesi): Bu dosyada hex/rgba/font-size LİTERALİ YOKTUR —
+ * her değer token'dan gelir. Ubuntu Mono tek font (nuriacar ölçeği).
+ * BEM dili + geçiş dönemi legacy sınıf eş anlamlıları (portal-*, zf-*) —
+ * sayfa göçü tamamlanınca legacy bloklar silinir.
+ */
+
+/* ---------- Butonlar ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  gap: var(--gap);
+  height: var(--sp-7);
+  padding: 0 var(--sp-5);
+  font-family: var(--fn-mono);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-mid);
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: var(--border) solid var(--accent);
+  border-radius: var(--br-zero);
+  background: transparent;
+  color: var(--accent-bright);
+  transition: background var(--an-speed), color var(--an-speed), border-color var(--an-speed);
+}
+.btn:hover { border-color: var(--accent); color: var(--accent-bright); background: var(--accent-border); }
+.btn--primary { background: var(--accent); color: var(--bg-deep); border-color: var(--accent); }
+.btn--primary:hover { background: var(--accent-bright); border-color: var(--accent-bright); color: var(--bg-deep); }
+.btn--ghost { border-color: var(--text-dim); color: var(--text-light); }
+.btn--ghost:hover { border-color: var(--text-light); color: var(--text-bright); }
+.btn--danger { border-color: var(--c-cherry); color: var(--c-cherry); }
+.btn--danger:hover { border-color: var(--c-cherry); color: var(--c-cherry); background: color-mix(in srgb, var(--c-cherry) 12%, transparent); }
+.btn--sm { height: var(--sp-6); padding: 0 var(--sp-3); font-size: var(--fs-label); display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; }
+.btn--sm:hover { background: var(--accent-border); }
+.btn--block { width: 100%; justify-content: center; }
+.btn[disabled], .btn--disabled { opacity: 0.5; cursor: not-allowed; pointer-events: none; }
+
+/* ---------- Kart ---------- */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  background: var(--bg-dark);
+  border: var(--border) solid var(--accent-border);
+  border-radius: var(--br-zero);
+  padding: var(--card-pad);
+  min-width: 0;
+  transition: background-color var(--an-speed) ease;
+}
+.card:hover { background: var(--accent-border); }
+.card + 
+.card__title {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-title);
+  color: var(--text-bright);
+}
+.card__meta { font-size: var(--fs-label); color: var(--text-dim); letter-spacing: var(--ls-label); text-transform: uppercase; }
+.card__title--value { font-size: var(--fs-h2); color: var(--accent-bright); }
+
+/* Kart grid (dashboard/panel ana düzeni — üç ürün aynı ızgara) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc((100% - var(--gap) * 2) / 3), 1fr));
+  gap: var(--gap);
+  max-width: calc(75rem);  /* --max-width ile eş */
+}
+
+/* ---------- Rozet (badge) ---------- */
+
+.badge {
+  display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;
+  height: var(--sp-6); padding: 0 var(--sp-3);
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  border: var(--border) solid var(--text-dim);
+  color: var(--text-light);
+}
+.badge--active, .badge--running { border-color: var(--accent-strong); color: var(--accent-strong); }
+.badge--completed, .badge--ok { border-color: var(--accent-strong); color: var(--accent-strong); }
+.badge--failed, .badge--expired { border-color: var(--c-cherry); color: var(--c-cherry); }
+.badge--queued, .badge--pending { border-color: var(--warn-border); color: var(--warn-fg); }
+
+/* ---------- Chip (nuriacar) ---------- */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap);
+  font-size: var(--fs-label);
+  color: var(--text-light);
+}
+.chip--sep::before { content: "·"; color: var(--text-dim); margin-right: var(--sp-2); }
+
+/* ---------- Tablo ---------- */
+
+/* ---------- Tablo ---------- */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-body);
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table th {
+  text-align: left; vertical-align: middle;
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: var(--sp-2) var(--sp-3);
+  border-bottom: var(--border) solid var(--text-dim);
+}
+.table td {
+  padding: var(--sp-3);
+  border-bottom: var(--border) solid color-mix(in srgb, var(--text-dim) 35%, transparent);
+  color: var(--text-light);
+}
+.table tr:last-child td { border-bottom: none; }
+.table code { color: var(--accent-bright); font-size: var(--fs-body); }
+.table .badge { margin: 0; }
+
+/* ---------- Form ---------- */
+
+.form { display: flex; flex-direction: column; gap: var(--gap); max-width: var(--reading); }
+.form__label {
+  display: block;
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: var(--sp-2);
+}
+.form__field { display: flex; flex-direction: column; }
+.form input[type="text"], .form input[type="email"], .form input[type="password"],
+.form input[type="url"], .form input[type="number"], .form select, .form textarea {
+  width: 100%;
+  padding: var(--sp-3);
+  font-family: var(--fn-mono);
+  font-size: var(--fs-body);
+  color: var(--text-bright);
+  background: var(--bg-deep);
+  border: var(--border) solid var(--text-dim);
+  border-radius: var(--br-zero);
+}
+.form input:focus, .form select:focus, .form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.form__actions { display: flex; gap: var(--gap); flex-wrap: wrap; }
+.form__hint, .hint { font-size: var(--fs-label); color: var(--text-dim); }
+
+/* ---------- Login kartı (üç üründe BİREBİR aynı iskelet) ---------- */
+
+/* ---------- Nav (nuriacar dili — üç ürün ortak; TEK otorite) ---------- */
+
+/* Nav-offset sözleşmesi: sabit nav altında içerik nav-h + 2rem'de başlar.
+   !important bilinçli: ürün class'ları (.page vb.) eskiden bu boşluğu eziyordu
+   (nav'a yapışık içerik / çift boşluk) — tek standart tüm ürünlerde. */
+body > main { padding-top: calc(var(--nav-h) + var(--sp-6)) !important; }
+
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+  padding: 0 var(--page-pad);
+  /* Bulutlu şeffaf nav — !important bilinçli (tek otorite): herhangi bir ürün
+     css'i düz/opsak background basarsa bile solarized %92 + blur kazanır. */
+  background: var(--nav-bg) !important;
+  backdrop-filter: blur(var(--sp-3)) !important;
+  -webkit-backdrop-filter: blur(var(--sp-3)) !important;
+  border-bottom: var(--border) solid var(--accent-dark);
+  z-index: 100;
+}
+.nav__brand {
+  flex: 1 1 auto;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-title);
+  color: var(--accent-bright);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav__links { display: flex; align-items: center; gap: var(--gap); flex-wrap: wrap; }
+.nav__links a, .nav a {
+  font-size: var(--fs-body);
+  letter-spacing: var(--ls-mid);
+  text-transform: uppercase;
+  color: var(--text-light);
+  text-decoration: none;
+}
+.nav__links a:hover, .nav a:hover { color: var(--accent-bright); }
+.nav__toggle { display: none; flex-direction: column; justify-content: center; gap: calc(var(--border) * 2); width: var(--sp-7); height: var(--sp-7); background: none; border: 0; cursor: pointer; align-items: center; }
+.nav__toggle-bar { display: block; width: var(--sp-5); height: calc(var(--border) * 2); background: var(--text-light); margin: calc(var(--border) * 2) 0; }
+
+/* Toast: dar ekranda taşmaz */
+.toast { max-width: calc(100vw - (2 * var(--sp-5))); }
+
+/* ---------- Sekmeler (tab) ---------- */
+
+.tabs { display: flex; gap: var(--gap); flex-wrap: wrap; border-bottom: var(--border) solid var(--text-dim); margin-bottom: var(--gap); }
+.tabs a, .tab {
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-mid);
+  text-transform: uppercase;
+  color: var(--text-dim);
+  text-decoration: none;
+  padding-bottom: var(--sp-2);
+}
+.tabs a:hover { color: var(--text-light); }
+.tabs a[aria-current="page"], .tabs a.is-active { color: var(--accent-bright); border-bottom: calc(var(--border) * 2) solid var(--accent); }
+
+/* ---------- Durum kutuları ---------- */
+
+.alert { border: var(--border) solid var(--accent); padding: var(--sp-3) var(--sp-4); font-size: var(--fs-label); color: var(--text-light); }
+.alert--error { border-color: var(--c-cherry); color: var(--c-cherry); }
+/* Semantik durum tokenları — dark default; light mode/light.css'te override */
+:root { --warn-fg: var(--text-light); --warn-border: var(--c-amber); --accent-strong: var(--accent); }
+/* alert--ok: bilgi ile AYNI — sorun yok, ayrım gereksiz (Bauhaus) */
+
+/* ---------- Boş durum / yükleniyor ---------- */
+
+.empty { border: var(--border) dashed var(--text-dim); padding: var(--sp-6); text-align: center; color: var(--text-dim); font-size: var(--fs-label); }
+.skeleton { background: linear-gradient(90deg, var(--bg-dark) 25%, var(--bg-mid) 50%, var(--bg-dark) 75%); background-size: 200% 100%; animation: ds-skel 1.2s infinite; }
+@keyframes ds-skel { to { background-position: -200% 0; } }
+
+/* ---------- Sayfalama ---------- */
+
+.pager { display: flex; gap: var(--gap); align-items: center; font-size: var(--fs-label); }
+.pager a { color: var(--accent-bright); text-decoration: none; padding: var(--sp-1) var(--sp-2); border: var(--border) solid transparent; }
+.pager a:hover { border-color: var(--accent); }
+
+/* ---------- Toast (JS bağlanır) ---------- */
+
+.toast {
+  position: fixed;
+  bottom: var(--sp-5);
+  right: var(--sp-5);
+  z-index: 300;
+  background: var(--bg-dark);
+  border: var(--border) solid var(--accent);
+  color: var(--text-bright);
+  padding: var(--sp-3) var(--sp-4);
+  font-size: var(--fs-label);
+}
+
+/* ---------- Modal ---------- */
+
+.modal { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: color-mix(in srgb, var(--bg-deep) 80%, transparent); z-index: 250; }
+.modal__card { background: var(--bg-dark); border: var(--border) solid var(--accent); padding: var(--card-pad); max-width: 32rem; width: 100%; }
+.modal__card .form__actions { margin-top: var(--sp-5); }
+.modal__backdrop-close { position: absolute; inset: 0; background: transparent; border: 0; cursor: default; }
+.modal[hidden] { display: none; }
+
+/* ---------- KBD ---------- */
+
+.kbd { display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; height: var(--sp-6); min-width: var(--sp-6); padding: 0 var(--sp-1); font-size: var(--fs-label); color: var(--text-light); border: var(--border) solid var(--text-dim); }
+
+/* ---------- Footer (nuriacar dili) ---------- */
+
+.footer { border-top: var(--border) solid var(--text-dim); margin-top: var(--section-gap); }
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--sp-6) var(--page-pad);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  justify-content: space-between;
+}
+.footer__title { font-size: var(--fs-label); letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--text-bright); margin-bottom: var(--sp-2); }
+.footer__list { list-style: none; display: flex; flex-direction: column; gap: var(--gap); }
+.footer__list a { color: var(--text-dim); text-decoration: none; font-size: var(--fs-label); }
+.footer__list a:hover { color: var(--accent-bright); }
+.footer__tagline { font-size: var(--fs-label); color: var(--text-dim); }
+.footer__label { font-size: var(--fs-label); letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--text-dim); }
+
+/* ---------- Legacy eş anlamlılar (göç tamamlanana dek) ---------- */
+
+/* ---------- Tema düğmesi (dark/light — nuriacar deseni) ---------- */
+
+.nav__theme {
+  display: inline-flex !important;
+  visibility: visible !important;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: var(--sp-7);
+  height: var(--sp-7);
+  background: transparent;
+  border: var(--border) solid var(--accent-border);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: color var(--an-speed-fast) ease, border-color var(--an-speed-fast) ease;
+}
+.nav__theme svg { display: block; width: calc(100% - var(--sp-4)); height: calc(100% - var(--sp-4)); }
+/* Belirginlik (canlı ders: soluk gri 24px simge koyu zeminde fark edilmiyordu):
+   accent kenar + accent-bright simge + hafif accent zemin */
+
+.nav__theme:hover { border-color: var(--accent); color: var(--accent-bright); }
+
+/* ---------- Nav kullanıcı sembolü (adam — giriş/hesap) ---------- */
+
+.nav__user {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--sp-7);
+  height: var(--sp-7);
+  background: transparent;
+  border: var(--border) solid var(--accent-border);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: color var(--an-speed-fast) ease, border-color var(--an-speed-fast) ease;
+}
+.nav__user svg { display: block; width: calc(100% - var(--sp-4)); height: calc(100% - var(--sp-4)); }
+.nav__user:hover { border-color: var(--accent); color: var(--accent-bright); }
+
+/* ═══════════ KATMAN 6: NAVBAR — TEK FONT BOYUTU (fs-body = 18px) ═══════════ */
+/* Kullanıcı kararı: navbar'da YALNIZ --fs-body (1.125rem = 18px).
+   Marka, linkler, butonlar — hepsi aynı boyut. Hiyerarşi weight + spacing ile. */
+.nav__brand { font-size: var(--fs-body); font-weight: var(--fw-bold); letter-spacing: var(--ls-title); }
+.nav a, .nav__links a { font-size: var(--fs-body); }
+
+/* ═══════════ KATMAN 7: PAGE (katalog düzeni — inline style'dan taşındı) ═══════════ */
+.de-nav { flex-wrap: nowrap; }
+.de-nav .nav__links { flex-wrap: nowrap; }
+.de-section { margin-top: var(--section-gap); max-width: var(--max-width); margin-left: auto; margin-right: auto; padding-left: var(--page-pad); padding-right: var(--page-pad); }
+.de-anchor { display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: var(--gap); }
+.de-anchor a { color: var(--accent-bright); text-decoration: none; font-size: var(--fs-body); }
+.de-note { font-size: var(--fs-body); color: var(--text-dim); margin-bottom: var(--sp-3); }
+.de-row { display: flex; flex-wrap: wrap; gap: var(--gap); align-items: center; }
+.de-row + .de-row { margin-top: var(--gap); }
+.de-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); gap: var(--gap); }
+.de-swatch { border: var(--border) solid var(--text-dim); padding: var(--sp-2); }
+.de-swatch i { display: block; height: var(--sp-6); margin-bottom: var(--sp-2); border: var(--border) solid var(--text-dim); }
+.de-swatch span { font-size: var(--fs-body); color: var(--text-dim); display: block; }
+.de-demo { border: var(--border) dashed var(--text-dim); padding: var(--sp-4); position: relative; }
+
+/* ═══ KATMAN 8: NAV DEMO — sayfa içi gösterim (inline'dan taşındı) ═══ */
+.nav.de-nav-demo { position: static; }
+.nav.de-nav-demo .nav__toggle { display: flex; }
+
+/* ---------- Tipografi örnek listesi — token etiket/örnek ayrımı ---------- */
+
+.de-row--stack { flex-direction: column; align-items: stretch; gap: var(--gap); }
+.de-row--stack-full { flex-direction: column; align-items: stretch; }
+
+/* ---------- Katalog hızlı erişim linkleri — chip görünümü ---------- */
+
+.de-anchor a {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--sp-2) var(--sp-4);
+  border: var(--border) solid var(--accent-border);
+  border-radius: var(--br-zero);
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: var(--fs-body);
+  letter-spacing: var(--ls-mid);
+  text-transform: uppercase;
+  transition: border-color var(--an-speed-fast) ease, color var(--an-speed-fast) ease;
+}
+.de-anchor a:hover {
+  border-color: var(--accent);
+  color: var(--accent-bright);
+}
+
+/* ---------- Tooltip (hover bilgi balonu) ---------- */
+
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  cursor: help;
+}
+.tooltip::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + var(--sp-2));
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--sp-1) var(--sp-3);
+  background: var(--bg-dark);
+  border: var(--border) solid var(--accent);
+  border-radius: var(--br-zero);
+  color: var(--text-bright);
+  font-size: var(--fs-label);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--an-speed-fast) ease;
+  z-index: 200;
+}
+.tooltip:hover::after { opacity: 1; }
+
+/* ---------- Dropdown (açılır menü) ---------- */
+
+.dropdown { position: relative; display: inline-flex; }
+.dropdown__menu {
+  position: absolute;
+  top: calc(100% + var(--sp-1));
+  left: 0;
+  min-width: calc(var(--sp-6) * 6);
+  background: var(--bg-dark);
+  border: var(--border) solid var(--accent);
+  border-radius: var(--br-zero);
+  padding: var(--sp-1) 0;
+  z-index: 150;
+  display: none;
+}
+.dropdown.open .dropdown__menu { display: flex; flex-direction: column; }
+.dropdown__menu a, .dropdown__menu button {
+  padding: var(--sp-2) var(--sp-4);
+  font-size: var(--fs-body);
+  color: var(--text-light);
+  text-decoration: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--fn-mono);
+}
+.dropdown__menu a:hover, .dropdown__menu button:hover {
+  background: var(--accent-border);
+  color: var(--accent-bright);
+}
+
+/* Blok buton satırı — üstteki buton grubundan ayrışır */
+.de-row--block { margin-top: var(--gap); }
+
+/* ═══════════ EK ELEMENT KATALOĞU ═══════════ */
+
+/* ---------- Breadcrumb ---------- */
+
+.breadcrumb { display: flex; align-items: center; gap: var(--sp-2); font-size: var(--fs-label); }
+.breadcrumb a { color: var(--text-dim); text-decoration: none; }
+.breadcrumb a:hover { color: var(--accent-bright); }
+.breadcrumb__sep { color: var(--text-dim); }
+.breadcrumb [aria-current] { color: var(--text-light); }
+
+/* ---------- Progress bar ---------- */
+
+.progress { width: 100%; height: var(--sp-3); background: var(--bg-mid); border: var(--border) solid var(--text-dim); }
+.progress__bar { height: 100%; background: var(--accent); transition: width var(--an-speed) ease; }
+.progress__bar--error { background: var(--c-cherry); }
+
+/* ---------- Accordion ---------- */
+
+.accordion { border: var(--border) solid var(--text-dim); }
+.accordion__item + .accordion__item { border-top: var(--border) solid var(--text-dim); }
+.accordion__head {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; padding: var(--sp-3) var(--sp-4);
+  background: none; border: 0; cursor: pointer;
+  font-family: var(--fn-mono); font-size: var(--fs-body); font-weight: var(--fw-semibold);
+  color: var(--text-light); text-align: left;
+}
+.accordion__head:hover { color: var(--accent-bright); }
+.accordion__icon { transition: transform var(--an-speed-fast) ease; }
+.accordion__item.open .accordion__icon { transform: rotate(90deg); }
+.accordion__body { display: none; padding: var(--sp-4); font-size: var(--fs-body); color: var(--text-light); }
+.accordion__item.open .accordion__body { display: block; }
+
+/* ---------- Search input ---------- */
+
+.search { display: flex; align-items: center; gap: var(--sp-2); border: var(--border) solid var(--text-dim); padding: var(--sp-2) var(--sp-3); }
+.search input { flex: 1; background: none; border: 0; color: var(--text-bright); font-family: var(--fn-mono); font-size: var(--fs-body); outline: none; }
+.search svg { width: 1em; height: 1em; color: var(--text-dim); flex-shrink: 0; }
+
+/* ---------- Toggle switch ---------- */
+
+.toggle { position: relative; display: inline-flex; align-items: center; cursor: pointer; }
+.toggle input { position: absolute; opacity: 0; }
+.toggle__track { width: var(--sp-8); height: var(--sp-6); background: var(--bg-mid); border: var(--border) solid var(--text-dim); transition: background var(--an-speed-fast) ease; }
+.toggle__thumb { position: absolute; top: var(--border); left: var(--border); width: calc(var(--sp-6) - 2 * var(--border)); height: calc(var(--sp-6) - 2 * var(--border)); background: var(--text-dim); transition: left var(--an-speed-fast) ease, background var(--an-speed-fast) ease; }
+.toggle input:checked + .toggle__track { background: var(--accent-border); border-color: var(--accent); }
+.toggle input:checked + .toggle__track .toggle__thumb { left: calc(var(--sp-8) - var(--sp-6) + var(--border)); background: var(--accent); }
+
+/* ---------- Checkbox / Radio ---------- */
+
+.check { display: flex; align-items: center; gap: var(--sp-2); font-size: var(--fs-body); color: var(--text-light); cursor: pointer; }
+.check input {
+  appearance: none; -webkit-appearance: none;
+  width: var(--sp-6); height: var(--sp-6);
+  border: calc(var(--border) * 2) solid var(--text-dim);
+  background: var(--bg-deep);
+  cursor: pointer;
+  border-radius: 0;
+  flex-shrink: 0;
+  position: relative;
+}
+.check input:checked {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+.check input:checked::after {
+  content: '';
+  position: absolute;
+  left: 50%; top: 50%;
+  width: calc(var(--sp-2) + var(--border));
+  height: calc(var(--sp-2) + var(--border));
+  border-right: calc(var(--border) * 2) solid var(--bg-deep);
+  border-bottom: calc(var(--border) * 2) solid var(--bg-deep);
+  transform: translate(-50%, -60%) rotate(45deg);
+}
+.check--radio input { appearance: none; border-radius: 0; width: var(--sp-6); height: var(--sp-6); border: calc(var(--border) * 2) solid var(--text-dim); background: var(--bg-deep); cursor: pointer; }
+
+/* ---------- Stat card (dashboard metrik) ---------- */
+
+.stat { display: flex; flex-direction: column; gap: var(--gap); }
+.stat__label { font-size: var(--fs-label); letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--text-dim); }
+.stat__value { font-size: var(--fs-h2); font-weight: var(--fw-bold); color: var(--accent-bright); }
+.stat__delta { font-size: var(--fs-label); color: var(--text-dim); }
+
+/* ---------- Timeline ---------- */
+
+.timeline { display: flex; flex-direction: column; gap: var(--gap); }
+.timeline__item { display: flex; gap: var(--gap); }
+.timeline__marker { display: inline-block; vertical-align: middle; width: var(--sp-2); height: var(--sp-2); background: var(--accent); flex-shrink: 0; margin-top: calc(var(--lh-tight) / 2 * 1em - var(--sp-2) / 2); }
+.timeline__marker--error { background: var(--c-cherry); }
+.timeline__content { flex: 1; }
+.timeline__time { font-size: var(--fs-label); color: var(--text-dim); }
+
+/* ---------- Code block ---------- */
+
+.code-block { background: var(--bg-dark); border: var(--border) solid var(--text-dim); padding: var(--sp-4); font-size: var(--fs-body); color: var(--accent-bright); overflow-x: auto; white-space: pre; font-family: var(--fn-mono); line-height: var(--lh-body); }
+
+/* ---------- Steps (wizard) ---------- */
+
+.steps { display: flex; gap: var(--gap); }
+.step { display: flex; align-items: center; gap: var(--sp-2); font-size: var(--fs-label); color: var(--text-dim); }
+.step__num { width: var(--sp-7); height: var(--sp-7); display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; border: var(--border) solid var(--text-dim); font-size: var(--fs-label); }
+.step--active { color: var(--accent-bright); }
+.step--active .step__num { border-color: var(--accent); color: var(--accent-bright); }
+.step--done { color: var(--text-light); }
+.step--done .step__num { background: var(--accent); border-color: var(--accent); color: var(--bg-deep); }
+
+/* ---------- Divider ---------- */
+
+.divider { border: 0; border-top: var(--border) solid var(--text-dim); margin: var(--gap) 0; }
+
+/* ---------- List ---------- */
+
+.list { list-style: none; display: flex; flex-direction: column; gap: var(--sp-2); font-size: var(--fs-body); color: var(--text-light); }
+.list li { display: flex; gap: var(--sp-2); align-items: baseline; }
+.list li::before { content: "—"; color: var(--accent-bright); flex-shrink: 0; }
+
+/* ---------- Blockquote ---------- */
+
+.quote { border-left: var(--sp-1) solid var(--accent); padding: var(--sp-3) var(--sp-4); font-size: var(--fs-body); color: var(--text-light); font-style: italic; }
+.quote__cite { display: block; margin-top: var(--sp-2); font-size: var(--fs-label); color: var(--text-dim); font-style: normal; }
+
+/* ---------- Sparkline (mini chart) ---------- */
+
+.sparkline { display: flex; align-items: flex-end; gap: var(--border); height: var(--sp-6); }
+.sparkline__bar { width: var(--sp-1); background: var(--accent); min-height: calc(var(--border) * 2); }
+.sparkline__bar--peak { background: var(--accent-bright); }
+
+/* ---------- Sidebar (dashboard kenar menü) ---------- */
+
+.sidebar { display: flex; flex-direction: column; gap: var(--sp-1); border-right: var(--border) solid var(--text-dim); padding: var(--sp-4); min-width: 12rem; }
+.sidebar a { display: flex; align-items: center; gap: var(--sp-2); padding: var(--sp-2) var(--sp-3); font-size: var(--fs-body); color: var(--text-light); text-decoration: none; border-left: calc(var(--border) * 2) solid transparent; }
+.sidebar a:hover { color: var(--accent-bright); background: var(--accent-border); }
+.sidebar a[aria-current] { border-left-color: var(--accent); color: var(--accent-bright); background: var(--accent-border); }
+
+/* ---------- Panel head (dashboard başlık) ---------- */
+
+.panel-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--gap); }
+.panel-head__title { font-size: var(--fs-h3); font-weight: var(--fw-bold); letter-spacing: var(--ls-title); color: var(--text-bright); }
+
+/* ---------- Onboarding steps ---------- */
+
+.onboarding { display: flex; flex-direction: column; gap: var(--gap); }
+.onboarding__step { display: flex; align-items: center; gap: var(--gap); }
+.onboarding__check { width: var(--sp-7); height: var(--sp-7); display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; border: var(--border) solid var(--accent); color: var(--accent-bright); font-size: var(--fs-label); }
+.onboarding__check--done { background: var(--accent); color: var(--bg-deep); }
+.onboarding__text { font-size: var(--fs-body); color: var(--text-light); }
+.onboarding__step--pending .onboarding__check { border-color: var(--text-dim); color: var(--text-dim); }
+.onboarding__step--pending .onboarding__text { color: var(--text-dim); }
+
+/* ---------- File upload ---------- */
+
+.upload { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--gap); padding: var(--sp-8); border: var(--border) dashed var(--text-dim); text-align: center; cursor: pointer; }
+.upload:hover { border-color: var(--accent); }
+.upload input { display: none; }
+.upload__text { font-size: var(--fs-body); color: var(--text-light); }
+.upload__hint { font-size: var(--fs-label); color: var(--text-dim); }
+.code-block__prompt { color: var(--text-dim); margin-right: var(--sp-2); user-select: none; }
+
+/* ---------- RESPONSIVE — tek breakpoint (Bauhaus: fluid + minimal) ---------- */
+/* Mobile-first: varsayılan = hamburger; genişte = linkler */
+.nav__links { display: none; }
+.nav__toggle { display: flex; }
+
+@media (min-width: 48rem) {
+  .nav__links { display: flex; }
+  .nav__toggle { display: none; }
+}
+
+/* Nav açık menü (mobil) */
+.nav.open .nav__links {
+  display: flex;
+  position: absolute;
+  top: var(--nav-h); left: 0; right: 0;
+  flex-direction: column;
+  background: var(--bg-deep);
+  padding: var(--gap);
+  border-bottom: var(--border) solid var(--text-dim);
+}
+
+/* ---------- Erişilebilirlik ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* ═══════════ EK ELEMENT KATALOĞU — FAZ 2 ═══════════ */
+
+/* ---------- Severity dot (risk göstergesi) ---------- */
+
+.dot { display: inline-block; vertical-align: middle; width: var(--sp-2); height: var(--sp-2); background: var(--text-dim); flex-shrink: 0; }
+.dot--critical { background: var(--c-cherry); }
+.dot--high { background: var(--c-raspberry); }
+.dot--medium { background: var(--c-amber); }
+.dot--low { background: var(--c-slate-blue); }
+
+/* ---------- OTP input (6 haneli kod) ---------- */
+
+.input-otp { display: flex; gap: var(--gap); }
+.input-otp input {
+  width: var(--sp-7); height: var(--sp-7);
+  text-align: center;
+  font-family: var(--fn-mono); font-size: var(--fs-h3);
+  color: var(--text-bright);
+  background: var(--bg-deep);
+  border: var(--border) solid var(--text-dim);
+}
+.input-otp input:focus { border-color: var(--accent); outline: none; }
+
+/* ---------- Copy button ---------- */
+
+.btn--copy {
+  width: var(--sp-6); height: var(--sp-6);
+  padding: 0;
+  vertical-align: middle;
+  border: var(--border) solid var(--text-dim);
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-family: var(--fn-mono);
+}
+.btn--copy:hover { border-color: var(--accent); color: var(--accent-bright); }
+
+/* ---------- Chart bar (yatay metrik çubuğu) ---------- */
+
+.chart-bar { display: flex; flex-direction: column; gap: var(--sp-2); }
+.chart-bar__row { display: flex; align-items: center; gap: var(--sp-3); }
+.chart-bar__label { width: 8rem; font-size: var(--fs-label); color: var(--text-dim); text-align: right; flex-shrink: 0; }
+.chart-bar__track { flex: 1; height: var(--sp-3); background: var(--bg-mid); }
+.chart-bar__fill { height: 100%; background: var(--text-dim); }  /* default nötr — severity varyantları renklendirir */
+.chart-bar__fill--critical { background: var(--c-cherry); }
+.chart-bar__fill--high { background: var(--c-raspberry); }
+.chart-bar__fill--medium { background: var(--c-amber); }
+.chart-bar__fill--low { background: var(--c-slate-blue); }
+.chart-bar__value { font-size: var(--fs-label); color: var(--text-light); min-width: 3rem; }
+
+/* ---------- Heat map (risk matrisi) ---------- */
+
+.heatmap { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--border); }
+.heatmap__cell { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: var(--fs-label); color: var(--text-bright); }
+.heatmap__cell--critical { background: var(--c-cherry); }
+.heatmap__cell--high { background: var(--c-raspberry); }
+.heatmap__cell--medium { background: var(--c-amber); color: var(--bg-deep); }
+.heatmap__cell--low { background: var(--c-slate-blue); color: var(--bg-deep); }
+.heatmap__cell--empty { background: var(--bg-mid); color: transparent; }
+
+/* ---------- Gantt / Timeline bar ---------- */
+
+.gantt { display: flex; flex-direction: column; gap: var(--sp-1); }
+.gantt__row { display: flex; align-items: center; gap: var(--sp-2); }
+.gantt__label { width: 6rem; font-size: var(--fs-label); color: var(--text-dim); text-align: right; flex-shrink: 0; }
+.gantt__track { flex: 1; height: var(--sp-3); background: var(--bg-mid); position: relative; }
+.gantt__bar { position: absolute; top: 0; height: 100%; background: var(--accent); }
+
+/* ---------- Filter chips (çoklu seçim) ---------- */
+
+.filter { display: flex; flex-wrap: wrap; gap: var(--sp-2); align-items: center; }
+.filter__label { font-size: var(--fs-label); color: var(--text-dim); text-transform: uppercase; letter-spacing: var(--ls-label); }
+.filter__chip {
+  height: var(--sp-6); min-width: var(--sp-6); padding: 0 var(--sp-3); display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;
+  font-size: var(--fs-label);
+  border: var(--border) solid var(--text-dim);
+  color: var(--text-light);
+  cursor: pointer;
+  background: transparent;
+  font-family: var(--fn-mono);
+}
+.filter__chip:hover { border-color: var(--accent); color: var(--accent-bright); }
+.filter__chip--active { background: var(--accent); border-color: var(--accent); color: var(--bg-deep); }
+
+/* ---------- Readonly input (kopyalanabilir değer) ---------- */
+
+.input-readonly {
+  display: flex; align-items: center; gap: var(--gap);
+  height: var(--sp-7); padding: 0 var(--sp-3);
+  background: var(--bg-dark);
+  border: var(--border) solid var(--text-dim);
+  font-size: var(--fs-body);
+  color: var(--text-light);
+}
+.input-readonly code { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ---------- Tabs (variant — sekmeli panel) ---------- */
+
+.tabs-panel { border: var(--border) solid var(--text-dim); }
+.tabs-panel__head { display: flex; border-bottom: var(--border) solid var(--text-dim); }
+.tabs-panel__tab {
+  padding: var(--sp-2) var(--sp-4);
+  font-size: var(--fs-body);
+  color: var(--text-dim);
+  background: transparent;
+  border: 0;
+  border-right: var(--border) solid var(--text-dim);
+  cursor: pointer;
+  font-family: var(--fn-mono);
+}
+.tabs-panel__tab:hover { color: var(--accent-bright); }
+.tabs-panel__tab--active { color: var(--accent-bright); background: var(--accent-border); }
+.tabs-panel__body { padding: var(--sp-4); }
+
+/* ---------- Key-Value (meta detay) ---------- */
+
+.kv { display: grid; grid-template-columns: minmax(8rem, auto) 1fr; gap: var(--sp-2) var(--gap); font-size: var(--fs-body); }
+.kv__key { color: var(--text-dim); text-transform: uppercase; letter-spacing: var(--ls-label); font-size: var(--fs-label); align-self: center; }
+.kv__value { color: var(--text-light); }
+.btn--copy svg { display: block; width: 1em; height: 1em; }
+.btn--copy { display: inline-flex; align-items: center; justify-content: center; }
+
+/* ═══════════ FAZ 3 — UX KRİTİK ELEMENTLER ═══════════ */
+
+/* ---------- Spinner (yükleniyor) ---------- */
+
+/* Spinner = ring'in animasyonlu hali — aynı SVG teknik, aynı boyut (sp-6) */
+.spinner {
+  width: var(--sp-7); height: var(--sp-7);
+  border: calc(var(--border) * 2) solid var(--bg-mid);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+/* Alternatif: SVG stroke spinner — ring ile özdeş desen */
+/* spinner tek boyut: sp-5 */
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- Progress circular (dairesel ilerleme) ---------- */
+
+.progress-ring { position: relative; width: var(--sp-7); height: var(--sp-7); }
+.progress-ring svg { transform: rotate(-90deg); }
+.progress-ring__track { fill: none; stroke: var(--bg-mid); stroke-width: calc(var(--border) * 3); }
+.progress-ring__bar { fill: none; stroke: var(--accent); stroke-width: calc(var(--border) * 3); stroke-dasharray: 119; stroke-dashoffset: 42; transition: stroke-dashoffset var(--an-speed) ease; }
+.progress-ring__label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: var(--fs-label); color: var(--text-light); }
+
+/* ---------- Icon set (SVG, currentColor, 1em) ---------- */
+
+.icon { display: inline-flex; align-items: center; justify-content: center; width: 1em; height: 1em; flex-shrink: 0; }
+.icon svg { width: 100%; height: 100%; }
+
+/* ---------- Avatar (kullanıcı profili) ---------- */
+
+.avatar {
+  display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;
+  width: var(--sp-6); height: var(--sp-6);
+  border: var(--border) solid var(--accent-border);
+  background: var(--bg-mid);
+  font-size: var(--fs-label); font-weight: var(--fw-bold);
+  color: var(--text-light);
+  overflow: hidden;
+}
+/* avatar tek boyut: sp-6 */
+
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------- Back to top ---------- */
+
+.back-to-top {
+  position: fixed; bottom: var(--sp-5); right: var(--sp-5);
+  width: var(--sp-7); height: var(--sp-7);
+  display: none; align-items: center; justify-content: center;
+  background: var(--bg-dark);
+  border: var(--border) solid var(--accent);
+  color: var(--accent-bright);
+  cursor: pointer;
+  z-index: 150;
+  transition: opacity var(--an-speed-fast) ease;
+}
+.back-to-top--visible { display: flex; }
+.back-to-top:hover { background: var(--accent-border); }
+
+/* ---------- Counter badge (sayı) ---------- */
+
+.counter {
+  display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;
+  min-width: var(--sp-6); height: var(--sp-6);
+  padding: 0 var(--sp-1);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+  background: var(--c-cherry); color: var(--bg-deep);
+}
+
+/* ---------- Sort indicator (tablo sıralama) ---------- */
+
+.sort { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; gap: calc(var(--border) * 2); margin-left: var(--sp-1); cursor: pointer; }
+.sort__arrow { width: 0; height: 0; border-left: calc(var(--sp-2)) solid transparent; border-right: calc(var(--sp-2)) solid transparent; }
+.sort__arrow--asc { border-bottom: calc(var(--sp-2)) solid var(--text-dim); }
+.sort__arrow--desc { border-top: calc(var(--sp-2)) solid var(--text-dim); }
+.sort--active .sort__arrow--asc { border-bottom-color: var(--accent-bright); }
+.sort--active .sort__arrow--desc { border-top-color: var(--accent-bright); }
+
+/* ---------- Segmented control (görünüm modu) ---------- */
+
+.segmented { display: inline-flex; border: var(--border) solid var(--text-dim); }
+.segmented__btn {
+  height: var(--sp-7); padding: 0 var(--sp-4);
+  font-size: var(--fs-body);
+  font-family: var(--fn-mono);
+  color: var(--text-dim);
+  background: transparent;
+  border: 0; border-right: var(--border) solid var(--text-dim);
+  cursor: pointer;
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+}
+.segmented__btn:last-child { border-right: 0; }
+.segmented__btn:hover { color: var(--accent-bright); }
+.segmented__btn--active { background: var(--accent-border); color: var(--accent-bright); }
+
+/* ---------- Environment badge (DEV/STAGING/PROD) ---------- */
+
+.env {
+  display: inline-flex; align-items: center;
+  padding: var(--sp-1) var(--sp-3);
+  font-size: var(--fs-label); font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-label); text-transform: uppercase;
+}
+.env--dev { background: var(--c-slate-blue); color: var(--text-bright); }
+.env--staging { background: var(--c-amber); color: var(--bg-deep); }
+.env--prod { background: var(--c-cherry); color: var(--text-bright); }
+
+/* ---------- Connection status ---------- */
+
+.conn { display: inline-flex; align-items: center; gap: var(--sp-2); font-size: var(--fs-label); color: var(--text-dim); }
+.conn__dot { display: inline-block; vertical-align: middle; width: var(--sp-2); height: var(--sp-2); }
+.conn--online .conn__dot { background: var(--c-verdigris); }
+.conn--offline .conn__dot { background: var(--c-cherry); }
+.conn--reconnecting .conn__dot { background: var(--c-amber); animation: blink 1s infinite; }
+@keyframes blink { 50% { opacity: 0.3; } }
+
+/* ---------- Confirm destructive (silme onayı) ---------- */
+
+.modal--destructive .modal__card { border-color: var(--c-cherry); }
+.modal--destructive .card__title { color: var(--c-cherry); }
+
+/* ---------- Drag handle (sıralama) ---------- */
+
+.drag-handle {
+  display: inline-flex; flex-direction: column; justify-content: center; gap: calc(var(--border) * 2);
+  width: var(--sp-6); height: var(--sp-6); cursor: grab;
+  color: var(--text-dim);
+}
+.drag-handle::before, .drag-handle::after, .drag-handle span {
+  content: ''; display: block;
+  height: calc(var(--border) * 2); background: currentColor;
+}
+.drag-handle:active { cursor: grabbing; }
+
+/* ═══════════ ORTAK TEMEL — inline kutu ailesi ═══════════ */
+/* Tüm küçük kutular (badge, avatar, counter, chip, env, kbd, step-num,
+   onboarding-check) aynı temelden türer: border + padding + inline-flex. */
+
+.box-inline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  border: var(--border) solid var(--text-dim);
+  padding: var(--sp-1) var(--sp-3);
+  font-family: var(--fn-mono);
+  font-size: var(--fs-label);
+  color: var(--text-light);
+  border-radius: var(--br-zero);
+}
+
+/* Varyantlar — yalnızca FARKLI olanı ekler, temeli tekrarlamaz */
+.box-inline--accent { border-color: var(--accent); color: var(--accent-bright); }
+.box-inline--fill-cherry { background: var(--c-cherry); border-color: var(--c-cherry); color: var(--bg-deep); }
+.box-inline--square { width: var(--sp-6); height: var(--sp-6); padding: 0; }
+
+.check--radio input:checked { border-color: var(--accent); background: var(--accent); box-shadow: inset 0 0 0 calc(var(--border) * 2) var(--bg-deep); }
+
+/* Select — native yuvarlak ok'u kapat, kare özel ok */
+.form select {
+  appearance: none; -webkit-appearance: none;
+  background-image: none;
+  padding-right: var(--sp-8);
+  background: var(--bg-deep);
+}
+.form select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='1em' height='1em'%3E%3Cpath d='M6 9l6 6 6-6' fill='none' stroke='%2393a1a1' stroke-width='1.8'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--sp-3) center;
+}
+
+/* ═══════════ FAZ 4 — Sayfa Kompozisyonları ═══════════ */
+
+/* ---------- Hero (ana sayfa açılışı) ---------- */
+
+.hero { display: flex; flex-direction: column; gap: var(--gap); padding: var(--sp-8) 0; }
+.hero__title { font-size: var(--fs-h2); font-weight: var(--fw-bold); letter-spacing: var(--ls-title); color: var(--text-bright); }
+.hero__sub { font-size: var(--fs-body); color: var(--text-light); max-width: var(--reading); }
+.hero__actions { display: flex; gap: var(--gap); flex-wrap: wrap; }
+.hero__stat { display: flex; flex-direction: column; gap: var(--sp-2); }
+.hero__stat-value { font-size: var(--fs-h2); font-weight: var(--fw-bold); color: var(--accent-bright); }
+.hero__stat-label { font-size: var(--fs-label); color: var(--text-dim); text-transform: uppercase; letter-spacing: var(--ls-label); }
+
+/* ---------- Ürün elementleri — Faz 5 (ürünlerden doğan desenler) ---------- */
+
+/* Login kompozisyonu — Bauhaus: ayrı deri yok; .auth yalnız YERLEŞİM */
+.auth {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - var(--nav-h) - var(--section-gap) * 2);
+  padding: var(--section-gap) var(--page-pad);
+}
+.auth .card { width: 100%; max-width: calc(var(--sp-6) * 12); }
+.auth .card__title { text-align: center; }
+
+/* Link kartı — kart whole-clickable */
+a.card, .card--link { text-decoration: none; color: inherit; cursor: pointer; }
+a.card:hover, .card--link:hover { border-color: var(--accent); }
+
+/* Bölüm işaretleyici — eyebrow başlık öncesi kare nokta */
+.section-marker { width: var(--sp-2); height: var(--sp-2); background: var(--accent); display: inline-block; vertical-align: middle; }
+.section-header { display: flex; align-items: center; gap: var(--gap); margin-bottom: var(--gap); }
+
+/* Nav CTA + panel anahtarı (Yönetim · Panel) */
+.nav__cta { height: var(--sp-7); display: inline-flex; align-items: center; padding: 0 var(--sp-4); border: var(--border) solid var(--accent); color: var(--accent-bright); text-decoration: none; text-transform: uppercase; letter-spacing: var(--ls-mid); }
+.nav__cta:hover { background: var(--accent-border); }
+.nav-switch { display: inline-flex; align-items: center; gap: var(--sp-2); }
+.nav-switch__sep { color: var(--text-dim); }
+
+/* Araç seçim paneli — başlık + hızlı filtre + kaydırılabilir liste + sayaç */
+.toolsel { display: flex; flex-direction: column; gap: var(--gap); border: var(--border) solid var(--accent-border); padding: var(--sp-4); }
+.toolsel__head { display: flex; align-items: center; justify-content: space-between; gap: var(--gap); flex-wrap: wrap; }
+.toolsel__label { font-size: var(--fs-label); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--text-dim); }
+.toolsel__quick { display: flex; gap: var(--sp-2); flex-wrap: wrap; }
+.toolsel__list { display: flex; flex-direction: column; gap: var(--sp-2); max-height: calc(var(--sp-8) * 3); overflow-y: auto; }
+.toolsel__count { font-size: var(--fs-label); color: var(--text-dim); }
+.toolsel__empty { font-size: var(--fs-body); color: var(--text-dim); padding: var(--sp-4); text-align: center; }
+
+/* Seçilebilir satır — checkbox + ad/açıklama/gereksinim */
+.toolrow { display: flex; gap: var(--sp-3); align-items: flex-start; padding: var(--sp-3); border: var(--border) solid var(--accent-border); cursor: pointer; }
+.toolrow:hover { border-color: var(--accent); }
+.toolrow:has(input:checked) { border-color: var(--accent); background: var(--accent-border); }
+.toolrow input[type="checkbox"] { appearance: none; -webkit-appearance: none; width: var(--sp-6); height: var(--sp-6); border: calc(var(--border) * 2) solid var(--text-dim); background: var(--bg-deep); cursor: pointer; flex-shrink: 0; }
+.toolrow input[type="checkbox"]:checked { background: var(--accent); border-color: var(--accent); }
+.toolrow__body { display: flex; flex-direction: column; gap: var(--sp-1); }
+.toolrow__name { font-size: var(--fs-body); font-weight: var(--fw-bold); color: var(--text-bright); }
+.toolrow__desc { font-size: var(--fs-label); color: var(--text-dim); }
+.toolrow__req { font-size: var(--fs-label); color: var(--accent-bright); }
+
+/* ---------- Hero canvas (Conway & Go sim — anasayfa LIVE) ---------- */
+
+.sim-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--gap); width: 100%; }
+.sim-col { display: flex; flex-direction: column; gap: var(--sp-2); }
+.sim-bar { display: flex; justify-content: space-between; align-items: center; height: var(--sp-7); gap: var(--gap); }
+.sim-status { display: flex; gap: var(--sp-2); align-items: center; }
+.sim-label { font-size: var(--fs-label); letter-spacing: var(--ls-tight); color: var(--c-cherry); display: inline-flex; align-items: center; height: var(--sp-7); animation: blink 2s ease-in-out infinite; }
+.sim-label--gold { color: var(--gold); animation: none; }
+.sim-stat { font-size: var(--fs-label); letter-spacing: var(--ls-tight); color: var(--c-cherry); display: inline-flex; align-items: center; height: var(--sp-7); padding: 0 var(--sp-2); white-space: nowrap; }
+.sim-speed, .sim-reset { background: none; border: var(--border) solid var(--text-dim); color: var(--text-dim); font-family: var(--fn-mono); font-size: var(--fs-label); min-width: var(--sp-6); height: var(--sp-7); padding: 0 var(--sp-3); display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; cursor: pointer; transition: border-color var(--an-speed-fast) ease, color var(--an-speed-fast) ease, background var(--an-speed-fast) ease; }
+.sim-speed:hover, .sim-reset:hover { border-color: var(--accent); color: var(--accent); }
+.sim-speed.active { border-color: var(--accent-bright); color: var(--bg-deep); background: var(--accent-bright); }
+.sim-frame { display: flex; align-items: center; justify-content: center; aspect-ratio: 1 / 1; border: var(--border) solid var(--accent-dark); overflow: hidden; }
+.sim-canvas { display: block; width: 97%; aspect-ratio: 1 / 1; border: var(--border) solid var(--accent-border); }
+
+/* ---------- Pricing tier (plan kartı) ---------- */
+
+.tier-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(calc((100% - var(--gap) * 2) / 3), 1fr)); gap: var(--gap); max-width: 75rem; }
+.tier { display: flex; flex-direction: column; gap: var(--gap); border: var(--border) solid var(--accent-border); padding: var(--card-pad); }
+.tier--featured { border-color: var(--accent); background: var(--accent-border); }
+.tier__name { font-size: var(--fs-body); font-weight: var(--fw-bold); letter-spacing: var(--ls-title); color: var(--text-bright); text-transform: uppercase; }
+.tier__price { font-size: var(--fs-h2); font-weight: var(--fw-bold); color: var(--accent-bright); }
+.tier__period { font-size: var(--fs-label); color: var(--text-dim); }
+.tier__features { display: flex; flex-direction: column; gap: var(--sp-2); font-size: var(--fs-body); color: var(--text-light); list-style: none; padding: 0; margin: 0; }
+.tier__features li { display: flex; gap: var(--sp-2); align-items: baseline; }
+.tier__features li::before { content: "—"; color: var(--accent-bright); flex-shrink: 0; }
+
+/* ---------- 404 / NotFound ---------- */
+
+.notfound { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--gap); padding: var(--sp-8); text-align: center; }
+.notfound__code { font-size: var(--fs-h2); font-weight: var(--fw-bold); color: var(--accent-bright); letter-spacing: var(--ls-title); }
+.notfound__text { font-size: var(--fs-body); color: var(--text-light); }
+
+/* ---------- Notification banner (sayfa üstü duyuru) ---------- */
+
+.banner {
+  display: flex; align-items: center; gap: var(--gap);
+  padding: var(--sp-3) var(--sp-4);
+  border: var(--border) solid var(--c-amber);
+  background: color-mix(in srgb, var(--c-amber) 8%, transparent);
+  font-size: var(--fs-body);
+  color: var(--text-light);
+}
+.banner__close { margin-left: auto; background: none; border: 0; color: var(--text-dim); cursor: pointer; font-size: var(--fs-body); font-family: var(--fn-mono); }
+
+/* ---------- Logo grid (partner/entegrasyon) ---------- */
+
+.logo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); width: 100%; }
+.logo-grid__item { display: flex; align-items: center; justify-content: center; height: var(--sp-7); font-size: var(--fs-body); color: var(--text-light); border: var(--border) solid var(--accent-border); }
+
+/* ---------- Inline form error ---------- */
+
+.form__error { font-size: var(--fs-label); color: var(--c-cherry); }
+.form__field--error input, .form__field--error select, .form__field--error textarea { border-color: var(--c-cherry); }
+
+/* ---------- Nav group (çok seviyeli menü) ---------- */
+
+.nav__group { display: flex; flex-direction: column; gap: var(--sp-1); padding: var(--sp-2) 0; }
+.nav__group-label { font-size: var(--fs-label); color: var(--text-dim); text-transform: uppercase; letter-spacing: var(--ls-label); padding: 0 var(--sp-3); }
+.nav__divider { border: 0; border-top: var(--border) solid var(--text-dim); margin: var(--sp-2) 0; }
+
+/* ---------- Legend (grafik renk açıklaması) ---------- */
+
+.legend { display: flex; flex-wrap: wrap; gap: var(--gap); align-items: center; width: 100%; }
+.legend__item { display: inline-flex; align-items: center; gap: var(--sp-2); font-size: var(--fs-label); color: var(--text-light); }
+.legend__dot { display: inline-block; vertical-align: middle; width: var(--sp-2); height: var(--sp-2); }
+
+/* ---------- Badge group (çoklu yan yana) ---------- */
+
+.badge-group { display: inline-flex; flex-wrap: wrap; gap: var(--sp-2); }
+
+/* ---------- Phase (dikey adım) ---------- */
+
+.phase { display: flex; flex-direction: column; gap: var(--gap); }
+.phase__item { display: flex; align-items: flex-start; gap: var(--gap); }
+.phase__num { width: var(--sp-7); height: var(--sp-7); display: inline-flex; align-items: center; justify-content: center; border: var(--border) solid var(--accent-border); font-size: var(--fs-body); font-weight: var(--fw-bold); color: var(--text-light); flex-shrink: 0; margin-top: calc(var(--lh-tight) / 2 * 1em - var(--sp-7) / 2); }
+.phase__num--active { border-color: var(--accent); color: var(--accent-bright); background: var(--accent-border); }
+.phase__num--done { background: var(--accent); border-color: var(--accent); color: var(--bg-deep); }
+.phase__content { flex: 1; display: flex; flex-direction: column; gap: var(--sp-2); }
+.phase__label { font-size: var(--fs-label); color: var(--text-dim); text-transform: uppercase; letter-spacing: var(--ls-label); }
+.phase__text { font-size: var(--fs-body); color: var(--text-light); }
+
+/* ---------- Key stat (dashboard ana metrik) ---------- */
+
+.stat-hero { display: flex; flex-direction: column; gap: var(--sp-2); }
+.stat-hero__value { font-size: var(--fs-h2); font-weight: var(--fw-bold); color: var(--accent-bright); }
+.stat-hero__label { font-size: var(--fs-body); color: var(--text-dim); }
+.stat-hero__trend { font-size: var(--fs-label); color: var(--text-light); }
+
+/* ---------- Tag (inline etiket) ---------- */
+
+.tag { display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; height: var(--sp-6); padding: 0 var(--sp-2); font-size: var(--fs-label); color: var(--text-dim); border: var(--border) solid var(--text-dim); background: transparent; }
+
+/* ---------- Graph container (attack graph / network) ---------- */
+
+.graph-container { position: relative; border: var(--border) solid var(--text-dim); background: var(--bg-deep); overflow: hidden; min-height: 16rem; }
+.graph-container__canvas { width: 100%; height: 100%; display: block; }
+.graph-container__legend { position: absolute; bottom: var(--sp-3); left: var(--sp-3); }
+.legend__dot--critical { background: var(--c-cherry); }
+.legend__dot--high { background: var(--c-raspberry); }
+.legend__dot--medium { background: var(--c-amber); }
+.legend__dot--low { background: var(--c-slate-blue); }
+.legend__dot--ok { background: var(--accent); }

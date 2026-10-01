@@ -4,7 +4,7 @@ title:  "shark-tank - m26: Baseline Analizi"
 date:   2026-08-12 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 26: Baseline Analizi
+## Modül 26: Baseline Analizi
 
 **Neden?** Gece yarısı anormal trafik artışı var. Ama normalde ağda neler oluyor bilmiyorsan anormali bulamazsın. Normal olanı bilmeden anormal olanı bulamazsın. Baseline (trafik profili) olmadan, bir DNS tunneling saldırısını normal DNS sorgularından ayırt edemezsin. Protocol Hierarchy ile anormal protokol oranları, Conversations ile şüpheli IP çiftleri, Endpoints ile yabancı IP'ler tespit edilir. Bu modülde, baseline çıkararak anomali tespiti yapmayı öğreneceksin.
 

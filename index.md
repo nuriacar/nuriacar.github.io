@@ -1,7 +1,51 @@
 ---
 layout: page
 title: Nuri ACAR
+hide_title: true
 ---
+
+<div class="sim-grid">
+
+<div class="sim-col">
+  <div class="sim-bar">
+    <div class="sim-status">
+      <span class="sim-label">LIVE</span>
+      <span id="gen" class="sim-stat">GEN 0</span>
+      <span id="pop" class="sim-stat">POP 0</span>
+    </div>
+    <div class="sim-status">
+      <button class="sim-speed life-speed" data-ms="300" type="button">1x</button>
+      <button class="sim-speed life-speed active" data-ms="150" type="button">2x</button>
+      <button class="sim-speed life-speed" data-ms="75" type="button">4x</button>
+      <button id="life-reset" class="sim-reset" type="button" title="Reset"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/><polyline points="23 4 23 10 17 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg></button>
+    </div>
+  </div>
+  <div class="sim-frame">
+    <canvas id="life" class="sim-canvas" aria-hidden="true"></canvas>
+  </div>
+</div>
+
+<div class="sim-col">
+  <div class="sim-bar">
+    <div class="sim-status">
+      <span class="sim-label sim-label--gold">SIM</span>
+      <span id="go-move" class="sim-stat">MOVE 0</span>
+      <span id="go-black" class="sim-stat">B 0</span>
+      <span id="go-white" class="sim-stat">W 0</span>
+    </div>
+    <div class="sim-status">
+      <button class="sim-speed go-speed" data-ms="300" type="button">1x</button>
+      <button class="sim-speed go-speed active" data-ms="150" type="button">2x</button>
+      <button class="sim-speed go-speed" data-ms="75" type="button">4x</button>
+      <button id="go-reset" class="sim-reset" type="button" title="Reset"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/><polyline points="23 4 23 10 17 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg></button>
+    </div>
+  </div>
+  <div class="sim-frame">
+    <canvas id="go-board" class="sim-canvas" aria-hidden="true"></canvas>
+  </div>
+</div>
+
+</div>
 
 <div class="box-row">
 

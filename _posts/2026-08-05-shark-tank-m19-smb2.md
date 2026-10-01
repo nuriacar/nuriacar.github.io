@@ -4,25 +4,17 @@ title:  "shark-tank - m19: SMB2 Analizi"
 date:   2026-08-05 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 19: SMB2 Analizi
+## Modül 19: SMB2 Analizi
 
 **Neden?** Şirketin dosya sunucusundan gizli belgeler dışarı sızdı.
-Windows ağlarında dosya paylaşımının kalbi SMB2'dir: Ağ sürücüleri,
-yazıcı kuyrukları, hatta uzak yönetim — hepsi aynı protokolün üzerinde.
-Saldırganlar için SMB2 çok değerlidir: Parola denemeleri (password spray)
-sessizce logon failure üretir, paylaşılan dosyalar exfiltration kanalıdır
-ve zayıf yapılandırılmış oturumlar geçiş noktasıdır. Bu modülde, SMB2
-oturum akışını adım adım okumayı, dosya operasyonlarını takip etmeyi ve
-parola denemesi izlerini tespit etmeyi öğreneceksin.
+Windows ağlarında dosya paylaşımının kalbi SMB2'dir: Ağ sürücüleri, yazıcı kuyrukları, hatta uzak yönetim — hepsi aynı protokolün üzerinde. Saldırganlar için SMB2 çok değerlidir: Parola denemeleri (password spray) sessizce logon failure üretir, paylaşılan dosyalar exfiltration kanalıdır ve zayıf yapılandırılmış oturumlar geçiş noktasıdır. Bu modülde, SMB2 oturum akışını adım adım okumayı, dosya operasyonlarını takip etmeyi ve parola denemesi izlerini tespit etmeyi öğreneceksin.
 
 **Görev:** SHARK-TANK.LOCAL dosya sunucusunun SMB2 trafiğini analiz et.
 
 **Öğrenim Hedefleri:**
-- SMB2 oturum kurma zincirini (negotiate → session setup → tree connect)
-  adım adım takip edebilmek
+- SMB2 oturum kurma zincirini (negotiate → session setup → tree connect) adım adım takip edebilmek
 - Kerberos ile NTLM oturum kurma farkını tespit edebilmek
-- Dosya operasyonlarını (Create, Read, Write, Delete) izleyip hangi
-  dosyada ne yapıldığını çıkarabilmek
+- Dosya operasyonlarını (Create, Read, Write, Delete) izleyip hangi dosyada ne yapıldığını çıkarabilmek
 - STATUS_LOGON_FAILURE serilerinden parola denemesi tespit edebilmek
 - SMB1'e göre SMB2'nin getirdiği iyileştirmeleri sayabilmek
 
@@ -113,8 +105,7 @@ smb2.cmd == 0 || smb2.cmd == 1 || smb2.cmd == 3
 ### Adımlar:
 
 1. `module-19-smb2.pcap`'i Wireshark'ta aç ve filtreyi uygula
-2. Frame 26/28 (Negotiate): Dialect listesinde hangi sürümler var?
-   (0x0210 = 2.1, 0x0300 = 3.0, 0x0311 = 3.1.1 — sunucu 3.1.1 seçti)
+2. Frame 26/28 (Negotiate): Dialect listesinde hangi sürümler var? (0x0210 = 2.1, 0x0300 = 3.0, 0x0311 = 3.1.1 — sunucu 3.1.1 seçti)
 3. Frame 50/52 (Session Setup): Orta panelde SPNEGO mekanizmasını bul:
 
 ```text
@@ -125,8 +116,7 @@ v Session Setup Request
                 1.2.840.113554.1.2.2 (Kerberos)   ← bilet geliyor!
 ```
 
-4. Frame 53/54 (Tree Connect): Önce IPC$'e, sonra frame 59/60'ta
-   shark-share'a bağlanılıyor
+4. Frame 53/54 (Tree Connect): Önce IPC$'e, sonra frame 59/60'ta shark-share'a bağlanılıyor
 5. Zinciri kendi cümlelerinle özetle
 
 > **SINAV İPUÇLARI:**
@@ -158,10 +148,8 @@ Frame 83:  Create  File: not.txt         ← put: yükleme
 Frame 107: Create (delete on close)      ← del: silme
 ```
 
-2. Read işlemleri: `smb2.cmd == 8` — frame 79'da rapor.txt (53 byte)
-   sunucudan istemciye okundu
-3. Write işlemleri: `smb2.cmd == 9` — frame 85'te not.txt (31 byte)
-   istemciden sunucuya yazıldı
+2. Read işlemleri: `smb2.cmd == 8` — frame 79'da rapor.txt (53 byte) sunucudan istemciye okundu
+3. Write işlemleri: `smb2.cmd == 9` — frame 85'te not.txt (31 byte) istemciden sunucuya yazıldı
 4. Silme: frame 107'de Create "delete on close" ile açıldı
 5. Akış grafiğiyle görselleştir: Statistics → Flow Graph
 
@@ -191,8 +179,7 @@ Frame 107: Create (delete on close)      ← del: silme
 
 ### Kaç Bayt Okundu/Yazıldı? (Read/Write Length Toplama)
 
-pcap'te 96 KB'lık `veritabani.bin` hem yüklendi hem indirildi — miktarı
-paketlerden toplamak mümkün:
+pcap'te 96 KB'lık `veritabani.bin` hem yüklendi hem indirildi — miktarı paketlerden toplamak mümkün:
 
 ```text
 smb2.cmd == 8 && smb2.read_length > 0     # Read: sunucudan okunan
@@ -215,13 +202,11 @@ tshark -r shared/pcaps/module-19-smb2.pcap -Y 'smb2.cmd == 8' \
 ```
 
 **Analist çıkarımı:** `Create(veritabani.bin) → Read(96000) → Close`
-zinciri = dosya **indirildi**; `Write(96000)` = dosya **dışarı çıkarıldı**.
-Kill chain'de exfil kanıtı sayılabilecek olan ikincisidir.
+zinciri = dosya **indirildi**; `Write(96000)` = dosya **dışarı çıkarıldı**. Kill chain'de exfil kanıtı sayılabilecek olan ikincisidir.
 
 ### svcctl: Uzaktan Servis Kontrolü (PSExec Ayak İzi)
 
-pcap'te yönetici oturumuyla (administrator, NTLM) **svcctl** (Service
-Control Manager) RPC'si çalıştırıldı — servis listesi alındı:
+pcap'te yönetici oturumuyla (administrator, NTLM) **svcctl** (Service Control Manager) RPC'si çalıştırıldı — servis listesi alındı:
 
 ```text
 svcctl
@@ -232,14 +217,9 @@ Ne göreceksin:
 2. `Create Request File: svcctl` — pipe açıldı
 3. DCERPC Bind (svcctl UUID'si) + `EnumServicesStatus` çağrıları
 
-Bu desen neden kritik? **PsExec ve impacket'in services.py aracı tam bu
-zinciri kullanır**: svcctl bind → servis oluştur/başlat → komut çalıştır.
-Listeleme nispeten zararsızdır ama aynı pipe'ta `CreateService/StartService`
-opnum'ları görürsen **uzaktan kod çalıştırma** aşamasındasınız demektir.
+Bu desen neden kritik? **PsExec ve impacket'in services.py aracı tam bu zinciri kullanır**: svcctl bind → servis oluştur/başlat → komut çalıştır. Listeleme nispeten zararsızdır ama aynı pipe'ta `CreateService/StartService` opnum'ları görürsen **uzaktan kod çalıştırma** aşamasındasınız demektir.
 
-> **SINAV İPUCU:** "Saldırgan uzakta ne çalıştırdı?" sorusunda sırayla
-> bak: `\pipe\svcctl` (Create) → bind (DCERPC) → opnum 15/16
-> (CreateService/StartService) → ardından gelen FILE/BINPATH alanları.
+> **SINAV İPUCU:** "Saldırgan uzakta ne çalıştırdı?" sorusunda sırayla bak: `\pipe\svcctl` (Create) → bind (DCERPC) → opnum 15/16 (CreateService/StartService) → ardından gelen FILE/BINPATH alanları.
 
 ---
 
@@ -264,11 +244,8 @@ Frame 166: dc → .200                  ├ parola spreyi: 3 deneme
 Frame 180: dc → .200                  ┘
 ```
 
-3. Saldırganın denemelerinde NTLM mi Kerberos mu kullanıldı?
-   (Session Setup isteklerindeki mekanizmaya bak)
-4. Başarısız denemelerin ardından saldırgan bileti alabildi mi?
-   `kerberos.msg_type == 11 && ip.addr == 172.50.2.200` filtresiyle
-   modül 17 pcap'iyle ilişkilendir
+3. Saldırganın denemelerinde NTLM mi Kerberos mu kullanıldı? (Session Setup isteklerindeki mekanizmaya bak)
+4. Başarısız denemelerin ardından saldırgan bileti alabildi mi? `kerberos.msg_type == 11 && ip.addr == 172.50.2.200` filtresiyle modül 17 pcap'iyle ilişkilendir
 
 > **SINAV İPUÇLARI:**
 >
@@ -299,8 +276,7 @@ smb2.cmd == 1
 
 1. Tüm Session Setup paketlerini listele
 2. İstemcinin (172.50.2.100) BAŞARILI oturumu: Kerberos AP-REQ
-3. Saldırganın (172.50.2.200) denemeleri: NTLM (karşılaştırma yanıtına
-   dayalı — parola doğrulaması sunucuda yapılır)
+3. Saldırganın (172.50.2.200) denemeleri: NTLM (karşılaştırma yanıtına dayalı — parola doğrulaması sunucuda yapılır)
 4. Farkları tabloya dök:
 
 | Özellik | Kerberos oturumu | NTLM oturumu |
@@ -318,38 +294,24 @@ smb2.cmd == 1
 
 ### NTLM Relay Saldırısının Mekaniği
 
-Relay, kimlik doğrulamayı "iletme" saldırısıdır: Saldırgan, kurbanın
-NTLMSSP üçlüsünü (NEGOTIATE → CHALLENGE → AUTH) olduğu gibi bir hedef
-sunucuya iletir — parola hiçbir yerde kırılmaz, **kimlik kanıtı
-kendisi** taşınır. Ağda imzası:
+Relay, kimlik doğrulamayı "iletme" saldırısıdır: Saldırgan, kurbanın NTLMSSP üçlüsünü (NEGOTIATE → CHALLENGE → AUTH) olduğu gibi bir hedef sunucuya iletir — parola hiçbir yerde kırılmaz, **kimlik kanıtı kendisi** taşınır. Ağda imzası:
 
 ```text
 # Aynı NTLMSSP negotiate/authorize nonce'unu iki farklı yönde görmek:
 ntlmssp.messagetype == 1 || ntlmssp.messagetype == 3
 ```
 
-Relay göründüğünde: Saldırgan IP'si (200) hem kurbanla hem hedefle aynı
-zamanda SMB konuşur — iki paralel TCP oturumu, biri kurban-saldırgan,
-diğeri saldırgan-hedef. **Savunma SMB imzalamadır** (signing): İmzalı
-oturumda AUTH mesajı başka oturuma taşınamaz; `smb2.flags.signed == 1`
-ile imzalı oturumları doğrulayabilirsin. Bu pcap'te oturumlar imzasızdır
-(gerçekçi zafiyet), relay için açık kapıdır.
+Relay göründüğünde: Saldırgan IP'si (200) hem kurbanla hem hedefle aynı zamanda SMB konuşur — iki paralel TCP oturumu, biri kurban-saldırgan, diğeri saldırgan-hedef. **Savunma SMB imzalamadır** (signing): İmzalı oturumda AUTH mesajı başka oturuma taşınamaz; `smb2.flags.signed == 1` ile imzalı oturumları doğrulayabilirsin. Bu pcap'te oturumlar imzasızdır (gerçekçi zafiyet), relay için açık kapıdır.
 
-> **SINAV İPUCU:** "NTLM relay neden çalışır?" → Kimlik kanıtı sunucuya
-> bağlamadan taşınabilir; çözüm imzalama (signing) + EPA'dır.
+> **SINAV İPUCU:** "NTLM relay neden çalışır?" → Kimlik kanıtı sunucuya bağlamadan taşınabilir; çözüm imzalama (signing) + EPA'dır.
 
 ### Named Pipes Detayı
 
-SMB üzerinden RPC konuşmak için `\\pipe\` ile başlayan named pipe'lar
-kullanılır (örn. `\pipe\srvsvc` servis listesi, `\pipe\lsarpc` yerel
-güvenlik, `\pipe\winreg` kayıt defteri, `\pipe\svcctl` servis kontrol).
-Pcap'te Tree Connect'te bunları görürsün:
+SMB üzerinden RPC konuşmak için `\\pipe\` ile başlayan named pipe'lar kullanılır (örn. `\pipe\srvsvc` servis listesi, `\pipe\lsarpc` yerel güvenlik, `\pipe\winreg` kayıt defteri, `\pipe\svcctl` servis kontrol). Pcap'te Tree Connect'te bunları görürsün:
 ```text
 smb2.path contains "pipe"
 ```
-Saldırı bağlamı: svcctl/samr pipe'ları, uzaktan servis kurma/hesap
-listeleme (PsExec benzeri araçların ayak izi) demektir — kill chain'in
-"installation" adımının SMB'deki imzasıdır.
+Saldırı bağlamı: svcctl/samr pipe'ları, uzaktan servis kurma/hesap listeleme (PsExec benzeri araçların ayak izi) demektir — kill chain'in "installation" adımının SMB'deki imzasıdır.
 
 ---
 
@@ -374,49 +336,32 @@ listeleme (PsExec benzeri araçların ayak izi) demektir — kill chain'in
 
 ## Sınav Soruları (Çöz)
 
-1. SMB2 oturum kurma zincirini sırasıyla say ve her adımın smb2.cmd
-   değerini ver.
+1. SMB2 oturum kurma zincirini sırasıyla say ve her adımın smb2.cmd değerini ver.
 2. IPC$ paylaşımına bağlanmanın normal akıştaki rolü nedir?
-3. Bir kullanıcının paylaşımdan dosya indirmesi hangi komut dizisini
-   üretir? Yüklemedeki fark nedir?
-4. STATUS_LOGON_FAILURE (0xc000006d) ne anlama gelir ve hangi saldırı
-   kalıplarıyla bir arada görülür?
-5. Kerberos biletli Session Setup ile NTLM Session Setup paket
-   seviyesinde nasıl ayırt edilir?
+3. Bir kullanıcının paylaşımdan dosya indirmesi hangi komut dizisini üretir? Yüklemedeki fark nedir?
+4. STATUS_LOGON_FAILURE (0xc000006d) ne anlama gelir ve hangi saldırı kalıplarıyla bir arada görülür?
+5. Kerberos biletli Session Setup ile NTLM Session Setup paket seviyesinde nasıl ayırt edilir?
 6. SMB imzalama hangi saldırı sınıfını önler?
 7. SMB1 neden devre dışı bırakılmalıdır? İki gerekçe say.
-8. svcctl pipe'ına bağlanıp CreateService çağıran bir istemci ne yapmış
-   olabilir? Hangi ünlü araç bu deseni üretir?
-9. veritabani.bin için okunan toplam baytı smb2.read_length alanlarından
-   hesapla.
+8. svcctl pipe'ına bağlanıp CreateService çağıran bir istemci ne yapmış olabilir? Hangi ünlü araç bu deseni üretir?
+9. veritabani.bin için okunan toplam baytı smb2.read_length alanlarından hesapla.
 
 <details markdown="block">
 <summary><strong>Cevapları Göster</strong></summary>
 
-1. Negotiate (0) → Session Setup (1) → Tree Connect (3) → dosya
-   operasyonları (Create/Read/Write/Close). Kapanış: Tree Disconnect (4)
-   ve Logoff (2).
+1. Negotiate (0) → Session Setup (1) → Tree Connect (3) → dosya operasyonları (Create/Read/Write/Close). Kapanış: Tree Disconnect (4) ve Logoff (2).
 
-2. İstemci önce IPC$'e bağlanarak adlandırılmış kanalları ve DFS
-   yönlendirmelerini sorgular; ardından asıl paylaşıma bağlanır.
+2. İstemci önce IPC$'e bağlanarak adlandırılmış kanalları ve DFS yönlendirmelerini sorgular; ardından asıl paylaşıma bağlanır.
 
-3. İndirme: Create + Read + Close (veri sunucudan istemciye). Yükleme:
-   Create + Write + Close (veri istemciden sunucuya). Fark cmd 8'e
-   karşı cmd 9 ve verinin yönü.
+3. İndirme: Create + Read + Close (veri sunucudan istemciye). Yükleme: Create + Write + Close (veri istemciden sunucuya). Fark cmd 8'e karşı cmd 9 ve verinin yönü.
 
-4. Kimlik kanıtının reddedildiğini (yanlış parola/kullanıcı) gösterir.
-   Hedefli brute force (tek hesap, çok parola) ve parola spreyi (çok
-   hesap, tek parola) kalıplarıyla görülür.
+4. Kimlik kanıtının reddedildiğini (yanlış parola/kullanıcı) gösterir. Hedefli brute force (tek hesap, çok parola) ve parola spreyi (çok hesap, tek parola) kalıplarıyla görülür.
 
-5. Kerberos'ta Security Blob içinde Kerberos OID'si ve AP-REQ bileti
-   görünür; NTLM'de NTLMSSP NEGOTIATE/CHALLENGE/AUTH mesajları izlenir.
+5. Kerberos'ta Security Blob içinde Kerberos OID'si ve AP-REQ bileti görünür; NTLM'de NTLMSSP NEGOTIATE/CHALLENGE/AUTH mesajları izlenir.
 
-6. Ortadaki adam (MITM/relay) saldırılarını: İmzasız paket değiştirilemez,
-   başka oturuma aktarılamaz.
+6. Ortadaki adam (MITM/relay) saldırılarını: İmzasız paket değiştirilemez, başka oturuma aktarılamaz.
 
-7. Zayıf imzalama ve oplock yarışları gibi güvenlik açıkları (WannaCry
-   gibi saldırıların yolu) ve komut başına teyit gerektiren verimsiz
-   tasarım.
+7. Zayıf imzalama ve oplock yarışları gibi güvenlik açıkları (WannaCry gibi saldırıların yolu) ve komut başına teyit gerektiren verimsiz tasarım.
 
 </details>
 

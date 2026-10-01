@@ -4,7 +4,7 @@ title:  "shark-tank - m06: IP Fragmentation Analizi"
 date:   2026-07-23 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 06: IP Fragmentation Analizi
+## Modül 06: IP Fragmentation Analizi
 
 **Neden?** IDS/IPS saldırı tespit etmiyor ama sistemler çöküyor. Saldırgan IDS'yi atlatmak için paketleri parçalıyor. Fragmentation overlap (teardrop attack) ile paketleri yeniden birleştirme sırasında sistem çöker. Parçalanmış paketler içinde kötü amaçlı yük gizlenebilir (fragmentation evasion). Nmap'in `-f` bayrağı tam da bunun içindir. Bu modülde, parçalanmış paketleri yeniden birleştirip saldırıyı görmeyi öğreneceksin.
 
@@ -379,10 +379,8 @@ Fragment 2: Offset=50, Data=100 byte ("GET /admin     HTTP/1.1")
    ```text
    ip.id == 0x7771
    ```
-   Üç fragment görürsün: offset **0** (MF=1), offset **125×8=1000 byte**
-   (MF=1), offset **300×8=2400 byte** (MF=0, kuyruk).
-2. Çakışmayı hesapla: İlk parça 0–1480 byte'ı kaplar; ikinci parça
-   **1000'den** başlar → 1000–1480 arası **iki parçada da var** = overlap.
+   Üç fragment görürsün: offset **0** (MF=1), offset **125×8=1000 byte**    (MF=1), offset **300×8=2400 byte** (MF=0, kuyruk).
+2. Çakışmayı hesapla: İlk parça 0–1480 byte'ı kaplar; ikinci parça **1000'den** başlar → 1000–1480 arası **iki parçada da var** = overlap.
 3. Wireshark bunu kendiliğinden işaretler — reassembled paketi aç:
    ```text
    v Frame 51: [Reassembled IPv4]

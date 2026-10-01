@@ -4,7 +4,7 @@ title:  "shark-tank - m08: TCP Analizi"
 date:   2026-07-25 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 08: TCP Analizi
+## Modül 08: TCP Analizi
 
 **Neden?** SOC alarmı: Dış IP'den sana doğru binlerce SYN paketi geliyor. Port scan mı, SYN flood mu? TCP, internetteki tüm kritik trafiğin temelidir. Port scanning (SYN scan, Connect scan), SYN flood DDoS, TCP hijacking, Null/FIN/Xmas scan: Hepsi TCP flag'leriyle çalışır. TCP handshake'i analiz etmek, saldırganın ağ haritasını çıkarmasının ilk adımını anlamaktır. Bu modülde, TCP flag'lerini okuyarak scan'i normal trafikten ayırmayı öğreneceksin.
 
@@ -223,19 +223,13 @@ Birden fazla farklı hedef porta SYN gönderildiğini göreceksin:
 
 ### Half-Open (SYN) Scan Nedir?
 
-Bu taramadaki SYN'lerin hiçbirinin üçlü el sıkışma tamamlanmadan
-bırakıldığına dikkat et: İstemci SYN gönderir, sunucu SYN-ACK döner,
-ama istemci **ACK yerine RST** yollar. Bağlantı hiç "ESTABLISHED"
-olmadığı için buna **half-open (yarım açık) tarama** denir — nmap'deki
-adıyla `nmap -sS`, yani bizim lab'de saldırganın kullandığı yöntem.
+Bu taramadaki SYN'lerin hiçbirinin üçlü el sıkışma tamamlanmadan bırakıldığına dikkat et: İstemci SYN gönderir, sunucu SYN-ACK döner, ama istemci **ACK yerine RST** yollar. Bağlantı hiç "ESTABLISHED" olmadığı için buna **half-open (yarım açık) tarama** denir — nmap'deki adıyla `nmap -sS`, yani bizim lab'de saldırganın kullandığı yöntem.
 
 Neden tercih edilir?
 - Uygulama katmanında log oluşmaz (connect() hiç tamamlanmaz)
 - Klasik (connect) taramadan daha hızlı ve daha sessizdir
 
-Karşıtı **connect scan** (`nmap -sT`): Tam üçlü el sıkışma yapılır,
-bağlantı kapanır — Wireshark'ta SYN → SYN-ACK → ACK → (veri yok) →
-FIN/RST dizisi görürsün. Lab pcap'inde her iki taramayı da bulabilirsin:
+Karşıtı **connect scan** (`nmap -sT`): Tam üçlü el sıkışma yapılır, bağlantı kapanır — Wireshark'ta SYN → SYN-ACK → ACK → (veri yok) → FIN/RST dizisi görürsün. Lab pcap'inde her iki taramayı da bulabilirsin:
 
 ```text
 # half-open izi: SYN-ACK'ten hemen sonra istemciden RST

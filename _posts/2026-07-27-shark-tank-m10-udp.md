@@ -4,7 +4,7 @@ title:  "shark-tank - m10: UDP Analizi"
 date:   2026-07-27 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 10: UDP Analizi
+## Modül 10: UDP Analizi
 
 **Neden?** İnternet bağlantısı birden felç oldu. Trafik analizinde devasa miktarda UDP paketi görülüyor: DNS amplification DDoS. UDP'nin bağlantısız yapısı amplification saldırılarına açıktır: DNS amplification (küçük sorgu → büyük yanıt), NTP amplification, SNMP amplification, UDP flood. Saldırgan sahte kaynak IP ile küçük bir UDP paketi gönderir, hedef büyük yanıtla DDoS edilir. UDP tunneling ile veri sızdırılabilir. Bu modülde, UDP tabanlı saldırıları tanımayı öğreneceksin.
 

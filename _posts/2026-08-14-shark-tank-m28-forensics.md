@@ -4,7 +4,7 @@ title:  "shark-tank - m28: Ağ Forensics"
 date:   2026-08-14 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 28: Ağ Forensics
+## Modül 28: Ağ Forensics
 
 **Neden?** Büyük resim. Bir saldırgan ağa sızdı. Tüm aşamaları pcap'te izliyorsun. Kill chain: Reconnaissance (port scan) → weaponization → delivery (SQL injection, XSS) → exploitation → installation (C2 beaconing) → command & control → exfiltration (DNS tunneling, yüksek entropili POST gövdeleri). Her aşama farklı bir protokolde iz bırakır. Bu modülde, kill chain'in tamamını pcap'ten yeniden oluşturmayı ve sızıntının "görünmez" biçimini (entropy analiziyle) yakalamayı öğreneceksin.
 
@@ -29,8 +29,7 @@ tags: [siber-guvenlik]
 
 ## Teori
 
-Ağ forensics, yakalanmış trafik üzerinden güvenlik olaylarını analiz etmektir.
-Wireshark ile tespit edilebilen yaygın saldırı ve anomali türleri:
+Ağ forensics, yakalanmış trafik üzerinden güvenlik olaylarını analiz etmektir. Wireshark ile tespit edilebilen yaygın saldırı ve anomali türleri:
 
 | Saldırı Türü | Wireshark'ta Görünümü |
 |-------------|----------------------|
@@ -245,18 +244,14 @@ Normal:    web.shark-tank.local
 
 ## SENARYO 6b: Entropy Analizi — Exfil POST'u Yakalamak
 
-Sızıntı her zaman uzun domain'lerde gizlenmez. Bu pcap'te exfil'in ikinci
-yolu **POST gövdesinde**: Saldırgan (172.50.2.200), 2048 byte'lık
+Sızıntı her zaman uzun domain'lerde gizlenmez. Bu pcap'te exfil'in ikinci yolu **POST gövdesinde**: Saldırgan (172.50.2.200), 2048 byte'lık
 **yüksek entropili base64 veriyi** normal bir tarayıcı User-Agent'ıyla
 `POST /api/data`'ya göndermiş.
 
 ### Entropy (Shannon) Nedir?
 
 **Entropy**, bir veri kümesindeki belirsizliktir: Kompreslenmiş/şifreli
-veri her byte'ın eşit olasılıkla çıkmasına yol açtığından **yüksek
-entropy** gösterir (base64 için teorik üst sınır ~6.0 bit/karakter).
-İnsan metni, form verisi, JSON gibi yapılar tekrarlıdır: **düşük
-entropy** (tipik 3.5-4.5 bit/karakter).
+veri her byte'ın eşit olasılıkla çıkmasına yol açtığından **yüksek entropy** gösterir (base64 için teorik üst sınır ~6.0 bit/karakter). İnsan metni, form verisi, JSON gibi yapılar tekrarlıdır: **düşük entropy** (tipik 3.5-4.5 bit/karakter).
 
 | Gövde | Lab Ölçümü (gerçek) |
 |-------|---------------------|
@@ -269,8 +264,7 @@ entropy** (tipik 3.5-4.5 bit/karakter).
    ```text
    http.request.method == "POST" && http.content_length > 1500
    ```
-2. Follow TCP Stream ile gövdeyi gör: Anlamsız base64 bloğu — bir
-   form alanı, bir JSON yok. `Content-Type: application/octet-stream`.
+2. Follow TCP Stream ile gövdeyi gör: Anlamsız base64 bloğu — bir form alanı, bir JSON yok. `Content-Type: application/octet-stream`.
 3. Karşılaştır: Normal `/auth` POST'u okunabilir form verisidir.
 4. (Opsiyonel) Hesapla — tshark + python:
    ```sh
@@ -290,12 +284,9 @@ entropy** (tipik 3.5-4.5 bit/karakter).
 | Content-Type | application/octet-stream | Form değil, binary |
 
 **Sonuç:** Tek bir "şifreli görünümlü büyük POST", DNS exfil'i kadar
-konuşkan bir IOC'dir. Sınavda "en şüpheli POST hangisi ve neden?"
-sorusunun cevabı: en büyük + en yüksek entropy'li + sahte UA'lı olan.
+konuşkan bir IOC'dir. Sınavda "en şüpheli POST hangisi ve neden?" sorusunun cevabı: en büyük + en yüksek entropy'li + sahte UA'lı olan.
 
-> **SINAV İPUCU:** Entropy hesaplaması çoğu kez "yüksek/düşük" olarak
-> sorulur: Anlamsız, sıkıştırılmış görünümlü, tekrarsız gövde = yüksek
-> entropy = exfil/şifreli C2 adayı. Okunabilir form/JSON = düşük.
+> **SINAV İPUCU:** Entropy hesaplaması çoğu kez "yüksek/düşük" olarak sorulur: Anlamsız, sıkıştırılmış görünümlü, tekrarsız gövde = yüksek entropy = exfil/şifreli C2 adayı. Okunabilir form/JSON = düşük.
 
 ---
 

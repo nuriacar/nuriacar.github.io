@@ -8,8 +8,6 @@ nav_title: blog
 permalink: /blog/
 ---
 
-<div class="box" markdown="1">
-
 -- Ne vereyim abime?
 
 -- Ne vereceksin bana?
@@ -17,6 +15,3 @@ permalink: /blog/
 -- ⇣
 
 # ☣
-
-
-</div>

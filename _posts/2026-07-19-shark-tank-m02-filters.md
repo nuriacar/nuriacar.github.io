@@ -4,7 +4,7 @@ title:  "shark-tank - m02: Wireshark Filtreleme"
 date:   2026-07-19 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 02: Wireshark Filtreleme
+## Modül 02: Wireshark Filtreleme
 
 **Neden?** SOC ekibinde alert geldi: "Dış IP'den anormal HTTP istekleri". Saniyede 5000 paket akıyor. Doğru filtreyi bulamazsan 1 saat sonra hâlâ ilk pakete bakıyor olursun. `http.request` ile SQL injection'ı, `dns` ile tunneling'i, `tcp.flags.syn` ile port scan'i ayıklamak gerekir. Filtre bilmeyen analist veri gölünde boğulur. Bu modülde, saldırganın trafiğini denizde iğne gibi bulmayı öğreneceksin.
 
@@ -388,8 +388,7 @@ dns.qry.name
 
 ### Filter Makroları (Yeniden Kullanılabilir Filtreler)
 
-Sık yazdığın uzun filtreleri isimlendirmenin yolu: **Analyze > Display
-Filter Macros** (Preferences altında). Tanım şablonu:
+Sık yazdığın uzun filtreleri isimlendirmenin yolu: **Analyze > Display Filter Macros** (Preferences altında). Tanım şablonu:
 
 ```text
 İsim:    scan
@@ -401,10 +400,7 @@ Kullanım ( `$1` yerine argüman girilir, `${...}` da olur):
 ${scan:172.50.2.200}     # 172.50.2.200 kaynaklı SYN taraması
 ```
 
-Makro tanımı `~/.config/wireshark/dfilter_macros` dosyasında saklanır;
-Configuration Profile ile birlikte taşınabilir (bkz. Modül 1). Sınavda
-makro tanımlamak istemezsin ama "aynı filtreyi hızla tekrar uygulama"
-gereksiniminde (500 pcap taraması, Modül 20) makrolar zaman kazandırır.
+Makro tanımı `~/.config/wireshark/dfilter_macros` dosyasında saklanır; Configuration Profile ile birlikte taşınabilir (bkz. Modül 1). Sınavda makro tanımlamak istemezsin ama "aynı filtreyi hızla tekrar uygulama" gereksiniminde (500 pcap taraması, Modül 20) makrolar zaman kazandırır.
 
 ---
 

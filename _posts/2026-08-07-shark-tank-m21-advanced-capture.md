@@ -4,7 +4,7 @@ title:  "shark-tank - m21: Gelişmiş Capture Teknikleri"
 date:   2026-08-07 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 21: Gelişmiş Capture Teknikleri
+## Modül 21: Gelişmiş Capture Teknikleri
 
 **Neden?** APT saldırısı 6 ay önce başlamış. Hâlâ capture log'ları var mı? Yoksa saldırganın izini süremezsin. APT saldırıları aylarca sürebilir. Uzun süreli capture (ring buffer, multi-file) ile saldırının geçmişe dönük analizi yapılır. Remote capture (SSH, RDP) ile merkezi toplama, merge ile farklı kaynakları birleştirme, snaplen ile performans optimizasyonu gerçek IR senaryolarında kritiktir. Bu modülde, kurumsal capture altyapısını kurmayı öğreneceksin.
 
@@ -491,8 +491,7 @@ Birden fazla pcap dosyasını birleştir.
 3. **File > Merge** menüsüne git
 4. `capture2.pcap` dosyasını seç
 5. Merge yöntemini seç:
-   - **Merge by timestamp** (önerilen): Paketler zaman
-     sırasına göre birleştirilir
+   - **Merge by timestamp** (önerilen): Paketler zaman sırasına göre birleştirilir
    - **Merge by prepend:** ikinci dosya başa eklenir
    - **Merge by append:** ikinci dosya sona eklenir
 6. Merge sonrası paket sırasını kontrol et:
@@ -850,14 +849,7 @@ Export filtrelenebilir: "Display Filter" girilir.
 | Filtre | Hayır | Evet (Display Filter) |
 | Sıkıştırma | Evet (gzip) | Hayır |
 
-> **pcapng metadata notu:** pcapng formatı yalnızca paketlerden fazlasını
-> taşır: **Capture comment** (Statistics > Capture File Properties >
-> Capture comment, dosya geneline) ve **packet comment'ler** (paket
-> başına, sağ tık > Packet Comment) dosyaya gömülür. Eski pcap formatında
-> bunlar kaybolur. DFIR pratiği: Olay yeri bilgisi (analist, tarih,
-> delil numarası) capture comment'e yazılır — dosya kendi künyesini
-> taşır. tshark ile okuma: `tshark -r dosya.pcapng --export-objects ...`
-> yerine `capinfos dosya.pcapng` (comment satırını gösterir).
+> **pcapng metadata notu:** pcapng formatı yalnızca paketlerden fazlasını taşır: **Capture comment** (Statistics > Capture File Properties > Capture comment, dosya geneline) ve **packet comment'ler** (paket başına, sağ tık > Packet Comment) dosyaya gömülür. Eski pcap formatında bunlar kaybolur. DFIR pratiği: Olay yeri bilgisi (analist, tarih, delil numarası) capture comment'e yazılır — dosya kendi künyesini taşır. tshark ile okuma: `tshark -r dosya.pcapng --export-objects ...` yerine `capinfos dosya.pcapng` (comment satırını gösterir).
 
 #### Alıştırma:
 
@@ -1004,8 +996,7 @@ mergecap -a -w merged.pcap \
 tshark -r merged.pcap -c 5
 ```
 
-`-a` parametresi: Timestamp sırasına göre birleştir (en eskiden en yeniye).
-`-w` parametresi: Çıktı dosyası.
+`-a` parametresi: Timestamp sırasına göre birleştir (en eskiden en yeniye). `-w` parametresi: Çıktı dosyası.
 
 ### editcap ile pcap Düzenleme:
 

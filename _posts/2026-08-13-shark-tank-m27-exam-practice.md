@@ -4,7 +4,7 @@ title:  "shark-tank - m27: Sınav Pratiği"
 date:   2026-08-13 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 27: Sınav Pratiği
+## Modül 27: Sınav Pratiği
 
 **Neden?** Sınav günü. 60 dakikan var. Karışık pcap'te port scan, SQL injection, HTTP credential capture, DNS tunneling, FTP brute force, C2 beaconing, gizlice indirilmiş bir ZIP arşivi: Hepsi aynı dosyada. Saldırgan DNS çözümlemesiyle işe başlamış, ardından web sunucudan dosya indirmiş — zincirin halkaları pcap'te birbirini takip ediyor. Tüm protokolleri birleştirip kill chain'i oluşturmak sınavın ve gerçek hayatın ta kendisidir. Bu modülde, sınav formatında tüm becerileri uygulamayı öğreneceksin.
 
@@ -53,8 +53,7 @@ Bu modül, tüm bu protokolleri aynı anda analiz etme becerini ölçer.
 
 ## Genel Bakış
 
-Bu modül, sınavda karşılaşacağın türdeki soruları pratik etmen içindir.
-Karışık trafik içeren bir pcap dosyası üzerinde çalışacaksın.
+Bu modül, sınavda karşılaşacağın türdeki soruları pratik etmen içindir. Karışık trafik içeren bir pcap dosyası üzerinde çalışacaksın.
 
 > **İstihbarat İşaretleri, Gerçek dünyada saldırılar tek protokolle gelmez:**
 >
@@ -179,9 +178,7 @@ dns.flags.rcode == 3
 
 ### Soru 9b: DNS → İndirme Zinciri: ZIP Dosyası Kim İndirdi?
 
-Aynı pcap'te bir **resolver → download** zinciri var: DNS yanıtı geldiğinden
-yarım saniye sonra, çözümlenen sunucudan bir ZIP indirildi. Sınavın klasik
-"bağlantıyı kur" sorusu budur.
+Aynı pcap'te bir **resolver → download** zinciri var: DNS yanıtı geldiğinden yarım saniye sonra, çözümlenen sunucudan bir ZIP indirildi. Sınavın klasik "bağlantıyı kur" sorusu budur.
 
 ```text
 # Adım 1 — DNS çözümlemesi:
@@ -192,11 +189,8 @@ http.request.uri contains "batch-report.zip"
 ```
 
 1. DNS yanıtının IP'si (172.50.2.10) ile GET'in gittiği IP aynı mı?
-2. `http.response.code == 200` ve `Content-Type: application/zip` —
-   yanıt satırında dosya boyutu ne? (775 byte)
-3. **Dosyayı kurtar:** İndirme paketine sağ tık → **Follow > TCP
-   Stream** → "Show data as: Raw" → Save. Alternatif:
-   **File > Export Objects > HTTP** → `batch-report.zip` seç → Save.
+2. `http.response.code == 200` ve `Content-Type: application/zip` — yanıt satırında dosya boyutu ne? (775 byte)
+3. **Dosyayı kurtar:** İndirme paketine sağ tık → **Follow > TCP Stream** → "Show data as: Raw" → Save. Alternatif: **File > Export Objects > HTTP** → `batch-report.zip` seç → Save.
 4. Bütünlük kanıtı — hash al:
    ```sh
    shasum -a 256 batch-report.zip
@@ -209,10 +203,7 @@ http.request.uri contains "batch-report.zip"
    ```
    `unzip -l batch-report.zip` ile arşiv listesini çıkar (3 rapor dosyası).
 
-> **SINAV İPUCU:** "pcap'ten indirilen dosyayı çıkarın + hash'ini
-> verin" sorusu Export Objects ile 30 saniyedir. Magic bytes, dosya
-> uzantısı yalansa bile gerçek tipi kanıtlar (PK=ZIP, MZ=Windows
-> çalıştırılabilir, %PDF=PDF).
+> **SINAV İPUCU:** "pcap'ten indirilen dosyayı çıkarın + hash'ini verin" sorusu Export Objects ile 30 saniyedir. Magic bytes, dosya uzantısı yalansa bile gerçek tipi kanıtlar (PK=ZIP, MZ=Windows çalıştırılabilir, %PDF=PDF).
 
 ---
 
@@ -428,8 +419,7 @@ Her SYN için sonraki SYN-ACK ve ACK paketlerini bul.
 
 ## SENARYO 10: AD Keşfi (Kerberoasting)
 
-> Bu senaryo `shared/pcaps/module-17-kerberos.pcap` üzerinde çalışır —
-> modül 17'nin sentez provasıdır.
+> Bu senaryo `shared/pcaps/module-17-kerberos.pcap` üzerinde çalışır — modül 17'nin sentez provasıdır.
 
 ### Soru 25: Yanlış parola denemesi kaçıncı karede ve hangi kullanıcıya?
 

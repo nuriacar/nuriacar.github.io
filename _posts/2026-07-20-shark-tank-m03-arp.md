@@ -4,7 +4,7 @@ title:  "shark-tank - m03: ARP Analizi"
 date:   2026-07-20 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 03: ARP Analizi
+## Modül 03: ARP Analizi
 
 **Neden?** Bir sabah şirkette internet yavaşladı. Kullanıcılar login olamıyor. IT ekibi bir cihazın ağdaki tüm trafiği kendi üzerinden geçirdiğini fark etti: ARP spoofing. Saldırgan önce ağda kimin ayakta olduğuna bakmış (ARP keşfi), sonra sahte ARP yanıtları göndererek trafiği kendi makinesine yönlendirmiş. HTTP şifrelerini, FTP oturumlarını, TLS ile şifrelense bile SNI bilgilerini görebilir. Ettercap, Bettercap, arpspoof gibi araçlar ARP zehirlemeyle çalışır. Bu modülde, saldırganın keşif taramasından zehirlemeye kadar tüm ARP izlerini Wireshark'ta adım adım tespit etmeyi öğreneceksin.
 
@@ -140,22 +140,17 @@ Gratuitous ARP = bir cihazın "Ben bu IP'ye sahibim!" diye broadcast yapması.
 
 ## Alıştırma 4: ARP ile Host Keşfi (Sweep)
 
-Zehirleme başlamadan ÖNCE saldırgan ağda kimin ayakta olduğunu tarar. ARP,
-bu keşfin sessiz aracıdır: `nmap -sn 172.50.2.10-20` komutu yerel ağda
-ARP request'leri fırlatır — cevap veren IP'ler "canlı host" listesine girer.
-Bizim pcap'te bu tarama poisoning'den birkaç saniye önce yapılmıştır.
+Zehirleme başlamadan ÖNCE saldırgan ağda kimin ayakta olduğunu tarar. ARP, bu keşfin sessiz aracıdır: `nmap -sn 172.50.2.10-20` komutu yerel ağda ARP request'leri fırlatır — cevap veren IP'ler "canlı host" listesine girer. Bizim pcap'te bu tarama poisoning'den birkaç saniye önce yapılmıştır.
 
 ### Filtre:
 ```text
 arp.opcode == 1 && arp.src.proto_ipv4 == 172.50.2.200
 ```
 
-`172.50.2.200` saldırgan makinesidir. Bu filtre, SADECE saldırganın
-gönderdiği ARP request'lerini gösterir.
+`172.50.2.200` saldırgan makinesidir. Bu filtre, SADECE saldırganın gönderdiği ARP request'lerini gösterir.
 
 ### Ne Görmelisin?
-- Saldırganın tek MAC adresinden (`arp.src.hw_mac`) çıkan **ardışık IP'lere**
-  (`172.50.2.10`, `172.50.2.11`, `172.50.2.12`...) giden onlarca request
+- Saldırganın tek MAC adresinden (`arp.src.hw_mac`) çıkan **ardışık IP'lere** (`172.50.2.10`, `172.50.2.11`, `172.50.2.12`...) giden onlarca request
 - Hepsi broadcast (`ff:ff:ff:ff:ff:ff`) hedefli
 - Cevap verenlerin ARP Reply ile döndüğü:
   ```text
@@ -175,13 +170,10 @@ tshark -r shared/pcaps/module-03-arp.pcap -Y \
   'arp.opcode == 1 && arp.src.proto_ipv4 == 172.50.2.200' \
   -T fields -e arp.dst.proto_ipv4 | sort -u | wc -l
 ```
-Çıktı, saldırganın sorduğu **benzersiz IP sayısını** verir (lab'da 10+).
-Bir kullanıcının "klavyesinden" çıkmayacak kadar çok hedef = keşif taraması.
+Çıktı, saldırganın sorduğu **benzersiz IP sayısını** verir (lab'da 10+). Bir kullanıcının "klavyesinden" çıkmayacak kadar çok hedef = keşif taraması.
 
 **SINAV İPUCU:** "Hangi IP aralığı tarandı?" sorusunda saldırganın
-sorduğu en küçük ve en büyük hedef IP'yi bu filtreyle bul: aradaki
-aralık taramanın kapsamıdır. Keşif, kill chain'in ilk adımıdır
-(Modül 28'de tekrar karşına çıkacak).
+sorduğu en küçük ve en büyük hedef IP'yi bu filtreyle bul: aradaki aralık taramanın kapsamıdır. Keşif, kill chain'in ilk adımıdır (Modül 28'de tekrar karşına çıkacak).
 
 ## Alıştırma 5: ARP Poisoning Anomalisi
 

@@ -4,7 +4,7 @@ title:  "shark-tank - m11: TCP Akış Analizi"
 date:   2026-07-28 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 11: TCP Akış Analizi
+## Modül 11: TCP Akış Analizi
 
 **Neden?** Sunucular periyodik olarak çöküyor, sebebi bulunamıyor. Yapılan analizde SACK Panic (CVE-2019-11477) tespit ediliyor. TCP'nin ileri özellikleri saldırganlar tarafından istismar edilir: Window Scale ile bandwidth exploitation, Zero Window probing (kurbanı bekletme), TCP Keep-Alive ile stealth C2 bağlantısı. Retransmission timing analizi ağdaki anormallikleri ortaya çıkarır. Bu modülde, TCP'nin derin sırlarını saldırı tespiti için kullanmayı öğreneceksin.
 
@@ -161,9 +161,7 @@ Nagle KAPALI (TCP_NODELAY):
 
 ### Delayed ACK
 
-Alıcı tarafın da bir optimizasyonu var: **Delayed ACK**. Alıcı, ACK'ı
-hemen değil, ~40-200 ms (Linux'ta tipik 40 ms) bekleyip gönderir — umar
-o sürede kendi göndereceği veri çıkar ve ACK ona "bedava" biner (piggyback).
+Alıcı tarafın da bir optimizasyonu var: **Delayed ACK**. Alıcı, ACK'ı hemen değil, ~40-200 ms (Linux'ta tipik 40 ms) bekleyip gönderir — umar o sürede kendi göndereceği veri çıkar ve ACK ona "bedava" biner (piggyback).
 
 Küçük görünen bu kural, Nagle ile birleşince gecikme tuzağına dönüşür:
 
@@ -176,13 +174,10 @@ Nagle + Delayed ACK etkileşimi (kötü senaryo):
   Sonuç: Tek küçük yazma ~40-200 ms gecikir
 ```
 
-Bu yüzden gecikmeye duyarlı protokoller (SSH, oyunlar, finansal uygulamalar)
-hem `TCP_NODELAY` hem de `TCP_QUICKACK` kullanır.
+Bu yüzden gecikmeye duyarlı protokoller (SSH, oyunlar, finansal uygulamalar) hem `TCP_NODELAY` hem de `TCP_QUICKACK` kullanır.
 
 **Wireshark'ta tespit:** ACK paketlerinin veri paketlerinden ~40 ms veya
-~200 ms sonra geldiği düzenli desen `tcp.analysis.ack_rtt` alanıyla
-görülebilir (bkz. Modül 23). m11 pcap'inde keep-alive oturumlarında
- ACK'ların anında değil küçük gecikmeyle döndüğünü görebilirsin:
+~200 ms sonra geldiği düzenli desen `tcp.analysis.ack_rtt` alanıyla görülebilir (bkz. Modül 23). m11 pcap'inde keep-alive oturumlarında  ACK'ların anında değil küçük gecikmeyle döndüğünü görebilirsin:
 ```text
 tcp.analysis.flags && tcp.len == 0
 ```
@@ -210,12 +205,7 @@ TCP tıkanıklık kontrolü (congestion control), ağın kapasitesini aşmadan v
 
 **Congestion Window (cwnd):** Gönderenin ağ tıkanıklığına göre belirlediği pencere boyutu. TCP'nin gönderme hızı cwnd ile sınırlıdır.
 
-> **Modern algoritmalar:** Klasik TCP Reno'nun yerini bugün Linux'ta varsayılan
-> olarak **CUBIC**, Google ağlarında ise **BBR** aldı. pcap'de hangisinin
-> kullanıldığını doğrudan göremezsin (pencere davranışından çıkarım yapılır:
-> CUBIC kayıp sonrası pencereyi kübik eğriyle büyütür). Sınav için bilmen
-> gereken: cwnd davranışı sürüme göre değişir, ama slow start / fast
-> retransmit kavramları hepsinde ortaktır.
+> **Modern algoritmalar:** Klasik TCP Reno'nun yerini bugün Linux'ta varsayılan olarak **CUBIC**, Google ağlarında ise **BBR** aldı. pcap'de hangisinin kullanıldığını doğrudan göremezsin (pencere davranışından çıkarım yapılır: CUBIC kayıp sonrası pencereyi kübik eğriyle büyütür). Sınav için bilmen gereken: cwnd davranışı sürüme göre değişir, ama slow start / fast retransmit kavramları hepsinde ortaktır.
 
 #### Slow Start
 

@@ -6,11 +6,7 @@ categories: sir
 tags: [ses]
 ---
 
-Jorge Luis Borges'in hazırladığı, Giovanni Papini'nin Kaçan Ayna kitabını
-seslendirdim. Olabildiğince temiz lakin sonuçta ev ortamı kaydı... İlk 3
-öyküyü, yani 105 sayfalık kitabın 44 sayfasını okudum. Zor bir iş. Belki
-gelecekte bir stüdyo ortamında hepsini okurum. Şimdilik hepsi bu. İyi
-dinlemeler.
+Jorge Luis Borges'in hazırladığı, Giovanni Papini'nin Kaçan Ayna kitabını seslendirdim. Olabildiğince temiz lakin sonuçta ev ortamı kaydı... İlk 3 öyküyü, yani 105 sayfalık kitabın 44 sayfasını okudum. Zor bir iş. Belki gelecekte bir stüdyo ortamında hepsini okurum. Şimdilik hepsi bu. İyi dinlemeler.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdJI0M1lFH0rmUPu5t8KmFsv" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 

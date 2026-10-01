@@ -4,7 +4,7 @@ title:  "shark-tank - m24: WLAN Analizi"
 date:   2026-08-10 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 24: WLAN Analizi
+## Modül 24: WLAN Analizi
 
 **Neden?** Ofiste Wi-Fi kopuyor, sürekli yeniden bağlanıyorsun. Deauth attack olabilir. Kablosuz ağlar Ethernet'ten daha kırılgandır: Evil twin (sahte AP), deauth attack (Wi-Fi bağlantısını kesme), WPA2 KRACK (anahtar yeniden kullanımı), PMKID attack (router şifre kırma), beacon flood, probe request tracking. WLAN analizi bu saldırıların tümünü tespit edebilir. Bu modülde, kablosuz saldırıları Wireshark ile tespit etmeyi öğreneceksin.
 
@@ -67,9 +67,7 @@ Radio Tap Header          ← Sinyal gücü, channel, rate
 
 ### Radiotap Başlığı: Wi-Fi Paketinin "Ölçüm Zarfı"
 
-Monitor mode ile yakalanan her 802.11 çerçevesinin önünde bir **radiotap
-header** bulunur — bu, radyo katmanının ölçümlerini (metadata) taşır;
-Ethernet'te karşılığı yoktur. pcap'te 90+ frame radiotap taşır:
+Monitor mode ile yakalanan her 802.11 çerçevesinin önünde bir **radiotap header** bulunur — bu, radyo katmanının ölçümlerini (metadata) taşır; Ethernet'te karşılığı yoktur. pcap'te 90+ frame radiotap taşır:
 
 ```text
 v Radiotap Header
@@ -98,14 +96,9 @@ wlan.fc.type == 0 && radiotap     # yönetim çerçeveleri + ölçümleri
 ```
 
 **SINAV İPUCU:** "Sinyal gücü (dBm) nedir?" / "hangi kanal?" sorularının
-cevabı radiotap başlığındadır; 802.11 başlığında DEĞİL. RSSI + zaman
-birlikte okunursa cihazın ağa göre konumu hakkında çıkarım yapılabilir
-(trafik analizi).
+cevabı radiotap başlığındadır; 802.11 başlığında DEĞİL. RSSI + zaman birlikte okunursa cihazın ağa göre konumu hakkında çıkarım yapılabilir (trafik analizi).
 
-> **Standartlar eşlemesi:** 802.11n/ac/ax pazar adlarıyla Wi-Fi 4/5/6'dır.
-> Wireshark bunları radiotap ve HT/VHT/HE bilgi elemanlarında gösterir
-> (ör. beacon'da "HE (Wi-Fi 6)" capability). Sınav için: n=4 (2.4/5 GHz,
-> MIMO), ac=5 GHz, ax=6/5/2.4 GHz (OFDMA) eşlemesini tanıman yeterli.
+> **Standartlar eşlemesi:** 802.11n/ac/ax pazar adlarıyla Wi-Fi 4/5/6'dır. Wireshark bunları radiotap ve HT/VHT/HE bilgi elemanlarında gösterir (ör. beacon'da "HE (Wi-Fi 6)" capability). Sınav için: n=4 (2.4/5 GHz, MIMO), ac=5 GHz, ax=6/5/2.4 GHz (OFDMA) eşlemesini tanıman yeterli.
 
 ---
 

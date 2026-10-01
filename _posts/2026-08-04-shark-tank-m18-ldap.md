@@ -4,18 +4,10 @@ title:  "shark-tank - m18: LDAP Analizi"
 date:   2026-08-04 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 18: LDAP Analizi
+## Modül 18: LDAP Analizi
 
 **Neden?** SOC ekibi dizin servisine yapılan şüpheli sorguları inceliyor:
-Bazı sorgular dakikalarca askıda kalıyor, biri koca kullanıcı tablosunu
-tek seferde çekmeye çalışmış. Active Directory'nin kalbi LDAP'dır:
-Kullanıcılar, gruplar, bilgisayarlar, servis hesapları — hepsi LDAP
-dizininde saklanır ve sorgulanır. Saldırgan için LDAP bir harita gibidir:
-Anonim bağlantıyla neler sızdığına, kim hangi filtreyle neyi taradığına
-bakılır; düz metin parolayla yapılan simple bind'lar ise hazır kimlik
-hediyesidir. Bu modülde, LDAP sorgularını okumayı, bind tiplerini ayırt
-etmeyi, sunucu tarafı limitleri (timeLimit/sizeLimit) tanımayı ve dizin
-keşfi izlerini tespit etmeyi öğreneceksin.
+Bazı sorgular dakikalarca askıda kalıyor, biri koca kullanıcı tablosunu tek seferde çekmeye çalışmış. Active Directory'nin kalbi LDAP'dır: Kullanıcılar, gruplar, bilgisayarlar, servis hesapları — hepsi LDAP dizininde saklanır ve sorgulanır. Saldırgan için LDAP bir harita gibidir: Anonim bağlantıyla neler sızdığına, kim hangi filtreyle neyi taradığına bakılır; düz metin parolayla yapılan simple bind'lar ise hazır kimlik hediyesidir. Bu modülde, LDAP sorgularını okumayı, bind tiplerini ayırt etmeyi, sunucu tarafı limitleri (timeLimit/sizeLimit) tanımayı ve dizin keşfi izlerini tespit etmeyi öğreneceksin.
 
 **Görev:** SHARK-TANK.LOCAL dizin servisinin trafiğini analiz et.
 
@@ -198,8 +190,7 @@ v LDAPMessage bindResponse(1)
 ```
 
 3. Frame 31'in parola alanındaki değeri Alıştırma 2 ile karşılaştır
-4. errorMessage içindeki `data 52e` = Active Directory'de "yanlış parola"
-   kodudur
+4. errorMessage içindeki `data 52e` = Active Directory'de "yanlış parola" kodudur
 
 > **İstihbarat İşaretleri, LDAP parola tahmini:**
 >
@@ -211,11 +202,7 @@ v LDAPMessage bindResponse(1)
 
 ## Alıştırma 4: Sunucu Tarafı Limitler — timeLimit ve sizeLimit
 
-Sorgunun kendisi de istemci istekleri taşıyabilir: İstemci, sunucuya
-"bu sorguyu en fazla X saniyede, en fazla Y kayıtla sınırla" diyebilir.
-Bunlar searchRequest içindeki **timeLimit** (saniye) ve **sizeLimit**
-(kayıt sayısı) alanlarıdır — `ldapsearch`'ün `-l` ve `-z` parametreleri
-bunları doldurur.
+Sorgunun kendisi de istemci istekleri taşıyabilir: İstemci, sunucuya "bu sorguyu en fazla X saniyede, en fazla Y kayıtla sınırla" diyebilir. Bunlar searchRequest içindeki **timeLimit** (saniye) ve **sizeLimit** (kayıt sayısı) alanlarıdır — `ldapsearch`'ün `-l` ve `-z` parametreleri bunları doldurur.
 
 ### Filtre:
 ```text
@@ -237,25 +224,16 @@ v LDAPMessage searchRequest(4)
             timeLimit: 120      <-- istemci "120 saniyeden uzun sürerse bırak"
 ```
 
-2. `ldap.timeLimit == 120 && ldap.sizeLimit == 500` birlikte filtreleyip
-   paketin ikisini birden taşıdığını doğrula
-3. Karşılaştır: Diğer (normal) searchRequest'lerde timeLimit genelde
-   0'dır = "süre sınırı yok"
+2. `ldap.timeLimit == 120 && ldap.sizeLimit == 500` birlikte filtreleyip paketin ikisini birden taşıdığını doğrula
+3. Karşılaştır: Diğer (normal) searchRequest'lerde timeLimit genelde 0'dır = "süre sınırı yok"
 
 ### Neden Analist İçin Önemli?
 
-- **DoS göstergesi:** timeLimit=0 (ya da çok büyük) + geniş kapsamlı
-  filter (`objectClass=*`) = istemci dizini torrent gibi çekmeye
-  çalışıyor olabilir
-- **Kural avı:** "Bütün kullanıcıları döken sorgu hangisi?" sorusunun
-  cevabı çoğu kez `sizeLimit`'i yüksek/geniş tek bir searchRequest'tir
-- **Sınav kalıbı:** "X sorgusu en fazla kaç kayıt istemiş?" →
-  `ldap.sizeLimit` alanını oku; "kaç saniyelik sınır koymuş?" →
-  `ldap.timeLimit`
+- **DoS göstergesi:** timeLimit=0 (ya da çok büyük) + geniş kapsamlı filter (`objectClass=*`) = istemci dizini torrent gibi çekmeye çalışıyor olabilir
+- **Kural avı:** "Bütün kullanıcıları döken sorgu hangisi?" sorusunun cevabı çoğu kez `sizeLimit`'i yüksek/geniş tek bir searchRequest'tir
+- **Sınav kalıbı:** "X sorgusu en fazla kaç kayıt istemiş?" → `ldap.sizeLimit` alanını oku; "kaç saniyelik sınır koymuş?" → `ldap.timeLimit`
 
-> **SINAV İPUCU:** timeLimit/sizeLimit, searchRequest'in parçasıdır ve
-> cleartext görünür. `ldap.timeLimit > 0` filtresi, limit KULLANAN
-> sorguları anında bulur.
+> **SINAV İPUCU:** timeLimit/sizeLimit, searchRequest'in parçasıdır ve cleartext görünür. `ldap.timeLimit > 0` filtresi, limit KULLANAN sorguları anında bulur.
 
 ---
 
@@ -281,10 +259,8 @@ Frame 88: bindRequest  (imza kanıtı — bütünlük)
 Frame 89: bindResponse (resultCode: success 0)             → tamam!
 ```
 
-3. Bu trafiğin ÖNCESİNDE Kerberos TGS alındığını doğrula:
-   `kerberos.SNameString contains "ldap"` filtresiyle modül 17'ye dön
-4. Parola görünür mü? GSSAPI'da parola hiç iletilmez; bilet şifreli
-   kanıttır ve düz metin olarak okunamaz
+3. Bu trafiğin ÖNCESİNDE Kerberos TGS alındığını doğrula: `kerberos.SNameString contains "ldap"` filtresiyle modül 17'ye dön
+4. Parola görünür mü? GSSAPI'da parola hiç iletilmez; bilet şifreli kanıttır ve düz metin olarak okunamaz
 
 > **SINAV İPUÇLARI:**
 >
@@ -308,8 +284,7 @@ ldap.protocolOp == 23 || tls.handshake.type == 1
 1. Frame 100: extendedReq — LDAP_START_TLS OID'si ile TLS yükseltme isteği
 2. Frame 104: Aynı bağlantıda (389) TLS ClientHello — şifreli kısım başlar
 3. Frame 121: 636 portuna doğrudan ClientHello — LDAPS (doğuştan TLS)
-4. StartTLS sonrası içerik okunabilir mi? base/filter alanları neden
-   görünmüyor?
+4. StartTLS sonrası içerik okunabilir mi? base/filter alanları neden görünmüyor?
 
 ### StartTLS vs LDAPS:
 
@@ -326,12 +301,7 @@ ldap.protocolOp == 23 || tls.handshake.type == 1
 > - LDAPS imzası: 636 portunda TLS, hiç düz LDAP paketi yok
 > - Sınavda "hangisi doğuştan şifreli?" sorusunun cevabı LDAPS'tir
 
-> **LDAP injection notu:** Web formlarından gelen girdi LDAP filtresine
-> kaçmadan yerleştirilirse (`(uid=$kullanici)`), saldırgan `*` ya da
-> `)(objectClass=*` gibi girdilerle filtreyi bozabilir — SQL injection'ın
-> LDAP kuzeni. Ağda imzası: searchRequest'in `filter` alanında
-> beklenmedik joker/parantez kalıpları: `ldap.filter contains "(|(uid=*))"`
-> gibi. Savunması girdi kaçışlama (escaping) ve parametreli sorgudur.
+> **LDAP injection notu:** Web formlarından gelen girdi LDAP filtresine kaçmadan yerleştirilirse (`(uid=$kullanici)`), saldırgan `*` ya da `)(objectClass=*` gibi girdilerle filtreyi bozabilir — SQL injection'ın LDAP kuzeni. Ağda imzası: searchRequest'in `filter` alanında beklenmedik joker/parantez kalıpları: `ldap.filter contains "(|(uid=*))"` gibi. Savunması girdi kaçışlama (escaping) ve parametreli sorgudur.
 
 ---
 
@@ -354,42 +324,30 @@ ldap.protocolOp == 23 || tls.handshake.type == 1
 
 ## Sınav Soruları (Çöz)
 
-1. Anonim bind ile simple bind arasındaki fark nedir? Pakette nasıl
-   ayırt edilirler?
-2. `(objectClass=group)` filtresi ve `sub` scope'u taşıyan bir sorgu ne
-   istiyor olabilir?
+1. Anonim bind ile simple bind arasındaki fark nedir? Pakette nasıl ayırt edilirler?
+2. `(objectClass=group)` filtresi ve `sub` scope'u taşıyan bir sorgu ne istiyor olabilir?
 3. Simple bind neden güvenli değildir ve hangi iki çözümle ikame edilir?
 4. StartTLS ile LDAPS'nin paket seviyesindeki farkı nedir?
 5. resultCode 14 (saslBindInProgress) neyi gösterir?
 6. rootDSE sorgusu nedir ve hangi saldırı aşamasının parçasıdır?
-7. Aşağıdaki gözlemlerden hangisi parola spreyi, hangisi hedefli brute
-   force işaretidir: (a) aynı kullanıcıya 50 farklı parola, (b) 50 farklı
-   kullanıcıya aynı parola?
+7. Aşağıdaki gözlemlerden hangisi parola spreyi, hangisi hedefli brute force işaretidir: (a) aynı kullanıcıya 50 farklı parola, (b) 50 farklı kullanıcıya aynı parola?
 
 <details markdown="block">
 <summary><strong>Cevapları Göster</strong></summary>
 
-1. Anonim bind'da name alanı boştur ve parola yoktur; simple bind'da name
-   bir DN taşır ve authentication.simple alanında düz metin parola vardır.
+1. Anonim bind'da name alanı boştur ve parola yoktur; simple bind'da name bir DN taşır ve authentication.simple alanında düz metin parola vardır.
 
-2. Base kapsayıcısı altındaki (sub = tüm alt ağaç) tüm grup kayıtlarını
-   listeliyor olabilir: Grup keşfi (enumeration) sorgusudur.
+2. Base kapsayıcısı altındaki (sub = tüm alt ağaç) tüm grup kayıtlarını listeliyor olabilir: Grup keşfi (enumeration) sorgusudur.
 
-3. Parola ağda düz metin görünür; dinleyen herkes okuyabilir. Çözüm:
-   LDAPS veya StartTLS ile taşıma şifrelemek, simple bind yerine
-   SASL/GSSAPI (Kerberos) kullanmak.
+3. Parola ağda düz metin görünür; dinleyen herkes okuyabilir. Çözüm: LDAPS veya StartTLS ile taşıma şifrelemek, simple bind yerine SASL/GSSAPI (Kerberos) kullanmak.
 
-4. StartTLS 389'da düz başlar ve extendedOp paketiyle TLS'e yükselir
-   (yükseltme paketi görünür); LDAPS 636'da bağlantı en baştan TLS'dir.
+4. StartTLS 389'da düz başlar ve extendedOp paketiyle TLS'e yükselir (yükseltme paketi görünür); LDAPS 636'da bağlantı en baştan TLS'dir.
 
-5. SASL bind'ın çok adımlı sürecinin ara adımıdır: Sunucu istemciden
-   sonraki adımı bekliyor, hata değildir.
+5. SASL bind'ın çok adımlı sürecinin ara adımıdır: Sunucu istemciden sonraki adımı bekliyor, hata değildir.
 
-6. Boş DN + base scope ile yapılan dizin kök bilgisi sorgusudur;
-   keşif (reconnaissance) aşamasının ilk adımı olarak kullanılır.
+6. Boş DN + base scope ile yapılan dizin kök bilgisi sorgusudur; keşif (reconnaissance) aşamasının ilk adımı olarak kullanılır.
 
-7. (a) hedefli brute force (tek hesap, çok parola), (b) parola spreyi
-   (çok hesap, tek yaygın parola).
+7. (a) hedefli brute force (tek hesap, çok parola), (b) parola spreyi (çok hesap, tek yaygın parola).
 
 </details>
 

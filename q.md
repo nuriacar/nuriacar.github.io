@@ -9,7 +9,7 @@ eyebrow: galeri
 > before my first cup of Earl Grey than you can do in a year in the field.
 >> ☣
 
-<div class="gallery__num">001</div>
+<div class="chip">001</div>
 
 <div class="box" markdown="1">
 
@@ -17,7 +17,7 @@ eyebrow: galeri
 
 </div>
 
-<div class="gallery__num">002</div>
+<div class="chip">002</div>
 
 <div class="box" markdown="1">
 
@@ -25,7 +25,7 @@ eyebrow: galeri
 
 </div>
 
-<div class="gallery__num">003</div>
+<div class="chip">003</div>
 
 <div class="box" markdown="1">
 
@@ -33,7 +33,7 @@ eyebrow: galeri
 
 </div>
 
-<div class="gallery__num">004</div>
+<div class="chip">004</div>
 
 <div class="box" markdown="1">
 
@@ -41,7 +41,7 @@ eyebrow: galeri
 
 </div>
 
-<div class="gallery__num">005</div>
+<div class="chip">005</div>
 
 <div class="box" markdown="1">
 
@@ -49,7 +49,7 @@ eyebrow: galeri
 
 </div>
 
-<div class="gallery__num">006</div>
+<div class="chip">006</div>
 
 <div class="box" markdown="1">
 
@@ -57,7 +57,7 @@ eyebrow: galeri
 
 </div>
 
-<div class="gallery__num">007</div>
+<div class="chip">007</div>
 
 <div class="box" markdown="1">
 

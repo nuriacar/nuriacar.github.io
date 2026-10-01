@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Çocuğunuzun / Yeğeninizin Elindeki Kumandayı Gasp Etmenize Neden Olacak Sanatsal Oyunlar"
+title:  "Çocuğunuzun Elindeki Kumandayı Gasp Etmenize Neden Olacak Sanatsal Oyunlar"
 date:   2026-08-21 12:00:00 +0000
 categories: [muucit]
 tags: [oyun]
@@ -8,23 +8,11 @@ tags: [oyun]
 
 ![Kevin Flynn](/assets/img/kevin-flynn.webp "Kevin Flynn")
 
-> The Grid...\
-> A digital frontier...\
-> I tried to picture, clusters of information, as they move through the computer...\
-> What did they look like?\
-> Ships? Motorcycles?\
-> Were the circuits like freeways?\
-> I kept dreaming of a world, I thought I would never see...\
-> And then...\
-> One day...\
-> I got in...
+> The Grid...<br> A digital frontier...<br> I tried to picture, clusters of information, as they move through the computer...<br> What did they look like?<br> Ships? Motorcycles?<br> Were the circuits like freeways?<br> I kept dreaming of a world, I thought I would never see...<br> And then...<br> One day...<br> I got in...
 
 >> Kevin Flynn - [Tron](https://en.wikipedia.org/wiki/Tron))
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/4-J4duzP8Ng" frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4-J4duzP8Ng" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Pek muhterem "İnternet Mutasavvıfları®(!)", afiyettesinizdir inşallah!
 
@@ -137,19 +125,7 @@ Görsellere itiraz yok, itiraz "peki oyun nerede" kısmında: kovalamacada kaybe
 
 Sakin, duygusal. Oynayanlar "dedemi düşündüm, ağladım; oğluma oynattım, o da ağladı" diyorlar.. İki saatte bitiyor; kumandayı gasp ettikten sonra "yaşlandım be!" hissiyle geri verebilirsiniz. Manzaraları kaydırarak yol açma fikri o kadar basit ki "neden ben düşünmedim" diyorsunuz. Yorumların neredeyse hepsi olumlu; "keşke daha uzun olsaydı" diyeceğinize eminim!
 
-> Güney Azerbaycan Mahnısı\
-> \
-> Pər-pər olub güllərimiz\
-> Ağlayır gözlərimiz\
-> Hərdən yadıma düşür\
-> Cüt gəzən günlərimiz\
-> \
-> Yalan dünya, baba yalan dünya\
-> Nə tez oldun yaman dünya, yaman dünya\
-> Yalan dünya, baba yalan dünya\
-> Məni dərdlərə saldı dünya, saldı dünya\
-> Yalan dünya, baba yalan dünya\
-> Evimi yıxıb, qapımı bağlı qoyan dünya
+> Güney Azerbaycan Mahnısı<br> <br> Pər-pər olub güllərimiz<br> Ağlayır gözlərimiz<br> Hərdən yadıma düşür<br> Cüt gəzən günlərimiz<br> <br> Yalan dünya, baba yalan dünya<br> Nə tez oldun yaman dünya, yaman dünya<br> Yalan dünya, baba yalan dünya<br> Məni dərdlərə saldı dünya, saldı dünya<br> Yalan dünya, baba yalan dünya<br> Evimi yıxıb, qapımı bağlı qoyan dünya
 
 >> Mecid Mecidi - Âvâz-e Gonjeshkhâ - آواز گنجشک‌ها - Serçelerin Şarkısı - Sərçələrin Nəğməsi
 
@@ -170,10 +146,7 @@ Küçük yapım, az yorum: "Tatlı ama kısa!" demişler. Zamanı avucunuzla sar
 
 ..ve, Özhan abi sana ne çok imreniyorum bir bilsen! Amin!..
 
-> Gitsen, dünyanın en uzak ucunda olsan\
-> Çıksan göklerde yıldız, yıldız, yıldız dolaşsan\
-> Değil bir gün, değil bir ömür beni anmasan\
-> Unutmam, unutamam
+> Gitsen, dünyanın en uzak ucunda olsan<br> Çıksan göklerde yıldız, yıldız, yıldız dolaşsan<br> Değil bir gün, değil bir ömür beni anmasan<br> Unutmam, unutamam
 
 >> Özhan Eren
 
@@ -402,10 +375,7 @@ Cozy oyun sevenler arasında kült statüsü kazandı. Kedi kafesi konsepti insa
 
 Oyunun bende hissettirdiği ise şu:
 
-> Welcome my son\
-> Welcome to the machine\
-> Where have you been?\
-> It's all right, we know where you've been!\
+> Welcome my son<br> Welcome to the machine<br> Where have you been?<br> It's all right, we know where you've been!<br>
 
 >> Roger Waters - Pink Floyd
 

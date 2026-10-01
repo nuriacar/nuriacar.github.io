@@ -4,7 +4,7 @@ title:  "shark-tank - m05: ICMP Analizi"
 date:   2026-07-22 12:00:00 +0000
 tags: [siber-guvenlik]
 ---
-# Modül 05: ICMP Analizi
+## Modül 05: ICMP Analizi
 
 **Neden?** Güvenlik duvarı loglarında dışarıya giden ICMP trafiği dikkat çekiyor. Ping paketlerinin boyutu normalden çok büyük. ICMP tunneling olabilir. Saldırgan güvenlik duvarını aşmak için ICMP echo request/reply paketlerinin içine veri gizler (ping tunnel, icmptunnel). ICMP flood (Smurf attack, Ping of Death) DDoS saldırılarında kullanılır. ICMP trafiğine çoğu güvenlik duvarı izin verir: Bu onu ideal bir gizleme aracı yapar. Bu modülde, ICMP anomalilerini yakalamayı öğreneceksin.
 
@@ -62,9 +62,7 @@ ICMP (Internet Control Message Protocol), ağ tanılama ve hata bildirimi için 
 
 ### ICMP Redirect (Type 5): Yolu Saldırgana Çevirmek
 
-Redirect, router'ın host'a "bu hedefe daha iyi şu adresten gidilir" demenin
-meşru yoludur (kod 0=ağ, 1=host). Saldırgan bunu sahteleyerek kurbanın
-trafiğini kendi makinesine akıtır — ARP spoofing'in L3 kuzeni.
+Redirect, router'ın host'a "bu hedefe daha iyi şu adresten gidilir" demenin meşru yoludur (kod 0=ağ, 1=host). Saldırgan bunu sahteleyerek kurbanın trafiğini kendi makinesine akıtır — ARP spoofing'in L3 kuzeni.
 
 **pcap'te gerçek deneme var** (attacker, gateway'i taklit edip
 172.50.2.100'e "172.50.2.13'e artık 172.50.2.200 üzerinden git" demiş):
@@ -81,13 +79,9 @@ v ICMP: Redirect (5), Code 1 (for host)
     v IP (orijinal paket): 172.50.2.100 → 172.50.2.13:443
 ```
 
-Sahtecilik kanıtı: Paketin **Ethernet kaynak MAC'i** gateway'inki değil,
-attacker'ın MAC'idir (IP 172.50.2.1'e rağmen). IP-MAC çelişkisi =
-spoofing (Modül 3'teki ARP anomalisinin aynısı, farklı protokolde).
+Sahtecilik kanıtı: Paketin **Ethernet kaynak MAC'i** gateway'inki değil, attacker'ın MAC'idir (IP 172.50.2.1'e rağmen). IP-MAC çelişkisi = spoofing (Modül 3'teki ARP anomalisinin aynısı, farklı protokolde).
 
-> **SINAV İPUCU:** "ICMP Redirect'ı nasıl tespit edersin?" → `icmp.type
-> == 5` + gateway alanındaki IP'nin gerçek gateway olup olmadığını MAC
-> üzerinden doğrula.
+> **SINAV İPUCU:** "ICMP Redirect'ı nasıl tespit edersin?" → `icmp.type == 5` + gateway alanındaki IP'nin gerçek gateway olup olmadığını MAC üzerinden doğrula.
 
 ## Hazırlık
 
@@ -201,8 +195,7 @@ traceroute 8.8.8.8
 
 ## Alıştırma 5: IP TTL Analizi
 
-Her IP paketinde bir **TTL** (Time To Live) değeri vardır.
-Her router TTL'i 1 azaltır. TTL = 0 olursa paket düşürülür.
+Her IP paketinde bir **TTL** (Time To Live) değeri vardır. Her router TTL'i 1 azaltır. TTL = 0 olursa paket düşürülür.
 
 ### ICMP paketlerinde TTL:
 1. Echo Request paketini aç
@@ -323,10 +316,7 @@ icmp.type == 8 && data.len > 56
 
 ### Gerçek Tünel Bu pcap'te: Sabit Identifier Takibi
 
-pcap'e artık **gerçek bir tünel oturumu** yerleştirildi: Saldırgan
-(172.50.2.200), istemciye (172.50.2.100) doğru **aynı identifier
-(0x7354)** kullanan 4 Echo Request gönderiyor ve her birinin payload'ında
-base64 kodlu gizli veri taşıyor.
+pcap'e artık **gerçek bir tünel oturumu** yerleştirildi: Saldırgan (172.50.2.200), istemciye (172.50.2.100) doğru **aynı identifier (0x7354)** kullanan 4 Echo Request gönderiyor ve her birinin payload'ında base64 kodlu gizli veri taşıyor.
 
 ### Filtre:
 ```text
@@ -344,9 +334,7 @@ v Data (487 bytes)
 ```
 
 **Neden identifier kilit göstergesi?** Gerçek ping araçları her işlem
-için rastgele identifier üretir; tünel araçları (icmptunnel, ptunnel)
-tüm oturumu tek identifier üzerinden taşır. Aynı identifier'lı 4+
-ardışık Echo = bir uygulamanın ICMP'i köprü olarak kullandığının kanıtı.
+için rastgele identifier üretir; tünel araçları (icmptunnel, ptunnel) tüm oturumu tek identifier üzerinden taşır. Aynı identifier'lı 4+ ardışık Echo = bir uygulamanın ICMP'i köprü olarak kullandığının kanıtı.
 
 **Payload'u çöz (analiz):**
 ```sh
@@ -354,9 +342,7 @@ tshark -r shared/pcaps/module-05-icmp.pcap -Y 'icmp.ident == 0x7354 && icmp.type
   -T fields -e data.data | tr -d '\n' | xxd -r -p | \
   sed 's/^.*ICMPTUN//' | base64 -d 2>/dev/null | head -2
 ```
-Çıktı: `CONFIDENTIAL-DB-DUMP:users=1247;hashes=NTLMx12;...` —
-saldırganın veritabanı dökümünü pinglerin içinden geçirdiği apaçık
-ortada.
+Çıktı: `CONFIDENTIAL-DB-DUMP:users=1247;hashes=NTLMx12;...` — saldırganın veritabanı dökümünü pinglerin içinden geçirdiği apaçık ortada.
 
 > **SINAV İPUCU:** ICMP tunneling tespiti:
 >
