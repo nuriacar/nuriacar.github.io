@@ -306,7 +306,7 @@ permalink: /sozluk/
 | <span id="antivirus-tools"></span>**Antivirus tools** | Virüsten koruma araçları | Virüsten koruma araçları: tarama, temizlik, kurtarma diskleri. |
 | <span id="aperiodic-templates-test"></span>**Aperiodic templates test** | Dönemsiz kalıplar sınaması | Dönemsiz kalıp sınaması: NIST rastgelelik paketinin üyesi. Örüntü aranır; bulan kaybeder. |
 | <span id="api"></span>**API** (Application Programming Interface) | Uygulama Programlama Arayüzü | Bir yazılımın başka yazılıma açtığı sözleşmeli kapı. Token'la korunur; kimlik doğrulaması doğru da olsa yetki kontrolü yanlışsa her kapı açık demektir. |
-| <span id="apk"></span>**APK** (Android Package) | Android Paketi | Resmi mağaza (Play Store, App Store) dışından dosya olarak indirilen Android uygulaması. Denetimden geçmez; en yaygın casus yazılım bulaşma yoludur. |
+| <span id="apk"></span>**APK** (Android Package) | Android Paketi | Resmi mağaza (Play Store) dışından dosya olarak indirilen Android uygulaması. Denetimden geçmez; en yaygın casus yazılım bulaşma yoludur. |
 | <span id="app-attack"></span>**App attack** | Uygulama saldırısı | Uygulama saldırısı: mobil ya da web uygulamasına yönelik giriş. Kapı artık avucunuzdadır. |
 | <span id="app-security-requirement"></span>**App security requirement** | Uygulama güvenliği gereksinimi | Uygulama güvenliği gereksinimi: uygulamanın karşılaması zorunlu koşul. |
 | <span id="app-vetting-process"></span>**App vetting process** | Uygulama araştırma süreci | Uygulama araştırma süreci: mağazaya ya da kuruma alınmadan önce inceleme. |
@@ -341,13 +341,13 @@ permalink: /sozluk/
 | <span id="approved"></span>**Approved** | Onaylı | Onaylı: belirlenmiş usulden geçmiş, imzalı durumu anlatır. |
 | <span id="approved-cryptography"></span>**Approved cryptography** | Onaylanmış şifreleme | Onaylanmış kriptografi: kurumun kullanımına izin verdiği algoritma ve parametreler. |
 | <span id="approved-entropy-source"></span>**Approved entropy source** | Onaylanmış düzensizlik kaynağı | Onaylanmış düzensizlik kaynağı: sınanmış rastgelelik üreteci. |
-| <span id="approved-hash-algorithms"></span>**Approved hash algorithms** | Onaylanmış özet algoritmaları | Onaylanmış özet algoritmaları (SHA-2, SHA-3). MD5 ve SHA-1 düşünce ders kitabına geçtiler. |
+| <span id="approved-hash-algorithms"></span>**Approved hash algorithms** | Onaylanmış özet algoritmaları | Onaylanmış özet algoritmaları (SHA-2, SHA-3); MD5 ile SHA-1 ise ders kitabına geçtiler. |
 | <span id="approved-security-function"></span>**Approved security function** | Onaylanmış güvenlik işlevi | Onaylanmış güvenlik işlevi: ölçütleri geçmiş, izinli işlev. |
 | <span id="approver"></span>**Approver** | Onaylayan | Onaylayan: kararı imzalayacak yetkili. |
 | <span id="approximate-entropy-test"></span>**Approximate entropy test** | Yaklaşık düzensizlik sınaması | Yaklaşık düzensizlik sınaması: NIST rastgelelik paketinin üyesi. |
 | <span id="apt"></span>**APT** (Advanced Persistent Threat) | Gelişmiş Sürekli Tehdit | Uzun süreli, hedefli ve karmaşık siber saldırı: belirli bir kuruma gizlice yerleşip aylarca kalır. "Sürekli" sözcüğü burada sabrı anlatır; bütçeyi değil. |
 | <span id="architecture"></span>**Architecture** | Mimari | Mimari: bileşenlerin, ilişkilerin ve kuralların bütünü. |
-| <span id="architecture-and-infrastructure-committee"></span>**Architecture and infrastructure committee** | Mimarlık ve altyapı komitesi | NIST mimari ve altyapı komitesi. |
+| <span id="architecture-and-infrastructure-committee"></span>**Architecture and infrastructure committee** | Mimari ve altyapı komitesi | NIST mimari ve altyapı komitesi. |
 | <span id="architecture-constructs"></span>**Architecture constructs** | Mimari yapılar | Mimari yapılar: çözümlemede kullanılan şablon ve desenler. |
 | <span id="architecture-description"></span>**Architecture description** | Mimari açıklama | Mimari açıklaması: bileşen, arayüz ve kısıtların yazılı anlatımı. |
 | <span id="architecture-design-principles"></span>**Architecture design principles** | Mimari tasarım ilkeleri | Mimari tasarım ilkeleri: en az yetki, savunma derinliği, güvenli başarısızlık. |
@@ -451,7 +451,7 @@ permalink: /sozluk/
 | <span id="attack-relevant"></span>**Attack relevant** | Saldırıyla ilgili | Saldırıyla ilgili: olayın girişimle bağlantısını anlatır. |
 | <span id="attack-relevant-event"></span>**Attack relevant event** | Saldırıyla ilgili olay | Saldırıyla ilgili olay: girişimin parçası sayılan kayıt. |
 | <span id="attack-sensing-and-warning"></span>**Attack sensing and warning** | Saldırı algılama ve uyarı | Saldırı algılama ve uyarı: saptamadan habere uzanan süreç. |
-| <span id="attack-signal"></span>**Attack signal** | Saldırı imi | Saldırı imi: trafikteki ayırt edici işaret. |
+| <span id="attack-signal"></span>**Attack signal** | Saldırı sinyali | Saldırı sinyali: trafikteki ayırt edici işaret. |
 | <span id="attack-signature"></span>**Attack signature** | Saldırı imzası | Saldırı imzası: bilinen girişimin parmak izi. İmza hızlıdır ama yalnız bilineni yakalar. |
 | <span id="attack-space"></span>**Attack space** | Saldırı alanı | Saldırı alanı: girişimin yapılabileceği tüm olasılıkların kümesi. |
 | <span id="attack-speed"></span>**Attack speed** | Saldırı hızı | Saldırı hızı: girişimin zaman ölçeği. |
@@ -528,7 +528,7 @@ permalink: /sozluk/
 | <span id="authentication-token"></span>**Authentication token** | Kimlik doğrulama gereci | Kimlik doğrulama gereci: iki etken için taşınan araç. |
 | <span id="authentication-authorization-and-accounting"></span>**Authentication, authorization, and accounting** | Kimlik doğrulama, yetkilendirme ve hesap | AAA: kimlik doğrulama, yetkilendirme ve hesap tutma üçlüsü. |
 | <span id="authentication-authorization-and-accounting-key"></span>**Authentication, authorization, and accounting key** | Kimlik doğrulama, yetkilendirme ve hesap anahtarı | AAA anahtarı: kimlik doğrulama sırasında türetilen ve oturum şifrelemesine kök olan anahtar (MSK/EMSK). |
-| <span id="authenticator"></span>**Authenticator** | Kimlik doğrulayıcı | Kimlik doğrulayıcı: kanıt üreten ya da sınamayan taraf. |
+| <span id="authenticator"></span>**Authenticator** | Kimlik doğrulayıcı | Kimlik doğrulayıcı: kanıt üreten ya da sınavdan geçiren taraf. |
 | <span id="authenticator-assurance-level"></span>**Authenticator assurance level** | Kimlik doğrulayıcı güvence düzeyi | AAL: NIST 800-63'ün kanıt gücü kademeleri. |
 | <span id="authenticator-output"></span>**Authenticator output** | Kimlik doğrulayıcı çıktısı | Kimlik doğrulayıcı çıktısı: üretilen kanıt. |
 | <span id="authenticator-secret"></span>**Authenticator secret** | Kimlik doğrulayıcı gizliliği | Kimlik doğrulayıcı sırrı: kanıt üretiminde kullanılan gizli değer. |
@@ -572,10 +572,10 @@ permalink: /sozluk/
 | <span id="authorizing-official-designated-representative"></span>**Authorizing official designated representative** | Yetkilendirme yetkilisinin resmî temsilcisi | Yetkilendirme yetkilisinin görevlendirdiği temsilci: imza sahibinin uzatılmış eli. |
 | <span id="auto-hacking-attack"></span>**Auto hacking attack** | Otomatik siber saldırı | Otomatik siber saldırı: insan müdahalesi olmadan yürüyen saldırı. |
 | <span id="automated-access"></span>**Automated access** | Otomatik erişim | Otomatik erişim: makinelerin kimlik kanıtıyla birbirine erişmesi. |
-| <span id="automated-certificate"></span>**Automated certificate** | Otomatik belgelendirme | Sertifikanın elle değil kural temelli, otomatik verilmesi: insan eli değmeden alınıp yenilenen sertifika. |
+| <span id="automated-certificate"></span>**Automated certificate** | Otomatik belgelendirme | Kural temelli, otomatik verilen sertifika: alımı ve yenilemesi insan eli değmeden yürür. |
 | <span id="automated-certificate-management-environment"></span>**Automated certificate management environment** | Otomatik belgelendirme yönetim ortamı | ACME: Let's Encrypt'in otomatik sertifika verme kuralı. |
 | <span id="automated-checklist"></span>**Automated checklist** | Otomatik denetim listesi | Otomatik denetim listesi: makine ile işlenen uyumluluk kontrol listesi. |
-| <span id="automated-combinatorial-testing"></span>**Automated combinatorial testing** | Otomatik bileşimsel sınama | Girdi kombinasyonlarını otomatik üretip sınama: çiftler üçlülerden çoğu hatayı yakalar. |
+| <span id="automated-combinatorial-testing"></span>**Automated combinatorial testing** | Otomatik bileşimsel sınama | Girdi kombinasyonlarını otomatik üretip sınama: ikili bileşimler bile çoğu hatayı yakalar. |
 | <span id="automated-combinatorial-testing-for-software"></span>**Automated combinatorial testing for software** | Yazılım için otomatik bileşimsel sınama | Yazılımda parametre kombinasyonlarını otomatik deneyen sınama yöntemi (NIST ACTS). |
 | <span id="automated-cryptographic-validation-protocol"></span>**Automated cryptographic validation protocol** | Otomatik şifreleme doğrulama kuralı | ACVP: kripto modüllerin sınanmasını otomatikleştiren protokol. |
 | <span id="automated-cryptographic-validation-test-system"></span>**Automated cryptographic validation test system** | Otomatik şifreleme doğrulama sınama sistemi | ACVP sınama sistemi. |
@@ -593,7 +593,7 @@ permalink: /sozluk/
 | <span id="automatic-identification-technology"></span>**Automatic identification technology** | Otomatik tanımlama teknolojisi | Nesne ve kimlikleri elle girmeden tanıyan teknolojiler (barkod, RFID, biyometri). |
 | <span id="automatic-remote-rekeying"></span>**Automatic remote rekeying** | Otomatik uzaktan yeniden anahtarlama | Anahtarın süre bitiminde uzaktan, elle müdahale olmadan yenilenmesi. |
 | <span id="automatically-disinfect-the-system"></span>**Automatically disinfect the system** | Dizgeyi virüsten otomatik arındırma | Sistemin bulaşmayı kendiliğinden temizlemesi: karantina ile birlikte yürür. |
-| <span id="automatically-remove-a-virus"></span>**Automatically remove a virus** | Otomatik virüs arındırma | Otomatik virüs kaldırma. |
+| <span id="automatically-remove-a-virus"></span>**Automatically remove a virus** | Otomatik virüs arındırma | Otomatik virüs kaldırma: bulaşın kullanıcıya sormadan silinmesi. |
 | <span id="autonomous-system"></span>**Autonomous system** | Özerk sistem | AS: tek yönetim altındaki yönlendirme alanı. İnternetin eyaletleridir. |
 | <span id="autonomous-system-number"></span>**Autonomous system number** | Özerk sistem numarası | ASN: özerk sistemin numarası. BGP duyurularının kimliğidir. |
 | <span id="autorun-worm"></span>**Autorun worm** | Otomatik çalışan solucan | Otomatik çalışan solucan: USB takılınca kendi kendine çalışan solucan. |
