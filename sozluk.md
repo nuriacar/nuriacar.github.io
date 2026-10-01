@@ -3134,7 +3134,7 @@ permalink: /sozluk/
 | <span id="hash-total"></span>**Hash total** | Özet toplamı | Özet toplamı: kayıtların toplanıp tek sağlamada birleştirilmesi. |
 | <span id="hash-value"></span>**Hash value** | Özet değeri | Özet değeri. |
 | <span id="hash-value-result"></span>**Hash value/result** | Özet değeri / sonuç | Özet değeri: fonksiyonun döndürdüğü sonuç; kanıt mühürlerinin taşıyıcısı. |
-| <span id="hashed-message-authentication-code"></span>**Hashed message authentication code** | Özet ileti kimlik doğrulama kodu | HMAC. |
+| <span id="hashed-message-authentication-code"></span>**Hashed message authentication code** | Özet ileti kimlik doğrulama kodu | HMAC: anahtarlı özetle ileti doğrulama; TLS record’ın damgası. |
 | <span id="hashed-timelock-contract"></span>**Hashed timelock contract** | Özet zaman kilitli sözleşme | HTLC: zincirler arası ödeme kilidi. |
 | <span id="hashword"></span>**Hashword** | Özetlenmiş parola | Özet parola: parolanın özeti saklanan biçim; tablo saldırısına karşı tuz ister. |
 | <span id="hazard"></span>**Hazard** | Tehlike | Tehlike: zarar potansiyeli taşıyan koşul; riskin hammaddesi. |
@@ -3396,7 +3396,7 @@ permalink: /sozluk/
 | <span id="information-in-identifiable-form"></span>**Information in identifiable form** | Tanımlanabilir formdaki bilgi | Kişiye geri bağlanabilir biçimde bilgi; anonimleştirilmemiş hâli. |
 | <span id="information-leakage"></span>**Information leakage** | Bilgi sızıntısı | Bilginin izinsiz sızması; leak’in resmî söylenişi. |
 | <span id="information-life-cycle"></span>**Information life cycle** | Bilgi yaşam döngüsü | Doğumdan imhaya uzanan yol; her adımının kuralı olmalıdır. |
-| <span id="information-management"></span>**Information management** | Bilgi yönetimi | Bilginin toplanma ve kullanım düzeni. |
+| <span id="information-management"></span>**Information management** | Bilgi yönetimi | Bilginin toplanma ve kullanım düzeni; kurum hafızasının idaresi. |
 | <span id="information-management-policy"></span>**Information management policy** | Bilgi yönetimi politikası | Bilginin nasıl toplanıp saklanacağını söyleyen üst belge. |
 | <span id="information-object"></span>**Information object** | Bilgi nesnesi | Bilgiyi taşıyan yapılandırılmış birim. |
 | <span id="information-operations"></span>**Information operations** | Bilgi işlemleri | Bilgiyi silah gibi kullanma harekâtları; elemanın sivil kardeşi. |
@@ -3608,8 +3608,8 @@ permalink: /sozluk/
 | <span id="key"></span>**Key** | Anahtar | Anahtar: şifrenin sırrı; güvenlik algoritmadan çok saklama işine bağlıdır. |
 | <span id="key-distribution"></span>**Key distribution** | Anahtar dağıtımı | Anahtarın taraflara güvenle ulaştırılması; en zayıf halka çoğu kez burasıdır. |
 | <span id="key-encryption-key"></span>**Key encryption key** | Anahtar şifreleme anahtarı | KEK: anahtarları şifreleyen anahtar. |
-| <span id="key-escrow"></span>**Key escrow** | Parola dağıtımı | Anahtar emaneti: üçüncü tarafta saklama. |
-| <span id="key-generation"></span>**Key generation** | Şifre üretimi | Anahtar üretimi. |
+| <span id="key-escrow"></span>**Key escrow** | Parola dağıtımı | Anahtar emaneti: anahtarın üçüncü tarafta saklanması; mahkeme istediğinde kapı açılır, mahkeme değilse tartışma başlar. |
+| <span id="key-generation"></span>**Key generation** | Şifre üretimi | Anahtar üretimi: rastgelelik kaynağından beslenen süreç; zayıf tohum zayıf kilit. |
 | <span id="key-index"></span>**Key index** | Anahtar dizini | Hangi anahtarın hangi oturumda kullanıldığını gösteren işaret (WEP’te 1-3). |
 | <span id="key-management"></span>**Key management** | Anahtar yönetimi | Üretimden imhaya uzanan anahtar yaşam döngüsü. |
 | <span id="key-pair"></span>**Key pair** | Anahtar çifti | Biri açık biri özel: ikisi birlikte doğar, biri düşerse çift düşer. |
@@ -3618,18 +3618,18 @@ permalink: /sozluk/
 | <span id="key-space"></span>**Key space** | Anahtar seçenek kümesi | Anahtar uzayı: denenebilecek tüm anahtarların kümesi; boyutu gücün ölçüsüdür. |
 | <span id="key-variable"></span>**Key variable** | Anahtar değişken | Kripto akışında anahtarın aldığı değer; aynı değer iki kez kullanılmaz. |
 | <span id="keyed-hash-message-authentication-code"></span>**Keyed hash message authentication code** | Anahtarlı özet ileti kimlik doğrulama kodu | HMAC. |
-| <span id="keyed-hash-message-authentication-code-message-digest"></span>**Keyed hash message authentication code message digest** | Anahtarlı özet ileti kimlik doğrulama kodu mesaj özeti | HMAC özeti. |
-| <span id="keyed-hash-message-authentication-code-secure-hash-algorithm"></span>**Keyed hash message authentication code secure hash algorithm** | Anahtarlı özet ileti kimlik doğrulama kodu güvenli özet algoritması | HMAC-SHA. |
+| <span id="keyed-hash-message-authentication-code-message-digest"></span>**Keyed hash message authentication code message digest** | Anahtarlı özet ileti kimlik doğrulama kodu mesaj özeti | HMAC çıktısı: ileti ve anahtarın birleşik parmak izi. |
+| <span id="keyed-hash-message-authentication-code-secure-hash-algorithm"></span>**Keyed hash message authentication code secure hash algorithm** | Anahtarlı özet ileti kimlik doğrulama kodu güvenli özet algoritması | HMAC-SHA: SHA ailesiyle HMAC; en yaygın ikili HMAC-SHA256. |
 | <span id="keying-material"></span>**Keying material** | Anahtarlama malzemesi | Anahtar ve türevlerinin bütünü; sızıntısı tüm oturumları düşürür. |
 | <span id="keylogger"></span>**Keylogger** (Klavye Kaydedici) | Tuş kaydedici | Bastığın her tuşu gizlice kaydedip saldırgana gönderen yazılım. Parolan ne kadar uzun olursa olsun tuş tuş çalınır; ekran klavyesi bile kurtarmayabilir. |
-| <span id="keylogging"></span>**Keylogging** | Tuş kaydetme | Tuş kaydı. |
+| <span id="keylogging"></span>**Keylogging** | Tuş kaydetme | Tuş kaydı: her basışın yakalanması; parolaların kâbusu. |
 | <span id="keystroke-logger"></span>**Keystroke logger** | Tuş vuruşu kaydedicisi | Tuş kaydedici. |
-| <span id="keystroke-logger-attack"></span>**Keystroke logger attack** | Tuş kaydedici saldırısı | Tuş kaydedici saldırısı. |
-| <span id="keystroke-monitoring"></span>**Keystroke monitoring** | Tuş kaydedici izleme | Tuş vuruşu izleme. |
+| <span id="keystroke-logger-attack"></span>**Keystroke logger attack** | Tuş kaydedici saldırısı | Kimlik bilgilerini tuş anında çalma. |
+| <span id="keystroke-monitoring"></span>**Keystroke monitoring** | Tuş kaydedici izleme | Tuş vuruşu izleme: davranış biyometrisi ya da casusluk; amaç belirleyici. |
 | <span id="kill-chain"></span>**Kill Chain** | Öldürme Zinciri | Saldırıyı aşamalara ayıran model: keşif, silahlanma, teslim, istismar, kurulum, C2, hedefe erişim. Savunma zincirin tek bir halkasını kırmayı hedefler; Lockheed Martin modelidir. |
 | <span id="kill-switch"></span>**Kill Switch** | Bağlantı Kesici | VPN koptuğu an İnternet erişimini otomatik kesen özellik. Açık değilse VPN düşerken farkında olmadan korumasız gezersin. |
 | <span id="knowledge-management"></span>**Knowledge management** | Bilgi yönetimi | Bilginin toplanma ve kullanım düzeni. |
-| <span id="kovter"></span>**Kovter** | Tıklama sahtekarlığı | Kovter: reklam sahteciliği zararlısı. |
+| <span id="kovter"></span>**Kovter** | Tıklama sahtekarlığı | Kovter: kayıt defterinde yaşayan tıklama sahteciliği zararlısı; fileless’un ünlü örneği. |
 | <span id="kpi"></span>**KPI** (Key Performance Indicator) | Temel Performans Göstergesi | Temel performans göstergesi. Hedeflere ulaşılıp ulaşılmadığını ölçen metrik. |
 | <span id="krbtgt"></span>**krbtgt** | — | KDC'nin imza anahtarını taşıyan hesap; TGT'leri o imzalar. Hash'i sızarsa Golden Ticket kapısı açılır — parolasını iki kez sıfırlamak eski anahtarı öldürür. |
 | <span id="kri"></span>**KRI** (Key Risk Indicator) | Temel Risk Göstergesi | Temel risk göstergesi. Risklerin gerçekleşme olasılığını önceden haber veren metrik. |
@@ -3644,15 +3644,15 @@ permalink: /sozluk/
 
 | Terim/Deyim | Karşılık | Açıklama |
 |---|---|---|
-| <span id="land-attack"></span>**Land attack** | Alandan saldırı | Land saldırısı: aynı IP'den SYN. |
+| <span id="land-attack"></span>**Land attack** | Alandan saldırı | Land saldırısı: kaynak ve hedef adresi aynı olan SYN; makine kendisiyle konuşmaya zorlanır. |
 | <span id="larry-wall"></span>**Larry Wall's Three Virtues** | Larry Wall'un Üç Erdemi | Büyük mühendisin üç erdemi (Perl'in babasından): Tembellik — aynı angaryayı iki kez yapmamak için otomasyon yazar; Sabırsızlık — darboğazı yaşanmadan önce çözer; Kibir — "bunu hangi sığır yazdı?" dedirtmeyecek kadar temiz kod üretir. |
 | <span id="latent-value"></span>**Latent value** | Gizil değer | Doğrudan görünmeyen, ölçümle çıkarılan değer. |
 | <span id="latent-variable"></span>**Latent variable** | Gizil değişken | Gözlenemeyen, dolaylı yoldan kestirilen değişken. |
 | <span id="lattice-network"></span>**Lattice network** | Kafes ağ | Düğümleri kafes biçiminde bağlanan topoloji (bkz. Grid network). |
 | <span id="lattice-techniques"></span>**Lattice techniques** | Kafes teknikleri | Kafes (lattice) matematiğine dayanan, niceme dayanıklı kripto yaklaşımları. |
 | <span id="lawful-intercept"></span>**Lawful intercept** | Yasal dinleme | Hukuki izinle yapılan dinleme; denetimsiz dinlemeden farkı belgesidir. |
-| <span id="layer-2-forwarding-protocol"></span>**Layer 2 forwarding protocol** | İkinci katman yönlendirme kuralı | L2F. |
-| <span id="layer-2-tunneling-protocol"></span>**Layer 2 tunneling protocol** | İkinci katman tünel kuralı | L2TP. |
+| <span id="layer-2-forwarding-protocol"></span>**Layer 2 forwarding protocol** | İkinci katman yönlendirme kuralı | L2F: Cisco’nun eski katman 2 tünelleme protokolü; L2TP’nin iki ebeveyninden biri. |
+| <span id="layer-2-tunneling-protocol"></span>**Layer 2 tunneling protocol** | İkinci katman tünel kuralı | L2TP: PPP çerçevelerini taşımak için tünel; IPSec ile birlikte anılması şart. |
 | <span id="layer-violation"></span>**Layer violation** | Katman aşımı | Katmanın başkasının işine karışması; tasarım kusurudur. |
 | <span id="layered-assurance"></span>**Layered assurance** | Katmanlı güvence | Güvence kanıtlarının katman katman toplanması. |
 | <span id="layered-security"></span>**Layered security** | Katmanlı güvenlik | İç içe savunma katmanları; tek katman düşse savaş bitmez. |
@@ -3660,17 +3660,17 @@ permalink: /sozluk/
 | <span id="ldap"></span>**LDAP** | — | Dizin servisinin (kullanıcı, grup, bilgisayar) sorgulama protokolü; Active Directory'nin arayüzü. 389 düz/StartTLS, 636 LDAPS; rootDSE boş sorgusu dizinin "kimlik kartını" anonim verir — keşfin ilk adımıdır. |
 | <span id="ldap-injection"></span>**LDAP Injection** (LDAP Enjeksiyonu) | — | LDAP filtresine kullanıcı girdisiyle müdahale: sorgu genişletilip tüm kayıtlar dökülür. SQL injection'ın LDAP kardeşi; filtre kaçışıyla önlenir. |
 | <span id="leak"></span>**Leak** | Sızıntı | Bilginin istemeden dışarı çıkması. |
-| <span id="leaked-data"></span>**Leaked data** | Sızdırılmış veri | Sızdırılmış veri. |
+| <span id="leaked-data"></span>**Leaked data** | Sızdırılmış veri | Eline geçen herkesin okuyabildiği veri; şifreliyse şanslısın. |
 | <span id="lease-time"></span>**Lease Time** | Kiralama Süresi | DHCP'nin verdiği IP adresinin geçerlilik süresi (Option 51, tipik 24 saat). Süre dolmadan yenilenir (renew); istemci dönmezse adres havuza geri döner. |
 | <span id="leased-line"></span>**Leased line** | Kiralık hat | Noktadan noktaya ayrılmış hat; gizli ama pahalıdır. |
 | <span id="least-privilege"></span>**Least Privilege** (En Az Yetki) | En düşük erişim hakkı | Bir kullanıcının veya sistemin yalnızca görevini yerine getirmek için gereken en düşük yetki seviyesine sahip olması prensibi. |
 | <span id="ledger"></span>**Ledger** | Kayıt defteri | Blokzincirde işlemlerin yazıldığı defter. |
-| <span id="legal-advice-and-advocacy"></span>**Legal advice and advocacy** | Hukuki danışmanlık ve avukatlık | Hukuki danışma ve savunma. |
-| <span id="legion"></span>**Legion** | Legion (tarama aracı) | Legion: ağ zafiyet tarama aracı. |
+| <span id="legal-advice-and-advocacy"></span>**Legal advice and advocacy** | Hukuki danışmanlık ve avukatlık | Hukuki danışma ve savunma: olayın hukuki boyutunu yöneten destek. |
+| <span id="legion"></span>**Legion** | Legion (tarama aracı) | Legion: yarı otomatik sızma aracı; zayıf noktayı bulur, sömürmeye çalışır. |
 | <span id="level-of-concern"></span>**Level of concern** | Kaygı düzeyi | Verinin ne kadar hassas sayıldığı; koruma buna göre ölçeklenir. |
 | <span id="lightweight-directory-access-protocol"></span>**Lightweight directory access protocol** | Basit dizin erişim kuralı | LDAP. |
-| <span id="likelihood-of-occurrence"></span>**Likelihood of occurrence** | Gerçekleşme olasılığı | Ortaya çıkma olasılığı. |
-| <span id="link-jacking"></span>**Link jacking** | Bağlantı korsanlığı | Bağlantı çalma. |
+| <span id="likelihood-of-occurrence"></span>**Likelihood of occurrence** | Gerçekleşme olasılığı | Riskin gerçekleşme olasılığı; etkiyle çarpılınca risk büyüklüğü çıkar. |
+| <span id="link-jacking"></span>**Link jacking** | Bağlantı korsanlığı | Link jacking: içerik bağlantısını gasp edip trafik çalma; telif tartışmalarının klasik oyunu. |
 | <span id="link-jacking-cyber-attack"></span>**Link jacking cyber attack** | Bağlantı korsanlığıyla siber saldırı | Bağlantı çalma saldırısı. |
 | <span id="link-state"></span>**Link state** | Bağlantı durumu | Yönlendirme protokollerinin komşuluk topolojisi; OSPF dünyasıdır. |
 | <span id="link-local"></span>**Link-Local** | Bağlantı-Yerel | Yalnız aynı segmentte geçerli IPv6 adresi (fe80::/10); router asla taşımaz. Her arayüz otomatik alır; NDP ve router keşfi bununla çalışır: `fe80::1%eth0` gibi kullanılır. |
@@ -3678,7 +3678,7 @@ permalink: /sozluk/
 | <span id="list-based-access-control"></span>**List based access control** | Liste tabanlı erişim kontrolü | Liste temelli erişim denetimi. |
 | <span id="llm"></span>**LLM** (Large Language Model) | Büyük Dil Modeli | ChatGPT, Claude, Gemini gibi büyük dil modelleri. Prompt injection, hallucination, veri sızıntısı gibi yeni güvenlik riskleri getirir. |
 | <span id="loadable-kernel-modules"></span>**Loadable kernel modules** | Yüklenebilir çekirdek modülleri | Çekirdeğe sonradan takılan parçalar; rootkit’lerin sevdiği evdir. |
-| <span id="local-area-network"></span>**Local area network** | Yerel alan ağı | LAN. |
+| <span id="local-area-network"></span>**Local area network** | Yerel alan ağı | LAN: yerel ağ; bir binada yaşayan, bir yöneticin olan dünya. |
 | <span id="local-area-network-denial"></span>**Local area network denial** | Yerel alan ağı engelleme | Yerel ağın çökertilmesi; LAN katmanındaki DoS. |
 | <span id="lockable-commercial-cabinet"></span>**Lockable commercial cabinet** | Kilitlenebilir ticari dolap | Donanım ve ortamın fiziksel olarak kilitlendiği dolap. |
 | <span id="lockdown-mode"></span>**Lockdown Mode** (Kilit Modu) | — | Kilitleme modu. iPhone'da yüksek riskli kullanıcılar için azaltılmış özellikli güvenlik modu. |
@@ -3690,10 +3690,10 @@ permalink: /sozluk/
 | <span id="logging-facility"></span>**Logging facility** | Kaydetme olanağı | Sistemin günlükleme yetenekleri: hedef, düzey ve biçim. |
 | <span id="logic-bomb"></span>**Logic bomb** | Mantıksal bomba | Mantık bombası: koşul gerçekleşince patlar. |
 | <span id="logic-gate"></span>**Logic gate** | Mantık kapısı | VE, VEYA, DEĞİL: donanımın ve fault injection’ın atomu. |
-| <span id="logical-unit-number"></span>**Logical unit number** | Mantıksal birim numarası | LUN. |
+| <span id="logical-unit-number"></span>**Logical unit number** | Mantıksal birim numarası | LUN: depolama dünyasının bölünmüş adresi; masking bunu saklar. |
 | <span id="login"></span>**Login** | Oturum açma | Kimliğin kanıtlandığı kapı; her denemesi kayda geçmelidir. |
 | <span id="long-haul-networks"></span>**Long haul networks** | Uzun mesafeli ağlar | Şehirler arası omurga bağlantıları. |
-| <span id="loopback-address"></span>**Loopback address** | Geri döngü adresi | Geri döngü adresi (127.0.0.1). |
+| <span id="loopback-address"></span>**Loopback address** | Geri döngü adresi | Geri döngü adresi: makinenin kendisi; ağ yollarını denemek için kendine sorarsın. |
 | <span id="lotl"></span>**LotL** (Living off the Land) | — | Sistemde halihazırda var olan yasal araçları (PowerShell, WMI, BitLocker vb.) kullanarak yapılan dosyasız saldırı. Zararlı yazılım indirmeden, sadece sistemin kendi araçlarıyla saldırma tekniği. |
 | <span id="low-impact"></span>**Low impact** | Düşük etki | FIPS 199’a göre sınırlı zarar düzeyi. |
 | <span id="lsass"></span>**LSASS** (Local Security Authority Subsystem) | Yerel Güvenlik Otoritesi Alt Sistemi | Windows'un kimlik ve oturum süreci; belleğinde parola hash'i, bilet ve bazen düz metin yaşar. Mimikatz'ın birinci numaralı hedefidir. |
@@ -3706,22 +3706,22 @@ permalink: /sozluk/
 
 | Terim/Deyim | Karşılık | Açıklama |
 |---|---|---|
-| <span id="mac-media-access-control"></span>**Mac (media access control)** | Ortam erişim denetimi | MAC: ortam erişim denetimi. |
+| <span id="mac-media-access-control"></span>**Mac (media access control)** | Ortam erişim denetimi | MAC (media access control): ortam erişim denetimi; alt katmanın kimliği. |
 | <span id="mac-adresi"></span>**MAC Adresi** | — | Cihazına özgü sabit ağ kimlik numarası. Modemde MAC filtreleme açarsan parola bilinse bile tanımsız cihaz ağa giremez. |
 | <span id="machine-learning-and-evolution"></span>**Machine learning and evolution** | Makine öğrenimi ve evrim | Modelin veriyle gelişmesi; adversarial ML riskini de beraberinde getirir. |
-| <span id="macro-virus"></span>**Macro virus** | Makro virüsü | Makro virüsü: belge makrolarına bulaşan. |
+| <span id="macro-virus"></span>**Macro virus** | Makro virüsü | Makro virüsü: belge makrolarına bulaşan virüs; Word’ün karanlık çağı. |
 | <span id="magic-bytes"></span>**Magic Bytes** | İmza Baytları | Dosya türünü ele veren imza baytları: `PK` ZIP, `PNG` PNG gibisi. Uzantı yalan söyler, magic bytes söylemez; forensikte indirilen dosyanın gerçek kimliği buradan kanıtlanır. |
 | <span id="mail-transfer-agent-strict-transport-security"></span>**Mail transfer agent strict transport security** | Posta aktarım aracısı eksiksiz taşıma güvenliği | MTA-STS. |
-| <span id="mal-information"></span>**Mal information** | Kötücül bilgi | Yanlış bilgi. |
-| <span id="malcode"></span>**Malcode** | Kötücül yazılım | Zararlı kod. |
+| <span id="mal-information"></span>**Mal information** | Kötücül bilgi | Malinformation: yanlış bilgi; kasıtla yayılanına disinformation denir. |
+| <span id="malcode"></span>**Malcode** | Kötücül yazılım | Zararlı kod: yazılımın kötü niyetli hâli; imza ve davranışla yakalanır. |
 | <span id="malfunction"></span>**Malfunction** | Arıza | İşlevin bozulması; güvenli başarısızlık tasarımıyla karşılanır. |
-| <span id="malicious-advertising"></span>**Malicious advertising** | Kötücül reklamcılık | Zararlı reklam. |
-| <span id="malicious-applet"></span>**Malicious applet** | Kötücül uygulama | Zararlı uygulamacık. |
+| <span id="malicious-advertising"></span>**Malicious advertising** | Kötücül reklamcılık | Malvertising: reklam ağları üzerinden zararlı yayma. |
+| <span id="malicious-applet"></span>**Malicious applet** | Kötücül uygulama | Zararlı applet: tarayıcıda çalışan küçük zararlı kod. |
 | <span id="malicious-code"></span>**Malicious code** | Kötücül kod | Zararlı kod. |
-| <span id="malicious-code-infection"></span>**Malicious code infection** | Kötücül yazılım bulaşı | Zararlı kod bulaşması. |
+| <span id="malicious-code-infection"></span>**Malicious code infection** | Kötücül yazılım bulaşı | Zararlı kod bulaşması: sisteme yerleşme anı; karantina bundan sonra gelir. |
 | <span id="malicious-hoax"></span>**Malicious hoax** | Kötücül asılsız haber | Zararlı yayılım amacı taşıyan asılsız haber. |
 | <span id="malicious-logic"></span>**Malicious logic** | Kötücül mantık | Zararlı mantık. |
-| <span id="malicious-mobile-code"></span>**Malicious mobile code** | Kötücül mobil kod | Zararlı mobil kod. |
+| <span id="malicious-mobile-code"></span>**Malicious mobile code** | Kötücül mobil kod | Zararlı mobil kod: ağdan inip yerelde çalışan zararlı betik. |
 | <span id="malicious-online-activity"></span>**Malicious online activity** | Kötücül çevrimiçi etkinlik | Zararlı çevrim içi etkinlik. |
 | <span id="malicious-reconnaissance"></span>**Malicious reconnaissance** | Kötücül amaçlı keşif | Zararlı keşif. |
 | <span id="malicious-software"></span>**Malicious software** | Kötücül yazılım | Zararlı yazılım. |
