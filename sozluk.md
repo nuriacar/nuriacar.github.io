@@ -3299,7 +3299,7 @@ permalink: /sozluk/
 | <span id="identity-theft"></span>**Identity theft** | Kimlik hırsızlığı | Kimliğin çalınıp başkası gibi kullanılması. |
 | <span id="identity-token"></span>**Identity token** | Kimlik belirteci | Kimliği taşıyan taşınabilir kanıt. |
 | <span id="identity-verification"></span>**Identity verification** | Kimlik doğrulama | İddia edilen kimliğin kanıtla sınanması. |
-| <span id="identity-web-services-framework"></span>**Identity web services framework** | Kimlik bilgiağı hizmetleri çerçevesi | ID-WSF: Liberty Alliance’ın kimlik servisi çerçevesi; SAML öncesi dönemin Beyaz Stdart’ı. |
+| <span id="identity-web-services-framework"></span>**Identity web services framework** | Kimlik bilgiağı hizmetleri çerçevesi | ID-WSF: Liberty Alliance'ın kimlik servisi çerçevesi; SAML öncesi dönemin öncü standardı. |
 | <span id="ids-ips"></span>**IDS/IPS** (Intrusion Detection/Prevention System) | Saldırı Tespit/Önleme Sistemi | Saldırı tespit/önleme sistemi. Ağ trafiğini izleyerek saldırıları tespit eden (IDS) ve engelleyen (IPS) güvenlik sistemleri. |
 | <span id="image"></span>**Image** | Görüntü | Görüntü ya da disk kalıbı; bağlam hangisi olduğunu söyler. |
 | <span id="image-authentication"></span>**Image authentication** | Görüntü doğrulama | Görüntünün değiştirilmediğinin kanıtlanması; deepfake çağında sınava girdi. |
