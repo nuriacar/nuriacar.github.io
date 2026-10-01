@@ -2957,30 +2957,30 @@ permalink: /sozluk/
 | <span id="fragmentation"></span>**Fragmentation** | Parçalanma | Parçalama. |
 | <span id="frame"></span>**Frame** | Çerçeve | Paketin fiziksel katman (Ethernet) temsili; Wireshark'ta her paketin en üstündeki "Frame N" satırıdır. Günlük dilde "paket" ile karışır; teknik olarak frame L2, paket L3'tür. |
 | <span id="frame-check-sequence"></span>**Frame check sequence** | Çerçeve kontrol sırası | FCS. |
-| <span id="framework"></span>**Framework** | Çerçeve | Çerçeve. |
-| <span id="framework-core"></span>**Framework core** | Çerçeve çekirdeği | Çerçeve çekirdeği. |
+| <span id="framework"></span>**Framework** | Çerçeve | Çerçeve: ortak dil ve yapı sunan model (CSF, TOGAF gibi). |
+| <span id="framework-core"></span>**Framework core** | Çerçeve çekirdeği | CSF'in işlev-kategori-altkategori yapısı: çekirdek değişmez, kurum profili değişir. |
 | <span id="framework-implementation-tier"></span>**Framework implementation tier** | Çerçeve uygulama katmanı | Çerçeve uygulama düzeyi. |
-| <span id="framework-profile"></span>**Framework profile** | Çerçeve profili | Çerçeve profili. |
+| <span id="framework-profile"></span>**Framework profile** | Çerçeve profili | Kurumun kendi önceliklerine göre işaretlediği CSF kesiti. |
 | <span id="free-and-open-source-software"></span>**Free and open source software** | Ücretsiz ve açık kaynak yazılım | FOSS. |
 | <span id="free-field"></span>**Free field** | Serbest alan | Serbest alan. |
-| <span id="free-space"></span>**Free space** | Boş alan | Boş alan. |
-| <span id="freeware"></span>**Freeware** | Ücretsiz yazılım | Ücretsiz yazılım. |
+| <span id="free-space"></span>**Free space** | Boş alan | Boş alan: dosya sisteminin kullanılmamış bölgesi; silinen veri bir süre burada yaşar. |
+| <span id="freeware"></span>**Freeware** | Ücretsiz yazılım | Ücretsiz yazılım: bedava olması açık kaynak olduğu anlamına gelmez. |
 | <span id="frequency"></span>**Frequency** | Sıklık | Sıklık. |
 | <span id="frequency-accuracy"></span>**Frequency accuracy** | Frekans doğruluğu | Frekans doğruluğu. |
 | <span id="frequency-drift"></span>**Frequency drift** | Frekans kayması | Frekans kayması. |
 | <span id="frequency-hopping"></span>**Frequency hopping** | Frekans atlaması | Frekans sıçraması. |
-| <span id="frequency-hopping-spread-spectrum"></span>**Frequency hopping spread spectrum** | Frekans atlamalı yayılmış çeşitlilik | FHSS. |
+| <span id="frequency-hopping-spread-spectrum"></span>**Frequency hopping spread spectrum** | Frekans atlamalı yayma spektrumu | FHSS: sinyali kanaldan kanala zıplatarak yayma. |
 | <span id="frequency-modulation"></span>**Frequency modulation** | Frekans modülasyonu | FM. |
-| <span id="frequency-offset"></span>**Frequency offset** | Frekans telafisi | Frekans başsaçılımı. |
+| <span id="frequency-offset"></span>**Frequency offset** | Frekans başsaçılımı | Frekans başsaçılımı: taşınan frekansın istenen değerden kayması. |
 | <span id="frequency-stability"></span>**Frequency stability** | Frekans kararlılığı | Frekans kararlılığı. |
 | <span id="front-channel-communication"></span>**Front channel communication** | Ön kanal iletişimi | Ön kanal iletişimi. |
 | <span id="ftp"></span>**FTP** (File Transfer Protocol) | Dosya Transfer Protokolü | Dosya transfer protokolü; komut (21) ve veri (ayrı bağlantı) kanallarını ayırır. USER/PASS dahil her şey düz metindir; modern karşılıkları SFTP (SSH) ve FTPS (TLS)'dir. |
-| <span id="full-disk-encryption"></span>**Full disk encryption** | Tam disk şifreleme | Tam disk şifreleme. |
-| <span id="full-duplex"></span>**Full duplex** | Tam çiftyönlü | Tam çift yönlü. |
+| <span id="full-disk-encryption"></span>**Full disk encryption** | Tam disk şifreleme | Tam disk şifreleme (BitLocker, LUKS): kayıp cihazın ilk panzehiri. |
+| <span id="full-duplex"></span>**Full duplex** | Tam çift yönlü | Aynı anda iki yönde konuşabilen kanal. |
 | <span id="full-maintenance"></span>**Full maintenance** | Tam bakım | Tam bakım. |
 | <span id="full-node"></span>**Full node** | Tam düğüm | Tam düğüm. |
 | <span id="full-tunneling"></span>**Full tunneling** | Tam tünel açma | Tam tünelleme. |
-| <span id="full-virtualization"></span>**Full virtualization** | Tüm sanallaştırma | Tam sanallaştırma. |
+| <span id="full-virtualization"></span>**Full virtualization** | Tam sanallaştırma | Tam sanallaştırma: konuğun donanımı hiç fark etmediği model (VMware ESXi gibi). |
 | <span id="full-depot-maintenance"></span>**Full/depot maintenance** | Tam/depo bakımı | Depo bakımı. |
 | <span id="fully-qualified-domain-name"></span>**Fully qualified domain name** | Tam nitelikli alan adı | FQDN. |
 | <span id="functional-dependency-network-analysis"></span>**Functional dependency network analysis** | İşlevsel bağımlılık ağ analizi | FDNA. |
@@ -2991,7 +2991,7 @@ permalink: /sozluk/
 | <span id="fungible"></span>**Fungible** | Değiştirilebilir | Değiştirilebilir. |
 | <span id="future-networks"></span>**Future networks** | Geleceğin ağları | Gelecek ağları. |
 | <span id="fuzzing"></span>**Fuzzing** | — | Programa rastgele veya yarı-rastgele veri göndererek çökme veya beklenmeyen davranış bulma test tekniği. Otomatik açık bulma yöntemidir. |
-| <span id="fuzzing-attack"></span>**Fuzzing attack** | Rastgele test atağı | Bulanıklaştırma saldırısı. |
+| <span id="fuzzing-attack"></span>**Fuzzing attack** | Rastgele veri saldırısı | Bulanıklaştırma saldırısı: bozuk girdiyle uygulamayı çökertip açık arama. |
 
 </details>
 
@@ -3010,13 +3010,13 @@ permalink: /sozluk/
 | <span id="gdpr"></span>**GDPR** | — | Avrupa Birliği'nin kişisel veri koruma yönetmeliği. KVKK'nın Avrupa'daki kardeşidir; AB vatandaşı verisi işliyorsan sana da uyar. |
 | <span id="general-accountability-office"></span>**General accountability office** | Genel sorumluluk ofisi | GAO. |
 | <span id="general-data-protection-regulation"></span>**General data protection regulation** | Genel veri koruma yönetmeliği | GDPR: AB genel veri koruma yönetmeliği. |
-| <span id="general-exploit-level"></span>**General exploit level** | Genel istismar düzeyi | Genel istismar düzeyi. |
+| <span id="general-exploit-level"></span>**General exploit level** | Genel istismar düzeyi | Zafiyetin ne denli kolay sömürüldüğünün genel notu. |
 | <span id="general-public-license"></span>**General public license** | Genel kamu lisansı | GPL. |
-| <span id="general-purpose-operating-system"></span>**General purpose operating system** | Genel amaçlı işletim sistemi | Genel amaçlı işletim sistemi. |
+| <span id="general-purpose-operating-system"></span>**General purpose operating system** | Genel amaçlı işletim sistemi | Her işe koşulan işletim sistemi: gömülü ve gerçek zamanlı olmayan; Windows, Linux gibi. |
 | <span id="general-remediation-level"></span>**General remediation level** | Genel iyileştirme düzeyi | Genel düzeltme düzeyi. |
 | <span id="general-support"></span>**General support** | Genel destek | Genel destek. |
 | <span id="general-support-system"></span>**General support system** | Genel destek sistemi | GSS. |
-| <span id="generation-encryption"></span>**Generation encryption** | Nesil şifreleme | Kuşak şifreleme. |
+| <span id="generation-encryption"></span>**Generation encryption** | Kuşak şifreleme | Kuşak şifreleme: NES gibi yeni kuşak kripto yaklaşımları. |
 | <span id="generic"></span>**Generic** | Genel | Genel. |
 | <span id="generic-access-profile"></span>**Generic access profile** | Genel erişim profili | GAP. |
 | <span id="generic-attribute-protocol"></span>**Generic attribute protocol** | Genel öznitelik protokolü | GATT (BLE). |
@@ -3027,7 +3027,7 @@ permalink: /sozluk/
 | <span id="generic-token-card"></span>**Generic token card** | Genel jeton kartı | GTC. |
 | <span id="generic-top-level-domain"></span>**Generic top level domain** | Genel üst düzey alanı | gTLD. |
 | <span id="genesis-block"></span>**Genesis block** | Oluşum bloğu | Doğuş bloğu: blokzincirin ilk bloğu. |
-| <span id="genomic-information"></span>**Genomic information** | Genomik bilgi | Genom bilgisi. |
+| <span id="genomic-information"></span>**Genomic information** | Genomik bilgi | Genom bilgisi: en hassas kişisel veri; biri için ifşa, aile boyu ifşa demektir. |
 | <span id="geometric-random-variable"></span>**Geometric random variable** | Geometrik rasgele değişken | Geometrik rastgele değişken. |
 | <span id="global-cyber-alliance"></span>**Global cyber alliance** | Küresel siber ittifak | GCA. |
 | <span id="global-forum-for-cyber-expertise"></span>**Global forum for cyber expertise** | Siber uzmanlık için küresel forum | GFCE. |
@@ -3041,15 +3041,15 @@ permalink: /sozluk/
 | <span id="global-unique-identification-number"></span>**Global unique identification number** | Küresel benzersiz kimlik numarası | GUID. |
 | <span id="global-virtual-private-network"></span>**Global virtual private network** | Küresel sanal özel ağ | Genel VPN. |
 | <span id="globally-unique-identifier"></span>**Globally unique identifier** | Küresel olarak benzersiz tanımlayıcı | GUID. |
-| <span id="globally-unique-temporary-identity"></span>**Globally unique temporary identity** | Küresel olarak banzersiz geçici kimlik | GUTI. |
+| <span id="globally-unique-temporary-identity"></span>**Globally unique temporary identity** | Küresel olarak benzersiz geçici kimlik | GUTI: abonenin kalıcı kimliğini (IMSI) gizleyen geçici kimlik. |
 | <span id="globalsign-certificate-center"></span>**Globalsign certificate center** | Küresel imza sertifika merkezi | GlobalSign CA. |
 | <span id="golden-silver-ticket"></span>**Golden / Silver Ticket** | Altın / Gümüş Bilet | Kerberos sahteciliğinin iki kralı: Golden Ticket, krbtgt (KDC'nin ana hesabı) anahtarıyla sahte TGT üretir (alan tamamen teslim); Silver Ticket yalnız bir servisin anahtarıyla sahte servis bileti üretir. Panzehiri KRBTGT parola sıfırlama ve PAC (bilet içindeki yetki listesi) doğrulamasıdır. |
-| <span id="governance"></span>**Governance** | Yönetişim | Yönetişim. |
-| <span id="governance-risk-compliance"></span>**Governance risk compliance** | Yönetişim risk uyumu | GRC. |
-| <span id="governance-risk-management-and-compliance"></span>**Governance risk management and compliance** | Yönetişim riski yönetimi ve uyumluluk | GRC. |
+| <span id="governance"></span>**Governance** | Yönetişim | Yönetişim: kimin, kime, nasıl hesap verdiğinin düzenidir; teknoloji değil, karar mekanizmasıdır. |
+| <span id="governance-risk-compliance"></span>**Governance risk compliance** | Yönetişim, risk, uyum | GRC: üçlüyü tek çatıda toplayan yaklaşım. |
+| <span id="governance-risk-management-and-compliance"></span>**Governance risk management and compliance** | Yönetişim, risk yönetimi ve uyum | GRC'nin açık yazılımış hâli. |
 | <span id="government-forum-of-incident-response-and-security-teams"></span>**Government forum of incident response and security teams** | Olay müdahale ve güvenlik takımlarının devlet forumu | GFIRST. |
 | <span id="government-information-technology-services-board"></span>**Government information technology services board** | Devlet bilgi teknolojisi hizmetleri kurulu | GITSB. |
-| <span id="government-paperwork-elimination-act"></span>**Government paperwork elimination act** | Devlet evraklarını eleme yasası | Kağıtsız devlet yasası. |
+| <span id="government-paperwork-elimination-act"></span>**Government paperwork elimination act** | Devlet evrakını azaltma yasası | Elektronik imzayı resmî süreçlerde geçerli kılan ABD yasası. |
 | <span id="government-smart-card-interoperability-specification"></span>**Government smart card interoperability specification** | Hükümet akıllı kart birlikte çalışabilirlik belirlemesi | GSC-IS. |
 | <span id="gprs-general-packet-radio-service-tunnelling-protocol-locati"></span>**Gprs (general packet radio service tunnelling protocol) location information** | Genel paket radyo hizmeti tünelleme kuralı - konum bilgisi | GTP konum bilgisi. |
 | <span id="gps-izleme"></span>**GPS izleme** | — | Konum verisinin cihazdan alınarak üçüncü taraflarca kullanılması. Uygulama izinlerini kontrol et. |
@@ -3057,12 +3057,12 @@ permalink: /sozluk/
 | <span id="graduated-security"></span>**Graduated security** | Dereceli güvenlik | Kademeli güvenlik. |
 | <span id="graphical-identification-and-authentication"></span>**Graphical identification and authentication** | Çizgesel tanımlama ve kimlik doğrulama | GINA. |
 | <span id="gratuitous-arp"></span>**Gratuitous ARP** | Karşılıksız ARP | Bir cihazın kimse sormadan kendi IP-MAC eşlemesini duyurduğu ARP paketi. Yük devretme ve IP çakışması tespiti için meşrudur; ARP zehirlenmesinde silaha dönüşür. |
-| <span id="gray-box-testing"></span>**Gray box testing** | Gri kutu testi | Gri kutu testi. |
-| <span id="gray-market"></span>**Gray market** | Gri pazar | Gri pazar. |
+| <span id="gray-box-testing"></span>**Gray box testing** | Gri kutu testi | Gri kutu testi: kısmi bilgiyle yapılan test; siyah ile beyazın arasında. |
+| <span id="gray-market"></span>**Gray market** | Gri pazar | Gri pazar: üretici yetkisi dışından satış; kaynak zinciri ve garanti şüphelidir. |
 | <span id="grayware"></span>**Grayware** | Gri Yazılım | Ne tam zararlı ne tam meşru: adware, spyware benzeri, sınırda gezen yazılım. "Kurulumda kabul ettim" denerek hayatına izinli başlar. |
 | <span id="greyhat-hacker"></span>**Greyhat hacker** | Niyeti belirsiz siber saldırgan | Gri şapkalı: kural sınırında gezen hacker. |
 | <span id="greylist"></span>**Greylist** | Gri liste | Gri liste: duraksatıp sınayan süzgeç. |
-| <span id="grid-network"></span>**Grid network** | Izgara ağ | Izgara ağ. |
+| <span id="grid-network"></span>**Grid network** | Izgara ağ | Düğümlerin kafes biçiminde bağlandığı topoloji: yedeklilik yüksektir, yol çoktur. |
 | <span id="group-authenticator"></span>**Group authenticator** | Toplu kimlik doğrulayıcı | Grup kimlik doğrulayıcı. |
 | <span id="group-communication-system-enablers"></span>**Group communication system enablers** | Topluluk iletişim sistemi etkinleştiricileri | GCSE. |
 | <span id="group-domain-of-interpretation"></span>**Group domain of interpretation** | Topluluk yorum alanı | GDOI: grup IPsec. |
@@ -3075,10 +3075,10 @@ permalink: /sozluk/
 | <span id="group-temporal-key"></span>**Group temporal key** | Topluluk geçici anahtarı | GTK. |
 | <span id="group-traffic-encryption-key"></span>**Group traffic encryption key** | Topluluk trafik şifreleme anahtarı | GTEK. |
 | <span id="guard-system"></span>**Guard system** | Koruma sistemi | Bekçi sistemi. |
-| <span id="guessing-entropy"></span>**Guessing entropy** | Düzensizlik kestirimi | Tahmin entropisi. |
-| <span id="guest-operating-system"></span>**Guest operating system** | Konuk işletim sistemi | Konuk işletim sistemi. |
-| <span id="guest-tools"></span>**Guest tools** | Konuk araçları | Konuk araçları. |
-| <span id="guideline"></span>**Guideline** | Yönerge | Yönerge. |
+| <span id="guessing-entropy"></span>**Guessing entropy** | Tahmin entropisi | Tahmin entropisi: parolayı ortalama kaç denemede bulunacağının ölçüsü. |
+| <span id="guest-operating-system"></span>**Guest operating system** | Konuk işletim sistemi | Konuk işletim sistemi: sanal makinenin içinde çalışan sistem. |
+| <span id="guest-tools"></span>**Guest tools** | Konuk araçları | Konuk araçları: sanal makineye takılan sürücüler ve aracılar; panodan zamana senkron her şey buradan gelir. |
+| <span id="guideline"></span>**Guideline** | Yönerge | Yönerge: zorunlu kılmayan öneri; standardın yumuşak kardeşi. |
 
 </details>
 
@@ -3087,17 +3087,17 @@ permalink: /sozluk/
 
 | Terim/Deyim | Karşılık | Açıklama |
 |---|---|---|
-| <span id="hack"></span>**Hack** | Siber saldırı yapmak | Kır: izinsiz erişim. |
+| <span id="hack"></span>**Hack** | Kırmak | Kırma: izinsiz erişim; eski anlamıyla ustaca ve hızlı çözüm. |
 | <span id="hack-attack-map"></span>**Hack attack map** | Siber saldırı haritası | Saldırı haritası. |
-| <span id="hack-day"></span>**Hack day** | Siber saldırı günü | Kırma günü. |
+| <span id="hack-day"></span>**Hack day** | Kırma günü | Kırma günü: hackathon benzeri, yoğun üretim yapılan etkinlik. |
 | <span id="hacked"></span>**Hacked** | Siber saldırıya uğramış | Kırılmış. |
 | <span id="hacker-sapkalar"></span>**Hacker** | Şapka Türleri | Niyete göre adlanan yetkinlik türleri: beyaz şapka izinli ve etik sızma testi yapar, siyah şapka kötü niyetlidir, gri şapka arada gezer. Hacker kültürü, merak ve mühendislik zanaatının devamıdır. |
 | <span id="hacker-friendly"></span>**Hacker friendly** | Siber saldırgan dostu | Hacker dostu. |
 | <span id="hacker-proof"></span>**Hacker proof** | Siber saldırgana dirençli | Kırılamaz olduğu iddia edilen; hiçbir sistem tam olarak öyle değildir. |
 | <span id="hacker-proof-encrypted-data"></span>**Hacker proof encrypted data** | Siber saldırgana dirençli veri | Hacker dayanıklı şifreli veri. |
-| <span id="hacking"></span>**Hacking** | Siber saldırı | Kırma. |
-| <span id="hacking-marathon"></span>**Hacking marathon** | Kodlama çekişmesi | Kırma maratonu (hackathon). |
-| <span id="hacking-tool"></span>**Hacking tool** | Siber saldırı aracı | Kırma aracı. |
+| <span id="hacking"></span>**Hacking** | Kırma | Kırma: sistemlere izinsiz girme sanatı ve eylemi. |
+| <span id="hacking-marathon"></span>**Hacking marathon** | Kırma maratonu | Kırma maratonu (hackathon): sınırlı sürede üretilen etkinlik; ismi korkutur, içi kahve kokar. |
+| <span id="hacking-tool"></span>**Hacking tool** | Kırma aracı | Kırma aracı: sızma ve çözümleme aracı; aynı elinde kalemdir ya da keskindir. |
 | <span id="hacktivism"></span>**Hacktivism** | Siber eylem | Hacktivizm: ideolojik amaçlı kırma. |
 | <span id="hacktivist"></span>**Hacktivist** | Siber eylemci | İdeolojik amaçla hack yapan aktivist. Motivasyonu para değil mesajdır; sızar, duyurur — bazen de yıkıp geçer. |
 | <span id="hallucination"></span>**Hallucination** | Halüsinasyon | LLM'in gerçeği olmayan bilgiyi yüksek güvenle üretmesi. Hukuk, sağlık, finans gibi kritik alanlarda yanlış karar alma riski. |
