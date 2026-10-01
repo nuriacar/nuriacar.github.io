@@ -4633,40 +4633,40 @@ permalink: /sozluk/
 | <span id="verbis"></span>**VERBİS** | Veri Sorumluları Sicili | Kişisel Verileri İşleyen Veri Sorumluları Sicili. KVKK kapsamında veri sorumlularının kayıt yaptırmak zorunda olduğu sistem. |
 | <span id="veri-minimizasyonu"></span>**Veri Minimizasyonu** (Data Minimization) | — | Kişisel verilerin işleme amacıyla sınırlı olarak, olabildiğince az toplanması prensibi. |
 | <span id="veri-sorumlusu"></span>**Veri Sorumlusu** (Data Controller) | — | Kişisel verilerin işleme amaçlarını ve yöntemlerini belirleyen ve veri kayıt sistemini kuran kişi veya kurum. |
-| <span id="verification"></span>**Verification** | Doğrulama | Doğrulama. |
+| <span id="verification"></span>**Verification** | Doğrulama | Doğru mu yapıyoruz sorusu; geçerleme ise doğru ürünü mü sorusudur. |
 | <span id="verification-technique-for-security"></span>**Verification technique for security** | Güvenlik için doğrulama tekniği | Güvenlik doğrulama tekniği. |
-| <span id="vertical-cloud"></span>**Vertical cloud** | Dikey bulut | Dikey bulut. |
+| <span id="vertical-cloud"></span>**Vertical cloud** | Dikey bulut | Sektöre özel bulut (sağlık, finans); uyum yükünü göğüsler. |
 | <span id="virtual-ip"></span>**Virtual IP** | Sanal İP | VIP. |
 | <span id="virtual-ip-address"></span>**Virtual IP address** | Sanal internet protokol adresi | Sanal IP adresi. |
 | <span id="virtual-isp"></span>**Virtual isp** | Sanal internet hizmet sağlayıcısı | Sanal ISS. |
 | <span id="virtual-it-service-provider"></span>**Virtual it service provider** | Sanal bt hizmet sağlayıcısı | Sanal BT sağlayıcı. |
 | <span id="virtual-leak"></span>**Virtual leak** | Sanal sızıntı | Sanal sızıntı. |
 | <span id="virtual-local-area-network"></span>**Virtual local area network** | Sanal yerel alan ağı | VLAN. |
-| <span id="virtual-mobbing"></span>**Virtual mobbing** | Sanal bezdiri | Sanal zorbalık. |
+| <span id="virtual-mobbing"></span>**Virtual mobbing** | Sanal zorbalık | Sanal zorbalık. |
 | <span id="virtual-private-internet"></span>**Virtual private internet** | Sanal özel internet | Sanal özel internet. |
 | <span id="virtual-san"></span>**Virtual san** | Sanal depolama alan ağı | Sanal SAN. |
 | <span id="virtual-security-appliance"></span>**Virtual security appliance** | Sanal güvenlik aygıtı | Sanal güvenlik aygıtı. |
-| <span id="virtual-security-switch"></span>**Virtual security switch** | Sanal güvenlik anahtarı | Sanal güvenlik anahtarı. |
-| <span id="virtualisation"></span>**Virtualisation** | Sanallaştırma | Sanallaştırma. |
+| <span id="virtual-security-switch"></span>**Virtual security switch** | Sanal güvenlik anahtarlayıcısı | Sanal güvenlik anahtarı. |
+| <span id="virtualisation"></span>**Virtualisation** | Sanallaştırma | Bir donanımda birden çok sistemin yaşaması; izolasyonu bozulursa hepsi düşer. |
 | <span id="virüs"></span>**Virus** | Virüs | Dosyalara bulaşan, onları değiştiren ve kendini kopyalayan klasik kötü amaçlı yazılım. Genelde bir dosyayı açınca çalışır; günümüzde azaldı ama hâlâ var. |
-| <span id="virus-hoax"></span>**Virus hoax** | Virüs aldatmacası | Virüs asılsız haberi. |
+| <span id="virus-hoax"></span>**Virus hoax** | Virüs asılsız haberi | Virüs asılsız haberi. |
 | <span id="vishing"></span>**Vishing** (Sesli Oltalama) | Sözlü oltalama | Telefonla yapılan oltalama. Arayan banka, polis veya teknik destek rolü oynar; numara sahtelenebilir. Kapat, resmi numarayı sen tuşla. |
 | <span id="vlan"></span>**VLAN** (Virtual LAN) | Sanal Ağ | Tek fiziksel anahtarı mantıksal ağlara bölen etiketleme (802.1Q); her çerçeveye 4 byte'lık etiket ekler. Yayın alanlarını daraltır ama trunk yanlış yapılandırılırsa VLAN hopping (VLAN'lar arası kaçak geçiş) kapısı açılır. |
 | <span id="vlan-hopping"></span>**VLAN Hopping** (VLAN Atlama) | — | Saldırganın kendisini başka VLAN'da göstererek ağ ayrımını delmesi; double tagging ve kötü yapılandırılmış yerel VLAN klasik yollardır. VLAN sınırı güvenlik sınırı değildir. |
-| <span id="voice-firewall"></span>**Voice firewall** | Ses güvenlik duvarı | Ses güvenlik duvarı. |
+| <span id="voice-firewall"></span>**Voice firewall** | Ses güvenlik duvarı | Telefon trafiğini süzen duvar; toll fraud’ı keser. |
 | <span id="voice-intrusion-prevention-system"></span>**Voice intrusion prevention system** | Sesli saldırı önleme sistemi | VIPS. |
 | <span id="voice-over-ip-phishing"></span>**Voice over IP phishing** | İnternet protokolü üzerinden ses kullanılarak kimlik avı | VoIP oltalaması (vishing). |
 | <span id="voice-phishing"></span>**Voice phishing** | Sesli kimlik avı | Sesli oltalama. |
 | <span id="voip"></span>**VoIP** (Voice over IP) | İnternet Telefonu | Sesli görüşmeyi IP ağı üzerinden taşıyan teknoloji. Sinyalleme SIP, ses RTP ile taşınır; jitter ses kalitesinin baş düşmanıdır. |
-| <span id="volatile-media"></span>**Volatile media** | Kararsız ortam | Geçici ortam. |
+| <span id="volatile-media"></span>**Volatile media** | Geçici ortam | Geçici ortam. |
 | <span id="vpn"></span>**VPN** (Virtual Private Network) | Sanal Özel Ağ | Sanal özel ağ. İnternet trafiğini şifreleyerek üçüncü taraflardan gizler. |
 | <span id="vulnerability-assessment"></span>**Vulnerability assessment** | Savunmasızlık değerlendirmesi | Zafiyet değerlendirmesi. |
 | <span id="vulnerability-assessment-and-management"></span>**Vulnerability assessment and management** | Güvenlik açığı değerlendirmesi ve yönetimi | Zafiyet değerlendirme ve yönetim. |
 | <span id="vulnerability-management"></span>**Vulnerability management** | Savunmasızlık yönetimi | Zafiyet yönetimi. |
 | <span id="vulnerability-research"></span>**Vulnerability research** | Savunmasızlık araştırması | Zafiyet araştırması. |
 | <span id="vulnerability-testing"></span>**Vulnerability testing** | Savunmasızlık sınaması | Zafiyet testi. |
-| <span id="vulnerable"></span>**Vulnerable** | Savunmasız | Zafiyetli. |
-| <span id="vulnerable-software"></span>**Vulnerable software** | Savunmasız yazılım | Zafiyetli yazılım. |
+| <span id="vulnerable"></span>**Vulnerable** | Savunmasız | Zafiyetli: açığı olan; açık kapanana dek risk yaşar. |
+| <span id="vulnerable-software"></span>**Vulnerable software** | Savunmasız yazılım | Bilinen açığı sürmekte olan yazılım; yama gelene dek risklidir. |
 
 </details>
 
@@ -4675,20 +4675,20 @@ permalink: /sozluk/
 
 | Terim/Deyim | Karşılık | Açıklama |
 |---|---|---|
-| <span id="war-chalking"></span>**War chalking** | Açıklayıcı işaret | Savaş tebeşiri: açık ağ işaretleme. |
-| <span id="war-dialing"></span>**War dialing** | Savaş araması | Savaş çevirmesi: modem taraması. |
-| <span id="war-driving"></span>**War driving** | Kablosuz ağ arama | Savaş sürüşü: araçla kablosuz ağ tarama. |
-| <span id="warm-recovery-site"></span>**Warm recovery site** | Hazır kurtarma yeri | Ilık kurtarma alanı. |
-| <span id="wartexting"></span>**Wartexting** | İletiyle korsanlık | Metin mesajıyla sosyal mühendislik. |
+| <span id="war-chalking"></span>**War chalking** | Savaş tebeşiri | Savaş tebeşiri: açık ağ işaretleme. |
+| <span id="war-dialing"></span>**War dialing** | Savaş çevirmesi | Savaş çevirmesi: modem taraması. |
+| <span id="war-driving"></span>**War driving** | Savaş sürüşü | Savaş sürüşü: araçla kablosuz ağ tarama. |
+| <span id="warm-recovery-site"></span>**Warm recovery site** | Ilık kurtarma alanı | Ilık kurtarma alanı. |
+| <span id="wartexting"></span>**Wartexting** | Kısa mesajla sosyal mühendislik | Metin mesajıyla sosyal mühendislik. |
 | <span id="sulama-deligi"></span>**Watering Hole** | Sulama Deliği | Sık kullandığın web sitesinin zehirlenip sana otomatik zararlı bulaştırılması. Hedefe doğrudan gitmek yerine yolunun üstünde pusu kurar. |
 | <span id="watering-hole-attacks"></span>**Watering hole attacks** | Sulama deliği saldırısı | Su deliği: hedefin gittiği siteyi zehirleme. |
 | <span id="wcna"></span>**WCNA** (Wireshark Certified Network Analyst) | Wireshark Sertifikalı Ağ Analisti | Wireshark üzerinde ağ analizi sertifikası; display filter, expert bilgi ve grafik okuma becerisini ölçer. Bu serinin müfredat hedeflerinden biridir. |
-| <span id="weakest-link-principle"></span>**Weakest link principle** | En zayıf bağlantı ilkesi | En zayıf halka ilkesi. |
-| <span id="weakness"></span>**Weakness** | Zayıflık | Zaaf. |
+| <span id="weakest-link-principle"></span>**Weakest link principle** | En zayıf halka ilkesi | En zayıf halka ilkesi. |
+| <span id="weakness"></span>**Weakness** | Zayıflık | Zaaf: denetimsiz zaaf, yarının ihlalidir. |
 | <span id="wear-levelling"></span>**Wear levelling** | Aşınma dengeleme | Aşınma dengeleme (SSD). |
-| <span id="web-activism"></span>**Web activism** | Siber eylemcilik | Web aktivizmi. |
+| <span id="web-activism"></span>**Web activism** | Web aktivizmi | Web üzerinden yürütülen toplumsal eylem. |
 | <span id="web-application-firewall"></span>**Web application firewall** | Bilgiağı uygulaması güvenlik duvarı | WAF. |
-| <span id="web-bug"></span>**Web bug** | Bilgiağı hatası | Web böceği: izleme pikseli. |
+| <span id="web-bug"></span>**Web bug** | Web böceği | Web böceği: izleme pikseli. |
 | <span id="web-content-filtering-software"></span>**Web content filtering software** | Bilgiağı içerik filtreleme yazılımı | İçerik süzgeci. |
 | <span id="web-cryptography"></span>**Web cryptography** | Bilgiağı şifrelemesi | Web kriptografisi. |
 | <span id="web-of-trust"></span>**Web of trust** | Güven bilgiağı | Güven ağı (PGP). |
@@ -4701,25 +4701,25 @@ permalink: /sozluk/
 | <span id="white-hat"></span>**White hat** | Beyaz şapka | Beyaz şapka: izinli sızmacı. |
 | <span id="white-team"></span>**White Team** | Beyaz Takım | Tatbikatın hakem ve kontrol kulesi: kuralları koyar, skorları tutar, kurguyu yönetir. Red saldırır, Blue savunur, Purple öğretir, White izler. |
 | <span id="whitehat-hacker"></span>**Whitehat hacker** | Beyaz şapkalı siber güvenlik uzmanı | Beyaz şapkalı hacker. |
-| <span id="whitelist"></span>**Whitelist** | Beyaz liste | Beyaz liste. |
+| <span id="whitelist"></span>**Whitelist** | Beyaz liste | Yalnız listedekine izin: dünya kapalıyken güvenlik açıktır. |
 | <span id="whois"></span>**whois** | — | Alan adının kayıt bilgilerini sorgulayan protokol ve araç: kime kayıtlı, ne zaman, hangi DNS sunucuları. OSINT'in ilk kapısıdır. |
-| <span id="wi-fi"></span>**Wi-fi** | Kablosuz | Wi-Fi. |
-| <span id="windowing"></span>**Windowing** | Pencereleme | Pencereleme. |
+| <span id="wi-fi"></span>**Wi-fi** | Kablosuz | Wi-Fi: kablosuz yerel ağın halk adı; 802.11 ailesinin markası. |
+| <span id="windowing"></span>**Windowing** | Pencereleme | TCP’nin alıcı kapasitesine göre gönderim penceresi ayarı. |
 | <span id="wired-equivalent-privacy"></span>**Wired equivalent privacy** | Kabloluya eşdeğer gizlilik | WEP: kırılmış kablosuz şifreleme. |
-| <span id="wireless-access-point"></span>**Wireless access point** | Kablosuz erişim noktası | Kablosuz erişim noktası. |
+| <span id="wireless-access-point"></span>**Wireless access point** | Kablosuz erişim noktası | Radyonun ağa bağlandığı kapı; parolası değişmemişse davetiyedir. |
 | <span id="wireless-application-protocol"></span>**Wireless application protocol** | Kablosuz uygulama kuralı | WAP. |
 | <span id="wireless-communications"></span>**Wireless communications** | Kablosuz iletişim | Kablosuz iletişim. |
-| <span id="wireless-fidelity"></span>**Wireless fidelity** | Kablosuz | Wi-Fi. |
-| <span id="wireless-infiltration"></span>**Wireless infiltration** | Kablosuz sızma | Kablosuz sızma. |
-| <span id="wireless-network"></span>**Wireless network** | Kablosuz ağ | Kablosuz ağ. |
+| <span id="wireless-fidelity"></span>**Wireless fidelity** | Kablosuz | Wi-Fi: kablosuz yerel ağın halk adı; 802.11 ailesinin markası. |
+| <span id="wireless-infiltration"></span>**Wireless infiltration** | Kablosuz sızma | Radyo üzerinden ağa girme; evil twin bunun baş tacıdır. |
+| <span id="wireless-network"></span>**Wireless network** | Kablosuz ağ | Havada konuşan ağ; sınırı kablo değil antenin menzilidir. |
 | <span id="wireshark"></span>**Wireshark** | — | Ağ trafiğini paket paket görselleştiren sektör standardı analiz aracı. Display/capture filter ile trafiğin hikâyesini okur; eklentileri Lua ile yazılır. |
 | <span id="wiretapping"></span>**Wiretapping** | Telefon dinleme | Hat dinleme. |
 | <span id="wmi"></span>**WMI** (Windows Management Instrumentation) | Windows Yönetim Araçları | Windows'un yönetim ve otomasyon altyapısı; PowerShell ile birlikte LotL saldırılarının iki kolundan biridir. Süreç başlatma ve bilgi toplama "meşru yönetim" kılığında yapılır. |
-| <span id="work-factor"></span>**Work factor** | İş etkeni | İş çarpanı: kırma emeği. |
-| <span id="workstation"></span>**Workstation** | İş istasyonu | İş istasyonu. |
+| <span id="work-factor"></span>**Work factor** | İş çarpanı | İş çarpanı: kırma emeği. |
+| <span id="workstation"></span>**Workstation** | İş istasyonu | Analistin ve kullanıcının masasındaki makine. |
 | <span id="world-wide-web"></span>**World wide web** | Dünya çapında bilgiağı | WWW. |
 | <span id="worm"></span>**Worm** | Solucan | Kendi kendine ağda yayılan zararlı; tıklamaya ihtiyaç duymaz. Morris Worm'dan beri internetin bağımsız gezginidir. |
-| <span id="worm-attack"></span>**Worm attack** | Solucan saldırısı | Solucan saldırısı. |
+| <span id="worm-attack"></span>**Worm attack** | Solucan saldırısı | Kendi yayılan zararlının yaptığı saldırı (bkz. Worm). |
 | <span id="wpa"></span>**WPA2 / WPA3** (Wi-Fi Protected Access) | Wi-Fi Korumalı Erişim | Wi-Fi ağının şifreleme standartları. Modem ayarında bunlardan biri olsun; eski WEP ise dakikalar içinde kırılır. |
 | <span id="wps"></span>**WPS** (Wi-Fi Protected Setup) | Wi-Fi Korumalı Kurulum | Modeme tuşa basarak hızlı bağlanma özelliği. Kırılması kolaydır; güvenlik için modem arayüzünden kapat. |
 
@@ -4750,18 +4750,18 @@ permalink: /sozluk/
 
 | Terim/Deyim | Karşılık | Açıklama |
 |---|---|---|
-| <span id="zafiyet"></span>**Zafiyet** (Vulnerability) | Savunmasızlık | Bir sistemdeki güvenlik açığı. |
-| <span id="zero-day-attack"></span>**Zero day attack** | Sıfırıncı gün saldırısı | Sıfır gün saldırısı. |
-| <span id="zero-day-exploit"></span>**Zero day exploit** | Sıfırıncı gün güvenlik açığı sömüren yazılım | Sıfır gün istismarı. |
+| <span id="zafiyet"></span>**Zafiyet** (Vulnerability) | Savunmasızlık | Sistemin saldırıya açık yanı: tasarım, kod ya da yapılandırma hatası; istismarla sömürülür, yamayla kapanır. |
+| <span id="zero-day-attack"></span>**Zero day attack** | Sıfırıncı gün saldırısı | Yaması olmayan açığı kullanan saldırı; imza yoktur, savunma ancak davranışta yakalar. |
+| <span id="zero-day-exploit"></span>**Zero day exploit** | Sıfır gün istismarı | Sıfır gün istismarı. |
 | <span id="zero-day-malware"></span>**Zero day malware** | Sıfırıncı gün zararlı yazılımı | Sıfır gün zararlısı. |
 | <span id="zero-day-virus"></span>**Zero day virus** | Sıfırıncı gün virüsü | Sıfır gün virüsü. |
 | <span id="zero-day-vulnerability"></span>**Zero day vulnerability** | Sıfırıncı gün açığı | Sıfır gün zafiyeti: yaması olmayan açık. |
-| <span id="zero-scale-error"></span>**Zero scale error** | Sıfır ölçek hatası | Sıfır ölçek hatası. |
-| <span id="zero-touch-provisioning"></span>**Zero touch provisioning** | Dokunmasız sağlama | Dokunulmaz hazırlama (ZTP). |
-| <span id="zero-touch-provisioning-or-deployment"></span>**Zero touch provisioning or deployment** | Dokunmasız sağlama ve dağıtım | ZTP. |
+| <span id="zero-scale-error"></span>**Zero scale error** | Sıfır ölçek hatası | Ölçüm başlangıcının kayması; kalibrasyon dünyasından. |
+| <span id="zero-touch-provisioning"></span>**Zero touch provisioning** | Dokunulmaz hazırlama | Dokunulmaz hazırlama (ZTP). |
+| <span id="zero-touch-provisioning-or-deployment"></span>**Zero touch provisioning or deployment** | Dokunulmaz hazırlama ve dağıtım | ZTP. |
 | <span id="zero-trust"></span>**Zero Trust** | Sıfır Güven | "Asla güvenme, sürekli doğrula" felsefesi. Klasik sınır güvenliğinin (firewall, VPN) aksine, her erişim isteğini her seferinde doğrular. NIST SP 800-207 standardı. |
 | <span id="zero-window"></span>**Zero Window** | Sıfır Pencere | TCP alıcısının "tamponum dolu, gönderme" demesi (pencere = 0). Kısa süreli normaldir; uzun sürmesi alıcının tıkandığının işaretidir ve performans analizinde ilk şüphelidir. |
-| <span id="zero-click"></span>**Zero-click** | Sıfır Tıklama | Sıfır tıklama açığı. Kullanıcı hiçbir şey yapmadan cihaza bulaşan saldırı. |
+| <span id="zero-click"></span>**Zero-click** | Sıfır Tıklama | Kullanıcı hiçbir şey yapmadan bulaşan saldırı; teslim kanalı mesajın kendisidir (Pegasus gibi). |
 | <span id="zero-day"></span>**Zero-day** | Sıfırıncı Gün Açığı | Sıfırıncı gün açığı. Üreticinin henüz farkında olmadığı veya yaması çıkmamış güvenlik açığı. |
 | <span id="zombie"></span>**Zombie** | Tutsak bilgisayar | Zombi: botnet düğümü. |
 | <span id="ztna"></span>**ZTNA** (Zero Trust Network Access) | Sıfır Güven Ağ Erişimi | VPN'in yerini alan modern erişim mimarisi. Tüm ağ yerine, uygulama düzeyinde erişim. Cloudflare Access, Zscaler, Netskope örnek. |
