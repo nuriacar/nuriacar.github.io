@@ -620,7 +620,7 @@ permalink: /sozluk/
 | <span id="backbone"></span>**Backbone** | Omurga | Omurga: ağın ana taşıyıcı bölümü. Omurga düşerse uzuvların bağlantısı anlamsızlaşır. |
 | <span id="backdoor"></span>**Backdoor** | Arka Kapı | Saldırganın sisteme sonradan kolayca dönmesini sağlayan gizli giriş. Öncü indiricisi (downloader) C2'den çeker ve ikinci aşamayı (implant/RAT) yerleştirir. |
 | <span id="backdoor-penetration"></span>**Backdoor penetration** | Arkakapıdan sızma | Arka kapıdan sızma: gizli giriş yolunu kullanarak sisteme girme. |
-| <span id="backdoor-penetration-strategy"></span>**Backdoor penetration strategy** | Arkakapıdan sızma izlemi | Arka kapı sızma izlemi: arka kapıyı kullanma planı. |
+| <span id="backdoor-penetration-strategy"></span>**Backdoor penetration strategy** | Arkakapıdan sızma izlemi | Arka kapıyı kullanarak sızma planı. |
 | <span id="backdoor-trojan"></span>**Backdoor trojan** | Arka kapı truva atı | Arka kapı truva atı: kurban sistemde gizli kapı açan zararlı. |
 | <span id="backhaul"></span>**Backhaul** | Ana taşıyıcı | Ana taşıyıcı: erişim ağını çekirdek ağa bağlayan bölüm. |
 | <span id="backing-up"></span>**Backing up** | Yedekleme | Yedekleme: verinin kopyasını alma işlemi. |
@@ -636,7 +636,7 @@ permalink: /sozluk/
 | <span id="banner-grabbing"></span>**Banner grabbing** | Afiş kapma | Afiş kapma: sunucunun karşılama iletisini okuyarak parmak izi çıkarma. |
 | <span id="bare-metal-virtualization"></span>**Bare metal virtualization** | Çıplak metal sanallaştırma | Çıplak metal sanallaştırma: donanım üstünde hipervizörün doğrudan çalıştığı düzen. |
 | <span id="base-assessment"></span>**Base assessment** | Temel değerlendirme | İlk ölçüm: sonraki tüm karşılaştırmalar bu değerle yapılır. |
-| <span id="base-layer"></span>**Base layer** | Temel katman | Üstündeki her şeyin dayandığı en alt katman: blockchain dünyasında ana zincir anlamına da gelir. |
+| <span id="base-layer"></span>**Base layer** | Temel katman | Üstündeki her şeyin dayandığı en alt katman: blokzincir dünyasında ana zincir anlamına da gelir. |
 | <span id="base-standards"></span>**Base standards** | Temel standartlar | Üst standartların ve profillerin dayandığı kök belgeler (ör. ISO 27001 ailesi). |
 | <span id="base-station"></span>**Base station** | Baz istasyonu | Mobil ağda hücreyi kuran radyo istasyonu: sahte baz istasyonu (IMSI catcher) dinlemenin klasik aracıdır. |
 | <span id="base-station-controller"></span>**Base station controller** | Baz istasyonu denetleyicisi | Baz istasyonu denetleyicisi (BSC). |
@@ -663,7 +663,7 @@ permalink: /sozluk/
 | <span id="bastion-host"></span>**Bastion host** | Korunaklı sunucu | Dışa açık, bu yüzden en sıkı korunan sistem. Jump host da denir. |
 | <span id="batch-process"></span>**Batch process** | Toplu işlem | Toplu işlem: birden çok işin tek seferde işlenmesi. |
 | <span id="beacon"></span>**Beacon** (Fener) | — | Ele geçirilmiş cihazın C2 sunucusuna düzenli aralıklarla gönderdiği haberleşme sinyali; bu davranışa beaconing denir. Düşük jitter'lı (zamanlama sapması az) düzenli trafik, tipik imzasıdır. Wi-Fi'daki Beacon ise erişim noktasının periyodik duyuru çerçevesidir — C2 ile ilgisi yoktur, ad benzerliği vardır. |
-| <span id="bearer-assertion"></span>**Bearer assertion** | Taşıyıcı savı | Taşıyıcı savı: sunana ait herkese geçerli olan belirteç. |
+| <span id="bearer-assertion"></span>**Bearer assertion** | Taşıyıcı savı | Taşıyıcı kanıtı: elinde tutan herkese geçerli olan belirteç; bulan, sahibi gibi kullanır. |
 | <span id="bec"></span>**BEC** (Business Email Compromise) | İş E-postası Dolandırıcılığı | Kurumsal e-posta dolandırıcılığı. Saldırgan CEO/CFO taklidi yaparak para transferi sağlar. 2023'te dünya çapında 2.9 milyar dolar kayıp. |
 | <span id="behavior-analysis"></span>**Behavior analysis** | Davranış çözümleme | Davranış çözümlemesi: ne yaptığına bakarak anomali bulma. |
 | <span id="behavior-based-safety"></span>**Behavior based safety** | Davranış tabanlı güvenlik | Kural yerine davranışı izleyen güvenlik yaklaşımı: ne yaptığına bakar, ne demesi gerektiğine değil. |
@@ -683,7 +683,7 @@ permalink: /sozluk/
 | <span id="bgp-border-gateway-protocol-monitoring-protocol"></span>**Bgp (Border gateway protocol) monitoring protocol** | (Sınır ağgeçidi kuralı) izleme kuralı | BMP: BGP oturumlarını izleyen protokol. |
 | <span id="bgp-origin-validation"></span>**Bgp origin validation** | (Sınır ağgeçidi kuralı) köken geçerlemesi | BGP kaynak doğrulama: duyurunun gerçek sahibinden gelip gelmediğinin kontrolü (RPKI). |
 | <span id="bgp-path-validation"></span>**Bgp path validation** | (Sınır ağgeçidi kuralı) yol geçerlemesi | BGP yol doğrulama. |
-| <span id="bgp-peer"></span>**Bgp peer** | (Sınır ağgeçidi kuralı) benzer | BGP komşusu: yönlendirme bilgisi paylaşan iki uçtan her biri. |
+| <span id="bgp-peer"></span>**Bgp peer** | (Sınır ağgeçidi kuralı) eş | BGP komşusu: yönlendirme bilgisi paylaşan iki uçtan her biri. |
 | <span id="bgp-secure-routing-extension"></span>**Bgp secure routing extension** | (Sınır ağgeçidi kuralı) güvenli yönlendirme uzantısı | BGP güvenli yönlendirme uzantısı. |
 | <span id="bgp-security-extension"></span>**Bgp security extension** | (Sınır ağgeçidi kuralı) güvenlik uzantısı | BGP güvenlik uzantısı. |
 | <span id="bgpsec-input-output"></span>**Bgpsec input-output** | (Sınır ağgeçidi kuralı güvenliği) giriş-çıkış | BGPsec giriş-çıkışı. |
@@ -697,7 +697,7 @@ permalink: /sozluk/
 | <span id="big-data-for-social-networks"></span>**Big data for social networks** | Toplumsal ağlar için büyük veri | Sosyal ağlarda büyük veri. |
 | <span id="big-data-security"></span>**Big data security** | Büyük veri güvenliği | Hacim ve hızın ötesine geçen veri kümelerinin gizlilik, bütünlük ve erişim denetimi. |
 | <span id="bimi"></span>**BIMI** (Brand Indicators for Message Identification) | Marka Kimlik Göstergeleri | DMARC geçerli maillerde marka logosunun gösterilmesi. DMARC `p=reject` ile birlikte kullanılır. |
-| <span id="binary-coded-decimal"></span>**Binary coded decimal** | İkili kodlanmış ondalık | BCD: ondalık basamakların dörtlü ikili olarak yazılımı. |
+| <span id="binary-coded-decimal"></span>**Binary coded decimal** | İkili kodlanmış ondalık | BCD: ondalık basamağın dörtlü ikili küme olarak yazılması. |
 | <span id="binary-data"></span>**Binary data** | İkili veri | 0 ve 1'lerden oluşan veri: metin gibi görünse de bayt bayt çözülmelidir. |
 | <span id="binary-large-object"></span>**Binary large object** | İkili büyük nesne | BLOB: veritabanında ikili büyük nesne. |
 | <span id="binary-sequence"></span>**Binary sequence** | İkili sıra | Bitlerin sıralı dizilisi: rastgelelik testleri bu dizinin düzensizliğini ölçer. |
@@ -712,7 +712,7 @@ permalink: /sozluk/
 | <span id="biometric-information-template"></span>**Biometric information template** | Biyometrik bilgi kalıbı | Ham biyometrik veriden çıkarılan, eşleştirmede kullanılan matematiksel kalıp: parmak izi değil, onun örüntü özeti saklanır. |
 | <span id="biometric-system"></span>**Biometric system** | Biyometrik sistem | Algılayıcı, özellik çıkarıcı, eşleştirici ve karar biriminden oluşan kimlik kanıtlama sistemi. |
 | <span id="biometrics"></span>**Biometrics** | Biyometri | Biyometri: parmak izi, yüz, iris gibi özelliklerle kimlik kanıtlama. |
-| <span id="birthday-attack"></span>**Birthday attack** | Doğum günü şifre çözme saldırısı | Doğum günü saldırısı: özet çakışması bularak imza taklidi. Olasılık matematiğinin en zarif kırılmasıdır. |
+| <span id="birthday-attack"></span>**Birthday attack** | Doğum günü saldırısı | Özet çakışması bularak imza taklidi: doğum günü paradoksunun kriptoya uygulanışı. Farklı iki girdinin aynı özeti bulması, fonksiyonun ölüm fermanıdır. |
 | <span id="bit"></span>**Bit** | İkil | İkil: bilginin en küçük birimi. |
 | <span id="bit-error"></span>**Bit error** | İkil hatası | Aktarımda ters dönen tek bit: bazen gürültü, bazen kasıtlı enjeksiyon. |
 | <span id="bit-error-rate"></span>**Bit error rate** | İkil hata oranı | BER: ikil hata oranı. |
@@ -732,7 +732,7 @@ permalink: /sozluk/
 | <span id="black-hole-email-address"></span>**Black hole email address** | Kara delik e-posta adresi | Kara delik e-posta adresi: gelen postayı sessizce yok eden adres. |
 | <span id="black-hole-filtering"></span>**Black hole filtering** | Kara delik süzgeçleme | Kara delik süzgeçleme: trafiğin sessizce atıldığı süzgeç. |
 | <span id="black-holes-networking"></span>**Black holes (networking)** | Kara delikler (ağ iletişimi) | Ağda kara delikler: trafiğin ulaştığı ama yanıt alınamayan noktalar. |
-| <span id="black-start-hack"></span>**Black start hack** | Başlatma üreteci siber saldırganlığı | Başlatma üreteci saldırısı: enerji şebekesinin yeniden başlatılmasını hedefleyen siber saldırı. |
+| <span id="black-start-hack"></span>**Black start hack** | Kara başlatma saldırısı | Enerji şebekesinin karartma sonrası yeniden başlatılmasını (black start) hedefleyen siber saldırı: karanlığa düşen şebeke, karanlıkta kalmaya mahkûm edilir. |
 | <span id="black-swan-event"></span>**Black swan event** | Beklenmedik olay | Beklenmedik olay: olasılığı küçük ama etkisi dev olan olay. |
 | <span id="blackbox-attack"></span>**Blackbox attack** | Kara kutu saldırısı | Saldırganın iç yapıyı bilmeden, yalnız girdi-çıktı gözleyerek yaptığı saldırı: mantık analizi ve yan kanal varyantları vardır. |
 | <span id="blacklist"></span>**Blacklist** | Karaliste | Karaliste: yasaklıların listesi. Beyazlistenin kardeşi; ikisi birlikte yaşlanır. |
@@ -743,7 +743,7 @@ permalink: /sozluk/
 | <span id="blended-threat-attack"></span>**Blended threat attack** | Karma tehdit saldırısı | Karma tehdidin eyleme dönüşmüş hâli: aynı saldırıda birden çok vektör birden çalışır. |
 | <span id="block"></span>**Block** | Öbek | Öbek: verinin işlenen parçası. |
 | <span id="block-cipher-algorithm"></span>**Block cipher algorithm** | Öbek şifreleme algoritması | Veriyi sabit uzunluktaki öbeklerle şifreleyen algoritma (AES, DES): akış şifresinin kardeşi. |
-| <span id="block-cipher-mode-of-operation"></span>**Block cipher mode of operation** | Blok şifrelemeli çalışma modu | Öbek şifre çalışma kipi (CBC, CTR, GCM). |
+| <span id="block-cipher-mode-of-operation"></span>**Block cipher mode of operation** | Öbek şifreleme çalışma kipi | Öbek şifrenin öbekleri nasıl zincirleyeceği: CBC, CTR, GCM ve arkadaşları. |
 | <span id="block-ciphers"></span>**Block ciphers** | Öbek şifreleme | Sabit uzunluklu öbeklerle çalışan şifre ailesi: kipi yanlış seçersen iyi şifre de kötü olur. |
 | <span id="block-data"></span>**Block data** | Öbek veri | Tek öbek içinde taşınan veri: şifrelemenin, özetlemenin çalışma birimi. |
 | <span id="block-frequency-test"></span>**Block frequency test** | Öbek frekans testi | Öbek frekans testi: NIST rastgelelik paketi üyesi. |
@@ -768,7 +768,7 @@ permalink: /sozluk/
 | <span id="bootstrapping-remote-security-key-infrastructure"></span>**Bootstrapping remote security key infrastructure** | Uzaktan güvenlik anahtarı altyapısını önyüklemesi | BOOTSTRAP: uzaktan güvenlik anahtarı altyapısını önyükleme. |
 | <span id="border-gateway-protocol"></span>**Border gateway protocol** | Sınır ağgeçidi kuralı | BGP: internetin yönlendirme omurgası. Güveni varsayar; RPKI ile doğrulama gelir. |
 | <span id="border-gateway-protocol-secure-routing-extension"></span>**Border gateway protocol secure routing extension** | Sınır ağgeçidi kuralı güvenli yönlendirme uzantısı | BGP duyurularına kaynak doğrulaması ekleyen uzantı (BGPsec, RPKI). |
-| <span id="border-gateway-protocol-security"></span>**Border gateway protocol security** | Sınır geçidi kuralı güvenliği | BGP güvenliği. |
+| <span id="border-gateway-protocol-security"></span>**Border gateway protocol security** | Sınır ağgeçidi kuralı güvenliği | BGP güvenliği: kaynak doğrulama ve yol doğrulamanın tümü. |
 | <span id="bot"></span>**Bot** | Robot | Otomatik yazılım. Hesapları taklit ederek sahte etkileşim üretir. Botlar yönlendirme, propaganda ve spam amaçlı kullanılır. |
 | <span id="bot-master"></span>**Bot master** | Robot yöneticisi | Bot yöneticisi: botnetin sahibi. |
 | <span id="botnet"></span>**Botnet** | Köle ağ | Ele geçirilmiş ve tek komutaya (C2) bağlı binlerce cihazdan oluşan ordu. Spam, DDoS ve kimlik bilgisi çalmada kiralık güçtür; C2 kapatılınca ölür. |
@@ -794,11 +794,11 @@ permalink: /sozluk/
 | <span id="brute-force"></span>**Brute Force** | Deneme Yanılma | Tüm olası parola kombinasyonlarını otomatik deneyerek parolanı kırmaya çalışma. Kısa parola dakikalar içinde kırılır; 12+ karaktere karşı yüzyıllar gerekir. |
 | <span id="brute-force-attack"></span>**Brute force attack** | Kaba kuvvet saldırısı | Tüm olasılıkları sırayla deneyerek parola ya da anahtar kırma: hız donanımın, sabır saldırganın. |
 | <span id="brute-force-password-attack"></span>**Brute force password attack** | Kaba kuvvet şifre saldırısı | Parolayı deneme yanılma ile kırma girişimi: kilitleme ve hız sınırı olmayan sistem davetiyedir. |
-| <span id="budget-cost-of-work-performed"></span>**Budget cost of work performed** | Yapılan işin bütçe maliyeti | Yapılan işin bütçe maliyeti. |
-| <span id="budget-year"></span>**Budget year** | Bütçe yılı | Bütçe yılı. |
-| <span id="budgeted-cost-of-work-scheduled"></span>**Budgeted cost of work scheduled** | Planlanan işin bütçelenmiş maliyeti | Planlanan işin bütçelenmiş maliyeti. |
+| <span id="budget-cost-of-work-performed"></span>**Budget cost of work performed** | Yapılan işin bütçe maliyeti | BCWP: tamamlanan işin bütçelenmiş değeri; kazanılan değerin para okunuşu. |
+| <span id="budget-year"></span>**Budget year** | Bütçe yılı | Planlamanın para takvimi: güvenlik yatırımı bu takvime sığdırılır. |
+| <span id="budgeted-cost-of-work-scheduled"></span>**Budgeted cost of work scheduled** | Planlanan işin bütçelenmiş maliyeti | BCWS: plana göre bugüne kadar bitmiş olması öngörülen işin bütçesi. |
 | <span id="buffer-overflow"></span>**Buffer overflow** | Arabellek taşması | Arabellek taşması: verinin ayrılan alanı aşması. C dilinin klasik mirasıdır; hâlâ CVE'lerin anasıdır. |
-| <span id="buffer-overflow-attack"></span>**Buffer overflow attack** | Arabellek taşması saldırısı | Taşmayı kullanıp yönerge akışını ele geçirme: 1988'den beri açıkların klassik giysisi. |
+| <span id="buffer-overflow-attack"></span>**Buffer overflow attack** | Arabellek taşması saldırısı | Taşmayı kullanıp yönerge akışını ele geçirme: 1988'den beri açıkların klasik giysisi. |
 | <span id="bug"></span>**Bug** | Hata | Hata: yazılımdaki istenmeyen davranış. |
 | <span id="bug-bounty-hunter"></span>**Bug bounty hunter** | Ödül avcısı | Ödül avcısı: zafiyet bulup ödül toplayan araştırmacı. |
 | <span id="bug-fix"></span>**Bug fix** | Hata düzeltme | Hatayı gideren değişiklik: yama ile gelir, bazen yeni hatayı da yanında getirir. |
@@ -813,7 +813,7 @@ permalink: /sozluk/
 | <span id="business-continuity-planning"></span>**Business continuity planning** | İş sürekliliği planlaması | Kesinti senaryolarına önceden hazırlanma planı: kriz günü yazılan plan fantezidir. |
 | <span id="business-disruption"></span>**Business disruption** | İş kesintisi | Hizmetin aksaması: nedeni ister siber ister elektrik, sonuç müşteri gözünde aynıdır. |
 | <span id="business-impact-analysis"></span>**Business impact analysis** | İş etki çözümlemesi | İş etki çözümlemesi (BIA). |
-| <span id="business-impact-analysis-assessment"></span>**Business impact analysis assessment** | İş etki çözümlemesi değerlendirmesi | BIA sonuçlarının yönetime sunulması: sayılar karara dönüşmezse çözümleme gymnastictir. |
+| <span id="business-impact-analysis-assessment"></span>**Business impact analysis assessment** | İş etki çözümlemesi değerlendirmesi | BIA sonuçlarının yönetime sunulması: sayılar karara dönüşmezse çözümleme jimnastik kalır. |
 | <span id="business-impact-assessment"></span>**Business impact assessment** | İş etki değerlendirmesi | Kesintinin iş üzerindeki etkisini ölçme: kurtarma önceliği bu değerle belirlenir. |
 | <span id="business-mission-area"></span>**Business mission area** | İş görev alanı | Kurumun temel görevini yürüten iş alanları: güvenlik bunları korumak için vardır. |
 | <span id="business-operation-support-services"></span>**Business operation support services** | İş işletim destek hizmetleri | İşin yürümesini sağlayan arka plan hizmetleri: BT, insan kaynakları, tedarik. Kesilince asıl iş de durur. |
