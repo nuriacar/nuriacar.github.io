@@ -5,6 +5,43 @@ nav_title: sözlük
 permalink: /sozluk/
 ---
 
+Sözlük projesi birkaç benzer durumun üst üste gelmesi ile şekillendi ve şimdi huzurlarınızda! Dört aya yayılan hikayesi şöyle:
+
+Projelerimden biri olan bilgiguvenligi.org'u 7'den 77'ye herkes ve her rol için inşa ettim lakin zamanla farkettim ki terimlerin ne olduğu belirsiz. Yazdıkça kelimeler çoğaldı ve sözlük ihtiyacı hasıl oldu. Ben de o proje özelinde bir sözlük inşa ettim ve bu başlangıç oldu.
+
+Sonra siber güvenlik yüksek lisans dersi sınavına çalışmak için Shark Tank (Wireshark Eğitim Laboratuvarı) projesine başladım ve her modülde önce o modülde anlatılan şeyleri açıkladığım bir mini modül içi sözlük oluştu.
+
+Sonra nuriacar.com'daki yazılarımda kullandığım terimler için bir sözlük inşa etme fikri doğdu ve bu sayfayı inşa ettim; yeni yazılar paylaştıkça sözlüğü genişletmeye devam ettim.
+
+Sonra düşündüm ki 3 farklı projedeki dedike sözlükler şu an okuduğunuz birleşse harika olacak. Sözlükleri birleştirmekle kalmadım, birebir terim karşılıklarının yanında arkadaşıma anlatıyormuş gibi kısa açıklama metinleri ekledim zira terim/deyim karşılıkları olsa bile işin dışından biri için anlaşılmayacak haldeydiler!
+
+Ve geldik son adıma: Yüksek lisans tezim için siber güvenlik terimlerinin Türkçe karşılıkları lazım oldu ve hocam TMMOB BMO 6. Dönem Siber Güvenlik Komisyonu'nun oluşturduğu bir PDF'i işaret etti. Bkz. Siber Güvenlik Terim Karşılıkları (Aralık 2023). Bu PDF'deki karşılıklarla tezimi yazdım ve sonra içindeki maddeleri birkaç aydır geliştirdiğim sözlük projeme dahil ettim. Komisyonun PDF'inde açıklamalar yok. Bu sebeple yaklaşık 4.083 madde için yine arkadaşıma anlatır gibi kısa açıklamalar yazdım.
+
+Proje sabit değil! Zamanla yeni terim ve deyimlerle genişlemeye devam edecek! Herhangi bir geribildirimde bulunmak isterseniz sayfanın en alt kısmında epostam var; oradan erişebilirsiniz. Umarım Siber Okuryazarlık açısından faydası dokunur.
+
+<div class="box">
+
+<div class="card-grid">
+
+<div class="stat">
+<span class="stat__value">4.547</span>
+<span class="stat__label">Terim &amp; Deyim</span>
+</div>
+
+<div class="stat">
+<span class="stat__value">27</span>
+<span class="stat__label">Bölüm</span>
+</div>
+
+<div class="stat">
+<span class="stat__value">4.547</span>
+<span class="stat__label">Açıklama</span>
+</div>
+
+</div>
+
+</div>
+
 <details class="accordion" markdown="block" id="letter-sayi">
 <summary>Sayılar</summary>
 
@@ -4768,4 +4805,3 @@ permalink: /sozluk/
 
 </details>
 
-*Türkçe karşılıklar: TMMOB BMO 6. Dönem Siber Güvenlik Komisyonu Terim Karşılıkları (Aralık 2023). Açıklamalar özgündür; sözlük sürekli geliştirilir.*
