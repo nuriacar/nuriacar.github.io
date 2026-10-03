@@ -184,6 +184,10 @@ main pre code {
  * düğme kod üstünde okunur (zemin) */
 main .highlight { position: relative; }
 
+/* Lexer'siz diller (ör. cmd): rouge sarmalayıcısı gelmez, pre'nin kendisi
+   düğme çapası olur */
+main pre { position: relative; }
+
 main pre .btn--copy {
   position: absolute;
   top: var(--sp-2);

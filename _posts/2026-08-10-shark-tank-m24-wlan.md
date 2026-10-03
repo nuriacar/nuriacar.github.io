@@ -124,11 +124,11 @@ Repoyu indirmediysen bu modülün pcap dosyasını [buradan indirebilirsin](http
 > **Yazılım:**
 > ```sh
 > # Linux: airmon-ng ile monitor mode'a geç
-> sudo airmon-ng start wlan0
+> $ sudo airmon-ng start wlan0
 > # Wireshark'ta wlan0mon arayüzünü seç
 >
 > # macOS:Airport utility
-> sudo /System/Library/PrivateFrameworks/Apple80211.framework/\
+> $ sudo /System/Library/PrivateFrameworks/Apple80211.framework/\
 > Versions/Current/Resources/airport en0 sniff 6
 > # 6 = channel numarası
 >

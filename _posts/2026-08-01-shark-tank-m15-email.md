@@ -531,9 +531,9 @@ Phishing mail'leri ikinci bir "silah" taşır: Ek dosya. pcap'te ekli bir mail v
 2. Ekli mailin stream'ini aç: Bulduğun pakete sağ tık → **Follow > TCP Stream**. Base64 bloğunu kopyala.
 3. Terminalde çöz:
    ```sh
-   echo "<base64-bloğu>" | base64 -d > ek.bin
-   shasum -a 256 ek.bin   # bütünlük kontrolü
-   xxd ek.bin | head      # içerik incelemesi
+   $ echo "<base64-bloğu>" | base64 -d > ek.bin
+   $ shasum -a 256 ek.bin   # bütünlük kontrolü
+   $ xxd ek.bin | head      # içerik incelemesi
    ```
 4. Alternatif — Wireshark'ın otomatik yolu: **File > Export Objects > IMF**. Liste, pcap'teki mail gövdelerini (eml) dosya olarak verir; eml'yi bir mail istemcisiyle açınca ek görünür.
 

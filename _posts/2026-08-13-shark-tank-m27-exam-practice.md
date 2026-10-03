@@ -193,12 +193,12 @@ http.request.uri contains "batch-report.zip"
 3. **Dosyayı kurtar:** İndirme paketine sağ tık → **Follow > TCP Stream** → "Show data as: Raw" → Save. Alternatif: **File > Export Objects > HTTP** → `batch-report.zip` seç → Save.
 4. Bütünlük kanıtı — hash al:
    ```sh
-   shasum -a 256 batch-report.zip
+   $ shasum -a 256 batch-report.zip
    # 71fb05262807ec6f9a61f41a51dae43d69e96077d95cee825d715056e1551275
    ```
 5. İçerik kanıtı — magic bytes:
    ```sh
-   xxd batch-report.zip | head -1
+   $ xxd batch-report.zip | head -1
    # 00000000: 504b 0304 ...   <-- "PK\x03\x04" = ZIP imzası
    ```
    `unzip -l batch-report.zip` ile arşiv listesini çıkar (3 rapor dosyası).

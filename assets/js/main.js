@@ -399,9 +399,15 @@
       }
       if (/\\\s*$/.test(ln) || /`\s*$/.test(ln) ||
           /(&&|\|\|)\s*$/.test(ln) || /\|\s*$/.test(ln) ||
+          /^\s*\|/.test(ln) ||
           depth > 0 || kw > 0) continue;
-      var joined = buf.join('\n');
-      var text = joined
+      flush();
+    }
+    /* Blok sonu: son satırı \ / | / açık gövde ile biten birim de
+       kaybolmasın — kalan tamponu boşalt. */
+    if (buf !== null) flush();
+    function flush() {
+      var text = buf.join('\n')
         .replace(/\s*\\\s*\n\s*/g, ' ')
         .split('\n')
         .filter(function (l) { return !/^\s*#/.test(l); })
@@ -446,6 +452,12 @@
   document.querySelectorAll('main pre').forEach(function (pre) {
     var wrap = pre.closest('[class*="language-"]');
     var langMatch = wrap ? (wrap.className.match(/language-([\w-]+)/) || []) : [];
+    if (!langMatch[1]) {
+      /* rouge lexer'i olmayan diller: sarmalayıcı div gelmez, dil sınıfı
+         code elementinin kendisinde taşınır (ör. cmd). */
+      var codeEl = pre.querySelector('code');
+      langMatch = codeEl ? (codeEl.className.match(/language-([\w-]+)/) || []) : [];
+    }
     var lang = langMatch[1] || '';
     if (SHELL.test(lang)) {
       var n = shellButtons(pre, lang);

@@ -268,7 +268,7 @@ veri her byte'ın eşit olasılıkla çıkmasına yol açtığından **yüksek e
 3. Karşılaştır: Normal `/auth` POST'u okunabilir form verisidir.
 4. (Opsiyonel) Hesapla — tshark + python:
    ```sh
-   tshark -r shared/pcaps/module-28-forensics.pcap -q \
+   $ tshark -r shared/pcaps/module-28-forensics.pcap -q \
      -z follow,tcp,ascii,<stream> 2>/dev/null \
    | sed -n '/Content-Length: 2048/,$p' | grep -E '^[A-Za-z0-9+/=]+$' \
    | python3 -c "import sys,math,collections; s=sys.stdin.read().strip(); c=collections.Counter(s); n=len(s); print('%.4f bit/char' % (-sum(v/n*math.log2(v/n) for v in c.values())))"
