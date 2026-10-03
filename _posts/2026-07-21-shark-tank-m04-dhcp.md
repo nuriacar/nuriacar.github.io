@@ -84,7 +84,7 @@ v Dynamic Host Configuration Protocol
 
 ```sh
 # DHCP trafiği üret:
-./scripts/generate-traffic.sh dhcp
+$ ./scripts/generate-traffic.sh dhcp
 
 # Wireshark ile aç:
 # macOS: open -a Wireshark module-04-dhcp.pcap

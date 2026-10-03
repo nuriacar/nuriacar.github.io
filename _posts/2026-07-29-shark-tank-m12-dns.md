@@ -80,7 +80,7 @@ Analist gerçeği: Bu lab'ın DNS'i DNSSEC'sizdir (RRSIG görmezsin — gerçeğ
 ## Hazırlık
 
 ```sh
-./scripts/generate-traffic.sh dns
+$ ./scripts/generate-traffic.sh dns
 # macOS: open -a Wireshark module-12-dns.pcap
 # Linux: wireshark module-12-dns.pcap &
 # Windows: start wireshark module-12-dns.pcap

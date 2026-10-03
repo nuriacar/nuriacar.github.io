@@ -47,7 +47,7 @@ Wireshark'ın grafik araçları, sayısal veriyi görsel hale getirerek trafik d
 ## Hazırlık
 
 ```sh
-./scripts/generate-traffic.sh tcp-graph
+$ ./scripts/generate-traffic.sh tcp-graph
 ```
 
 Repoyu indirmediysen bu modülün pcap dosyasını [buradan indirebilirsin](https://github.com/nuriacar/shark-tank/tree/main/shared/pcaps).
@@ -318,7 +318,7 @@ Flow Graph "ne zaman"ı verir; **Conversations** "ne kadar"ı verir. `Statistics
 
 **tshark eşdeğeri (sınavda hızlı yol):**
 ```sh
-tshark -r shared/pcaps/module-22-tcp-graph.pcap -q -z conv,tcp | head -12
+$ tshark -r shared/pcaps/module-22-tcp-graph.pcap -q -z conv,tcp | head -12
 ```
 
 **Analist kalıbı:** Conversations ile 3 saniyede "bu pcap'in özeti hangi

@@ -194,7 +194,7 @@ Bu lab dual-stack ağ yapısına sahiptir: IPv4 (172.50.2.0/24) ve IPv6 (fd00:2:
 
 ```sh
 # IPv6 trafik oluştur:
-./scripts/generate-traffic.sh ipv6
+$ ./scripts/generate-traffic.sh ipv6
 
 # PCAP'i Wireshark ile aç:
 # macOS: open -a Wireshark module-07-ipv6.pcap
@@ -208,19 +208,19 @@ Repoyu indirmediysen bu modülün pcap dosyasını [buradan indirebilirsin](http
 
 ```sh
 # Container'ın IPv6 adreslerini gör:
-docker exec shark-tank-client ip -6 addr
+$ docker exec shark-tank-client ip -6 addr
 
 # Link-local adresi gör (fe80:: ile başlayan):
-docker exec shark-tank-client ip -6 addr show scope link
+$ docker exec shark-tank-client ip -6 addr show scope link
 
 # ping6 ile test (ICMPv6 Echo):
-docker exec shark-tank-client ping6 -c 3 fd00:2::14
+$ docker exec shark-tank-client ping6 -c 3 fd00:2::14
 
 # AAAA kaydı sorgula:
-docker exec shark-tank-client dig AAAA google.com +short
+$ docker exec shark-tank-client dig AAAA google.com +short
 
 # Neighbor cache gör:
-docker exec shark-tank-client ip -6 neigh show
+$ docker exec shark-tank-client ip -6 neigh show
 ```
 
 ## Alıştırmalar
@@ -410,13 +410,13 @@ dns.qry.type == 28
 
 ```sh
 # AAAA kaydı sorgula:
-docker exec shark-tank-client dig AAAA google.com
+$ docker exec shark-tank-client dig AAAA google.com
 
 # Hem A hem AAAA sorgula (dual-stack kontrol):
-docker exec shark-tank-client dig ANY google.com
+$ docker exec shark-tank-client dig ANY google.com
 
 # Sadece IPv6 adresini göster:
-docker exec shark-tank-client dig AAAA google.com +short
+$ docker exec shark-tank-client dig AAAA google.com +short
 ```
 
 ### A vs AAAA Karşılaştırması:
@@ -515,19 +515,19 @@ ipv6 || ip
 
 ```sh
 # IPv4 ile ping:
-docker exec shark-tank-client ping -c 3 172.50.2.14
+$ docker exec shark-tank-client ping -c 3 172.50.2.14
 
 # IPv6 ile ping (global unicast):
-docker exec shark-tank-client ping6 -c 3 fd00:2::14
+$ docker exec shark-tank-client ping6 -c 3 fd00:2::14
 
 # IPv6 ile ping (link-local: önce adresi bul):
-docker exec shark-tank-client ip -6 addr show scope link
+$ docker exec shark-tank-client ip -6 addr show scope link
 # Çıktıdaki fe80:: ile başlayan adresi kopyalayıp kullan, örn:
 # docker exec shark-tank-client ping6 -c 3 fe80::xx:xx:xx:xx
 
 # DNS sorgulama karşılaştırması:
-docker exec shark-tank-client dig A www.shark-tank.local +short
-docker exec shark-tank-client dig AAAA www.shark-tank.local +short
+$ docker exec shark-tank-client dig A www.shark-tank.local +short
+$ docker exec shark-tank-client dig AAAA www.shark-tank.local +short
 ```
 
 > **SINAV İPUCU:** Dual-stack ağda hem IPv4 hem IPv6 trafiği aynı anda bulunur. Her iki protokolü de analiz etmek gerekir. IPv6 trafiği görmezden gelinmemelidir.

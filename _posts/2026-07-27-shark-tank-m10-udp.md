@@ -109,7 +109,7 @@ UDP (User Datagram Protocol), bağlantısız (connectionless) ve güvenilmez (un
 ## Hazırlık
 
 ```sh
-./scripts/generate-traffic.sh udp
+$ ./scripts/generate-traffic.sh udp
 # macOS: open -a Wireshark module-10-udp.pcap
 # Linux: wireshark module-10-udp.pcap &
 # Windows: start wireshark module-10-udp.pcap

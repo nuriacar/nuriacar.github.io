@@ -92,10 +92,10 @@ VoIP iki ana protokolden oluşur:
 
 ```sh
 # VoIP servisini başlat
-docker compose up -d voip
+$ docker compose up -d voip
 
 # Trafiği üret
-./scripts/generate-traffic.sh voip
+$ ./scripts/generate-traffic.sh voip
 ```
 
 Repoyu indirmediysen bu modülün pcap dosyasını [buradan indirebilirsin](https://github.com/nuriacar/shark-tank/tree/main/shared/pcaps).

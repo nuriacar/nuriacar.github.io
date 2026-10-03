@@ -86,7 +86,7 @@ Sahtecilik kanıtı: Paketin **Ethernet kaynak MAC'i** gateway'inki değil, atta
 ## Hazırlık
 
 ```sh
-./scripts/generate-traffic.sh icmp
+$ ./scripts/generate-traffic.sh icmp
 # macOS: open -a Wireshark module-05-icmp.pcap
 # Linux: wireshark module-05-icmp.pcap &
 # Windows: start wireshark module-05-icmp.pcap
@@ -185,7 +185,7 @@ Bir paketin TTL'i sıfırlandığında router bu hatayı döndürür. Bu, **trac
 Bu pcap'te Type 11 yok (hedef aynı Docker ağında: Router geçilmez), ancak kendi ağında traceroute testi yapabilirsin:
 ```sh
 # Terminal'de:
-traceroute 8.8.8.8
+$ traceroute 8.8.8.8
 # Wireshark'ta icmp.type == 11 filtresiyle gör
 ```
 
@@ -338,7 +338,7 @@ için rastgele identifier üretir; tünel araçları (icmptunnel, ptunnel) tüm 
 
 **Payload'u çöz (analiz):**
 ```sh
-tshark -r shared/pcaps/module-05-icmp.pcap -Y 'icmp.ident == 0x7354 && icmp.type == 8' \
+$ tshark -r shared/pcaps/module-05-icmp.pcap -Y 'icmp.ident == 0x7354 && icmp.type == 8' \
   -T fields -e data.data | tr -d '\n' | xxd -r -p | \
   sed 's/^.*ICMPTUN//' | base64 -d 2>/dev/null | head -2
 ```

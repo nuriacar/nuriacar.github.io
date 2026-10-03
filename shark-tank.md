@@ -23,8 +23,8 @@ Kaynak Kod Deposu
 </div>
 
 ```sh
-git clone https://github.com/nuriacar/shark-tank.git
-cd shark-tank && make setup
+$ git clone https://github.com/nuriacar/shark-tank.git
+$ cd shark-tank && make setup
 ```
 
 Docker'ın yoksa da dert değil: 25 pcap repoda gömülü; klonla, Wireshark'ta aç. Pcap'ler repoda `shared/pcaps/` dizininde.

@@ -174,10 +174,10 @@ CLIENT                    DOVECOT SUBMISSION (172.50.2.18:587)
 
 ```sh
 # Ortam çalışıyor olmalı. Değilse:
-./scripts/start.sh
+$ ./scripts/start.sh
 
 # Email trafiği üret:
-./scripts/generate-traffic.sh email
+$ ./scripts/generate-traffic.sh email
 
 # Pcap dosyasını aç:
 # macOS: open -a Wireshark module-15-email.pcap
@@ -305,18 +305,18 @@ smtp.req.command == "AUTH"
 
 ```sh
 # Username decode:
-echo "a3VsbGFuaWNp" | base64 -d
+$ echo "a3VsbGFuaWNp" | base64 -d
 # Sonuç: kullanici
 
 # Password decode:
-echo "c2VjcmV0MTIz" | base64 -d
+$ echo "c2VjcmV0MTIz" | base64 -d
 # Sonuç: secret123
 
 # Sunucunun challenge'ını decode et:
-echo "VXNlcm5hbWU6" | base64 -d
+$ echo "VXNlcm5hbWU6" | base64 -d
 # Sonuç: Username:
 
-echo "UGFzc3dvcmQ6" | base64 -d
+$ echo "UGFzc3dvcmQ6" | base64 -d
 # Sonuç: Password:
 ```
 

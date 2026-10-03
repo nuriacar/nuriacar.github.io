@@ -169,10 +169,10 @@ Bu modül canlı capture gerektirir. Wireshark'ın capture ayarlarını keşfetm
 
 ```sh
 # Docker ağını kontrol et:
-docker network ls
+$ docker network ls
 
 # Container'ların ağ arayüzlerini gör:
-docker exec shark-tank-client ip link show
+$ docker exec shark-tank-client ip link show
 
 # Capture için host makinede Wireshark çalıştır:
 # macOS: open -a Wireshark
@@ -377,10 +377,10 @@ Snap length'i değiştirip dosya boyutunu karşılaştır.
 
 ```sh
 # macOS / Linux:
-ls -la snap_full.pcap snap_68.pcap
+$ ls -la snap_full.pcap snap_68.pcap
 
 # Windows (PowerShell):
-Get-Item snap_full.pcap, snap_68.pcap | Select-Object Name, Length
+$ Get-Item snap_full.pcap, snap_68.pcap | Select-Object Name, Length
 ```
 
 ### Beklenen Sonuç:
@@ -503,10 +503,10 @@ Birden fazla pcap dosyasını birleştir.
 
 ```sh
 # mergecap ile birleştir (Wireshark ile birlikte gelir):
-mergecap -w merged.pcap capture1.pcap capture2.pcap
+$ mergecap -w merged.pcap capture1.pcap capture2.pcap
 
 # Timestamp sırasına göre:
-mergecap -a -w merged.pcap capture1.pcap capture2.pcap
+$ mergecap -a -w merged.pcap capture1.pcap capture2.pcap
 ```
 
 > **SINAV İPUCU:** mergecap, Wireshark kurulumuyla gelen bir araçtır. `-a` parametresi timestamp sırasına göre birleştirir.
@@ -523,7 +523,7 @@ CLI'da ring buffer ve auto-stop kullanımı.
 
 ```sh
 # Ring buffer: 5 dosya, her biri 1000 KB
-sudo tshark -i en0 -w ring.pcap -b filesize:1000 -b files:5
+$ sudo tshark -i en0 -w ring.pcap -b filesize:1000 -b files:5
 
 # Açıklama:
 # -i en0        : arayüz (macOS: en0, Linux: eth0)
@@ -544,29 +544,29 @@ sudo tshark -i en0 -w ring.pcap -b filesize:1000 -b files:5
 
 ```sh
 # 60 saniye capture, sonra otomatik dur:
-sudo tshark -i en0 -a duration:60 -w timed.pcap
+$ sudo tshark -i en0 -a duration:60 -w timed.pcap
 
 # 100 paket capture, sonra dur:
-sudo tshark -i en0 -a packets:100 -w packet_limited.pcap
+$ sudo tshark -i en0 -a packets:100 -w packet_limited.pcap
 
 # 1 MB capture, sonra dur:
-sudo tshark -i en0 -a filesize:1024 -w size_limited.pcap
+$ sudo tshark -i en0 -a filesize:1024 -w size_limited.pcap
 
 # Bileşik: 60 saniye VEYA 1000 paket (hangisi önce):
-sudo tshark -i en0 -a duration:60 -a packets:1000 -w combined.pcap
+$ sudo tshark -i en0 -a duration:60 -a packets:1000 -w combined.pcap
 ```
 
 ### Capture Filter ile tshark:
 
 ```sh
 # Sadece HTTP trafiği yakala:
-sudo tshark -i en0 -f "tcp port 80" -w http_only.pcap
+$ sudo tshark -i en0 -f "tcp port 80" -w http_only.pcap
 
 # Sadece belirli IP:
-sudo tshark -i en0 -f "host 172.50.2.10" -w host_capture.pcap
+$ sudo tshark -i en0 -f "host 172.50.2.10" -w host_capture.pcap
 
 # Ring buffer + capture filter:
-sudo tshark -i en0 -f "tcp port 80" -w http_ring.pcap \
+$ sudo tshark -i en0 -f "tcp port 80" -w http_ring.pcap \
   -b filesize:1000 -b files:3
 ```
 
@@ -577,10 +577,10 @@ sudo tshark -i en0 -f "tcp port 80" -w http_ring.pcap \
 # tshark'tan daha hafif, sadece capture yapar (analiz yok)
 
 # Ring buffer ile:
-sudo dumpcap -i en0 -w dump.pcap -b filesize:1000 -b files:5
+$ sudo dumpcap -i en0 -w dump.pcap -b filesize:1000 -b files:5
 
 # Multi-file:
-sudo dumpcap -i en0 -w dump.pcap -b filesize:1024
+$ sudo dumpcap -i en0 -w dump.pcap -b filesize:1024
 ```
 
 ### tshark Parametre Karşılaştırması:
@@ -989,11 +989,11 @@ Birden fazla pcap dosyasını tek dosyada birleştirme.
 
 ```sh
 # İki pcap'i timestamp sırasına göre birleştir:
-mergecap -a -w merged.pcap \
+$ mergecap -a -w merged.pcap \
   shared/pcaps/module-08-tcp.pcap shared/pcaps/module-13-http.pcap
 
 # Birleştirilmiş pcap'i kontrol et:
-tshark -r merged.pcap -c 5
+$ tshark -r merged.pcap -c 5
 ```
 
 `-a` parametresi: Timestamp sırasına göre birleştir (en eskiden en yeniye). `-w` parametresi: Çıktı dosyası.
@@ -1002,14 +1002,14 @@ tshark -r merged.pcap -c 5
 
 ```sh
 # İlk 100 paketi al:
-editcap -c 100 shared/pcaps/module-27-exam-practice.pcap short.pcap
+$ editcap -c 100 shared/pcaps/module-27-exam-practice.pcap short.pcap
 
 # Belirli zaman aralığını kes:
-editcap -A "2026-07-14 00:00:00" \
+$ editcap -A "2026-07-14 00:00:00" \
   -B "2026-07-14 00:01:00" input.pcap output.pcap
 
 # Her N paketi ayrı dosyaya böl:
-editcap -c 50 input.pcap output.pcap
+$ editcap -c 50 input.pcap output.pcap
 # output_00000.pcap, output_00001.pcap, ...
 ```
 

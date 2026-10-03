@@ -60,7 +60,7 @@ TCP güvenilir iletim sağlamak için sequence number ve acknowledgment number k
 ## Hazırlık
 
 ```sh
-./scripts/generate-traffic.sh tcp-sequence
+$ ./scripts/generate-traffic.sh tcp-sequence
 # Kullanılacak pcap: module-09-tcp-sequence.pcap
 ```
 

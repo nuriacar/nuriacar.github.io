@@ -498,9 +498,9 @@ Bilinen sınır (dürüstlük notu):
 Manuel analiz (Modül 01-28) sonrası toplu kontrol için:
 
 ```sh
-./scripts/shark-tank.sh shared/pcaps/module-28-forensics.pcap   # tek pcap → yanına .md rapor
-./scripts/shark-tank.sh shared/pcaps                            # tüm dizin → raporlar + campaign.md
-make test-sharktank                                             # regresyon testi (12 kontrol)
+$ ./scripts/shark-tank.sh shared/pcaps/module-28-forensics.pcap   # tek pcap → yanına .md rapor
+$ ./scripts/shark-tank.sh shared/pcaps                            # tüm dizin → raporlar + campaign.md
+$ make test-sharktank                                             # regresyon testi (12 kontrol)
 ```
 
 Çıktı envanteri:

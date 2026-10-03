@@ -135,13 +135,13 @@ Bir kahramanlık hikayesi: Betiğe daha önce hiç görmediği bir ağdan 9.831 
 
 ```sh
 # 1) Tek bir pcap'i analiz et — rapor yanına .md olarak düşer
-./scripts/shark-tank.sh shared/pcaps/module-28-forensics.pcap
+$ ./scripts/shark-tank.sh shared/pcaps/module-28-forensics.pcap
 
 # 2) Tüm dizini tara — her pcap için rapor + campaign.md
-./scripts/shark-tank.sh shared/pcaps
+$ ./scripts/shark-tank.sh shared/pcaps
 
 # 3) Betiği kendine sınav yap — beklenen bulgular otomatik doğrulanır
-make test-sharktank
+$ make test-sharktank
 ```
 
 GUI'de denemek istersen: script'i Lua eklenti dizinine kopyala, Wireshark'ı yeniden başlat, bir pcap aç ve menüden **Tools > Shark-Tank > Rapor Üret** de. Rapor bir pencerede belirir. Detaylar [`shared/shark-tank.lua`](https://github.com/nuriacar/shark-tank/blob/main/shared/shark-tank.lua){: target="_blank" rel="noopener"} dosyasının başlık yorumunda ve [Modül 20'de](/2026/08/06/shark-tank-m20-tshark.html).

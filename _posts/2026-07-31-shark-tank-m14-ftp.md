@@ -103,7 +103,7 @@ CLIENT                          FTP SERVER (172.50.2.15:21)
 ## Hazırlık
 
 ```sh
-./scripts/generate-traffic.sh ftp
+$ ./scripts/generate-traffic.sh ftp
 # macOS: open -a Wireshark module-14-ftp.pcap
 # Linux: wireshark module-14-ftp.pcap &
 # Windows: start wireshark module-14-ftp.pcap

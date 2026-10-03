@@ -67,7 +67,7 @@ Bu modül, sınavda karşılaşacağın türdeki soruları pratik etmen içindir
 
 ```sh
 # Karışık trafik oluştur:
-./scripts/generate-traffic.sh mixed
+$ ./scripts/generate-traffic.sh mixed
 
 # Wireshark ile aç:
 # macOS: open -a Wireshark module-27-exam-practice.pcap

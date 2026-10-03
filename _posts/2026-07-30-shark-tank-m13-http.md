@@ -60,10 +60,10 @@ HTTP (HyperText Transfer Protocol), web istemci-sunucu iletişim protokolüdür.
 
 ```sh
 # Ortam çalışıyor olmalı. Değilse:
-./scripts/start.sh
+$ ./scripts/start.sh
 
 # HTTP trafiği üret:
-./scripts/generate-traffic.sh http
+$ ./scripts/generate-traffic.sh http
 
 # Pcap dosyasını aç:
 # macOS: open -a Wireshark module-13-http.pcap
@@ -188,7 +188,7 @@ v Hypertext Transfer Protocol
 
 **Terminalde çöz (kanıt üretimi):**
 ```sh
-echo "a2FtZTpoYW1laGE=" | base64 -d     # -> kame:hameha
+$ echo "a2FtZTpoYW1laGE=" | base64 -d     # -> kame:hameha
 ```
 
 Aynı teknik ters yönde de çalışır — saldırgan exfil için veriyi Basic auth başlığına gömebilir; her `Authorization` başlığını `http.authorization` filtresiyle kontrol etmek analist refleksi olmalı.
@@ -276,7 +276,7 @@ pcap'te zincir şöyle: `dig web.shark-tank.local` hemen ardından `GET / (Host:
 
 **tshark ile otomatik ölçüm:**
 ```sh
-tshark -r shared/pcaps/module-13-http.pcap -Y \
+$ tshark -r shared/pcaps/module-13-http.pcap -Y \
   'dns.qry.name == "web.shark-tank.local" || (http.request && http.host == "web.shark-tank.local")' \
   -T fields -e frame.time_relative -e _ws.col.Info
 ```

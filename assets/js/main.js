@@ -319,8 +319,10 @@
 
 /* ---------- 7) Kod bloklarına kopyala: shell'de KOMUT BAŞINA düğme ----------
  * Shell ailesi bloklar: her copy tek komutu alır — \ devam satırları
- * birleşik, yorum (#) satırları hariç. Diğer diller: blok başına tek
- * düğme, birebir kopya. Butonlar .highlight katmanında satır hizalı;
+ * birleşik, yorum (#) satırları hariç, satır başı $ prompt'u kopyaya girmez
+ * ($ + boşluk soyulur; $env:/$f gibi PowerShell $'ları boşluksuz olduğundan
+ * dokunulmaz). Diğer diller: blok başına tek düğme, birebir kopya.
+ * Butonlar .highlight katmanında satır hizalı;
  * konum CSSOM ile (inline style attr CSP'ye takılır). */
 
 (function () {
@@ -386,6 +388,7 @@
           .replace(/\\\s*\n\s*/g, ' ')
           .split('\n')
           .filter(function (l) { return !/^\s*#/.test(l); })
+          .map(function (l) { return l.replace(/^\s*\$\s+/, ''); })
           .join('\n')
           .replace(/^\s+|\s+$/g, '');
         if (text) units.push({ line: startLine, text: text });

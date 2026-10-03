@@ -49,7 +49,7 @@ Bu modülde yeni trafik üretilmez. Mevcut pcap dosyaları üzerinde filtre çal
 
 ```sh
 # Herhangi bir pcap'i açıp filtreleri dene:
-make open FILE=shared/pcaps/module-01-basics.pcap
+$ make open FILE=shared/pcaps/module-01-basics.pcap
 ```
 
 Repoyu indirmediysen pcap dosyalarını [buradan indirebilirsin](https://github.com/nuriacar/shark-tank/tree/main/shared/pcaps).

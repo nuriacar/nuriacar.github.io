@@ -57,17 +57,17 @@ Kaynak Kod Deposu
 Repo'yu klonla, pcap'i Wireshark'ta aç, öğrenmeye başla. Docker kurmana gerek yok. Repoyu indirmediysen [tüm pcap'leri ya da modül pcap'ini buradan indirebilirsin](https://github.com/nuriacar/shark-tank/tree/main/shared/pcaps).
 
 ```sh
-git clone https://github.com/nuriacar/shark-tank.git
-cd shark-tank
+$ git clone https://github.com/nuriacar/shark-tank.git
+$ cd shark-tank
 
 # macOS:
-open -a Wireshark shared/pcaps/module-01-basics.pcap
+$ open -a Wireshark shared/pcaps/module-01-basics.pcap
 
 # Linux:
-wireshark shared/pcaps/module-01-basics.pcap &
+$ wireshark shared/pcaps/module-01-basics.pcap &
 
 # Windows:
-start wireshark shared\pcaps\module-01-basics.pcap
+$ start wireshark shared\pcaps\module-01-basics.pcap
 ```
 
 25 pcap dosyası ve TLS keylog dosyası repo'ya dahildir. Aşağıdaki müfredat tablosundan bir modül seç, rehberi oku, pcap'i Wireshark'ta aç.
@@ -77,9 +77,9 @@ start wireshark shared\pcaps\module-01-basics.pcap
 Gerçek servisler (web, DNS, FTP, VoIP, attacker) üzerinde kendi trafiğini üretmek ve capture almak için:
 
 ```sh
-git clone https://github.com/nuriacar/shark-tank.git
-cd shark-tank
-make setup
+$ git clone https://github.com/nuriacar/shark-tank.git
+$ cd shark-tank
+$ make setup
 ```
 
 Bu tek komut her şeyi yapar: Docker kurulumu (eksikse), sertifikaları, 16 container'ı, 25 pcap dosyasını.
@@ -88,13 +88,13 @@ Kurulum bittikten sonra herhangi bir modülü aç:
 
 ```sh
 # İlk modülden başla:
-make open FILE=shared/pcaps/module-01-basics.pcap
+$ make open FILE=shared/pcaps/module-01-basics.pcap
 
 # Tüm pcap'ları yeniden üret (istersen):
-make capture
+$ make capture
 
 # Servislerin çalıştığını doğrula:
-make test
+$ make test
 ```
 
 ### Gereksinimler
@@ -269,13 +269,13 @@ Müfredat tablosundan herhangi bir modüle başla. Her modül bağımsız çalı
 
 ```sh
 # İpucu: Tüm komutları görmek için
-make help
+$ make help
 
 # Servis durumunu kontrol et
-make test
+$ make test
 
 # Pcap'lerin içeriğini doğrula
-make validate
+$ make validate
 ```
 
 ---
@@ -283,18 +283,18 @@ make validate
 ## Komut Referansı
 
 ```sh
-make setup          # İlk kurulum (her şey)
-make start          # Container'ları başlat
-make stop           # Durdur
-make test           # 13 servis bağlantı testi
-make capture        # Tüm pcap'ları yeniden üret
-make validate       # Pcap içeriklerini doğrula (75 kontrol)
-make check          # Modül + pcap dosya kontrolü
-make open FILE=...  # Pcap'i Wireshark'ta aç
-make status         # Container + ağ durumu
-make shell          # Client container'da bash aç
-make logs           # Container loglarını izle
-make clean          # Her şeyi sil
+$ make setup          # İlk kurulum (her şey)
+$ make start          # Container'ları başlat
+$ make stop           # Durdur
+$ make test           # 13 servis bağlantı testi
+$ make capture        # Tüm pcap'ları yeniden üret
+$ make validate       # Pcap içeriklerini doğrula (75 kontrol)
+$ make check          # Modül + pcap dosya kontrolü
+$ make open FILE=...  # Pcap'i Wireshark'ta aç
+$ make status         # Container + ağ durumu
+$ make shell          # Client container'da bash aç
+$ make logs           # Container loglarını izle
+$ make clean          # Her şeyi sil
 ```
 
 ---

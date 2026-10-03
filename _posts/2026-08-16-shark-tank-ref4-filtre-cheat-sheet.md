@@ -314,17 +314,17 @@ Varlik:         (field) != 0  veya sadece (field)
 
 ```sh
 # Tüm pcap'lerde POST bul
-for f in shared/pcaps/*.pcap; do
-  count=$(tshark -r "$f" -Y 'http.request.method == "POST"' \
+$ for f in shared/pcaps/*.pcap; do
+  $ count=$(tshark -r "$f" -Y 'http.request.method == "POST"' \
     -T fields -e frame.number 2>/dev/null | wc -l)
-  [ "$count" -gt 0 ] && echo "$f: $count POST"
-done
+  $ [ "$count" -gt 0 ] && echo "$f: $count POST"
+$ done
 
 # Tekil IP listesi
-tshark -r f.pcap -T fields -e ip.src -e ip.dst | tr '\t' '\n' | sort -u
+$ tshark -r f.pcap -T fields -e ip.src -e ip.dst | tr '\t' '\n' | sort -u
 
 # SYN flood tespiti
-tshark -r f.pcap -Y "tcp.flags.syn==1 && tcp.flags.ack==0" \
+$ tshark -r f.pcap -Y "tcp.flags.syn==1 && tcp.flags.ack==0" \
   -T fields -e ip.src | sort | uniq -c | sort -rn
 ```
 

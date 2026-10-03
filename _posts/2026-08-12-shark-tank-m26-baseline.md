@@ -56,7 +56,7 @@ Baseline, bir ağın **normal çalışma koşullarındaki** trafik profili:
 ## Hazırlık
 
 ```sh
-./scripts/generate-traffic.sh baseline
+$ ./scripts/generate-traffic.sh baseline
 ```
 
 Repoyu indirmediysen bu modülün pcap dosyasını [buradan indirebilirsin](https://github.com/nuriacar/shark-tank/tree/main/shared/pcaps).
@@ -138,8 +138,8 @@ IP ve port çiftlerinin konuşma istatistikleri.
 
 ```sh
 # tshark ile conversations export
-tshark -r shared/pcaps/module-26-baseline.pcap -z conv,tcp
-tshark -r shared/pcaps/module-26-baseline.pcap -z conv,udp
+$ tshark -r shared/pcaps/module-26-baseline.pcap -z conv,tcp
+$ tshark -r shared/pcaps/module-26-baseline.pcap -z conv,udp
 ```
 
 > **SINAV İPUCULARI:**
@@ -331,18 +331,18 @@ Bir pcap'de normal ve anormal trafiği ayırma.
 
 ```sh
 # Protocol Hierarchy
-tshark -r shared/pcaps/module-26-baseline.pcap -z io,phs
+$ tshark -r shared/pcaps/module-26-baseline.pcap -z io,phs
 
 # Conversations
-tshark -r shared/pcaps/module-26-baseline.pcap -z conv,tcp
-tshark -r shared/pcaps/module-26-baseline.pcap -z conv,udp
+$ tshark -r shared/pcaps/module-26-baseline.pcap -z conv,tcp
+$ tshark -r shared/pcaps/module-26-baseline.pcap -z conv,udp
 
 # Endpoints
-tshark -r shared/pcaps/module-26-baseline.pcap -z endpoints,ip
-tshark -r shared/pcaps/module-26-baseline.pcap -z endpoints,tcp
+$ tshark -r shared/pcaps/module-26-baseline.pcap -z endpoints,ip
+$ tshark -r shared/pcaps/module-26-baseline.pcap -z endpoints,tcp
 
 # IO Graph (1 sn aralık)
-tshark -r shared/pcaps/module-26-baseline.pcap \
+$ tshark -r shared/pcaps/module-26-baseline.pcap \
   -z io,stat,1,"tcp.port==80","tcp.port==443"
 ```
 

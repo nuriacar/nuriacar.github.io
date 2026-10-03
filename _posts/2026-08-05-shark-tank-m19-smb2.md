@@ -81,7 +81,7 @@ SMB2 oturumu dört aşamalı bir zincirle kurulur:
 ## Hazırlık
 
 ```sh
-./scripts/generate-traffic.sh smb2
+$ ./scripts/generate-traffic.sh smb2
 # macOS: open -a Wireshark module-19-smb2.pcap
 # Linux: wireshark module-19-smb2.pcap &
 # Windows: start wireshark module-19-smb2.pcap
@@ -196,7 +196,7 @@ v SMB2 Read Response
 
 **tshark ile toplam (sınav tekniği):**
 ```sh
-tshark -r shared/pcaps/module-19-smb2.pcap -Y 'smb2.cmd == 8' \
+$ tshark -r shared/pcaps/module-19-smb2.pcap -Y 'smb2.cmd == 8' \
   -T fields -e smb2.read_length | awk '{s+=$1} END {print s " bayt okundu"}'
 # → 1048576+96000+... (96KB dosya birden çok Read ile çekilir)
 ```

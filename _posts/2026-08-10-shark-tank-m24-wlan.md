@@ -108,7 +108,7 @@ Pcap dosyası `shared/pcaps/` içinde hazırdır. İhtiyaç olursa yeniden üret
 
 ```sh
 # Otomatik indir + yönetim çerçeveleri ekle:
-./scripts/download-sample-pcaps.sh
+$ ./scripts/download-sample-pcaps.sh
 ```
 
 Dosya: `shared/pcaps/module-24-wlan.pcap` (WPA-EAP TLS + yönetim çerçeveleri)

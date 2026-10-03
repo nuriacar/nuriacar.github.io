@@ -78,7 +78,7 @@ Kritik nokta: TGT almak için parola kanıtı gerekir, ama TGT'yi kullanarak ser
 ## Hazırlık
 
 ```sh
-./scripts/generate-traffic.sh kerberos
+$ ./scripts/generate-traffic.sh kerberos
 # macOS: open -a Wireshark module-17-kerberos.pcap
 # Linux: wireshark module-17-kerberos.pcap &
 # Windows: start wireshark module-17-kerberos.pcap

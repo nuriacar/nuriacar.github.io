@@ -70,7 +70,7 @@ Throughput = Window Size / RTT
 ## Hazırlık
 
 ```sh
-./scripts/generate-traffic.sh performance
+$ ./scripts/generate-traffic.sh performance
 ```
 
 Repoyu indirmediysen bu modülün pcap dosyasını [buradan indirebilirsin](https://github.com/nuriacar/shark-tank/tree/main/shared/pcaps).
@@ -125,7 +125,7 @@ v Transmission Control Protocol
 
 **tshark ile ortalama RTT (tek satır):**
 ```sh
-tshark -r shared/pcaps/module-23-performance.pcap -Y 'tcp.analysis.ack_rtt' \
+$ tshark -r shared/pcaps/module-23-performance.pcap -Y 'tcp.analysis.ack_rtt' \
   -T fields -e tcp.analysis.ack_rtt \
 | awk '{s+=$1; n++} END {printf "Ortalama RTT: %.3f sn (n=%d)\n", s/n, n}'
 ```
@@ -298,7 +298,7 @@ Retrans Rate = (Retrans Paketleri / Toplam Paketler) × 100
 
 ```sh
 # tshark ile en çok retransmission yapan IP'yi bul
-tshark -r shared/pcaps/module-23-performance.pcap \
+$ tshark -r shared/pcaps/module-23-performance.pcap \
   -Y "tcp.analysis.retransmission" \
   -T fields -e ip.src -e ip.dst | sort | uniq -c | sort -rn
 ```

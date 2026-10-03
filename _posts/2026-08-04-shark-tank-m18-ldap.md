@@ -73,7 +73,7 @@ LDAP oturumu hep aynı düzeni izler: Bağlan → Bind → Ara/Uygula → Unbind
 ## Hazırlık
 
 ```sh
-./scripts/generate-traffic.sh ldap
+$ ./scripts/generate-traffic.sh ldap
 # macOS: open -a Wireshark module-18-ldap.pcap
 # Linux: wireshark module-18-ldap.pcap &
 # Windows: start wireshark module-18-ldap.pcap

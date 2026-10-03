@@ -73,7 +73,7 @@ CLIENT                          SERVER
 ## Hazırlık
 
 ```sh
-./scripts/generate-traffic.sh tcp
+$ ./scripts/generate-traffic.sh tcp
 # macOS: open -a Wireshark module-08-tcp.pcap
 # Linux: wireshark module-08-tcp.pcap &
 # Windows: start wireshark module-08-tcp.pcap

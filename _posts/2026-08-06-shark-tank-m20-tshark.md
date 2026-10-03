@@ -49,16 +49,16 @@ tshark, Wireshark'ın komut satırı (CLI) versiyonudur. Aynı paket analizini G
 
 ```sh
 # macOS (Wireshark ile birlikte kurulur)
-brew install --cask wireshark
+$ brew install --cask wireshark
 # PATH'e ekle:
-sudo ln -sf /Applications/Wireshark.app/Contents/MacOS/tshark \
+$ sudo ln -sf /Applications/Wireshark.app/Contents/MacOS/tshark \
   /usr/local/bin/tshark
 
 # Ubuntu / Debian
-sudo apt-get install tshark
+$ sudo apt-get install tshark
 
 # Fedora
-sudo dnf install wireshark-cli
+$ sudo dnf install wireshark-cli
 
 # Windows
 # Wireshark kurulumu ile birlikte gelir:
@@ -82,10 +82,10 @@ Bu modülde yeni trafik üretilmez. Önceki modüllerin pcap dosyaları kullanı
 
 ```sh
 # tshark'ı doğrula:
-tshark --version
+$ tshark --version
 
 # Mevcut bir pcap ile test et:
-tshark -r shared/pcaps/module-01-basics.pcap -c 5
+$ tshark -r shared/pcaps/module-01-basics.pcap -c 5
 ```
 
 Repoyu indirmediysen pcap dosyalarını [buradan indirebilirsin](https://github.com/nuriacar/shark-tank/tree/main/shared/pcaps).
@@ -98,22 +98,22 @@ Repoyu indirmediysen pcap dosyalarını [buradan indirebilirsin](https://github.
 
 ```sh
 # macOS / Linux
-tshark -r shared/pcaps/module-13-http.pcap
+$ tshark -r shared/pcaps/module-13-http.pcap
 
 # Windows (PowerShell)
-tshark -r shared\pcaps\module-13-http.pcap
+$ tshark -r shared\pcaps\module-13-http.pcap
 ```
 
 ### İlk N paketi gösterme:
 
 ```sh
-tshark -r shared/pcaps/module-13-http.pcap -c 10
+$ tshark -r shared/pcaps/module-13-http.pcap -c 10
 ```
 
 ### Sadece özet bilgi:
 
 ```sh
-tshark -r shared/pcaps/module-13-http.pcap -q -z io,phs
+$ tshark -r shared/pcaps/module-13-http.pcap -q -z io,phs
 ```
 
 > **SINAV İPUCU:** `-q` (quiet) + `-z io,phs` = Protocol Hierarchy Statistics.
@@ -128,21 +128,21 @@ tshark, Wireshark GUI ile **aynı display filter syntax**'ını kullanır:
 
 ```sh
 # HTTP istekleri
-tshark -r shared/pcaps/module-13-http.pcap -Y "http.request"
+$ tshark -r shared/pcaps/module-13-http.pcap -Y "http.request"
 
 # POST isteği
-tshark -r shared/pcaps/module-13-http.pcap \
+$ tshark -r shared/pcaps/module-13-http.pcap \
   -Y 'http.request.method == "POST"'
 
 # DNS sorguları
-tshark -r shared/pcaps/module-12-dns.pcap -Y "dns.flags.response == 0"
+$ tshark -r shared/pcaps/module-12-dns.pcap -Y "dns.flags.response == 0"
 
 # TCP SYN paketleri
-tshark -r shared/pcaps/module-08-tcp.pcap \
+$ tshark -r shared/pcaps/module-08-tcp.pcap \
   -Y "tcp.flags.syn == 1 && tcp.flags.ack == 0"
 
 # ICMP ping
-tshark -r shared/pcaps/module-05-icmp.pcap -Y "icmp.type == 8"
+$ tshark -r shared/pcaps/module-05-icmp.pcap -Y "icmp.type == 8"
 ```
 
 > **SINAV İPUCU:** `-Y` display filter, `-f` capture filter. Sınavda karıştırılır!
@@ -153,17 +153,17 @@ tshark -r shared/pcaps/module-05-icmp.pcap -Y "icmp.type == 8"
 
 ```sh
 # Kaynak ve hedef IP
-tshark -r shared/pcaps/module-13-http.pcap -Y "http.request" \
+$ tshark -r shared/pcaps/module-13-http.pcap -Y "http.request" \
   -T fields -e ip.src -e ip.dst \
   -e http.request.method -e http.request.uri
 
 # DNS sorgu isimleri
-tshark -r shared/pcaps/module-12-dns.pcap \
+$ tshark -r shared/pcaps/module-12-dns.pcap \
   -Y "dns.flags.response == 0" \
   -T fields -e dns.qry.name -e dns.qry.type
 
 # TCP bayrakları
-tshark -r shared/pcaps/module-08-tcp.pcap -Y "tcp.flags.syn == 1" \
+$ tshark -r shared/pcaps/module-08-tcp.pcap -Y "tcp.flags.syn == 1" \
   -T fields -e ip.src -e tcp.srcport -e ip.dst \
   -e tcp.dstport -e tcp.flags
 ```
@@ -172,7 +172,7 @@ tshark -r shared/pcaps/module-08-tcp.pcap -Y "tcp.flags.syn == 1" \
 
 ```sh
 # PowerShell'de tek tırnak kullan
-tshark -r shared\pcaps\module-13-http.pcap -Y "http.request" \
+$ tshark -r shared\pcaps\module-13-http.pcap -Y "http.request" \
   -T fields -e ip.src -e ip.dst -e http.request.method
 ```
 
@@ -186,17 +186,17 @@ tshark -r shared\pcaps\module-13-http.pcap -Y "http.request" \
 
 ```sh
 # JSON: Programatik işlem için (jq ile zincirleme)
-tshark -r shared/pcaps/module-13-http.pcap -Y "http.request" \
+$ tshark -r shared/pcaps/module-13-http.pcap -Y "http.request" \
   -T json -e ip.src -e http.request.method -e http.request.uri
 
 # CSV: Tabloya/Excel'e doğrudan aktarım (her -e bir sütun, üstte header)
-tshark -r shared/pcaps/module-13-http.pcap -Y "http.request" \
+$ tshark -r shared/pcaps/module-13-http.pcap -Y "http.request" \
   -T csv -e frame.number -e ip.src -e http.request.method -e http.request.uri
 ```
 
 JSON çıktısı `jq` ile işlenir (macOS: `brew install jq`):
 ```sh
-tshark -r shared/pcaps/module-12-dns.pcap -Y "dns" -T json \
+$ tshark -r shared/pcaps/module-12-dns.pcap -Y "dns" -T json \
   -e dns.qry.name -e dns.flags.response \
 | jq -r '.[] .["_index"].dns.qry.name[]?' | sort | uniq -c | sort -rn | head
 ```
@@ -211,25 +211,25 @@ CSV ise `-T csv` + `-e` sütunlarıyla SIEM raporlarına hazır tablo üretir.
 ### Protocol Hierarchy:
 
 ```sh
-tshark -r shared/pcaps/module-27-exam-practice.pcap -q -z io,phs
+$ tshark -r shared/pcaps/module-27-exam-practice.pcap -q -z io,phs
 ```
 
 ### Conversations (TCP):
 
 ```sh
-tshark -r shared/pcaps/module-13-http.pcap -q -z conv,tcp
+$ tshark -r shared/pcaps/module-13-http.pcap -q -z conv,tcp
 ```
 
 ### Endpoints:
 
 ```sh
-tshark -r shared/pcaps/module-27-exam-practice.pcap -q -z endpoints,ip
+$ tshark -r shared/pcaps/module-27-exam-practice.pcap -q -z endpoints,ip
 ```
 
 ### Expert Info:
 
 ```sh
-tshark -r shared/pcaps/module-08-tcp.pcap -q -z expert
+$ tshark -r shared/pcaps/module-08-tcp.pcap -q -z expert
 ```
 
 > **SINAV İPUCU:** `-z expert` tshark'ın Expert Info'sudur.
@@ -239,7 +239,7 @@ tshark -r shared/pcaps/module-08-tcp.pcap -q -z expert
 ### HTTP İstek İstatistikleri:
 
 ```sh
-tshark -r shared/pcaps/module-13-http.pcap -q -z http,tree
+$ tshark -r shared/pcaps/module-13-http.pcap -q -z http,tree
 ```
 
 ---
@@ -248,10 +248,10 @@ tshark -r shared/pcaps/module-13-http.pcap -q -z http,tree
 
 ```sh
 # ASCII olarak TCP stream 0'ı oku
-tshark -r shared/pcaps/module-13-http.pcap -q -z follow,tcp,ascii,0
+$ tshark -r shared/pcaps/module-13-http.pcap -q -z follow,tcp,ascii,0
 
 # Tüm TCP stream ID'lerini listele
-tshark -r shared/pcaps/module-13-http.pcap -Y "tcp.stream" \
+$ tshark -r shared/pcaps/module-13-http.pcap -Y "tcp.stream" \
   -T fields -e tcp.stream | sort -n | uniq
 ```
 
@@ -263,13 +263,13 @@ tshark -r shared/pcaps/module-13-http.pcap -Y "tcp.stream" \
 
 ```sh
 # macOS / Linux
-mkdir -p /tmp/tshark-export
-tshark -r shared/pcaps/module-13-http.pcap \
+$ mkdir -p /tmp/tshark-export
+$ tshark -r shared/pcaps/module-13-http.pcap \
   --export-objects http,/tmp/tshark-export
 
 # Windows
-mkdir C:\temp\tshark-export
-tshark -r shared\pcaps\module-13-http.pcap \
+$ mkdir C:\temp\tshark-export
+$ tshark -r shared\pcaps\module-13-http.pcap \
   --export-objects http,C:\temp\tshark-export
 ```
 
@@ -298,10 +298,10 @@ kurulu olduğu sürece `tshark` PATH'tedir):
 
 ```sh
 # macOS / Linux
-tshark -q -X lua_script:shared/shark-tank.lua -r <pcap>
+$ tshark -q -X lua_script:shared/shark-tank.lua -r <pcap>
 
 # Windows
-tshark.exe -q -X lua_script:C:\tools\shark-tank.lua -r C:\captures\firma.pcap
+$ tshark.exe -q -X lua_script:C:\tools\shark-tank.lua -r C:\captures\firma.pcap
 ```
 
 **3) Wireshark GUI** (menüden yükleme):
@@ -314,24 +314,24 @@ tshark.exe -q -X lua_script:C:\tools\shark-tank.lua -r C:\captures\firma.pcap
 
 Ek modlar:
 ```sh
-SHARK_TANK_JSON=1 ./scripts/shark-tank.sh <pcap>   # yanına .json (SIEM'e)
-./scripts/shark-tank.sh <dizin>                    # kampanya görünümü:
+$ SHARK_TANK_JSON=1 ./scripts/shark-tank.sh <pcap>   # yanına .json (SIEM'e)
+$ ./scripts/shark-tank.sh <dizin>                    # kampanya görünümü:
                                                    # pcap'ler arası ortak IOC
-make test-sharktank                                # regresyon testi:
+$ make test-sharktank                                # regresyon testi:
                                                    # bilinen pcap'lerde beklenen
                                                    # bulgular doğrulanır
 ```
 
 Kullanım (kolay yol — tek pcap veya dizin):
 ```sh
-./scripts/shark-tank.sh shared/pcaps/module-28-forensics.pcap
-./scripts/shark-tank.sh shared/pcaps    # dizindeki tüm pcap/pcapng
+$ ./scripts/shark-tank.sh shared/pcaps/module-28-forensics.pcap
+$ ./scripts/shark-tank.sh shared/pcaps    # dizindeki tüm pcap/pcapng
 ```
 
 Doğrudan tshark ile:
 ```sh
 # Tek pcap analizi -> yanına <pcap-adı>.md bulgu raporu yazar
-SHARK_TANK_PCAP=shared/pcaps/module-28-forensics.pcap tshark -q \
+$ SHARK_TANK_PCAP=shared/pcaps/module-28-forensics.pcap tshark -q \
   -r shared/pcaps/module-28-forensics.pcap \
   -X lua_script:shared/shark-tank.lua
 ```
@@ -342,30 +342,30 @@ GUI'de (Wireshark): script `~/.local/lib/wireshark/plugins/` altına kopyalanır
 
 ```sh
 # Tüm pcap'lerdeki HTTP POST isteklerini bul
-for f in shared/pcaps/*.pcap; do
-    count=$(tshark -r "$f" -Y 'http.request.method == "POST"' \
+$ for f in shared/pcaps/*.pcap; do
+    $ count=$(tshark -r "$f" -Y 'http.request.method == "POST"' \
       -T fields -e frame.number 2>/dev/null | wc -l)
-    if [ "$count" -gt 0 ]; then
-        echo "$f: $count POST isteği bulundu"
-    fi
-done
+    $ if [ "$count" -gt 0 ]; then
+        $ echo "$f: $count POST isteği bulundu"
+    $ fi
+$ done
 ```
 
 ```sh
 # Tüm pcap'lerde credentials ara
-for f in shared/pcaps/*.pcap; do
-    results=$(tshark -r "$f" -Y 'http.request.method == "POST"' \
+$ for f in shared/pcaps/*.pcap; do
+    $ results=$(tshark -r "$f" -Y 'http.request.method == "POST"' \
       -T fields -e http.file_data 2>/dev/null | grep -i "password")
-    if [ -n "$results" ]; then
-        echo "=== $f ==="
-        echo "$results"
-    fi
-done
+    $ if [ -n "$results" ]; then
+        $ echo "=== $f ==="
+        $ echo "$results"
+    $ fi
+$ done
 ```
 
 ### PowerShell (Windows):
 
-```sh
+```powershell
 # Tüm pcap'lerde DNS sorgularını listele
 Get-ChildItem shared\pcaps\*.pcap | ForEach-Object {
     $f = $_.Name
@@ -377,7 +377,7 @@ Get-ChildItem shared\pcaps\*.pcap | ForEach-Object {
 }
 ```
 
-```sh
+```powershell
 # Port scan tespiti
 tshark -r shared\pcaps\module-28-forensics.pcap `
   -Y "tcp.flags.syn==1 && tcp.flags.ack==0" `
@@ -392,13 +392,13 @@ tshark -r shared\pcaps\module-28-forensics.pcap `
 ```sh
 # Canlı capture (sudo gerekli)
 # macOS / Linux:
-sudo tshark -i en0 -c 100 -w /tmp/capture.pcap
+$ sudo tshark -i en0 -c 100 -w /tmp/capture.pcap
 
 # Sadece HTTP yakala:
-sudo tshark -i en0 -f "tcp port 80" -c 50
+$ sudo tshark -i en0 -f "tcp port 80" -c 50
 
 # Capture filter ile DNS:
-sudo tshark -i en0 -f "udp port 53" -c 20
+$ sudo tshark -i en0 -f "udp port 53" -c 20
 ```
 
 > **Not:** Bu lab'de capture Docker içinde `tcpdump` ile yapılır.
@@ -416,15 +416,15 @@ Ağdan çıkardığın dosyanın kimliğini hash ile sabitlersin — IOC raporla
 1. HTTP nesnelerini çıkar (modül 13 pcap'i üzerinde):
 
 ```sh
-tshark -r shared/pcaps/module-13-http.pcap \
+$ tshark -r shared/pcaps/module-13-http.pcap \
   --export-objects http,/tmp/tshark-export
-ls -la /tmp/tshark-export/
+$ ls -la /tmp/tshark-export/
 ```
 
 2. Çıkan dosyalardan birinin SHA-256 özetini hesapla:
 
 ```sh
-shasum -a 256 /tmp/tshark-export/auth
+$ shasum -a 256 /tmp/tshark-export/auth
 # 8d68183a32c2704d866573989f4b1574d756c6f24ea1d01901fb99a400c67932
 ```
 

@@ -101,12 +101,12 @@ Wireshark'ın paket detay panelindeki her satıra, bu katmanlardan biri karşıl
 ## Hazırlık
 
 ```sh
-./scripts/generate-traffic.sh basics
+$ ./scripts/generate-traffic.sh basics
 ```
 
 Pcap'i Wireshark'ta aç:
 ```sh
-make open FILE=shared/pcaps/module-01-basics.pcap
+$ make open FILE=shared/pcaps/module-01-basics.pcap
 ```
 
 Repoyu indirmediysen bu modülün pcap dosyasını [buradan indirebilirsin](https://github.com/nuriacar/shark-tank/tree/main/shared/pcaps).
@@ -117,10 +117,10 @@ Repoyu indirmediysen bu modülün pcap dosyasını [buradan indirebilirsin](http
 
 ```sh
 # macOS
-brew install --cask wireshark
+$ brew install --cask wireshark
 
 # Ubuntu / Debian
-sudo apt-get install wireshark
+$ sudo apt-get install wireshark
 
 # Windows
 # https://www.wireshark.org/download.html adresinden indir
@@ -262,11 +262,11 @@ Terminal'den şu komutları çalıştır:
 
 ```sh
 # 1. Ortamı başlat
-cd /path/to/shark-tank   # shark-tank proje dizinine git
-./scripts/start.sh
+$ cd /path/to/shark-tank   # shark-tank proje dizinine git
+$ ./scripts/start.sh
 
 # 2. HTTP trafiği oluştur + capture et
-./scripts/generate-traffic.sh http
+$ ./scripts/generate-traffic.sh http
 
 # 3. Pcap dosyasını Wireshark ile aç
 # macOS: open -a Wireshark shared/pcaps/module-01-basics.pcap

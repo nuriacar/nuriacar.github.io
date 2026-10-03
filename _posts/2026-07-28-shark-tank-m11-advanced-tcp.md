@@ -321,7 +321,7 @@ PAWS, sequence number 32 bit olduğu için yüksek hızlı bağlantılarda sıra
 
 ```sh
 # Advanced TCP trafik oluştur:
-./scripts/generate-traffic.sh advanced-tcp
+$ ./scripts/generate-traffic.sh advanced-tcp
 
 # PCAP'i Wireshark ile aç:
 # macOS: open -a Wireshark module-11-advanced-tcp.pcap
@@ -520,7 +520,7 @@ tcp.analysis.keep_alive || tcp.analysis.keep_alive_ack
 6. tshark ile keep-alive analizi:
 
 ```sh
-tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
+$ tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
   -Y "tcp.analysis.keep_alive" \
   -T fields -e frame.time_relative -e ip.src -e ip.dst -e tcp.seq
 ```
@@ -725,7 +725,7 @@ CLI ile ileri düzey TCP analizi.
 ### Retransmission Analizi:
 
 ```sh
-tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
+$ tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
   -Y "tcp.analysis.retransmission" \
   -T fields -e frame.number -e ip.src -e ip.dst \
   -e tcp.seq -e tcp.ack
@@ -734,7 +734,7 @@ tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
 ### SACK Analizi:
 
 ```sh
-tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
+$ tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
   -Y "tcp.options.sack" \
   -T fields -e frame.number -e ip.src -e ip.dst \
   -e tcp.options.sack_le -e tcp.options.sack_re
@@ -743,7 +743,7 @@ tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
 ### TCP Options Analizi (SYN paketleri):
 
 ```sh
-tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
+$ tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
   -Y "tcp.flags.syn==1 && tcp.flags.ack==0" \
   -T fields -e ip.src -e ip.dst \
   -e tcp.options.mss_val -e tcp.options.wscale \
@@ -754,13 +754,13 @@ tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
 ### Conversation İstatistik:
 
 ```sh
-tshark -r shared/pcaps/module-11-advanced-tcp.pcap -z conv,tcp
+$ tshark -r shared/pcaps/module-11-advanced-tcp.pcap -z conv,tcp
 ```
 
 ### Duplicate ACK Sayısı:
 
 ```sh
-tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
+$ tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
   -Y "tcp.analysis.duplicate_ack" \
   -T fields -e ip.src -e ip.dst -e tcp.ack \
   | sort | uniq -c | sort -rn
@@ -769,7 +769,7 @@ tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
 ### Zero Window Tespiti:
 
 ```sh
-tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
+$ tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
   -Y "tcp.window_size == 0" \
   -T fields -e frame.number -e ip.src -e ip.dst -e tcp.seq
 ```
@@ -777,7 +777,7 @@ tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
 ### Keep-Alive Timing:
 
 ```sh
-tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
+$ tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
   -Y "tcp.analysis.keep_alive" \
   -T fields -e frame.time_relative -e ip.src \
   -e ip.dst -e tcp.stream
@@ -786,7 +786,7 @@ tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
 ### TCP Expert Info:
 
 ```sh
-tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
+$ tshark -r shared/pcaps/module-11-advanced-tcp.pcap \
   -Y "tcp.analysis.flags" \
   -T fields -e frame.number -e ip.src -e ip.dst \
   -e tcp.analysis.flags

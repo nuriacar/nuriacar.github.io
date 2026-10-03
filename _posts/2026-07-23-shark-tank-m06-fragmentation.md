@@ -122,7 +122,7 @@ GÖNDEREN                                     ALICI
 
 ```sh
 # Fragmentation trafik oluştur:
-./scripts/generate-traffic.sh fragmentation
+$ ./scripts/generate-traffic.sh fragmentation
 
 # PCAP'i Wireshark ile aç:
 # macOS: open -a Wireshark module-06-fragmentation.pcap
@@ -136,16 +136,16 @@ Repoyu indirmediysen bu modülün pcap dosyasını [buradan indirebilirsin](http
 
 ```sh
 # Normal ping (fragment yok, 64 byte data):
-docker exec shark-tank-client ping -c 3 172.50.2.14
+$ docker exec shark-tank-client ping -c 3 172.50.2.14
 
 # Büyük ping (MTU'yu aşar, fragment oluşur):
-docker exec shark-tank-client ping -c 3 -s 3000 172.50.2.14
+$ docker exec shark-tank-client ping -c 3 -s 3000 172.50.2.14
 
 # Daha büyük ping:
-docker exec shark-tank-client ping -c 3 -s 6000 172.50.2.14
+$ docker exec shark-tank-client ping -c 3 -s 6000 172.50.2.14
 
 # DF set ile ping (fragment etme, PMTUD testi):
-docker exec shark-tank-client ping -c 3 -s 3000 -M do 172.50.2.14
+$ docker exec shark-tank-client ping -c 3 -s 3000 -M do 172.50.2.14
 ```
 
 ## Alıştırmalar
@@ -334,7 +334,7 @@ Eğer capture'da varsa:
 
 ```sh
 # DF set, büyük ping (Linux'ta -M do):
-docker exec shark-tank-client ping -c 3 -s 3000 -M do 172.50.2.10
+$ docker exec shark-tank-client ping -c 3 -s 3000 -M do 172.50.2.10
 
 # Sonuç: local fragment = yerel ağ MTU aşımı → yine fragment olur
 # DF set + router MTU aşımı → ICMP Fragmentation Needed döner

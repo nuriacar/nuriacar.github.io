@@ -77,7 +77,7 @@ CLIENT                          SERVER
 ## Hazırlık
 
 ```sh
-./scripts/generate-traffic.sh tls
+$ ./scripts/generate-traffic.sh tls
 # macOS: open -a Wireshark module-16-tls.pcap
 # Linux: wireshark module-16-tls.pcap &
 # Windows: start wireshark module-16-tls.pcap
@@ -87,7 +87,7 @@ Repoyu indirmediysen bu modülün pcap dosyasını [buradan indirebilirsin](http
 
 **TLS 1.2 zorlama (decryption için):**
 ```sh
-docker exec shark-tank-client curl --tlsv1.2 --tls-max 1.2 \
+$ docker exec shark-tank-client curl --tlsv1.2 --tls-max 1.2 \
   -sk https://172.50.2.13/secure-data
 ```
 
@@ -334,7 +334,7 @@ Lab ölçümü — ilk kayıt uzunlukları: `92, 1000, 102, 287, 103, ...` byte.
 
 **tshark ile toplam şifreli payload:**
 ```sh
-tshark -r shared/pcaps/module-16-tls.pcap -Y 'tls.record.content_type == 23' \
+$ tshark -r shared/pcaps/module-16-tls.pcap -Y 'tls.record.content_type == 23' \
   -T fields -e tls.record.length | awk '{s+=$1} END {print "Toplam:", s, "byte"}'
 ```
 
@@ -587,14 +587,14 @@ Wireshark, TLS trafiğini şifreli halde gösterir. Ama SSLKEYLOGFILE ile şifre
 1. Tarayıcıyı key log dosyası ile başlat:
 ```sh
    # macOS
-   SSLKEYLOGFILE=/tmp/sslkeys.log \
+   $ SSLKEYLOGFILE=/tmp/sslkeys.log \
      /Applications/Firefox.app/Contents/MacOS/firefox
 
    # Linux
-   SSLKEYLOGFILE=/tmp/sslkeys.log firefox
+   $ SSLKEYLOGFILE=/tmp/sslkeys.log firefox
 
    # Windows (PowerShell)
-   $env:SSLKEYLOGFILE="C:\temp\sslkeys.log"; Start-Process firefox
+   $ $env:SSLKEYLOGFILE="C:\temp\sslkeys.log"; Start-Process firefox
 ```
 2. Wireshark'ta: **Edit > Preferences > Protocols > TLS**
 3. **(Pre)-Master-Secret log filename** alanına `/tmp/sslkeys.log` yaz

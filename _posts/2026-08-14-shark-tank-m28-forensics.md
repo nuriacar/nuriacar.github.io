@@ -53,7 +53,7 @@ Ağ forensics, yakalanmış trafik üzerinden güvenlik olaylarını analiz etme
 ## Hazırlık
 
 ```sh
-./scripts/generate-traffic.sh forensics
+$ ./scripts/generate-traffic.sh forensics
 # macOS: open -a Wireshark module-28-forensics.pcap
 # Linux: wireshark module-28-forensics.pcap &
 # Windows: start wireshark module-28-forensics.pcap
