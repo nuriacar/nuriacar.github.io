@@ -228,8 +228,8 @@ $ sudo bettercap -iface eth0
 $ sudo ettercap -T -i eth0 -M arp /<gateway_IP>// /<kurban_IP>//
 
 # Wireshark tespit filtreleri:
-$ arp.src.proto_ipv4 == "<gateway_IP>"
-$ arp.duplicate-address-detected
+arp.src.proto_ipv4 == "<gateway_IP>"
+arp.duplicate-address-detected
 ```
 
 **Sınavda bilmen gerekenler:**
