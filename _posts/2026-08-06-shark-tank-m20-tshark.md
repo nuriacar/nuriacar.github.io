@@ -367,7 +367,7 @@ $ done
 
 ```powershell
 # Tüm pcap'lerde DNS sorgularını listele
-Get-ChildItem shared\pcaps\*.pcap | ForEach-Object {
+$ Get-ChildItem shared\pcaps\*.pcap | ForEach-Object {
     $f = $_.Name
     $count = (tshark -r $_.FullName -Y "dns.flags.response == 0" `
       -T fields -e dns.qry.name 2>$null | Measure-Object).Count
@@ -379,7 +379,7 @@ Get-ChildItem shared\pcaps\*.pcap | ForEach-Object {
 
 ```powershell
 # Port scan tespiti
-tshark -r shared\pcaps\module-28-forensics.pcap `
+$ tshark -r shared\pcaps\module-28-forensics.pcap `
   -Y "tcp.flags.syn==1 && tcp.flags.ack==0" `
   -T fields -e ip.src -e tcp.dstport `
   | Group-Object ip.src | Select-Object Name, Count

@@ -281,9 +281,9 @@ Docker dışında, local ağında da ARP görebilirsin:
 Her cihaz bir ARP cache (tablo) tutar. Windows'ta `arp -a`, Linux/macOS'ta `arp -a` veya `ip neigh` ile görülür.
 
 ### Client ARP Cache:
-```text
-docker exec shark-tank-client arp -a
-docker exec shark-tank-client ip neigh
+```sh
+$ docker exec shark-tank-client arp -a
+$ docker exec shark-tank-client ip neigh
 ```
 
 MAC-IP eşlemesini Wireshark'ta da görebilirsin:
