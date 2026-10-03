@@ -343,24 +343,24 @@ GUI'de (Wireshark): script `~/.local/lib/wireshark/plugins/` altına kopyalanır
 ```sh
 # Tüm pcap'lerdeki HTTP POST isteklerini bul
 $ for f in shared/pcaps/*.pcap; do
-    $ count=$(tshark -r "$f" -Y 'http.request.method == "POST"' \
+    count=$(tshark -r "$f" -Y 'http.request.method == "POST"' \
       -T fields -e frame.number 2>/dev/null | wc -l)
-    $ if [ "$count" -gt 0 ]; then
-        $ echo "$f: $count POST isteği bulundu"
-    $ fi
-$ done
+    if [ "$count" -gt 0 ]; then
+        echo "$f: $count POST isteği bulundu"
+    fi
+done
 ```
 
 ```sh
 # Tüm pcap'lerde credentials ara
 $ for f in shared/pcaps/*.pcap; do
-    $ results=$(tshark -r "$f" -Y 'http.request.method == "POST"' \
+    results=$(tshark -r "$f" -Y 'http.request.method == "POST"' \
       -T fields -e http.file_data 2>/dev/null | grep -i "password")
-    $ if [ -n "$results" ]; then
-        $ echo "=== $f ==="
-        $ echo "$results"
-    $ fi
-$ done
+    if [ -n "$results" ]; then
+        echo "=== $f ==="
+        echo "$results"
+    fi
+done
 ```
 
 ### PowerShell (Windows):

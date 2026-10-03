@@ -366,12 +366,13 @@
     arm(btn, function () { return code.textContent; });
   }
 
-  function commandUnits(raw) {
+  function commandUnits(raw, posix) {
     var lines = raw.split('\n');
     var units = [];
     var buf = null;
     var startLine = 0;
     var depth = 0;
+    var kw = 0;
     for (var i = 0; i < lines.length; i++) {
       var ln = lines[i];
       var isComment = /^\s*#/.test(ln);
@@ -381,20 +382,30 @@
         buf = [ln];
         startLine = i;
         depth = 0;
+        kw = 0;
       } else {
         buf.push(ln);
       }
-      /* Birim devam koşulları: \ (sh) veya ` (PowerShell) ile biten satır,
-         ya da kapanmamış { } gövdesi (script/loop). */
+      /* Birim devam koşulları: \ (sh) veya ` (PowerShell) veya &&/||/| ile
+         biten satır; kapanmamış { } gövdesi; bash'te açık do/if/case bloğu. */
       depth += (ln.match(/\{/g) || []).length - (ln.match(/\}/g) || []).length;
       if (depth < 0) depth = 0;
-      if (/\\\s*$/.test(ln) || /`\s*$/.test(ln) || depth > 0) continue;
+      if (posix) {
+        /* do/if/case yalnız satır başı veya ; & | sonrası anahtar sözcük
+           sayılır — ping'in "-M do" bayrağı gibi kullanımlar hariç. */
+        kw += (ln.match(/(?:^|[;&|])\s*(?:do|if|case)\b/g) || []).length
+            - (ln.match(/\b(?:done|fi|esac)\b/g) || []).length;
+        if (kw < 0) kw = 0;
+      }
+      if (/\\\s*$/.test(ln) || /`\s*$/.test(ln) ||
+          /(&&|\|\|)\s*$/.test(ln) || /\|\s*$/.test(ln) ||
+          depth > 0 || kw > 0) continue;
       var joined = buf.join('\n');
       var text = joined
-        .replace(/\\\s*\n\s*/g, ' ')
+        .replace(/\s*\\\s*\n\s*/g, ' ')
         .split('\n')
         .filter(function (l) { return !/^\s*#/.test(l); })
-        .map(function (l) { return l.replace(/^\s*\$\s+/, ''); })
+        .map(function (l) { return l.replace(/^\s*(?:\$|>)\s+/, ''); })
         .join('\n')
         .replace(/^\s+|\s+$/g, '');
       if (text) units.push({ line: startLine, text: text });
@@ -403,7 +414,9 @@
     return units;
   }
 
-  function shellButtons(pre) {
+  var PS_FAM = /^(powershell|pwsh|cmd)$/;
+
+  function shellButtons(pre, lang) {
     var code = pre.querySelector('code') || pre;
     var host = pre.closest('.highlight') || pre;
     var cs = getComputedStyle(pre);
@@ -413,7 +426,7 @@
     var btnH = 24;
     /* content-visibility: ekran dışı blokta innerText BOŞ döner
        (Chrome) — textContent düzen-bağımsızdır, hep doğrudur */
-    var units = commandUnits(code.textContent);
+    var units = commandUnits(code.textContent, !PS_FAM.test(lang));
     units.forEach(function (u) {
       var btn = document.createElement('button');
       btn.type = 'button';
@@ -435,7 +448,7 @@
     var langMatch = wrap ? (wrap.className.match(/language-([\w-]+)/) || []) : [];
     var lang = langMatch[1] || '';
     if (SHELL.test(lang)) {
-      var n = shellButtons(pre);
+      var n = shellButtons(pre, lang);
       if (n === 0) return;
       return;
     }

