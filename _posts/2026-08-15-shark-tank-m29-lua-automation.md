@@ -17,7 +17,7 @@ end
 ```
 > **Nota**: [Üsküdar Musiki Cemiyeti Arşivi](https://www.uskudarmusikicemiyeti.com/wp-content/uploads/2024/04/aybugecebakagzelbakagzelyldzlar_bilgezgen_km59.pdf)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sE_5iCVQLNM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sE_5iCVQLNM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 🔪 [Çal keke çal!](https://www.youtube.com/watch?v=yKZ2PgMjLVE) 🔪
 

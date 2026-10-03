@@ -10,7 +10,7 @@ tags: [ses]
 
 #### **TR [ EN ⇣ ]**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdK6ORjlRIkvWRXlxReGLMF9" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdK6ORjlRIkvWRXlxReGLMF9" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Bunlar deney amacıyla ürettiğim sesler; özel istek üzerine hazırladım ve beni şaşırtacak şeylere sebep oldular çünkü yapılış amaçlarını gerçekleştirerek etkili oldular. Peki nedir?
 
@@ -39,7 +39,7 @@ Bunlara ek olarak bir de delta dalgasını aktifleştiren, yani sol kulak sağ k
 
 #### **EN**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdK6ORjlRIkvWRXlxReGLMF9" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdK6ORjlRIkvWRXlxReGLMF9" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 These are the sounds I produce for experimental purposes; I prepared it on special request and they caused things to surprise me because they were effective by achieving their purpose. Well, what?
 

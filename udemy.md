@@ -29,7 +29,7 @@ In this menu, I am also sharing my Udemy course links! By clicking the Udemy log
 
 <div class="box-row">
   <div class="box box--media">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/NzPwg-YLI_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/NzPwg-YLI_M" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
   <div class="box">
     <a class="btn btn--primary" href="https://www.udemy.com/course/na-bilgi-guvenligi-farkindalik-egitimi/">eğitime git ›</a>
@@ -47,7 +47,7 @@ In this menu, I am also sharing my Udemy course links! By clicking the Udemy log
 
 <div class="box-row">
   <div class="box box--media">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/V05tL2BXxzg?si=6wscBCk2l9FvuOFm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/V05tL2BXxzg?si=6wscBCk2l9FvuOFm" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
   <div class="box">
     <a class="btn btn--primary" href="https://www.udemy.com/course/it-bt-risk-yonetimi-tehdit-modelleme-ve-shadow-it/">eğitime git ›</a>

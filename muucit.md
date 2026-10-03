@@ -33,7 +33,7 @@ eyebrow: girişim
 
 <div class="chip" id="muucit-tr">TR [ <a href="#muucit-en">EN ⇣</a> ]</div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F3yHkHa1vS4?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F3yHkHa1vS4?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Selam Boyut Gezgini!
 
@@ -51,7 +51,7 @@ Nesnelerim, bilincinde yepyeni yıldız sistemlerinin doğuşuna sebep olacak [f
 
 <div class="chip" id="muucit-en">EN [ <a href="#muucit-tr">TR ⇡</a> ]</div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F3yHkHa1vS4?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F3yHkHa1vS4?list=PLUen_B5zaIdbtzaQQL0XX8atO0w-J6wFw" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Hi Dimension Voyager!
 

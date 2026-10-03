@@ -33,7 +33,7 @@ Ortaokul, lise ve üniversite eğitimim devam ederken aynı zamanda Klasik Türk
 
 Sonic Foundry Acid'le yaptığım ilk kayıtlar, mix'ler kurbağa oldular. Neden? Çünkü o zamanlar tamamladığım projeyi dijital sese(wav, mp3, wma) dönüştürmem ve proje klasörünü arşivlemem gerektiğini bilmiyordum. Sanıyorum en eski 2006 kaydı duruyor.
 
-<iframe width="100%" height="500" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1182738466&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+<iframe width="100%" height="500" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1182738466&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 Bir süre sonra Yanni, Vangelis ve Kitaro'yu ikinci kez keşfettim. İkinci kez diyorum zira çocukluğumun seslerini farkında olmadan bir yerlerde kaybetmişim. Yetmemiş, kaybettiğimi bile kaybetmişim. Çok geçmeden Mızraplı Tanbur ve bilgisayarımda sentezlediğim seslerle NewAge yapmaya koyuldum.
 
@@ -57,10 +57,10 @@ Bir süre sonra Amesia Newborn albümüm ortaya çıktı.
 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdImnpbthirSQf1TQWaxmpLX"
-frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+ allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="100%" height="320" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/4332061&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+<iframe width="100%" height="320" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/4332061&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 Bu albümün kaydedildiği zamanlar, TRT yarışmaları ve belgeselleri için müzik bestelediğim zamanlar. Fakat onlar nedense bende yoklar. Sahi neden yoklar?
 
@@ -86,10 +86,10 @@ Bir günübirlik Edirne seyahati hayal edin. Anlaştığınız tur firması otob
 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdLbpT82poAOwGqvOBp5l4h1"
-frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+ allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="100%" height="350" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/6987204&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+<iframe width="100%" height="350" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/6987204&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 Hepsi bir yana, ne ka güzel insanlarla tanıştım anlatamam.
 
@@ -115,11 +115,11 @@ Bu mix, Kaos Teorisi ve diğer pek çok faydalı şey gibi istemsizce var oldu. 
 ...ve onun doğum günü hediyesi oldu.
 
 <iframe width="560" height="315"
-src="https://www.youtube.com/embed/yqLMW6AMfa4" frameborder="0"
+src="https://www.youtube.com/embed/yqLMW6AMfa4"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
 picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1182820984&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+<iframe width="100%" height="300" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1182820984&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 </section>
 
@@ -156,10 +156,10 @@ Extra bir gariplik daha var: Filmi kalibresi yapılmış bir Dolby salonında iz
 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdL0_yY5aNM_P2pj8uP0Qam2"
-frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+ allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="100%" height="320" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/122295458&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+<iframe width="100%" height="320" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/122295458&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 </section>
 
@@ -183,10 +183,10 @@ Ayrıca bu albüm; üzerine konuşabileceğim, konuşsam da anlatabileceğim bir
 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdJ39LkXn9mk9Qkum1l50CZd"
-frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+ allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="100%" height="380" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/23805832&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+<iframe width="100%" height="380" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/23805832&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 </section>
 
@@ -213,10 +213,10 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdIEyRTlREPwL9v4Te9CtjgB"
-frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+ allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="100%" height="290" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/262155719&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+<iframe width="100%" height="290" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/262155719&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 > Son sözüm: Nefesler pâyende ola. Demler, safâlar müzdâd ola. Kulûb-ı âşıkan
 > küşâde ola... Bana hakkınızı helâl ediniz.
@@ -238,7 +238,7 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 On special request, I prepared some sounds for experimentation. By sending sounds of different frequencies to the left and right ears, the operating mode of the brain and the mood of the human can be changed. Although it doesn't sound intimidating, it turns out to be quite real when looking at their measured effects. Here is my blog post I explained in detail: [Click](/sir/2020/10/17/stereofonika-1.html)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdK6ORjlRIkvWRXlxReGLMF9" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdK6ORjlRIkvWRXlxReGLMF9" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 </section>
 
@@ -253,9 +253,9 @@ On special request, I prepared some sounds for experimentation. By sending sound
 
 Jorge Luis Borges'in hazırladığı, Giovanni Papini'nin Kaçan Ayna kitabını seslendirdim. Olabildiğince temiz lakin sonuçta ev ortamı kaydı... İlk 3 öyküyü, yani 105 sayfalık kitabın 44 sayfasını okudum. Zor bir iş. Belki gelecekte bir stüdyo ortamında hepsini okurum. Şimdilik hepsi bu. İyi dinlemeler.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdJI0M1lFH0rmUPu5t8KmFsv" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdJI0M1lFH0rmUPu5t8KmFsv" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-<iframe width="100%" height="350" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1191065737&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+<iframe width="100%" height="350" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1191065737&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 </section>
 

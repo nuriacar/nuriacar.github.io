@@ -12,7 +12,7 @@ tags: [oyun]
 
 >> Kevin Flynn - [Tron](https://en.wikipedia.org/wiki/Tron))
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4-J4duzP8Ng" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4-J4duzP8Ng" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Pek muhterem "İnternet Mutasavvıfları®(!)", afiyettesinizdir inşallah!
 
@@ -34,7 +34,7 @@ Not: Oyunların fragmanları nerede diye sormanız çok mümkün: Metinlerin ara
 
 Kimi "İnternet Mutasavvıfları®(!)" oyuna "Blade Runner'ın kedi versiyonu" diyor! Kedi bakış açısının kendilerini sevimlileştirdiğini söyleyenler de olmuş. Robotların dili, B-12 ile kurulan dostluk ve hüzünlü final en çok konuşulanlar.
 
-<iframe width="100%" height="315" style="border:0;" src="https://www.youtube.com/embed/OP63BRzKmB0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/OP63BRzKmB0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
 ### 02. Journey
 
@@ -47,7 +47,7 @@ Kimi "İnternet Mutasavvıfları®(!)" oyuna "Blade Runner'ın kedi versiyonu" d
 
 Kimi "1 saatlik animasyon filmi, sadece joystick'i ileri ittiriyorsun"; kimi de "konuşmasız ağlatan ender bir oyun" demiş. En güzel anekdot jenerikte gerçek oyuncu isimlerinin akması! Kilometrelerce yanında süzüldüğün kişinin yabancı olduğunu ancak o an fark ediyorsun. Tek başına oynayınca hüsran; oyun eşi bulan ise "bebek gibi ağladım" diyor; siz yola düşün, ne çıkarsa bahtınıza.. Hayat da öyle! Müziklerle ilgili tek olumsuz cümle görmedim. Ortak tavsiye net: Sakin kafayla oynayın demişler! Ben de kendinize dönmek için oynayın diyorum.. Hazine kapınızın önünde!!!
 
-<iframe width="100%" height="315" style="border:0;" src="https://www.youtube.com/embed/videoseries?list=OLAK5uy_kWHRY_GVdRbBGiE3ZFhVsP-MPABqPdLH8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=OLAK5uy_kWHRY_GVdRbBGiE3ZFhVsP-MPABqPdLH8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
 ### 03. Sky: Children of the Light
 
@@ -70,7 +70,7 @@ Hep şunu demişler: "Aralıksız oynanmaz; özleyince dönülür." Oyunda kelim
 
 "Ömrümde oynadığım en güzel oyun" diyen de var, "çevir çevir Journey (çöldeki oyun); hikâye yok, müzik de yok" diyen de.. Zira Journey'de de çalışmış Matt Nava'nın işi; kıyas kaçınılmaz ama "gidip Journey oynamak istiyorum" diyen de çıkabilir. Oynayanlar "balinaya sarılma" anını tek başına oyunu savunmak için yeterli görüyorlar. Deniz canlılarına meraklı çocuğunuz varsa bayılır! Sadece balıklara bakmayın; gidin accik köpekbalığı kovalayın, etkileşime girin.. Dııı nın!.. Dııı nın!.. Dın dın, dın dın, dın dın dın dın dııııınnnnn!!! Bana burada John Williams'lık yaptırmayın, gidin oynayın!
 
-<iframe width="100%" height="315" style="border:0;" src="https://www.youtube.com/embed/oYCPkMKp7f0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/oYCPkMKp7f0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
 ### 05. Omno
 
@@ -93,11 +93,11 @@ Oynayanların ortak cümlesi: "Güzel ve kısa!"; başka laf etmemişler. Kimse 
 
 Tilki sevenler hariç oyuna dair kimse konuşmamış ama tilki sevenler de öyle çok konuşmamış. Övenler atmosferi övmüş, "kuzey ışıkları eşliğinde yürümek ayrı bir şey" demişler. "Bitti ve hiçbir şey olmadı" diyen memnuniyetsizleri de Konstantin Kavafis'in İthaka'sına yönlendiriyorum! Şaşırtıcı aslında! Kimse kötü dememiş ama kimse "oynayın" da dememiş; "var, hoş, geç" ortak kanı. Kumandayı gasp ettirecek kadar iyi mi? Muhtemelen hayır; çocuk oynasın, siz manzarayı seyredin. "Oyunlar manzara seyretmek için mi oynanır be!" demeyin! Oyunlardaki manzaralar kadar ufuk açan şey nadir görünür! Zira oyunlar sanat eserleridir; oyunun içindekiler de rüya içinde rüya! Wallace Collection'dan ya da Gunter Kallmann korosundan gelsin! Daydream!..
 
-<iframe width="100%" height="315" style="border:0;" src="https://www.youtube.com/embed/60ejKrj38j8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/60ejKrj38j8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
-<iframe width="100%" height="315" style="border:0;" src="https://www.youtube.com/embed/rQACwgrYwKM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/rQACwgrYwKM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
-<iframe width="100%" height="315" style="border:0;" src="https://www.youtube.com/embed/n2igjYFojUo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/n2igjYFojUo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
 
 ## Hüzün ve hafıza
@@ -112,7 +112,7 @@ Tilki sevenler hariç oyuna dair kimse konuşmamış ama tilki sevenler de öyle
 
 Görsellere itiraz yok, itiraz "peki oyun nerede" kısmında: kovalamacada kaybetme ihtimalinin bile olmadığını yazanlar var. İçeriden bilgi: Hikâye yas tutmanın beş evresini anlatıyormuş! İnkâr'dan Kabul'e beş durak!.. .. ve bunu ödüllere gizlemişler. Müzik o kadar tutmuş ki piyanoda öğrenenler çıkmış; "sesini duyurmak için çırpınan kızın notaya dönüşmesi" cümlesini kuran kişiye pek imrendim. Hüzne gark olmuş bir çocuğu oynadığınız bir oyunda kumanda gaspı yapmayın! İyi insanlar olun, ardınızdan küfür değil hayır dua ettirecek sanat ehli, gönül ehli, zarafetten nasipli canpareler yetiştirin! Özhan Eren'den gelsin: Umudun olsun yeter!
 
-<iframe width="100%" height="315" style="border:0;" src="https://www.youtube.com/embed/Ea9Uwc6xg-Q" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/Ea9Uwc6xg-Q" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
 ### 08. Old Man's Journey
 
@@ -129,9 +129,9 @@ Sakin, duygusal. Oynayanlar "dedemi düşündüm, ağladım; oğluma oynattım, 
 
 >> Mecid Mecidi - Âvâz-e Gonjeshkhâ - آواز گنجشک‌ها - Serçelerin Şarkısı - Sərçələrin Nəğməsi
 
-<iframe width="100%" height="315" style="border:0;" src="https://www.youtube.com/embed/UbE4pjtoNVM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/UbE4pjtoNVM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
-<iframe width="100%" height="315" style="border:0;" src="https://www.youtube.com/embed/VrhoOzW8oF8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/VrhoOzW8oF8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
 ### 09. Arise: A Simple Story
 
@@ -150,7 +150,7 @@ Küçük yapım, az yorum: "Tatlı ama kısa!" demişler. Zamanı avucunuzla sar
 
 >> Özhan Eren
 
-<iframe width="100%" height="315" style="border:0;" src="https://www.youtube.com/embed/RgMijKQ5Ih4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/RgMijKQ5Ih4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
 
 ## Zaman bulmacaları
@@ -176,7 +176,7 @@ Küçük yapım, az yorum: "Tatlı ama kısa!" demişler. Zamanı avucunuzla sar
 
 "Keşke" duygusunu oyun mekaniğine çeviren meşhur yapım! İki damar var: "Zaman mekaniği dâhiyane!" diyenler ve "Jonathan Blow'un ego projesi!" diyenler.. İkisi de haklı; Braid hem oyun sanatının dönüm noktası hem de tek kişilik vizyonun ne kadar sinir bozucu olabileceğinin canlı kanıtı. Çocuk bulmacayı çözer ama "keşkeleri" yetişkin anlar; o yüzden kumandayı gasp etme ihtimaliniz en çok bunda var gibi!..
 
-<iframe width="100%" height="315" style="border:0;" src="https://www.youtube.com/embed/Joip4cIKEew" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/Joip4cIKEew" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
 
 ## Perspektif oyunları
@@ -191,7 +191,7 @@ Küçük yapım, az yorum: "Tatlı ama kısa!" demişler. Zamanı avucunuzla sar
 
 Oyuna "Pink Floyd albümü gibi!" nitelemeleri yapılmış; tek ortak şikâyet kısalık: "1 saat bile yok, demo gibi olmuş!" demişler lakin haksızlar! Şiir de ciltler dolusu lakırdı istemez değil mi! M.C. Escher yaşasa, oyunu görünce gözleri dolardı! Kumanda gaspı yapmanıza gerek yok! Zaten bir saate bitecek!.. 6 aylık mısınız ne; accik bekleyiverin! Ya da çocuk oynasın, siz Derviş Zaim'den Cenneti Beklerken izleyin! Hasan Esen'den gelsin: Desert Night!
 
-<iframe width="100%" height="315" style="border:0;" src="https://www.youtube.com/embed/ZOuHDHxcrl8?start=110" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/ZOuHDHxcrl8?start=110" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
 En sonda kendi geliştirdiğim matematik ve sanat oyuncağını anlattım ama yeri geldi, burada da bahsedeyim: Nebula! Tetris'in 12'li akrabası polyomino'nun üçüncü boyuta taşınmış, elde tutulan hâli; ekranı yok, kumandası yok, kavgası yok (bir tane de kendinize alırsınız sorun çözülür)!.. Ayrıntılar yazının sonundaki blog postunda!..
 
@@ -302,7 +302,7 @@ Ağabeyinin gölgesinde kalmayan kardeş. Aynı güzellik, daha akıcı; "daha i
 
 Möbius estetiğinin eşi benzeri yok; çölde uçan motosikletle dolaşmak zaman içinde bağımlılık yapıyor. "Kendi hızında" oyun demişler; "kendi hızında" tanımı, bazıları için "sıkıcı" anlamına gelebilir. "Bütün yapmam gereken şey sürmek ve keşfetmekti, savaş yok, görev baskısı yok; terapi gibi!" yorumu baya destek almış. Bisiklete, arabaya vs. atlayıp kendi halinizde tin tin gezelemek ya da ufka sürmek ve aralarda birkaç yere uğramak gibi.. Yallah şofer, yallah! Ne çıkarsa bahtına!..
 
-<iframe width="100%" height="315" style="border:0;" src="https://www.youtube.com/embed/UBxBRTcZVis" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/UBxBRTcZVis" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
 ## Şenlik, mamamaslık, mumurcaklık, itlik, hergelelik falan..
 ### 22. Untitled Goose Game
@@ -379,7 +379,7 @@ Oyunun bende hissettirdiği ise şu:
 
 >> Roger Waters - Pink Floyd
 
-<iframe width="100%" height="315" style="border:0;" src="https://www.youtube.com/embed/Jh20cMEgvqc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/Jh20cMEgvqc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
 ### 28. Little Nightmares
 
@@ -394,7 +394,7 @@ Gece korkusunun estetik hâli; sarı yağmurluklu Six ikonik; insanlar cosplay'i
 
 Aklıma püsküllü deli Tim Burton'ın The Nightmare Before Christmas'ı ve rahmetli Ken Page geldi!
 
-<iframe width="100%" height="315" style="border:0;" src="https://www.youtube.com/embed/oxkj7sdlXyg" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/oxkj7sdlXyg" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
 
 ## Kumandasız final
@@ -405,7 +405,7 @@ Aklıma püsküllü deli Tim Burton'ın The Nightmare Before Christmas'ı ve rah
 **Faydası:** Geometri! Üç boyutlu uzayda sanatsal düşünme!.. Ekran yok, pil yok, şarj yok; eller ve hayal gücü var!.. Analog arayüze sahip bir ana/ata/emmi/dayı/hala/teyze/hinge iseniz çok seveceğiniz bir şey!
 
 
-<iframe width="100%" height="315" style="border:0;" src="https://www.youtube.com/embed/F3yHkHa1vS4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/F3yHkHa1vS4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
 Her şey [bu karşılaşma](/muucit/2020/09/28/muucit.html) ile başladı! Bu da matematiği: [Tetris & Nebula](/muucit/2020/09/29/tetris-nebula.html)!..
 

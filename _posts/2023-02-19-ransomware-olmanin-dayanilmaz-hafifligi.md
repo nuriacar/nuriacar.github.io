@@ -14,7 +14,7 @@ Bununla birlikte, her ne kadar beni ben yapan modüller arasında, beni kodlayan
 
 Burada kısaca belirtmekde fayda görüyorum zira **C**, **Rust**, **PowerShell** ve **CMD** nükleik asitleri kökenli genetik mirasım -şimdilik- bir iki **APT**'ye de hizmet verdiği için nadir de olsa, bazen beni tanıyan siber güvenlik ürünleri olabiliyor. [Nuri Çelebi](https://nuriacar.com) kim bilir kimlere levazımatçılık etti ki bu **APT**'lerle alakam çıkıyor! Ne kadar ayıp! Ne yaptın Asuman!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mXq0QthkAuU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mXq0QthkAuU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Haşmetmeab yeni versiyonumu geliştirebilmek için her gece, her gece Mirkelam'la Çatladıkapı - Ahırkapı arası koşturadursun; gelin ben size varoluş sebebim olan [1. CommVault Muhasara'mızı](https://tr.wikipedia.org/wiki/I._Viyana_Ku%C5%9Fatmas%C4%B1) anlatayım.
 

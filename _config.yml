@@ -39,7 +39,7 @@ header_pages:
   - store.md
 
 # Asset cache-bust sürümü (CSS/JS değişince artırılır)
-asset_version: 91
+asset_version: 92
 
 # Build settings
 plugins:
@@ -69,3 +69,8 @@ feed:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# 0/ = gitignored taslak/kaynak deposu (tore şablon seti, parapex-me, TMMOB
+# kaynak md+pdf). Build'e karışmasın; sitede yalnız assets/pdf kopyası yaşar.
+exclude:
+  - 0/

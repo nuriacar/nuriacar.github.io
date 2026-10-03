@@ -77,7 +77,7 @@ Bu sitede yer alan içerik; ulema, cühela ve ehli dubara'yı; ehli namus, ehli 
 
 <div class="box" markdown="1">
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HU7Ga7qTLDU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HU7Ga7qTLDU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 > I've seen things you people wouldn't believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near the Tannhäuser Gate. All those moments will be lost in time, like tears in rain. Time to die.
 >> NEXUS-6 N6MAA10816

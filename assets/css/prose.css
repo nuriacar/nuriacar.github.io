@@ -152,7 +152,7 @@ main blockquote blockquote {
 
 main code {
   font-family: var(--fn-mono);
-  font-size: 1em;
+  font-size: var(--fs-body);
   background: var(--bg-dark);
   border: var(--border) solid var(--accent-border);
   padding: 0.125em 0.375em;
@@ -187,6 +187,12 @@ main .highlight { position: relative; }
 /* Lexer'siz diller (ör. cmd): rouge sarmalayıcısı gelmez, pre'nin kendisi
    düğme çapası olur */
 main pre { position: relative; }
+
+/* Gömülüler: kenar ve genişlik CSS'te yaşar — HTML4 frameborder/style
+   kalıntısı öznitelikleri kaldırıldı (TDD: inline CSS yasak) */
+main iframe { border: 0; }
+
+main audio { width: 100%; }
 
 main pre .btn--copy {
   position: absolute;

@@ -16,7 +16,7 @@ eyebrow: galeri
 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/videoseries?list=PLjGoAmqsQhdJ39LkXn9mk9Qkum1l50CZd"
-frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+ allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </article>
@@ -28,7 +28,7 @@ Nedendir bilinmez; sona doğru film kasetten azade oldu ve bir yerden sonra yır
 
 Madem öyle, Hafız Burhan'dan gelsin! "Her yer karanlık!.."
 
-<audio controls preload="none" style="width:100%;">
+<audio controls preload="none">
   <source src="https://www.kultur.gov.tr/Genel/medya/muzik/muzik_kulturu/osmanli/makber.mp3" type="audio/mpeg">
 </audio>
 

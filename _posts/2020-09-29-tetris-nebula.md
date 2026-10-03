@@ -17,7 +17,7 @@ tags: [girisim]
 
 Pek kıymetli "Boyut Gezginleri", bu yazıyla huzurlarınızda olmanın tarifsiz hissiyatını şu anki bilinç düzeyimle tarif edemeyeceğimi bilmenizi isterim. Bu yazı, uzun yıllar önce çıktığım bilinmeze yolculuğumda keşfettiğim [Nebula](/store/)'yı ve içinde bulunduğu feza alt kümesini anlatmayı istediğim hikayelerin ilki... Okurken size eşlik etmesi için tam da buraya bir video bırakmakta fayda görüyorum zira gençlik hülyalarımın yansımalarına farklı boyutlarda dokunasınız isterim:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/o3KN1bktV2U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o3KN1bktV2U" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Bu yazıyı okumaya başlamış bilinçlerden bazılarını, buraya kadar yazılmış tuhaf cümlelerle yeterince sıkıp, yazıyı okumadan sayfadan kaçarak uzaklaşmak durumunda bırakmış olmanın tarif edilebilir keyfini ise yazının sonuna kadar gelebilen cengaver bilinçlerle yeşil çay içerek konuşmak benim için bir onurdur.
 
@@ -42,7 +42,7 @@ Dünyanın en çok oynanan oyunu olan [Tetris](https://tr.wikipedia.org/wiki/Tet
 
 > DIŞ SES: "Dayanın aslanlarım, dayanın yiğitlerim!.. Urun kefere cehalet kellesün! Acıman, urun bre..."
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/omXjhq7DqQY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/omXjhq7DqQY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 3. [Tetris](https://tr.wikipedia.org/wiki/Tetris) ile [Nebula](/store/) arasındaki benzerliği bulunuz? (25 Puan)
 
@@ -76,7 +76,7 @@ Ayrıca şuraya resmi sitesi üzerinden [Tetris oynama linki](https://tetris.com
 
 Dear "Dimension Travelers", I would like you to know that I cannot describe the indescribable feeling of being in your presence with my present level of consciousness. This article is the first of the stories I want to tell you about the [Nebula](/store/) and its subset of universe, which I discovered on my journey into darkness that I went out many years ago:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/o3KN1bktV2U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o3KN1bktV2U" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Although some consciousnesses began to read the article, they closed the page because of my strange sentences. Because I deliberately oppressed them. That's why they ran away. This is pleasant. It is an honor for me to drink green tea with the warrior consciousnesses that have come to end of the article.
 
@@ -101,7 +101,7 @@ Attention! The first of tearful questions comes:
 
 > V/O : "Hang on my lions, hang on my valiants!.. Cut the head of infidel ignorance! Do not mercy, cut..."
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/omXjhq7DqQY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/omXjhq7DqQY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 3. Find the similarity between [Tetris](https://en.wikipedia.org/wiki/Tetris) and [Nebula](/store/)? (25 Points)
 
