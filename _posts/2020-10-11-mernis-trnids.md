@@ -51,13 +51,13 @@ Bir de bu işlere bakan [milletlerarası bir komisyon](https://tr.wikipedia.org/
 
 ## **Program özellikleri ve kodlara dair...**
 
-<figure markdown="1">
+<div class="box repo-link" markdown="1">
 
 [![TRNIDS GitHub](/assets/img/github-icon.png "TRNIDS GitHub")](https://github.com/nuriacar/trnids)
 
-<figcaption>Kaynak Kod Deposu</figcaption>
+Kaynak Kod Deposu
 
-</figure>
+</div>
 
 Bash, Python 3, Common Lisp, Julia ve C ile kodladım. Benim için özel yanı, bilmediğim ama öğrenmeye merak saldığım tüm [programlama](https://www.youtube.com/watch?v=M4ZoCHID9GI "8444") dillerini bu programı yazarak öğrenmeye çalışıyor olmam. Bash ve C ile başlayıp Python 3'e port ettim, ardından Python 3'ten Common Lisp'e port ettim, ardından tekrar Python 3'e, ondan da Julia'ya aktardım. Bakalım zamanla daha hangi dillere evrilecek.
 
@@ -264,13 +264,13 @@ There was also an [international commission](http://www.ciec1.org/SITECIEC_WEB/F
 
 ## **About program features and codes...**
 
-<figure markdown="1">
+<div class="box repo-link" markdown="1">
 
 [![TRNIDS GitHub](/assets/img/github-icon.png "TRNIDS GitHub")](https://github.com/nuriacar/trnids)
 
-<figcaption>Source Code Repository</figcaption>
+Source Code Repository
 
-</figure>
+</div>
 
 I coded with Bash, Python 3, Common Lisp, Julia and C. The special thing for me is that I am trying to learn all programming languages that I do not know but are curious to learn by writing this program. I started with Bash and C and ported to Python 3, then I ported from Python 3 to Common Lisp, then transferred back to Python 3, then ported to Julia. Let's see which languages will be next.
 

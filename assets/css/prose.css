@@ -418,9 +418,24 @@ main .box-row {
   main .box-row { grid-template-columns: 1fr; }
 }
 
+/* Depo bağlantısı kutusu: .box + .repo-link kombosu. Kutunun içinde giriş
+ * cümlesi + ikon + caption birlikte yaşar. TDD'de .repo-link p { center }
+ * kuralı .box p { left }'ten önce yazıldığı için kombo'da sola dayama
+ * kazanıyor; adapter TDD sınıf adlarıyla tekrar merkezler. İç başlık
+ * çerçevesi (.box > p:first-child) cümleye ikinci çerçeve çizmesin: tek çerçeve. */
+main .box.repo-link p {
+  text-align: center;
+}
+
+main .box.repo-link > p:first-child {
+  border: 0;
+  padding: 0;
+  margin-bottom: 0;
+}
+
 /* ---------- Akış illüstrasyonu: <figure> + <figcaption> ----------
- * Metnin referans verdiği ikon/logo/poster (kehtapot, platform ikonları,
- * repo bağlantıları) BLOK değil illüstrasyondur: çerçevesiz akış, ortalanmış;
+ * Metnin referans verdiği ikon/logo/poster (kehtapot, platform ikonları)
+ * BLOK değil illüstrasyondur: çerçevesiz akış, ortalanmış;
  * caption dim küçük etiket. Sınıf sıfır — native elementler. */
 main figure {
   margin: var(--gap) 0;

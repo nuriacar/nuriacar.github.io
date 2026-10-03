@@ -12,15 +12,15 @@ Gerçek ağ trafiği üreterek paket analizini sıfırdan ileri seviyeye öğret
 
 **macOS / Linux / Windows (WSL2)**: Her platformda çalışır.
 
-Aşağıdaki **kehtapot**'a veya **ahtapedi**'ye (ahtapot ve kedi birleşimi bir modern zaman canavarı, GitHub maskotu: **Octocat**) tıklayarak kaynak kodlara erişebilirsin.
+<div class="box repo-link" markdown="1">
 
-<figure markdown="1">
+Aşağıdaki **kehtapot**'a veya **ahtapedi**'ye (ahtapot ve kedi birleşimi bir modern zaman canavarı, GitHub maskotu: **Octocat**) tıklayarak kaynak kodlara erişebilirsin.
 
 [![shark-tank GitHub](/assets/img/github-icon.png "shark-tank GitHub")](https://github.com/nuriacar/shark-tank)
 
-<figcaption>Kaynak Kod Deposu</figcaption>
+Kaynak Kod Deposu
 
-</figure>
+</div>
 
 ```sh
 git clone https://github.com/nuriacar/shark-tank.git
