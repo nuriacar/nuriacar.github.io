@@ -289,8 +289,12 @@
 
   function show(i) {
     idx = (i + photos.length) % photos.length;
-    /* data-full: orijinal çözünürlüklü sürüm (-o.webp); yoksa küçük hali */
-    img.src = photos[idx].getAttribute('data-full') || photos[idx].src;
+    /* data-full: orijinal çözünürlüklü sürüm (-o.webp) — yalnız ≥48rem
+       ekranda: telefonda görüntü ~300px, retina ihtiyacı ≤~880px; 1200px'lik
+       küçük hâl yeterli, 3-4MB indirme + 41MP decode boşa olur. */
+    var full = window.matchMedia('(min-width: 48rem)').matches
+      ? photos[idx].getAttribute('data-full') : null;
+    img.src = full || photos[idx].src;
     img.alt = photos[idx].alt;
   }
 
