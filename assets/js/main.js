@@ -289,9 +289,10 @@
 
   function show(i) {
     idx = (i + photos.length) % photos.length;
-    /* data-full: orijinal çözünürlüklü sürüm (-o.webp) — yalnız ≥48rem
-       ekranda: telefonda görüntü ~300px, retina ihtiyacı ≤~880px; 1200px'lik
-       küçük hâl yeterli, 3-4MB indirme + 41MP decode boşa olur. */
+    /* data-full: yüksek çözünürlüklü sürüm (-o.webp, orijinalin yarısı:
+       1968px — masaüstü/iPad retina'yı karşılar) — yalnız ≥48rem ekranda:
+       telefonda görüntü ~300px, retina ihtiyacı ≤~880px; 1200px'lik küçük
+       hâl yeterli, gereksiz indirme + decode önlenir. */
     var full = window.matchMedia('(min-width: 48rem)').matches
       ? photos[idx].getAttribute('data-full') : null;
     img.src = full || photos[idx].src;
