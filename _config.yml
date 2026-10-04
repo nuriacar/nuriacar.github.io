@@ -14,6 +14,8 @@
 #
 # Site settings
 title: Nuri ACAR
+lang: tr
+locale: tr_TR
 email: na@nuriacar.com
 description: >-
   Cyber Arts Blog
@@ -74,3 +76,16 @@ feed:
 # kaynak md+pdf). Build'e karışmasın; sitede yalnız assets/pdf kopyası yaşar.
 exclude:
   - 0/
+
+# Tüm sayfalara/yazılara varsayılan og:image (Harold + De Chirico, La Tour
+# Rouge). jekyll-seo-tag yalnız page["image"] okur; site düzeyi yaygınlaştırma
+# defaults ile yapılır. Sayfa kendi image'ını tanımlarsa ezer.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /assets/img/harold-finch-la-tour-rouge.jpg
+        width: 1200
+        height: 630
+        alt: "Harold Finch, De Chirico'nun Kızıl Kulesi önünde"

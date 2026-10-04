@@ -1,6 +1,7 @@
 ---
 layout: project
 title: "bilgiguvenligi.org: Dijital Güvenlik Kılavuzu"
+description: "bilgiguvenligi.org: 7'den 77'ye herkes ve her rol için dijital güvenlik kılavuzu."
 nav_title: bilgiguvenligi.org
 permalink: /bilgi-guvenligi/
 eyebrow: bilgi güvenliği farkındalığı

@@ -1,6 +1,7 @@
 ---
 layout: udemy
 title: udemy
+description: "Udemy'deki siber güvenlik kurslarım; broşürler, fragmanlar ve kayıt bağlantıları."
 nav_title: udemy
 permalink: /udemy/
 eyebrow: eğitim

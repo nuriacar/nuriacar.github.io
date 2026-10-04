@@ -1,6 +1,7 @@
 ---
 layout: project
 title: q
+description: "Numaralı fotoğraf serisi; her karede yeni bir bilinmez."
 permalink: /q/
 eyebrow: galeri
 ---

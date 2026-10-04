@@ -1,6 +1,7 @@
 ---
 layout: project
 title: "Siber Güvenlik Sözlüğü"
+description: "4.547 maddelik siber güvenlik sözlüğü; terim, Türkçe karşılık ve arkadaşıma anlatır gibi kısa açıklamalar."
 nav_title: sözlük
 permalink: /sozluk/
 ---

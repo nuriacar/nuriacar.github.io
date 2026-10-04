@@ -1,6 +1,7 @@
 ---
 layout: project
 title: "shark-tank: Wireshark Eğitim Rehberi"
+description: "Docker tabanlı, tek komutla ayağa kalkan Wireshark eğitim laboratuvarı: 29 modül, 25 pcap, 16 gerçek servis."
 nav_title: shark-tank
 permalink: /shark-tank/
 eyebrow: ağ paket analizi

@@ -1,9 +1,11 @@
 ---
 layout: project
 title: cv
+description: "Curriculum vitae of Nuri ACAR, cyber security specialist: education, certifications, experience and publications."
 permalink: /en/cv/
 eyebrow: career
 lang: en
+locale: en_US
 alternates:
   - lang: tr
     url: /cv/

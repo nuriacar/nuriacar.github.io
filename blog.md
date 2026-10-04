@@ -4,6 +4,7 @@
 
 layout: home
 title: blog
+description: "Tüm yazılar: siber güvenlik, kitap, müzik, ses, oyun ve girişim."
 nav_title: blog
 permalink: /blog/
 ---

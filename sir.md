@@ -1,6 +1,7 @@
 ---
 layout: project
 title: sır
+description: "Toplu şiirler; kelimelerle zamanda kaybolma denemeleri."
 nav_title: sır
 permalink: /sir/
 eyebrow: müzik

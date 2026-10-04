@@ -1,6 +1,7 @@
 ---
 layout: project
 title: galeri
+description: "1963 model Zeiss Ikon Contaflex Super New ile; bile isteye kusurlu, deneysel analog fotoğraflar."
 nav_title: galeri
 permalink: /galeri/
 eyebrow: galeri

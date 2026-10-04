@@ -1,6 +1,7 @@
 ---
 layout: project
 title: cevizlab
+description: "Eski laboratuvar yazıları: logger, badusb, trtels, rzips, APT analizi ve daha fazlası."
 nav_title: cevizlab
 permalink: /cevizlab/
 eyebrow: siber sanatlar

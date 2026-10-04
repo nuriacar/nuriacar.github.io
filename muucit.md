@@ -1,6 +1,7 @@
 ---
 layout: project
 title: muucit
+description: "Mucitlik hikâyeleri ve çocuklar için oyunlar."
 nav_title: muucit
 permalink: /muucit/
 eyebrow: girişim

@@ -1,6 +1,7 @@
 ---
 layout: project
 title: cv
+description: "Siber güvenlik uzmanı Nuri ACAR'ın özgeçmişi: eğitim, sertifikalar, deneyim ve yayınlar."
 permalink: /cv/
 eyebrow: kariyer
 lang: tr
