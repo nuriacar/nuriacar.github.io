@@ -394,10 +394,19 @@ main details.accordion:target { border-color: var(--accent); }
 
 /* ---------- Lightbox görseli: modal karta sığar ---------- */
 
+/* Lightbox görseli: orijinal çözünürlük viewport'a sığar; kart shrink-wrap.
+   TDD .modal__card 32rem sınırı lightbox'ta genişler (adapter, id kapsamlı). */
+#lightbox .modal__card {
+  width: auto;
+  max-width: calc(100vw - (2 * var(--page-pad)));
+}
+
 #lightbox img {
-  max-width: 100%;
-  height: auto;
   display: block;
+  width: auto;
+  height: auto;
+  max-width: calc(100vw - (2 * var(--page-pad)) - (2 * var(--card-pad)));
+  max-height: calc(100dvh - 14rem);
 }
 
 /* ---------- TDD .box ailesi: kap kuralları ----------

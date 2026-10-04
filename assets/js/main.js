@@ -289,7 +289,8 @@
 
   function show(i) {
     idx = (i + photos.length) % photos.length;
-    img.src = photos[idx].src;
+    /* data-full: orijinal çözünürlüklü sürüm (-o.webp); yoksa küçük hali */
+    img.src = photos[idx].getAttribute('data-full') || photos[idx].src;
     img.alt = photos[idx].alt;
   }
 
