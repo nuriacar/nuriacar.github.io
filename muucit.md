@@ -1,7 +1,7 @@
 ---
 layout: project
 title: muucit
-description: "Mucitlik hikâyeleri ve çocuklar için oyunlar."
+description: "muucit®, cevizlab® girişimi: minimum özgün parçayla binlerce şekle dönüşen, sınırlı seri, el işçiliği matematik ve sanat oyuncakları."
 nav_title: muucit
 permalink: /muucit/
 eyebrow: girişim

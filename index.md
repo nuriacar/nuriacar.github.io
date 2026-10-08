@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Nuri ACAR
-description: "Siber güvenlik, analog fotoğraf, müzik ve girişimden kırıntılar; kişisel bir cyber arts blogu."
+description: "Cyber Arts Blog"
 hide_title: true
 ---
 

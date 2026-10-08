@@ -1,7 +1,7 @@
 ---
 layout: topic
 title: Siber Güvenlik
-description: "Siber güvenlik yazıları: shark-tank serisi, APT analizi, sözlük ve daha fazlası."
+description: "shark-tank Wireshark laboratuvarı (29 modül + referanslar), APT28/APT29 emülasyonu, fileless saldırılar ve MERNIS analizi."
 permalink: /konu/siber-guvenlik/
 topic: siber-guvenlik
 ---

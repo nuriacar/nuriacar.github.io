@@ -77,12 +77,15 @@ feed:
 exclude:
   - 0/
 
-# Tüm sayfalara/yazılara varsayılan og:image (Harold + De Chirico, La Tour
-# Rouge). jekyll-seo-tag yalnız page["image"] okur; site düzeyi yaygınlaştırma
-# defaults ile yapılır. Sayfa kendi image'ını tanımlarsa ezer.
+# Sayfalara varsayılan og:image (Harold + De Chirico, La Tour Rouge).
+# jekyll-seo-tag yalnız page["image"] okur; site düzeyi yaygınlaştırma defaults
+# ile yapılır. Kapsam YALNIZ pages: içeriği sürekli değişen blogun yazıları
+# "şimdinin resmini" taşımaz; yazı isterse frontmatter'da kendi image'ını
+# tanımlar, tanımlamazsa dürüst görselsiz kart çıkar.
 defaults:
   - scope:
       path: ""
+      type: pages
     values:
       image:
         path: /assets/img/harold-finch-la-tour-rouge.jpg

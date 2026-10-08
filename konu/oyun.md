@@ -1,7 +1,7 @@
 ---
 layout: topic
 title: Oyun
-description: "Oyun üzerine yazılar."
+description: "Homo Ludens"
 permalink: /konu/oyun/
 topic: oyun
 ---

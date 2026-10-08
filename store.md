@@ -1,6 +1,6 @@
 ---
 layout: shopier-redirection
 title: store
-description: "Shopier üzerinden analog fotoğraf baskıları satışı."
+description: "Shopier mağazama güvenli yönlendirme: baskılar ve ürünler."
 permalink: /store/
 ---

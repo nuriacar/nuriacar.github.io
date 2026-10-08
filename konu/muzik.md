@@ -1,7 +1,7 @@
 ---
 layout: topic
 title: Müzik
-description: "Müzik üzerine yazılar."
+description: "Anlatabilseydim müzik yapmazdım."
 permalink: /konu/muzik/
 topic: muzik
 ---

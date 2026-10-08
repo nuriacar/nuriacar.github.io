@@ -1,7 +1,7 @@
 ---
 layout: topic
 title: Girişim
-description: "Girişimlik hikâyeleri ve dersler."
+description: "Girişimcilik Serüveni"
 permalink: /konu/girisim/
 topic: girisim
 ---

@@ -1,7 +1,7 @@
 ---
 layout: udemy
 title: udemy
-description: "Udemy'deki siber güvenlik kurslarım; broşürler, fragmanlar ve kayıt bağlantıları."
+description: "Udemy kurslarım: Bilgi Güvenliği Farkındalık Eğitimi ile IT Risk Yönetimi, Tehdit Modelleme ve Shadow IT."
 nav_title: udemy
 permalink: /udemy/
 eyebrow: eğitim

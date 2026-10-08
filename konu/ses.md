@@ -1,7 +1,7 @@
 ---
 layout: topic
 title: Ses
-description: "Ses üzerine yazılar."
+description: "Ses Deneyleri"
 permalink: /konu/ses/
 topic: ses
 ---

@@ -4,7 +4,7 @@
 
 layout: home
 title: blog
-description: "Tüm yazılar: siber güvenlik, kitap, müzik, ses, oyun ve girişim."
+description: "Malumatfuruş"
 nav_title: blog
 permalink: /blog/
 ---

@@ -1,7 +1,7 @@
 ---
 layout: topic
 title: Kitap
-description: "Kitap özetleri ve okuma notları."
+description: "Oku!"
 permalink: /konu/kitap/
 topic: kitap
 ---
