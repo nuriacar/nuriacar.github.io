@@ -1,6 +1,6 @@
 ---
 layout: shopier-redirection
 title: store
-description: "Shopier mağazama güvenli yönlendirme: baskılar ve ürünler."
+description: "Shopier mağazama güvenli yönlendirme"
 permalink: /store/
 ---

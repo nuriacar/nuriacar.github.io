@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "bedriemir.com: Prof. Dr. Bedri Doğan Emir Arşivi"
-description: "Prof. Dr. Bedri Doğan Emir'in (1944-2021) Türkçe eğitim materyalleri arşivi; yok olmaması için."
+description: "Prof. Dr. Bedri Doğan Emir'in (1944-2021) Türkçe eğitim materyalleri arşivi"
 nav_title: bedriemir.com
 permalink: /bedri-emir/
 eyebrow: arşiv

@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "bilgiguvenligi.org: Dijital Güvenlik Kılavuzu"
-description: "Her yaş ve eğitim düzeyi için bilgi güvenliği farkındalık rehberi; tehditler unvan, yaş, meslek sormaz."
+description: "Her yaş ve eğitim düzeyi için bilgi güvenliği farkındalık rehberi"
 nav_title: bilgiguvenligi.org
 permalink: /bilgi-guvenligi/
 eyebrow: bilgi güvenliği farkındalığı
